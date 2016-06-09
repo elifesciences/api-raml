@@ -1,0 +1,23 @@
+$schema: http://json-schema.org/draft-04/schema#
+title: Image
+type: object
+properties:
+    type:
+        type: string
+        enum:
+          - image
+    alt:
+        title: Alternative text
+        type: string
+    uri:
+        title: Image URI
+        type: string
+        format: uri
+        pattern: ^https://
+    caption:
+        title: Text
+        type: string
+required:
+  - type
+  - alt
+  - uri

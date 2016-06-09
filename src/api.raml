@@ -1,0 +1,311 @@
+#%RAML 1.0
+---
+title: eLife Sciences API
+baseUri: https://api.elifesciences.org/
+version: 1.0.0
+documentation:
+  - title: Welcome
+    content: |
+        Welcome to the eLife Sciences API. The API is described using [RAML 1.0](http://raml.org/); it is available in [its raw form](api.raml), or as this compiled documentation.
+  - title: Licence
+    content: |
+        Copyright 2016 eLife Sciences. Licensed under the GPLv3.
+
+        This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+        This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+        You should have received a copy of the GNU General Public License along with this program. If not, see <http://www.gnu.org/licenses/>.
+  - title: Versioning
+    content: |
+        API endpoints are not versioned, but the body of requests/responses are.
+
+        Content versioning
+        ------------------
+
+        Endpoints produce/consume dedicated content type, with the version as a parameter (eg `application/vnd.elife.labs-experiment-list+json;version=1`). These are primarily JSON-based (and described using [JSON Schema](http://json-schema.org/)), but alternative representations may be available.
+
+        This verisoning follows [semantic versioning](http://semver.org/). Note we only use the major version as minor versions are backwards compatabile (so the API will return versions `1` and `2` rather than `1.0`, `1.1`, `2.0` etc).
+
+        You can request a specific version of a response using content negotation (eg `Accept: application/vnd.elife.labs-experiment-list+json;version=1`). The most recent version will always be preferred, so without a `version` parameter on the `Accept` header the latest version will be returned.
+
+        Endpoint versioning
+        -------------------
+
+        As the endpoint itself is not versioned, functionality may be removed (including removing support for versions of content). We will try and deprecate first, and avoid removing support where possible.
+
+        When something has been marked as deprecated we will add a message to responses as a the HTTP `Warning` header (a deprecation will always begin with the word 'Deprecation'). For example, `Warning: 299 api.elifesciences.org "Deprecation: 'foo' query string parameter will be removed, use 'bar' instead"`.
+
+resourceTypes:
+    base:
+        get?: &common
+    item:
+        type: base
+        usage: This resource type should be used for any single item.
+        get?:
+            responses:
+                404:
+                    description: |
+                        <<resource | !uppercamelcase>> is not found.
+                    body:
+                        application/problem+json:
+                            schema: !include ../dist/model/error.json
+                            example: |
+                                {
+                                    "title": "<<resource | !uppercamelcase>> not found"
+                                }
+                410:
+                    description: |
+                        <<resource | !uppercamelcase>> has been removed.
+                    body:
+                        application/problem+json:
+                            schema: !include ../dist/model/error.json
+                            example: |
+                                {
+                                    "title": "<<resource | !uppercamelcase>> removed"
+                                }
+    collection:
+        type: base
+        usage: This resourceType should be used for any collection of items.
+        get?:
+
+traits:
+    paged:
+        queryParameters:
+            page:
+                description: |
+                    Page number to retrieve.
+                type: integer
+                required: false
+                default: 1
+                minimum: 1
+                example: 2
+            per-page:
+                description: |
+                    Number of <<resource | !pluralize>> per page.
+                type: integer
+                required: false
+                default: 20
+                minimum: 1
+                maximum: 100
+                example: 50
+            order:
+                description: |
+                    Ordering direction.
+                type: string
+                required: false
+                default: desc
+                enum:
+                  - asc
+                  - desc
+                example: asc
+        responses:
+            404:
+                description: |
+                    Page is not found.
+
+                    Note the first page will always return a valid result, even if the list is empty.
+                body:
+                    application/problem+json:
+                        schema: !include ../dist/model/error.json
+                        example: |
+                            {
+                                "title": "Page not found"
+                            }
+    subjected:
+        queryParameters:
+            subject:
+                description: |
+                    Only include <<resource | !pluralize>> with one of the specified subjects.
+                type: string
+                required: false
+                repeat: true
+                example: cell-biology
+
+/labs-experiments:
+    type: collection
+    description: |
+        Labs experiments
+    get:
+        description: |
+            Get a list of experiments, sorted by number.
+        is:
+          - paged: { resource: experiment }
+        responses:
+            200:
+                description: |
+                    List of experiments, sorted by number.
+                body:
+                    application/vnd.elife.labs-experiment-list+json;version=1:
+                        schema: !include ../dist/model/labs-experiment-list.v1.json
+                        examples:
+                            paginated:
+                                displayName: First page
+                                description: |
+                                    List is split over two pages.
+                                value: |
+                                    {
+                                        "total": 2,
+                                        "items": [
+                                            {
+                                                "number": 1,
+                                                "title": "Experimental eLife Lens search page",
+                                                "published": "2015-04-01T11:32:47+00:00",
+                                                "image": {
+                                                    "alt": "",
+                                                    "sizes": {
+                                                        "2:1": {
+                                                            "900": "https://placehold.it/900x450",
+                                                            "1800": "https://placehold.it/1800x900"
+                                                        },
+                                                        "16:9": {
+                                                            "250": "https://placehold.it/250x141",
+                                                            "500": "https://placehold.it/500x281"
+                                                        },
+                                                        "1:1": {
+                                                            "70": "https://placehold.it/70x70",
+                                                            "140": "https://placehold.it/140x140"
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        ]
+                                    }
+                            empty:
+                                displayName: Empty list
+                                description: |
+                                    Demonstration of the list being empty (the first page will always return a valid result).
+                                value: |
+                                    {
+                                        "total": 0,
+                                        "items": []
+                                    }
+
+    /{number}:
+        type:
+            item:
+                resource: experiment
+        description: |
+            Individual Labs experiment.
+        uriParameters:
+            number:
+                description: |
+                    Experiment number.
+                type: integer
+                minimum: 1
+        get:
+            description: |
+                Get an experiment.
+            responses:
+                200:
+                    description: |
+                        Experiment.
+                    body:
+                        application/vnd.elife.labs-experiment+json;version=1:
+                            schema: !include ../dist/model/labs-experiment.v1.json
+                            examples:
+                                minimum:
+                                    displayName: Minimum
+                                    value: |
+                                        {
+                                            "number": 1,
+                                            "title": "Experimental eLife Lens search page",
+                                            "published": "2015-04-01T11:32:47+00:00",
+                                            "image": {
+                                                "alt": "",
+                                                "sizes": {
+                                                    "2:1": {
+                                                        "900": "https://placehold.it/900x450",
+                                                        "1800": "https://placehold.it/1800x900"
+                                                    },
+                                                    "16:9": {
+                                                        "250": "https://placehold.it/250x141",
+                                                        "500": "https://placehold.it/500x281"
+                                                    },
+                                                    "1:1": {
+                                                        "70": "https://placehold.it/70x70",
+                                                        "140": "https://placehold.it/140x140"
+                                                    }
+                                                }
+                                            },
+                                            "content": [
+                                                {
+                                                    "type": "paragraph",
+                                                    "text": "We are going to use feedback and usage stats to determine whether we can bring any features from this kind of demo over to our main site."
+                                                }
+                                            ]
+                                        }
+                                complete:
+                                    displayName: Complete
+                                    value: |
+                                        {
+                                            "number": 1,
+                                            "title": "Experimental eLife Lens search page",
+                                            "impactStatement": "Today on eLife Labs we are launching a small demo of a search interface that brings together some elements of eLife Lens and some of the native power of a technology called elasticsearch. Head over to the demo to try it out now.",
+                                            "published": "2015-04-01T11:32:47+00:00",
+                                            "image": {
+                                                "alt": "",
+                                                "sizes": {
+                                                    "2:1": {
+                                                        "900": "https://placehold.it/900x450",
+                                                        "1800": "https://placehold.it/1800x900"
+                                                    },
+                                                    "16:9": {
+                                                        "250": "https://placehold.it/250x141",
+                                                        "500": "https://placehold.it/500x281"
+                                                    },
+                                                    "1:1": {
+                                                        "70": "https://placehold.it/70x70",
+                                                        "140": "https://placehold.it/140x140"
+                                                    }
+                                                }
+                                            },
+                                            "content": [
+                                                {
+                                                    "type": "paragraph",
+                                                    "text": "We are going to use feedback and usage stats to determine whether we can bring any features from this kind of demo over to our main site."
+                                                },
+                                                {
+                                                    "type": "paragraph",
+                                                    "text": "This demo does comes with a couple of strong caveats, it does not update regularly with eLife articles, but only contains a snapshot of eLife content published up to the 26th of March. It also needs javascript enabled."
+                                                },
+                                                {
+                                                    "type": "paragraph",
+                                                    "text": "Beyond those constraints we have tried a few interesting things with this search interface. The most interesting thing is going on behind the scenes where we have indexed each paragraphs of each article, allowing for contextual results to be returned. The hope here is to be able, at some point, to link those paragraphs in to the lens view of the article, allowing you to go straight to the part of the document that looks interesting to you."
+                                                },
+                                                {
+                                                    "type": "paragraph",
+                                                    "text": "We have added some type-ahead suggestions based on popular search queries."
+                                                },
+                                                {
+                                                    "type": "paragraph",
+                                                    "text": "There are a couple of ways of applying filters to the search and there is also a quick way to look at how many results there are for a given search term under each filter."
+                                                },
+                                                {
+                                                    "type": "paragraph",
+                                                    "text": "We are gong to be seeing how the back end performs, and hopefully learning what works and what doesn’t through usage."
+                                                },
+                                                {
+                                                    "type": "paragraph",
+                                                    "text": "You can read a bit more about eLife Labs and we would love to hear <a href=\"mailto:staff@elifesciences.org\">what you think</a>."
+                                                },
+                                                {
+                                                    "type": "image",
+                                                    "alt": "",
+                                                    "uri": "https://elife-cdn.s3.amazonaws.com/images/news/eLife_Lens_contextual.png",
+                                                    "caption": "contextual search results"
+                                                },
+                                                {
+                                                    "type": "image",
+                                                    "alt": "",
+                                                    "uri": "https://elife-cdn.s3.amazonaws.com/images/news/eLife_Lens_typeahead.png",
+                                                    "caption": "type ahead search results"
+                                                },
+                                                {
+                                                    "type": "image",
+                                                    "alt": "",
+                                                    "uri": "https://elife-cdn.s3.amazonaws.com/images/news/eLife_Lens_Search_filters.png",
+                                                    "caption": "filters showing frequency of search term in filter"
+                                                }
+                                            ]
+                                        }

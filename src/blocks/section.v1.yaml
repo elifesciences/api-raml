@@ -1,0 +1,25 @@
+$schema: http://json-schema.org/draft-04/schema#
+title: Section
+type: object
+properties:
+    type:
+        type: string
+        enum:
+          - section
+    title:
+        title: Text
+        type: string
+    content:
+        description: Content
+        type: array
+        items:
+            oneOf:
+              - $ref: blockquote.v1.yaml
+              - $ref: image.v1.yaml
+              - $ref: paragraph.v1.yaml
+              - $ref: section.v1.yaml
+        minItems: 1
+required:
+  - type
+  - title
+  - content

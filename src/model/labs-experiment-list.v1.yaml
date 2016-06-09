@@ -1,0 +1,39 @@
+$schema: http://json-schema.org/draft-04/schema#
+title: Labs experiment list
+type: object
+properties:
+    total:
+        title: Total number of Labs experiments
+        type: integer
+        minimum: 0
+    items:
+        title: Experiments
+        type: array
+        items:
+            type: object
+            properties:
+                number:
+                    description: Number
+                    type: integer
+                    minimum: 1
+                title:
+                    description: Title
+                    type: string
+                impactStatement:
+                    description: Description of the experiment
+                    type: string
+                published:
+                    description: Publication date (UTC)
+                    type: string
+                    format: date-time
+                image:
+                    $ref: ../misc/image.v1.yaml
+            required:
+              - number
+              - title
+              - published
+              - image
+        uniqueItems: true
+required:
+  - total
+  - items

@@ -1,0 +1,14 @@
+$schema: http://json-schema.org/draft-04/schema#
+title: Paragraph
+type: object
+properties:
+    type:
+        type: string
+        enum:
+          - paragraph
+    text:
+        title: Text
+        type: string
+required:
+  - type
+  - text
