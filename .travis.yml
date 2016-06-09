@@ -9,7 +9,7 @@ matrix:
 
 cache:
     directories:
-      - $HOME/.npm
+      - node_modules
 
 install:
   - npm install
