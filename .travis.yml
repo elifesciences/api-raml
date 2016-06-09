@@ -16,3 +16,4 @@ install:
 
 script:
   - node compile.js
+  - git diff --exit-code
