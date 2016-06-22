@@ -122,6 +122,118 @@ traits:
                 repeat: true
                 example: cell-biology
 
+/articles:
+    type: collection
+    description: |
+        Article
+    get:
+        description: |
+            Get a list of articles, sorted by date.
+        is:
+          - paged: { resources: Articles }
+        responses:
+            200:
+                description: |
+                    List of articles, sorted by date.
+                body:
+                    application/vnd.elife.articles-list+json;version=1:
+                        schema: !include model/article-list.v1.json
+                        examples:
+                            paginated:
+                                displayName: First page
+                                description: |
+                                    List is split over two pages.
+                                value: |
+                                    {
+                                        "total": 2,
+                                        "items": [
+                                            {
+                                                "id": "09560",
+                                                "version": 1,
+                                                "type": "research-article",
+                                                "doi": "10.7554/eLife.09560",
+                                                "title": "<i>Homo naledi</i>, a new species of the genus <i>Homo</i> from the Dinaledi Chamber, South Africa",
+                                                "published": "2015-09-10T00:00:00Z",
+                                                "volume": 4,
+                                                "elocationId": "e09560",
+                                                "copyright": {
+                                                    "license": "CC-BY-4.0",
+                                                    "holder": "Berger et al"
+                                                }
+                                            }
+                                        ]
+                                    }
+                            empty:
+                                displayName: Empty list
+                                description: |
+                                    Demonstration of the list being empty (the first page will always return a valid result).
+                                value: |
+                                    {
+                                        "total": 0,
+                                        "items": []
+                                    }
+    /{id}:
+        type:
+            item:
+                resource: article
+        description: |
+            Individual article.
+        uriParameters:
+            id:
+                description: |
+                    Article ID.
+                type: string
+        get:
+            description: |
+                Get an article.
+            responses:
+                200:
+                    description: |
+                        Article.
+                    body:
+                        application/vnd.elife.article-vor+json;version=1:
+                            schema: !include model/article-vor.v1.json
+                            examples:
+                                minimum:
+                                    displayName: Minimum
+                                    value: |
+                                        {
+                                            "id": "09560",
+                                            "version": 1,
+                                            "type": "research-article",
+                                            "doi": "10.7554/eLife.09560",
+                                            "title": "<i>Homo naledi</i>, a new species of the genus <i>Homo</i> from the Dinaledi Chamber, South Africa",
+                                            "published": "2015-09-10T00:00:00Z",
+                                            "volume": 4,
+                                            "elocationId": "e09560",
+                                            "copyright": {
+                                                "license": "CC-BY-4.0",
+                                                "holder": "Berger et al"
+                                            }
+                                        }
+                                complete:
+                                    displayName: Complete
+                                    value: |
+                                        {
+                                            "id": "09560",
+                                            "version": 1,
+                                            "type": "research-article",
+                                            "doi": "10.7554/eLife.09560",
+                                            "title": "<i>Homo naledi</i>, a new species of the genus <i>Homo</i> from the Dinaledi Chamber, South Africa",
+                                            "published": "2015-09-10T00:00:00Z",
+                                            "volume": 4,
+                                            "issue": 3,
+                                            "elocationId": "e09560",
+                                            "copyright": {
+                                                "license": "CC-BY-4.0",
+                                                "holder": "Berger et al"
+                                            },
+                                            "pdf": "https://elifesciences.org/content/4/e09560.pdf",
+                                            "subjects": [
+                                                "genomics-evolutionary-biology"
+                                            ]
+                                        }
+
 /blog-articles:
     type: collection
     description: |

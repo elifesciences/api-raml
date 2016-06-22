@@ -1,0 +1,17 @@
+$schema: http://json-schema.org/draft-04/schema#
+title: Article list
+type: object
+properties:
+    total:
+        title: Total number of articles
+        type: integer
+        minimum: 0
+    items:
+        title: Articles
+        type: array
+        items:
+            $ref: '../misc/article.v1.yaml'
+        uniqueItems: true
+required:
+  - total
+  - items
