@@ -145,11 +145,27 @@ traits:
                                     List is split over two pages.
                                 value: |
                                     {
-                                        "total": 2,
+                                        "total": 4,
                                         "items": [
+                                            {
+                                                "id": "14107",
+                                                "version": 1,
+                                                "status": "poa",
+                                                "type": "research-article",
+                                                "doi": "10.7554/eLife.14107",
+                                                "title": "Molecular basis for multimerization in the activation of the epidermal growth factor",
+                                                "published": "2016-03-28T00:00:00Z",
+                                                "volume": 5,
+                                                "elocationId": "e14107",
+                                                "copyright": {
+                                                    "license": "CC-BY-4.0",
+                                                    "holder": "Huang et al"
+                                                }
+                                            },
                                             {
                                                 "id": "09560",
                                                 "version": 1,
+                                                "status": "vor",
                                                 "type": "research-article",
                                                 "doi": "10.7554/eLife.09560",
                                                 "title": "<i>Homo naledi</i>, a new species of the genus <i>Homo</i> from the Dinaledi Chamber, South Africa",
@@ -191,6 +207,49 @@ traits:
                     description: |
                         Article.
                     body:
+                        application/vnd.elife.article-poa+json;version=1:
+                            schema: !include ../dist/model/article-poa.v1.json
+                            examples:
+                                minimum:
+                                    displayName: Minimum
+                                    value: |
+                                        {
+                                            "id": "14107",
+                                            "version": 1,
+                                            "type": "research-article",
+                                            "doi": "10.7554/eLife.14107",
+                                            "title": "Molecular basis for multimerization in the activation of the epidermal growth factor",
+                                            "published": "2016-03-28T00:00:00Z",
+                                            "volume": 5,
+                                            "elocationId": "e14107",
+                                            "copyright": {
+                                                "license": "CC-BY-4.0",
+                                                "holder": "Huang et al"
+                                            }
+                                        }
+                                complete:
+                                    displayName: Complete
+                                    value: |
+                                        {
+                                            "id": "14107",
+                                            "version": 1,
+                                            "type": "research-article",
+                                            "doi": "10.7554/eLife.14107",
+                                            "title": "Molecular basis for multimerization in the activation of the epidermal growth factor",
+                                            "published": "2016-03-28T00:00:00Z",
+                                            "volume": 5,
+                                            "issue": 1,
+                                            "elocationId": "e14107",
+                                            "copyright": {
+                                                "license": "CC-BY-4.0",
+                                                "holder": "Huang et al"
+                                            },
+                                            "pdf": "https://elifesciences.org/content/5/e14107.pdf",
+                                            "subjects": [
+                                                "biochemistry",
+                                                "biophysics-structural-biology"
+                                            ]
+                                        }
                         application/vnd.elife.article-vor+json;version=1:
                             schema: !include model/article-vor.v1.json
                             examples:

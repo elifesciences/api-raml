@@ -10,7 +10,16 @@ properties:
         title: Articles
         type: array
         items:
-            $ref: '../misc/article.v1.yaml'
+            allOf:
+              - $ref: '../misc/article.v1.yaml'
+              - properties:
+                    status:
+                        type: string
+                        enum:
+                          - poa
+                          - vor
+                required:
+                  - status
         uniqueItems: true
 required:
   - total
