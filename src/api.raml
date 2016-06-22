@@ -46,23 +46,23 @@ resourceTypes:
             responses:
                 404:
                     description: |
-                        <<resource | !uppercamelcase>> is not found.
+                        <<resource>> is not found.
                     body:
                         application/problem+json:
                             schema: !include ../dist/model/error.json
                             example: |
                                 {
-                                    "title": "<<resource | !uppercamelcase>> not found"
+                                    "title": "<<resource>> not found"
                                 }
                 410:
                     description: |
-                        <<resource | !uppercamelcase>> has been removed.
+                        <<resource>> has been removed.
                     body:
                         application/problem+json:
                             schema: !include ../dist/model/error.json
                             example: |
                                 {
-                                    "title": "<<resource | !uppercamelcase>> removed"
+                                    "title": "<<resource>> removed"
                                 }
     collection:
         type: base
@@ -82,7 +82,7 @@ traits:
                 example: 2
             per-page:
                 description: |
-                    Number of <<resource | !pluralize>> per page.
+                    Number of <<resource | !lowercase | !pluralize>> per page.
                 type: integer
                 required: false
                 default: 20
@@ -116,7 +116,7 @@ traits:
         queryParameters:
             subject:
                 description: |
-                    Only include <<resource | !pluralize>> with one of the specified subjects.
+                    Only include <<resource | !lowercase | !pluralize>> with one of the specified subjects.
                 type: string
                 required: false
                 repeat: true
@@ -130,7 +130,7 @@ traits:
         description: |
             Get a list of experiments, sorted by number.
         is:
-          - paged: { resource: experiment }
+          - paged: { resource: Experiment }
         responses:
             200:
                 description: |
@@ -184,7 +184,7 @@ traits:
     /{number}:
         type:
             item:
-                resource: experiment
+                resource: Experiment
         description: |
             Individual Labs experiment.
         uriParameters:
