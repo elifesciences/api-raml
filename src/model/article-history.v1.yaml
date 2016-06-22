@@ -1,0 +1,23 @@
+$schema: http://json-schema.org/draft-04/schema#
+title: Article history
+type: object
+properties:
+    received:
+        type: string
+        format: date
+    accepted:
+        type: string
+        format: date
+    poa:
+        title: Number of PoA versions
+        type: integer
+        minimum: 0
+    vor:
+        title: Number of VoR versions
+        type: integer
+        minimum: 0
+required:
+  - received
+  - accepted
+  - poa
+  - vor

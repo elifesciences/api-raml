@@ -188,12 +188,13 @@ traits:
                                         "total": 0,
                                         "items": []
                                     }
+
     /{id}:
         type:
             item:
                 resource: Article
         description: |
-            Individual article.
+            Latest version of an individual article.
         uriParameters:
             id:
                 description: |
@@ -205,7 +206,7 @@ traits:
             responses:
                 200:
                     description: |
-                        Article.
+                        Article latest version.
                     body:
                         application/vnd.elife.article-poa+json;version=1:
                             schema: !include ../dist/model/article-poa.v1.json
@@ -292,6 +293,148 @@ traits:
                                                 "genomics-evolutionary-biology"
                                             ]
                                         }
+
+        /versions:
+            type:
+                item:
+                    resource: Article
+            description: |
+                Individual article history.
+            get:
+                description: |
+                    Get an article history.
+                responses:
+                    200:
+                        description: |
+                            Article history.
+                        body:
+                            application/vnd.elife.article-history+json;version=1:
+                                schema: !include ../dist/model/article-history.v1.json
+                                examples:
+                                    oneVersion:
+                                        displayName: One version
+                                        value: |
+                                            {
+                                                "received": "2015-06-19",
+                                                "accepted": "2015-08-04",
+                                                "poa": 0,
+                                                "vor": 1
+                                            }
+                                    multipleVersions:
+                                        displayName: Multiple versions
+                                        value: |
+                                            {
+                                                "received": "2015-12-29",
+                                                "accepted": "2016-03-27",
+                                                "poa": 2,
+                                                "vor": 1
+                                            }
+
+            /{version}:
+                type:
+                    item:
+                        resource: Article version
+                description: |
+                    Individual article version.
+                uriParameters:
+                    version:
+                        description: |
+                            Article version number.
+                        type: integer
+                        minimum: 1
+                get:
+                    description: |
+                        Get an article.
+                    responses:
+                        200:
+                            description: |
+                                Article version.
+                            body:
+                                application/vnd.elife.article-poa+json;version=1:
+                                    schema: !include ../dist/model/article-poa.v1.json
+                                    examples:
+                                        minimum:
+                                            displayName: Minimum
+                                            value: |
+                                                {
+                                                    "id": "14107",
+                                                    "version": 1,
+                                                    "type": "research-article",
+                                                    "doi": "10.7554/eLife.14107",
+                                                    "title": "Molecular basis for multimerization in the activation of the epidermal growth factor",
+                                                    "published": "2016-03-28T00:00:00Z",
+                                                    "volume": 5,
+                                                    "elocationId": "e14107",
+                                                    "copyright": {
+                                                        "license": "CC-BY-4.0",
+                                                        "holder": "Huang et al"
+                                                    }
+                                                }
+                                        complete:
+                                            displayName: Complete
+                                            value: |
+                                                {
+                                                    "id": "14107",
+                                                    "version": 1,
+                                                    "type": "research-article",
+                                                    "doi": "10.7554/eLife.14107",
+                                                    "title": "Molecular basis for multimerization in the activation of the epidermal growth factor",
+                                                    "published": "2016-03-28T00:00:00Z",
+                                                    "volume": 5,
+                                                    "issue": 1,
+                                                    "elocationId": "e14107",
+                                                    "copyright": {
+                                                        "license": "CC-BY-4.0",
+                                                        "holder": "Huang et al"
+                                                    },
+                                                    "pdf": "https://elifesciences.org/content/5/e14107.pdf",
+                                                    "subjects": [
+                                                        "biochemistry",
+                                                        "biophysics-structural-biology"
+                                                    ]
+                                                }
+                                application/vnd.elife.article-vor+json;version=1:
+                                    schema: !include ../dist/model/article-vor.v1.json
+                                    examples:
+                                        minimum:
+                                            displayName: Minimum
+                                            value: |
+                                                {
+                                                    "id": "09560",
+                                                    "version": 1,
+                                                    "type": "research-article",
+                                                    "doi": "10.7554/eLife.09560",
+                                                    "title": "<i>Homo naledi</i>, a new species of the genus <i>Homo</i> from the Dinaledi Chamber, South Africa",
+                                                    "published": "2015-09-10T00:00:00Z",
+                                                    "volume": 4,
+                                                    "elocationId": "e09560",
+                                                    "copyright": {
+                                                        "license": "CC-BY-4.0",
+                                                        "holder": "Berger et al"
+                                                    }
+                                                }
+                                        complete:
+                                            displayName: Complete
+                                            value: |
+                                                {
+                                                    "id": "09560",
+                                                    "version": 1,
+                                                    "type": "research-article",
+                                                    "doi": "10.7554/eLife.09560",
+                                                    "title": "<i>Homo naledi</i>, a new species of the genus <i>Homo</i> from the Dinaledi Chamber, South Africa",
+                                                    "published": "2015-09-10T00:00:00Z",
+                                                    "volume": 4,
+                                                    "issue": 3,
+                                                    "elocationId": "e09560",
+                                                    "copyright": {
+                                                        "license": "CC-BY-4.0",
+                                                        "holder": "Berger et al"
+                                                    },
+                                                    "pdf": "https://elifesciences.org/content/4/e09560.pdf",
+                                                    "subjects": [
+                                                        "genomics-evolutionary-biology"
+                                                    ]
+                                                }
 
 /blog-articles:
     type: collection
