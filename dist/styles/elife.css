@@ -1,0 +1,4 @@
+.raml-console-resource-pre code pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}

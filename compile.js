@@ -8,6 +8,7 @@ var refParser = require('json-schema-ref-parser');
 
 fs.removeSync('./dist');
 fs.mkdirsSync('./dist/model');
+fs.mkdirsSync('./dist/styles');
 
 recursive('./src/model', function (err, files) {
     var promises = [];
@@ -48,6 +49,7 @@ recursive('./src/model', function (err, files) {
         fs.copy('./node_modules/api-console/dist/img', './dist/img');
         fs.copy('./node_modules/api-console/dist/scripts', './dist/scripts');
         fs.copy('./node_modules/api-console/dist/styles', './dist/styles');
+        fs.copy('./src/styles', './dist/styles');
         fs.copy('./src/index.html', './dist/index.html');
         fs.copy('./src/favicon.ico', './dist/favicon.ico');
     });
