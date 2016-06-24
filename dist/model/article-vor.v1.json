@@ -150,6 +150,29 @@
                 "elocationId",
                 "copyright"
             ]
+        },
+        {
+            "properties": {
+                "digest": {
+                    "type": "object",
+                    "properties": {
+                        "doi": {
+                            "$ref": "#/allOf/0/properties/doi"
+                        },
+                        "content": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/allOf/0/properties/abstract/properties/content/items"
+                            },
+                            "minItems": 1
+                        }
+                    },
+                    "required": [
+                        "doi",
+                        "content"
+                    ]
+                }
+            }
         }
     ]
 }

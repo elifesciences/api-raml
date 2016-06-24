@@ -5,3 +5,17 @@ type: object
 
 allOf:
   - $ref: article-poa.v1.yaml
+  - properties:
+        digest:
+            type: object
+            properties:
+                doi:
+                    $ref: ../misc/doi.yaml
+                content:
+                    type: array
+                    items:
+                        $ref: ../blocks/paragraph.v1.yaml
+                    minItems: 1
+            required:
+              - doi
+              - content
