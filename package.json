@@ -1,7 +1,7 @@
 {
     "private": true,
     "devDependencies": {
-        "api-console": "https://github.com/mulesoft/api-console/archive/v3.0.1.tar.gz",
+        "api-console": "^3.0",
         "fs-extra": "^0.8",
         "json-schema-ref-parser": "^3.1",
         "raml-1-parser": "^0.2",
