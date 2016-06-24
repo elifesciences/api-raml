@@ -10,16 +10,66 @@ properties:
         title: Articles
         type: array
         items:
-            allOf:
-              - $ref: '../misc/article.v1.yaml'
-              - properties:
-                    status:
+            type: object
+            properties:
+                id:
+                    type: string
+                    minLength: 1
+                version:
+                    type: integer
+                    minimum: 1
+                status:
+                    type: string
+                    enum:
+                      - poa
+                      - vor
+                type:
+                    type: string
+                    enum:
+                      - correction
+                      - editorial
+                      - feature
+                      - insight
+                      - research-advance
+                      - research-article
+                      - research-exchange
+                      - retraction
+                      - registered-report
+                      - replication-study
+                      - short-report
+                      - tools-resources
+                doi:
+                    $ref: ../misc/doi.yaml
+                title:
+                    type: string
+                    minLength: 1
+                published:
+                    type: string
+                    format: date-time
+                volume:
+                    type: integer
+                    minimum: 1
+                elocationId:
+                    type: string
+                    minLength: 1
+                pdf:
+                    type: string
+                    format: uri
+                subjects:
+                    type: array
+                    items:
                         type: string
-                        enum:
-                          - poa
-                          - vor
-                required:
-                  - status
+                        minLength: 1
+            required:
+              - id
+              - version
+              - status
+              - type
+              - doi
+              - title
+              - published
+              - volume
+              - elocationId
         uniqueItems: true
 required:
   - total

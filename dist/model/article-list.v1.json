@@ -12,125 +12,84 @@
             "title": "Articles",
             "type": "array",
             "items": {
-                "allOf": [
-                    {
-                        "$schema": "http://json-schema.org/draft-04/schema#",
-                        "title": "eLife Article",
-                        "type": "object",
-                        "properties": {
-                            "id": {
-                                "type": "string",
-                                "minLength": 1
-                            },
-                            "version": {
-                                "type": "integer",
-                                "minimum": 1
-                            },
-                            "type": {
-                                "type": "string",
-                                "enum": [
-                                    "correction",
-                                    "editorial",
-                                    "feature",
-                                    "insight",
-                                    "research-advance",
-                                    "research-article",
-                                    "research-exchange",
-                                    "retraction",
-                                    "registered-report",
-                                    "replication-study",
-                                    "short-report",
-                                    "tools-resources"
-                                ]
-                            },
-                            "doi": {
-                                "$schema": "http://json-schema.org/draft-04/schema#",
-                                "title": "DOI",
-                                "type": "string",
-                                "pattern": "^10[.][0-9]{4,}[^\\s\"/<>]*/[^\\s\"]+$"
-                            },
-                            "title": {
-                                "type": "string",
-                                "minLength": 1
-                            },
-                            "published": {
-                                "type": "string",
-                                "format": "date-time"
-                            },
-                            "volume": {
-                                "type": "integer",
-                                "minimum": 1
-                            },
-                            "issue": {
-                                "type": "integer",
-                                "minimum": 1
-                            },
-                            "elocationId": {
-                                "type": "string",
-                                "minLength": 1
-                            },
-                            "copyright": {
-                                "type": "object",
-                                "properties": {
-                                    "license": {
-                                        "type": "string",
-                                        "enum": [
-                                            "CC-BY-1.0",
-                                            "CC-BY-2.0",
-                                            "CC-BY-2.5",
-                                            "CC-BY-3.0",
-                                            "CC-BY-4.0",
-                                            "CC0-1.0"
-                                        ]
-                                    },
-                                    "holder": {
-                                        "type": "string",
-                                        "minLength": 1
-                                    }
-                                },
-                                "required": [
-                                    "license",
-                                    "holder"
-                                ]
-                            },
-                            "pdf": {
-                                "type": "string",
-                                "format": "uri"
-                            },
-                            "subjects": {
-                                "type": "array",
-                                "items": {
-                                    "type": "string",
-                                    "minLength": 1
-                                }
-                            }
-                        },
-                        "required": [
-                            "id",
-                            "version",
-                            "type",
-                            "doi",
-                            "title",
-                            "published",
-                            "volume",
-                            "elocationId",
-                            "copyright"
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "string",
+                        "minLength": 1
+                    },
+                    "version": {
+                        "type": "integer",
+                        "minimum": 1
+                    },
+                    "status": {
+                        "type": "string",
+                        "enum": [
+                            "poa",
+                            "vor"
                         ]
                     },
-                    {
-                        "properties": {
-                            "status": {
-                                "type": "string",
-                                "enum": [
-                                    "poa",
-                                    "vor"
-                                ]
-                            }
-                        },
-                        "required": [
-                            "status"
+                    "type": {
+                        "type": "string",
+                        "enum": [
+                            "correction",
+                            "editorial",
+                            "feature",
+                            "insight",
+                            "research-advance",
+                            "research-article",
+                            "research-exchange",
+                            "retraction",
+                            "registered-report",
+                            "replication-study",
+                            "short-report",
+                            "tools-resources"
                         ]
+                    },
+                    "doi": {
+                        "$schema": "http://json-schema.org/draft-04/schema#",
+                        "title": "DOI",
+                        "type": "string",
+                        "pattern": "^10[.][0-9]{4,}[^\\s\"/<>]*/[^\\s\"]+$"
+                    },
+                    "title": {
+                        "type": "string",
+                        "minLength": 1
+                    },
+                    "published": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "volume": {
+                        "type": "integer",
+                        "minimum": 1
+                    },
+                    "elocationId": {
+                        "type": "string",
+                        "minLength": 1
+                    },
+                    "pdf": {
+                        "type": "string",
+                        "format": "uri"
+                    },
+                    "subjects": {
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "minLength": 1
+                        }
                     }
+                },
+                "required": [
+                    "id",
+                    "version",
+                    "status",
+                    "type",
+                    "doi",
+                    "title",
+                    "published",
+                    "volume",
+                    "elocationId"
                 ]
             },
             "uniqueItems": true
