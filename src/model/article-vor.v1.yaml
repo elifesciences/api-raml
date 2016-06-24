@@ -4,4 +4,4 @@ title: Article VoR
 type: object
 
 allOf:
-  - $ref: '../misc/article.v1.yaml'
+  - $ref: article-poa.v1.yaml

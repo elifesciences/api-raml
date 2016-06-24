@@ -5,7 +5,7 @@
     "allOf": [
         {
             "$schema": "http://json-schema.org/draft-04/schema#",
-            "title": "eLife Article",
+            "title": "Article PoA",
             "type": "object",
             "properties": {
                 "id": {
