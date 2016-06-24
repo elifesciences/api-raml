@@ -82,7 +82,7 @@ traits:
                 example: 2
             per-page:
                 description: |
-                    Number of <<resource | !lowercase | !pluralize>> per page.
+                    Number of <<resources | !lowercase>> per page.
                 type: integer
                 required: false
                 default: 20
@@ -116,7 +116,7 @@ traits:
         queryParameters:
             subject:
                 description: |
-                    Only include <<resource | !lowercase | !pluralize>> with one of the specified subjects.
+                    Only include <<resources | !lowercase>> with one of the specified subjects.
                 type: string
                 required: false
                 repeat: true
@@ -130,7 +130,7 @@ traits:
         description: |
             Get a list of experiments, sorted by number.
         is:
-          - paged: { resource: Experiment }
+          - paged: { resources: Experiments }
         responses:
             200:
                 description: |
