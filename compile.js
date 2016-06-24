@@ -25,6 +25,9 @@ recursive('./src/model', function (err, files) {
                 var jsonFile = './dist/model/' + file.slice(10, (file.length - 4)) + 'json';
                 var json = JSON.stringify(schema, null, 4) + '\n';
                 fs.writeFileSync(jsonFile, json);
+            }).catch(function (error) {
+                console.error(error);
+                process.exit(1);
             }));
         }(file))
     }
@@ -38,6 +41,7 @@ recursive('./src/model', function (err, files) {
             ramlParser.loadRAMLSync(path.resolve(__dirname, './dist/api.raml'), [], {rejectOnErrors: true});
         } catch (error) {
             console.error(error);
+            process.exit(1);
         }
 
         fs.copy('./node_modules/api-console/dist/fonts', './dist/fonts');
