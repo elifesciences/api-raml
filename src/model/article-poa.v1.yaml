@@ -73,6 +73,19 @@ properties:
         items:
             type: string
             minLength: 1
+    abstract:
+        type: object
+        properties:
+            doi:
+                $ref: ../misc/doi.yaml
+            content:
+                type: array
+                items:
+                    $ref: ../blocks/paragraph.v1.yaml
+                minItems: 1
+        required:
+          - doi
+          - content
 required:
   - id
   - version
