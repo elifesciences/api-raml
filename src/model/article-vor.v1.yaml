@@ -6,6 +6,11 @@ type: object
 allOf:
   - $ref: article-poa.v1.yaml
   - properties:
+        keywords:
+            type: array
+            items:
+                type: string
+                minLength: 1
         digest:
             type: object
             properties:

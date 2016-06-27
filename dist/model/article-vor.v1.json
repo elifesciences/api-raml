@@ -94,6 +94,13 @@
                         "minLength": 1
                     }
                 },
+                "researchOrganisms": {
+                    "type": "array",
+                    "items": {
+                        "type": "string",
+                        "minLength": 1
+                    }
+                },
                 "relatedArticles": {
                     "type": "array",
                     "items": {
@@ -153,6 +160,13 @@
         },
         {
             "properties": {
+                "keywords": {
+                    "type": "array",
+                    "items": {
+                        "type": "string",
+                        "minLength": 1
+                    }
+                },
                 "digest": {
                     "type": "object",
                     "properties": {
