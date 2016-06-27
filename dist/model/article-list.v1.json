@@ -78,6 +78,10 @@
                             "type": "string",
                             "minLength": 1
                         }
+                    },
+                    "impactStatement": {
+                        "type": "string",
+                        "minLength": 1
                     }
                 },
                 "required": [
