@@ -8,6 +8,7 @@ var refParser = require('json-schema-ref-parser');
 
 fs.removeSync('./dist');
 fs.mkdirsSync('./dist/model');
+fs.mkdirsSync('./dist/samples');
 fs.mkdirsSync('./dist/styles');
 
 recursive('./src/model', function (err, files) {
@@ -37,6 +38,8 @@ recursive('./src/model', function (err, files) {
         var raml = fs.readFileSync('./src/api.raml', 'utf8').replace(/!include \.\.\/dist\//g, '!include ');
 
         fs.writeFileSync('./dist/api.raml', raml);
+
+        fs.copySync('./src/samples', './dist/samples');
 
         try {
             ramlParser.loadRAMLSync(path.resolve(__dirname, './dist/api.raml'), [], {rejectOnErrors: true});

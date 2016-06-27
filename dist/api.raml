@@ -143,43 +143,12 @@ traits:
                                 displayName: First page
                                 description: |
                                     List is split over two pages.
-                                value: |
-                                    {
-                                        "total": 2,
-                                        "items": [
-                                            {
-                                                "number": 1,
-                                                "title": "Experimental eLife Lens search page",
-                                                "published": "2015-04-01T11:32:47+00:00",
-                                                "image": {
-                                                    "alt": "",
-                                                    "sizes": {
-                                                        "2:1": {
-                                                            "900": "https://placehold.it/900x450",
-                                                            "1800": "https://placehold.it/1800x900"
-                                                        },
-                                                        "16:9": {
-                                                            "250": "https://placehold.it/250x141",
-                                                            "500": "https://placehold.it/500x281"
-                                                        },
-                                                        "1:1": {
-                                                            "70": "https://placehold.it/70x70",
-                                                            "140": "https://placehold.it/140x140"
-                                                        }
-                                                    }
-                                                }
-                                            }
-                                        ]
-                                    }
+                                value: !include samples/labs-experiment-list/v1/first-page.json
                             empty:
                                 displayName: Empty list
                                 description: |
                                     Demonstration of the list being empty (the first page will always return a valid result).
-                                value: |
-                                    {
-                                        "total": 0,
-                                        "items": []
-                                    }
+                                value: !include samples/labs-experiment-list/v1/empty.json
 
     /{number}:
         type:
@@ -206,112 +175,7 @@ traits:
                             examples:
                                 minimum:
                                     displayName: Minimum
-                                    value: |
-                                        {
-                                            "number": 1,
-                                            "title": "Experimental eLife Lens search page",
-                                            "published": "2015-04-01T11:32:47+00:00",
-                                            "image": {
-                                                "alt": "",
-                                                "sizes": {
-                                                    "2:1": {
-                                                        "900": "https://placehold.it/900x450",
-                                                        "1800": "https://placehold.it/1800x900"
-                                                    },
-                                                    "16:9": {
-                                                        "250": "https://placehold.it/250x141",
-                                                        "500": "https://placehold.it/500x281"
-                                                    },
-                                                    "1:1": {
-                                                        "70": "https://placehold.it/70x70",
-                                                        "140": "https://placehold.it/140x140"
-                                                    }
-                                                }
-                                            },
-                                            "content": [
-                                                {
-                                                    "type": "paragraph",
-                                                    "text": "We are going to use feedback and usage stats to determine whether we can bring any features from this kind of demo over to our main site."
-                                                }
-                                            ]
-                                        }
+                                    value: !include samples/labs-experiment/v1/minimum.json
                                 complete:
                                     displayName: Complete
-                                    value: |
-                                        {
-                                            "number": 1,
-                                            "title": "Experimental eLife Lens search page",
-                                            "impactStatement": "Today on eLife Labs we are launching a small demo of a search interface that brings together some elements of eLife Lens and some of the native power of a technology called elasticsearch. Head over to the demo to try it out now.",
-                                            "published": "2015-04-01T11:32:47+00:00",
-                                            "image": {
-                                                "alt": "",
-                                                "sizes": {
-                                                    "2:1": {
-                                                        "900": "https://placehold.it/900x450",
-                                                        "1800": "https://placehold.it/1800x900"
-                                                    },
-                                                    "16:9": {
-                                                        "250": "https://placehold.it/250x141",
-                                                        "500": "https://placehold.it/500x281"
-                                                    },
-                                                    "1:1": {
-                                                        "70": "https://placehold.it/70x70",
-                                                        "140": "https://placehold.it/140x140"
-                                                    }
-                                                }
-                                            },
-                                            "content": [
-                                                {
-                                                    "type": "paragraph",
-                                                    "text": "We are going to use feedback and usage stats to determine whether we can bring any features from this kind of demo over to our main site."
-                                                },
-                                                {
-                                                    "type": "paragraph",
-                                                    "text": "This demo does comes with a couple of strong caveats, it does not update regularly with eLife articles, but only contains a snapshot of eLife content published up to the 26th of March. It also needs javascript enabled."
-                                                },
-                                                {
-                                                    "type": "paragraph",
-                                                    "text": "Beyond those constraints we have tried a few interesting things with this search interface. The most interesting thing is going on behind the scenes where we have indexed each paragraphs of each article, allowing for contextual results to be returned. The hope here is to be able, at some point, to link those paragraphs in to the lens view of the article, allowing you to go straight to the part of the document that looks interesting to you."
-                                                },
-                                                {
-                                                    "type": "paragraph",
-                                                    "text": "We have added some type-ahead suggestions based on popular search queries."
-                                                },
-                                                {
-                                                    "type": "paragraph",
-                                                    "text": "There are a couple of ways of applying filters to the search and there is also a quick way to look at how many results there are for a given search term under each filter."
-                                                },
-                                                {
-                                                    "type": "youtube",
-                                                    "id": "-9JVFCL0fvk",
-                                                    "width": 960,
-                                                    "height": 720
-                                                },
-                                                {
-                                                    "type": "paragraph",
-                                                    "text": "We are gong to be seeing how the back end performs, and hopefully learning what works and what doesn’t through usage."
-                                                },
-                                                {
-                                                    "type": "paragraph",
-                                                    "text": "You can read a bit more about eLife Labs and we would love to hear <a href=\"mailto:staff@elifesciences.org\">what you think</a>."
-                                                },
-                                                {
-                                                    "type": "image",
-                                                    "alt": "",
-                                                    "uri": "https://elife-cdn.s3.amazonaws.com/images/news/eLife_Lens_contextual.png",
-                                                    "caption": "contextual search results"
-                                                },
-                                                {
-                                                    "type": "image",
-                                                    "alt": "",
-                                                    "uri": "https://elife-cdn.s3.amazonaws.com/images/news/eLife_Lens_typeahead.png",
-                                                    "caption": "type ahead search results"
-                                                },
-                                                {
-                                                    "type": "image",
-                                                    "alt": "",
-                                                    "uri": "https://elife-cdn.s3.amazonaws.com/images/news/eLife_Lens_Search_filters.png",
-                                                    "caption": "filters showing frequency of search term in filter"
-                                                }
-                                            ]
-                                        }
+                                    value: !include samples/labs-experiment/v1/complete.json
