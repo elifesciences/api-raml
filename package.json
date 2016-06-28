@@ -3,6 +3,7 @@
     "devDependencies": {
         "api-console": "^3.0",
         "fs-extra": "^0.8",
+        "http-server": "^0.9",
         "json-schema-ref-parser": "^3.1",
         "raml-1-parser": "^0.2",
         "recursive-readdir": "^2.0"
