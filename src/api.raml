@@ -179,3 +179,55 @@ traits:
                                 complete:
                                     displayName: Complete
                                     value: !include samples/labs-experiment/v1/complete.json
+
+/subjects:
+    type: collection
+    description: |
+        Subjects
+    get:
+        description: |
+            Get a list of subjects, sorted by name.
+        is:
+          - paged: { resources: Subjects }
+        responses:
+            200:
+                description: |
+                    List of subjects, sorted by number.
+                body:
+                    application/vnd.elife.subject-list+json;version=1:
+                        schema: !include ../dist/model/subject-list.v1.json
+                        examples:
+                            paginated:
+                                displayName: First page
+                                description: |
+                                    List is split over two pages.
+                                value: !include samples/subject-list/v1/first-page.json
+                            empty:
+                                displayName: Empty list
+                                description: |
+                                    Demonstration of the list being empty (the first page will always return a valid result).
+                                value: !include samples/subject-list/v1/empty.json
+
+    /{id}:
+        type:
+            item:
+                resource: Subject
+        description: |
+            Individual subject.
+        uriParameters:
+            id:
+                description: |
+                    Subject ID.
+                type: string
+        get:
+            description: |
+                Get a subject.
+            responses:
+                200:
+                    description: |
+                        Subject.
+                    body:
+                        application/vnd.elife.subject+json;version=1:
+                            schema: !include ../dist/model/subject.v1.json
+                            example:
+                                value: !include samples/subject/v1/complete.json
