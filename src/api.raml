@@ -180,6 +180,32 @@ traits:
                                     displayName: Complete
                                     value: !include samples/labs-experiment/v1/complete.json
 
+/medium-articles:
+    type: collection
+    description: |
+        Medium articles
+    get:
+        description: |
+            Get a list of Medium articles, sorted by publication date.
+        responses:
+            200:
+                description: |
+                    List of Medium articles, sorted by publication date.
+                body:
+                    application/vnd.elife.medium-article-list+json;version=1:
+                        schema: !include ../dist/model/medium-article-list.v1.json
+                        examples:
+                            populated:
+                                displayName: Populated list
+                                description: |
+                                    Demonstration of the list containing articles.
+                                value: !include samples/medium-article-list/v1/populated.json
+                            empty:
+                                displayName: Empty list
+                                description: |
+                                    Demonstration of the list being empty.
+                                value: !include samples/medium-article-list/v1/empty.json
+
 /podcast-episodes:
     type: collection
     description: |
