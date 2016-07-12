@@ -180,6 +180,65 @@ traits:
                                     displayName: Complete
                                     value: !include samples/labs-experiment/v1/complete.json
 
+/podcast-episodes:
+    type: collection
+    description: |
+        Podcast episodes
+    get:
+        description: |
+            Get a list of episodes, sorted by number.
+        is:
+          - paged: { resources: Episodes }
+          - subjected: { resources: Episodes }
+        responses:
+            200:
+                description: |
+                    List of episodes, sorted by number.
+                body:
+                    application/vnd.elife.podcast-episode-list+json;version=1:
+                        schema: !include model/podcast-episode-list.v1.json
+                        examples:
+                            paginated:
+                                displayName: First page
+                                description: |
+                                    List is split over two pages.
+                                value: !include samples/podcast-episode-list/v1/first-page.json
+                            empty:
+                                displayName: Empty list
+                                description: |
+                                    Demonstration of the list being empty (the first page will always return a valid result).
+                                value: !include samples/podcast-episode-list/v1/empty.json
+
+    /{number}:
+        type:
+            item:
+                resource: Episode
+        description: |
+            Individual podcast episode.
+        uriParameters:
+            number:
+                description: |
+                    Episode number.
+                type: integer
+                minimum: 1
+        get:
+            description: |
+                Get an episode.
+            responses:
+                200:
+                    description: |
+                        Episode.
+                    body:
+                        application/vnd.elife.podcast-episode+json;version=1:
+                            schema: !include model/podcast-episode.v1.json
+                            examples:
+                                minimum:
+                                    displayName: Minimum
+                                    value: !include samples/podcast-episode/v1/minimum.json
+                                complete:
+                                    displayName: Complete
+                                    value: !include samples/podcast-episode/v1/complete.json
+
 /subjects:
     type: collection
     description: |
