@@ -122,6 +122,64 @@ traits:
                 repeat: true
                 example: cell-biology
 
+/blog-articles:
+    type: collection
+    description: |
+        Blog articles
+    get:
+        description: |
+            Get a list of articles, sorted by publication date.
+        is:
+          - paged: { resources: Articles }
+          - subjected: { resources: Articles }
+        responses:
+            200:
+                description: |
+                    List of articles, sorted by publication date.
+                body:
+                    application/vnd.elife.blog-article-list+json;version=1:
+                        schema: !include ../dist/model/blog-article-list.v1.json
+                        examples:
+                            paginated:
+                                displayName: First page
+                                description: |
+                                    List is split over two pages.
+                                value: !include samples/blog-article-list/v1/first-page.json
+                            empty:
+                                displayName: Empty list
+                                description: |
+                                    Demonstration of the list being empty (the first page will always return a valid result).
+                                value: !include samples/blog-article-list/v1/empty.json
+
+    /{id}:
+        type:
+            item:
+                resource: Article
+        description: |
+            Individual blog article.
+        uriParameters:
+            id:
+                description: |
+                    Article ID.
+                type: string
+        get:
+            description: |
+                Get an article.
+            responses:
+                200:
+                    description: |
+                        Article.
+                    body:
+                        application/vnd.elife.blog-article+json;version=1:
+                            schema: !include ../dist/model/blog-article.v1.json
+                            examples:
+                                minimum:
+                                    displayName: Minimum
+                                    value: !include samples/blog-article/v1/minimum.json
+                                complete:
+                                    displayName: Complete
+                                    value: !include samples/blog-article/v1/complete.json
+
 /labs-experiments:
     type: collection
     description: |

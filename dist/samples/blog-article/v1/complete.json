@@ -1,0 +1,39 @@
+{
+    "id": "1",
+    "title": "Media coverage: Slime can see",
+    "impactStatement": "In their research paper – Cyanobacteria use micro-optics to sense light direction – Schuergers et al. reveal how bacterial cells act as the equivalent of a microscopic eyeball or the world’s oldest and smallest camera eye, allowing them to ‘see’.",
+    "published": "2016-07-08T08:33:25+00:00",
+    "content": [
+        {
+            "type": "paragraph",
+            "text": "Cyanobacteria are found in huge numbers in water bodies or can form a slippery green film on rocks and pebbles. The species used in the study, <i>Synechocystis</i>, is found naturally in freshwater lakes and rivers."
+        },
+        {
+            "type": "paragraph",
+            "text": "As photosynthesis is crucial to the survival of these bacteria, scientists have sought to understand how they sense light. Previous studies have shown that they contain photosensors and are able to perceive the position of a light source and move towards it, a phenomenon called phototaxis."
+        },
+        {
+            "type": "paragraph",
+            "text": "The current study reveals that they are able to do this because the cell body acts like a lens. As light hits the spherical surface, it refracts into a point on the other side of the cell. This triggers movement by the cell away from the focused spot."
+        },
+        {
+            "type": "paragraph",
+            "text": "Within minutes, the bacteria grow tiny tentacle-like structures called pili that reach out towards the light source. As they attach to the surface that they’re on, they retract and pull the bacteria along."
+        },
+        {
+            "type": "image",
+            "alt": "",
+            "uri": "https://elife-cdn.s3.amazonaws.com/images/news/eLife_Lens_contextual.png",
+            "caption": "contextual search results"
+        },
+        {
+            "type": "youtube",
+            "id": "-9JVFCL0fvk",
+            "width": 960,
+            "height": 720
+        }
+    ],
+    "subjects": [
+        "biophysics-structural-biology"
+    ]
+}
