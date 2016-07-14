@@ -57,9 +57,13 @@ properties:
             holder:
                 type: string
                 minLength: 1
+            statement:
+                type: string
+                minLength: 1
         required:
           - license
           - holder
+          - statement
     pdf:
         type: string
         format: uri

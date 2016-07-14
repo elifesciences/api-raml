@@ -76,11 +76,16 @@
                         "holder": {
                             "type": "string",
                             "minLength": 1
+                        },
+                        "statement": {
+                            "type": "string",
+                            "minLength": 1
                         }
                     },
                     "required": [
                         "license",
-                        "holder"
+                        "holder",
+                        "statement"
                     ]
                 },
                 "pdf": {
