@@ -2,5 +2,10 @@
     "name": "elife/api",
     "description": "eLife Sciences API specification",
     "type": "library",
-    "license": "GPL-3.0+"
+    "license": "GPL-3.0+",
+    "require": {
+        "puli/composer-plugin": "^1.0-beta9"
+    },
+    "minimum-stability": "beta",
+    "prefer-stable": true
 }
