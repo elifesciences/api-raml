@@ -76,6 +76,31 @@
         {
             "type": "table",
             "html": "<table><tbody><tr><td>Task</td><td><p>URL and Comments</p></td></tr><tr><td><p>Find term x in a specific document</p></td><td><p><a href=\"http://wellcomelibrary.org/annoservices/search/b19956435?q=london\">http://wellcomelibrary.org/annoservices/search/b19956435?q=london</a></p><p>The annotations returned include contextual information and enough location information for a viewer to render highlights:</p><p><a href=\"http://wellcomelibrary.org/item/b19956435#?cv=24&amp;h=london\">http://wellcomelibrary.org/item/b19956435#?cv=24&amp;h=london</a></p></td></tr><tr><td>Find term in annotations made by a particular user</td><td><p><a href=\"http://wellcomelibrary.org/annoservices/search/b19956435?q=london&amp;user=wellcome:87678\">http://wellcomelibrary.org/annoservices/search/b19956435?q=london&amp;user=wellcome:87678</a></p></td></tr><tr><td><p>Find user X’s identifications of people within a particular region of a photograph between two dates</p></td><td><p><a href=\"http://wellcomelibrary.org/annoservices/search/canvas-123454321?motivation=identifying&amp;user=wellcome:87678&amp;box=200,200,1000,1000&amp;date=2016-01-01/2016-02-01\">http://wellcomelibrary.org/annoservices/search/canvas-123454321?motivation=identifying&amp;user=wellcome:87678&amp;box=200,200,1000,1000&amp;date=2016-01-01/2016-02-01</a></p></td></tr></tbody></table>"
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Finding all comments made by a particular person",
+                "Finding all tags within a particular collection",
+                {
+                    "type": "image",
+                    "alt": "",
+                    "uri": "https://elife-cdn.s3.amazonaws.com/images/news/eLife_Lens_Search_filters.png",
+                    "caption": "filters showing frequency of search term in filter"
+                },
+                {
+                    "type": "list",
+                    "ordered": true,
+                    "items": [
+                        "Finding all comments made by a particular person",
+                        {
+                            "type": "paragraph",
+                            "text": "You can read a bit more about eLife Labs and we would love to hear <a href=\"mailto:staff@elifesciences.org\">what you think</a>."
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }

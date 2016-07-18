@@ -29,6 +29,7 @@ properties:
             oneOf:
               - $ref: ../blocks/blockquote.v1.yaml
               - $ref: ../blocks/image.v1.yaml
+              - $ref: ../blocks/list.v1.yaml
               - $ref: ../blocks/paragraph.v1.yaml
               - $ref: ../blocks/section.v1.yaml
               - $ref: ../blocks/table.v1.yaml
