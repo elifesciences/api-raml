@@ -1,0 +1,35 @@
+{
+    "total": 4,
+    "items": [
+        {
+            "id": "rschekman",
+            "type": "leadership",
+            "name": {
+                "givenNames": "Randy",
+                "surname": "Schekman"
+            }
+        },
+        {
+            "id": "jsmith",
+            "type": "senior-editor",
+            "name": {
+                "givenNames": "John",
+                "surname": "Smith",
+                "suffix": "III"
+            },
+            "orcid": "0000-0002-1825-0097",
+            "image": {
+                "sizes": {
+                    "16:9": {
+                        "250": "https://placehold.it/250x141",
+                        "500": "https://placehold.it/500x281"
+                    },
+                    "1:1": {
+                        "70": "https://placehold.it/70x70",
+                        "140": "https://placehold.it/140x140"
+                    }
+                }
+            }
+        }
+    ]
+}

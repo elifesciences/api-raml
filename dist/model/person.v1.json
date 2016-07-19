@@ -1,0 +1,200 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "Person",
+    "type": "object",
+    "allOf": [
+        {
+            "$schema": "http://json-schema.org/draft-04/schema#",
+            "title": "Person",
+            "type": "object",
+            "properties": {
+                "name": {
+                    "title": "Name",
+                    "type": "object",
+                    "properties": {
+                        "givenNames": {
+                            "title": "Given names",
+                            "type": "string",
+                            "minLength": 1
+                        },
+                        "surname": {
+                            "title": "Surname",
+                            "type": "string",
+                            "minLength": 1
+                        },
+                        "suffix": {
+                            "title": "Suffix",
+                            "type": "string",
+                            "minLength": 1
+                        }
+                    },
+                    "required": [
+                        "givenNames",
+                        "surname"
+                    ]
+                },
+                "orcid": {
+                    "title": "ORCID",
+                    "type": "string",
+                    "pattern": "^[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{3}[0-9X]$"
+                }
+            },
+            "required": [
+                "name"
+            ]
+        },
+        {
+            "properties": {
+                "id": {
+                    "title": "ID",
+                    "type": "string",
+                    "minLength": 1
+                },
+                "type": {
+                    "title": "Type",
+                    "type": "string",
+                    "enum": [
+                        "director",
+                        "executive",
+                        "leadership",
+                        "reviewing-editor",
+                        "senior-editor"
+                    ]
+                },
+                "research": {
+                    "title": "Research details",
+                    "type": "object",
+                    "properties": {
+                        "expertises": {
+                            "title": "Expertises",
+                            "description": "Subject IDs",
+                            "type": "array",
+                            "items": {
+                                "type": "string",
+                                "minLength": 1
+                            },
+                            "minItems": 1
+                        },
+                        "focuses": {
+                            "title": "Research focuses",
+                            "type": "array",
+                            "items": {
+                                "type": "string",
+                                "minLength": 1
+                            }
+                        },
+                        "organisms": {
+                            "title": "Research organisms",
+                            "type": "array",
+                            "items": {
+                                "type": "string",
+                                "minLength": 1
+                            }
+                        }
+                    },
+                    "required": [
+                        "expertises",
+                        "focuses"
+                    ]
+                },
+                "profile": {
+                    "title": "Profile",
+                    "type": "array",
+                    "items": {
+                        "oneOf": [
+                            {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "title": "Paragraph",
+                                "type": "object",
+                                "properties": {
+                                    "type": {
+                                        "type": "string",
+                                        "enum": [
+                                            "paragraph"
+                                        ]
+                                    },
+                                    "text": {
+                                        "title": "Text",
+                                        "type": "string"
+                                    }
+                                },
+                                "required": [
+                                    "type",
+                                    "text"
+                                ]
+                            }
+                        ]
+                    }
+                },
+                "competingInterests": {
+                    "title": "Competing interests statement",
+                    "type": "string"
+                },
+                "image": {
+                    "type": "object",
+                    "properties": {
+                        "sizes": {
+                            "title": "Sizes",
+                            "type": "object",
+                            "properties": {
+                                "16:9": {
+                                    "type": "object",
+                                    "properties": {
+                                        "250": {
+                                            "title": "16:9 crop at 250px width",
+                                            "type": "string",
+                                            "format": "uri",
+                                            "pattern": "^https://"
+                                        },
+                                        "500": {
+                                            "title": "16:9 crop at 500px width",
+                                            "type": "string",
+                                            "format": "uri",
+                                            "pattern": "^https://"
+                                        }
+                                    },
+                                    "required": [
+                                        "250",
+                                        "500"
+                                    ]
+                                },
+                                "1:1": {
+                                    "type": "object",
+                                    "properties": {
+                                        "70": {
+                                            "title": "1:1 crop at 70px width",
+                                            "type": "string",
+                                            "format": "uri",
+                                            "pattern": "^https://"
+                                        },
+                                        "140": {
+                                            "title": "1:1 crop at 140px width",
+                                            "type": "string",
+                                            "format": "uri",
+                                            "pattern": "^https://"
+                                        }
+                                    },
+                                    "required": [
+                                        "70",
+                                        "140"
+                                    ]
+                                }
+                            },
+                            "required": [
+                                "16:9",
+                                "1:1"
+                            ]
+                        }
+                    },
+                    "required": [
+                        "sizes"
+                    ]
+                }
+            },
+            "required": [
+                "id",
+                "type"
+            ]
+        }
+    ]
+}
