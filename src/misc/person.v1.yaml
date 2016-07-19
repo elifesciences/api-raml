@@ -1,0 +1,29 @@
+$schema: http://json-schema.org/draft-04/schema#
+title: Person
+type: object
+properties:
+    name:
+        title: Name
+        type: object
+        properties:
+            givenNames:
+                title: Given names
+                type: string
+                minLength: 1
+            surname:
+                title: Surname
+                type: string
+                minLength: 1
+            suffix:
+                title: Suffix
+                type: string
+                minLength: 1
+        required:
+          - givenNames
+          - surname
+    orcid:
+        title: ORCID
+        type: string
+        pattern: ^[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{3}[0-9X]$
+required:
+  - name
