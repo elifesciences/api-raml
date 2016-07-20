@@ -393,6 +393,61 @@ traits:
                                     displayName: Complete
                                     value: !include samples/podcast-episode/v1/complete.json
 
+/search:
+    type: collection
+    description: |
+        Search
+    get:
+        description: |
+            Search.
+        is:
+          - paged: { resources: Results }
+          - subjected: { resources: Results }
+        queryParameters:
+            for:
+                description: |
+                    Search term
+                type: string
+                required: true
+                example: Plasmodium falciparum
+            sort:
+                description: |
+                    Sorting method.
+                type: string
+                required: false
+                default: relevance
+                enum:
+                  - relevance
+                  - date
+            type:
+                description: |
+                    Only include results of the specified types.
+                type: string
+                enum:
+                  - blog-article
+                  - labs-experiment
+                  - podcast-episode
+                required: false
+                repeat: true
+        responses:
+            200:
+                description: |
+                    List of results.
+                body:
+                    application/vnd.elife.search+json;version=1:
+                        schema: !include ../dist/model/search.v1.json
+                        examples:
+                            paginated:
+                                displayName: First page
+                                description: |
+                                    List is split over two pages.
+                                value: !include samples/search/v1/first-page.json
+                            empty:
+                                displayName: Empty list
+                                description: |
+                                    Demonstration of the list being empty (the first page will always return a valid result).
+                                value: !include samples/search/v1/empty.json
+
 /subjects:
     type: collection
     description: |

@@ -1,0 +1,164 @@
+$schema: http://json-schema.org/draft-04/schema#
+title: Search results
+type: object
+properties:
+    total:
+        title: Total number of results
+        type: integer
+        minimum: 0
+    items:
+        title: Search results
+        type: array
+        items:
+            oneOf:
+              - title: Blog article
+                type: object
+                properties:
+                    type:
+                        type: string
+                        enum:
+                          - blog-article
+                    id:
+                        description: ID
+                        type: string
+                        minLength: 1
+                    title:
+                        description: Title
+                        type: string
+                    impactStatement:
+                        description: Description of the article
+                        type: string
+                    published:
+                        description: Publication date (UTC)
+                        type: string
+                        format: date-time
+                    subjects:
+                        description: Article subject IDs
+                        type: array
+                        items:
+                            type: string
+                            minLength: 1
+                required:
+                  - id
+                  - title
+                  - published
+              - title: Labs experiment
+                type: object
+                properties:
+                    type:
+                        type: string
+                        enum:
+                          - labs-experiment
+                    number:
+                        description: Number
+                        type: integer
+                        minimum: 1
+                    title:
+                        description: Title
+                        type: string
+                    impactStatement:
+                        description: Description of the experiment
+                        type: string
+                    published:
+                        description: Publication date (UTC)
+                        type: string
+                        format: date-time
+                    image:
+                        $ref: ../misc/image.v1.yaml
+                required:
+                  - type
+                  - number
+                  - title
+                  - published
+                  - image
+              - title: Podcast episode
+                type: object
+                properties:
+                    type:
+                        type: string
+                        enum:
+                          - podcast-episode
+                    number:
+                        description: Number
+                        type: integer
+                        minimum: 1
+                    title:
+                        description: Title
+                        type: string
+                    impactStatement:
+                        description: Description of the episode
+                        type: string
+                    published:
+                        description: Publication date (UTC)
+                        type: string
+                        format: date-time
+                    image:
+                        $ref: ../misc/image.v1.yaml
+                    mp3:
+                        description: URI of the MP3
+                        type: string
+                        format: uri
+                        pattern: ^https://
+                    subjects:
+                        description: Episode subject IDs
+                        type: array
+                        items:
+                            type: string
+                            minLength: 1
+                required:
+                  - type
+                  - number
+                  - title
+                  - published
+                  - image
+                  - mp3
+        uniqueItems: true
+    subjects:
+        title: Subjects
+        type: array
+        items:
+            title: Number of results with each subject
+            type: object
+            properties:
+                id:
+                    description: ID
+                    type: string
+                    minLength: 1
+                name:
+                    description: Name
+                    type: string
+                    minLength: 1
+                results:
+                    description: Results
+                    type: integer
+                    minimum: 0
+            required:
+              - id
+              - name
+              - results
+        uniqueItems: true
+    types:
+        title: Content types
+        type: object
+        properties:
+            blog-article:
+                description: Number of blog articles in the result set
+                type: integer
+                minimum: 0
+            labs-experiment:
+                description: Number of Labs experiments in the result set
+                type: integer
+                minimum: 0
+            podcast-episode:
+                description: Number of podcast episodes in the result set
+                type: integer
+                minimum: 0
+        required:
+          - blog-article
+          - labs-experiment
+          - podcast-episode
+required:
+  - total
+  - items
+  - subjects
+  - types
