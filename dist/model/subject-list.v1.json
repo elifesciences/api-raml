@@ -12,6 +12,8 @@
             "title": "Subjects",
             "type": "array",
             "items": {
+                "$schema": "http://json-schema.org/draft-04/schema#",
+                "title": "Subject",
                 "type": "object",
                 "properties": {
                     "id": {

@@ -2,354 +2,367 @@
     "$schema": "http://json-schema.org/draft-04/schema#",
     "title": "Labs experiment",
     "type": "object",
-    "properties": {
-        "number": {
-            "description": "Number",
-            "type": "integer",
-            "minimum": 1
-        },
-        "title": {
-            "description": "Title",
-            "type": "string"
-        },
-        "impactStatement": {
-            "description": "Description of the experiment",
-            "type": "string"
-        },
-        "published": {
-            "description": "Publication date (UTC)",
-            "type": "string",
-            "format": "date-time"
-        },
-        "image": {
+    "allOf": [
+        {
             "$schema": "http://json-schema.org/draft-04/schema#",
-            "title": "Image",
+            "title": "Labs experiment snippet",
             "type": "object",
             "properties": {
-                "alt": {
-                    "title": "Alternative text",
+                "number": {
+                    "description": "Number",
+                    "type": "integer",
+                    "minimum": 1
+                },
+                "title": {
+                    "description": "Title",
                     "type": "string"
                 },
-                "sizes": {
-                    "title": "Sizes",
+                "impactStatement": {
+                    "description": "Description of the experiment",
+                    "type": "string"
+                },
+                "published": {
+                    "description": "Publication date (UTC)",
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "image": {
+                    "$schema": "http://json-schema.org/draft-04/schema#",
+                    "title": "Image",
                     "type": "object",
                     "properties": {
-                        "2:1": {
-                            "type": "object",
-                            "properties": {
-                                "900": {
-                                    "title": "2:1 crop at 900px width",
-                                    "type": "string",
-                                    "format": "uri",
-                                    "pattern": "^https://"
-                                },
-                                "1800": {
-                                    "title": "2:1 crop at 1800px width",
-                                    "type": "string",
-                                    "format": "uri",
-                                    "pattern": "^https://"
-                                }
-                            },
-                            "required": [
-                                "900",
-                                "1800"
-                            ]
+                        "alt": {
+                            "title": "Alternative text",
+                            "type": "string"
                         },
-                        "16:9": {
+                        "sizes": {
+                            "title": "Sizes",
                             "type": "object",
                             "properties": {
-                                "250": {
-                                    "title": "16:9 crop at 250px width",
-                                    "type": "string",
-                                    "format": "uri",
-                                    "pattern": "^https://"
+                                "2:1": {
+                                    "type": "object",
+                                    "properties": {
+                                        "900": {
+                                            "title": "2:1 crop at 900px width",
+                                            "type": "string",
+                                            "format": "uri",
+                                            "pattern": "^https://"
+                                        },
+                                        "1800": {
+                                            "title": "2:1 crop at 1800px width",
+                                            "type": "string",
+                                            "format": "uri",
+                                            "pattern": "^https://"
+                                        }
+                                    },
+                                    "required": [
+                                        "900",
+                                        "1800"
+                                    ]
                                 },
-                                "500": {
-                                    "title": "16:9 crop at 500px width",
-                                    "type": "string",
-                                    "format": "uri",
-                                    "pattern": "^https://"
+                                "16:9": {
+                                    "type": "object",
+                                    "properties": {
+                                        "250": {
+                                            "title": "16:9 crop at 250px width",
+                                            "type": "string",
+                                            "format": "uri",
+                                            "pattern": "^https://"
+                                        },
+                                        "500": {
+                                            "title": "16:9 crop at 500px width",
+                                            "type": "string",
+                                            "format": "uri",
+                                            "pattern": "^https://"
+                                        }
+                                    },
+                                    "required": [
+                                        "250",
+                                        "500"
+                                    ]
+                                },
+                                "1:1": {
+                                    "type": "object",
+                                    "properties": {
+                                        "70": {
+                                            "title": "1:1 crop at 70px width",
+                                            "type": "string",
+                                            "format": "uri",
+                                            "pattern": "^https://"
+                                        },
+                                        "140": {
+                                            "title": "1:1 crop at 140px width",
+                                            "type": "string",
+                                            "format": "uri",
+                                            "pattern": "^https://"
+                                        }
+                                    },
+                                    "required": [
+                                        "70",
+                                        "140"
+                                    ]
                                 }
                             },
                             "required": [
-                                "250",
-                                "500"
-                            ]
-                        },
-                        "1:1": {
-                            "type": "object",
-                            "properties": {
-                                "70": {
-                                    "title": "1:1 crop at 70px width",
-                                    "type": "string",
-                                    "format": "uri",
-                                    "pattern": "^https://"
-                                },
-                                "140": {
-                                    "title": "1:1 crop at 140px width",
-                                    "type": "string",
-                                    "format": "uri",
-                                    "pattern": "^https://"
-                                }
-                            },
-                            "required": [
-                                "70",
-                                "140"
+                                "2:1",
+                                "16:9",
+                                "1:1"
                             ]
                         }
                     },
                     "required": [
-                        "2:1",
-                        "16:9",
-                        "1:1"
+                        "alt",
+                        "sizes"
                     ]
                 }
             },
             "required": [
-                "alt",
-                "sizes"
+                "number",
+                "title",
+                "published",
+                "image"
             ]
         },
-        "content": {
-            "description": "Content",
-            "type": "array",
-            "items": {
-                "oneOf": [
-                    {
-                        "$schema": "http://json-schema.org/draft-04/schema#",
-                        "title": "Blockquote",
-                        "type": "object",
-                        "properties": {
-                            "type": {
-                                "type": "string",
-                                "enum": [
-                                    "blockquote"
-                                ]
-                            },
-                            "text": {
-                                "title": "Text",
-                                "type": "string"
-                            },
-                            "citation": {
-                                "title": "Text",
-                                "type": "string"
-                            }
-                        },
-                        "required": [
-                            "type",
-                            "text"
-                        ]
-                    },
-                    {
-                        "$schema": "http://json-schema.org/draft-04/schema#",
-                        "title": "Image",
-                        "type": "object",
-                        "properties": {
-                            "type": {
-                                "type": "string",
-                                "enum": [
-                                    "image"
-                                ]
-                            },
-                            "alt": {
-                                "title": "Alternative text",
-                                "type": "string"
-                            },
-                            "uri": {
-                                "title": "Image URI",
-                                "type": "string",
-                                "format": "uri",
-                                "pattern": "^https://"
-                            },
-                            "caption": {
-                                "title": "Text",
-                                "type": "string"
-                            }
-                        },
-                        "required": [
-                            "type",
-                            "alt",
-                            "uri"
-                        ]
-                    },
-                    {
-                        "$schema": "http://json-schema.org/draft-04/schema#",
-                        "title": "Section",
-                        "type": "object",
-                        "properties": {
-                            "type": {
-                                "type": "string",
-                                "enum": [
-                                    "list"
-                                ]
-                            },
-                            "ordered": {
-                                "type": "boolean"
-                            },
-                            "items": {
-                                "description": "List items",
-                                "type": "array",
-                                "items": {
-                                    "oneOf": [
-                                        {
-                                            "type": "string"
-                                        },
-                                        {
-                                            "$ref": "#/properties/content/items/oneOf/1"
-                                        },
-                                        {
-                                            "$ref": "#/properties/content/items/oneOf/2"
-                                        },
-                                        {
-                                            "$ref": "#/properties/content/items/oneOf/3"
-                                        }
-                                    ]
+        {
+            "properties": {
+                "content": {
+                    "description": "Content",
+                    "type": "array",
+                    "items": {
+                        "oneOf": [
+                            {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "title": "Blockquote",
+                                "type": "object",
+                                "properties": {
+                                    "type": {
+                                        "type": "string",
+                                        "enum": [
+                                            "blockquote"
+                                        ]
+                                    },
+                                    "text": {
+                                        "title": "Text",
+                                        "type": "string"
+                                    },
+                                    "citation": {
+                                        "title": "Text",
+                                        "type": "string"
+                                    }
                                 },
-                                "minItems": 1
-                            }
-                        },
-                        "required": [
-                            "type",
-                            "items"
-                        ]
-                    },
-                    {
-                        "$schema": "http://json-schema.org/draft-04/schema#",
-                        "title": "Paragraph",
-                        "type": "object",
-                        "properties": {
-                            "type": {
-                                "type": "string",
-                                "enum": [
-                                    "paragraph"
+                                "required": [
+                                    "type",
+                                    "text"
                                 ]
                             },
-                            "text": {
-                                "title": "Text",
-                                "type": "string"
-                            }
-                        },
-                        "required": [
-                            "type",
-                            "text"
-                        ]
-                    },
-                    {
-                        "$schema": "http://json-schema.org/draft-04/schema#",
-                        "title": "Section",
-                        "type": "object",
-                        "properties": {
-                            "type": {
-                                "type": "string",
-                                "enum": [
-                                    "section"
-                                ]
-                            },
-                            "title": {
-                                "title": "Text",
-                                "type": "string"
-                            },
-                            "content": {
-                                "description": "Content",
-                                "type": "array",
-                                "items": {
-                                    "oneOf": [
-                                        {
-                                            "$ref": "#/properties/content/items/oneOf/0"
-                                        },
-                                        {
-                                            "$ref": "#/properties/content/items/oneOf/1"
-                                        },
-                                        {
-                                            "$ref": "#/properties/content/items/oneOf/2"
-                                        },
-                                        {
-                                            "$ref": "#/properties/content/items/oneOf/3"
-                                        },
-                                        {
-                                            "$ref": "#/properties/content/items/oneOf/4"
-                                        },
-                                        {
-                                            "$ref": "#/properties/content/items/oneOf/5"
-                                        },
-                                        {
-                                            "$ref": "#/properties/content/items/oneOf/6"
-                                        }
-                                    ]
+                            {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "title": "Image",
+                                "type": "object",
+                                "properties": {
+                                    "type": {
+                                        "type": "string",
+                                        "enum": [
+                                            "image"
+                                        ]
+                                    },
+                                    "alt": {
+                                        "title": "Alternative text",
+                                        "type": "string"
+                                    },
+                                    "uri": {
+                                        "title": "Image URI",
+                                        "type": "string",
+                                        "format": "uri",
+                                        "pattern": "^https://"
+                                    },
+                                    "caption": {
+                                        "title": "Text",
+                                        "type": "string"
+                                    }
                                 },
-                                "minItems": 1
-                            }
-                        },
-                        "required": [
-                            "type",
-                            "title",
-                            "content"
-                        ]
-                    },
-                    {
-                        "$schema": "http://json-schema.org/draft-04/schema#",
-                        "title": "Table",
-                        "type": "object",
-                        "properties": {
-                            "type": {
-                                "type": "string",
-                                "enum": [
-                                    "table"
+                                "required": [
+                                    "type",
+                                    "alt",
+                                    "uri"
                                 ]
                             },
-                            "html": {
-                                "title": "HTML table",
-                                "type": "string"
-                            }
-                        },
-                        "required": [
-                            "type",
-                            "html"
-                        ]
-                    },
-                    {
-                        "$schema": "http://json-schema.org/draft-04/schema#",
-                        "title": "YouTube video",
-                        "type": "object",
-                        "properties": {
-                            "type": {
-                                "type": "string",
-                                "enum": [
-                                    "youtube"
+                            {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "title": "Section",
+                                "type": "object",
+                                "properties": {
+                                    "type": {
+                                        "type": "string",
+                                        "enum": [
+                                            "list"
+                                        ]
+                                    },
+                                    "ordered": {
+                                        "type": "boolean"
+                                    },
+                                    "items": {
+                                        "description": "List items",
+                                        "type": "array",
+                                        "items": {
+                                            "oneOf": [
+                                                {
+                                                    "type": "string"
+                                                },
+                                                {
+                                                    "$ref": "#/allOf/1/properties/content/items/oneOf/1"
+                                                },
+                                                {
+                                                    "$ref": "#/allOf/1/properties/content/items/oneOf/2"
+                                                },
+                                                {
+                                                    "$ref": "#/allOf/1/properties/content/items/oneOf/3"
+                                                }
+                                            ]
+                                        },
+                                        "minItems": 1
+                                    }
+                                },
+                                "required": [
+                                    "type",
+                                    "items"
                                 ]
                             },
-                            "id": {
-                                "title": "Video ID",
-                                "type": "string"
+                            {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "title": "Paragraph",
+                                "type": "object",
+                                "properties": {
+                                    "type": {
+                                        "type": "string",
+                                        "enum": [
+                                            "paragraph"
+                                        ]
+                                    },
+                                    "text": {
+                                        "title": "Text",
+                                        "type": "string"
+                                    }
+                                },
+                                "required": [
+                                    "type",
+                                    "text"
+                                ]
                             },
-                            "width": {
-                                "title": "Width",
-                                "type": "integer",
-                                "minimum": 1
+                            {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "title": "Section",
+                                "type": "object",
+                                "properties": {
+                                    "type": {
+                                        "type": "string",
+                                        "enum": [
+                                            "section"
+                                        ]
+                                    },
+                                    "title": {
+                                        "title": "Text",
+                                        "type": "string"
+                                    },
+                                    "content": {
+                                        "description": "Content",
+                                        "type": "array",
+                                        "items": {
+                                            "oneOf": [
+                                                {
+                                                    "$ref": "#/allOf/1/properties/content/items/oneOf/0"
+                                                },
+                                                {
+                                                    "$ref": "#/allOf/1/properties/content/items/oneOf/1"
+                                                },
+                                                {
+                                                    "$ref": "#/allOf/1/properties/content/items/oneOf/2"
+                                                },
+                                                {
+                                                    "$ref": "#/allOf/1/properties/content/items/oneOf/3"
+                                                },
+                                                {
+                                                    "$ref": "#/allOf/1/properties/content/items/oneOf/4"
+                                                },
+                                                {
+                                                    "$ref": "#/allOf/1/properties/content/items/oneOf/5"
+                                                },
+                                                {
+                                                    "$ref": "#/allOf/1/properties/content/items/oneOf/6"
+                                                }
+                                            ]
+                                        },
+                                        "minItems": 1
+                                    }
+                                },
+                                "required": [
+                                    "type",
+                                    "title",
+                                    "content"
+                                ]
                             },
-                            "height": {
-                                "title": "Height",
-                                "type": "integer",
-                                "minimum": 1
+                            {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "title": "Table",
+                                "type": "object",
+                                "properties": {
+                                    "type": {
+                                        "type": "string",
+                                        "enum": [
+                                            "table"
+                                        ]
+                                    },
+                                    "html": {
+                                        "title": "HTML table",
+                                        "type": "string"
+                                    }
+                                },
+                                "required": [
+                                    "type",
+                                    "html"
+                                ]
+                            },
+                            {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "title": "YouTube video",
+                                "type": "object",
+                                "properties": {
+                                    "type": {
+                                        "type": "string",
+                                        "enum": [
+                                            "youtube"
+                                        ]
+                                    },
+                                    "id": {
+                                        "title": "Video ID",
+                                        "type": "string"
+                                    },
+                                    "width": {
+                                        "title": "Width",
+                                        "type": "integer",
+                                        "minimum": 1
+                                    },
+                                    "height": {
+                                        "title": "Height",
+                                        "type": "integer",
+                                        "minimum": 1
+                                    }
+                                },
+                                "required": [
+                                    "type",
+                                    "id",
+                                    "width",
+                                    "height"
+                                ]
                             }
-                        },
-                        "required": [
-                            "type",
-                            "id",
-                            "width",
-                            "height"
                         ]
-                    }
-                ]
+                    },
+                    "minItems": 1
+                }
             },
-            "minItems": 1
+            "required": [
+                "content"
+            ]
         }
-    },
-    "required": [
-        "number",
-        "title",
-        "published",
-        "image",
-        "content"
     ]
 }

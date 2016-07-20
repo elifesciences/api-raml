@@ -1,37 +1,5 @@
 $schema: http://json-schema.org/draft-04/schema#
 title: Podcast episode
 type: object
-properties:
-    number:
-        description: Number
-        type: integer
-        minimum: 1
-    title:
-        description: Title
-        type: string
-    impactStatement:
-        description: Description of the episode
-        type: string
-    published:
-        description: Publication date (UTC)
-        type: string
-        format: date-time
-    image:
-        $ref: ../misc/image.v1.yaml
-    mp3:
-        description: URI of the MP3
-        type: string
-        format: uri
-        pattern: ^https://
-    subjects:
-        description: Episode subject IDs
-        type: array
-        items:
-            type: string
-            minLength: 1
-required:
-  - number
-  - title
-  - published
-  - image
-  - mp3
+allOf:
+  - $ref: podcast-episode-snippet.v1.yaml

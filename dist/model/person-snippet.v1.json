@@ -1,65 +1,73 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
-    "title": "Podcast episode",
+    "title": "Person snippet",
     "type": "object",
     "allOf": [
         {
             "$schema": "http://json-schema.org/draft-04/schema#",
-            "title": "Podcast episode snippet",
+            "title": "Person",
             "type": "object",
             "properties": {
-                "number": {
-                    "description": "Number",
-                    "type": "integer",
-                    "minimum": 1
-                },
-                "title": {
-                    "description": "Title",
-                    "type": "string"
-                },
-                "impactStatement": {
-                    "description": "Description of the episode",
-                    "type": "string"
-                },
-                "published": {
-                    "description": "Publication date (UTC)",
-                    "type": "string",
-                    "format": "date-time"
-                },
-                "image": {
-                    "$schema": "http://json-schema.org/draft-04/schema#",
-                    "title": "Image",
+                "name": {
+                    "title": "Name",
                     "type": "object",
                     "properties": {
-                        "alt": {
-                            "title": "Alternative text",
-                            "type": "string"
+                        "givenNames": {
+                            "title": "Given names",
+                            "type": "string",
+                            "minLength": 1
                         },
+                        "surname": {
+                            "title": "Surname",
+                            "type": "string",
+                            "minLength": 1
+                        },
+                        "suffix": {
+                            "title": "Suffix",
+                            "type": "string",
+                            "minLength": 1
+                        }
+                    },
+                    "required": [
+                        "givenNames",
+                        "surname"
+                    ]
+                },
+                "orcid": {
+                    "title": "ORCID",
+                    "type": "string",
+                    "pattern": "^[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{3}[0-9X]$"
+                }
+            },
+            "required": [
+                "name"
+            ]
+        },
+        {
+            "properties": {
+                "id": {
+                    "title": "ID",
+                    "type": "string",
+                    "minLength": 1
+                },
+                "type": {
+                    "title": "Type",
+                    "type": "string",
+                    "enum": [
+                        "director",
+                        "executive",
+                        "leadership",
+                        "reviewing-editor",
+                        "senior-editor"
+                    ]
+                },
+                "image": {
+                    "type": "object",
+                    "properties": {
                         "sizes": {
                             "title": "Sizes",
                             "type": "object",
                             "properties": {
-                                "2:1": {
-                                    "type": "object",
-                                    "properties": {
-                                        "900": {
-                                            "title": "2:1 crop at 900px width",
-                                            "type": "string",
-                                            "format": "uri",
-                                            "pattern": "^https://"
-                                        },
-                                        "1800": {
-                                            "title": "2:1 crop at 1800px width",
-                                            "type": "string",
-                                            "format": "uri",
-                                            "pattern": "^https://"
-                                        }
-                                    },
-                                    "required": [
-                                        "900",
-                                        "1800"
-                                    ]
-                                },
                                 "16:9": {
                                     "type": "object",
                                     "properties": {
@@ -104,38 +112,19 @@
                                 }
                             },
                             "required": [
-                                "2:1",
                                 "16:9",
                                 "1:1"
                             ]
                         }
                     },
                     "required": [
-                        "alt",
                         "sizes"
                     ]
-                },
-                "mp3": {
-                    "description": "URI of the MP3",
-                    "type": "string",
-                    "format": "uri",
-                    "pattern": "^https://"
-                },
-                "subjects": {
-                    "description": "Episode subject IDs",
-                    "type": "array",
-                    "items": {
-                        "type": "string",
-                        "minLength": 1
-                    }
                 }
             },
             "required": [
-                "number",
-                "title",
-                "published",
-                "image",
-                "mp3"
+                "id",
+                "type"
             ]
         }
     ]

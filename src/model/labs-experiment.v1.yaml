@@ -1,39 +1,21 @@
 $schema: http://json-schema.org/draft-04/schema#
 title: Labs experiment
 type: object
-properties:
-    number:
-        description: Number
-        type: integer
-        minimum: 1
-    title:
-        description: Title
-        type: string
-    impactStatement:
-        description: Description of the experiment
-        type: string
-    published:
-        description: Publication date (UTC)
-        type: string
-        format: date-time
-    image:
-        $ref: ../misc/image.v1.yaml
-    content:
-        description: Content
-        type: array
-        items:
-            oneOf:
-              - $ref: ../blocks/blockquote.v1.yaml
-              - $ref: ../blocks/image.v1.yaml
-              - $ref: ../blocks/list.v1.yaml
-              - $ref: ../blocks/paragraph.v1.yaml
-              - $ref: ../blocks/section.v1.yaml
-              - $ref: ../blocks/table.v1.yaml
-              - $ref: ../blocks/youtube.v1.yaml
-        minItems: 1
-required:
-  - number
-  - title
-  - published
-  - image
-  - content
+allOf:
+  - $ref: labs-experiment-snippet.v1.yaml
+  - properties:
+        content:
+            description: Content
+            type: array
+            items:
+                oneOf:
+                  - $ref: ../blocks/blockquote.v1.yaml
+                  - $ref: ../blocks/image.v1.yaml
+                  - $ref: ../blocks/list.v1.yaml
+                  - $ref: ../blocks/paragraph.v1.yaml
+                  - $ref: ../blocks/section.v1.yaml
+                  - $ref: ../blocks/table.v1.yaml
+                  - $ref: ../blocks/youtube.v1.yaml
+            minItems: 1
+    required:
+      - content

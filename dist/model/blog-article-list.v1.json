@@ -12,6 +12,8 @@
             "title": "Blog article",
             "type": "array",
             "items": {
+                "$schema": "http://json-schema.org/draft-04/schema#",
+                "title": "Blog article snippet",
                 "type": "object",
                 "properties": {
                     "id": {
@@ -38,7 +40,8 @@
                         "items": {
                             "type": "string",
                             "minLength": 1
-                        }
+                        },
+                        "uniqueItems": true
                     }
                 },
                 "required": [

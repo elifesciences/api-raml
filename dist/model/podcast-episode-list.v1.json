@@ -12,6 +12,8 @@
             "title": "Episodes",
             "type": "array",
             "items": {
+                "$schema": "http://json-schema.org/draft-04/schema#",
+                "title": "Podcast episode snippet",
                 "type": "object",
                 "properties": {
                     "number": {
