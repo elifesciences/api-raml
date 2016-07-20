@@ -5,62 +5,137 @@
     "allOf": [
         {
             "$schema": "http://json-schema.org/draft-04/schema#",
-            "title": "Person",
+            "title": "Person snippet",
             "type": "object",
-            "properties": {
-                "name": {
-                    "title": "Name",
+            "allOf": [
+                {
+                    "$schema": "http://json-schema.org/draft-04/schema#",
+                    "title": "Person",
                     "type": "object",
                     "properties": {
-                        "givenNames": {
-                            "title": "Given names",
-                            "type": "string",
-                            "minLength": 1
+                        "name": {
+                            "title": "Name",
+                            "type": "object",
+                            "properties": {
+                                "givenNames": {
+                                    "title": "Given names",
+                                    "type": "string",
+                                    "minLength": 1
+                                },
+                                "surname": {
+                                    "title": "Surname",
+                                    "type": "string",
+                                    "minLength": 1
+                                },
+                                "suffix": {
+                                    "title": "Suffix",
+                                    "type": "string",
+                                    "minLength": 1
+                                }
+                            },
+                            "required": [
+                                "givenNames",
+                                "surname"
+                            ]
                         },
-                        "surname": {
-                            "title": "Surname",
+                        "orcid": {
+                            "title": "ORCID",
                             "type": "string",
-                            "minLength": 1
-                        },
-                        "suffix": {
-                            "title": "Suffix",
-                            "type": "string",
-                            "minLength": 1
+                            "pattern": "^[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{3}[0-9X]$"
                         }
                     },
                     "required": [
-                        "givenNames",
-                        "surname"
+                        "name"
                     ]
                 },
-                "orcid": {
-                    "title": "ORCID",
-                    "type": "string",
-                    "pattern": "^[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{3}[0-9X]$"
+                {
+                    "properties": {
+                        "id": {
+                            "title": "ID",
+                            "type": "string",
+                            "minLength": 1
+                        },
+                        "type": {
+                            "title": "Type",
+                            "type": "string",
+                            "enum": [
+                                "director",
+                                "executive",
+                                "leadership",
+                                "reviewing-editor",
+                                "senior-editor"
+                            ]
+                        },
+                        "image": {
+                            "type": "object",
+                            "properties": {
+                                "sizes": {
+                                    "title": "Sizes",
+                                    "type": "object",
+                                    "properties": {
+                                        "16:9": {
+                                            "type": "object",
+                                            "properties": {
+                                                "250": {
+                                                    "title": "16:9 crop at 250px width",
+                                                    "type": "string",
+                                                    "format": "uri",
+                                                    "pattern": "^https://"
+                                                },
+                                                "500": {
+                                                    "title": "16:9 crop at 500px width",
+                                                    "type": "string",
+                                                    "format": "uri",
+                                                    "pattern": "^https://"
+                                                }
+                                            },
+                                            "required": [
+                                                "250",
+                                                "500"
+                                            ]
+                                        },
+                                        "1:1": {
+                                            "type": "object",
+                                            "properties": {
+                                                "70": {
+                                                    "title": "1:1 crop at 70px width",
+                                                    "type": "string",
+                                                    "format": "uri",
+                                                    "pattern": "^https://"
+                                                },
+                                                "140": {
+                                                    "title": "1:1 crop at 140px width",
+                                                    "type": "string",
+                                                    "format": "uri",
+                                                    "pattern": "^https://"
+                                                }
+                                            },
+                                            "required": [
+                                                "70",
+                                                "140"
+                                            ]
+                                        }
+                                    },
+                                    "required": [
+                                        "16:9",
+                                        "1:1"
+                                    ]
+                                }
+                            },
+                            "required": [
+                                "sizes"
+                            ]
+                        }
+                    },
+                    "required": [
+                        "id",
+                        "type"
+                    ]
                 }
-            },
-            "required": [
-                "name"
             ]
         },
         {
             "properties": {
-                "id": {
-                    "title": "ID",
-                    "type": "string",
-                    "minLength": 1
-                },
-                "type": {
-                    "title": "Type",
-                    "type": "string",
-                    "enum": [
-                        "director",
-                        "executive",
-                        "leadership",
-                        "reviewing-editor",
-                        "senior-editor"
-                    ]
-                },
                 "research": {
                     "title": "Research details",
                     "type": "object",
@@ -73,7 +148,8 @@
                                 "type": "string",
                                 "minLength": 1
                             },
-                            "minItems": 1
+                            "minItems": 1,
+                            "uniqueItems": true
                         },
                         "focuses": {
                             "title": "Research focuses",
@@ -81,7 +157,8 @@
                             "items": {
                                 "type": "string",
                                 "minLength": 1
-                            }
+                            },
+                            "uniqueItems": true
                         },
                         "organisms": {
                             "title": "Research organisms",
@@ -89,7 +166,8 @@
                             "items": {
                                 "type": "string",
                                 "minLength": 1
-                            }
+                            },
+                            "uniqueItems": true
                         }
                     },
                     "required": [
@@ -129,72 +207,8 @@
                 "competingInterests": {
                     "title": "Competing interests statement",
                     "type": "string"
-                },
-                "image": {
-                    "type": "object",
-                    "properties": {
-                        "sizes": {
-                            "title": "Sizes",
-                            "type": "object",
-                            "properties": {
-                                "16:9": {
-                                    "type": "object",
-                                    "properties": {
-                                        "250": {
-                                            "title": "16:9 crop at 250px width",
-                                            "type": "string",
-                                            "format": "uri",
-                                            "pattern": "^https://"
-                                        },
-                                        "500": {
-                                            "title": "16:9 crop at 500px width",
-                                            "type": "string",
-                                            "format": "uri",
-                                            "pattern": "^https://"
-                                        }
-                                    },
-                                    "required": [
-                                        "250",
-                                        "500"
-                                    ]
-                                },
-                                "1:1": {
-                                    "type": "object",
-                                    "properties": {
-                                        "70": {
-                                            "title": "1:1 crop at 70px width",
-                                            "type": "string",
-                                            "format": "uri",
-                                            "pattern": "^https://"
-                                        },
-                                        "140": {
-                                            "title": "1:1 crop at 140px width",
-                                            "type": "string",
-                                            "format": "uri",
-                                            "pattern": "^https://"
-                                        }
-                                    },
-                                    "required": [
-                                        "70",
-                                        "140"
-                                    ]
-                                }
-                            },
-                            "required": [
-                                "16:9",
-                                "1:1"
-                            ]
-                        }
-                    },
-                    "required": [
-                        "sizes"
-                    ]
                 }
-            },
-            "required": [
-                "id",
-                "type"
-            ]
+            }
         }
     ]
 }

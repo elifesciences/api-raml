@@ -10,32 +10,7 @@ properties:
         title: Blog article
         type: array
         items:
-            type: object
-            properties:
-                id:
-                    description: ID
-                    type: string
-                    minLength: 1
-                title:
-                    description: Title
-                    type: string
-                impactStatement:
-                    description: Description of the article
-                    type: string
-                published:
-                    description: Publication date (UTC)
-                    type: string
-                    format: date-time
-                subjects:
-                    description: Article subject IDs
-                    type: array
-                    items:
-                        type: string
-                        minLength: 1
-            required:
-              - id
-              - title
-              - published
+            $ref: ../snippets/blog-article.v1.yaml
         uniqueItems: true
 required:
   - total

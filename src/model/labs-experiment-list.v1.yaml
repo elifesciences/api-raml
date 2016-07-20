@@ -10,29 +10,7 @@ properties:
         title: Experiments
         type: array
         items:
-            type: object
-            properties:
-                number:
-                    description: Number
-                    type: integer
-                    minimum: 1
-                title:
-                    description: Title
-                    type: string
-                impactStatement:
-                    description: Description of the experiment
-                    type: string
-                published:
-                    description: Publication date (UTC)
-                    type: string
-                    format: date-time
-                image:
-                    $ref: ../misc/image.v1.yaml
-            required:
-              - number
-              - title
-              - published
-              - image
+            $ref: ../snippets/labs-experiment.v1.yaml
         uniqueItems: true
 required:
   - total
