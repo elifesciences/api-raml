@@ -12,229 +12,265 @@
             "title": "Search results",
             "type": "array",
             "items": {
-                "oneOf": [
+                "allOf": [
                     {
-                        "title": "Blog article",
                         "type": "object",
-                        "properties": {
-                            "type": {
-                                "type": "string",
-                                "enum": [
-                                    "blog-article"
-                                ]
-                            },
-                            "id": {
-                                "description": "ID",
-                                "type": "string",
-                                "minLength": 1
-                            },
-                            "title": {
-                                "description": "Title",
-                                "type": "string"
-                            },
-                            "impactStatement": {
-                                "description": "Description of the article",
-                                "type": "string"
-                            },
-                            "published": {
-                                "description": "Publication date (UTC)",
-                                "type": "string",
-                                "format": "date-time"
-                            },
-                            "subjects": {
-                                "description": "Article subject IDs",
-                                "type": "array",
-                                "items": {
-                                    "type": "string",
-                                    "minLength": 1
-                                }
-                            }
-                        },
                         "required": [
-                            "id",
-                            "title",
-                            "published"
+                            "type"
                         ]
                     },
                     {
-                        "title": "Labs experiment",
-                        "type": "object",
-                        "properties": {
-                            "type": {
-                                "type": "string",
-                                "enum": [
-                                    "labs-experiment"
-                                ]
-                            },
-                            "number": {
-                                "description": "Number",
-                                "type": "integer",
-                                "minimum": 1
-                            },
-                            "title": {
-                                "description": "Title",
-                                "type": "string"
-                            },
-                            "impactStatement": {
-                                "description": "Description of the experiment",
-                                "type": "string"
-                            },
-                            "published": {
-                                "description": "Publication date (UTC)",
-                                "type": "string",
-                                "format": "date-time"
-                            },
-                            "image": {
-                                "$schema": "http://json-schema.org/draft-04/schema#",
-                                "title": "Image",
-                                "type": "object",
-                                "properties": {
-                                    "alt": {
-                                        "title": "Alternative text",
-                                        "type": "string"
+                        "oneOf": [
+                            {
+                                "allOf": [
+                                    {
+                                        "properties": {
+                                            "type": {
+                                                "type": "string",
+                                                "enum": [
+                                                    "blog-article"
+                                                ]
+                                            }
+                                        }
                                     },
-                                    "sizes": {
-                                        "title": "Sizes",
+                                    {
+                                        "$schema": "http://json-schema.org/draft-04/schema#",
+                                        "title": "Blog article snippet",
                                         "type": "object",
                                         "properties": {
-                                            "2:1": {
-                                                "type": "object",
-                                                "properties": {
-                                                    "900": {
-                                                        "title": "2:1 crop at 900px width",
-                                                        "type": "string",
-                                                        "format": "uri",
-                                                        "pattern": "^https://"
-                                                    },
-                                                    "1800": {
-                                                        "title": "2:1 crop at 1800px width",
-                                                        "type": "string",
-                                                        "format": "uri",
-                                                        "pattern": "^https://"
-                                                    }
-                                                },
-                                                "required": [
-                                                    "900",
-                                                    "1800"
-                                                ]
+                                            "id": {
+                                                "description": "ID",
+                                                "type": "string",
+                                                "minLength": 1
                                             },
-                                            "16:9": {
-                                                "type": "object",
-                                                "properties": {
-                                                    "250": {
-                                                        "title": "16:9 crop at 250px width",
-                                                        "type": "string",
-                                                        "format": "uri",
-                                                        "pattern": "^https://"
-                                                    },
-                                                    "500": {
-                                                        "title": "16:9 crop at 500px width",
-                                                        "type": "string",
-                                                        "format": "uri",
-                                                        "pattern": "^https://"
-                                                    }
-                                                },
-                                                "required": [
-                                                    "250",
-                                                    "500"
-                                                ]
+                                            "title": {
+                                                "description": "Title",
+                                                "type": "string"
                                             },
-                                            "1:1": {
+                                            "impactStatement": {
+                                                "description": "Description of the article",
+                                                "type": "string"
+                                            },
+                                            "published": {
+                                                "description": "Publication date (UTC)",
+                                                "type": "string",
+                                                "format": "date-time"
+                                            },
+                                            "subjects": {
+                                                "description": "Article subject IDs",
+                                                "type": "array",
+                                                "items": {
+                                                    "type": "string",
+                                                    "minLength": 1
+                                                },
+                                                "uniqueItems": true
+                                            }
+                                        },
+                                        "required": [
+                                            "id",
+                                            "title",
+                                            "published"
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "allOf": [
+                                    {
+                                        "properties": {
+                                            "type": {
+                                                "type": "string",
+                                                "enum": [
+                                                    "labs-experiment"
+                                                ]
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "$schema": "http://json-schema.org/draft-04/schema#",
+                                        "title": "Labs experiment snippet",
+                                        "type": "object",
+                                        "properties": {
+                                            "number": {
+                                                "description": "Number",
+                                                "type": "integer",
+                                                "minimum": 1
+                                            },
+                                            "title": {
+                                                "description": "Title",
+                                                "type": "string"
+                                            },
+                                            "impactStatement": {
+                                                "description": "Description of the experiment",
+                                                "type": "string"
+                                            },
+                                            "published": {
+                                                "description": "Publication date (UTC)",
+                                                "type": "string",
+                                                "format": "date-time"
+                                            },
+                                            "image": {
+                                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                                "title": "Image",
                                                 "type": "object",
                                                 "properties": {
-                                                    "70": {
-                                                        "title": "1:1 crop at 70px width",
-                                                        "type": "string",
-                                                        "format": "uri",
-                                                        "pattern": "^https://"
+                                                    "alt": {
+                                                        "title": "Alternative text",
+                                                        "type": "string"
                                                     },
-                                                    "140": {
-                                                        "title": "1:1 crop at 140px width",
-                                                        "type": "string",
-                                                        "format": "uri",
-                                                        "pattern": "^https://"
+                                                    "sizes": {
+                                                        "title": "Sizes",
+                                                        "type": "object",
+                                                        "properties": {
+                                                            "2:1": {
+                                                                "type": "object",
+                                                                "properties": {
+                                                                    "900": {
+                                                                        "title": "2:1 crop at 900px width",
+                                                                        "type": "string",
+                                                                        "format": "uri",
+                                                                        "pattern": "^https://"
+                                                                    },
+                                                                    "1800": {
+                                                                        "title": "2:1 crop at 1800px width",
+                                                                        "type": "string",
+                                                                        "format": "uri",
+                                                                        "pattern": "^https://"
+                                                                    }
+                                                                },
+                                                                "required": [
+                                                                    "900",
+                                                                    "1800"
+                                                                ]
+                                                            },
+                                                            "16:9": {
+                                                                "type": "object",
+                                                                "properties": {
+                                                                    "250": {
+                                                                        "title": "16:9 crop at 250px width",
+                                                                        "type": "string",
+                                                                        "format": "uri",
+                                                                        "pattern": "^https://"
+                                                                    },
+                                                                    "500": {
+                                                                        "title": "16:9 crop at 500px width",
+                                                                        "type": "string",
+                                                                        "format": "uri",
+                                                                        "pattern": "^https://"
+                                                                    }
+                                                                },
+                                                                "required": [
+                                                                    "250",
+                                                                    "500"
+                                                                ]
+                                                            },
+                                                            "1:1": {
+                                                                "type": "object",
+                                                                "properties": {
+                                                                    "70": {
+                                                                        "title": "1:1 crop at 70px width",
+                                                                        "type": "string",
+                                                                        "format": "uri",
+                                                                        "pattern": "^https://"
+                                                                    },
+                                                                    "140": {
+                                                                        "title": "1:1 crop at 140px width",
+                                                                        "type": "string",
+                                                                        "format": "uri",
+                                                                        "pattern": "^https://"
+                                                                    }
+                                                                },
+                                                                "required": [
+                                                                    "70",
+                                                                    "140"
+                                                                ]
+                                                            }
+                                                        },
+                                                        "required": [
+                                                            "2:1",
+                                                            "16:9",
+                                                            "1:1"
+                                                        ]
                                                     }
                                                 },
                                                 "required": [
-                                                    "70",
-                                                    "140"
+                                                    "alt",
+                                                    "sizes"
                                                 ]
                                             }
                                         },
                                         "required": [
-                                            "2:1",
-                                            "16:9",
-                                            "1:1"
+                                            "number",
+                                            "title",
+                                            "published",
+                                            "image"
                                         ]
                                     }
-                                },
-                                "required": [
-                                    "alt",
-                                    "sizes"
-                                ]
-                            }
-                        },
-                        "required": [
-                            "type",
-                            "number",
-                            "title",
-                            "published",
-                            "image"
-                        ]
-                    },
-                    {
-                        "title": "Podcast episode",
-                        "type": "object",
-                        "properties": {
-                            "type": {
-                                "type": "string",
-                                "enum": [
-                                    "podcast-episode"
                                 ]
                             },
-                            "number": {
-                                "description": "Number",
-                                "type": "integer",
-                                "minimum": 1
-                            },
-                            "title": {
-                                "description": "Title",
-                                "type": "string"
-                            },
-                            "impactStatement": {
-                                "description": "Description of the episode",
-                                "type": "string"
-                            },
-                            "published": {
-                                "description": "Publication date (UTC)",
-                                "type": "string",
-                                "format": "date-time"
-                            },
-                            "image": {
-                                "$ref": "#/properties/items/items/oneOf/1/properties/image"
-                            },
-                            "mp3": {
-                                "description": "URI of the MP3",
-                                "type": "string",
-                                "format": "uri",
-                                "pattern": "^https://"
-                            },
-                            "subjects": {
-                                "description": "Episode subject IDs",
-                                "type": "array",
-                                "items": {
-                                    "type": "string",
-                                    "minLength": 1
-                                }
+                            {
+                                "allOf": [
+                                    {
+                                        "properties": {
+                                            "type": {
+                                                "type": "string",
+                                                "enum": [
+                                                    "podcast-episode"
+                                                ]
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "$schema": "http://json-schema.org/draft-04/schema#",
+                                        "title": "Podcast episode snippet",
+                                        "type": "object",
+                                        "properties": {
+                                            "number": {
+                                                "description": "Number",
+                                                "type": "integer",
+                                                "minimum": 1
+                                            },
+                                            "title": {
+                                                "description": "Title",
+                                                "type": "string"
+                                            },
+                                            "impactStatement": {
+                                                "description": "Description of the episode",
+                                                "type": "string"
+                                            },
+                                            "published": {
+                                                "description": "Publication date (UTC)",
+                                                "type": "string",
+                                                "format": "date-time"
+                                            },
+                                            "image": {
+                                                "$ref": "#/properties/items/items/allOf/1/oneOf/1/allOf/1/properties/image"
+                                            },
+                                            "mp3": {
+                                                "description": "URI of the MP3",
+                                                "type": "string",
+                                                "format": "uri",
+                                                "pattern": "^https://"
+                                            },
+                                            "subjects": {
+                                                "description": "Episode subject IDs",
+                                                "type": "array",
+                                                "items": {
+                                                    "type": "string",
+                                                    "minLength": 1
+                                                }
+                                            }
+                                        },
+                                        "required": [
+                                            "number",
+                                            "title",
+                                            "published",
+                                            "image",
+                                            "mp3"
+                                        ]
+                                    }
+                                ]
                             }
-                        },
-                        "required": [
-                            "type",
-                            "number",
-                            "title",
-                            "published",
-                            "image",
-                            "mp3"
                         ]
                     }
                 ]

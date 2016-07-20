@@ -10,108 +10,32 @@ properties:
         title: Search results
         type: array
         items:
-            oneOf:
-              - title: Blog article
-                type: object
-                properties:
-                    type:
-                        type: string
-                        enum:
-                          - blog-article
-                    id:
-                        description: ID
-                        type: string
-                        minLength: 1
-                    title:
-                        description: Title
-                        type: string
-                    impactStatement:
-                        description: Description of the article
-                        type: string
-                    published:
-                        description: Publication date (UTC)
-                        type: string
-                        format: date-time
-                    subjects:
-                        description: Article subject IDs
-                        type: array
-                        items:
-                            type: string
-                            minLength: 1
-                required:
-                  - id
-                  - title
-                  - published
-              - title: Labs experiment
-                type: object
-                properties:
-                    type:
-                        type: string
-                        enum:
-                          - labs-experiment
-                    number:
-                        description: Number
-                        type: integer
-                        minimum: 1
-                    title:
-                        description: Title
-                        type: string
-                    impactStatement:
-                        description: Description of the experiment
-                        type: string
-                    published:
-                        description: Publication date (UTC)
-                        type: string
-                        format: date-time
-                    image:
-                        $ref: ../misc/image.v1.yaml
+            allOf:
+              - type: object
                 required:
                   - type
-                  - number
-                  - title
-                  - published
-                  - image
-              - title: Podcast episode
-                type: object
-                properties:
-                    type:
-                        type: string
-                        enum:
-                          - podcast-episode
-                    number:
-                        description: Number
-                        type: integer
-                        minimum: 1
-                    title:
-                        description: Title
-                        type: string
-                    impactStatement:
-                        description: Description of the episode
-                        type: string
-                    published:
-                        description: Publication date (UTC)
-                        type: string
-                        format: date-time
-                    image:
-                        $ref: ../misc/image.v1.yaml
-                    mp3:
-                        description: URI of the MP3
-                        type: string
-                        format: uri
-                        pattern: ^https://
-                    subjects:
-                        description: Episode subject IDs
-                        type: array
-                        items:
-                            type: string
-                            minLength: 1
-                required:
-                  - type
-                  - number
-                  - title
-                  - published
-                  - image
-                  - mp3
+              - oneOf:
+                  - allOf:
+                      - properties:
+                            type:
+                                type: string
+                                enum:
+                                  - blog-article
+                      - $ref: ../snippets/blog-article.v1.yaml
+                  - allOf:
+                      - properties:
+                            type:
+                                type: string
+                                enum:
+                                  - labs-experiment
+                      - $ref: ../snippets/labs-experiment.v1.yaml
+                  - allOf:
+                      - properties:
+                            type:
+                                type: string
+                                enum:
+                                  - podcast-episode
+                      - $ref: ../snippets/podcast-episode.v1.yaml
         uniqueItems: true
     subjects:
         title: Subjects
