@@ -10,7 +10,7 @@ properties:
         title: People
         type: array
         items:
-            $ref: person-snippet.v1.yaml
+            $ref: ../snippets/person.v1.yaml
         uniqueItems: true
 required:
   - total

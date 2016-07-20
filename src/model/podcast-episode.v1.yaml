@@ -2,4 +2,4 @@ $schema: http://json-schema.org/draft-04/schema#
 title: Podcast episode
 type: object
 allOf:
-  - $ref: podcast-episode-snippet.v1.yaml
+  - $ref: ../snippets/podcast-episode.v1.yaml

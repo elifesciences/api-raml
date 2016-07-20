@@ -10,7 +10,7 @@ properties:
         title: Episodes
         type: array
         items:
-            $ref: podcast-episode-snippet.v1.yaml
+            $ref: ../snippets/podcast-episode.v1.yaml
         uniqueItems: true
 required:
   - total
