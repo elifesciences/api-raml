@@ -10,69 +10,25 @@ properties:
         title: Articles
         type: array
         items:
-            type: object
-            properties:
-                id:
-                    type: string
-                    minLength: 1
-                version:
-                    type: integer
-                    minimum: 1
-                status:
-                    type: string
-                    enum:
-                      - poa
-                      - vor
-                type:
-                    type: string
-                    enum:
-                      - correction
-                      - editorial
-                      - feature
-                      - insight
-                      - research-advance
-                      - research-article
-                      - research-exchange
-                      - retraction
-                      - registered-report
-                      - replication-study
-                      - short-report
-                      - tools-resources
-                doi:
-                    $ref: ../misc/doi.yaml
-                title:
-                    type: string
-                    minLength: 1
-                published:
-                    type: string
-                    format: date-time
-                volume:
-                    type: integer
-                    minimum: 1
-                elocationId:
-                    type: string
-                    minLength: 1
-                pdf:
-                    type: string
-                    format: uri
-                subjects:
-                    type: array
-                    items:
-                        type: string
-                        minLength: 1
-                impactStatement:
-                    type: string
-                    minLength: 1
-            required:
-              - id
-              - version
-              - status
-              - type
-              - doi
-              - title
-              - published
-              - volume
-              - elocationId
+            allOf:
+              - type: object
+                required:
+                  - status
+              - oneOf:
+                  - allOf:
+                      - properties:
+                            status:
+                                type: string
+                                enum:
+                                  - poa
+                      - $ref: ../snippets/article-poa.v1.yaml
+                  - allOf:
+                      - properties:
+                            status:
+                                type: string
+                                enum:
+                                  - vor
+                      - $ref: ../snippets/article-vor.v1.yaml
         uniqueItems: true
 required:
   - total
