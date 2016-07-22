@@ -22,9 +22,15 @@
             "minimum": 0
         }
     },
+    "dependencies": {
+        "received": [
+            "accepted"
+        ],
+        "accepted": [
+            "received"
+        ]
+    },
     "required": [
-        "received",
-        "accepted",
         "poa",
         "vor"
     ]

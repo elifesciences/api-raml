@@ -16,8 +16,11 @@ properties:
         title: Number of VoR versions
         type: integer
         minimum: 0
+dependencies:
+    received:
+      - accepted
+    accepted:
+      - received
 required:
-  - received
-  - accepted
   - poa
   - vor
