@@ -1,6 +1,50 @@
 {
-    "total": 6,
+    "total": 10,
     "items": [
+        {
+            "type": "research-article",
+            "status": "poa",
+            "id": "14107",
+            "version": 1,
+            "doi": "10.7554/eLife.14107",
+            "title": "Molecular basis for multimerization in the activation of the epidermal growth factor",
+            "published": "2016-03-28T00:00:00Z",
+            "volume": 5,
+            "elocationId": "e14107"
+        },
+        {
+            "type": "research-article",
+            "status": "vor",
+            "id": "09560",
+            "version": 1,
+            "doi": "10.7554/eLife.09560",
+            "title": "<i>Homo naledi</i>, a new species of the genus <i>Homo</i> from the Dinaledi Chamber, South Africa",
+            "published": "2015-09-10T00:00:00Z",
+            "volume": 4,
+            "elocationId": "e09560",
+            "pdf": "https://elifesciences.org/content/4/e09560.pdf",
+            "subjects": [
+                "genomics-evolutionary-biology"
+            ],
+            "impactStatement": "A new hominin species has been unearthed in the Dinaledi Chamber of the Rising Star cave system in the largest assemblage of a single species of hominins yet discovered in Africa.",
+            "image": {
+                "alt": "",
+                "sizes": {
+                    "2:1": {
+                        "900": "https://placehold.it/900x450",
+                        "1800": "https://placehold.it/1800x900"
+                    },
+                    "16:9": {
+                        "250": "https://placehold.it/250x141",
+                        "500": "https://placehold.it/500x281"
+                    },
+                    "1:1": {
+                        "70": "https://placehold.it/70x70",
+                        "140": "https://placehold.it/140x140"
+                    }
+                }
+            }
+        },
         {
             "type": "blog-article",
             "id": "1",
@@ -74,10 +118,27 @@
         {
             "id": "cell-biology",
             "name": "Cell Biology",
-            "results": 2
+            "results": 3
+        },
+        {
+            "id": "genomics-evolutionary-biology",
+            "name": "Genomics and Evolutionary Biology",
+            "results": 3
         }
     ],
     "types": {
+        "correction": 0,
+        "editorial": 1,
+        "feature": 0,
+        "insight": 0,
+        "research-advance": 1,
+        "research-article": 2,
+        "research-exchange": 0,
+        "retraction": 0,
+        "registered-report": 0,
+        "replication-study": 0,
+        "short-report": 0,
+        "tools-resources": 0,
         "blog-article": 3,
         "labs-experiment": 2,
         "podcast-episode": 1

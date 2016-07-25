@@ -28,6 +28,224 @@
                                             "type": {
                                                 "type": "string",
                                                 "enum": [
+                                                    "correction",
+                                                    "editorial",
+                                                    "feature",
+                                                    "insight",
+                                                    "research-advance",
+                                                    "research-article",
+                                                    "research-exchange",
+                                                    "retraction",
+                                                    "registered-report",
+                                                    "replication-study",
+                                                    "short-report",
+                                                    "tools-resources"
+                                                ]
+                                            },
+                                            "status": {
+                                                "type": "string",
+                                                "enum": [
+                                                    "poa"
+                                                ]
+                                            }
+                                        },
+                                        "required": [
+                                            "status"
+                                        ]
+                                    },
+                                    {
+                                        "$schema": "http://json-schema.org/draft-04/schema#",
+                                        "title": "Article PoA snippet",
+                                        "type": "object",
+                                        "properties": {
+                                            "id": {
+                                                "type": "string",
+                                                "minLength": 1
+                                            },
+                                            "version": {
+                                                "type": "integer",
+                                                "minimum": 1
+                                            },
+                                            "type": {
+                                                "type": "string",
+                                                "enum": [
+                                                    "correction",
+                                                    "editorial",
+                                                    "feature",
+                                                    "insight",
+                                                    "research-advance",
+                                                    "research-article",
+                                                    "research-exchange",
+                                                    "retraction",
+                                                    "registered-report",
+                                                    "replication-study",
+                                                    "short-report",
+                                                    "tools-resources"
+                                                ]
+                                            },
+                                            "doi": {
+                                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                                "title": "DOI",
+                                                "type": "string",
+                                                "pattern": "^10[.][0-9]{4,}[^\\s\"/<>]*/[^\\s\"]+$"
+                                            },
+                                            "title": {
+                                                "type": "string",
+                                                "minLength": 1
+                                            },
+                                            "published": {
+                                                "type": "string",
+                                                "format": "date-time"
+                                            },
+                                            "volume": {
+                                                "type": "integer",
+                                                "minimum": 1
+                                            },
+                                            "elocationId": {
+                                                "type": "string",
+                                                "minLength": 1
+                                            },
+                                            "pdf": {
+                                                "type": "string",
+                                                "format": "uri"
+                                            },
+                                            "subjects": {
+                                                "type": "array",
+                                                "items": {
+                                                    "type": "string",
+                                                    "minLength": 1
+                                                },
+                                                "uniqueItems": true
+                                            },
+                                            "researchOrganisms": {
+                                                "type": "array",
+                                                "items": {
+                                                    "type": "string",
+                                                    "minLength": 1
+                                                },
+                                                "uniqueItems": true
+                                            },
+                                            "relatedArticles": {
+                                                "type": "array",
+                                                "items": {
+                                                    "type": "string",
+                                                    "minLength": 1
+                                                },
+                                                "uniqueItems": true
+                                            },
+                                            "abstract": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "doi": {
+                                                        "$ref": "#/properties/items/items/allOf/1/oneOf/0/allOf/1/properties/doi"
+                                                    },
+                                                    "content": {
+                                                        "type": "array",
+                                                        "items": {
+                                                            "$schema": "http://json-schema.org/draft-04/schema#",
+                                                            "title": "Paragraph",
+                                                            "type": "object",
+                                                            "properties": {
+                                                                "type": {
+                                                                    "type": "string",
+                                                                    "enum": [
+                                                                        "paragraph"
+                                                                    ]
+                                                                },
+                                                                "text": {
+                                                                    "title": "Text",
+                                                                    "type": "string"
+                                                                }
+                                                            },
+                                                            "required": [
+                                                                "type",
+                                                                "text"
+                                                            ]
+                                                        },
+                                                        "minItems": 1
+                                                    }
+                                                },
+                                                "required": [
+                                                    "doi",
+                                                    "content"
+                                                ]
+                                            }
+                                        },
+                                        "required": [
+                                            "id",
+                                            "version",
+                                            "type",
+                                            "doi",
+                                            "title",
+                                            "published",
+                                            "volume",
+                                            "elocationId"
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "allOf": [
+                                    {
+                                        "properties": {
+                                            "type": {
+                                                "type": "string",
+                                                "enum": [
+                                                    "correction",
+                                                    "editorial",
+                                                    "feature",
+                                                    "insight",
+                                                    "research-advance",
+                                                    "research-article",
+                                                    "research-exchange",
+                                                    "retraction",
+                                                    "registered-report",
+                                                    "replication-study",
+                                                    "short-report",
+                                                    "tools-resources"
+                                                ]
+                                            },
+                                            "status": {
+                                                "type": "string",
+                                                "enum": [
+                                                    "vor"
+                                                ]
+                                            }
+                                        },
+                                        "required": [
+                                            "status"
+                                        ]
+                                    },
+                                    {
+                                        "$schema": "http://json-schema.org/draft-04/schema#",
+                                        "title": "Article VoR snippet",
+                                        "type": "object",
+                                        "allOf": [
+                                            {
+                                                "$ref": "#/properties/items/items/allOf/1/oneOf/0/allOf/1"
+                                            },
+                                            {
+                                                "properties": {
+                                                    "impactStatement": {
+                                                        "type": "string",
+                                                        "minLength": 1
+                                                    },
+                                                    "image": {
+                                                        "$ref": "#/properties/items/items/allOf/1/oneOf/4/allOf/1/properties/image"
+                                                    }
+                                                }
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "allOf": [
+                                    {
+                                        "properties": {
+                                            "type": {
+                                                "type": "string",
+                                                "enum": [
                                                     "blog-article"
                                                 ]
                                             }
@@ -102,6 +320,54 @@
                                             },
                                             "impactStatement": {
                                                 "description": "Description of the experiment",
+                                                "type": "string"
+                                            },
+                                            "published": {
+                                                "description": "Publication date (UTC)",
+                                                "type": "string",
+                                                "format": "date-time"
+                                            },
+                                            "image": {
+                                                "$ref": "#/properties/items/items/allOf/1/oneOf/4/allOf/1/properties/image"
+                                            }
+                                        },
+                                        "required": [
+                                            "number",
+                                            "title",
+                                            "published",
+                                            "image"
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "allOf": [
+                                    {
+                                        "properties": {
+                                            "type": {
+                                                "type": "string",
+                                                "enum": [
+                                                    "podcast-episode"
+                                                ]
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "$schema": "http://json-schema.org/draft-04/schema#",
+                                        "title": "Podcast episode snippet",
+                                        "type": "object",
+                                        "properties": {
+                                            "number": {
+                                                "description": "Number",
+                                                "type": "integer",
+                                                "minimum": 1
+                                            },
+                                            "title": {
+                                                "description": "Title",
+                                                "type": "string"
+                                            },
+                                            "impactStatement": {
+                                                "description": "Description of the episode",
                                                 "type": "string"
                                             },
                                             "published": {
@@ -197,54 +463,6 @@
                                                     "alt",
                                                     "sizes"
                                                 ]
-                                            }
-                                        },
-                                        "required": [
-                                            "number",
-                                            "title",
-                                            "published",
-                                            "image"
-                                        ]
-                                    }
-                                ]
-                            },
-                            {
-                                "allOf": [
-                                    {
-                                        "properties": {
-                                            "type": {
-                                                "type": "string",
-                                                "enum": [
-                                                    "podcast-episode"
-                                                ]
-                                            }
-                                        }
-                                    },
-                                    {
-                                        "$schema": "http://json-schema.org/draft-04/schema#",
-                                        "title": "Podcast episode snippet",
-                                        "type": "object",
-                                        "properties": {
-                                            "number": {
-                                                "description": "Number",
-                                                "type": "integer",
-                                                "minimum": 1
-                                            },
-                                            "title": {
-                                                "description": "Title",
-                                                "type": "string"
-                                            },
-                                            "impactStatement": {
-                                                "description": "Description of the episode",
-                                                "type": "string"
-                                            },
-                                            "published": {
-                                                "description": "Publication date (UTC)",
-                                                "type": "string",
-                                                "format": "date-time"
-                                            },
-                                            "image": {
-                                                "$ref": "#/properties/items/items/allOf/1/oneOf/1/allOf/1/properties/image"
                                             },
                                             "mp3": {
                                                 "description": "URI of the MP3",
@@ -312,6 +530,66 @@
             "title": "Content types",
             "type": "object",
             "properties": {
+                "correction": {
+                    "description": "Number of correction articles in the result set",
+                    "type": "integer",
+                    "minimum": 0
+                },
+                "editorial": {
+                    "description": "Number of editoral articles in the result set",
+                    "type": "integer",
+                    "minimum": 0
+                },
+                "feature": {
+                    "description": "Number of feature articles in the result set",
+                    "type": "integer",
+                    "minimum": 0
+                },
+                "insight": {
+                    "description": "Number of insight articles in the result set",
+                    "type": "integer",
+                    "minimum": 0
+                },
+                "research-advance": {
+                    "description": "Number of research advances in the result set",
+                    "type": "integer",
+                    "minimum": 0
+                },
+                "research-article": {
+                    "description": "Number of research articles in the result set",
+                    "type": "integer",
+                    "minimum": 0
+                },
+                "research-exchange": {
+                    "description": "Number of research exchanges in the result set",
+                    "type": "integer",
+                    "minimum": 0
+                },
+                "retraction": {
+                    "description": "Number of retraction articles in the result set",
+                    "type": "integer",
+                    "minimum": 0
+                },
+                "registered-report": {
+                    "description": "Number of registered reports in the result set",
+                    "type": "integer",
+                    "minimum": 0
+                },
+                "replication-study": {
+                    "description": "Number of replication studies in the result set",
+                    "type": "integer",
+                    "minimum": 0
+                },
+                "short-report": {
+                    "description": "Number of short reports in the result set",
+                    "type": "integer",
+                    "minimum": 0
+                },
+                "tools-resources": {
+                    "description": "Number of tools and resources articles in the result set",
+                    "type": "integer",
+                    "minimum": 0
+                },
                 "blog-article": {
                     "description": "Number of blog articles in the result set",
                     "type": "integer",
@@ -329,6 +607,18 @@
                 }
             },
             "required": [
+                "correction",
+                "editorial",
+                "feature",
+                "insight",
+                "research-advance",
+                "research-article",
+                "research-exchange",
+                "retraction",
+                "registered-report",
+                "replication-study",
+                "short-report",
+                "tools-resources",
                 "blog-article",
                 "labs-experiment",
                 "podcast-episode"
