@@ -1,0 +1,11 @@
+$schema: http://json-schema.org/draft-04/schema#
+title: Article VoR snippet
+type: object
+allOf:
+  - $ref: article-poa.v1.yaml
+  - properties:
+        impactStatement:
+            type: string
+            minLength: 1
+        image:
+            $ref: ../misc/image.v1.yaml

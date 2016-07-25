@@ -20,6 +20,54 @@ properties:
                             type:
                                 type: string
                                 enum:
+                                  - correction
+                                  - editorial
+                                  - feature
+                                  - insight
+                                  - research-advance
+                                  - research-article
+                                  - research-exchange
+                                  - retraction
+                                  - registered-report
+                                  - replication-study
+                                  - short-report
+                                  - tools-resources
+                            status:
+                                type: string
+                                enum:
+                                  - poa
+                        required:
+                          - status
+                      - $ref: ../snippets/article-poa.v1.yaml
+                  - allOf:
+                      - properties:
+                            type:
+                                type: string
+                                enum:
+                                  - correction
+                                  - editorial
+                                  - feature
+                                  - insight
+                                  - research-advance
+                                  - research-article
+                                  - research-exchange
+                                  - retraction
+                                  - registered-report
+                                  - replication-study
+                                  - short-report
+                                  - tools-resources
+                            status:
+                                type: string
+                                enum:
+                                  - vor
+                        required:
+                          - status
+                      - $ref: ../snippets/article-vor.v1.yaml
+                  - allOf:
+                      - properties:
+                            type:
+                                type: string
+                                enum:
                                   - blog-article
                       - $ref: ../snippets/blog-article.v1.yaml
                   - allOf:
@@ -65,6 +113,54 @@ properties:
         title: Content types
         type: object
         properties:
+            correction:
+                description: Number of correction articles in the result set
+                type: integer
+                minimum: 0
+            editorial:
+                description: Number of editoral articles in the result set
+                type: integer
+                minimum: 0
+            feature:
+                description: Number of feature articles in the result set
+                type: integer
+                minimum: 0
+            insight:
+                description: Number of insight articles in the result set
+                type: integer
+                minimum: 0
+            research-advance:
+                description: Number of research advances in the result set
+                type: integer
+                minimum: 0
+            research-article:
+                description: Number of research articles in the result set
+                type: integer
+                minimum: 0
+            research-exchange:
+                description: Number of research exchanges in the result set
+                type: integer
+                minimum: 0
+            retraction:
+                description: Number of retraction articles in the result set
+                type: integer
+                minimum: 0
+            registered-report:
+                description: Number of registered reports in the result set
+                type: integer
+                minimum: 0
+            replication-study:
+                description: Number of replication studies in the result set
+                type: integer
+                minimum: 0
+            short-report:
+                description: Number of short reports in the result set
+                type: integer
+                minimum: 0
+            tools-resources:
+                description: Number of tools and resources articles in the result set
+                type: integer
+                minimum: 0
             blog-article:
                 description: Number of blog articles in the result set
                 type: integer
@@ -78,6 +174,18 @@ properties:
                 type: integer
                 minimum: 0
         required:
+          - correction
+          - editorial
+          - feature
+          - insight
+          - research-advance
+          - research-article
+          - research-exchange
+          - retraction
+          - registered-report
+          - replication-study
+          - short-report
+          - tools-resources
           - blog-article
           - labs-experiment
           - podcast-episode

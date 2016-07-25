@@ -1,0 +1,25 @@
+$schema: http://json-schema.org/draft-04/schema#
+title: Article VoR
+type: object
+allOf:
+  - $ref: article-poa.v1.yaml
+  - $ref: ../snippets/article-vor.v1.yaml
+  - properties:
+        keywords:
+            type: array
+            items:
+                type: string
+                minLength: 1
+        digest:
+            type: object
+            properties:
+                doi:
+                    $ref: ../misc/doi.yaml
+                content:
+                    type: array
+                    items:
+                        $ref: ../blocks/paragraph.v1.yaml
+                    minItems: 1
+            required:
+              - doi
+              - content
