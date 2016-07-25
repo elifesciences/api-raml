@@ -17,15 +17,9 @@
                             "title": "Name",
                             "type": "object",
                             "properties": {
-                                "long": {
-                                    "title": "Long name",
+                                "preferred": {
+                                    "title": "Preferred name",
                                     "description": "This is generally the name that is used by the person for English-language publications.\n\nFor example:\n  - Randy Schekman\n  - K. VijayRaghavan\n  - Wenhui Li\n",
-                                    "type": "string",
-                                    "minLength": 1
-                                },
-                                "short": {
-                                    "title": "Short name",
-                                    "description": "This is a shortend form of the that is used by the person for English-language publications. Often parts of the name will be replaced by initials. In some cases the name may not be shortened, as so this value is the same as `long`.\n\nFor example:\n  - R. Schekman\n  - K. VijayRaghavan\n  - Wenhui Li\n",
                                     "type": "string",
                                     "minLength": 1
                                 },
@@ -35,8 +29,7 @@
                                 }
                             },
                             "required": [
-                                "long",
-                                "short",
+                                "preferred",
                                 "index"
                             ]
                         },
