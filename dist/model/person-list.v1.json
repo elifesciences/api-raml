@@ -25,25 +25,27 @@
                                 "title": "Name",
                                 "type": "object",
                                 "properties": {
-                                    "givenNames": {
-                                        "title": "Given names",
+                                    "long": {
+                                        "title": "Long name",
+                                        "description": "This is generally the name that is used by the person for English-language publications.\n\nFor example:\n  - Randy Schekman\n  - K. VijayRaghavan\n  - Wenhui Li\n",
                                         "type": "string",
                                         "minLength": 1
                                     },
-                                    "surname": {
-                                        "title": "Surname",
+                                    "short": {
+                                        "title": "Short name",
+                                        "description": "This is a shortend form of the that is used by the person for English-language publications. Often parts of the name will be replaced by initials. In some cases the name may not be shortened, as so this value is the same as `long`.\n\nFor example:\n  - R. Schekman\n  - K. VijayRaghavan\n  - Wenhui Li\n",
                                         "type": "string",
                                         "minLength": 1
                                     },
-                                    "suffix": {
-                                        "title": "Suffix",
-                                        "type": "string",
-                                        "minLength": 1
+                                    "index": {
+                                        "title": "Index name",
+                                        "description": "This is the name that should be used for indexing people.\n\nFor example:\n  - Schekman, Randy\n  - VijayRaghavan, Krishnaswamy\n  - Wenhui Li\n"
                                     }
                                 },
                                 "required": [
-                                    "givenNames",
-                                    "surname"
+                                    "long",
+                                    "short",
+                                    "index"
                                 ]
                             },
                             "orcid": {

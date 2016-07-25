@@ -2,9 +2,9 @@
     "id": "jsmith",
     "type": "senior-editor",
     "name": {
-        "givenNames": "John",
-        "surname": "Smith",
-        "suffix": "III"
+        "long": "John Smith III",
+        "short": "J. Smith III",
+        "index": "Smith, John, III"
     },
     "orcid": "0000-0002-1825-0097",
     "research": {
