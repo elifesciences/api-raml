@@ -1,0 +1,62 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "Event",
+    "type": "object",
+    "properties": {
+        "total": {
+            "title": "Total number of events",
+            "type": "integer",
+            "minimum": 0
+        },
+        "items": {
+            "title": "Events",
+            "type": "array",
+            "items": {
+                "$schema": "http://json-schema.org/draft-04/schema#",
+                "title": "Event snippet",
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "ID",
+                        "type": "string",
+                        "minLength": 1
+                    },
+                    "title": {
+                        "description": "Title",
+                        "type": "string"
+                    },
+                    "impactStatement": {
+                        "description": "Description of the article",
+                        "type": "string"
+                    },
+                    "starts": {
+                        "description": "Start date/time (UTC)",
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "ends": {
+                        "description": "Ends date/time (UTC)",
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "timezone": {
+                        "description": "Timezone (from the IANA time zone database) for non-online events",
+                        "type": "string",
+                        "pattern": "^[A-Za-z]+(/[A-Za-z_-]+)+$"
+                    }
+                },
+                "required": [
+                    "id",
+                    "title",
+                    "starts",
+                    "ends"
+                ]
+            },
+            "uniqueItems": true
+        }
+    },
+    "required": [
+        "total",
+        "items"
+    ]
+}

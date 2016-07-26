@@ -312,6 +312,74 @@ traits:
                                     displayName: Complete
                                     value: !include samples/blog-article/v1/complete.json
 
+/events:
+    type: collection
+    description: |
+        Events
+    get:
+        description: |
+            Get a list of events, sorted by start date.
+        is:
+          - paged: { resources: Events }
+        queryParameters:
+            show:
+                description: |
+                    Type of events to show.
+                type: string
+                required: false
+                default: all
+                enum:
+                  - all
+                  - closed
+                  - open
+        responses:
+            200:
+                description: |
+                    List of events, sorted by start date.
+                body:
+                    application/vnd.elife.event-list+json;version=1:
+                        schema: !include model/event-list.v1.json
+                        examples:
+                            paginated:
+                                displayName: First page
+                                description: |
+                                    List is split over two pages.
+                                value: !include samples/event-list/v1/first-page.json
+                            empty:
+                                displayName: Empty list
+                                description: |
+                                    Demonstration of the list being empty (the first page will always return a valid result).
+                                value: !include samples/event-list/v1/empty.json
+
+    /{id}:
+        type:
+            item:
+                resource: Event
+        description: |
+            Individual event.
+        uriParameters:
+            id:
+                description: |
+                    Event ID.
+                type: string
+        get:
+            description: |
+                Get an event.
+            responses:
+                200:
+                    description: |
+                        Event.
+                    body:
+                        application/vnd.elife.event+json;version=1:
+                            schema: !include model/event.v1.json
+                            examples:
+                                minimum:
+                                    displayName: Minimum
+                                    value: !include samples/event/v1/minimum.json
+                                complete:
+                                    displayName: Complete
+                                    value: !include samples/event/v1/complete.json
+
 /labs-experiments:
     type: collection
     description: |
