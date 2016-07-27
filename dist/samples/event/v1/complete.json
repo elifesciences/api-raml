@@ -4,16 +4,18 @@
     "impactStatement": "How eLife is influencing the culture of peer review",
     "starts": "2016-04-22T20:00:00+00:00",
     "ends": "2016-04-22T21:00:00+00:00",
-    "timezone": "America/Seattle",
+    "timezone": "America/Los_Angeles",
+    "venue": {
+        "id": "ChIJzT5V0iQVkFQR0L1g2ZzelL0",
+        "coordinates": {
+            "latitude": 47.6272994,
+            "longitude": -122.3324216
+        },
+        "name": "Fred Hutchinson Cancer Research Center",
+        "address": "1100 Fairview Ave N, Seattle, WA 98109, United States",
+        "inside": "D1-080/084 (Thomas Building)"
+    },
     "content": [
-        {
-            "type": "paragraph",
-            "text": "Date & time: Friday, 22 April 2016, 1:00 - 2:00 pm"
-        },
-        {
-            "type": "paragraph",
-            "text": "Venue: D1-080/084 (Thomas Building), Fred Hutchinson Cancer Research Center, 1100 Fairview Avenue North, Seattle"
-        },
         {
             "type": "paragraph",
             "text": "Please join us for lunch and a discussion on peer review at eLife – the open-access journal for outstanding research backed by the Howard Hughes Medical Institute, the Max Planck Society, and the Wellcome Trust."
