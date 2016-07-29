@@ -1,0 +1,35 @@
+$schema: http://json-schema.org/draft-04/schema#
+title: Place
+type: object
+properties:
+    id:
+        title: Google Place ID
+        type: string
+        minLength: 1
+    coordinates:
+        type: object
+        properties:
+            latitude:
+                type: number
+                maximum: 90
+                minimum: -90
+            longitude:
+                type: number
+                maximum: 180
+                minimum: -180
+        required:
+          - latitude
+          - longitude
+    name:
+        type: string
+        minLength: 1
+    address:
+        type: string
+        minLength: 1
+    inside:
+        type: string
+        minLength: 1
+required:
+  - coordinates
+  - name
+  - address

@@ -107,6 +107,15 @@
                 }
             },
             "mp3": "https://nakeddiscovery.com/scripts/mp3s/audio/eLife_Podcast_16.05.mp3"
+        },
+        {
+            "type": "event",
+            "id": "1",
+            "title": "Changing peer review in cancer research: a seminar at Fred Hutch",
+            "impactStatement": "How eLife is influencing the culture of peer review",
+            "starts": "2016-04-22T20:00:00+00:00",
+            "ends": "2016-04-22T21:00:00+00:00",
+            "timezone": "America/Seattle"
         }
     ],
     "subjects": [
@@ -140,6 +149,7 @@
         "short-report": 0,
         "tools-resources": 0,
         "blog-article": 3,
+        "event": 1,
         "labs-experiment": 2,
         "podcast-episode": 1
     }

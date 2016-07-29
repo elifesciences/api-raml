@@ -231,7 +231,7 @@
                                                         "minLength": 1
                                                     },
                                                     "image": {
-                                                        "$ref": "#/properties/items/items/allOf/1/oneOf/4/allOf/1/properties/image"
+                                                        "$ref": "#/properties/items/items/allOf/1/oneOf/5/allOf/1/properties/image"
                                                     }
                                                 }
                                             }
@@ -299,6 +299,61 @@
                                             "type": {
                                                 "type": "string",
                                                 "enum": [
+                                                    "event"
+                                                ]
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "$schema": "http://json-schema.org/draft-04/schema#",
+                                        "title": "Event snippet",
+                                        "type": "object",
+                                        "properties": {
+                                            "id": {
+                                                "description": "ID",
+                                                "type": "string",
+                                                "minLength": 1
+                                            },
+                                            "title": {
+                                                "description": "Title",
+                                                "type": "string"
+                                            },
+                                            "impactStatement": {
+                                                "description": "Description of the article",
+                                                "type": "string"
+                                            },
+                                            "starts": {
+                                                "description": "Start date/time (UTC)",
+                                                "type": "string",
+                                                "format": "date-time"
+                                            },
+                                            "ends": {
+                                                "description": "Ends date/time (UTC)",
+                                                "type": "string",
+                                                "format": "date-time"
+                                            },
+                                            "timezone": {
+                                                "description": "Timezone (from the IANA time zone database) for non-online events",
+                                                "type": "string",
+                                                "pattern": "^[A-Za-z]+(/[A-Za-z_-]+)+$"
+                                            }
+                                        },
+                                        "required": [
+                                            "id",
+                                            "title",
+                                            "starts",
+                                            "ends"
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "allOf": [
+                                    {
+                                        "properties": {
+                                            "type": {
+                                                "type": "string",
+                                                "enum": [
                                                     "labs-experiment"
                                                 ]
                                             }
@@ -328,7 +383,7 @@
                                                 "format": "date-time"
                                             },
                                             "image": {
-                                                "$ref": "#/properties/items/items/allOf/1/oneOf/4/allOf/1/properties/image"
+                                                "$ref": "#/properties/items/items/allOf/1/oneOf/5/allOf/1/properties/image"
                                             }
                                         },
                                         "required": [
@@ -595,6 +650,11 @@
                     "type": "integer",
                     "minimum": 0
                 },
+                "event": {
+                    "description": "Number of open events in the result set",
+                    "type": "integer",
+                    "minimum": 0
+                },
                 "labs-experiment": {
                     "description": "Number of Labs experiments in the result set",
                     "type": "integer",
@@ -620,6 +680,7 @@
                 "short-report",
                 "tools-resources",
                 "blog-article",
+                "event",
                 "labs-experiment",
                 "podcast-episode"
             ]

@@ -1,0 +1,345 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "Event",
+    "type": "object",
+    "allOf": [
+        {
+            "$schema": "http://json-schema.org/draft-04/schema#",
+            "title": "Event snippet",
+            "type": "object",
+            "properties": {
+                "id": {
+                    "description": "ID",
+                    "type": "string",
+                    "minLength": 1
+                },
+                "title": {
+                    "description": "Title",
+                    "type": "string"
+                },
+                "impactStatement": {
+                    "description": "Description of the article",
+                    "type": "string"
+                },
+                "starts": {
+                    "description": "Start date/time (UTC)",
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "ends": {
+                    "description": "Ends date/time (UTC)",
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "timezone": {
+                    "description": "Timezone (from the IANA time zone database) for non-online events",
+                    "type": "string",
+                    "pattern": "^[A-Za-z]+(/[A-Za-z_-]+)+$"
+                }
+            },
+            "required": [
+                "id",
+                "title",
+                "starts",
+                "ends"
+            ]
+        },
+        {
+            "properties": {
+                "content": {
+                    "description": "Content",
+                    "type": "array",
+                    "items": {
+                        "oneOf": [
+                            {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "title": "Blockquote",
+                                "type": "object",
+                                "properties": {
+                                    "type": {
+                                        "type": "string",
+                                        "enum": [
+                                            "blockquote"
+                                        ]
+                                    },
+                                    "text": {
+                                        "title": "Text",
+                                        "type": "string"
+                                    },
+                                    "citation": {
+                                        "title": "Text",
+                                        "type": "string"
+                                    }
+                                },
+                                "required": [
+                                    "type",
+                                    "text"
+                                ]
+                            },
+                            {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "title": "Image",
+                                "type": "object",
+                                "properties": {
+                                    "type": {
+                                        "type": "string",
+                                        "enum": [
+                                            "image"
+                                        ]
+                                    },
+                                    "alt": {
+                                        "title": "Alternative text",
+                                        "type": "string"
+                                    },
+                                    "uri": {
+                                        "title": "Image URI",
+                                        "type": "string",
+                                        "format": "uri",
+                                        "pattern": "^https://"
+                                    },
+                                    "caption": {
+                                        "title": "Text",
+                                        "type": "string"
+                                    }
+                                },
+                                "required": [
+                                    "type",
+                                    "alt",
+                                    "uri"
+                                ]
+                            },
+                            {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "title": "Section",
+                                "type": "object",
+                                "properties": {
+                                    "type": {
+                                        "type": "string",
+                                        "enum": [
+                                            "list"
+                                        ]
+                                    },
+                                    "ordered": {
+                                        "type": "boolean"
+                                    },
+                                    "items": {
+                                        "description": "List items",
+                                        "type": "array",
+                                        "items": {
+                                            "oneOf": [
+                                                {
+                                                    "type": "string"
+                                                },
+                                                {
+                                                    "$ref": "#/allOf/1/properties/content/items/oneOf/1"
+                                                },
+                                                {
+                                                    "$ref": "#/allOf/1/properties/content/items/oneOf/2"
+                                                },
+                                                {
+                                                    "$ref": "#/allOf/1/properties/content/items/oneOf/3"
+                                                }
+                                            ]
+                                        },
+                                        "minItems": 1
+                                    }
+                                },
+                                "required": [
+                                    "type",
+                                    "items"
+                                ]
+                            },
+                            {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "title": "Paragraph",
+                                "type": "object",
+                                "properties": {
+                                    "type": {
+                                        "type": "string",
+                                        "enum": [
+                                            "paragraph"
+                                        ]
+                                    },
+                                    "text": {
+                                        "title": "Text",
+                                        "type": "string"
+                                    }
+                                },
+                                "required": [
+                                    "type",
+                                    "text"
+                                ]
+                            },
+                            {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "title": "Section",
+                                "type": "object",
+                                "properties": {
+                                    "type": {
+                                        "type": "string",
+                                        "enum": [
+                                            "section"
+                                        ]
+                                    },
+                                    "title": {
+                                        "title": "Text",
+                                        "type": "string"
+                                    },
+                                    "content": {
+                                        "description": "Content",
+                                        "type": "array",
+                                        "items": {
+                                            "oneOf": [
+                                                {
+                                                    "$ref": "#/allOf/1/properties/content/items/oneOf/0"
+                                                },
+                                                {
+                                                    "$ref": "#/allOf/1/properties/content/items/oneOf/1"
+                                                },
+                                                {
+                                                    "$ref": "#/allOf/1/properties/content/items/oneOf/2"
+                                                },
+                                                {
+                                                    "$ref": "#/allOf/1/properties/content/items/oneOf/3"
+                                                },
+                                                {
+                                                    "$ref": "#/allOf/1/properties/content/items/oneOf/4"
+                                                },
+                                                {
+                                                    "$ref": "#/allOf/1/properties/content/items/oneOf/5"
+                                                },
+                                                {
+                                                    "$ref": "#/allOf/1/properties/content/items/oneOf/6"
+                                                }
+                                            ]
+                                        },
+                                        "minItems": 1
+                                    }
+                                },
+                                "required": [
+                                    "type",
+                                    "title",
+                                    "content"
+                                ]
+                            },
+                            {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "title": "Table",
+                                "type": "object",
+                                "properties": {
+                                    "type": {
+                                        "type": "string",
+                                        "enum": [
+                                            "table"
+                                        ]
+                                    },
+                                    "html": {
+                                        "title": "HTML table",
+                                        "type": "string"
+                                    }
+                                },
+                                "required": [
+                                    "type",
+                                    "html"
+                                ]
+                            },
+                            {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "title": "YouTube video",
+                                "type": "object",
+                                "properties": {
+                                    "type": {
+                                        "type": "string",
+                                        "enum": [
+                                            "youtube"
+                                        ]
+                                    },
+                                    "id": {
+                                        "title": "Video ID",
+                                        "type": "string"
+                                    },
+                                    "width": {
+                                        "title": "Width",
+                                        "type": "integer",
+                                        "minimum": 1
+                                    },
+                                    "height": {
+                                        "title": "Height",
+                                        "type": "integer",
+                                        "minimum": 1
+                                    }
+                                },
+                                "required": [
+                                    "type",
+                                    "id",
+                                    "width",
+                                    "height"
+                                ]
+                            }
+                        ]
+                    },
+                    "minItems": 1
+                },
+                "venue": {
+                    "$schema": "http://json-schema.org/draft-04/schema#",
+                    "title": "Place",
+                    "type": "object",
+                    "properties": {
+                        "id": {
+                            "title": "Google Place ID",
+                            "type": "string",
+                            "minLength": 1
+                        },
+                        "coordinates": {
+                            "type": "object",
+                            "properties": {
+                                "latitude": {
+                                    "type": "number",
+                                    "maximum": 90,
+                                    "minimum": -90
+                                },
+                                "longitude": {
+                                    "type": "number",
+                                    "maximum": 180,
+                                    "minimum": -180
+                                }
+                            },
+                            "required": [
+                                "latitude",
+                                "longitude"
+                            ]
+                        },
+                        "name": {
+                            "type": "string",
+                            "minLength": 1
+                        },
+                        "address": {
+                            "type": "string",
+                            "minLength": 1
+                        },
+                        "inside": {
+                            "type": "string",
+                            "minLength": 1
+                        }
+                    },
+                    "required": [
+                        "coordinates",
+                        "name",
+                        "address"
+                    ]
+                }
+            },
+            "required": [
+                "content"
+            ],
+            "dependencies": {
+                "timezone": [
+                    "venue"
+                ],
+                "venue": [
+                    "timezone"
+                ]
+            }
+        }
+    ]
+}
