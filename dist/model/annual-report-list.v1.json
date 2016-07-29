@@ -1,0 +1,142 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "Annual reports list",
+    "type": "object",
+    "properties": {
+        "total": {
+            "title": "Total number of annual reports",
+            "type": "integer",
+            "minimum": 0
+        },
+        "items": {
+            "title": "Annual reports",
+            "type": "array",
+            "items": {
+                "$schema": "http://json-schema.org/draft-04/schema#",
+                "title": "Annual report",
+                "type": "object",
+                "properties": {
+                    "year": {
+                        "description": "Year",
+                        "type": "integer",
+                        "minimum": 2012
+                    },
+                    "uri": {
+                        "description": "Annual report URI",
+                        "type": "string",
+                        "format": "uri"
+                    },
+                    "title": {
+                        "description": "Title",
+                        "type": "string",
+                        "minLength": 1
+                    },
+                    "impactStatement": {
+                        "description": "Description of the annual report",
+                        "type": "string"
+                    },
+                    "image": {
+                        "$schema": "http://json-schema.org/draft-04/schema#",
+                        "title": "Image",
+                        "type": "object",
+                        "properties": {
+                            "alt": {
+                                "title": "Alternative text",
+                                "type": "string"
+                            },
+                            "sizes": {
+                                "title": "Sizes",
+                                "type": "object",
+                                "properties": {
+                                    "2:1": {
+                                        "type": "object",
+                                        "properties": {
+                                            "900": {
+                                                "title": "2:1 crop at 900px width",
+                                                "type": "string",
+                                                "format": "uri",
+                                                "pattern": "^https://"
+                                            },
+                                            "1800": {
+                                                "title": "2:1 crop at 1800px width",
+                                                "type": "string",
+                                                "format": "uri",
+                                                "pattern": "^https://"
+                                            }
+                                        },
+                                        "required": [
+                                            "900",
+                                            "1800"
+                                        ]
+                                    },
+                                    "16:9": {
+                                        "type": "object",
+                                        "properties": {
+                                            "250": {
+                                                "title": "16:9 crop at 250px width",
+                                                "type": "string",
+                                                "format": "uri",
+                                                "pattern": "^https://"
+                                            },
+                                            "500": {
+                                                "title": "16:9 crop at 500px width",
+                                                "type": "string",
+                                                "format": "uri",
+                                                "pattern": "^https://"
+                                            }
+                                        },
+                                        "required": [
+                                            "250",
+                                            "500"
+                                        ]
+                                    },
+                                    "1:1": {
+                                        "type": "object",
+                                        "properties": {
+                                            "70": {
+                                                "title": "1:1 crop at 70px width",
+                                                "type": "string",
+                                                "format": "uri",
+                                                "pattern": "^https://"
+                                            },
+                                            "140": {
+                                                "title": "1:1 crop at 140px width",
+                                                "type": "string",
+                                                "format": "uri",
+                                                "pattern": "^https://"
+                                            }
+                                        },
+                                        "required": [
+                                            "70",
+                                            "140"
+                                        ]
+                                    }
+                                },
+                                "required": [
+                                    "2:1",
+                                    "16:9",
+                                    "1:1"
+                                ]
+                            }
+                        },
+                        "required": [
+                            "alt",
+                            "sizes"
+                        ]
+                    }
+                },
+                "required": [
+                    "year",
+                    "uri",
+                    "title",
+                    "image"
+                ]
+            },
+            "uniqueItems": true
+        }
+    },
+    "required": [
+        "total",
+        "items"
+    ]
+}

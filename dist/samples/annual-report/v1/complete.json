@@ -1,0 +1,23 @@
+{
+    "year": 2014,
+    "uri": "http://2014.elifesciences.org/",
+    "title": "The eLife Sciences 2014 Annual Report",
+    "impactStatement": "Having published almost 800 research articles by the close of 2014, in this report eLife is showcasing its achievements in attracting growing numbers of submissions, publishing a broad swath of high-quality research swiftly and constructively, supporting transparency and reproducibility, as well as the careers of early-career researchers, and exploring new publication formats.",
+    "image": {
+        "alt": "",
+        "sizes": {
+            "2:1": {
+                "900": "https://placehold.it/900x450",
+                "1800": "https://placehold.it/1800x900"
+            },
+            "16:9": {
+                "250": "https://placehold.it/250x141",
+                "500": "https://placehold.it/500x281"
+            },
+            "1:1": {
+                "70": "https://placehold.it/70x70",
+                "140": "https://placehold.it/140x140"
+            }
+        }
+    }
+}
