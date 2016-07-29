@@ -122,6 +122,34 @@ traits:
                 repeat: true
                 example: cell-biology
 
+/annual-reports:
+    type: collection
+    description: |
+        Annual reports
+    get:
+        description: |
+            Get a list of annual reports, sorted by year.
+        is:
+          - paged: { resources: Annual reports }
+        responses:
+            200:
+                description: |
+                    List of annual reports, sorted by year.
+                body:
+                    application/vnd.elife.annual-report-list+json;version=1:
+                        schema: !include model/annual-report-list.v1.json
+                        examples:
+                            populated:
+                                displayName: Populated list
+                                description: |
+                                    List is split over two pages.
+                                value: !include samples/annual-report-list/v1/populated.json
+                            empty:
+                                displayName: Empty list
+                                description: |
+                                    Demonstration of the list being empty (the first page will always return a valid result).
+                                value: !include samples/annual-report-list/v1/empty.json
+
 /articles:
     type: collection
     description: |
