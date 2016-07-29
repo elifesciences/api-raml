@@ -150,6 +150,36 @@ traits:
                                     Demonstration of the list being empty (the first page will always return a valid result).
                                 value: !include samples/annual-report-list/v1/empty.json
 
+    /{year}:
+        type:
+            item:
+                resource: Annual report
+        description: |
+            Individual annual report.
+        uriParameters:
+            year:
+                description: |
+                    Annual report year.
+                type: integer
+                minimum: 2012
+        get:
+            description: |
+                Get an annual report.
+            responses:
+                200:
+                    description: |
+                        Annual report.
+                    body:
+                        application/vnd.elife.annual-report+json;version=1:
+                            schema: !include model/annual-report.v1.json
+                            examples:
+                                minimum:
+                                    displayName: Minimum
+                                    value: !include samples/annual-report/v1/minimum.json
+                                complete:
+                                    displayName: Complete
+                                    value: !include samples/annual-report/v1/complete.json
+
 /articles:
     type: collection
     description: |

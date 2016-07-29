@@ -12,6 +12,8 @@
             "title": "Annual reports",
             "type": "array",
             "items": {
+                "$schema": "http://json-schema.org/draft-04/schema#",
+                "title": "Annual report",
                 "type": "object",
                 "properties": {
                     "year": {
