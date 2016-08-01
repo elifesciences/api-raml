@@ -6,21 +6,29 @@ properties:
         title: Name
         type: object
         properties:
-            givenNames:
-                title: Given names
+            preferred:
+                title: Preferred name
+                description: |
+                    This is generally the name that is used by the person for English-language publications.
+
+                    For example:
+                      - Randy Schekman
+                      - K. VijayRaghavan
+                      - Wenhui Li
                 type: string
                 minLength: 1
-            surname:
-                title: Surname
-                type: string
-                minLength: 1
-            suffix:
-                title: Suffix
-                type: string
-                minLength: 1
+            index:
+                title: Index name
+                description: |
+                    This is the name that should be used for indexing people.
+
+                    For example:
+                      - Schekman, Randy
+                      - VijayRaghavan, Krishnaswamy
+                      - Wenhui Li
         required:
-          - givenNames
-          - surname
+          - preferred
+          - index
     orcid:
         title: ORCID
         type: string
