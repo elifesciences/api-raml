@@ -77,5 +77,37 @@
                 "text": "The <i>Homo naledi</i> fossils are the largest collection of a single species of hominin that has been discovered in Africa so far and, in a related study, Dirks et al. describe the setting and context for these fossils. However, since the age of the fossils remains unclear, one of the next challenges will be to date the remains to provide more information about the early evolution of humans and their close relatives."
             }
         ]
-    }
+    },
+    "body": [
+        {
+            "type": "section",
+            "title": "Introduction",
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Fossil hominins were first recognized in the Dinaledi Chamber in the Rising Star cave system in October 2013. During a relatively short excavation, our team recovered an extensive collection of 1550 hominin specimens, representing nearly every element of the skeleton multiple times (Figure 1), including many complete elements and morphologically informative fragments, some in articulation, as well as smaller fragments many of which could be refit into more complete elements. The collection is a morphologically homogeneous sample that can be attributed to no previously-known hominin species. Here we describe this new species, <i>Homo naledi</i>. We have not defined <i>H. naledi</i> narrowly based on a single jaw or skull because the entire body of material has informed our understanding of its biology."
+                },
+                {
+                    "type": "section",
+                    "title": "Etymology",
+                    "content": [
+                        {
+                            "type": "paragraph",
+                            "text": "The word <i>naledi</i> means ‘star’ in the Sotho language and refers to the Dinaledi Chamber's location within the Rising Star cave system."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "section",
+            "title": "Differential diagnosis",
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "This comprehensive differential diagnosis is based upon cranial, dental and postcranial characters. The hypodigms used for other species are detailed in the ‘Materials and methods’. We examined original specimens for most species, except where indicated in the ‘Materials and methods’; when we relied on other sources for anatomical observations we indicate this. A summary of traits of <i>H. naledi</i> in comparison to other species is presented in Supplementary file 2. Comparative cranial and mandibular measures are presented in Table 1, and comparative dental measures are provided in Table 2."
+                }
+            ]
+        }
+    ]
 }
