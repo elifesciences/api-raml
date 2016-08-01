@@ -1,7 +1,3 @@
 oneOf:
-  - $ref: ../blocks/blockquote.v1.yaml
-  - $ref: ../blocks/image.v1.yaml
-  - $ref: ../blocks/list.v1.yaml
-  - $ref: ../blocks/paragraph.v1.yaml
-  - $ref: ../blocks/table.v1.yaml
-  - $ref: ../blocks/youtube.v1.yaml
+  - $ref: blocks-no-section-box.v1.yaml
+  - $ref: ../blocks/box.v1.yaml
