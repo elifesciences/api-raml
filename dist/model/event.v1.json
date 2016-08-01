@@ -141,7 +141,7 @@
                                                                     "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/2"
                                                                 },
                                                                 {
-                                                                    "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/3"
+                                                                    "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/4"
                                                                 }
                                                             ]
                                                         },
@@ -151,6 +151,30 @@
                                                 "required": [
                                                     "type",
                                                     "items"
+                                                ]
+                                            },
+                                            {
+                                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                                "title": "MathML",
+                                                "type": "object",
+                                                "properties": {
+                                                    "type": {
+                                                        "type": "string",
+                                                        "enum": [
+                                                            "mathml"
+                                                        ]
+                                                    },
+                                                    "label": {
+                                                        "type": "string"
+                                                    },
+                                                    "mathml": {
+                                                        "title": "MathML",
+                                                        "type": "string"
+                                                    }
+                                                },
+                                                "required": [
+                                                    "type",
+                                                    "mathml"
                                                 ]
                                             },
                                             {
@@ -186,7 +210,7 @@
                                                         ]
                                                     },
                                                     "doi": {
-                                                        "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/5/properties/doi"
+                                                        "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/6/properties/doi"
                                                     },
                                                     "id": {
                                                         "$schema": "http://json-schema.org/draft-04/schema#",
@@ -208,7 +232,7 @@
                                                         "title": "Caption",
                                                         "type": "array",
                                                         "items": {
-                                                            "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/3"
+                                                            "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/4"
                                                         },
                                                         "minItems": 1
                                                     },
@@ -223,7 +247,7 @@
                                                     "footer": {
                                                         "type": "array",
                                                         "items": {
-                                                            "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/3"
+                                                            "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/4"
                                                         }
                                                     },
                                                     "sourceData": {
@@ -235,7 +259,7 @@
                                                             "type": "object",
                                                             "properties": {
                                                                 "doi": {
-                                                                    "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/5/properties/doi"
+                                                                    "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/6/properties/doi"
                                                                 },
                                                                 "label": {
                                                                     "title": "Label",
@@ -251,7 +275,7 @@
                                                                     "title": "Caption",
                                                                     "type": "array",
                                                                     "items": {
-                                                                        "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/3"
+                                                                        "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/4"
                                                                     },
                                                                     "minItems": 1
                                                                 },
@@ -318,7 +342,7 @@
                                                         "pattern": "^10[.][0-9]{4,}[^\\s\"/<>]*/[^\\s\"]+$"
                                                     },
                                                     "id": {
-                                                        "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/4/properties/id"
+                                                        "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/5/properties/id"
                                                     },
                                                     "label": {
                                                         "title": "Label",
@@ -334,7 +358,7 @@
                                                         "title": "Caption",
                                                         "type": "array",
                                                         "items": {
-                                                            "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/3"
+                                                            "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/4"
                                                         },
                                                         "minItems": 1
                                                     },
