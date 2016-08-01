@@ -10,87 +10,42 @@ properties:
         title: Search results
         type: array
         items:
-            allOf:
-              - type: object
-                required:
-                  - type
-              - oneOf:
-                  - allOf:
-                      - properties:
-                            type:
-                                type: string
-                                enum:
-                                  - correction
-                                  - editorial
-                                  - feature
-                                  - insight
-                                  - research-advance
-                                  - research-article
-                                  - research-exchange
-                                  - retraction
-                                  - registered-report
-                                  - replication-study
-                                  - short-report
-                                  - tools-resources
-                            status:
-                                type: string
-                                enum:
-                                  - poa
-                        required:
-                          - status
-                      - $ref: ../snippets/article-poa.v1.yaml
-                  - allOf:
-                      - properties:
-                            type:
-                                type: string
-                                enum:
-                                  - correction
-                                  - editorial
-                                  - feature
-                                  - insight
-                                  - research-advance
-                                  - research-article
-                                  - research-exchange
-                                  - retraction
-                                  - registered-report
-                                  - replication-study
-                                  - short-report
-                                  - tools-resources
-                            status:
-                                type: string
-                                enum:
-                                  - vor
-                        required:
-                          - status
-                      - $ref: ../snippets/article-vor.v1.yaml
-                  - allOf:
-                      - properties:
-                            type:
-                                type: string
-                                enum:
-                                  - blog-article
-                      - $ref: ../snippets/blog-article.v1.yaml
-                  - allOf:
-                      - properties:
-                            type:
-                                type: string
-                                enum:
-                                  - event
-                      - $ref: ../snippets/event.v1.yaml
-                  - allOf:
-                      - properties:
-                            type:
-                                type: string
-                                enum:
-                                  - labs-experiment
-                      - $ref: ../snippets/labs-experiment.v1.yaml
-                  - allOf:
-                      - properties:
-                            type:
-                                type: string
-                                enum:
-                                  - podcast-episode
-                      - $ref: ../snippets/podcast-episode.v1.yaml
+            oneOf:
+              - $ref: ../snippets/article-vor.v1.yaml
+              - $ref: ../snippets/article-poa.v1.yaml
+              - allOf:
+                  - type: object
+                    required:
+                      - type
+                  - oneOf:
+                      - allOf:
+                          - properties:
+                                type:
+                                    type: string
+                                    enum:
+                                      - blog-article
+                          - $ref: ../snippets/blog-article.v1.yaml
+                      - allOf:
+                          - properties:
+                                type:
+                                    type: string
+                                    enum:
+                                      - event
+                          - $ref: ../snippets/event.v1.yaml
+                      - allOf:
+                          - properties:
+                                type:
+                                    type: string
+                                    enum:
+                                      - labs-experiment
+                          - $ref: ../snippets/labs-experiment.v1.yaml
+                      - allOf:
+                          - properties:
+                                type:
+                                    type: string
+                                    enum:
+                                      - podcast-episode
+                          - $ref: ../snippets/podcast-episode.v1.yaml
         uniqueItems: true
     subjects:
         title: Subjects

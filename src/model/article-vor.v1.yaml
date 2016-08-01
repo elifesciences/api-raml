@@ -2,7 +2,7 @@ $schema: http://json-schema.org/draft-04/schema#
 title: Article VoR
 type: object
 allOf:
-  - $ref: article-poa.v1.yaml
+  - $ref: ../misc/article.v1.yaml
   - $ref: ../snippets/article-vor.v1.yaml
   - properties:
         keywords:

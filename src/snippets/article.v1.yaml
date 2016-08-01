@@ -1,0 +1,83 @@
+$schema: http://json-schema.org/draft-04/schema#
+title: Article snippet
+type: object
+properties:
+    id:
+        type: string
+        minLength: 1
+    version:
+        type: integer
+        minimum: 1
+    type:
+        type: string
+        enum:
+          - correction
+          - editorial
+          - feature
+          - insight
+          - research-advance
+          - research-article
+          - research-exchange
+          - retraction
+          - registered-report
+          - replication-study
+          - short-report
+          - tools-resources
+    doi:
+        $ref: ../misc/doi.yaml
+    title:
+        type: string
+        minLength: 1
+    published:
+        type: string
+        format: date-time
+    volume:
+        type: integer
+        minimum: 1
+    elocationId:
+        type: string
+        minLength: 1
+    pdf:
+        type: string
+        format: uri
+    subjects:
+        type: array
+        items:
+            type: string
+            minLength: 1
+        uniqueItems: true
+    researchOrganisms:
+        type: array
+        items:
+            type: string
+            minLength: 1
+        uniqueItems: true
+    relatedArticles:
+        type: array
+        items:
+            type: string
+            minLength: 1
+        uniqueItems: true
+    abstract:
+        type: object
+        properties:
+            doi:
+                $ref: ../misc/doi.yaml
+            content:
+                type: array
+                items:
+                    $ref: ../blocks/paragraph.v1.yaml
+                minItems: 1
+        required:
+          - doi
+          - content
+required:
+  - status
+  - id
+  - version
+  - type
+  - doi
+  - title
+  - published
+  - volume
+  - elocationId

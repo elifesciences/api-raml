@@ -10,25 +10,9 @@ properties:
         title: Articles
         type: array
         items:
-            allOf:
-              - type: object
-                required:
-                  - status
-              - oneOf:
-                  - allOf:
-                      - properties:
-                            status:
-                                type: string
-                                enum:
-                                  - poa
-                      - $ref: ../snippets/article-poa.v1.yaml
-                  - allOf:
-                      - properties:
-                            status:
-                                type: string
-                                enum:
-                                  - vor
-                      - $ref: ../snippets/article-vor.v1.yaml
+          - oneOf:
+              - $ref: ../snippets/article-poa.v1.yaml
+              - $ref: ../snippets/article-vor.v1.yaml
         uniqueItems: true
 required:
   - total

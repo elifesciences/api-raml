@@ -2,32 +2,5 @@ $schema: http://json-schema.org/draft-04/schema#
 title: Article PoA
 type: object
 allOf:
+  - $ref: ../misc/article.v1.yaml
   - $ref: ../snippets/article-poa.v1.yaml
-  - properties:
-        issue:
-            type: integer
-            minimum: 1
-        copyright:
-            type: object
-            properties:
-                license:
-                    type: string
-                    enum:
-                      - CC-BY-1.0
-                      - CC-BY-2.0
-                      - CC-BY-2.5
-                      - CC-BY-3.0
-                      - CC-BY-4.0
-                      - CC0-1.0
-                holder:
-                    type: string
-                    minLength: 1
-                statement:
-                    type: string
-                    minLength: 1
-            required:
-              - license
-              - holder
-              - statement
-    required:
-      - copyright
