@@ -110,5 +110,41 @@
                 }
             ]
         }
-    ]
+    ],
+    "decisionLetter": {
+        "doi": "10.7554/eLife.09560.030",
+        "description": [
+            {
+                "type": "paragraph",
+                "text": "eLife posts the editorial decision letter and author response on a selection of the published articles (subject to the approval of the authors). An edited version of the letter sent to the authors after peer review is shown, indicating the substantive concerns or comments; minor concerns are not usually shown. Reviewers have the opportunity to discuss the decision before the letter is sent. Similarly, the author response typically shows only responses to the major concerns raised by the reviewers."
+            }
+        ],
+        "content": [
+            {
+                "type": "paragraph",
+                "text": "Thank you for submitting your work entitled “A new species of the genus <i>Homo</i> from the Dinaledi Chamber, South Africa” for peer review at <i>eLife</i>."
+            },
+            {
+                "type": "paragraph",
+                "text": "Your submission has been favorably evaluated by Ian Baldwin (Senior editor), two guest Reviewing editors (Johannes Krause and Nicholas Conard), and two peer reviewers. One of the two peer reviewers, Chris Stringer, has agreed to share his identity, and Johannes Krause has drafted this decision to help you prepare a revised submission."
+            },
+            {
+                "type": "paragraph",
+                "text": "The authors describe a large collection of recently discovered hominin fossils from the Dinaledi Chamber in the Rising Star cave system in South Africa. Based on their initial assessment they argue that the fossil remains derive from a single homogenous hominin group and present a new taxon that they call <i>Homo naledi</i>."
+            }
+        ]
+    },
+    "authorResponse": {
+        "doi": "10.7554/eLife.09560.031",
+        "content": [
+            {
+                "type": "paragraph",
+                "text": "We have added <i>H. floresiensis</i> to the differential diagnosis, including relevant aspects of cranial, dental, hand, lower limb and foot anatomy. We have also added <i>H. floresiensis</i> to both relevant figures (Figure 5 and Figure 7). We have also made a short comment on the validity of <i>H. gautengensis</i> in the Materials and methods."
+            },
+            {
+                "type": "paragraph",
+                "text": "We have removed both initial and final paragraphs in their entirety as suggested, and have slightly altered the remaining (second and penultimate) paragraphs to introduce and conclude the paper."
+            }
+        ]
+    }
 }
