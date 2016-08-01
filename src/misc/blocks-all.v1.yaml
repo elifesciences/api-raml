@@ -1,0 +1,3 @@
+oneOf:
+  - $ref: blocks-no-section.v1.yaml
+  - $ref: ../blocks/section.v1.yaml

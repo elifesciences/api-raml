@@ -13,14 +13,7 @@ properties:
         description: Content
         type: array
         items:
-            oneOf:
-              - $ref: blockquote.v1.yaml
-              - $ref: image.v1.yaml
-              - $ref: list.v1.yaml
-              - $ref: paragraph.v1.yaml
-              - $ref: section.v1.yaml
-              - $ref: table.v1.yaml
-              - $ref: youtube.v1.yaml
+            $ref: ../misc/blocks-all.v1.yaml
         minItems: 1
 required:
   - type
