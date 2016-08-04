@@ -152,7 +152,7 @@
                             ]
                         },
                         "doi": {
-                            "$ref": "#/allOf/2/properties/decisionLetter/properties/doi"
+                            "$ref": "#/allOf/2/properties/digest/properties/doi"
                         },
                         "title": {
                             "type": "string",
@@ -202,12 +202,12 @@
                             "type": "object",
                             "properties": {
                                 "doi": {
-                                    "$ref": "#/allOf/2/properties/decisionLetter/properties/doi"
+                                    "$ref": "#/allOf/2/properties/digest/properties/doi"
                                 },
                                 "content": {
                                     "type": "array",
                                     "items": {
-                                        "$ref": "#/allOf/2/properties/decisionLetter/properties/description/items"
+                                        "$ref": "#/allOf/2/properties/digest/properties/content/items"
                                     },
                                     "minItems": 1
                                 }
@@ -285,31 +285,12 @@
                     "type": "object",
                     "properties": {
                         "doi": {
-                            "$ref": "#/allOf/2/properties/decisionLetter/properties/doi"
-                        },
-                        "content": {
-                            "type": "array",
-                            "items": {
-                                "$ref": "#/allOf/2/properties/decisionLetter/properties/description/items"
-                            },
-                            "minItems": 1
-                        }
-                    },
-                    "required": [
-                        "doi",
-                        "content"
-                    ]
-                },
-                "decisionLetter": {
-                    "type": "object",
-                    "properties": {
-                        "doi": {
                             "$schema": "http://json-schema.org/draft-04/schema#",
                             "title": "DOI",
                             "type": "string",
                             "pattern": "^10[.][0-9]{4,}[^\\s\"/<>]*/[^\\s\"]+$"
                         },
-                        "description": {
+                        "content": {
                             "type": "array",
                             "items": {
                                 "$schema": "http://json-schema.org/draft-04/schema#",
@@ -331,6 +312,59 @@
                                     "type",
                                     "text"
                                 ]
+                            },
+                            "minItems": 1
+                        }
+                    },
+                    "required": [
+                        "doi",
+                        "content"
+                    ]
+                },
+                "body": {
+                    "type": "array",
+                    "items": {
+                        "$schema": "http://json-schema.org/draft-04/schema#",
+                        "title": "Section",
+                        "type": "object",
+                        "properties": {
+                            "type": {
+                                "type": "string",
+                                "enum": [
+                                    "section"
+                                ]
+                            },
+                            "title": {
+                                "title": "Text",
+                                "type": "string"
+                            },
+                            "content": {
+                                "description": "Content",
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/allOf/2/properties/decisionLetter/properties/content/items"
+                                },
+                                "minItems": 1
+                            }
+                        },
+                        "required": [
+                            "type",
+                            "title",
+                            "content"
+                        ]
+                    },
+                    "minItems": 1
+                },
+                "decisionLetter": {
+                    "type": "object",
+                    "properties": {
+                        "doi": {
+                            "$ref": "#/allOf/2/properties/digest/properties/doi"
+                        },
+                        "description": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/allOf/2/properties/digest/properties/content/items"
                             },
                             "minItems": 1
                         },
@@ -428,7 +462,7 @@
                                                                             "$ref": "#/allOf/2/properties/decisionLetter/properties/content/items/oneOf/0/oneOf/0/oneOf/2"
                                                                         },
                                                                         {
-                                                                            "$ref": "#/allOf/2/properties/decisionLetter/properties/description/items"
+                                                                            "$ref": "#/allOf/2/properties/digest/properties/content/items"
                                                                         }
                                                                     ]
                                                                 },
@@ -441,7 +475,7 @@
                                                         ]
                                                     },
                                                     {
-                                                        "$ref": "#/allOf/2/properties/decisionLetter/properties/description/items"
+                                                        "$ref": "#/allOf/2/properties/digest/properties/content/items"
                                                     },
                                                     {
                                                         "$schema": "http://json-schema.org/draft-04/schema#",
@@ -552,45 +586,11 @@
                         "content"
                     ]
                 },
-                "body": {
-                    "type": "array",
-                    "items": {
-                        "$schema": "http://json-schema.org/draft-04/schema#",
-                        "title": "Section",
-                        "type": "object",
-                        "properties": {
-                            "type": {
-                                "type": "string",
-                                "enum": [
-                                    "section"
-                                ]
-                            },
-                            "title": {
-                                "title": "Text",
-                                "type": "string"
-                            },
-                            "content": {
-                                "description": "Content",
-                                "type": "array",
-                                "items": {
-                                    "$ref": "#/allOf/2/properties/decisionLetter/properties/content/items"
-                                },
-                                "minItems": 1
-                            }
-                        },
-                        "required": [
-                            "type",
-                            "title",
-                            "content"
-                        ]
-                    },
-                    "minItems": 1
-                },
                 "authorResponse": {
                     "type": "object",
                     "properties": {
                         "doi": {
-                            "$ref": "#/allOf/2/properties/decisionLetter/properties/doi"
+                            "$ref": "#/allOf/2/properties/digest/properties/doi"
                         },
                         "content": {
                             "type": "array",

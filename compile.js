@@ -27,9 +27,16 @@ recursive('./src/model', function (err, files) {
                 var jsonFile = './dist/model/' + file.slice(10, (file.length - 4)) + 'json';
                 var json = JSON.stringify(schema, null, 4) + '\n';
                 fs.writeFileSync(jsonFile, json);
+                return jsonFile;
             }).catch(function (error) {
                 console.error(error);
                 process.exit(1);
+            }).then(function (jsonFile) {
+                var parser = new refParser();
+                return parser.bundle(jsonFile).then(function (schema) {
+                    var json = JSON.stringify(schema, null, 4) + '\n';
+                    fs.writeFileSync(jsonFile, json);
+                })
             }));
         }(file))
     }

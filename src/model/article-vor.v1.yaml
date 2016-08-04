@@ -23,6 +23,11 @@ allOf:
             required:
               - doi
               - content
+        body:
+            type: array
+            items:
+                $ref: ../blocks/section.v1.yaml
+            minItems: 1
         decisionLetter:
             type: object
             properties:
@@ -42,11 +47,6 @@ allOf:
               - doi
               - description
               - content
-        body:
-            type: array
-            items:
-                $ref: ../blocks/section.v1.yaml
-            minItems: 1
         authorResponse:
             type: object
             properties:
