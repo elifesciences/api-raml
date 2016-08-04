@@ -15,6 +15,26 @@
                 "oneOf": [
                     {
                         "$schema": "http://json-schema.org/draft-04/schema#",
+                        "title": "Article PoA snippet",
+                        "type": "object",
+                        "allOf": [
+                            {
+                                "$ref": "#/properties/items/items/oneOf/1/allOf/0"
+                            },
+                            {
+                                "properties": {
+                                    "status": {
+                                        "type": "string",
+                                        "enum": [
+                                            "poa"
+                                        ]
+                                    }
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "$schema": "http://json-schema.org/draft-04/schema#",
                         "title": "Article VoR snippet",
                         "type": "object",
                         "allOf": [
@@ -102,7 +122,7 @@
                                         "type": "object",
                                         "properties": {
                                             "doi": {
-                                                "$ref": "#/properties/items/items/oneOf/0/allOf/0/properties/doi"
+                                                "$ref": "#/properties/items/items/oneOf/1/allOf/0/properties/doi"
                                             },
                                             "content": {
                                                 "type": "array",
@@ -247,26 +267,6 @@
                                         "required": [
                                             "alt",
                                             "sizes"
-                                        ]
-                                    }
-                                }
-                            }
-                        ]
-                    },
-                    {
-                        "$schema": "http://json-schema.org/draft-04/schema#",
-                        "title": "Article PoA snippet",
-                        "type": "object",
-                        "allOf": [
-                            {
-                                "$ref": "#/properties/items/items/oneOf/0/allOf/0"
-                            },
-                            {
-                                "properties": {
-                                    "status": {
-                                        "type": "string",
-                                        "enum": [
-                                            "poa"
                                         ]
                                     }
                                 }
@@ -427,7 +427,7 @@
                                                         "format": "date-time"
                                                     },
                                                     "image": {
-                                                        "$ref": "#/properties/items/items/oneOf/0/allOf/1/properties/image"
+                                                        "$ref": "#/properties/items/items/oneOf/1/allOf/1/properties/image"
                                                     }
                                                 },
                                                 "required": [
@@ -475,7 +475,7 @@
                                                         "format": "date-time"
                                                     },
                                                     "image": {
-                                                        "$ref": "#/properties/items/items/oneOf/0/allOf/1/properties/image"
+                                                        "$ref": "#/properties/items/items/oneOf/1/allOf/1/properties/image"
                                                     },
                                                     "mp3": {
                                                         "description": "URI of the MP3",
