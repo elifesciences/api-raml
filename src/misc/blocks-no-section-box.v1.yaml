@@ -4,4 +4,5 @@ oneOf:
   - $ref: ../blocks/list.v1.yaml
   - $ref: ../blocks/paragraph.v1.yaml
   - $ref: ../blocks/table.v1.yaml
+  - $ref: ../blocks/video.v1.yaml
   - $ref: ../blocks/youtube.v1.yaml
