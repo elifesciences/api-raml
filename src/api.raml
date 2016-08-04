@@ -49,7 +49,7 @@ resourceTypes:
                         <<resource>> is not found.
                     body:
                         application/problem+json:
-                            schema: !include ../dist/model/error.json
+                            schema: !include ../dist/model/error.v1.json
                             example: |
                                 {
                                     "title": "<<resource>> not found"
@@ -59,7 +59,7 @@ resourceTypes:
                         <<resource>> has been removed.
                     body:
                         application/problem+json:
-                            schema: !include ../dist/model/error.json
+                            schema: !include ../dist/model/error.v1.json
                             example: |
                                 {
                                     "title": "<<resource>> removed"
@@ -107,7 +107,7 @@ traits:
                     Note the first page will always return a valid result, even if the list is empty.
                 body:
                     application/problem+json:
-                        schema: !include ../dist/model/error.json
+                        schema: !include ../dist/model/error.v1.json
                         example: |
                             {
                                 "title": "Page not found"
