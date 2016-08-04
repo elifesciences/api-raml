@@ -32,6 +32,7 @@ recursive('./src/model', function (err, files) {
                 console.error(error);
                 process.exit(1);
             }).then(function (jsonFile) {
+                // Bundle again due to https://github.com/BigstickCarpet/json-schema-ref-parser/issues/24
                 var parser = new refParser();
                 return parser.bundle(jsonFile).then(function (schema) {
                     var json = JSON.stringify(schema, null, 4) + '\n';
