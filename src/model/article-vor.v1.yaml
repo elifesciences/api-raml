@@ -14,7 +14,7 @@ allOf:
             type: object
             properties:
                 doi:
-                    $ref: ../misc/doi.yaml
+                    $ref: ../misc/doi.v1.yaml
                 content:
                     type: array
                     items:
@@ -32,7 +32,7 @@ allOf:
             type: object
             properties:
                 doi:
-                    $ref: ../misc/doi.yaml
+                    $ref: ../misc/doi.v1.yaml
                 description:
                     type: array
                     items:
@@ -51,7 +51,7 @@ allOf:
             type: object
             properties:
                 doi:
-                    $ref: ../misc/doi.yaml
+                    $ref: ../misc/doi.v1.yaml
                 content:
                     type: array
                     items:
