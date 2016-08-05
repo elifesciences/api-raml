@@ -7,7 +7,7 @@ properties:
         enum:
           - video
     doi:
-        $ref: ../misc/doi.yaml
+        $ref: ../misc/doi.v1.yaml
     id:
         $ref: ../misc/html-id.v1.yaml
     label:
