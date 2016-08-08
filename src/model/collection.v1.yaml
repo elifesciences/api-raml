@@ -1,0 +1,17 @@
+$schema: http://json-schema.org/draft-04/schema#
+title: Collection
+type: object
+allOf:
+  - $ref: ../snippets/collection.v1.yaml
+  - properties:
+        subTitle:
+            description: Sub-title
+            type: string
+        curators:
+            description: List of curators, ordered by name
+            type: array
+            items:
+                $ref: ../snippets/person.v1.yaml
+            minItems: 1
+    required:
+      - curators

@@ -370,6 +370,63 @@ traits:
                                     displayName: Complete
                                     value: !include samples/blog-article/v1/complete.json
 
+/collections:
+    type: collection
+    description: |
+        Collections
+    get:
+        description: |
+            Get a list of collections, sorted by date.
+        is:
+          - paged: { resources: Collections }
+        responses:
+            200:
+                description: |
+                    List of collections, sorted by date.
+                body:
+                    application/vnd.elife.collection-list+json;version=1:
+                        schema: !include ../dist/model/collection-list.v1.json
+                        examples:
+                            paginated:
+                                displayName: First page
+                                description: |
+                                    List is split over two pages.
+                                value: !include samples/collection-list/v1/first-page.json
+                            empty:
+                                displayName: Empty list
+                                description: |
+                                    Demonstration of the list being empty (the first page will always return a valid result).
+                                value: !include samples/collection-list/v1/empty.json
+
+    /{id}:
+        type:
+            item:
+                resource: Collection
+        description: |
+            Individual collection.
+        uriParameters:
+            id:
+                description: |
+                    Collection ID.
+                type: string
+        get:
+            description: |
+                Get a collection.
+            responses:
+                200:
+                    description: |
+                        Collection.
+                    body:
+                        application/vnd.elife.collection+json;version=1:
+                            schema: !include ../dist/model/collection.v1.json
+                            examples:
+                                minimum:
+                                    displayName: Minimum
+                                    value: !include samples/collection/v1/minimum.json
+                                complete:
+                                    displayName: Complete
+                                    value: !include samples/collection/v1/complete.json
+
 /events:
     type: collection
     description: |

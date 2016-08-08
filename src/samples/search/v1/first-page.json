@@ -1,5 +1,5 @@
 {
-    "total": 10,
+    "total": 12,
     "items": [
         {
             "type": "research-article",
@@ -116,6 +116,37 @@
             "starts": "2016-04-22T20:00:00+00:00",
             "ends": "2016-04-22T21:00:00+00:00",
             "timezone": "America/Seattle"
+        },
+        {
+            "type": "collection",
+            "id": "1",
+            "title": "Tropical disease",
+            "updated": "2015-09-16T11:19:26+00:00",
+            "image": {
+                "alt": "",
+                "sizes": {
+                    "2:1": {
+                        "900": "https://placehold.it/900x450",
+                        "1800": "https://placehold.it/1800x900"
+                    },
+                    "16:9": {
+                        "250": "https://placehold.it/250x141",
+                        "500": "https://placehold.it/500x281"
+                    },
+                    "1:1": {
+                        "70": "https://placehold.it/70x70",
+                        "140": "https://placehold.it/140x140"
+                    }
+                }
+            },
+            "selectedCurator": {
+                "id": "pjha",
+                "type": "senior-editor",
+                "name": {
+                    "preferred": "Prabhat Jha",
+                    "index": "Jha, Prabhat"
+                }
+            }
         }
     ],
     "subjects": [
@@ -149,6 +180,7 @@
         "short-report": 0,
         "tools-resources": 0,
         "blog-article": 3,
+        "collection": 2,
         "event": 1,
         "labs-experiment": 2,
         "podcast-episode": 1

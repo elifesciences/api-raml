@@ -30,6 +30,13 @@ properties:
                                 type:
                                     type: string
                                     enum:
+                                      - collection
+                          - $ref: ../snippets/collection.v1.yaml
+                      - allOf:
+                          - properties:
+                                type:
+                                    type: string
+                                    enum:
                                       - event
                           - $ref: ../snippets/event.v1.yaml
                       - allOf:
@@ -127,6 +134,10 @@ properties:
                 description: Number of blog articles in the result set
                 type: integer
                 minimum: 0
+            collection:
+                description: Number of collections in the result set
+                type: integer
+                minimum: 0
             event:
                 description: Number of open events in the result set
                 type: integer
@@ -153,6 +164,7 @@ properties:
           - short-report
           - tools-resources
           - blog-article
+          - collection
           - event
           - labs-experiment
           - podcast-episode

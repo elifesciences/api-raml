@@ -1,0 +1,54 @@
+{
+    "id": "1",
+    "title": "Tropical disease",
+    "subTitle": "A selection of papers",
+    "impactStatement": "eLife has published papers on many tropical diseases, including malaria, Ebola, leishmaniases, Dengue and African sleeping sickness. The articles below have been selected by eLife editors to give a flavour of the breadth of research on tropical diseases published by the journal.",
+    "updated": "2015-09-16T11:19:26+00:00",
+    "image": {
+        "alt": "",
+        "sizes": {
+            "2:1": {
+                "900": "https://placehold.it/900x450",
+                "1800": "https://placehold.it/1800x900"
+            },
+            "16:9": {
+                "250": "https://placehold.it/250x141",
+                "500": "https://placehold.it/500x281"
+            },
+            "1:1": {
+                "70": "https://placehold.it/70x70",
+                "140": "https://placehold.it/140x140"
+            }
+        }
+    },
+    "subjects": [
+        "epidemiology-global-health",
+        "microbiology-infectious-disease"
+    ],
+    "selectedCurator": {
+        "id": "pjha",
+        "type": "senior-editor",
+        "name": {
+            "preferred": "Prabhat Jha",
+            "index": "Jha, Prabhat"
+        }
+    },
+    "curators": [
+        {
+            "id": "bcooper",
+            "type": "reviewing-editor",
+            "name": {
+                "preferred": "Ben Cooper",
+                "index": "Cooper, Ben"
+            }
+        },
+        {
+            "id": "pjha",
+            "type": "senior-editor",
+            "name": {
+                "preferred": "Prabhat Jha",
+                "index": "Jha, Prabhat"
+            }
+        }
+    ]
+}
