@@ -1,6 +1,6 @@
 {
     "number": 30,
-    "title": "July 2016",
+    "title": "June 2016",
     "published": "2016-07-01T08:30:15+00:00",
     "image": {
         "alt": "",
@@ -19,5 +19,24 @@
             }
         }
     },
-    "mp3": "https://nakeddiscovery.com/scripts/mp3s/audio/eLife_Podcast_16.06.mp3"
+    "mp3": "https://nakeddiscovery.com/scripts/mp3s/audio/eLife_Podcast_16.06.mp3",
+    "chapters": [
+        {
+            "number": 1,
+            "title": "Green drug factories",
+            "content": [
+                {
+                    "type": "research-article",
+                    "status": "vor",
+                    "id": "13664",
+                    "version": 1,
+                    "doi": "10.7554/eLife.13664",
+                    "title": "A new synthetic biology approach allows transfer of an entire metabolic pathway from a medicinal plant to a biomass crop",
+                    "published": "2016-06-14T07:00:15Z",
+                    "volume": 5,
+                    "elocationId": "e13664"
+                }
+            ]
+        }
+    ]
 }

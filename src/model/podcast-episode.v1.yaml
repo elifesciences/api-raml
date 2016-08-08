@@ -3,3 +3,33 @@ title: Podcast episode
 type: object
 allOf:
   - $ref: ../snippets/podcast-episode.v1.yaml
+  - properties:
+        chapters:
+            type: array
+            items:
+                type: object
+                properties:
+                    number:
+                        title: Chapter number
+                        type: integer
+                        minimum: 1
+                    title:
+                        title: Chapter title
+                        type: string
+                    impactStatement:
+                        description: Description of the chapter
+                        type: string
+                    content:
+                        type: array
+                        items:
+                            oneOf:
+                              - $ref: ../snippets/article-poa.v1.yaml
+                              - $ref: ../snippets/article-vor.v1.yaml
+                        minItems: 1
+                required:
+                  - number
+                  - title
+                  - content
+            minItems: 1
+    required:
+      - chapters
