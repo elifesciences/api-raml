@@ -29,6 +29,7 @@
         {
             "number": 1,
             "title": "Green drug factories",
+            "time": 0,
             "impactStatement": "A new way to produce a malaria drug using tobacco plants",
             "content": [
                 {
@@ -70,6 +71,7 @@
         {
             "number": 2,
             "title": "Lost generation",
+            "time": 300,
             "impactStatement": "Is science at risk of losing talented researchers to other professions?",
             "content": [
                 {
