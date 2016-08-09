@@ -19,26 +19,6 @@
                         "type": "object",
                         "allOf": [
                             {
-                                "$ref": "#/properties/items/items/oneOf/1/allOf/0"
-                            },
-                            {
-                                "properties": {
-                                    "status": {
-                                        "type": "string",
-                                        "enum": [
-                                            "poa"
-                                        ]
-                                    }
-                                }
-                            }
-                        ]
-                    },
-                    {
-                        "$schema": "http://json-schema.org/draft-04/schema#",
-                        "title": "Article VoR snippet",
-                        "type": "object",
-                        "allOf": [
-                            {
                                 "$schema": "http://json-schema.org/draft-04/schema#",
                                 "title": "Article snippet",
                                 "type": "object",
@@ -122,7 +102,7 @@
                                         "type": "object",
                                         "properties": {
                                             "doi": {
-                                                "$ref": "#/properties/items/items/oneOf/1/allOf/0/properties/doi"
+                                                "$ref": "#/properties/items/items/oneOf/0/allOf/0/properties/doi"
                                             },
                                             "content": {
                                                 "type": "array",
@@ -167,6 +147,26 @@
                                     "volume",
                                     "elocationId"
                                 ]
+                            },
+                            {
+                                "properties": {
+                                    "status": {
+                                        "type": "string",
+                                        "enum": [
+                                            "poa"
+                                        ]
+                                    }
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "$schema": "http://json-schema.org/draft-04/schema#",
+                        "title": "Article VoR snippet",
+                        "type": "object",
+                        "allOf": [
+                            {
+                                "$ref": "#/properties/items/items/oneOf/0/allOf/0"
                             },
                             {
                                 "properties": {
@@ -332,6 +332,189 @@
                                                     "id",
                                                     "title",
                                                     "published"
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "allOf": [
+                                            {
+                                                "properties": {
+                                                    "type": {
+                                                        "type": "string",
+                                                        "enum": [
+                                                            "collection"
+                                                        ]
+                                                    }
+                                                }
+                                            },
+                                            {
+                                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                                "title": "Collection snippet",
+                                                "type": "object",
+                                                "properties": {
+                                                    "id": {
+                                                        "description": "ID",
+                                                        "type": "string",
+                                                        "minLength": 1
+                                                    },
+                                                    "title": {
+                                                        "description": "Title",
+                                                        "type": "string"
+                                                    },
+                                                    "impactStatement": {
+                                                        "description": "Description of the collection",
+                                                        "type": "string"
+                                                    },
+                                                    "updated": {
+                                                        "description": "Updated date (UTC)",
+                                                        "type": "string",
+                                                        "format": "date-time"
+                                                    },
+                                                    "image": {
+                                                        "$ref": "#/properties/items/items/oneOf/1/allOf/1/properties/image"
+                                                    },
+                                                    "subjects": {
+                                                        "description": "Collection subject IDs",
+                                                        "type": "array",
+                                                        "items": {
+                                                            "type": "string",
+                                                            "minLength": 1
+                                                        }
+                                                    },
+                                                    "selectedCurator": {
+                                                        "$schema": "http://json-schema.org/draft-04/schema#",
+                                                        "title": "Person snippet",
+                                                        "type": "object",
+                                                        "allOf": [
+                                                            {
+                                                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                                                "title": "Person",
+                                                                "type": "object",
+                                                                "properties": {
+                                                                    "name": {
+                                                                        "title": "Name",
+                                                                        "type": "object",
+                                                                        "properties": {
+                                                                            "preferred": {
+                                                                                "title": "Preferred name",
+                                                                                "description": "This is generally the name that is used by the person for English-language publications.\n\nFor example:\n  - Randy Schekman\n  - K. VijayRaghavan\n  - Wenhui Li\n",
+                                                                                "type": "string",
+                                                                                "minLength": 1
+                                                                            },
+                                                                            "index": {
+                                                                                "title": "Index name",
+                                                                                "description": "This is the name that should be used for indexing people.\n\nFor example:\n  - Schekman, Randy\n  - VijayRaghavan, Krishnaswamy\n  - Wenhui Li\n"
+                                                                            }
+                                                                        },
+                                                                        "required": [
+                                                                            "preferred",
+                                                                            "index"
+                                                                        ]
+                                                                    },
+                                                                    "orcid": {
+                                                                        "title": "ORCID",
+                                                                        "type": "string",
+                                                                        "pattern": "^[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{3}[0-9X]$"
+                                                                    }
+                                                                },
+                                                                "required": [
+                                                                    "name"
+                                                                ]
+                                                            },
+                                                            {
+                                                                "properties": {
+                                                                    "id": {
+                                                                        "title": "ID",
+                                                                        "type": "string",
+                                                                        "minLength": 1
+                                                                    },
+                                                                    "type": {
+                                                                        "title": "Type",
+                                                                        "type": "string",
+                                                                        "enum": [
+                                                                            "director",
+                                                                            "executive",
+                                                                            "leadership",
+                                                                            "reviewing-editor",
+                                                                            "senior-editor"
+                                                                        ]
+                                                                    },
+                                                                    "image": {
+                                                                        "type": "object",
+                                                                        "properties": {
+                                                                            "sizes": {
+                                                                                "title": "Sizes",
+                                                                                "type": "object",
+                                                                                "properties": {
+                                                                                    "16:9": {
+                                                                                        "type": "object",
+                                                                                        "properties": {
+                                                                                            "250": {
+                                                                                                "title": "16:9 crop at 250px width",
+                                                                                                "type": "string",
+                                                                                                "format": "uri",
+                                                                                                "pattern": "^https://"
+                                                                                            },
+                                                                                            "500": {
+                                                                                                "title": "16:9 crop at 500px width",
+                                                                                                "type": "string",
+                                                                                                "format": "uri",
+                                                                                                "pattern": "^https://"
+                                                                                            }
+                                                                                        },
+                                                                                        "required": [
+                                                                                            "250",
+                                                                                            "500"
+                                                                                        ]
+                                                                                    },
+                                                                                    "1:1": {
+                                                                                        "type": "object",
+                                                                                        "properties": {
+                                                                                            "70": {
+                                                                                                "title": "1:1 crop at 70px width",
+                                                                                                "type": "string",
+                                                                                                "format": "uri",
+                                                                                                "pattern": "^https://"
+                                                                                            },
+                                                                                            "140": {
+                                                                                                "title": "1:1 crop at 140px width",
+                                                                                                "type": "string",
+                                                                                                "format": "uri",
+                                                                                                "pattern": "^https://"
+                                                                                            }
+                                                                                        },
+                                                                                        "required": [
+                                                                                            "70",
+                                                                                            "140"
+                                                                                        ]
+                                                                                    }
+                                                                                },
+                                                                                "required": [
+                                                                                    "16:9",
+                                                                                    "1:1"
+                                                                                ]
+                                                                            }
+                                                                        },
+                                                                        "required": [
+                                                                            "sizes"
+                                                                        ]
+                                                                    }
+                                                                },
+                                                                "required": [
+                                                                    "id",
+                                                                    "type"
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                },
+                                                "required": [
+                                                    "id",
+                                                    "title",
+                                                    "updated",
+                                                    "image",
+                                                    "selectedCurator"
                                                 ]
                                             }
                                         ]
@@ -610,6 +793,11 @@
                     "type": "integer",
                     "minimum": 0
                 },
+                "collection": {
+                    "description": "Number of collections in the result set",
+                    "type": "integer",
+                    "minimum": 0
+                },
                 "event": {
                     "description": "Number of open events in the result set",
                     "type": "integer",
@@ -640,6 +828,7 @@
                 "short-report",
                 "tools-resources",
                 "blog-article",
+                "collection",
                 "event",
                 "labs-experiment",
                 "podcast-episode"

@@ -1,0 +1,17 @@
+$schema: http://json-schema.org/draft-04/schema#
+title: Collection list
+type: object
+properties:
+    total:
+        title: Total number of collections
+        type: integer
+        minimum: 0
+    items:
+        title: Collections
+        type: array
+        items:
+            $ref: ../snippets/collection.v1.yaml
+        uniqueItems: true
+required:
+  - total
+  - items

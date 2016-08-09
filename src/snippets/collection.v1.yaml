@@ -1,0 +1,34 @@
+$schema: http://json-schema.org/draft-04/schema#
+title: Collection snippet
+type: object
+properties:
+    id:
+        description: ID
+        type: string
+        minLength: 1
+    title:
+        description: Title
+        type: string
+    impactStatement:
+        description: Description of the collection
+        type: string
+    updated:
+        description: Updated date (UTC)
+        type: string
+        format: date-time
+    image:
+        $ref: ../misc/image.v1.yaml
+    subjects:
+        description: Collection subject IDs
+        type: array
+        items:
+            type: string
+            minLength: 1
+    selectedCurator:
+        $ref: ../snippets/person.v1.yaml
+required:
+  - id
+  - title
+  - updated
+  - image
+  - selectedCurator
