@@ -29,6 +29,18 @@ allOf:
                             oneOf:
                               - $ref: ../snippets/article-poa.v1.yaml
                               - $ref: ../snippets/article-vor.v1.yaml
+                              - allOf:
+                                  - type: object
+                                    required:
+                                      - type
+                                  - oneOf:
+                                      - allOf:
+                                          - properties:
+                                                type:
+                                                    type: string
+                                                    enum:
+                                                      - collection
+                                          - $ref: ../snippets/collection.v1.yaml
                         minItems: 1
                 required:
                   - number
