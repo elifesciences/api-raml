@@ -251,7 +251,8 @@
                                                     },
                                                     "mathml": {
                                                         "title": "MathML",
-                                                        "type": "string"
+                                                        "type": "string",
+                                                        "pattern": "^<math>.+</math>$"
                                                     }
                                                 },
                                                 "required": [

@@ -13,6 +13,7 @@ properties:
     mathml:
         title: MathML
         type: string
+        pattern: ^<math>.+</math>$
 required:
   - type
   - mathml
