@@ -152,7 +152,7 @@
                             ]
                         },
                         "doi": {
-                            "$ref": "#/allOf/2/properties/decisionLetter/properties/doi"
+                            "$ref": "#/allOf/2/properties/authorResponse/properties/doi"
                         },
                         "title": {
                             "type": "string",
@@ -202,7 +202,7 @@
                             "type": "object",
                             "properties": {
                                 "doi": {
-                                    "$ref": "#/allOf/2/properties/decisionLetter/properties/doi"
+                                    "$ref": "#/allOf/2/properties/authorResponse/properties/doi"
                                 },
                                 "content": {
                                     "type": "array",
@@ -285,7 +285,7 @@
                     "type": "object",
                     "properties": {
                         "doi": {
-                            "$ref": "#/allOf/2/properties/decisionLetter/properties/doi"
+                            "$ref": "#/allOf/2/properties/authorResponse/properties/doi"
                         },
                         "content": {
                             "type": "array",
@@ -356,10 +356,7 @@
                     "type": "object",
                     "properties": {
                         "doi": {
-                            "$schema": "http://json-schema.org/draft-04/schema#",
-                            "title": "DOI",
-                            "type": "string",
-                            "pattern": "^10[.][0-9]{4,}[^\\s\"/<>]*/[^\\s\"]+$"
+                            "$ref": "#/allOf/2/properties/authorResponse/properties/doi"
                         },
                         "description": {
                             "type": "array",
@@ -485,6 +482,9 @@
                                                                     "mathml"
                                                                 ]
                                                             },
+                                                            "id": {
+                                                                "$ref": "#/allOf/2/properties/decisionLetter/properties/content/items/oneOf/0/oneOf/0/oneOf/5/properties/id"
+                                                            },
                                                             "label": {
                                                                 "type": "string"
                                                             },
@@ -513,10 +513,13 @@
                                                                 ]
                                                             },
                                                             "doi": {
-                                                                "$ref": "#/allOf/2/properties/decisionLetter/properties/doi"
+                                                                "$ref": "#/allOf/2/properties/authorResponse/properties/doi"
                                                             },
                                                             "id": {
-                                                                "$ref": "#/allOf/2/properties/decisionLetter/properties/content/items/oneOf/0/oneOf/0/oneOf/6/properties/id"
+                                                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                                                "title": "HTML ID",
+                                                                "type": "string",
+                                                                "pattern": "^[a-z][a-z0-9-]*$"
                                                             },
                                                             "label": {
                                                                 "title": "Label",
@@ -559,7 +562,7 @@
                                                                     "type": "object",
                                                                     "properties": {
                                                                         "doi": {
-                                                                            "$ref": "#/allOf/2/properties/decisionLetter/properties/doi"
+                                                                            "$ref": "#/allOf/2/properties/authorResponse/properties/doi"
                                                                         },
                                                                         "label": {
                                                                             "title": "Label",
@@ -636,13 +639,10 @@
                                                                 ]
                                                             },
                                                             "doi": {
-                                                                "$ref": "#/allOf/2/properties/decisionLetter/properties/doi"
+                                                                "$ref": "#/allOf/2/properties/authorResponse/properties/doi"
                                                             },
                                                             "id": {
-                                                                "$schema": "http://json-schema.org/draft-04/schema#",
-                                                                "title": "HTML ID",
-                                                                "type": "string",
-                                                                "pattern": "^[a-z][a-z0-9-]*$"
+                                                                "$ref": "#/allOf/2/properties/decisionLetter/properties/content/items/oneOf/0/oneOf/0/oneOf/5/properties/id"
                                                             },
                                                             "label": {
                                                                 "title": "Label",
@@ -821,7 +821,10 @@
                     "type": "object",
                     "properties": {
                         "doi": {
-                            "$ref": "#/allOf/2/properties/decisionLetter/properties/doi"
+                            "$schema": "http://json-schema.org/draft-04/schema#",
+                            "title": "DOI",
+                            "type": "string",
+                            "pattern": "^10[.][0-9]{4,}[^\\s\"/<>]*/[^\\s\"]+$"
                         },
                         "content": {
                             "type": "array",

@@ -243,6 +243,9 @@
                                                             "mathml"
                                                         ]
                                                     },
+                                                    "id": {
+                                                        "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/5/properties/id"
+                                                    },
                                                     "label": {
                                                         "type": "string"
                                                     },

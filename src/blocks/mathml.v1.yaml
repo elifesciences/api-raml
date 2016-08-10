@@ -6,6 +6,8 @@ properties:
         type: string
         enum:
           - mathml
+    id:
+        $ref: ../misc/html-id.v1.yaml
     label:
         type: string
     mathml:

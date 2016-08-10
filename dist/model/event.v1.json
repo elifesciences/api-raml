@@ -164,6 +164,12 @@
                                                             "mathml"
                                                         ]
                                                     },
+                                                    "id": {
+                                                        "$schema": "http://json-schema.org/draft-04/schema#",
+                                                        "title": "HTML ID",
+                                                        "type": "string",
+                                                        "pattern": "^[a-z][a-z0-9-]*$"
+                                                    },
                                                     "label": {
                                                         "type": "string"
                                                     },
@@ -213,10 +219,7 @@
                                                         "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/6/properties/doi"
                                                     },
                                                     "id": {
-                                                        "$schema": "http://json-schema.org/draft-04/schema#",
-                                                        "title": "HTML ID",
-                                                        "type": "string",
-                                                        "pattern": "^[a-z][a-z0-9-]*$"
+                                                        "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/3/properties/id"
                                                     },
                                                     "label": {
                                                         "title": "Label",
@@ -342,7 +345,7 @@
                                                         "pattern": "^10[.][0-9]{4,}[^\\s\"/<>]*/[^\\s\"]+$"
                                                     },
                                                     "id": {
-                                                        "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/5/properties/id"
+                                                        "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/3/properties/id"
                                                     },
                                                     "label": {
                                                         "title": "Label",
