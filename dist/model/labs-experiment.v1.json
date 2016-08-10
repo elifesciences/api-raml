@@ -321,9 +321,17 @@
                                                             "type": "object",
                                                             "properties": {
                                                                 "mediaType": {
-                                                                    "title": "Media type",
-                                                                    "type": "string",
-                                                                    "pattern": "\\w+/[-+.\\w]+"
+                                                                    "allOf": [
+                                                                        {
+                                                                            "$schema": "http://json-schema.org/draft-04/schema#",
+                                                                            "title": "Media type",
+                                                                            "type": "string",
+                                                                            "pattern": "^([a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+/[a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+)(; *[a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+=(([a-zA-Z0-9\\.\\-]+)|(\".+\")))*$"
+                                                                        },
+                                                                        {
+                                                                            "pattern": "^video/"
+                                                                        }
+                                                                    ]
                                                                 },
                                                                 "uri": {
                                                                     "title": "URI",

@@ -30,9 +30,9 @@ properties:
             type: object
             properties:
                 mediaType:
-                    title: Media type
-                    type: string
-                    pattern: \w+/[-+.\w]+
+                    allOf:
+                      - $ref: ../misc/media-type.v1.yaml
+                      - pattern: ^video/
                 uri:
                     title: URI
                     type: string

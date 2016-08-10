@@ -122,11 +122,15 @@
                     ],
                     "sources": [
                         {
-                            "mediaType": "video/mp4",
+                            "mediaType": "video/mp4; codecs=\"avc1.42E01E, mp4a.40.2\"",
                             "uri": "https://static-movie-usa.glencoesoftware.com/mp4/10.7554/659/0f10378e095dde7aaf579af504c4bfdc6fb86550/elife-00569-media1.mp4"
                         },
                         {
-                            "mediaType": "video/ogg",
+                            "mediaType": "video/webm; codecs=\"vp8.0, vorbis\"",
+                            "uri": "https://static-movie-usa.glencoesoftware.com/webm/10.7554/659/0f10378e095dde7aaf579af504c4bfdc6fb86550/elife-00569-media1.webm"
+                        },
+                        {
+                            "mediaType": "video/ogg; codecs=\"theora, vorbis\"",
                             "uri": "https://static-movie-usa.glencoesoftware.com/ogv/10.7554/659/0f10378e095dde7aaf579af504c4bfdc6fb86550/elife-00569-media1.ogv"
                         }
                     ],
