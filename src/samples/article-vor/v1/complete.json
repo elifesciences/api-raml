@@ -126,6 +126,12 @@
                     "text": "This comprehensive differential diagnosis is based upon cranial, dental and postcranial characters. The hypodigms used for other species are detailed in the ‘Materials and methods’. We examined original specimens for most species, except where indicated in the ‘Materials and methods’; when we relied on other sources for anatomical observations we indicate this. A summary of traits of <i>H. naledi</i> in comparison to other species is presented in Supplementary file 2. Comparative cranial and mandibular measures are presented in Table 1, and comparative dental measures are provided in Table 2."
                 },
                 {
+                    "type": "mathml",
+                    "id": "eqn7",
+                    "label": "[7]",
+                    "mathml": "<math><mrow><msub><mtext>e</mtext><mn>0</mn></msub><mo>=</mo><mfrac><mrow><msub><mtext>e</mtext><mrow><mn>0</mn><mo>,</mo><mtext>max</mtext></mrow></msub><mo>×</mo><mtext>GDP</mtext></mrow><mrow><mtext>GDP</mtext><mo>+</mo><msub><mtext>K</mtext><mrow><mtext>inc</mtext></mrow></msub></mrow></mfrac><mo>,</mo></mrow></math>"
+                },
+                {
                     "type": "video",
                     "doi": "10.7554/eLife.00569.019",
                     "id": "media1",
@@ -191,6 +197,10 @@
             {
                 "type": "paragraph",
                 "text": "We have removed both initial and final paragraphs in their entirety as suggested, and have slightly altered the remaining (second and penultimate) paragraphs to introduce and conclude the paper."
+            },
+            {
+                "type": "mathml",
+                "mathml": "<math><mrow><msub><mi>h</mi><mi>i</mi></msub><mo>=</mo><mi>f</mi><mrow><mo>(</mo><mrow><msub><mi>y</mi><mi>i</mi></msub></mrow><mo>)</mo></mrow><mo>;</mo><mo> </mo><mtext>where</mtext><mo> </mo><mi>f</mi><mo>′</mo><mo>&gt;</mo><mn>0</mn><mo> </mo><mtext>and</mtext><mo> </mo><mi>f</mi><mo>″</mo><mo>&lt;</mo><mn>0</mn><mo>,</mo></mrow></math>"
             }
         ]
     }
