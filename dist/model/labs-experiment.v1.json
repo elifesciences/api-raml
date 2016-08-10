@@ -264,15 +264,117 @@
                                                             "table"
                                                         ]
                                                     },
-                                                    "html": {
-                                                        "title": "HTML table",
-                                                        "type": "string"
+                                                    "doi": {
+                                                        "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/5/properties/doi"
+                                                    },
+                                                    "id": {
+                                                        "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/5/properties/id"
+                                                    },
+                                                    "label": {
+                                                        "title": "Label",
+                                                        "type": "string",
+                                                        "minLength": 1
+                                                    },
+                                                    "title": {
+                                                        "title": "Title",
+                                                        "type": "string",
+                                                        "minLength": 1
+                                                    },
+                                                    "caption": {
+                                                        "title": "Caption",
+                                                        "type": "array",
+                                                        "items": {
+                                                            "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/3"
+                                                        },
+                                                        "minItems": 1
+                                                    },
+                                                    "tables": {
+                                                        "type": "array",
+                                                        "items": {
+                                                            "title": "HTML table",
+                                                            "type": "string",
+                                                            "pattern": "^<table>.+</table>$"
+                                                        }
+                                                    },
+                                                    "footer": {
+                                                        "type": "array",
+                                                        "items": {
+                                                            "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/3"
+                                                        }
+                                                    },
+                                                    "sourceData": {
+                                                        "title": "Source data",
+                                                        "type": "array",
+                                                        "items": {
+                                                            "$schema": "http://json-schema.org/draft-04/schema#",
+                                                            "title": "File",
+                                                            "type": "object",
+                                                            "properties": {
+                                                                "doi": {
+                                                                    "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/5/properties/doi"
+                                                                },
+                                                                "label": {
+                                                                    "title": "Label",
+                                                                    "type": "string",
+                                                                    "minLength": 1
+                                                                },
+                                                                "title": {
+                                                                    "title": "Title",
+                                                                    "type": "string",
+                                                                    "minLength": 1
+                                                                },
+                                                                "caption": {
+                                                                    "title": "Caption",
+                                                                    "type": "array",
+                                                                    "items": {
+                                                                        "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/3"
+                                                                    },
+                                                                    "minItems": 1
+                                                                },
+                                                                "mediaType": {
+                                                                    "title": "Media type",
+                                                                    "type": "string",
+                                                                    "pattern": "\\w+/[-+.\\w]+"
+                                                                },
+                                                                "uri": {
+                                                                    "title": "Source data URI",
+                                                                    "type": "string",
+                                                                    "format": "uri"
+                                                                }
+                                                            },
+                                                            "required": [
+                                                                "mediaType",
+                                                                "uri"
+                                                            ],
+                                                            "dependencies": {
+                                                                "caption": [
+                                                                    "title"
+                                                                ],
+                                                                "label": [
+                                                                    "title"
+                                                                ],
+                                                                "title": [
+                                                                    "label"
+                                                                ]
+                                                            }
+                                                        }
                                                     }
                                                 },
                                                 "required": [
                                                     "type",
-                                                    "html"
-                                                ]
+                                                    "tables"
+                                                ],
+                                                "dependencies": {
+                                                    "caption": [
+                                                        "title"
+                                                    ],
+                                                    "label": [
+                                                        "title"
+                                                    ],
+                                                    "title": [
+                                                        "label"
+                                                    ]
+                                                }
                                             },
                                             {
                                                 "$schema": "http://json-schema.org/draft-04/schema#",

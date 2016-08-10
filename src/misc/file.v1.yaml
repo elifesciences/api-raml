@@ -1,0 +1,35 @@
+$schema: http://json-schema.org/draft-04/schema#
+title: File
+type: object
+properties:
+    doi:
+        $ref: doi.v1.yaml
+    label:
+        title: Label
+        type: string
+        minLength: 1
+    title:
+        title: Title
+        type: string
+        minLength: 1
+    caption:
+        title: Caption
+        type: array
+        items:
+            $ref: ../blocks/paragraph.v1.yaml
+        minItems: 1
+    mediaType:
+        title: Media type
+        type: string
+        pattern: \w+/[-+.\w]+
+    uri:
+        title: Source data URI
+        type: string
+        format: uri
+required:
+  - mediaType
+  - uri
+dependencies:
+    caption: [title]
+    label: [title]
+    title: [label]
