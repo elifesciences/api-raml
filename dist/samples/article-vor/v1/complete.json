@@ -107,6 +107,36 @@
                 {
                     "type": "paragraph",
                     "text": "This comprehensive differential diagnosis is based upon cranial, dental and postcranial characters. The hypodigms used for other species are detailed in the ‘Materials and methods’. We examined original specimens for most species, except where indicated in the ‘Materials and methods’; when we relied on other sources for anatomical observations we indicate this. A summary of traits of <i>H. naledi</i> in comparison to other species is presented in Supplementary file 2. Comparative cranial and mandibular measures are presented in Table 1, and comparative dental measures are provided in Table 2."
+                },
+                {
+                    "type": "video",
+                    "doi": "10.7554/eLife.00569.019",
+                    "id": "media1",
+                    "label": "Video 1",
+                    "title": "<i>B. schlosseri</i> blood circulation",
+                    "caption": [
+                        {
+                            "type": "paragraph",
+                            "text": "(<b>A)</b> Time-lapse acquisition of blood flow in the blood vessels (bv) and ampullae of a chimeric <em>B. schlosseri</em> colony, generated from a fusion between a mother and its offspring (fused). (<b>B</b>) Ampullae contract, buds develop, and a colony gets ready to replace the old generation. (<b>C</b>) Old generation zooids are getting resorbed (res. z) and replaced by the new generation (buds). (<b>D</b>) A heart beating and pumping blood in the primary bud of a different colony. (<b>E</b>) Blood flow through a common blood vessel between two allogeneic/compatible colonies, creating a natural chimera."
+                        }
+                    ],
+                    "sources": [
+                        {
+                            "mediaType": "video/mp4; codecs=\"avc1.42E01E, mp4a.40.2\"",
+                            "uri": "https://static-movie-usa.glencoesoftware.com/mp4/10.7554/659/0f10378e095dde7aaf579af504c4bfdc6fb86550/elife-00569-media1.mp4"
+                        },
+                        {
+                            "mediaType": "video/webm; codecs=\"vp8.0, vorbis\"",
+                            "uri": "https://static-movie-usa.glencoesoftware.com/webm/10.7554/659/0f10378e095dde7aaf579af504c4bfdc6fb86550/elife-00569-media1.webm"
+                        },
+                        {
+                            "mediaType": "video/ogg; codecs=\"theora, vorbis\"",
+                            "uri": "https://static-movie-usa.glencoesoftware.com/ogv/10.7554/659/0f10378e095dde7aaf579af504c4bfdc6fb86550/elife-00569-media1.ogv"
+                        }
+                    ],
+                    "image": "https://static-movie-usa.glencoesoftware.com/jpg/10.7554/659/0f10378e095dde7aaf579af504c4bfdc6fb86550/elife-00569-media1.jpg",
+                    "width": 640,
+                    "height": 480
                 }
             ]
         }
