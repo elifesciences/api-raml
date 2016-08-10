@@ -1,0 +1,20 @@
+$schema: http://json-schema.org/draft-04/schema#
+title: Quote
+type: object
+properties:
+    type:
+        type: string
+        enum:
+          - quote
+    text:
+        title: Text
+        type: array
+        items:
+            $ref: paragraph.v1.yaml
+        minItems: 1
+    cite:
+        title: Citation
+        type: string
+required:
+  - type
+  - text

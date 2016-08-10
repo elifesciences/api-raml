@@ -62,6 +62,15 @@
                     ]
                 }
             ]
+        },
+        {
+            "type": "quote",
+            "text": [
+                {
+                    "type": "paragraph",
+                    "text": "Quote Incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint est laborum."
+                }
+            ]
         }
     ],
     "subjects": [
