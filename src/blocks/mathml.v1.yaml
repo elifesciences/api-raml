@@ -1,0 +1,19 @@
+$schema: http://json-schema.org/draft-04/schema#
+title: MathML
+type: object
+properties:
+    type:
+        type: string
+        enum:
+          - mathml
+    id:
+        $ref: ../misc/html-id.v1.yaml
+    label:
+        type: string
+    mathml:
+        title: MathML
+        type: string
+        pattern: ^<math>.+</math>$
+required:
+  - type
+  - mathml
