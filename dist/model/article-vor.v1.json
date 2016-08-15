@@ -23,6 +23,17 @@
                             "type": "string",
                             "minLength": 1
                         },
+                        "abstract": {
+                            "type": "object",
+                            "properties": {
+                                "doi": {
+                                    "$ref": "#/allOf/2/properties/authorResponse/properties/doi"
+                                }
+                            },
+                            "required": [
+                                "doi"
+                            ]
+                        },
                         "image": {
                             "$schema": "http://json-schema.org/draft-04/schema#",
                             "title": "Image",
@@ -201,19 +212,15 @@
                         "abstract": {
                             "type": "object",
                             "properties": {
-                                "doi": {
-                                    "$ref": "#/allOf/2/properties/authorResponse/properties/doi"
-                                },
                                 "content": {
                                     "type": "array",
                                     "items": {
-                                        "$ref": "#/allOf/2/properties/digest/properties/content/items"
+                                        "$ref": "#/allOf/2/properties/decisionLetter/properties/description/items"
                                     },
                                     "minItems": 1
                                 }
                             },
                             "required": [
-                                "doi",
                                 "content"
                             ]
                         }
@@ -290,25 +297,7 @@
                         "content": {
                             "type": "array",
                             "items": {
-                                "$schema": "http://json-schema.org/draft-04/schema#",
-                                "title": "Paragraph",
-                                "type": "object",
-                                "properties": {
-                                    "type": {
-                                        "type": "string",
-                                        "enum": [
-                                            "paragraph"
-                                        ]
-                                    },
-                                    "text": {
-                                        "title": "Text",
-                                        "type": "string"
-                                    }
-                                },
-                                "required": [
-                                    "type",
-                                    "text"
-                                ]
+                                "$ref": "#/allOf/2/properties/decisionLetter/properties/description/items"
                             },
                             "minItems": 1
                         }
@@ -361,7 +350,25 @@
                         "description": {
                             "type": "array",
                             "items": {
-                                "$ref": "#/allOf/2/properties/digest/properties/content/items"
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "title": "Paragraph",
+                                "type": "object",
+                                "properties": {
+                                    "type": {
+                                        "type": "string",
+                                        "enum": [
+                                            "paragraph"
+                                        ]
+                                    },
+                                    "text": {
+                                        "title": "Text",
+                                        "type": "string"
+                                    }
+                                },
+                                "required": [
+                                    "type",
+                                    "text"
+                                ]
                             },
                             "minItems": 1
                         },
@@ -459,7 +466,7 @@
                                                                             "$ref": "#/allOf/2/properties/decisionLetter/properties/content/items/oneOf/0/oneOf/0/oneOf/2"
                                                                         },
                                                                         {
-                                                                            "$ref": "#/allOf/2/properties/digest/properties/content/items"
+                                                                            "$ref": "#/allOf/2/properties/decisionLetter/properties/description/items"
                                                                         }
                                                                     ]
                                                                 },
@@ -500,7 +507,7 @@
                                                         ]
                                                     },
                                                     {
-                                                        "$ref": "#/allOf/2/properties/digest/properties/content/items"
+                                                        "$ref": "#/allOf/2/properties/decisionLetter/properties/description/items"
                                                     },
                                                     {
                                                         "$schema": "http://json-schema.org/draft-04/schema#",
@@ -517,7 +524,7 @@
                                                                 "title": "Text",
                                                                 "type": "array",
                                                                 "items": {
-                                                                    "$ref": "#/allOf/2/properties/digest/properties/content/items"
+                                                                    "$ref": "#/allOf/2/properties/decisionLetter/properties/description/items"
                                                                 },
                                                                 "minItems": 1
                                                             },
@@ -565,7 +572,7 @@
                                                                 "title": "Caption",
                                                                 "type": "array",
                                                                 "items": {
-                                                                    "$ref": "#/allOf/2/properties/digest/properties/content/items"
+                                                                    "$ref": "#/allOf/2/properties/decisionLetter/properties/description/items"
                                                                 },
                                                                 "minItems": 1
                                                             },
@@ -580,7 +587,7 @@
                                                             "footer": {
                                                                 "type": "array",
                                                                 "items": {
-                                                                    "$ref": "#/allOf/2/properties/digest/properties/content/items"
+                                                                    "$ref": "#/allOf/2/properties/decisionLetter/properties/description/items"
                                                                 }
                                                             },
                                                             "sourceData": {
@@ -608,7 +615,7 @@
                                                                             "title": "Caption",
                                                                             "type": "array",
                                                                             "items": {
-                                                                                "$ref": "#/allOf/2/properties/digest/properties/content/items"
+                                                                                "$ref": "#/allOf/2/properties/decisionLetter/properties/description/items"
                                                                             },
                                                                             "minItems": 1
                                                                         },
@@ -688,7 +695,7 @@
                                                                 "title": "Caption",
                                                                 "type": "array",
                                                                 "items": {
-                                                                    "$ref": "#/allOf/2/properties/digest/properties/content/items"
+                                                                    "$ref": "#/allOf/2/properties/decisionLetter/properties/description/items"
                                                                 },
                                                                 "minItems": 1
                                                             },

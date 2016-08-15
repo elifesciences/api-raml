@@ -102,9 +102,6 @@
                                         "abstract": {
                                             "type": "object",
                                             "properties": {
-                                                "doi": {
-                                                    "$ref": "#/properties/items/items/0/oneOf/0/allOf/0/properties/doi"
-                                                },
                                                 "content": {
                                                     "type": "array",
                                                     "items": {
@@ -132,7 +129,6 @@
                                                 }
                                             },
                                             "required": [
-                                                "doi",
                                                 "content"
                                             ]
                                         }
@@ -180,6 +176,17 @@
                                         "impactStatement": {
                                             "type": "string",
                                             "minLength": 1
+                                        },
+                                        "abstract": {
+                                            "type": "object",
+                                            "properties": {
+                                                "doi": {
+                                                    "$ref": "#/properties/items/items/0/oneOf/0/allOf/0/properties/doi"
+                                                }
+                                            },
+                                            "required": [
+                                                "doi"
+                                            ]
                                         },
                                         "image": {
                                             "$schema": "http://json-schema.org/draft-04/schema#",

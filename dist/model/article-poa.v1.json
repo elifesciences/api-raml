@@ -91,9 +91,6 @@
                         "abstract": {
                             "type": "object",
                             "properties": {
-                                "doi": {
-                                    "$ref": "#/allOf/0/allOf/0/properties/doi"
-                                },
                                 "content": {
                                     "type": "array",
                                     "items": {
@@ -121,7 +118,6 @@
                                 }
                             },
                             "required": [
-                                "doi",
                                 "content"
                             ]
                         }

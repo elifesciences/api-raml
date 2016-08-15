@@ -385,9 +385,6 @@
                                             "abstract": {
                                                 "type": "object",
                                                 "properties": {
-                                                    "doi": {
-                                                        "$ref": "#/allOf/1/properties/content/items/oneOf/1/allOf/0/properties/doi"
-                                                    },
                                                     "content": {
                                                         "type": "array",
                                                         "items": {
@@ -415,7 +412,6 @@
                                                     }
                                                 },
                                                 "required": [
-                                                    "doi",
                                                     "content"
                                                 ]
                                             }
@@ -443,6 +439,17 @@
                                             "impactStatement": {
                                                 "type": "string",
                                                 "minLength": 1
+                                            },
+                                            "abstract": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "doi": {
+                                                        "$ref": "#/allOf/1/properties/content/items/oneOf/1/allOf/0/properties/doi"
+                                                    }
+                                                },
+                                                "required": [
+                                                    "doi"
+                                                ]
                                             },
                                             "image": {
                                                 "$ref": "#/allOf/0/properties/image"
