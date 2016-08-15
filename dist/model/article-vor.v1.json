@@ -23,6 +23,17 @@
                             "type": "string",
                             "minLength": 1
                         },
+                        "abstract": {
+                            "type": "object",
+                            "properties": {
+                                "doi": {
+                                    "$ref": "#/allOf/2/properties/authorResponse/properties/doi"
+                                }
+                            },
+                            "required": [
+                                "doi"
+                            ]
+                        },
                         "image": {
                             "$schema": "http://json-schema.org/draft-04/schema#",
                             "title": "Image",
@@ -201,9 +212,6 @@
                         "abstract": {
                             "type": "object",
                             "properties": {
-                                "doi": {
-                                    "$ref": "#/allOf/2/properties/authorResponse/properties/doi"
-                                },
                                 "content": {
                                     "type": "array",
                                     "items": {
@@ -213,7 +221,6 @@
                                 }
                             },
                             "required": [
-                                "doi",
                                 "content"
                             ]
                         }
