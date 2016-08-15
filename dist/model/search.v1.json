@@ -411,7 +411,7 @@
                                                                             },
                                                                             "index": {
                                                                                 "title": "Index name",
-                                                                                "description": "This is the name that should be used for indexing people.\n\nFor example:\n  - Schekman, Randy\n  - VijayRaghavan, Krishnaswamy\n  - Wenhui Li\n"
+                                                                                "description": "This is the name that should be used for indexing people.\n\nFor example:\n  - Schekman, Randy\n  - VijayRaghavan, Krishnaswamy\n  - Li, Wenhui\n"
                                                                             }
                                                                         },
                                                                         "required": [
