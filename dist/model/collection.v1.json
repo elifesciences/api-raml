@@ -124,128 +124,18 @@
                     }
                 },
                 "selectedCurator": {
-                    "$schema": "http://json-schema.org/draft-04/schema#",
-                    "title": "Person snippet",
-                    "type": "object",
                     "allOf": [
                         {
-                            "$schema": "http://json-schema.org/draft-04/schema#",
-                            "title": "Person",
-                            "type": "object",
-                            "properties": {
-                                "name": {
-                                    "title": "Name",
-                                    "type": "object",
-                                    "properties": {
-                                        "preferred": {
-                                            "title": "Preferred name",
-                                            "description": "This is generally the name that is used by the person for English-language publications.\n\nFor example:\n  - Randy Schekman\n  - K. VijayRaghavan\n  - Wenhui Li\n",
-                                            "type": "string",
-                                            "minLength": 1
-                                        },
-                                        "index": {
-                                            "title": "Index name",
-                                            "description": "This is the name that should be used for indexing people.\n\nFor example:\n  - Schekman, Randy\n  - VijayRaghavan, Krishnaswamy\n  - Wenhui Li\n"
-                                        }
-                                    },
-                                    "required": [
-                                        "preferred",
-                                        "index"
-                                    ]
-                                },
-                                "orcid": {
-                                    "title": "ORCID",
-                                    "type": "string",
-                                    "pattern": "^[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{3}[0-9X]$"
-                                }
-                            },
-                            "required": [
-                                "name"
-                            ]
+                            "$ref": "#/allOf/1/properties/curators/items"
                         },
                         {
                             "properties": {
-                                "id": {
-                                    "title": "ID",
-                                    "type": "string",
-                                    "minLength": 1
-                                },
-                                "type": {
-                                    "title": "Type",
-                                    "type": "string",
-                                    "enum": [
-                                        "director",
-                                        "executive",
-                                        "leadership",
-                                        "reviewing-editor",
-                                        "senior-editor"
-                                    ]
-                                },
-                                "image": {
-                                    "type": "object",
-                                    "properties": {
-                                        "sizes": {
-                                            "title": "Sizes",
-                                            "type": "object",
-                                            "properties": {
-                                                "16:9": {
-                                                    "type": "object",
-                                                    "properties": {
-                                                        "250": {
-                                                            "title": "16:9 crop at 250px width",
-                                                            "type": "string",
-                                                            "format": "uri",
-                                                            "pattern": "^https://"
-                                                        },
-                                                        "500": {
-                                                            "title": "16:9 crop at 500px width",
-                                                            "type": "string",
-                                                            "format": "uri",
-                                                            "pattern": "^https://"
-                                                        }
-                                                    },
-                                                    "required": [
-                                                        "250",
-                                                        "500"
-                                                    ]
-                                                },
-                                                "1:1": {
-                                                    "type": "object",
-                                                    "properties": {
-                                                        "70": {
-                                                            "title": "1:1 crop at 70px width",
-                                                            "type": "string",
-                                                            "format": "uri",
-                                                            "pattern": "^https://"
-                                                        },
-                                                        "140": {
-                                                            "title": "1:1 crop at 140px width",
-                                                            "type": "string",
-                                                            "format": "uri",
-                                                            "pattern": "^https://"
-                                                        }
-                                                    },
-                                                    "required": [
-                                                        "70",
-                                                        "140"
-                                                    ]
-                                                }
-                                            },
-                                            "required": [
-                                                "16:9",
-                                                "1:1"
-                                            ]
-                                        }
-                                    },
-                                    "required": [
-                                        "sizes"
-                                    ]
+                                "etAl": {
+                                    "description": "If there are more curators.",
+                                    "type": "boolean",
+                                    "default": false
                                 }
-                            },
-                            "required": [
-                                "id",
-                                "type"
-                            ]
+                            }
                         }
                     ]
                 }
@@ -268,7 +158,130 @@
                     "description": "List of curators, ordered by name",
                     "type": "array",
                     "items": {
-                        "$ref": "#/allOf/0/properties/selectedCurator"
+                        "$schema": "http://json-schema.org/draft-04/schema#",
+                        "title": "Person snippet",
+                        "type": "object",
+                        "allOf": [
+                            {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "title": "Person",
+                                "type": "object",
+                                "properties": {
+                                    "name": {
+                                        "title": "Name",
+                                        "type": "object",
+                                        "properties": {
+                                            "preferred": {
+                                                "title": "Preferred name",
+                                                "description": "This is generally the name that is used by the person for English-language publications.\n\nFor example:\n  - Randy Schekman\n  - K. VijayRaghavan\n  - Wenhui Li\n",
+                                                "type": "string",
+                                                "minLength": 1
+                                            },
+                                            "index": {
+                                                "title": "Index name",
+                                                "description": "This is the name that should be used for indexing people.\n\nFor example:\n  - Schekman, Randy\n  - VijayRaghavan, Krishnaswamy\n  - Wenhui Li\n"
+                                            }
+                                        },
+                                        "required": [
+                                            "preferred",
+                                            "index"
+                                        ]
+                                    },
+                                    "orcid": {
+                                        "title": "ORCID",
+                                        "type": "string",
+                                        "pattern": "^[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{3}[0-9X]$"
+                                    }
+                                },
+                                "required": [
+                                    "name"
+                                ]
+                            },
+                            {
+                                "properties": {
+                                    "id": {
+                                        "title": "ID",
+                                        "type": "string",
+                                        "minLength": 1
+                                    },
+                                    "type": {
+                                        "title": "Type",
+                                        "type": "string",
+                                        "enum": [
+                                            "director",
+                                            "executive",
+                                            "leadership",
+                                            "reviewing-editor",
+                                            "senior-editor"
+                                        ]
+                                    },
+                                    "image": {
+                                        "type": "object",
+                                        "properties": {
+                                            "sizes": {
+                                                "title": "Sizes",
+                                                "type": "object",
+                                                "properties": {
+                                                    "16:9": {
+                                                        "type": "object",
+                                                        "properties": {
+                                                            "250": {
+                                                                "title": "16:9 crop at 250px width",
+                                                                "type": "string",
+                                                                "format": "uri",
+                                                                "pattern": "^https://"
+                                                            },
+                                                            "500": {
+                                                                "title": "16:9 crop at 500px width",
+                                                                "type": "string",
+                                                                "format": "uri",
+                                                                "pattern": "^https://"
+                                                            }
+                                                        },
+                                                        "required": [
+                                                            "250",
+                                                            "500"
+                                                        ]
+                                                    },
+                                                    "1:1": {
+                                                        "type": "object",
+                                                        "properties": {
+                                                            "70": {
+                                                                "title": "1:1 crop at 70px width",
+                                                                "type": "string",
+                                                                "format": "uri",
+                                                                "pattern": "^https://"
+                                                            },
+                                                            "140": {
+                                                                "title": "1:1 crop at 140px width",
+                                                                "type": "string",
+                                                                "format": "uri",
+                                                                "pattern": "^https://"
+                                                            }
+                                                        },
+                                                        "required": [
+                                                            "70",
+                                                            "140"
+                                                        ]
+                                                    }
+                                                },
+                                                "required": [
+                                                    "16:9",
+                                                    "1:1"
+                                                ]
+                                            }
+                                        },
+                                        "required": [
+                                            "sizes"
+                                        ]
+                                    }
+                                },
+                                "required": [
+                                    "id",
+                                    "type"
+                                ]
+                            }
+                        ]
                     },
                     "minItems": 1
                 },
