@@ -25,7 +25,13 @@ properties:
             type: string
             minLength: 1
     selectedCurator:
-        $ref: ../snippets/person.v1.yaml
+        allOf:
+          - $ref: ../snippets/person.v1.yaml
+          - properties:
+                etAl:
+                    description: If there are more curators.
+                    type: boolean
+                    default: false
 required:
   - id
   - title
