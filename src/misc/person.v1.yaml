@@ -14,7 +14,7 @@ properties:
                     For example:
                       - Randy Schekman
                       - K. VijayRaghavan
-                      - Wenhui Li
+                      - Li Wenhui
                 type: string
                 minLength: 1
             index:
@@ -25,7 +25,7 @@ properties:
                     For example:
                       - Schekman, Randy
                       - VijayRaghavan, Krishnaswamy
-                      - Wenhui Li
+                      - Li Wenhui
         required:
           - preferred
           - index
