@@ -496,6 +496,63 @@ traits:
                                     displayName: Complete
                                     value: !include samples/event/v1/complete.json
 
+/interviews:
+    type: collection
+    description: |
+        Interviews
+    get:
+        description: |
+            Get a list of interviews, sorted by publication date.
+        is:
+          - paged: { resources: Interviews }
+        responses:
+            200:
+                description: |
+                    List of interviews, sorted by publication date.
+                body:
+                    application/vnd.elife.interview-list+json;version=1:
+                        schema: !include model/interview-list.v1.json
+                        examples:
+                            paginated:
+                                displayName: First page
+                                description: |
+                                    List is split over two pages.
+                                value: !include samples/interview-list/v1/first-page.json
+                            empty:
+                                displayName: Empty list
+                                description: |
+                                    Demonstration of the list being empty (the first page will always return a valid result).
+                                value: !include samples/interview-list/v1/empty.json
+
+    /{id}:
+        type:
+            item:
+                resource: Interview
+        description: |
+            Individual interview.
+        uriParameters:
+            id:
+                description: |
+                    Interview ID.
+                type: string
+        get:
+            description: |
+                Get an interview.
+            responses:
+                200:
+                    description: |
+                        Interview.
+                    body:
+                        application/vnd.elife.interview+json;version=1:
+                            schema: !include model/interview.v1.json
+                            examples:
+                                minimum:
+                                    displayName: Minimum
+                                    value: !include samples/interview/v1/minimum.json
+                                complete:
+                                    displayName: Complete
+                                    value: !include samples/interview/v1/complete.json
+
 /labs-experiments:
     type: collection
     description: |
@@ -754,6 +811,7 @@ traits:
                   - tools-resources
                   - blog-article
                   - event
+                  - interview
                   - labs-experiment
                   - podcast-episode
                 required: false

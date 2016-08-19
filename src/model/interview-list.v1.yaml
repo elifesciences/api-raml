@@ -1,0 +1,17 @@
+$schema: http://json-schema.org/draft-04/schema#
+title: Interview list
+type: object
+properties:
+    total:
+        title: Total number of interviews
+        type: integer
+        minimum: 0
+    items:
+        title: Interviews
+        type: array
+        items:
+            $ref: ../snippets/interview.v1.yaml
+        uniqueItems: true
+required:
+  - total
+  - items

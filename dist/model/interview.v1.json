@@ -1,11 +1,11 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
-    "title": "Blog article",
+    "title": "Interview",
     "type": "object",
     "allOf": [
         {
             "$schema": "http://json-schema.org/draft-04/schema#",
-            "title": "Blog article snippet",
+            "title": "Interview snippet",
             "type": "object",
             "properties": {
                 "id": {
@@ -13,37 +13,90 @@
                     "type": "string",
                     "minLength": 1
                 },
+                "interviewee": {
+                    "$schema": "http://json-schema.org/draft-04/schema#",
+                    "title": "Person",
+                    "type": "object",
+                    "properties": {
+                        "name": {
+                            "title": "Name",
+                            "type": "object",
+                            "properties": {
+                                "preferred": {
+                                    "title": "Preferred name",
+                                    "description": "This is generally the name that is used by the person for English-language publications.\n\nFor example:\n  - Randy Schekman\n  - K. VijayRaghavan\n  - Li Wenhui\n",
+                                    "type": "string",
+                                    "minLength": 1
+                                },
+                                "index": {
+                                    "title": "Index name",
+                                    "description": "This is the name that should be used for indexing people.\n\nFor example:\n  - Schekman, Randy\n  - VijayRaghavan, Krishnaswamy\n  - Li Wenhui\n"
+                                }
+                            },
+                            "required": [
+                                "preferred",
+                                "index"
+                            ]
+                        },
+                        "orcid": {
+                            "title": "ORCID",
+                            "type": "string",
+                            "pattern": "^[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{3}[0-9X]$"
+                        }
+                    },
+                    "required": [
+                        "name"
+                    ]
+                },
                 "title": {
-                    "description": "Title",
-                    "type": "string"
+                    "title": "Title of the interview",
+                    "type": "string",
+                    "minLength": 1
                 },
                 "impactStatement": {
-                    "description": "Description of the article",
-                    "type": "string"
+                    "title": "Description of the interview",
+                    "type": "string",
+                    "minLength": 1
                 },
                 "published": {
-                    "description": "Publication date (UTC)",
+                    "title": "Publication date (UTC)",
                     "type": "string",
                     "format": "date-time"
-                },
-                "subjects": {
-                    "description": "Article subject IDs",
-                    "type": "array",
-                    "items": {
-                        "type": "string",
-                        "minLength": 1
-                    },
-                    "uniqueItems": true
                 }
             },
             "required": [
                 "id",
+                "interviewee",
                 "title",
                 "published"
             ]
         },
         {
             "properties": {
+                "interviewee": {
+                    "properties": {
+                        "cv": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "date": {
+                                        "type": "string",
+                                        "minLength": 1
+                                    },
+                                    "text": {
+                                        "type": "string",
+                                        "minLength": 1
+                                    }
+                                },
+                                "required": [
+                                    "date",
+                                    "text"
+                                ]
+                            }
+                        }
+                    }
+                },
                 "content": {
                     "description": "Content",
                     "type": "array",
@@ -163,7 +216,10 @@
                                                         ]
                                                     },
                                                     "id": {
-                                                        "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/7/properties/id"
+                                                        "$schema": "http://json-schema.org/draft-04/schema#",
+                                                        "title": "HTML ID",
+                                                        "type": "string",
+                                                        "pattern": "^[a-z][a-z0-9-]*$"
                                                     },
                                                     "label": {
                                                         "type": "string"
@@ -272,13 +328,13 @@
                                                         ]
                                                     },
                                                     "doi": {
-                                                        "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/8/properties/doi"
+                                                        "$schema": "http://json-schema.org/draft-04/schema#",
+                                                        "title": "DOI",
+                                                        "type": "string",
+                                                        "pattern": "^10[.][0-9]{4,}[^\\s\"/<>]*/[^\\s\"]+$"
                                                     },
                                                     "id": {
-                                                        "$schema": "http://json-schema.org/draft-04/schema#",
-                                                        "title": "HTML ID",
-                                                        "type": "string",
-                                                        "pattern": "^[a-z][a-z0-9-]*$"
+                                                        "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/3/properties/id"
                                                     },
                                                     "label": {
                                                         "title": "Label",
@@ -321,7 +377,7 @@
                                                             "type": "object",
                                                             "properties": {
                                                                 "doi": {
-                                                                    "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/8/properties/doi"
+                                                                    "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/7/properties/doi"
                                                                 },
                                                                 "label": {
                                                                     "title": "Label",
@@ -398,13 +454,10 @@
                                                         ]
                                                     },
                                                     "doi": {
-                                                        "$schema": "http://json-schema.org/draft-04/schema#",
-                                                        "title": "DOI",
-                                                        "type": "string",
-                                                        "pattern": "^10[.][0-9]{4,}[^\\s\"/<>]*/[^\\s\"]+$"
+                                                        "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/7/properties/doi"
                                                     },
                                                     "id": {
-                                                        "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/7/properties/id"
+                                                        "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/3/properties/id"
                                                     },
                                                     "label": {
                                                         "title": "Label",

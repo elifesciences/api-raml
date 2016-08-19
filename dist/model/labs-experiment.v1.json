@@ -283,6 +283,37 @@
                                             },
                                             {
                                                 "$schema": "http://json-schema.org/draft-04/schema#",
+                                                "title": "Question",
+                                                "type": "object",
+                                                "properties": {
+                                                    "type": {
+                                                        "type": "string",
+                                                        "enum": [
+                                                            "question"
+                                                        ]
+                                                    },
+                                                    "question": {
+                                                        "title": "Question",
+                                                        "type": "string",
+                                                        "minLength": 1
+                                                    },
+                                                    "answer": {
+                                                        "title": "Answer",
+                                                        "type": "array",
+                                                        "items": {
+                                                            "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/4"
+                                                        },
+                                                        "minItems": 1
+                                                    }
+                                                },
+                                                "required": [
+                                                    "type",
+                                                    "question",
+                                                    "answer"
+                                                ]
+                                            },
+                                            {
+                                                "$schema": "http://json-schema.org/draft-04/schema#",
                                                 "title": "Quote",
                                                 "type": "object",
                                                 "properties": {
@@ -328,7 +359,10 @@
                                                         "pattern": "^10[.][0-9]{4,}[^\\s\"/<>]*/[^\\s\"]+$"
                                                     },
                                                     "id": {
-                                                        "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/7/properties/id"
+                                                        "$schema": "http://json-schema.org/draft-04/schema#",
+                                                        "title": "HTML ID",
+                                                        "type": "string",
+                                                        "pattern": "^[a-z][a-z0-9-]*$"
                                                     },
                                                     "label": {
                                                         "title": "Label",
@@ -371,7 +405,7 @@
                                                             "type": "object",
                                                             "properties": {
                                                                 "doi": {
-                                                                    "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/6/properties/doi"
+                                                                    "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/7/properties/doi"
                                                                 },
                                                                 "label": {
                                                                     "title": "Label",
@@ -448,13 +482,10 @@
                                                         ]
                                                     },
                                                     "doi": {
-                                                        "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/6/properties/doi"
+                                                        "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/7/properties/doi"
                                                     },
                                                     "id": {
-                                                        "$schema": "http://json-schema.org/draft-04/schema#",
-                                                        "title": "HTML ID",
-                                                        "type": "string",
-                                                        "pattern": "^[a-z][a-z0-9-]*$"
+                                                        "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/7/properties/id"
                                                     },
                                                     "label": {
                                                         "title": "Label",

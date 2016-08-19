@@ -142,6 +142,19 @@
                 },
                 "etAl": true
             }
+        },
+        {
+            "type": "interview",
+            "id": "1",
+            "interviewee": {
+                "name": {
+                    "preferred": "Ramanath Hegde",
+                    "index": "Hegde, Ramanath"
+                }
+            },
+            "title": "Controlling traffic",
+            "impactStatement": "Ramanath Hegde is a Postdoctoral Fellow at the Institute of Protein Biochemistry in Naples, Italy, where he investigates ways of preventing cells from destroying mutant proteins.",
+            "published": "2016-01-29T16:22:28+00:00"
         }
     ],
     "subjects": [
@@ -177,6 +190,7 @@
         "blog-article": 3,
         "collection": 2,
         "event": 1,
+        "interview": 2,
         "labs-experiment": 2,
         "podcast-episode": 1
     }
