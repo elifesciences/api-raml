@@ -3,6 +3,11 @@
     "title": "Medium article list",
     "type": "object",
     "properties": {
+        "total": {
+            "title": "Total number of Medium articles",
+            "type": "integer",
+            "minimum": 0
+        },
         "items": {
             "title": "Medium articles",
             "type": "array",
@@ -127,6 +132,7 @@
         }
     },
     "required": [
+        "total",
         "items"
     ]
 }
