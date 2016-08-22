@@ -533,6 +533,56 @@
                                                         ]
                                                     }
                                                 ]
+                                            },
+                                            {
+                                                "allOf": [
+                                                    {
+                                                        "properties": {
+                                                            "type": {
+                                                                "type": "string",
+                                                                "enum": [
+                                                                    "interview"
+                                                                ]
+                                                            }
+                                                        }
+                                                    },
+                                                    {
+                                                        "$schema": "http://json-schema.org/draft-04/schema#",
+                                                        "title": "Interview snippet",
+                                                        "type": "object",
+                                                        "properties": {
+                                                            "id": {
+                                                                "description": "ID",
+                                                                "type": "string",
+                                                                "minLength": 1
+                                                            },
+                                                            "interviewee": {
+                                                                "$ref": "#/allOf/1/properties/curators/items/allOf/0"
+                                                            },
+                                                            "title": {
+                                                                "title": "Title of the interview",
+                                                                "type": "string",
+                                                                "minLength": 1
+                                                            },
+                                                            "impactStatement": {
+                                                                "title": "Description of the interview",
+                                                                "type": "string",
+                                                                "minLength": 1
+                                                            },
+                                                            "published": {
+                                                                "title": "Publication date (UTC)",
+                                                                "type": "string",
+                                                                "format": "date-time"
+                                                            }
+                                                        },
+                                                        "required": [
+                                                            "id",
+                                                            "interviewee",
+                                                            "title",
+                                                            "published"
+                                                        ]
+                                                    }
+                                                ]
                                             }
                                         ]
                                     }

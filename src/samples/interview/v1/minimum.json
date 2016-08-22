@@ -1,0 +1,23 @@
+{
+    "id": "2",
+    "interviewee": {
+        "name": {
+            "preferred": "Alicia Rosello",
+            "index": "Rosello, Alicia"
+        }
+    },
+    "title": "Infection, statistics and public health",
+    "published": "2015-11-03T11:00:53+00:00",
+    "content": [
+        {
+            "type": "question",
+            "question": "What attracted you to studying epidemiology?",
+            "answer": [
+                {
+                    "type": "paragraph",
+                    "text": "During a placement year in my undergraduate degree I worked in multiple sclerosis research, obtaining patient blood samples at outpatient clinics and analysing their immune cells in the laboratory. The time I spent at the hospital and with medical researchers made me realise that I wanted to work in human biology, so I decided to study the virulence of <i>Staphylococcus aureus</i> during my final year undergraduate project. I found learning about infection fascinating but working in a laboratory was a bit lonely. I then studied a Masters in Public Health, which introduced me to many aspects of public health, including epidemiology. I was particularly interested in using statistical and mathematical techniques to help answer public health questions relating to infectious diseases and I chose to pursue this interest in my PhD."
+                }
+            ]
+        }
+    ]
+}

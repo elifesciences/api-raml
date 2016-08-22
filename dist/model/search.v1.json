@@ -19,6 +19,26 @@
                         "type": "object",
                         "allOf": [
                             {
+                                "$ref": "#/properties/items/items/oneOf/1/allOf/0"
+                            },
+                            {
+                                "properties": {
+                                    "status": {
+                                        "type": "string",
+                                        "enum": [
+                                            "poa"
+                                        ]
+                                    }
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "$schema": "http://json-schema.org/draft-04/schema#",
+                        "title": "Article VoR snippet",
+                        "type": "object",
+                        "allOf": [
+                            {
                                 "$schema": "http://json-schema.org/draft-04/schema#",
                                 "title": "Article snippet",
                                 "type": "object",
@@ -149,26 +169,6 @@
                                     "status": {
                                         "type": "string",
                                         "enum": [
-                                            "poa"
-                                        ]
-                                    }
-                                }
-                            }
-                        ]
-                    },
-                    {
-                        "$schema": "http://json-schema.org/draft-04/schema#",
-                        "title": "Article VoR snippet",
-                        "type": "object",
-                        "allOf": [
-                            {
-                                "$ref": "#/properties/items/items/oneOf/0/allOf/0"
-                            },
-                            {
-                                "properties": {
-                                    "status": {
-                                        "type": "string",
-                                        "enum": [
                                             "vor"
                                         ]
                                     },
@@ -180,7 +180,7 @@
                                         "type": "object",
                                         "properties": {
                                             "doi": {
-                                                "$ref": "#/properties/items/items/oneOf/0/allOf/0/properties/doi"
+                                                "$ref": "#/properties/items/items/oneOf/1/allOf/0/properties/doi"
                                             }
                                         },
                                         "required": [
@@ -397,39 +397,7 @@
                                                                 "type": "object",
                                                                 "allOf": [
                                                                     {
-                                                                        "$schema": "http://json-schema.org/draft-04/schema#",
-                                                                        "title": "Person",
-                                                                        "type": "object",
-                                                                        "properties": {
-                                                                            "name": {
-                                                                                "title": "Name",
-                                                                                "type": "object",
-                                                                                "properties": {
-                                                                                    "preferred": {
-                                                                                        "title": "Preferred name",
-                                                                                        "description": "This is generally the name that is used by the person for English-language publications.\n\nFor example:\n  - Randy Schekman\n  - K. VijayRaghavan\n  - Li Wenhui\n",
-                                                                                        "type": "string",
-                                                                                        "minLength": 1
-                                                                                    },
-                                                                                    "index": {
-                                                                                        "title": "Index name",
-                                                                                        "description": "This is the name that should be used for indexing people.\n\nFor example:\n  - Schekman, Randy\n  - VijayRaghavan, Krishnaswamy\n  - Li Wenhui\n"
-                                                                                    }
-                                                                                },
-                                                                                "required": [
-                                                                                    "preferred",
-                                                                                    "index"
-                                                                                ]
-                                                                            },
-                                                                            "orcid": {
-                                                                                "title": "ORCID",
-                                                                                "type": "string",
-                                                                                "pattern": "^[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{3}[0-9X]$"
-                                                                            }
-                                                                        },
-                                                                        "required": [
-                                                                            "name"
-                                                                        ]
+                                                                        "$ref": "#/properties/items/items/oneOf/2/allOf/1/oneOf/3/allOf/1/properties/interviewee"
                                                                     },
                                                                     {
                                                                         "properties": {
@@ -590,6 +558,88 @@
                                                     "title",
                                                     "starts",
                                                     "ends"
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "allOf": [
+                                            {
+                                                "properties": {
+                                                    "type": {
+                                                        "type": "string",
+                                                        "enum": [
+                                                            "interview"
+                                                        ]
+                                                    }
+                                                }
+                                            },
+                                            {
+                                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                                "title": "Interview snippet",
+                                                "type": "object",
+                                                "properties": {
+                                                    "id": {
+                                                        "description": "ID",
+                                                        "type": "string",
+                                                        "minLength": 1
+                                                    },
+                                                    "interviewee": {
+                                                        "$schema": "http://json-schema.org/draft-04/schema#",
+                                                        "title": "Person",
+                                                        "type": "object",
+                                                        "properties": {
+                                                            "name": {
+                                                                "title": "Name",
+                                                                "type": "object",
+                                                                "properties": {
+                                                                    "preferred": {
+                                                                        "title": "Preferred name",
+                                                                        "description": "This is generally the name that is used by the person for English-language publications.\n\nFor example:\n  - Randy Schekman\n  - K. VijayRaghavan\n  - Li Wenhui\n",
+                                                                        "type": "string",
+                                                                        "minLength": 1
+                                                                    },
+                                                                    "index": {
+                                                                        "title": "Index name",
+                                                                        "description": "This is the name that should be used for indexing people.\n\nFor example:\n  - Schekman, Randy\n  - VijayRaghavan, Krishnaswamy\n  - Li Wenhui\n"
+                                                                    }
+                                                                },
+                                                                "required": [
+                                                                    "preferred",
+                                                                    "index"
+                                                                ]
+                                                            },
+                                                            "orcid": {
+                                                                "title": "ORCID",
+                                                                "type": "string",
+                                                                "pattern": "^[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{3}[0-9X]$"
+                                                            }
+                                                        },
+                                                        "required": [
+                                                            "name"
+                                                        ]
+                                                    },
+                                                    "title": {
+                                                        "title": "Title of the interview",
+                                                        "type": "string",
+                                                        "minLength": 1
+                                                    },
+                                                    "impactStatement": {
+                                                        "title": "Description of the interview",
+                                                        "type": "string",
+                                                        "minLength": 1
+                                                    },
+                                                    "published": {
+                                                        "title": "Publication date (UTC)",
+                                                        "type": "string",
+                                                        "format": "date-time"
+                                                    }
+                                                },
+                                                "required": [
+                                                    "id",
+                                                    "interviewee",
+                                                    "title",
+                                                    "published"
                                                 ]
                                             }
                                         ]
@@ -823,6 +873,11 @@
                     "type": "integer",
                     "minimum": 0
                 },
+                "interview": {
+                    "description": "Number of interviews in the result set",
+                    "type": "integer",
+                    "minimum": 0
+                },
                 "labs-experiment": {
                     "description": "Number of Labs experiments in the result set",
                     "type": "integer",
@@ -850,6 +905,7 @@
                 "blog-article",
                 "collection",
                 "event",
+                "interview",
                 "labs-experiment",
                 "podcast-episode"
             ]

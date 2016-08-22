@@ -32,6 +32,13 @@ allOf:
                                         enum:
                                           - blog-article
                               - $ref: ../snippets/blog-article.v1.yaml
+                          - allOf:
+                              - properties:
+                                    type:
+                                        type: string
+                                        enum:
+                                          - interview
+                              - $ref: ../snippets/interview.v1.yaml
             minItems: 1
             uniqueItems: true
         relatedContent:
