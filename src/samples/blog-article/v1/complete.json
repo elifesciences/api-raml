@@ -24,7 +24,7 @@
             "type": "image",
             "alt": "",
             "uri": "https://elife-cdn.s3.amazonaws.com/images/news/eLife_Lens_contextual.png",
-            "caption": "contextual search results"
+            "title": "contextual search results"
         },
         {
             "type": "youtube",
@@ -48,7 +48,7 @@
                     "type": "image",
                     "alt": "",
                     "uri": "https://elife-cdn.s3.amazonaws.com/images/news/eLife_Lens_Search_filters.png",
-                    "caption": "filters showing frequency of search term in filter"
+                    "title": "filters showing frequency of search term in filter"
                 },
                 {
                     "type": "list",
