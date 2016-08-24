@@ -163,7 +163,7 @@
                                                         ]
                                                     },
                                                     "id": {
-                                                        "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/7/properties/id"
+                                                        "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/1/properties/id"
                                                     },
                                                     "label": {
                                                         "type": "string"
@@ -272,13 +272,10 @@
                                                         ]
                                                     },
                                                     "doi": {
-                                                        "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/8/properties/doi"
+                                                        "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/1/properties/doi"
                                                     },
                                                     "id": {
-                                                        "$schema": "http://json-schema.org/draft-04/schema#",
-                                                        "title": "HTML ID",
-                                                        "type": "string",
-                                                        "pattern": "^[a-z][a-z0-9-]*$"
+                                                        "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/1/properties/id"
                                                     },
                                                     "label": {
                                                         "title": "Label",
@@ -321,7 +318,7 @@
                                                             "type": "object",
                                                             "properties": {
                                                                 "doi": {
-                                                                    "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/8/properties/doi"
+                                                                    "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/1/properties/doi"
                                                                 },
                                                                 "label": {
                                                                     "title": "Label",
@@ -398,13 +395,10 @@
                                                         ]
                                                     },
                                                     "doi": {
-                                                        "$schema": "http://json-schema.org/draft-04/schema#",
-                                                        "title": "DOI",
-                                                        "type": "string",
-                                                        "pattern": "^10[.][0-9]{4,}[^\\s\"/<>]*/[^\\s\"]+$"
+                                                        "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/1/properties/doi"
                                                     },
                                                     "id": {
-                                                        "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/7/properties/id"
+                                                        "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/1/properties/id"
                                                     },
                                                     "label": {
                                                         "title": "Label",
@@ -534,11 +528,23 @@
                                             "type": {
                                                 "type": "string",
                                                 "enum": [
-                                                    "section"
+                                                    "box"
                                                 ]
                                             },
+                                            "doi": {
+                                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                                "title": "DOI",
+                                                "type": "string",
+                                                "pattern": "^10[.][0-9]{4,}[^\\s\"/<>]*/[^\\s\"]+$"
+                                            },
+                                            "id": {
+                                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                                "title": "HTML ID",
+                                                "type": "string",
+                                                "pattern": "^[a-z][a-z0-9-]*$"
+                                            },
                                             "label": {
-                                                "title": "Text",
+                                                "title": "Label",
                                                 "type": "string",
                                                 "minLength": 1
                                             },
@@ -558,7 +564,6 @@
                                         },
                                         "required": [
                                             "type",
-                                            "label",
                                             "title",
                                             "content"
                                         ]
