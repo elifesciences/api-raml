@@ -93,8 +93,17 @@
                     "title": "Etymology",
                     "content": [
                         {
-                            "type": "paragraph",
-                            "text": "The word <i>naledi</i> means ‘star’ in the Sotho language and refers to the Dinaledi Chamber's location within the Rising Star cave system."
+                            "type": "box",
+                            "doi": "10.7554/eLife.09560.005",
+                            "id": "box1",
+                            "label": "Box 1",
+                            "title": "First box",
+                            "content": [
+                                {
+                                    "type": "paragraph",
+                                    "text": "The word <i>naledi</i> means ‘star’ in the Sotho language and refers to the Dinaledi Chamber's location within the Rising Star cave system."
+                                }
+                            ]
                         }
                     ]
                 },
@@ -178,8 +187,14 @@
                 "text": "Thank you for submitting your work entitled “A new species of the genus <i>Homo</i> from the Dinaledi Chamber, South Africa” for peer review at <i>eLife</i>."
             },
             {
-                "type": "paragraph",
-                "text": "Your submission has been favorably evaluated by Ian Baldwin (Senior editor), two guest Reviewing editors (Johannes Krause and Nicholas Conard), and two peer reviewers. One of the two peer reviewers, Chris Stringer, has agreed to share his identity, and Johannes Krause has drafted this decision to help you prepare a revised submission."
+                "type": "box",
+                "title": "Box 2",
+                "content": [
+                    {
+                        "type": "paragraph",
+                        "text": "Your submission has been favorably evaluated by Ian Baldwin (Senior editor), two guest Reviewing editors (Johannes Krause and Nicholas Conard), and two peer reviewers. One of the two peer reviewers, Chris Stringer, has agreed to share his identity, and Johannes Krause has drafted this decision to help you prepare a revised submission."
+                    }
+                ]
             },
             {
                 "type": "paragraph",
