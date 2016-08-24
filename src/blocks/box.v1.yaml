@@ -5,9 +5,13 @@ properties:
     type:
         type: string
         enum:
-          - section
+          - box
+    doi:
+        $ref: ../misc/doi.v1.yaml
+    id:
+        $ref: ../misc/html-id.v1.yaml
     label:
-        title: Text
+        title: Label
         type: string
         minLength: 1
     title:
@@ -22,6 +26,5 @@ properties:
         minItems: 1
 required:
   - type
-  - label
   - title
   - content
