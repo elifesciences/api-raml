@@ -339,9 +339,10 @@
                                                                     "minItems": 1
                                                                 },
                                                                 "mediaType": {
+                                                                    "$schema": "http://json-schema.org/draft-04/schema#",
                                                                     "title": "Media type",
                                                                     "type": "string",
-                                                                    "pattern": "\\w+/[-+.\\w]+"
+                                                                    "pattern": "^([a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+/[a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+)(; *[a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+=(([a-zA-Z0-9\\.\\-]+)|(\".+\")))*$"
                                                                 },
                                                                 "uri": {
                                                                     "title": "Source data URI",
@@ -426,10 +427,7 @@
                                                                 "mediaType": {
                                                                     "allOf": [
                                                                         {
-                                                                            "$schema": "http://json-schema.org/draft-04/schema#",
-                                                                            "title": "Media type",
-                                                                            "type": "string",
-                                                                            "pattern": "^([a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+/[a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+)(; *[a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+=(([a-zA-Z0-9\\.\\-]+)|(\".+\")))*$"
+                                                                            "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/7/properties/sourceData/items/properties/mediaType"
                                                                         },
                                                                         {
                                                                             "pattern": "^video/"

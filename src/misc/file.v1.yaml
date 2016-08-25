@@ -19,9 +19,7 @@ properties:
             $ref: ../blocks/paragraph.v1.yaml
         minItems: 1
     mediaType:
-        title: Media type
-        type: string
-        pattern: \w+/[-+.\w]+
+        $ref: media-type.v1.yaml
     uri:
         title: Source data URI
         type: string
