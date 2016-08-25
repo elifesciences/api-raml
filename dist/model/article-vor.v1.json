@@ -27,7 +27,7 @@
                             "type": "object",
                             "properties": {
                                 "doi": {
-                                    "$ref": "#/allOf/2/properties/decisionLetter/properties/doi"
+                                    "$ref": "#/allOf/1/allOf/0/properties/doi"
                                 }
                             },
                             "required": [
@@ -163,7 +163,10 @@
                             ]
                         },
                         "doi": {
-                            "$ref": "#/allOf/2/properties/decisionLetter/properties/doi"
+                            "$schema": "http://json-schema.org/draft-04/schema#",
+                            "title": "DOI",
+                            "type": "string",
+                            "pattern": "^10[.][0-9]{4,}[^\\s\"/<>]*/[^\\s\"]+$"
                         },
                         "title": {
                             "type": "string",
@@ -215,7 +218,7 @@
                                 "content": {
                                     "type": "array",
                                     "items": {
-                                        "$ref": "#/allOf/2/properties/digest/properties/content/items"
+                                        "$ref": "#/allOf/2/properties/decisionLetter/properties/description/items"
                                     },
                                     "minItems": 1
                                 }
@@ -292,30 +295,12 @@
                     "type": "object",
                     "properties": {
                         "doi": {
-                            "$ref": "#/allOf/2/properties/decisionLetter/properties/doi"
+                            "$ref": "#/allOf/1/allOf/0/properties/doi"
                         },
                         "content": {
                             "type": "array",
                             "items": {
-                                "$schema": "http://json-schema.org/draft-04/schema#",
-                                "title": "Paragraph",
-                                "type": "object",
-                                "properties": {
-                                    "type": {
-                                        "type": "string",
-                                        "enum": [
-                                            "paragraph"
-                                        ]
-                                    },
-                                    "text": {
-                                        "title": "Text",
-                                        "type": "string"
-                                    }
-                                },
-                                "required": [
-                                    "type",
-                                    "text"
-                                ]
+                                "$ref": "#/allOf/2/properties/decisionLetter/properties/description/items"
                             },
                             "minItems": 1
                         }
@@ -363,15 +348,30 @@
                     "type": "object",
                     "properties": {
                         "doi": {
-                            "$schema": "http://json-schema.org/draft-04/schema#",
-                            "title": "DOI",
-                            "type": "string",
-                            "pattern": "^10[.][0-9]{4,}[^\\s\"/<>]*/[^\\s\"]+$"
+                            "$ref": "#/allOf/1/allOf/0/properties/doi"
                         },
                         "description": {
                             "type": "array",
                             "items": {
-                                "$ref": "#/allOf/2/properties/digest/properties/content/items"
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "title": "Paragraph",
+                                "type": "object",
+                                "properties": {
+                                    "type": {
+                                        "type": "string",
+                                        "enum": [
+                                            "paragraph"
+                                        ]
+                                    },
+                                    "text": {
+                                        "title": "Text",
+                                        "type": "string"
+                                    }
+                                },
+                                "required": [
+                                    "type",
+                                    "text"
+                                ]
                             },
                             "minItems": 1
                         },
@@ -412,33 +412,115 @@
                                                         "$schema": "http://json-schema.org/draft-04/schema#",
                                                         "title": "Image",
                                                         "type": "object",
-                                                        "properties": {
-                                                            "type": {
-                                                                "type": "string",
-                                                                "enum": [
-                                                                    "image"
+                                                        "allOf": [
+                                                            {
+                                                                "$ref": "#/allOf/2/properties/decisionLetter/properties/content/items/oneOf/0/oneOf/0/oneOf/1/definitions/image"
+                                                            },
+                                                            {
+                                                                "properties": {
+                                                                    "type": {
+                                                                        "type": "string",
+                                                                        "enum": [
+                                                                            "image"
+                                                                        ]
+                                                                    },
+                                                                    "supplements": {
+                                                                        "type": "array",
+                                                                        "items": {
+                                                                            "$ref": "#/allOf/2/properties/decisionLetter/properties/content/items/oneOf/0/oneOf/0/oneOf/1/definitions/image"
+                                                                        }
+                                                                    }
+                                                                },
+                                                                "required": [
+                                                                    "type"
                                                                 ]
-                                                            },
-                                                            "alt": {
-                                                                "title": "Alternative text",
-                                                                "type": "string"
-                                                            },
-                                                            "uri": {
-                                                                "title": "Image URI",
-                                                                "type": "string",
-                                                                "format": "uri",
-                                                                "pattern": "^https://"
-                                                            },
-                                                            "caption": {
-                                                                "title": "Text",
-                                                                "type": "string"
                                                             }
-                                                        },
-                                                        "required": [
-                                                            "type",
-                                                            "alt",
-                                                            "uri"
-                                                        ]
+                                                        ],
+                                                        "definitions": {
+                                                            "image": {
+                                                                "type": "object",
+                                                                "properties": {
+                                                                    "doi": {
+                                                                        "$ref": "#/allOf/1/allOf/0/properties/doi"
+                                                                    },
+                                                                    "id": {
+                                                                        "$ref": "#/allOf/2/properties/decisionLetter/properties/content/items/oneOf/0/oneOf/1/properties/id"
+                                                                    },
+                                                                    "label": {
+                                                                        "title": "Label",
+                                                                        "type": "string",
+                                                                        "minLength": 1
+                                                                    },
+                                                                    "title": {
+                                                                        "title": "Title",
+                                                                        "type": "string",
+                                                                        "minLength": 1
+                                                                    },
+                                                                    "caption": {
+                                                                        "title": "Caption",
+                                                                        "type": "array",
+                                                                        "items": {
+                                                                            "oneOf": [
+                                                                                {
+                                                                                    "$ref": "#/allOf/2/properties/decisionLetter/properties/content/items/oneOf/0/oneOf/0/oneOf/3"
+                                                                                },
+                                                                                {
+                                                                                    "$ref": "#/allOf/2/properties/decisionLetter/properties/description/items"
+                                                                                }
+                                                                            ]
+                                                                        },
+                                                                        "minItems": 1
+                                                                    },
+                                                                    "alt": {
+                                                                        "title": "Alternative text",
+                                                                        "type": "string"
+                                                                    },
+                                                                    "uri": {
+                                                                        "title": "Image URI",
+                                                                        "type": "string",
+                                                                        "format": "uri",
+                                                                        "pattern": "^https://"
+                                                                    },
+                                                                    "attribution": {
+                                                                        "title": "Attribution",
+                                                                        "type": "array",
+                                                                        "items": {
+                                                                            "type": "string"
+                                                                        }
+                                                                    },
+                                                                    "sourceData": {
+                                                                        "title": "Source data",
+                                                                        "type": "array",
+                                                                        "items": {
+                                                                            "allOf": [
+                                                                                {
+                                                                                    "$ref": "#/allOf/2/properties/decisionLetter/properties/content/items/oneOf/0/oneOf/0/oneOf/7/properties/sourceData/items"
+                                                                                },
+                                                                                {
+                                                                                    "properties": {
+                                                                                        "id": {
+                                                                                            "$ref": "#/allOf/2/properties/decisionLetter/properties/content/items/oneOf/0/oneOf/1/properties/id"
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    }
+                                                                },
+                                                                "required": [
+                                                                    "alt",
+                                                                    "uri"
+                                                                ],
+                                                                "dependencies": {
+                                                                    "caption": [
+                                                                        "title"
+                                                                    ],
+                                                                    "label": [
+                                                                        "title"
+                                                                    ]
+                                                                }
+                                                            }
+                                                        }
                                                     },
                                                     {
                                                         "$schema": "http://json-schema.org/draft-04/schema#",
@@ -469,7 +551,7 @@
                                                                             "$ref": "#/allOf/2/properties/decisionLetter/properties/content/items/oneOf/0/oneOf/0/oneOf/2"
                                                                         },
                                                                         {
-                                                                            "$ref": "#/allOf/2/properties/digest/properties/content/items"
+                                                                            "$ref": "#/allOf/2/properties/decisionLetter/properties/description/items"
                                                                         }
                                                                     ]
                                                                 },
@@ -510,7 +592,7 @@
                                                         ]
                                                     },
                                                     {
-                                                        "$ref": "#/allOf/2/properties/digest/properties/content/items"
+                                                        "$ref": "#/allOf/2/properties/decisionLetter/properties/description/items"
                                                     },
                                                     {
                                                         "$schema": "http://json-schema.org/draft-04/schema#",
@@ -532,7 +614,7 @@
                                                                 "title": "Answer",
                                                                 "type": "array",
                                                                 "items": {
-                                                                    "$ref": "#/allOf/2/properties/digest/properties/content/items"
+                                                                    "$ref": "#/allOf/2/properties/decisionLetter/properties/description/items"
                                                                 },
                                                                 "minItems": 1
                                                             }
@@ -558,7 +640,7 @@
                                                                 "title": "Text",
                                                                 "type": "array",
                                                                 "items": {
-                                                                    "$ref": "#/allOf/2/properties/digest/properties/content/items"
+                                                                    "$ref": "#/allOf/2/properties/decisionLetter/properties/description/items"
                                                                 },
                                                                 "minItems": 1
                                                             },
@@ -584,7 +666,7 @@
                                                                 ]
                                                             },
                                                             "doi": {
-                                                                "$ref": "#/allOf/2/properties/decisionLetter/properties/doi"
+                                                                "$ref": "#/allOf/1/allOf/0/properties/doi"
                                                             },
                                                             "id": {
                                                                 "$ref": "#/allOf/2/properties/decisionLetter/properties/content/items/oneOf/0/oneOf/1/properties/id"
@@ -603,7 +685,7 @@
                                                                 "title": "Caption",
                                                                 "type": "array",
                                                                 "items": {
-                                                                    "$ref": "#/allOf/2/properties/digest/properties/content/items"
+                                                                    "$ref": "#/allOf/2/properties/decisionLetter/properties/description/items"
                                                                 },
                                                                 "minItems": 1
                                                             },
@@ -618,7 +700,7 @@
                                                             "footer": {
                                                                 "type": "array",
                                                                 "items": {
-                                                                    "$ref": "#/allOf/2/properties/digest/properties/content/items"
+                                                                    "$ref": "#/allOf/2/properties/decisionLetter/properties/description/items"
                                                                 }
                                                             },
                                                             "sourceData": {
@@ -630,7 +712,7 @@
                                                                     "type": "object",
                                                                     "properties": {
                                                                         "doi": {
-                                                                            "$ref": "#/allOf/2/properties/decisionLetter/properties/doi"
+                                                                            "$ref": "#/allOf/1/allOf/0/properties/doi"
                                                                         },
                                                                         "label": {
                                                                             "title": "Label",
@@ -646,15 +728,12 @@
                                                                             "title": "Caption",
                                                                             "type": "array",
                                                                             "items": {
-                                                                                "$ref": "#/allOf/2/properties/digest/properties/content/items"
+                                                                                "$ref": "#/allOf/2/properties/decisionLetter/properties/description/items"
                                                                             },
                                                                             "minItems": 1
                                                                         },
                                                                         "mediaType": {
-                                                                            "$schema": "http://json-schema.org/draft-04/schema#",
-                                                                            "title": "Media type",
-                                                                            "type": "string",
-                                                                            "pattern": "^([a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+/[a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+)(; *[a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+=(([a-zA-Z0-9\\.\\-]+)|(\".+\")))*$"
+                                                                            "$ref": "#/allOf/2/properties/decisionLetter/properties/content/items/oneOf/0/oneOf/0/oneOf/8/properties/sources/items/properties/mediaType/allOf/0"
                                                                         },
                                                                         "uri": {
                                                                             "title": "Source data URI",
@@ -708,7 +787,7 @@
                                                                 ]
                                                             },
                                                             "doi": {
-                                                                "$ref": "#/allOf/2/properties/decisionLetter/properties/doi"
+                                                                "$ref": "#/allOf/1/allOf/0/properties/doi"
                                                             },
                                                             "id": {
                                                                 "$ref": "#/allOf/2/properties/decisionLetter/properties/content/items/oneOf/0/oneOf/1/properties/id"
@@ -727,7 +806,7 @@
                                                                 "title": "Caption",
                                                                 "type": "array",
                                                                 "items": {
-                                                                    "$ref": "#/allOf/2/properties/digest/properties/content/items"
+                                                                    "$ref": "#/allOf/2/properties/decisionLetter/properties/description/items"
                                                                 },
                                                                 "minItems": 1
                                                             },
@@ -739,7 +818,10 @@
                                                                         "mediaType": {
                                                                             "allOf": [
                                                                                 {
-                                                                                    "$ref": "#/allOf/2/properties/decisionLetter/properties/content/items/oneOf/0/oneOf/0/oneOf/7/properties/sourceData/items/properties/mediaType"
+                                                                                    "$schema": "http://json-schema.org/draft-04/schema#",
+                                                                                    "title": "Media type",
+                                                                                    "type": "string",
+                                                                                    "pattern": "^([a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+/[a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+)(; *[a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+=(([a-zA-Z0-9\\.\\-]+)|(\".+\")))*$"
                                                                                 },
                                                                                 {
                                                                                     "pattern": "^video/"
@@ -842,7 +924,7 @@
                                                         ]
                                                     },
                                                     "doi": {
-                                                        "$ref": "#/allOf/2/properties/decisionLetter/properties/doi"
+                                                        "$ref": "#/allOf/1/allOf/0/properties/doi"
                                                     },
                                                     "id": {
                                                         "$schema": "http://json-schema.org/draft-04/schema#",
@@ -895,7 +977,7 @@
                     "type": "object",
                     "properties": {
                         "doi": {
-                            "$ref": "#/allOf/2/properties/decisionLetter/properties/doi"
+                            "$ref": "#/allOf/1/allOf/0/properties/doi"
                         },
                         "content": {
                             "type": "array",

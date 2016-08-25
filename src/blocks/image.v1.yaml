@@ -1,23 +1,69 @@
 $schema: http://json-schema.org/draft-04/schema#
 title: Image
 type: object
-properties:
-    type:
-        type: string
-        enum:
-          - image
-    alt:
-        title: Alternative text
-        type: string
-    uri:
-        title: Image URI
-        type: string
-        format: uri
-        pattern: ^https://
-    caption:
-        title: Text
-        type: string
-required:
-  - type
-  - alt
-  - uri
+allOf:
+  - $ref: '#/definitions/image'
+  - properties:
+        type:
+            type: string
+            enum:
+              - image
+        supplements:
+            type: array
+            items:
+                $ref: '#/definitions/image'
+    required:
+      - type
+
+definitions:
+    image:
+        type: object
+        properties:
+            doi:
+                $ref: ../misc/doi.v1.yaml
+            id:
+                $ref: ../misc/html-id.v1.yaml
+            label:
+                title: Label
+                type: string
+                minLength: 1
+            title:
+                title: Title
+                type: string
+                minLength: 1
+            caption:
+                title: Caption
+                type: array
+                items:
+                    oneOf:
+                      - $ref: mathml.v1.yaml
+                      - $ref: paragraph.v1.yaml
+                minItems: 1
+            alt:
+                title: Alternative text
+                type: string
+            uri:
+                title: Image URI
+                type: string
+                format: uri
+                pattern: ^https://
+            attribution:
+                title: Attribution
+                type: array
+                items:
+                    type: string
+            sourceData:
+                title: Source data
+                type: array
+                items:
+                    allOf:
+                      - $ref: ../misc/file.v1.yaml
+                      - properties:
+                            id:
+                                $ref: ../misc/html-id.v1.yaml
+        required:
+          - alt
+          - uri
+        dependencies:
+            caption: [title]
+            label: [title]
