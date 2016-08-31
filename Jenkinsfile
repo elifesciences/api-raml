@@ -13,7 +13,9 @@ elifeLibrary {
         stage 'Committing'
         sh 'git diff --exit-code || (git add dist/; git commit -m "Regenerated dist/"; git push origin develop)'
 
+        def commit = elifeGitRevision()
+
         stage 'Publishing to master'
-        sh 'git checkout master; git pull origin master; git merge develop; git push origin master'
+        elifeGitMoveToBranch commit, 'master'
     }
 }
