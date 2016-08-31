@@ -7,10 +7,11 @@ elifeLibrary {
 
     stage 'Compiling'
     sh "node compile.js"
+    // is there any check we can add here apart from the node command not failing?
 
     elifeMainlineOnly {
         stage 'Committing'
-        sh 'git add dist/; git commit -m "Regenerated dist/"; git push origin develop'
+        sh 'git diff --exit-code || (git add dist/; git commit -m "Regenerated dist/"; git push origin develop)'
 
         stage 'Publishing to master'
         sh 'git checkout master; git pull origin master; git merge develop; git push origin master'
