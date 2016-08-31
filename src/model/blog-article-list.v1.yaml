@@ -3,7 +3,7 @@ title: Blog article list
 type: object
 properties:
     total:
-        title: Total number of blog articles
+        title: Total number of blog  articles
         type: integer
         minimum: 0
     items:
