@@ -11,9 +11,11 @@ elifeLibrary {
 
     elifeMainlineOnly {
         stage 'Committing'
-        sh 'git diff --exit-code || (git add dist/; git commit -m "Regenerated dist/"; git push origin develop)'
-
+        sh 'git diff --exit-code || (git add dist/; git commit -m "Regenerated dist/")'
         def commit = elifeGitRevision()
+        
+        stage 'Pushing to develop'
+        elifeGitMoveToBranch commit, 'develop'
 
         stage 'Publishing to master'
         elifeGitMoveToBranch commit, 'master'
