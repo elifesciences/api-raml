@@ -11,9 +11,32 @@
             "latitude": 47.6272994,
             "longitude": -122.3324216
         },
-        "name": "Fred Hutchinson Cancer Research Center",
-        "address": "1100 Fairview Ave N, Seattle, WA 98109, United States",
-        "inside": "D1-080/084 (Thomas Building)"
+        "name": [
+            "D1-080/084 (Thomas Building)",
+            "Fred Hutchinson Cancer Research Center"
+        ],
+        "address": {
+            "formatted": [
+                "1100 Fairview Ave N",
+                "Seattle, WA 98109",
+                "United States"
+            ],
+            "components": {
+                "streetAddress": [
+                    "1100 Fairview Ave North"
+                ],
+                "locality": [
+                    "South Lake Union",
+                    "Seattle"
+                ],
+                "area": [
+                    "King County",
+                    "Washington"
+                ],
+                "country": "United States",
+                "postalCode": "98109"
+            }
+        }
     },
     "content": [
         {

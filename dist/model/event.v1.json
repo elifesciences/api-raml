@@ -716,23 +716,81 @@
                             ]
                         },
                         "name": {
-                            "type": "string",
-                            "minLength": 1
+                            "type": "array",
+                            "items": {
+                                "type": "string",
+                                "minLength": 1
+                            },
+                            "minItems": 1
                         },
                         "address": {
-                            "type": "string",
-                            "minLength": 1
-                        },
-                        "inside": {
-                            "type": "string",
-                            "minLength": 1
+                            "$schema": "http://json-schema.org/draft-04/schema#",
+                            "title": "Address",
+                            "type": "object",
+                            "properties": {
+                                "formatted": {
+                                    "title": "Formatted address",
+                                    "type": "array",
+                                    "items": {
+                                        "type": "string",
+                                        "minLength": 1
+                                    },
+                                    "minItems": 1
+                                },
+                                "components": {
+                                    "title": "Address components",
+                                    "type": "object",
+                                    "properties": {
+                                        "streetAddress": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "string",
+                                                "minLength": 1
+                                            }
+                                        },
+                                        "locality": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "string",
+                                                "minLength": 1
+                                            }
+                                        },
+                                        "area": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "string",
+                                                "minLength": 1
+                                            }
+                                        },
+                                        "country": {
+                                            "type": "string",
+                                            "minLength": 1
+                                        },
+                                        "postalCode": {
+                                            "type": "string",
+                                            "minLength": 1
+                                        }
+                                    },
+                                    "minProperties": 1
+                                }
+                            },
+                            "required": [
+                                "formatted",
+                                "components"
+                            ]
                         }
                     },
                     "required": [
-                        "coordinates",
-                        "name",
-                        "address"
-                    ]
+                        "name"
+                    ],
+                    "dependencies": {
+                        "id": [
+                            "coordinates"
+                        ],
+                        "coordinates": [
+                            "address"
+                        ]
+                    }
                 }
             },
             "required": [
