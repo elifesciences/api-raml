@@ -5,6 +5,11 @@ elifeLibrary {
     stage 'Installing'
     sh "npm install"
 
+    elifePullRequestOnly {
+        stage 'Checking dist/'
+        sh 'git fetch && git diff --exit-code origin/develop...HEAD dist/'
+    }
+
     stage 'Compiling'
     sh "node compile.js"
     // is there any check we can add here apart from the node command not failing?
