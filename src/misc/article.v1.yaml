@@ -29,5 +29,11 @@ allOf:
               - license
               - holder
               - statement
+        authors:
+            type: array
+            items:
+                $ref: author.v1.yaml
+            minItems: 1
     required:
       - copyright
+      - authors

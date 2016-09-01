@@ -1,0 +1,10 @@
+$schema: http://json-schema.org/draft-04/schema#
+title: Phone number
+description: |
+    Phone number in E.164 format.
+
+    For example:
+      - +447700900415
+      - +12025550182;ext=555
+type: string
+pattern: ^\+[0-9]{8,15}(;ext=[0-9]+)?$
