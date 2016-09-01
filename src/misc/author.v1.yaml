@@ -1,108 +1,92 @@
 $schema: http://json-schema.org/draft-04/schema#
 title: Author
 type: object
-oneOf:
-  - allOf:
-      - properties:
-            affiliations:
-                type: array
-                items:
-                    $ref: place.v1.yaml
-            competingInterests:
-                title: Competing interests statement
+allOf:
+  - properties:
+        affiliations:
+            type: array
+            items:
+                $ref: place.v1.yaml
+        competingInterests:
+            title: Competing interests statement
+            type: string
+            minLength: 1
+        contribution:
+            title: Author contribution
+            type: string
+            minLength: 1
+        emailAddresses:
+            type: array
+            items:
                 type: string
-                minLength: 1
-            contribution:
-                title: Author contribution
-                type: string
-                minLength: 1
-            emailAddresses:
-                type: array
-                items:
-                    type: string
-                    format: email
-            equalContributionGroups:
-                title: Equal contribution group IDs
-                description: |
-                    Authors that contribute equally are linked together through a generated ID.
+                format: email
+        equalContributionGroups:
+            title: Equal contribution group IDs
+            description: |
+                Authors that contribute equally are linked together through a generated ID.
 
-                    IDs will only be included if it is shared between two or more authors.
-                type: array
-                items:
-                    type: integer
-                    minimum: 1
-            phoneNumbers:
-                type: array
-                items:
-                    $ref: phone-number.v1.yaml
-            postalAddresses:
-                type: array
-                items:
-                    $ref: address.v1.yaml
-        required:
-          - type
-      - oneOf:
-          - allOf:
-              - $ref: person.v1.yaml
+                IDs will only be included if it is shared between two or more authors.
+            type: array
+            items:
+                type: integer
+                minimum: 1
+        onBehalfOf:
+            $ref: place.v1.yaml
+        phoneNumbers:
+            type: array
+            items:
+                $ref: phone-number.v1.yaml
+        postalAddresses:
+            type: array
+            items:
+                $ref: address.v1.yaml
+    required:
+      - type
+  - oneOf:
+      - allOf:
+          - $ref: person.v1.yaml
+          - properties:
+                type:
+                    type: string
+                    enum:
+                      - person
+                deceased:
+                    description: Whether the person was deceased when the article was published.
+                    type: boolean
+                    default: false
+      - allOf:
+          - properties:
+                type:
+                    type: string
+                    enum:
+                      - group
+          - anyOf:
+              - not:
+                    required:
+                      - groups
+                      - people
               - properties:
-                    type:
-                        type: string
-                        enum:
-                          - person
-                    deceased:
-                        description: Whether the person was deceased when the article was published.
-                        type: boolean
-                        default: false
-          - allOf:
+                    people:
+                        type: array
+                        items:
+                            $ref: person.v1.yaml
+                        minItems: 2
+                required:
+                  - people
+                not:
+                    required:
+                      - groups
               - properties:
-                    type:
-                        type: string
-                        enum:
-                          - group
-              - anyOf:
-                  - not:
-                        required:
-                          - groups
-                          - people
-                  - properties:
-                        people:
+                    groups:
+                        type: object
+                        additionalProperties:
                             type: array
                             items:
                                 $ref: person.v1.yaml
                             minItems: 2
+                        minProperties: 2
+                required:
+                  - groups
+                not:
                     required:
                       - people
-                    not:
-                        required:
-                          - groups
-                  - properties:
-                        groups:
-                            type: object
-                            additionalProperties:
-                                type: array
-                                items:
-                                    $ref: person.v1.yaml
-                                minItems: 2
-                            minProperties: 2
-                    required:
-                      - groups
-                    not:
-                        required:
-                          - people
-  - properties:
-        type:
-            type: string
-            enum:
-              - on-behalf-of
-        for:
-            type: string
-            minLength: 1
-        authors:
-            type: array
-            items:
-                $ref: '#/oneOf/0'
-            minItems: 1
-    required:
-      - type
-      - for
-      - authors

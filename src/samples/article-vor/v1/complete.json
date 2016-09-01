@@ -199,35 +199,39 @@
             }
         },
         {
-            "type": "on-behalf-of",
-            "for": "An Organisation",
-            "authors": [
+            "type": "person",
+            "name": {
+                "preferred": "Heather M Garvin",
+                "index": "Garvin, Heather M"
+            },
+            "onBehalfOf": {
+                "name": [
+                    "An Organisation"
+                ]
+            }
+        },
+        {
+            "type": "group",
+            "name": "A further group",
+            "people": [
                 {
-                    "type": "person",
                     "name": {
-                        "preferred": "Heather M Garvin",
-                        "index": "Garvin, Heather M"
+                        "preferred": "Scott A Williams",
+                        "index": "Williams, Scott A"
                     }
                 },
                 {
-                    "type": "group",
-                    "name": "A further group",
-                    "people": [
-                        {
-                            "name": {
-                                "preferred": "Scott A Williams",
-                                "index": "Williams, Scott A"
-                            }
-                        },
-                        {
-                            "name": {
-                                "preferred": "Jeremy M DeSilva",
-                                "index": "DeSilva, Jeremy M"
-                            }
-                        }
-                    ]
+                    "name": {
+                        "preferred": "Jeremy M DeSilva",
+                        "index": "DeSilva, Jeremy M"
+                    }
                 }
-            ]
+            ],
+            "onBehalfOf": {
+                "name": [
+                    "An Organisation"
+                ]
+            }
         }
     ],
     "pdf": "https://elifesciences.org/content/4/e09560.pdf",
