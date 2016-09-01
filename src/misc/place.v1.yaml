@@ -21,15 +21,15 @@ properties:
           - latitude
           - longitude
     name:
-        type: string
-        minLength: 1
+        type: array
+        items:
+            type: string
+            minLength: 1
+        minItems: 1
     address:
-        type: string
-        minLength: 1
-    inside:
-        type: string
-        minLength: 1
+        $ref: address.v1.yaml
 required:
-  - coordinates
   - name
-  - address
+dependencies:
+    id: [coordinates]
+    coordinates: [address]
