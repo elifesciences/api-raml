@@ -28,9 +28,9 @@ properties:
     authorLine:
         description: |
             For example:
-              - Baldwin
-              - Schekman and Patterson
-              - Berger et al
+              - Ian T Baldwin
+              - Randy Schekman, Mark Patterson
+              - Lee R Berger et al
         type: string
         minLength: 1
     title:
