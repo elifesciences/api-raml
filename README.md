@@ -1,7 +1,7 @@
 eLife Sciences API RAML
 =======================
 
-[![Build Status](https://travis-ci.org/elifesciences/api-raml.svg?branch=master)](https://travis-ci.org/elifesciences/api-raml)
+[![Build Status](https://ci--alfred.elifesciences.org/buildStatus/icon?job=library-api-raml)](https://ci--alfred.elifesciences.org/job/library-api-raml/)
 
 This repo contains [RAML 1.0 specifications](https://github.com/raml-org/raml-spec/blob/master/versions/raml-10/raml-10.md) for the eLife Sciences API.
 
