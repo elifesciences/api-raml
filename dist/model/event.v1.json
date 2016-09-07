@@ -57,36 +57,11 @@
                                         "oneOf": [
                                             {
                                                 "$schema": "http://json-schema.org/draft-04/schema#",
-                                                "title": "Blockquote",
-                                                "type": "object",
-                                                "properties": {
-                                                    "type": {
-                                                        "type": "string",
-                                                        "enum": [
-                                                            "blockquote"
-                                                        ]
-                                                    },
-                                                    "text": {
-                                                        "title": "Text",
-                                                        "type": "string"
-                                                    },
-                                                    "citation": {
-                                                        "title": "Text",
-                                                        "type": "string"
-                                                    }
-                                                },
-                                                "required": [
-                                                    "type",
-                                                    "text"
-                                                ]
-                                            },
-                                            {
-                                                "$schema": "http://json-schema.org/draft-04/schema#",
                                                 "title": "Image",
                                                 "type": "object",
                                                 "allOf": [
                                                     {
-                                                        "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/1/definitions/image"
+                                                        "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/0/definitions/image"
                                                     },
                                                     {
                                                         "properties": {
@@ -99,7 +74,7 @@
                                                             "supplements": {
                                                                 "type": "array",
                                                                 "items": {
-                                                                    "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/1/definitions/image"
+                                                                    "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/0/definitions/image"
                                                                 }
                                                             }
                                                         },
@@ -134,10 +109,10 @@
                                                                 "items": {
                                                                     "oneOf": [
                                                                         {
-                                                                            "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/3"
+                                                                            "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/2"
                                                                         },
                                                                         {
-                                                                            "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/4"
+                                                                            "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/3"
                                                                         }
                                                                     ]
                                                                 },
@@ -166,7 +141,7 @@
                                                                 "items": {
                                                                     "allOf": [
                                                                         {
-                                                                            "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/7/properties/sourceData/items"
+                                                                            "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/6/properties/sourceData/items"
                                                                         },
                                                                         {
                                                                             "properties": {
@@ -217,13 +192,13 @@
                                                                     "type": "string"
                                                                 },
                                                                 {
+                                                                    "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/0"
+                                                                },
+                                                                {
                                                                     "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/1"
                                                                 },
                                                                 {
-                                                                    "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/2"
-                                                                },
-                                                                {
-                                                                    "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/4"
+                                                                    "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/3"
                                                                 }
                                                             ]
                                                         },
@@ -304,7 +279,7 @@
                                                         "title": "Answer",
                                                         "type": "array",
                                                         "items": {
-                                                            "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/4"
+                                                            "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/3"
                                                         },
                                                         "minItems": 1
                                                     }
@@ -330,7 +305,7 @@
                                                         "title": "Text",
                                                         "type": "array",
                                                         "items": {
-                                                            "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/4"
+                                                            "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/3"
                                                         },
                                                         "minItems": 1
                                                     },
@@ -375,7 +350,7 @@
                                                         "title": "Caption",
                                                         "type": "array",
                                                         "items": {
-                                                            "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/4"
+                                                            "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/3"
                                                         },
                                                         "minItems": 1
                                                     },
@@ -390,7 +365,7 @@
                                                     "footer": {
                                                         "type": "array",
                                                         "items": {
-                                                            "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/4"
+                                                            "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/3"
                                                         }
                                                     },
                                                     "sourceData": {
@@ -418,12 +393,12 @@
                                                                     "title": "Caption",
                                                                     "type": "array",
                                                                     "items": {
-                                                                        "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/4"
+                                                                        "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/3"
                                                                     },
                                                                     "minItems": 1
                                                                 },
                                                                 "mediaType": {
-                                                                    "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/8/properties/sources/items/properties/mediaType/allOf/0"
+                                                                    "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/7/properties/sources/items/properties/mediaType/allOf/0"
                                                                 },
                                                                 "uri": {
                                                                     "title": "Source data URI",
@@ -496,7 +471,7 @@
                                                         "title": "Caption",
                                                         "type": "array",
                                                         "items": {
-                                                            "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/4"
+                                                            "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/3"
                                                         },
                                                         "minItems": 1
                                                     },
