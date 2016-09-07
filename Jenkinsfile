@@ -16,7 +16,7 @@ elifeLibrary {
 
     elifeMainlineOnly {
         stage 'Committing'
-        sh 'git diff --exit-code || (git add dist/; git commit -m "Regenerated dist/")'
+        elifeGitAutoCommit "Regenerated dist/", "dist/"
         def commit = elifeGitRevision()
         
         stage 'Pushing to develop'
