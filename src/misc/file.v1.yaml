@@ -4,6 +4,8 @@ type: object
 properties:
     doi:
         $ref: doi.v1.yaml
+    id:
+        $ref: html-id.v1.yaml
     label:
         title: Label
         type: string
