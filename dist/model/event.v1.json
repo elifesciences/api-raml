@@ -139,18 +139,7 @@
                                                                 "title": "Source data",
                                                                 "type": "array",
                                                                 "items": {
-                                                                    "allOf": [
-                                                                        {
-                                                                            "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/6/properties/sourceData/items"
-                                                                        },
-                                                                        {
-                                                                            "properties": {
-                                                                                "id": {
-                                                                                    "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/1/properties/id"
-                                                                                }
-                                                                            }
-                                                                        }
-                                                                    ]
+                                                                    "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/6/properties/sourceData/items"
                                                                 }
                                                             }
                                                         },
@@ -379,6 +368,9 @@
                                                                 "doi": {
                                                                     "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/1/properties/doi"
                                                                 },
+                                                                "id": {
+                                                                    "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/1/properties/id"
+                                                                },
                                                                 "label": {
                                                                     "title": "Label",
                                                                     "type": "string",
@@ -398,7 +390,10 @@
                                                                     "minItems": 1
                                                                 },
                                                                 "mediaType": {
-                                                                    "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/7/properties/sources/items/properties/mediaType/allOf/0"
+                                                                    "$schema": "http://json-schema.org/draft-04/schema#",
+                                                                    "title": "Media type",
+                                                                    "type": "string",
+                                                                    "pattern": "^([a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+/[a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+)(; *[a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+=(([a-zA-Z0-9\\.\\-]+)|(\".+\")))*$"
                                                                 },
                                                                 "uri": {
                                                                     "title": "Source data URI",
@@ -483,10 +478,7 @@
                                                                 "mediaType": {
                                                                     "allOf": [
                                                                         {
-                                                                            "$schema": "http://json-schema.org/draft-04/schema#",
-                                                                            "title": "Media type",
-                                                                            "type": "string",
-                                                                            "pattern": "^([a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+/[a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+)(; *[a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+=(([a-zA-Z0-9\\.\\-]+)|(\".+\")))*$"
+                                                                            "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/6/properties/sourceData/items/properties/mediaType"
                                                                         },
                                                                         {
                                                                             "pattern": "^video/"
