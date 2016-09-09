@@ -677,7 +677,7 @@
                                                 "$schema": "http://json-schema.org/draft-04/schema#",
                                                 "title": "HTML ID",
                                                 "type": "string",
-                                                "pattern": "^[a-z][a-z0-9-]*$"
+                                                "pattern": "^[^\\s]+$"
                                             },
                                             "label": {
                                                 "title": "Label",
