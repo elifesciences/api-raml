@@ -74,6 +74,11 @@
                                         "type": "string",
                                         "pattern": "^10[.][0-9]{4,}[^\\s\"/<>]*/[^\\s\"]+$"
                                     },
+                                    "authorLine": {
+                                        "description": "For example:\n  - Ian T Baldwin\n  - Randy Schekman, Mark Patterson\n  - Lee R Berger et al\n",
+                                        "type": "string",
+                                        "minLength": 1
+                                    },
                                     "title": {
                                         "type": "string",
                                         "minLength": 1
@@ -158,6 +163,7 @@
                                     "version",
                                     "type",
                                     "doi",
+                                    "authorLine",
                                     "title",
                                     "published",
                                     "volume",
