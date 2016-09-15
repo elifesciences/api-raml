@@ -1,0 +1,18 @@
+{
+    "totalPeriods": 45,
+    "totalValue": 1678,
+    "periods": [
+        {
+            "period": "2016-01-01",
+            "value": 32
+        },
+        {
+            "period": "2016-01-02",
+            "value": 12
+        },
+        {
+            "period": "2016-01-03",
+            "value": 0
+        }
+    ]
+}
