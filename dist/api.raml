@@ -639,6 +639,57 @@ traits:
                                     Demonstration of the list being empty (the first page will always return a valid result).
                                 value: !include samples/medium-article-list/v1/empty.json
 
+/metrics/{type}/{id}/{metric}:
+    type: collection
+    description: |
+        Metrics
+    uriParameters:
+        type:
+            description: |
+                Content type.
+            type: string
+            enum:
+              - article
+        id:
+            description: |
+                Content ID.
+            type: string
+        metric:
+            description: |
+                Metric.
+            type: string
+            enum:
+              - citations
+              - downloads
+              - page-views
+    get:
+        description: |
+            Get a metric for a piece of content
+        is:
+          - paged: { resources: Time periods }
+        queryParameters:
+            by:
+                description: |
+                    Time period.
+                type: string
+                required: false
+                default: month
+                enum:
+                  - day
+                  - month
+        responses:
+            200:
+                body:
+                    application/vnd.elife.metric+json;version=1:
+                        schema: !include model/metric.v1.json
+                        examples:
+                            by-day:
+                                displayName: By day
+                                value: !include samples/metric/v1/by-day.json
+                            by-month:
+                                displayName: By month
+                                value: !include samples/metric/v1/by-month.json
+
 /people:
     type: collection
     description: |

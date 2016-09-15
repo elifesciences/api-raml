@@ -1,0 +1,54 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "Metric list",
+    "type": "object",
+    "properties": {
+        "totalPeriods": {
+            "title": "Total periods that the metric is available for",
+            "type": "integer",
+            "minimum": 0
+        },
+        "totalValue": {
+            "title": "Total value of the metric",
+            "type": "integer",
+            "minimum": 0
+        },
+        "periods": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "period": {
+                        "oneOf": [
+                            {
+                                "title": "Month",
+                                "type": "string",
+                                "pattern": "^[0-9]{4}-[0-9]{2}$"
+                            },
+                            {
+                                "title": "Day",
+                                "type": "string",
+                                "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+                            }
+                        ]
+                    },
+                    "value": {
+                        "title": "Value",
+                        "type": "integer",
+                        "minimum": 0
+                    }
+                },
+                "required": [
+                    "period",
+                    "value"
+                ]
+            },
+            "uniqueItems": true
+        }
+    },
+    "required": [
+        "totalPeriods",
+        "totalValue",
+        "periods"
+    ]
+}
