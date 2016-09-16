@@ -28,6 +28,10 @@ allOf:
             items:
                 $ref: ../blocks/section.v1.yaml
             minItems: 1
+        references:
+            type: array
+            items:
+                $ref: ../misc/reference.v1.yaml
         decisionLetter:
             type: object
             properties:
