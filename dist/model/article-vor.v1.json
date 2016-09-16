@@ -253,32 +253,58 @@
                             "minimum": 1
                         },
                         "copyright": {
-                            "type": "object",
-                            "properties": {
-                                "license": {
-                                    "type": "string",
-                                    "enum": [
-                                        "CC-BY-1.0",
-                                        "CC-BY-2.0",
-                                        "CC-BY-2.5",
-                                        "CC-BY-3.0",
-                                        "CC-BY-4.0",
-                                        "CC0-1.0"
+                            "allOf": [
+                                {
+                                    "type": "object",
+                                    "properties": {
+                                        "statement": {
+                                            "type": "string",
+                                            "minLength": 1
+                                        }
+                                    },
+                                    "required": [
+                                        "statement"
                                     ]
                                 },
-                                "holder": {
-                                    "type": "string",
-                                    "minLength": 1
-                                },
-                                "statement": {
-                                    "type": "string",
-                                    "minLength": 1
+                                {
+                                    "oneOf": [
+                                        {
+                                            "properties": {
+                                                "license": {
+                                                    "type": "string",
+                                                    "enum": [
+                                                        "CC0-1.0"
+                                                    ]
+                                                }
+                                            },
+                                            "required": [
+                                                "license"
+                                            ]
+                                        },
+                                        {
+                                            "properties": {
+                                                "license": {
+                                                    "type": "string",
+                                                    "enum": [
+                                                        "CC-BY-1.0",
+                                                        "CC-BY-2.0",
+                                                        "CC-BY-2.5",
+                                                        "CC-BY-3.0",
+                                                        "CC-BY-4.0"
+                                                    ]
+                                                },
+                                                "holder": {
+                                                    "type": "string",
+                                                    "minLength": 1
+                                                }
+                                            },
+                                            "required": [
+                                                "license",
+                                                "holder"
+                                            ]
+                                        }
+                                    ]
                                 }
-                            },
-                            "required": [
-                                "license",
-                                "holder",
-                                "statement"
                             ]
                         },
                         "authors": {
