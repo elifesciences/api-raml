@@ -26,7 +26,7 @@ properties:
             minLength: 1
     selectedCurator:
         allOf:
-          - $ref: ../snippets/person.v1.yaml
+          - $ref: ../snippets/elife-person.v1.yaml
           - properties:
                 etAl:
                     description: If there are more curators.
