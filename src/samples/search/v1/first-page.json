@@ -102,7 +102,12 @@
                     }
                 }
             },
-            "mp3": "https://nakeddiscovery.com/scripts/mp3s/audio/eLife_Podcast_16.05.mp3"
+            "sources": [
+                {
+                    "mediaType": "audio/mp3",
+                    "uri": "https://nakeddiscovery.com/scripts/mp3s/audio/eLife_Podcast_16.05.mp3"
+                }
+            ]
         },
         {
             "type": "event",
