@@ -9,7 +9,115 @@
             "type": "object",
             "allOf": [
                 {
-                    "$ref": "#/allOf/1/allOf/0"
+                    "$schema": "http://json-schema.org/draft-04/schema#",
+                    "title": "Article snippet",
+                    "type": "object",
+                    "properties": {
+                        "id": {
+                            "type": "string",
+                            "minLength": 1
+                        },
+                        "version": {
+                            "type": "integer",
+                            "minimum": 1
+                        },
+                        "type": {
+                            "type": "string",
+                            "enum": [
+                                "correction",
+                                "editorial",
+                                "feature",
+                                "insight",
+                                "research-advance",
+                                "research-article",
+                                "research-exchange",
+                                "retraction",
+                                "registered-report",
+                                "replication-study",
+                                "short-report",
+                                "tools-resources"
+                            ]
+                        },
+                        "doi": {
+                            "$ref": "#/allOf/2/properties/authorResponse/properties/doi"
+                        },
+                        "authorLine": {
+                            "description": "For example:\n  - Ian T Baldwin\n  - Randy Schekman, Mark Patterson\n  - Lee R Berger et al\n",
+                            "type": "string",
+                            "minLength": 1
+                        },
+                        "title": {
+                            "type": "string",
+                            "minLength": 1
+                        },
+                        "published": {
+                            "type": "string",
+                            "format": "date-time"
+                        },
+                        "volume": {
+                            "type": "integer",
+                            "minimum": 1
+                        },
+                        "elocationId": {
+                            "type": "string",
+                            "minLength": 1
+                        },
+                        "pdf": {
+                            "type": "string",
+                            "format": "uri"
+                        },
+                        "subjects": {
+                            "type": "array",
+                            "items": {
+                                "type": "string",
+                                "minLength": 1
+                            },
+                            "uniqueItems": true
+                        },
+                        "researchOrganisms": {
+                            "type": "array",
+                            "items": {
+                                "type": "string",
+                                "minLength": 1
+                            },
+                            "uniqueItems": true
+                        },
+                        "relatedArticles": {
+                            "type": "array",
+                            "items": {
+                                "type": "string",
+                                "minLength": 1
+                            },
+                            "uniqueItems": true
+                        },
+                        "abstract": {
+                            "type": "object",
+                            "properties": {
+                                "content": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/allOf/2/properties/decisionLetter/properties/description/items"
+                                    },
+                                    "minItems": 1
+                                }
+                            },
+                            "required": [
+                                "content"
+                            ]
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "id",
+                        "version",
+                        "type",
+                        "doi",
+                        "authorLine",
+                        "title",
+                        "published",
+                        "volume",
+                        "elocationId"
+                    ]
                 },
                 {
                     "properties": {
@@ -27,7 +135,7 @@
                             "type": "object",
                             "properties": {
                                 "doi": {
-                                    "$ref": "#/allOf/1/allOf/0/properties/doi"
+                                    "$ref": "#/allOf/2/properties/authorResponse/properties/doi"
                                 }
                             },
                             "required": [
@@ -133,118 +241,7 @@
             "type": "object",
             "allOf": [
                 {
-                    "$schema": "http://json-schema.org/draft-04/schema#",
-                    "title": "Article snippet",
-                    "type": "object",
-                    "properties": {
-                        "id": {
-                            "type": "string",
-                            "minLength": 1
-                        },
-                        "version": {
-                            "type": "integer",
-                            "minimum": 1
-                        },
-                        "type": {
-                            "type": "string",
-                            "enum": [
-                                "correction",
-                                "editorial",
-                                "feature",
-                                "insight",
-                                "research-advance",
-                                "research-article",
-                                "research-exchange",
-                                "retraction",
-                                "registered-report",
-                                "replication-study",
-                                "short-report",
-                                "tools-resources"
-                            ]
-                        },
-                        "doi": {
-                            "$schema": "http://json-schema.org/draft-04/schema#",
-                            "title": "DOI",
-                            "type": "string",
-                            "pattern": "^10[.][0-9]{4,}[^\\s\"/<>]*/[^\\s\"]+$"
-                        },
-                        "authorLine": {
-                            "description": "For example:\n  - Ian T Baldwin\n  - Randy Schekman, Mark Patterson\n  - Lee R Berger et al\n",
-                            "type": "string",
-                            "minLength": 1
-                        },
-                        "title": {
-                            "type": "string",
-                            "minLength": 1
-                        },
-                        "published": {
-                            "type": "string",
-                            "format": "date-time"
-                        },
-                        "volume": {
-                            "type": "integer",
-                            "minimum": 1
-                        },
-                        "elocationId": {
-                            "type": "string",
-                            "minLength": 1
-                        },
-                        "pdf": {
-                            "type": "string",
-                            "format": "uri"
-                        },
-                        "subjects": {
-                            "type": "array",
-                            "items": {
-                                "type": "string",
-                                "minLength": 1
-                            },
-                            "uniqueItems": true
-                        },
-                        "researchOrganisms": {
-                            "type": "array",
-                            "items": {
-                                "type": "string",
-                                "minLength": 1
-                            },
-                            "uniqueItems": true
-                        },
-                        "relatedArticles": {
-                            "type": "array",
-                            "items": {
-                                "type": "string",
-                                "minLength": 1
-                            },
-                            "uniqueItems": true
-                        },
-                        "abstract": {
-                            "type": "object",
-                            "properties": {
-                                "content": {
-                                    "type": "array",
-                                    "items": {
-                                        "$ref": "#/allOf/2/properties/digest/properties/content/items"
-                                    },
-                                    "minItems": 1
-                                }
-                            },
-                            "required": [
-                                "content"
-                            ]
-                        }
-                    },
-                    "required": [
-                        "status",
-                        "id",
-                        "version",
-                        "type",
-                        "doi",
-                        "authorLine",
-                        "title",
-                        "published",
-                        "volume",
-                        "elocationId"
-                    ]
+                    "$ref": "#/allOf/0/allOf/0"
                 },
                 {
                     "properties": {
@@ -633,9 +630,77 @@
                     "type": "object",
                     "properties": {
                         "doi": {
-                            "$ref": "#/allOf/1/allOf/0/properties/doi"
+                            "$ref": "#/allOf/2/properties/authorResponse/properties/doi"
                         },
                         "content": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/allOf/2/properties/decisionLetter/properties/description/items"
+                            },
+                            "minItems": 1
+                        }
+                    },
+                    "required": [
+                        "doi",
+                        "content"
+                    ]
+                },
+                "body": {
+                    "type": "array",
+                    "items": {
+                        "allOf": [
+                            {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "title": "Section",
+                                "type": "object",
+                                "properties": {
+                                    "type": {
+                                        "type": "string",
+                                        "enum": [
+                                            "section"
+                                        ]
+                                    },
+                                    "id": {
+                                        "$schema": "http://json-schema.org/draft-04/schema#",
+                                        "title": "HTML ID",
+                                        "type": "string",
+                                        "pattern": "^[^\\s]+$"
+                                    },
+                                    "title": {
+                                        "title": "Text",
+                                        "type": "string"
+                                    },
+                                    "content": {
+                                        "description": "Content",
+                                        "type": "array",
+                                        "items": {
+                                            "$ref": "#/allOf/2/properties/decisionLetter/properties/content/items"
+                                        },
+                                        "minItems": 1
+                                    }
+                                },
+                                "required": [
+                                    "type",
+                                    "title",
+                                    "content"
+                                ]
+                            },
+                            {
+                                "required": [
+                                    "id"
+                                ]
+                            }
+                        ]
+                    },
+                    "minItems": 1
+                },
+                "decisionLetter": {
+                    "type": "object",
+                    "properties": {
+                        "doi": {
+                            "$ref": "#/allOf/2/properties/authorResponse/properties/doi"
+                        },
+                        "description": {
                             "type": "array",
                             "items": {
                                 "$schema": "http://json-schema.org/draft-04/schema#",
@@ -657,59 +722,6 @@
                                     "type",
                                     "text"
                                 ]
-                            },
-                            "minItems": 1
-                        }
-                    },
-                    "required": [
-                        "doi",
-                        "content"
-                    ]
-                },
-                "body": {
-                    "type": "array",
-                    "items": {
-                        "$schema": "http://json-schema.org/draft-04/schema#",
-                        "title": "Section",
-                        "type": "object",
-                        "properties": {
-                            "type": {
-                                "type": "string",
-                                "enum": [
-                                    "section"
-                                ]
-                            },
-                            "title": {
-                                "title": "Text",
-                                "type": "string"
-                            },
-                            "content": {
-                                "description": "Content",
-                                "type": "array",
-                                "items": {
-                                    "$ref": "#/allOf/2/properties/decisionLetter/properties/content/items"
-                                },
-                                "minItems": 1
-                            }
-                        },
-                        "required": [
-                            "type",
-                            "title",
-                            "content"
-                        ]
-                    },
-                    "minItems": 1
-                },
-                "decisionLetter": {
-                    "type": "object",
-                    "properties": {
-                        "doi": {
-                            "$ref": "#/allOf/1/allOf/0/properties/doi"
-                        },
-                        "description": {
-                            "type": "array",
-                            "items": {
-                                "$ref": "#/allOf/2/properties/digest/properties/content/items"
                             },
                             "minItems": 1
                         },
@@ -754,10 +766,10 @@
                                                                 "type": "object",
                                                                 "properties": {
                                                                     "doi": {
-                                                                        "$ref": "#/allOf/1/allOf/0/properties/doi"
+                                                                        "$ref": "#/allOf/2/properties/authorResponse/properties/doi"
                                                                     },
                                                                     "id": {
-                                                                        "$ref": "#/allOf/2/properties/decisionLetter/properties/content/items/oneOf/0/oneOf/1/properties/id"
+                                                                        "$ref": "#/allOf/2/properties/body/items/allOf/0/properties/id"
                                                                     },
                                                                     "label": {
                                                                         "title": "Label",
@@ -778,7 +790,7 @@
                                                                                     "$ref": "#/allOf/2/properties/decisionLetter/properties/content/items/oneOf/0/oneOf/0/oneOf/2"
                                                                                 },
                                                                                 {
-                                                                                    "$ref": "#/allOf/2/properties/digest/properties/content/items"
+                                                                                    "$ref": "#/allOf/2/properties/decisionLetter/properties/description/items"
                                                                                 }
                                                                             ]
                                                                         },
@@ -853,7 +865,7 @@
                                                                             "$ref": "#/allOf/2/properties/decisionLetter/properties/content/items/oneOf/0/oneOf/0/oneOf/1"
                                                                         },
                                                                         {
-                                                                            "$ref": "#/allOf/2/properties/digest/properties/content/items"
+                                                                            "$ref": "#/allOf/2/properties/decisionLetter/properties/description/items"
                                                                         }
                                                                     ]
                                                                 },
@@ -877,7 +889,7 @@
                                                                 ]
                                                             },
                                                             "id": {
-                                                                "$ref": "#/allOf/2/properties/decisionLetter/properties/content/items/oneOf/0/oneOf/1/properties/id"
+                                                                "$ref": "#/allOf/2/properties/body/items/allOf/0/properties/id"
                                                             },
                                                             "label": {
                                                                 "type": "string"
@@ -894,7 +906,7 @@
                                                         ]
                                                     },
                                                     {
-                                                        "$ref": "#/allOf/2/properties/digest/properties/content/items"
+                                                        "$ref": "#/allOf/2/properties/decisionLetter/properties/description/items"
                                                     },
                                                     {
                                                         "$schema": "http://json-schema.org/draft-04/schema#",
@@ -916,7 +928,7 @@
                                                                 "title": "Answer",
                                                                 "type": "array",
                                                                 "items": {
-                                                                    "$ref": "#/allOf/2/properties/digest/properties/content/items"
+                                                                    "$ref": "#/allOf/2/properties/decisionLetter/properties/description/items"
                                                                 },
                                                                 "minItems": 1
                                                             }
@@ -942,7 +954,7 @@
                                                                 "title": "Text",
                                                                 "type": "array",
                                                                 "items": {
-                                                                    "$ref": "#/allOf/2/properties/digest/properties/content/items"
+                                                                    "$ref": "#/allOf/2/properties/decisionLetter/properties/description/items"
                                                                 },
                                                                 "minItems": 1
                                                             },
@@ -968,10 +980,10 @@
                                                                 ]
                                                             },
                                                             "doi": {
-                                                                "$ref": "#/allOf/1/allOf/0/properties/doi"
+                                                                "$ref": "#/allOf/2/properties/authorResponse/properties/doi"
                                                             },
                                                             "id": {
-                                                                "$ref": "#/allOf/2/properties/decisionLetter/properties/content/items/oneOf/0/oneOf/1/properties/id"
+                                                                "$ref": "#/allOf/2/properties/body/items/allOf/0/properties/id"
                                                             },
                                                             "label": {
                                                                 "title": "Label",
@@ -987,7 +999,7 @@
                                                                 "title": "Caption",
                                                                 "type": "array",
                                                                 "items": {
-                                                                    "$ref": "#/allOf/2/properties/digest/properties/content/items"
+                                                                    "$ref": "#/allOf/2/properties/decisionLetter/properties/description/items"
                                                                 },
                                                                 "minItems": 1
                                                             },
@@ -1002,7 +1014,7 @@
                                                             "footer": {
                                                                 "type": "array",
                                                                 "items": {
-                                                                    "$ref": "#/allOf/2/properties/digest/properties/content/items"
+                                                                    "$ref": "#/allOf/2/properties/decisionLetter/properties/description/items"
                                                                 }
                                                             },
                                                             "sourceData": {
@@ -1014,10 +1026,10 @@
                                                                     "type": "object",
                                                                     "properties": {
                                                                         "doi": {
-                                                                            "$ref": "#/allOf/1/allOf/0/properties/doi"
+                                                                            "$ref": "#/allOf/2/properties/authorResponse/properties/doi"
                                                                         },
                                                                         "id": {
-                                                                            "$ref": "#/allOf/2/properties/decisionLetter/properties/content/items/oneOf/0/oneOf/1/properties/id"
+                                                                            "$ref": "#/allOf/2/properties/body/items/allOf/0/properties/id"
                                                                         },
                                                                         "label": {
                                                                             "title": "Label",
@@ -1033,7 +1045,7 @@
                                                                             "title": "Caption",
                                                                             "type": "array",
                                                                             "items": {
-                                                                                "$ref": "#/allOf/2/properties/digest/properties/content/items"
+                                                                                "$ref": "#/allOf/2/properties/decisionLetter/properties/description/items"
                                                                             },
                                                                             "minItems": 1
                                                                         },
@@ -1095,10 +1107,10 @@
                                                                 ]
                                                             },
                                                             "doi": {
-                                                                "$ref": "#/allOf/1/allOf/0/properties/doi"
+                                                                "$ref": "#/allOf/2/properties/authorResponse/properties/doi"
                                                             },
                                                             "id": {
-                                                                "$ref": "#/allOf/2/properties/decisionLetter/properties/content/items/oneOf/0/oneOf/1/properties/id"
+                                                                "$ref": "#/allOf/2/properties/body/items/allOf/0/properties/id"
                                                             },
                                                             "label": {
                                                                 "title": "Label",
@@ -1114,7 +1126,7 @@
                                                                 "title": "Caption",
                                                                 "type": "array",
                                                                 "items": {
-                                                                    "$ref": "#/allOf/2/properties/digest/properties/content/items"
+                                                                    "$ref": "#/allOf/2/properties/decisionLetter/properties/description/items"
                                                                 },
                                                                 "minItems": 1
                                                             },
@@ -1229,13 +1241,10 @@
                                                         ]
                                                     },
                                                     "doi": {
-                                                        "$ref": "#/allOf/1/allOf/0/properties/doi"
+                                                        "$ref": "#/allOf/2/properties/authorResponse/properties/doi"
                                                     },
                                                     "id": {
-                                                        "$schema": "http://json-schema.org/draft-04/schema#",
-                                                        "title": "HTML ID",
-                                                        "type": "string",
-                                                        "pattern": "^[^\\s]+$"
+                                                        "$ref": "#/allOf/2/properties/body/items/allOf/0/properties/id"
                                                     },
                                                     "label": {
                                                         "title": "Label",
@@ -1265,7 +1274,7 @@
                                         ]
                                     },
                                     {
-                                        "$ref": "#/allOf/2/properties/body/items"
+                                        "$ref": "#/allOf/2/properties/body/items/allOf/0"
                                     }
                                 ]
                             },
@@ -1282,7 +1291,10 @@
                     "type": "object",
                     "properties": {
                         "doi": {
-                            "$ref": "#/allOf/1/allOf/0/properties/doi"
+                            "$schema": "http://json-schema.org/draft-04/schema#",
+                            "title": "DOI",
+                            "type": "string",
+                            "pattern": "^10[.][0-9]{4,}[^\\s\"/<>]*/[^\\s\"]+$"
                         },
                         "content": {
                             "type": "array",
