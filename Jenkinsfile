@@ -19,9 +19,11 @@ elifeLibrary {
         elifeGitAutoCommit "Regenerated dist/", "dist/"
         def commit = elifeGitRevision()
 
-        stage 'Setting commit status'
-        step([$class: 'GitHubCommitNotifier', resultOnFailure: 'FAILURE'])
-        
+        stage 'Pushing to alfred/regeneration_of_dist'
+        // needed due to required status checks on develop branch
+        elifeGitMoveToBranch commit, 'alfred/regeneration_of_dist'
+        elifeGithubCommitStatus commit, 'success', 'continuous-integration/jenkins/pr-head', 'Alfred automated commit after regenerating dist/'
+
         stage 'Pushing to develop'
         elifeGitMoveToBranch commit, 'develop'
 
