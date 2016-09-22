@@ -1,5 +1,5 @@
 $schema: http://json-schema.org/draft-04/schema#
-title: Section
+title: List
 type: object
 properties:
     type:
