@@ -18,6 +18,9 @@ elifeLibrary {
         stage 'Committing'
         elifeGitAutoCommit "Regenerated dist/", "dist/"
         def commit = elifeGitRevision()
+
+        stage 'Setting commit status'
+        step([$class: 'GitHubCommitNotifier', resultOnFailure: 'FAILURE'])
         
         stage 'Pushing to develop'
         elifeGitMoveToBranch commit, 'develop'
