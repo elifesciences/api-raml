@@ -6,8 +6,16 @@ properties:
         type: string
         enum:
           - list
-    ordered:
-        type: boolean
+    prefix:
+        type: string
+        enum:
+          - alpha-lower
+          - alpha-upper
+          - bullet
+          - none
+          - number
+          - roman-lower
+          - roman-upper
     items:
         description: List items
         type: array
@@ -20,4 +28,5 @@ properties:
         minItems: 1
 required:
   - type
+  - prefix
   - items

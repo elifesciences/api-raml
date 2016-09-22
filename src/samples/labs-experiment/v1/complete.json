@@ -81,7 +81,7 @@
         },
         {
             "type": "list",
-            "ordered": true,
+            "prefix": "roman-lower",
             "items": [
                 "Finding all comments made by a particular person",
                 "Finding all tags within a particular collection",
@@ -93,7 +93,7 @@
                 },
                 {
                     "type": "list",
-                    "ordered": true,
+                    "prefix": "number",
                     "items": [
                         "Finding all comments made by a particular person",
                         {
