@@ -20,8 +20,7 @@ documentation:
     content: |
         API endpoints are not versioned, but the body of requests/responses are.
 
-        Content versioning
-        ------------------
+        ## Content versioning
 
         Endpoints produce/consume dedicated content type, with the version as a parameter (eg `application/vnd.elife.labs-experiment-list+json;version=1`). These are primarily JSON-based (and described using [JSON Schema](http://json-schema.org/)), but alternative representations may be available.
 
@@ -29,8 +28,35 @@ documentation:
 
         You can request a specific version of a response using content negotation (eg `Accept: application/vnd.elife.labs-experiment-list+json;version=1`). The most recent version will always be preferred, so without a `version` parameter on the `Accept` header the latest version will be returned.
 
-        Endpoint versioning
-        -------------------
+        ### On a request
+
+        The following examples *are* breaking changes (and so *require* a new version):
+
+          - Adding a new required property
+          - Making an optional property required
+          - Removing a possibility from an array property
+
+        The following examples *are not* breaking changes (and so *do not* require a new version):
+
+          - Making a required property optional
+          - Removing a property
+          - Adding a new possibility to an array property
+
+        ### On a response
+
+        The following examples *are* breaking changes (and so *require* a new version):
+
+          - Making a required property optional
+          - Adding a new possibility to an array property
+          - Changing the type of a property
+
+        The following examples *are not* breaking changes (and so *do not* require a new version):
+
+          - Adding a new property
+          - Making an optional property required
+          - Removing an optional property
+
+        ## Endpoint versioning
 
         As the endpoint itself is not versioned, functionality may be removed (including removing support for versions of content). We will try and deprecate first, and avoid removing support where possible.
 
