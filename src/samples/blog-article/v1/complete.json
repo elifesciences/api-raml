@@ -44,23 +44,29 @@
             "items": [
                 "Finding all comments made by a particular person",
                 "Finding all tags within a particular collection",
-                {
-                    "type": "image",
-                    "alt": "",
-                    "uri": "https://elife-cdn.s3.amazonaws.com/images/news/eLife_Lens_Search_filters.png",
-                    "title": "filters showing frequency of search term in filter"
-                },
-                {
-                    "type": "list",
-                    "prefix": "none",
-                    "items": [
-                        "Finding all comments made by a particular person",
-                        {
-                            "type": "paragraph",
-                            "text": "You can read a bit more about eLife Labs and we would love to hear <a href=\"mailto:staff@elifesciences.org\">what you think</a>."
-                        }
-                    ]
-                }
+                [
+                    {
+                        "type": "image",
+                        "alt": "",
+                        "uri": "https://elife-cdn.s3.amazonaws.com/images/news/eLife_Lens_Search_filters.png",
+                        "title": "filters showing frequency of search term in filter"
+                    }
+                ],
+                [
+                    {
+                        "type": "list",
+                        "prefix": "none",
+                        "items": [
+                            "Finding all comments made by a particular person",
+                            [
+                                {
+                                    "type": "paragraph",
+                                    "text": "You can read a bit more about eLife Labs and we would love to hear <a href=\"mailto:staff@elifesciences.org\">what you think</a>."
+                                }
+                            ]
+                        ]
+                    }
+                ]
             ]
         },
         {

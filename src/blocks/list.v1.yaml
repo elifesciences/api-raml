@@ -22,9 +22,10 @@ properties:
         items:
             oneOf:
               - type: string
-              - $ref: image.v1.yaml
-              - $ref: list.v1.yaml
-              - $ref: paragraph.v1.yaml
+              - type: array
+                items:
+                    $ref: ../misc/blocks-no-section-box.v1.yaml
+                minItems: 1
         minItems: 1
 required:
   - type
