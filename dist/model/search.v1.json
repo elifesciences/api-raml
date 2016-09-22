@@ -19,26 +19,6 @@
                         "type": "object",
                         "allOf": [
                             {
-                                "$ref": "#/properties/items/items/oneOf/1/allOf/0"
-                            },
-                            {
-                                "properties": {
-                                    "status": {
-                                        "type": "string",
-                                        "enum": [
-                                            "poa"
-                                        ]
-                                    }
-                                }
-                            }
-                        ]
-                    },
-                    {
-                        "$schema": "http://json-schema.org/draft-04/schema#",
-                        "title": "Article VoR snippet",
-                        "type": "object",
-                        "allOf": [
-                            {
                                 "$schema": "http://json-schema.org/draft-04/schema#",
                                 "title": "Article snippet",
                                 "type": "object",
@@ -115,14 +95,6 @@
                                         },
                                         "uniqueItems": true
                                     },
-                                    "relatedArticles": {
-                                        "type": "array",
-                                        "items": {
-                                            "type": "string",
-                                            "minLength": 1
-                                        },
-                                        "uniqueItems": true
-                                    },
                                     "abstract": {
                                         "type": "object",
                                         "properties": {
@@ -175,6 +147,26 @@
                                     "status": {
                                         "type": "string",
                                         "enum": [
+                                            "poa"
+                                        ]
+                                    }
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "$schema": "http://json-schema.org/draft-04/schema#",
+                        "title": "Article VoR snippet",
+                        "type": "object",
+                        "allOf": [
+                            {
+                                "$ref": "#/properties/items/items/oneOf/0/allOf/0"
+                            },
+                            {
+                                "properties": {
+                                    "status": {
+                                        "type": "string",
+                                        "enum": [
                                             "vor"
                                         ]
                                     },
@@ -186,7 +178,7 @@
                                         "type": "object",
                                         "properties": {
                                             "doi": {
-                                                "$ref": "#/properties/items/items/oneOf/1/allOf/0/properties/doi"
+                                                "$ref": "#/properties/items/items/oneOf/0/allOf/0/properties/doi"
                                             }
                                         },
                                         "required": [
@@ -736,11 +728,37 @@
                                                     "image": {
                                                         "$ref": "#/properties/items/items/oneOf/1/allOf/1/properties/image"
                                                     },
-                                                    "mp3": {
-                                                        "description": "URI of the MP3",
-                                                        "type": "string",
-                                                        "format": "uri",
-                                                        "pattern": "^https://"
+                                                    "sources": {
+                                                        "type": "array",
+                                                        "items": {
+                                                            "type": "object",
+                                                            "properties": {
+                                                                "mediaType": {
+                                                                    "allOf": [
+                                                                        {
+                                                                            "$schema": "http://json-schema.org/draft-04/schema#",
+                                                                            "title": "Media type",
+                                                                            "type": "string",
+                                                                            "pattern": "^([a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+/[a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+)(; *[a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+=(([a-zA-Z0-9\\.\\-]+)|(\".+\")))*$"
+                                                                        },
+                                                                        {
+                                                                            "pattern": "^audio/"
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                "uri": {
+                                                                    "title": "URI",
+                                                                    "type": "string",
+                                                                    "format": "uri",
+                                                                    "pattern": "^https://"
+                                                                }
+                                                            },
+                                                            "required": [
+                                                                "mediaType",
+                                                                "uri"
+                                                            ]
+                                                        },
+                                                        "minItems": 1
                                                     },
                                                     "subjects": {
                                                         "description": "Episode subject IDs",
@@ -756,7 +774,7 @@
                                                     "title",
                                                     "published",
                                                     "image",
-                                                    "mp3"
+                                                    "sources"
                                                 ]
                                             }
                                         ]

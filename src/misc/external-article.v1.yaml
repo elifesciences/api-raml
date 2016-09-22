@@ -1,0 +1,25 @@
+$schema: http://json-schema.org/draft-04/schema#
+title: External article
+type: object
+properties:
+    articleTitle:
+        type: string
+        minLength: 1
+    journal:
+        $ref: place.v1.yaml
+    authorLine:
+        description: |
+            For example:
+              - Ian T Baldwin
+              - Randy Schekman, Mark Patterson
+              - Lee R Berger et al
+        type: string
+        minLength: 1
+    uri:
+        type: string
+        format: uri
+required:
+  - articleTitle
+  - journal
+  - authorLine
+  - uri

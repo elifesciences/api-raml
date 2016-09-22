@@ -18,11 +18,24 @@ properties:
         format: date-time
     image:
         $ref: ../misc/image.v1.yaml
-    mp3:
-        description: URI of the MP3
-        type: string
-        format: uri
-        pattern: ^https://
+    sources:
+        type: array
+        items:
+            type: object
+            properties:
+                mediaType:
+                    allOf:
+                      - $ref: ../misc/media-type.v1.yaml
+                      - pattern: ^audio/
+                uri:
+                    title: URI
+                    type: string
+                    format: uri
+                    pattern: ^https://
+            required:
+              - mediaType
+              - uri
+        minItems: 1
     subjects:
         description: Episode subject IDs
         type: array
@@ -34,4 +47,4 @@ required:
   - title
   - published
   - image
-  - mp3
+  - sources
