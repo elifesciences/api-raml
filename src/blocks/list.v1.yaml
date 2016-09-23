@@ -1,23 +1,33 @@
 $schema: http://json-schema.org/draft-04/schema#
-title: Section
+title: List
 type: object
 properties:
     type:
         type: string
         enum:
           - list
-    ordered:
-        type: boolean
+    prefix:
+        type: string
+        enum:
+          - alpha-lower
+          - alpha-upper
+          - bullet
+          - none
+          - number
+          - roman-lower
+          - roman-upper
     items:
         description: List items
         type: array
         items:
             oneOf:
               - type: string
-              - $ref: image.v1.yaml
-              - $ref: list.v1.yaml
-              - $ref: paragraph.v1.yaml
+              - type: array
+                items:
+                    $ref: ../misc/blocks-no-section-box.v1.yaml
+                minItems: 1
         minItems: 1
 required:
   - type
+  - prefix
   - items
