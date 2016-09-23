@@ -24,6 +24,13 @@
                 "preferred": "Lee R Berger",
                 "index": "Berger, Lee R"
             },
+            "role": "Some role",
+            "biography": [
+                {
+                    "type": "paragraph",
+                    "text": "Lee Rogers Berger is an American-born South African paleoanthropologist and National Geographic Explorer-in-Residence."
+                }
+            ],
             "affiliations": [
                 {
                     "name": [
