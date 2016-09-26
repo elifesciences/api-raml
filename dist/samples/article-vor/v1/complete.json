@@ -506,6 +506,770 @@
             ]
         }
     ],
+    "references": [
+        {
+            "type": "book",
+            "id": "bib1",
+            "date": "1818",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "Person One",
+                        "index": "One, Person"
+                    }
+                }
+            ],
+            "bookTitle": "Minimum book",
+            "publisher": {
+                "name": [
+                    "A publisher"
+                ]
+            }
+        },
+        {
+            "type": "book",
+            "id": "bib2",
+            "date": "2007",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "Person One",
+                        "index": "One, Person"
+                    }
+                },
+                {
+                    "type": "group",
+                    "name": "Group One"
+                }
+            ],
+            "authorsEtAl": true,
+            "bookTitle": "Complete book",
+            "volume": "Volume 1",
+            "edition": "2nd edition",
+            "publisher": {
+                "name": [
+                    "A publisher"
+                ],
+                "address": {
+                    "formatted": [
+                        "London",
+                        "United Kingdom"
+                    ],
+                    "components": {
+                        "locality": [
+                            "London"
+                        ],
+                        "country": "United Kingdom"
+                    }
+                }
+            },
+            "doi": "10.1007/1-4020-4466-6",
+            "pmid": 26677505,
+            "isbn": "978-0-08-086125-8"
+        },
+        {
+            "type": "book-chapter",
+            "id": "bib3",
+            "date": "1818",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "Person One",
+                        "index": "One, Person"
+                    }
+                }
+            ],
+            "editors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "Person Two",
+                        "index": "Two, Person"
+                    }
+                }
+            ],
+            "bookTitle": "Minimum book",
+            "chapterTitle": "Minimum chapter",
+            "pages": "in-press",
+            "publisher": {
+                "name": [
+                    "A publisher"
+                ]
+            }
+        },
+        {
+            "type": "book",
+            "id": "bib4",
+            "date": "2007",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "Person One",
+                        "index": "One, Person"
+                    }
+                },
+                {
+                    "type": "group",
+                    "name": "Group One"
+                }
+            ],
+            "authorsEtAl": true,
+            "editors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "Person Two",
+                        "index": "Two, Person"
+                    }
+                },
+                {
+                    "type": "group",
+                    "name": "Group Two"
+                }
+            ],
+            "editorsEtAl": true,
+            "bookTitle": "Complete book",
+            "chapterTitle": "Complete chapter",
+            "volume": "Volume 1",
+            "edition": "2nd edition",
+            "pages": {
+                "first": "231",
+                "last": "452",
+                "range": "231–236, 423–452"
+            },
+            "publisher": {
+                "name": [
+                    "A publisher"
+                ],
+                "address": {
+                    "formatted": [
+                        "London",
+                        "United Kingdom"
+                    ],
+                    "components": {
+                        "locality": [
+                            "London"
+                        ],
+                        "country": "United Kingdom"
+                    }
+                }
+            },
+            "doi": "10.1007/1-4020-4466-6",
+            "pmid": 26677505,
+            "isbn": "978-0-08-086125-8"
+        },
+        {
+            "type": "clinical-trial",
+            "id": "bib5",
+            "date": "2015",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "Person One",
+                        "index": "One, Person"
+                    }
+                }
+            ],
+            "authorsType": "authors",
+            "title": "Minimum clinical trial",
+            "uri": "http://www.example.com/"
+        },
+        {
+            "type": "clinical-trial",
+            "id": "bib6",
+            "date": "2015",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "Person One",
+                        "index": "One, Person"
+                    }
+                },
+                {
+                    "type": "group",
+                    "name": "Group One"
+                }
+            ],
+            "authorsEtAl": true,
+            "authorsType": "sponsors",
+            "title": "Complete clinical trial",
+            "uri": "http://www.example.com/"
+        },
+        {
+            "type": "conference-proceeding",
+            "id": "bib7",
+            "date": "2010",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "Person One",
+                        "index": "One, Person"
+                    }
+                }
+            ],
+            "articleTitle": "Minimal conference proceeding",
+            "conference": {
+                "name": [
+                    "A conference"
+                ]
+            }
+        },
+        {
+            "type": "conference-proceeding",
+            "id": "bib8",
+            "date": "2010",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "Person One",
+                        "index": "One, Person"
+                    }
+                },
+                {
+                    "type": "group",
+                    "name": "Group One"
+                }
+            ],
+            "authorsEtAl": true,
+            "articleTitle": "Complete conference proceeding",
+            "conference": {
+                "name": [
+                    "A conference"
+                ],
+                "address": {
+                    "formatted": [
+                        "London",
+                        "United Kingdom"
+                    ],
+                    "components": {
+                        "locality": [
+                            "London"
+                        ],
+                        "country": "United Kingdom"
+                    }
+                }
+            },
+            "pages": {
+                "first": "231",
+                "last": "452",
+                "range": "231–236, 423–452"
+            },
+            "doi": "10.1007/978-3-642-00599-2_12",
+            "uri": "https://dx.doi.org/10.1007/978-3-642-00599-2_12"
+        },
+        {
+            "type": "data",
+            "id": "bib9",
+            "date": "2015",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "Person One",
+                        "index": "One, Person"
+                    }
+                }
+            ],
+            "title": "Minimal data",
+            "source": "A source"
+        },
+        {
+            "type": "data",
+            "id": "bib10",
+            "date": "2015",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "Person One",
+                        "index": "One, Person"
+                    }
+                },
+                {
+                    "type": "group",
+                    "name": "Group One"
+                }
+            ],
+            "authorsEtAl": true,
+            "compilers": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "Person Two",
+                        "index": "Two, Person"
+                    }
+                },
+                {
+                    "type": "group",
+                    "name": "Group Two"
+                }
+            ],
+            "compilersEtAl": true,
+            "curators": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "Person Three",
+                        "index": "Three, Person"
+                    }
+                },
+                {
+                    "type": "group",
+                    "name": "Group Three"
+                }
+            ],
+            "curatorsEtAl": true,
+            "title": "Complete data",
+            "source": "A source",
+            "dataId": "123456ABC",
+            "assigningAuthority": {
+                "name": [
+                    "An authority"
+                ],
+                "address": {
+                    "formatted": [
+                        "London",
+                        "United Kingdom"
+                    ],
+                    "components": {
+                        "locality": [
+                            "London"
+                        ],
+                        "country": "United Kingdom"
+                    }
+                }
+            },
+            "doi": "10.2210/pdb4qen/pdb",
+            "uri": "https://dx.doi.org/10.2210/pdb4qen/pdb"
+        },
+        {
+            "type": "journal",
+            "id": "bib11",
+            "date": "2013",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "Person One",
+                        "index": "One, Person"
+                    }
+                }
+            ],
+            "articleTitle": "Minimal journal article",
+            "journal": {
+                "name": [
+                    "A journal"
+                ]
+            },
+            "pages": "in-press"
+        },
+        {
+            "type": "journal",
+            "id": "bib12",
+            "date": "2013",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "Person One",
+                        "index": "One, Person"
+                    }
+                },
+                {
+                    "type": "group",
+                    "name": "Group One"
+                }
+            ],
+            "articleTitle": "Complete journal article",
+            "journal": {
+                "name": [
+                    "A journal"
+                ],
+                "address": {
+                    "formatted": [
+                        "London",
+                        "United Kingdom"
+                    ],
+                    "components": {
+                        "locality": [
+                            "London"
+                        ],
+                        "country": "United Kingdom"
+                    }
+                }
+            },
+            "volume": "365",
+            "pages": {
+                "first": "231",
+                "last": "452",
+                "range": "231–236, 423–452"
+            },
+            "doi": "10.1038/365833a0",
+            "pmid": 8413666
+        },
+        {
+            "type": "patent",
+            "id": "bib13",
+            "date": "2011",
+            "inventors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "Person One",
+                        "index": "One, Person"
+                    }
+                }
+            ],
+            "title": "Minimal patent",
+            "patentType": "United States patent",
+            "country": "United States"
+        },
+        {
+            "type": "patent",
+            "id": "bib14",
+            "date": "2011",
+            "inventors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "Person One",
+                        "index": "One, Person"
+                    }
+                },
+                {
+                    "type": "group",
+                    "name": "Group One"
+                }
+            ],
+            "inventorsEtAl": true,
+            "assignees": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "Person Two",
+                        "index": "Two, Person"
+                    }
+                },
+                {
+                    "type": "group",
+                    "name": "Group Two"
+                }
+            ],
+            "assigneesEtAl": true,
+            "title": "Minimal patent",
+            "patentType": "United States patent",
+            "country": "United States",
+            "number": "US20100941530",
+            "uri": "http://www.example.com/"
+        },
+        {
+            "type": "periodical",
+            "id": "bib15",
+            "date": "2013-10-19",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "Person One",
+                        "index": "One, Person"
+                    }
+                }
+            ],
+            "articleTitle": "Minimal periodical article",
+            "periodical": {
+                "name": [
+                    "A periodical"
+                ]
+            },
+            "pages": "in-press"
+        },
+        {
+            "type": "periodical",
+            "id": "bib16",
+            "date": "2013-10-19",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "Person One",
+                        "index": "One, Person"
+                    }
+                },
+                {
+                    "type": "group",
+                    "name": "Group One"
+                }
+            ],
+            "authorsEtAl": true,
+            "articleTitle": "Complete periodical article",
+            "periodical": {
+                "name": [
+                    "A periodical"
+                ]
+            },
+            "volume": "Volume 1",
+            "pages": {
+                "first": "231",
+                "last": "452",
+                "range": "231–236, 423–452"
+            },
+            "uri": "http://www.example.com/"
+        },
+        {
+            "type": "preprint",
+            "id": "bib17",
+            "date": "2013",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "Person One",
+                        "index": "One, Person"
+                    }
+                }
+            ],
+            "articleTitle": "Minimal preprint",
+            "source": "A repository",
+            "uri": "http://www.example.com/"
+        },
+        {
+            "type": "preprint",
+            "id": "bib18",
+            "date": "2013",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "Person One",
+                        "index": "One, Person"
+                    }
+                },
+                {
+                    "type": "group",
+                    "name": "Group One"
+                }
+            ],
+            "authorsEtAl": true,
+            "articleTitle": "Complete preprint",
+            "source": "A repository",
+            "doi": "10.1101/004564",
+            "uri": "https://dx.doi.org/10.1101/004564"
+        },
+        {
+            "type": "report",
+            "id": "bib19",
+            "date": "2016",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "Person One",
+                        "index": "One, Person"
+                    }
+                }
+            ],
+            "title": "Minimal report",
+            "publisher": {
+                "name": [
+                    "A publisher"
+                ]
+            }
+        },
+        {
+            "type": "report",
+            "id": "bib20",
+            "date": "2016-09",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "Person One",
+                        "index": "One, Person"
+                    }
+                },
+                {
+                    "type": "group",
+                    "name": "Group One"
+                }
+            ],
+            "authorsEtAl": true,
+            "title": "Complete report",
+            "publisher": {
+                "name": [
+                    "A publisher"
+                ],
+                "address": {
+                    "formatted": [
+                        "London",
+                        "United Kingdom"
+                    ],
+                    "components": {
+                        "locality": [
+                            "London"
+                        ],
+                        "country": "United Kingdom"
+                    }
+                }
+            },
+            "doi": "10.1007/1-4020-4466-6",
+            "pmid": 26677505,
+            "isbn": "978-0-08-086125-8",
+            "uri": "https://dx.doi.org/10.1007/1-4020-4466-6"
+        },
+        {
+            "type": "software",
+            "id": "bib21",
+            "date": "2011",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "Person One",
+                        "index": "One, Person"
+                    }
+                }
+            ],
+            "title": "Minimal software",
+            "publisher": {
+                "name": [
+                    "A publisher"
+                ]
+            }
+        },
+        {
+            "type": "software",
+            "id": "bib22",
+            "date": "2011",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "Person One",
+                        "index": "One, Person"
+                    }
+                },
+                {
+                    "type": "group",
+                    "name": "Group One"
+                }
+            ],
+            "title": "Complete software",
+            "version": "2.10.0",
+            "publisher": {
+                "name": [
+                    "A publisher"
+                ],
+                "address": {
+                    "formatted": [
+                        "London",
+                        "United Kingdom"
+                    ],
+                    "components": {
+                        "locality": [
+                            "London"
+                        ],
+                        "country": "United Kingdom"
+                    }
+                }
+            },
+            "uri": "http://www.example.com/"
+        },
+        {
+            "type": "thesis",
+            "id": "bib23",
+            "date": "2006",
+            "author": {
+                "name": {
+                    "preferred": "Person One",
+                    "index": "One, Person"
+                }
+            },
+            "title": "Minimal thesis",
+            "publisher": {
+                "name": [
+                    "A publisher"
+                ]
+            }
+        },
+        {
+            "type": "thesis",
+            "id": "bib24",
+            "date": "2006",
+            "author": {
+                "name": {
+                    "preferred": "Person One",
+                    "index": "One, Person"
+                }
+            },
+            "title": "Minimal thesis",
+            "publisher": {
+                "name": [
+                    "A publisher"
+                ],
+                "address": {
+                    "formatted": [
+                        "London",
+                        "United Kingdom"
+                    ],
+                    "components": {
+                        "locality": [
+                            "London"
+                        ],
+                        "country": "United Kingdom"
+                    }
+                }
+            },
+            "doi": "10.1371/journal.pgen.0030218",
+            "uri": "https://dx.doi.org/10.1371/journal.pgen.0030218"
+        },
+        {
+            "type": "web",
+            "id": "bib25",
+            "date": "2014",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "Person One",
+                        "index": "One, Person"
+                    }
+                }
+            ],
+            "title": "Minimal webpage",
+            "uri": "http://www.example.com/"
+        },
+        {
+            "type": "web",
+            "id": "bib26",
+            "date": "2014",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "Person One",
+                        "index": "One, Person"
+                    }
+                },
+                {
+                    "type": "group",
+                    "name": "Group One"
+                }
+            ],
+            "authorsEtAl": true,
+            "title": "Complete webpage",
+            "website": "A website",
+            "accessed": "2016-09-16",
+            "uri": "http://www.example.com/"
+        }
+    ],
     "decisionLetter": {
         "doi": "10.7554/eLife.09560.030",
         "description": [
