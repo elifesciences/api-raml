@@ -203,11 +203,6 @@
             "name": {
                 "preferred": "Heather M Garvin",
                 "index": "Garvin, Heather M"
-            },
-            "onBehalfOf": {
-                "name": [
-                    "An Organisation"
-                ]
             }
         },
         {
@@ -226,12 +221,11 @@
                         "index": "DeSilva, Jeremy M"
                     }
                 }
-            ],
-            "onBehalfOf": {
-                "name": [
-                    "An Organisation"
-                ]
-            }
+            ]
+        },
+        {
+            "type": "on-behalf-of",
+            "onBehalfOf": "on behalf of An Organisation"
         }
     ],
     "pdf": "https://elifesciences.org/content/4/e09560.pdf",
