@@ -1,15 +1,15 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
-    "title": "Search results",
+    "title": "Careers items",
     "type": "object",
     "properties": {
         "total": {
-            "title": "Total number of results",
+            "title": "Total number of items",
             "type": "integer",
             "minimum": 0
         },
         "items": {
-            "title": "Search results",
+            "title": "Careers items",
             "type": "array",
             "items": {
                 "oneOf": [
@@ -786,159 +786,10 @@
                 ]
             },
             "uniqueItems": true
-        },
-        "subjects": {
-            "title": "Subjects",
-            "type": "array",
-            "items": {
-                "title": "Number of results with each subject",
-                "type": "object",
-                "properties": {
-                    "id": {
-                        "description": "ID",
-                        "type": "string",
-                        "minLength": 1
-                    },
-                    "name": {
-                        "description": "Name",
-                        "type": "string",
-                        "minLength": 1
-                    },
-                    "results": {
-                        "description": "Results",
-                        "type": "integer",
-                        "minimum": 0
-                    }
-                },
-                "required": [
-                    "id",
-                    "name",
-                    "results"
-                ]
-            },
-            "uniqueItems": true
-        },
-        "types": {
-            "title": "Content types",
-            "type": "object",
-            "properties": {
-                "correction": {
-                    "description": "Number of correction articles in the result set",
-                    "type": "integer",
-                    "minimum": 0
-                },
-                "editorial": {
-                    "description": "Number of editoral articles in the result set",
-                    "type": "integer",
-                    "minimum": 0
-                },
-                "feature": {
-                    "description": "Number of feature articles in the result set",
-                    "type": "integer",
-                    "minimum": 0
-                },
-                "insight": {
-                    "description": "Number of insight articles in the result set",
-                    "type": "integer",
-                    "minimum": 0
-                },
-                "research-advance": {
-                    "description": "Number of research advances in the result set",
-                    "type": "integer",
-                    "minimum": 0
-                },
-                "research-article": {
-                    "description": "Number of research articles in the result set",
-                    "type": "integer",
-                    "minimum": 0
-                },
-                "research-exchange": {
-                    "description": "Number of research exchanges in the result set",
-                    "type": "integer",
-                    "minimum": 0
-                },
-                "retraction": {
-                    "description": "Number of retraction articles in the result set",
-                    "type": "integer",
-                    "minimum": 0
-                },
-                "registered-report": {
-                    "description": "Number of registered reports in the result set",
-                    "type": "integer",
-                    "minimum": 0
-                },
-                "replication-study": {
-                    "description": "Number of replication studies in the result set",
-                    "type": "integer",
-                    "minimum": 0
-                },
-                "short-report": {
-                    "description": "Number of short reports in the result set",
-                    "type": "integer",
-                    "minimum": 0
-                },
-                "tools-resources": {
-                    "description": "Number of tools and resources articles in the result set",
-                    "type": "integer",
-                    "minimum": 0
-                },
-                "blog-article": {
-                    "description": "Number of blog articles in the result set",
-                    "type": "integer",
-                    "minimum": 0
-                },
-                "collection": {
-                    "description": "Number of collections in the result set",
-                    "type": "integer",
-                    "minimum": 0
-                },
-                "event": {
-                    "description": "Number of open events in the result set",
-                    "type": "integer",
-                    "minimum": 0
-                },
-                "interview": {
-                    "description": "Number of interviews in the result set",
-                    "type": "integer",
-                    "minimum": 0
-                },
-                "labs-experiment": {
-                    "description": "Number of Labs experiments in the result set",
-                    "type": "integer",
-                    "minimum": 0
-                },
-                "podcast-episode": {
-                    "description": "Number of podcast episodes in the result set",
-                    "type": "integer",
-                    "minimum": 0
-                }
-            },
-            "required": [
-                "correction",
-                "editorial",
-                "feature",
-                "insight",
-                "research-advance",
-                "research-article",
-                "research-exchange",
-                "retraction",
-                "registered-report",
-                "replication-study",
-                "short-report",
-                "tools-resources",
-                "blog-article",
-                "collection",
-                "event",
-                "interview",
-                "labs-experiment",
-                "podcast-episode"
-            ]
         }
     },
     "required": [
         "total",
-        "items",
-        "subjects",
-        "types"
+        "items"
     ]
 }

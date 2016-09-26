@@ -26,7 +26,10 @@ allOf:
         body:
             type: array
             items:
-                $ref: ../blocks/section.v1.yaml
+                allOf:
+                  - $ref: ../blocks/section.v1.yaml
+                  - required:
+                      - id
             minItems: 1
         references:
             type: array

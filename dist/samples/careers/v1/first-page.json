@@ -163,42 +163,5 @@
             "impactStatement": "Ramanath Hegde is a Postdoctoral Fellow at the Institute of Protein Biochemistry in Naples, Italy, where he investigates ways of preventing cells from destroying mutant proteins.",
             "published": "2016-01-29T16:22:28+00:00"
         }
-    ],
-    "subjects": [
-        {
-            "id": "biophysics-structural-biology",
-            "name": "Biophysics and Structural Biology",
-            "results": 1
-        },
-        {
-            "id": "cell-biology",
-            "name": "Cell Biology",
-            "results": 3
-        },
-        {
-            "id": "genomics-evolutionary-biology",
-            "name": "Genomics and Evolutionary Biology",
-            "results": 3
-        }
-    ],
-    "types": {
-        "correction": 0,
-        "editorial": 1,
-        "feature": 0,
-        "insight": 0,
-        "research-advance": 1,
-        "research-article": 2,
-        "research-exchange": 0,
-        "retraction": 0,
-        "registered-report": 0,
-        "replication-study": 0,
-        "short-report": 0,
-        "tools-resources": 0,
-        "blog-article": 3,
-        "collection": 2,
-        "event": 1,
-        "interview": 2,
-        "labs-experiment": 2,
-        "podcast-episode": 1
-    }
+    ]
 }

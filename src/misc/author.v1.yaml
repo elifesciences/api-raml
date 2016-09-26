@@ -1,97 +1,106 @@
 $schema: http://json-schema.org/draft-04/schema#
 title: Author
 type: object
-allOf:
+required:
+  - type
+oneOf:
   - properties:
-        affiliations:
-            type: array
-            items:
-                $ref: place.v1.yaml
-        competingInterests:
-            title: Competing interests statement
+        type:
             type: string
-            minLength: 1
-        contribution:
-            title: Author contribution
-            type: string
-            minLength: 1
-        emailAddresses:
-            type: array
-            items:
+            enum:
+              - on-behalf-of
+            onBehalfOf:
                 type: string
-                format: email
-        equalContributionGroups:
-            title: Equal contribution group IDs
-            description: |
-                Authors that contribute equally are linked together through a generated ID.
-
-                IDs will only be included if it is shared between two or more authors.
-            type: array
-            items:
-                type: integer
-                minimum: 1
-        onBehalfOf:
-            $ref: place.v1.yaml
-        phoneNumbers:
-            type: array
-            items:
-                $ref: phone-number.v1.yaml
-        postalAddresses:
-            type: array
-            items:
-                $ref: address.v1.yaml
+                minLenght: 1
     required:
-      - type
-  - oneOf:
-      - allOf:
-          - $ref: person.v1.yaml
-          - properties:
-                type:
+      - onBehalfOf
+  - allOf:
+      - properties:
+            affiliations:
+                type: array
+                items:
+                    $ref: place.v1.yaml
+            competingInterests:
+                title: Competing interests statement
+                type: string
+                minLength: 1
+            contribution:
+                title: Author contribution
+                type: string
+                minLength: 1
+            emailAddresses:
+                type: array
+                items:
                     type: string
-                    enum:
-                      - person
-                deceased:
-                    description: Whether the person was deceased when the article was published.
-                    type: boolean
-                    default: false
-      - allOf:
-          - properties:
-                type:
-                    type: string
-                    enum:
-                      - group
-                name:
-                    type: string
-                    minLength: 1
-            required:
-              - name
-          - anyOf:
-              - not:
-                    required:
-                      - groups
-                      - people
+                    format: email
+            equalContributionGroups:
+                title: Equal contribution group IDs
+                description: |
+                    Authors that contribute equally are linked together through a generated ID.
+
+                    IDs will only be included if it is shared between two or more authors.
+                type: array
+                items:
+                    type: integer
+                    minimum: 1
+            phoneNumbers:
+                type: array
+                items:
+                    $ref: phone-number.v1.yaml
+            postalAddresses:
+                type: array
+                items:
+                    $ref: address.v1.yaml
+      - oneOf:
+          - allOf:
+              - $ref: person.v1.yaml
               - properties:
-                    people:
-                        type: array
-                        items:
-                            $ref: person.v1.yaml
-                        minItems: 2
+                    type:
+                        type: string
+                        enum:
+                          - person
+                    deceased:
+                        description: Whether the person was deceased when the article was published.
+                        type: boolean
+                        default: false
+          - allOf:
+              - properties:
+                    type:
+                        type: string
+                        enum:
+                          - group
+                    name:
+                        type: string
+                        minLength: 1
                 required:
-                  - people
-                not:
-                    required:
-                      - groups
-              - properties:
-                    groups:
-                        type: object
-                        additionalProperties:
+                  - name
+              - anyOf:
+                  - not:
+                        required:
+                          - groups
+                          - people
+                  - properties:
+                        people:
                             type: array
                             items:
                                 $ref: person.v1.yaml
                             minItems: 2
-                        minProperties: 2
-                required:
-                  - groups
-                not:
                     required:
                       - people
+                    not:
+                        required:
+                          - groups
+                  - properties:
+                        groups:
+                            type: object
+                            additionalProperties:
+                                type: array
+                                items:
+                                    $ref: person.v1.yaml
+                                minItems: 2
+                            minProperties: 2
+                    required:
+                      - groups
+                    not:
+                        required:
+                          - people

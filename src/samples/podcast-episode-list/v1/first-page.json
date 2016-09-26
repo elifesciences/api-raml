@@ -22,7 +22,12 @@
                     }
                 }
             },
-            "mp3": "https://nakeddiscovery.com/scripts/mp3s/audio/eLife_Podcast_16.05.mp3"
+            "sources": [
+                {
+                    "mediaType": "audio/mpeg",
+                    "uri": "https://nakeddiscovery.com/scripts/mp3s/audio/eLife_Podcast_16.05.mp3"
+                }
+            ]
         },
         {
             "number": 30,
@@ -45,7 +50,12 @@
                     }
                 }
             },
-            "mp3": "https://nakeddiscovery.com/scripts/mp3s/audio/eLife_Podcast_16.06.mp3",
+            "sources": [
+                {
+                    "mediaType": "audio/mpeg",
+                    "uri": "https://nakeddiscovery.com/scripts/mp3s/audio/eLife_Podcast_16.06.mp3"
+                }
+            ],
             "subjects": [
                 "biochemistry",
                 "ecology"
