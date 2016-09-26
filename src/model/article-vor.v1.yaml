@@ -31,6 +31,10 @@ allOf:
                   - required:
                       - id
             minItems: 1
+        references:
+            type: array
+            items:
+                $ref: ../misc/reference.v1.yaml
         decisionLetter:
             type: object
             properties:

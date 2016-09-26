@@ -1,0 +1,11 @@
+$schema: http://json-schema.org/draft-04/schema#
+title: Partial date
+description: |
+    A date, where the month and/or day may not be known/available.
+
+    For example:
+      - 2016
+      - 2016-09
+      - 2016-09-16
+type: string
+pattern: ^[1-2][0-9]{3}(-((0[1-9])|(1[0-2]))(-((0[1-9])|([1-2][0-9])|(3[0-1])))?)?$

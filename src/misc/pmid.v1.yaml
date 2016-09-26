@@ -1,0 +1,6 @@
+$schema: http://json-schema.org/draft-04/schema#
+title: PMID
+description: |
+    PubMed identifier.
+type: integer
+minimum: 1
