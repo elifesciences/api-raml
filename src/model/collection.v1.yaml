@@ -11,7 +11,7 @@ allOf:
             description: List of curators, ordered by name
             type: array
             items:
-                $ref: ../snippets/person.v1.yaml
+                $ref: ../snippets/elife-person.v1.yaml
             minItems: 1
         content:
             title: Content

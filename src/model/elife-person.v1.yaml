@@ -1,8 +1,8 @@
 $schema: http://json-schema.org/draft-04/schema#
-title: Person
+title: eLife person
 type: object
 allOf:
-  - $ref: ../snippets/person.v1.yaml
+  - $ref: ../snippets/elife-person.v1.yaml
   - properties:
         research:
             title: Research details
