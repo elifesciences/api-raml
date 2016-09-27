@@ -1,5 +1,5 @@
 $schema: http://json-schema.org/draft-04/schema#
-title: Careers items
+title: Community item list
 type: object
 properties:
     total:
@@ -7,7 +7,7 @@ properties:
         type: integer
         minimum: 0
     items:
-        title: Careers items
+        title: Community items
         type: array
         items:
             oneOf:
