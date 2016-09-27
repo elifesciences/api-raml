@@ -11,15 +11,34 @@
             "type": "string",
             "format": "date"
         },
-        "poa": {
-            "title": "Number of PoA versions",
-            "type": "integer",
-            "minimum": 0
-        },
-        "vor": {
-            "title": "Number of VoR versions",
-            "type": "integer",
-            "minimum": 0
+        "versions": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "version": {
+                        "type": "integer",
+                        "minimum": 1
+                    },
+                    "status": {
+                        "type": "string",
+                        "enum": [
+                            "poa",
+                            "vor"
+                        ]
+                    },
+                    "published": {
+                        "type": "string",
+                        "format": "date-time"
+                    }
+                },
+                "required": [
+                    "version",
+                    "status",
+                    "published"
+                ]
+            },
+            "minItems": 1
         }
     },
     "dependencies": {
@@ -31,7 +50,8 @@
         ]
     },
     "required": [
-        "poa",
-        "vor"
+        "received",
+        "accepted",
+        "versions"
     ]
 }
