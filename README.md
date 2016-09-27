@@ -7,14 +7,18 @@ This repo contains [RAML 1.0 specifications](https://github.com/raml-org/raml-sp
 
 It can be viewed by serving the `dist` folder (eg `npm install && node_modules/.bin/http-server dist`) and viewing in a browser.
 
-# Installation
+## Installation
 
 Install the project dependencies:
 
     $ npm install
     
-# Compilation
+## Compilation
 
     $ node compile.js
     
 The compiled contents of `./src/` can be found in `./dist/`.
+
+## Copyright & Licence
+
+This project is [MIT licenced](LICENCE.txt)
