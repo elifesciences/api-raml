@@ -396,35 +396,6 @@ traits:
                                     displayName: Complete
                                     value: !include samples/blog-article/v1/complete.json
 
-/careers:
-    type: collection
-    description: |
-        Careers-relevant content
-    get:
-        description: |
-            Careers-relevant content.
-        is:
-          - paged: { resources: Items }
-          - subjected: { resources: Items }
-        responses:
-            200:
-                description: |
-                    List of items.
-                body:
-                    application/vnd.elife.careers+json;version=1:
-                        schema: !include model/careers.v1.json
-                        examples:
-                            paginated:
-                                displayName: First page
-                                description: |
-                                    List is split over two pages.
-                                value: !include samples/careers/v1/first-page.json
-                            empty:
-                                displayName: Empty list
-                                description: |
-                                    Demonstration of the list being empty (the first page will always return a valid result).
-                                value: !include samples/careers/v1/empty.json
-
 /collections:
     type: collection
     description: |
@@ -482,6 +453,35 @@ traits:
                                 complete:
                                     displayName: Complete
                                     value: !include samples/collection/v1/complete.json
+
+/community:
+    type: collection
+    description: |
+        Community-relevant content
+    get:
+        description: |
+            Get a list of community-relevant content, sorted by date.
+        is:
+          - paged: { resources: Items }
+          - subjected: { resources: Items }
+        responses:
+            200:
+                description: |
+                    List of items.
+                body:
+                    application/vnd.elife.community-list+json;version=1:
+                        schema: !include model/community-list.v1.json
+                        examples:
+                            paginated:
+                                displayName: First page
+                                description: |
+                                    List is split over two pages.
+                                value: !include samples/community-list/v1/first-page.json
+                            empty:
+                                displayName: Empty list
+                                description: |
+                                    Demonstration of the list being empty (the first page will always return a valid result).
+                                value: !include samples/community-list/v1/empty.json
 
 /events:
     type: collection
