@@ -230,7 +230,10 @@
     ],
     "pdf": "https://elifesciences.org/content/4/e09560.pdf",
     "subjects": [
-        "genomics-evolutionary-biology"
+        {
+            "id": "genomics-evolutionary-biology",
+            "name": "Genomics and Evolutionary Biology"
+        }
     ],
     "researchOrganisms": [
         "<i>Homo naledi</i>"
@@ -255,7 +258,10 @@
             "elocationId": "e09561",
             "pdf": "https://elifesciences.org/content/4/e09561.pdf",
             "subjects": [
-                "genomics-evolutionary-biology"
+                {
+                    "id": "genomics-evolutionary-biology",
+                    "name": "Genomics and Evolutionary Biology"
+                }
             ],
             "impactStatement": "A new hominin species found in a South African cave is part of one of the most unusual hominin fossil assemblages on record.",
             "image": {
@@ -289,7 +295,10 @@
             "elocationId": "e10627",
             "pdf": "https://elifesciences.org/content/4/e10627.pdf",
             "subjects": [
-                "genomics-evolutionary-biology"
+                {
+                    "id": "genomics-evolutionary-biology",
+                    "name": "Genomics and Evolutionary Biology"
+                }
             ],
             "impactStatement": "More than 1500 fossils from the Rising Star cave system in South Africa have been assigned to a new human species, <i>Homo naledi</i>, which displays a unique combination of primitive and derived traits throughout the skeleton.",
             "image": {

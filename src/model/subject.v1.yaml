@@ -1,22 +1,14 @@
 $schema: http://json-schema.org/draft-04/schema#
 title: Subject
 type: object
-properties:
-    id:
-        description: ID
-        type: string
-        minLength: 1
-    name:
-        description: Name
-        type: string
-        minLength: 1
-    impactStatement:
-        description: Description of the subject
-        type: string
-    image:
-        $ref: ../misc/image.v1.yaml
-required:
-  - id
-  - name
-  - impactStatement
-  - image
+allOf:
+  - $ref: ../snippets/subject.v1.yaml
+  - properties:
+        impactStatement:
+            description: Description of the subject
+            type: string
+        image:
+            $ref: ../misc/image.v1.yaml
+    required:
+      - impactStatement
+      - image

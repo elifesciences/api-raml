@@ -26,7 +26,10 @@
             "elocationId": "e09560",
             "pdf": "https://elifesciences.org/content/4/e09560.pdf",
             "subjects": [
-                "genomics-evolutionary-biology"
+                {
+                    "id": "genomics-evolutionary-biology",
+                    "name": "Genomics and Evolutionary Biology"
+                }
             ],
             "impactStatement": "A new hominin species has been unearthed in the Dinaledi Chamber of the Rising Star cave system in the largest assemblage of a single species of hominins yet discovered in Africa.",
             "image": {
@@ -54,7 +57,10 @@
             "impactStatement": "In their research paper – Cyanobacteria use micro-optics to sense light direction – Schuergers et al. reveal how bacterial cells act as the equivalent of a microscopic eyeball or the world’s oldest and smallest camera eye, allowing them to ‘see’.",
             "published": "2016-07-08T08:33:25+00:00",
             "subjects": [
-                "biophysics-structural-biology"
+                {
+                    "id": "biophysics-structural-biology",
+                    "name": "Biophysics and Structural Biology"
+                }
             ]
         },
         {

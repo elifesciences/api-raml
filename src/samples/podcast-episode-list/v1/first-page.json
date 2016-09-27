@@ -57,8 +57,14 @@
                 }
             ],
             "subjects": [
-                "biochemistry",
-                "ecology"
+                {
+                    "id": "biochemistry",
+                    "name": "Biochemistry"
+                },
+                {
+                    "id": "ecology",
+                    "name": "Ecology"
+                }
             ]
         }
     ]

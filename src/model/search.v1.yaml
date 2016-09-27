@@ -67,23 +67,15 @@ properties:
         items:
             title: Number of results with each subject
             type: object
-            properties:
-                id:
-                    description: ID
-                    type: string
-                    minLength: 1
-                name:
-                    description: Name
-                    type: string
-                    minLength: 1
-                results:
-                    description: Results
-                    type: integer
-                    minimum: 0
-            required:
-              - id
-              - name
-              - results
+            allOf:
+              - $ref: ../snippets/subject.v1.yaml
+              - properties:
+                    results:
+                        description: Results
+                        type: integer
+                        minimum: 0
+                required:
+                  - results
         uniqueItems: true
     types:
         title: Content types
