@@ -19,6 +19,8 @@ Install the project dependencies:
     
 The compiled contents of `./src/` can be found in `./dist/`.
 
+CHANGES TO `./dist/` SHOULD NOT BE COMMITTED!
+
 ## Copyright & Licence
 
 This project is [MIT licenced](LICENCE.txt)
