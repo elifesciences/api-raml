@@ -1,6 +1,7 @@
 {
     "received": "2015-06-19",
     "accepted": "2015-08-04",
-    "poa": 0,
-    "vor": 1
+    "versions": [
+        {"status": "vor", "version": 1, "published": "2015-09-01T23:59:00Z"}
+    ] 
 }
