@@ -26,6 +26,7 @@ properties:
         title: Source data URI
         type: string
         format: uri
+        pattern: ^https://
 required:
   - mediaType
   - uri
