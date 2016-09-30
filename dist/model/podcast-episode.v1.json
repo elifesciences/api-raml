@@ -271,6 +271,11 @@
                                                             "type": "string",
                                                             "format": "date-time"
                                                         },
+                                                        "statusDate": {
+                                                            "description": "Date/time the `status` changed to this value (eg article moved from PoA to VoR).\n",
+                                                            "type": "string",
+                                                            "format": "date-time"
+                                                        },
                                                         "volume": {
                                                             "type": "integer",
                                                             "minimum": 1
@@ -342,6 +347,7 @@
                                                         "authorLine",
                                                         "title",
                                                         "published",
+                                                        "statusDate",
                                                         "volume",
                                                         "elocationId"
                                                     ]
