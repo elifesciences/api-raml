@@ -1605,15 +1605,7 @@
                                     },
                                     {
                                         "type": "string",
-                                        "enum": [
-                                            "in-press"
-                                        ]
-                                    },
-                                    {
-                                        "title": "eLocation ID",
-                                        "description": "Bibliographic identifier for a document that does not have traditional printed page numbers.\n",
-                                        "type": "string",
-                                        "pattern": "^[A-Za-z0-9]+$"
+                                        "minLength": 1
                                     }
                                 ]
                             }
