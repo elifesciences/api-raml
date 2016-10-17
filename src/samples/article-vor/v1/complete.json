@@ -597,7 +597,7 @@
             ],
             "bookTitle": "Minimum book",
             "chapterTitle": "Minimum chapter",
-            "pages": "in-press",
+            "pages": "in press",
             "publisher": {
                 "name": [
                     "A publisher"
@@ -873,7 +873,7 @@
                     "A journal"
                 ]
             },
-            "pages": "in-press"
+            "pages": "in press"
         },
         {
             "type": "journal",
@@ -993,7 +993,7 @@
                     "A periodical"
                 ]
             },
-            "pages": "in-press"
+            "pages": "in press"
         },
         {
             "type": "periodical",
