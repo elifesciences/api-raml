@@ -59,10 +59,18 @@ oneOf:
                         type: string
                         enum:
                           - person
+                    biography:
+                        type: array
+                        items:
+                            $ref: ../blocks/paragraph.v1.yaml
                     deceased:
                         description: Whether the person was deceased when the article was published.
                         type: boolean
                         default: false
+                    role:
+                        description: The person's role at eLife
+                        type: string
+                        minLength: 1
           - allOf:
               - properties:
                     type:
