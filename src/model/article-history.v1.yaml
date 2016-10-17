@@ -35,6 +35,4 @@ dependencies:
     accepted:
       - received
 required:
-    - received
-    - accepted
     - versions
