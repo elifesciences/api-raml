@@ -492,10 +492,39 @@
                                                             "pattern": "^<table>.+</table>$"
                                                         }
                                                     },
-                                                    "footer": {
+                                                    "footnotes": {
                                                         "type": "array",
                                                         "items": {
-                                                            "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/0/definitions/image/properties/caption/items/oneOf/1"
+                                                            "$schema": "http://json-schema.org/draft-04/schema#",
+                                                            "title": "Footnote",
+                                                            "type": "object",
+                                                            "properties": {
+                                                                "id": {
+                                                                    "$ref": "#/allOf/1/properties/content/items/oneOf/1/properties/id"
+                                                                },
+                                                                "label": {
+                                                                    "type": "string",
+                                                                    "minLength": 1
+                                                                },
+                                                                "text": {
+                                                                    "type": "array",
+                                                                    "items": {
+                                                                        "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/0/definitions/image/properties/caption/items/oneOf/1"
+                                                                    },
+                                                                    "minItems": 1
+                                                                }
+                                                            },
+                                                            "required": [
+                                                                "text"
+                                                            ],
+                                                            "dependencies": {
+                                                                "id": [
+                                                                    "label"
+                                                                ],
+                                                                "label": [
+                                                                    "id"
+                                                                ]
+                                                            }
                                                         }
                                                     },
                                                     "sourceData": {

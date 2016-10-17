@@ -9,107 +9,7 @@
             "type": "object",
             "allOf": [
                 {
-                    "$schema": "http://json-schema.org/draft-04/schema#",
-                    "title": "Article snippet",
-                    "type": "object",
-                    "properties": {
-                        "id": {
-                            "type": "string",
-                            "minLength": 1
-                        },
-                        "version": {
-                            "type": "integer",
-                            "minimum": 1
-                        },
-                        "type": {
-                            "type": "string",
-                            "enum": [
-                                "correction",
-                                "editorial",
-                                "feature",
-                                "insight",
-                                "research-advance",
-                                "research-article",
-                                "research-exchange",
-                                "retraction",
-                                "registered-report",
-                                "replication-study",
-                                "short-report",
-                                "tools-resources"
-                            ]
-                        },
-                        "doi": {
-                            "$ref": "#/allOf/2/properties/digest/properties/doi"
-                        },
-                        "authorLine": {
-                            "description": "For example:\n  - Ian T Baldwin\n  - Randy Schekman, Mark Patterson\n  - Lee R Berger et al\n",
-                            "type": "string",
-                            "minLength": 1
-                        },
-                        "title": {
-                            "type": "string",
-                            "minLength": 1
-                        },
-                        "published": {
-                            "type": "string",
-                            "format": "date-time"
-                        },
-                        "volume": {
-                            "type": "integer",
-                            "minimum": 1
-                        },
-                        "elocationId": {
-                            "type": "string",
-                            "minLength": 1
-                        },
-                        "pdf": {
-                            "type": "string",
-                            "format": "uri"
-                        },
-                        "subjects": {
-                            "type": "array",
-                            "items": {
-                                "type": "string",
-                                "minLength": 1
-                            },
-                            "uniqueItems": true
-                        },
-                        "researchOrganisms": {
-                            "type": "array",
-                            "items": {
-                                "type": "string",
-                                "minLength": 1
-                            },
-                            "uniqueItems": true
-                        },
-                        "abstract": {
-                            "type": "object",
-                            "properties": {
-                                "content": {
-                                    "type": "array",
-                                    "items": {
-                                        "$ref": "#/allOf/2/properties/digest/properties/content/items"
-                                    },
-                                    "minItems": 1
-                                }
-                            },
-                            "required": [
-                                "content"
-                            ]
-                        }
-                    },
-                    "required": [
-                        "status",
-                        "id",
-                        "version",
-                        "type",
-                        "doi",
-                        "authorLine",
-                        "title",
-                        "published",
-                        "volume",
-                        "elocationId"
-                    ]
+                    "$ref": "#/allOf/1/allOf/0"
                 },
                 {
                     "properties": {
@@ -233,7 +133,117 @@
             "type": "object",
             "allOf": [
                 {
-                    "$ref": "#/allOf/0/allOf/0"
+                    "$schema": "http://json-schema.org/draft-04/schema#",
+                    "title": "Article snippet",
+                    "type": "object",
+                    "properties": {
+                        "id": {
+                            "type": "string",
+                            "minLength": 1
+                        },
+                        "version": {
+                            "type": "integer",
+                            "minimum": 1
+                        },
+                        "type": {
+                            "type": "string",
+                            "enum": [
+                                "correction",
+                                "editorial",
+                                "feature",
+                                "insight",
+                                "research-advance",
+                                "research-article",
+                                "research-exchange",
+                                "retraction",
+                                "registered-report",
+                                "replication-study",
+                                "short-report",
+                                "tools-resources"
+                            ]
+                        },
+                        "doi": {
+                            "$ref": "#/allOf/2/properties/digest/properties/doi"
+                        },
+                        "authorLine": {
+                            "description": "For example:\n  - Ian T Baldwin\n  - Randy Schekman, Mark Patterson\n  - Lee R Berger et al\n",
+                            "type": "string",
+                            "minLength": 1
+                        },
+                        "title": {
+                            "type": "string",
+                            "minLength": 1
+                        },
+                        "titlePrefix": {
+                            "type": "string",
+                            "minLength": 1
+                        },
+                        "published": {
+                            "type": "string",
+                            "format": "date-time"
+                        },
+                        "statusDate": {
+                            "description": "Date/time the `status` changed to this value (eg article moved from PoA to VoR).\n",
+                            "type": "string",
+                            "format": "date-time"
+                        },
+                        "volume": {
+                            "type": "integer",
+                            "minimum": 1
+                        },
+                        "elocationId": {
+                            "type": "string",
+                            "minLength": 1
+                        },
+                        "pdf": {
+                            "type": "string",
+                            "format": "uri"
+                        },
+                        "subjects": {
+                            "type": "array",
+                            "items": {
+                                "type": "string",
+                                "minLength": 1
+                            },
+                            "uniqueItems": true
+                        },
+                        "researchOrganisms": {
+                            "type": "array",
+                            "items": {
+                                "type": "string",
+                                "minLength": 1
+                            },
+                            "uniqueItems": true
+                        },
+                        "abstract": {
+                            "type": "object",
+                            "properties": {
+                                "content": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/allOf/2/properties/decisionLetter/properties/description/items"
+                                    },
+                                    "minItems": 1
+                                }
+                            },
+                            "required": [
+                                "content"
+                            ]
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "id",
+                        "version",
+                        "type",
+                        "doi",
+                        "authorLine",
+                        "title",
+                        "published",
+                        "statusDate",
+                        "volume",
+                        "elocationId"
+                    ]
                 },
                 {
                     "properties": {
@@ -547,7 +557,7 @@
                                         "type": "object",
                                         "allOf": [
                                             {
-                                                "$ref": "#/allOf/0/allOf/0"
+                                                "$ref": "#/allOf/1/allOf/0"
                                             },
                                             {
                                                 "properties": {
@@ -640,25 +650,7 @@
                         "content": {
                             "type": "array",
                             "items": {
-                                "$schema": "http://json-schema.org/draft-04/schema#",
-                                "title": "Paragraph",
-                                "type": "object",
-                                "properties": {
-                                    "type": {
-                                        "type": "string",
-                                        "enum": [
-                                            "paragraph"
-                                        ]
-                                    },
-                                    "text": {
-                                        "title": "Text",
-                                        "type": "string"
-                                    }
-                                },
-                                "required": [
-                                    "type",
-                                    "text"
-                                ]
+                                "$ref": "#/allOf/2/properties/decisionLetter/properties/description/items"
                             },
                             "minItems": 1
                         }
@@ -1608,7 +1600,25 @@
                         "description": {
                             "type": "array",
                             "items": {
-                                "$ref": "#/allOf/2/properties/digest/properties/content/items"
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "title": "Paragraph",
+                                "type": "object",
+                                "properties": {
+                                    "type": {
+                                        "type": "string",
+                                        "enum": [
+                                            "paragraph"
+                                        ]
+                                    },
+                                    "text": {
+                                        "title": "Text",
+                                        "type": "string"
+                                    }
+                                },
+                                "required": [
+                                    "type",
+                                    "text"
+                                ]
                             },
                             "minItems": 1
                         },
@@ -1722,7 +1732,7 @@
                                                                                     ]
                                                                                 },
                                                                                 {
-                                                                                    "$ref": "#/allOf/2/properties/digest/properties/content/items"
+                                                                                    "$ref": "#/allOf/2/properties/decisionLetter/properties/description/items"
                                                                                 }
                                                                             ]
                                                                         },
@@ -1773,7 +1783,7 @@
                                                                                     "title": "Caption",
                                                                                     "type": "array",
                                                                                     "items": {
-                                                                                        "$ref": "#/allOf/2/properties/digest/properties/content/items"
+                                                                                        "$ref": "#/allOf/2/properties/decisionLetter/properties/description/items"
                                                                                     },
                                                                                     "minItems": 1
                                                                                 },
@@ -1875,7 +1885,7 @@
                                                         "$ref": "#/allOf/2/properties/authorResponse/properties/content/items/oneOf/0/oneOf/0/oneOf/0/definitions/image/properties/caption/items/oneOf/0"
                                                     },
                                                     {
-                                                        "$ref": "#/allOf/2/properties/digest/properties/content/items"
+                                                        "$ref": "#/allOf/2/properties/decisionLetter/properties/description/items"
                                                     },
                                                     {
                                                         "$schema": "http://json-schema.org/draft-04/schema#",
@@ -1897,7 +1907,7 @@
                                                                 "title": "Answer",
                                                                 "type": "array",
                                                                 "items": {
-                                                                    "$ref": "#/allOf/2/properties/digest/properties/content/items"
+                                                                    "$ref": "#/allOf/2/properties/decisionLetter/properties/description/items"
                                                                 },
                                                                 "minItems": 1
                                                             }
@@ -1923,7 +1933,7 @@
                                                                 "title": "Text",
                                                                 "type": "array",
                                                                 "items": {
-                                                                    "$ref": "#/allOf/2/properties/digest/properties/content/items"
+                                                                    "$ref": "#/allOf/2/properties/decisionLetter/properties/description/items"
                                                                 },
                                                                 "minItems": 1
                                                             },
@@ -1968,7 +1978,7 @@
                                                                 "title": "Caption",
                                                                 "type": "array",
                                                                 "items": {
-                                                                    "$ref": "#/allOf/2/properties/digest/properties/content/items"
+                                                                    "$ref": "#/allOf/2/properties/decisionLetter/properties/description/items"
                                                                 },
                                                                 "minItems": 1
                                                             },
@@ -1980,10 +1990,39 @@
                                                                     "pattern": "^<table>.+</table>$"
                                                                 }
                                                             },
-                                                            "footer": {
+                                                            "footnotes": {
                                                                 "type": "array",
                                                                 "items": {
-                                                                    "$ref": "#/allOf/2/properties/digest/properties/content/items"
+                                                                    "$schema": "http://json-schema.org/draft-04/schema#",
+                                                                    "title": "Footnote",
+                                                                    "type": "object",
+                                                                    "properties": {
+                                                                        "id": {
+                                                                            "$ref": "#/allOf/2/properties/body/items/allOf/0/properties/id"
+                                                                        },
+                                                                        "label": {
+                                                                            "type": "string",
+                                                                            "minLength": 1
+                                                                        },
+                                                                        "text": {
+                                                                            "type": "array",
+                                                                            "items": {
+                                                                                "$ref": "#/allOf/2/properties/decisionLetter/properties/description/items"
+                                                                            },
+                                                                            "minItems": 1
+                                                                        }
+                                                                    },
+                                                                    "required": [
+                                                                        "text"
+                                                                    ],
+                                                                    "dependencies": {
+                                                                        "id": [
+                                                                            "label"
+                                                                        ],
+                                                                        "label": [
+                                                                            "id"
+                                                                        ]
+                                                                    }
                                                                 }
                                                             },
                                                             "sourceData": {
@@ -2041,7 +2080,7 @@
                                                                 "title": "Caption",
                                                                 "type": "array",
                                                                 "items": {
-                                                                    "$ref": "#/allOf/2/properties/digest/properties/content/items"
+                                                                    "$ref": "#/allOf/2/properties/decisionLetter/properties/description/items"
                                                                 },
                                                                 "minItems": 1
                                                             },
