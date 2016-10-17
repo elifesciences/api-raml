@@ -384,10 +384,21 @@
                                                                             "person"
                                                                         ]
                                                                     },
+                                                                    "biography": {
+                                                                        "type": "array",
+                                                                        "items": {
+                                                                            "$ref": "#/allOf/0/allOf/0/properties/abstract/properties/content/items"
+                                                                        }
+                                                                    },
                                                                     "deceased": {
                                                                         "description": "Whether the person was deceased when the article was published.",
                                                                         "type": "boolean",
                                                                         "default": false
+                                                                    },
+                                                                    "role": {
+                                                                        "description": "The person's role at eLife",
+                                                                        "type": "string",
+                                                                        "minLength": 1
                                                                     }
                                                                 }
                                                             }
