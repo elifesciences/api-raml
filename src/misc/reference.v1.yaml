@@ -466,6 +466,32 @@ allOf:
           - authors
           - title
           - uri
+      - properties:
+            type:
+                type: string
+                enum:
+                  - unknown # This is purely for legacy references which are incomplete
+            authors:
+                type: array
+                items:
+                    $ref: author.v1.yaml
+                minItems: 1
+            authorsEtAl:
+                description: If there are more authors.
+                type: boolean
+                default: false
+            title:
+                type: string
+                minLength: 1
+            details:
+                type: string
+                minLength: 1
+            uri:
+                type: string
+                format: uri
+        required:
+          - authors
+          - title
 
 definitions:
     book:

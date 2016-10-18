@@ -1303,6 +1303,43 @@
             "website": "A website",
             "accessed": "2016-09-16",
             "uri": "http://www.example.com/"
+        },
+        {
+            "type": "unknown",
+            "id": "bib27",
+            "date": "2014",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "Person One",
+                        "index": "One, Person"
+                    }
+                }
+            ],
+            "title": "Minimal unknown"
+        },
+        {
+            "type": "unknown",
+            "id": "bib28",
+            "date": "2014",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "Person One",
+                        "index": "One, Person"
+                    }
+                },
+                {
+                    "type": "group",
+                    "name": "Group One"
+                }
+            ],
+            "authorsEtAl": true,
+            "title": "Complete unknown",
+            "details": "Some details",
+            "uri": "http://www.example.com/"
         }
     ],
     "appendices": [
