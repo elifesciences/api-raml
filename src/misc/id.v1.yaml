@@ -1,0 +1,4 @@
+$schema: http://json-schema.org/draft-04/schema#
+title: eLife ID
+type: string
+pattern: ^[a-z0-9-]+$

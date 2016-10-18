@@ -3,9 +3,7 @@ title: Collection snippet
 type: object
 properties:
     id:
-        description: ID
-        type: string
-        minLength: 1
+        $ref: ../misc/id.v1.yaml
     title:
         description: Title
         type: string
