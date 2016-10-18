@@ -40,11 +40,15 @@ properties:
         type: string
         minLength: 1
     published:
+        description: Date and time this article was first published.
         type: string
         format: date-time
+    versionDate:
+        description: Date and time this version of the article was published.
+        type: string
+        format: date-time        
     statusDate:
-        description: |
-            Date/time the `status` changed to this value (eg article moved from PoA to VoR).
+        description: Date and time this article transitioned from PoA to VoR.
         type: string
         format: date-time
     volume:
