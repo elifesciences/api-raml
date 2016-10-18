@@ -536,7 +536,23 @@
                     ],
                     "image": "https://static-movie-usa.glencoesoftware.com/jpg/10.7554/659/0f10378e095dde7aaf579af504c4bfdc6fb86550/elife-00569-media1.jpg",
                     "width": 640,
-                    "height": 480
+                    "height": 480,
+                    "sourceData": [
+                        {
+                            "doi": "10.7554/eLife.00666.015",
+                            "id": "video1sdata1",
+                            "label": "Video 1—Source data 1",
+                            "title": "Title of the source code",
+                            "caption": [
+                                {
+                                    "type": "paragraph",
+                                    "text": "Legend of the source code."
+                                }
+                            ],
+                            "mediaType": "text/plain",
+                            "uri": "https://elife-publishing-cdn.s3.amazonaws.com/00011/elife-00011-fig2-data1-v1.txt"
+                        }
+                    ]
                 }
             ]
         }
