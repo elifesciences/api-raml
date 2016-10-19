@@ -9,130 +9,6 @@
             "type": "object",
             "allOf": [
                 {
-                    "$ref": "#/allOf/1/allOf/0"
-                },
-                {
-                    "properties": {
-                        "status": {
-                            "type": "string",
-                            "enum": [
-                                "vor"
-                            ]
-                        },
-                        "impactStatement": {
-                            "type": "string",
-                            "minLength": 1
-                        },
-                        "abstract": {
-                            "type": "object",
-                            "properties": {
-                                "doi": {
-                                    "$ref": "#/allOf/1/allOf/0/properties/doi"
-                                }
-                            },
-                            "required": [
-                                "doi"
-                            ]
-                        },
-                        "image": {
-                            "$schema": "http://json-schema.org/draft-04/schema#",
-                            "title": "Image",
-                            "type": "object",
-                            "properties": {
-                                "alt": {
-                                    "title": "Alternative text",
-                                    "type": "string"
-                                },
-                                "sizes": {
-                                    "title": "Sizes",
-                                    "type": "object",
-                                    "properties": {
-                                        "2:1": {
-                                            "type": "object",
-                                            "properties": {
-                                                "900": {
-                                                    "title": "2:1 crop at 900px width",
-                                                    "type": "string",
-                                                    "format": "uri",
-                                                    "pattern": "^https://"
-                                                },
-                                                "1800": {
-                                                    "title": "2:1 crop at 1800px width",
-                                                    "type": "string",
-                                                    "format": "uri",
-                                                    "pattern": "^https://"
-                                                }
-                                            },
-                                            "required": [
-                                                "900",
-                                                "1800"
-                                            ]
-                                        },
-                                        "16:9": {
-                                            "type": "object",
-                                            "properties": {
-                                                "250": {
-                                                    "title": "16:9 crop at 250px width",
-                                                    "type": "string",
-                                                    "format": "uri",
-                                                    "pattern": "^https://"
-                                                },
-                                                "500": {
-                                                    "title": "16:9 crop at 500px width",
-                                                    "type": "string",
-                                                    "format": "uri",
-                                                    "pattern": "^https://"
-                                                }
-                                            },
-                                            "required": [
-                                                "250",
-                                                "500"
-                                            ]
-                                        },
-                                        "1:1": {
-                                            "type": "object",
-                                            "properties": {
-                                                "70": {
-                                                    "title": "1:1 crop at 70px width",
-                                                    "type": "string",
-                                                    "format": "uri",
-                                                    "pattern": "^https://"
-                                                },
-                                                "140": {
-                                                    "title": "1:1 crop at 140px width",
-                                                    "type": "string",
-                                                    "format": "uri",
-                                                    "pattern": "^https://"
-                                                }
-                                            },
-                                            "required": [
-                                                "70",
-                                                "140"
-                                            ]
-                                        }
-                                    },
-                                    "required": [
-                                        "2:1",
-                                        "16:9",
-                                        "1:1"
-                                    ]
-                                }
-                            },
-                            "required": [
-                                "alt",
-                                "sizes"
-                            ]
-                        }
-                    }
-                }
-            ]
-        },
-        {
-            "$schema": "http://json-schema.org/draft-04/schema#",
-            "title": "Article",
-            "type": "object",
-            "allOf": [
-                {
                     "$schema": "http://json-schema.org/draft-04/schema#",
                     "title": "Article snippet",
                     "type": "object",
@@ -247,6 +123,130 @@
                         "volume",
                         "elocationId"
                     ]
+                },
+                {
+                    "properties": {
+                        "status": {
+                            "type": "string",
+                            "enum": [
+                                "vor"
+                            ]
+                        },
+                        "impactStatement": {
+                            "type": "string",
+                            "minLength": 1
+                        },
+                        "abstract": {
+                            "type": "object",
+                            "properties": {
+                                "doi": {
+                                    "$ref": "#/allOf/0/allOf/0/properties/doi"
+                                }
+                            },
+                            "required": [
+                                "doi"
+                            ]
+                        },
+                        "image": {
+                            "$schema": "http://json-schema.org/draft-04/schema#",
+                            "title": "Image",
+                            "type": "object",
+                            "properties": {
+                                "alt": {
+                                    "title": "Alternative text",
+                                    "type": "string"
+                                },
+                                "sizes": {
+                                    "title": "Sizes",
+                                    "type": "object",
+                                    "properties": {
+                                        "2:1": {
+                                            "type": "object",
+                                            "properties": {
+                                                "900": {
+                                                    "title": "2:1 crop at 900px width",
+                                                    "type": "string",
+                                                    "format": "uri",
+                                                    "pattern": "^https://"
+                                                },
+                                                "1800": {
+                                                    "title": "2:1 crop at 1800px width",
+                                                    "type": "string",
+                                                    "format": "uri",
+                                                    "pattern": "^https://"
+                                                }
+                                            },
+                                            "required": [
+                                                "900",
+                                                "1800"
+                                            ]
+                                        },
+                                        "16:9": {
+                                            "type": "object",
+                                            "properties": {
+                                                "250": {
+                                                    "title": "16:9 crop at 250px width",
+                                                    "type": "string",
+                                                    "format": "uri",
+                                                    "pattern": "^https://"
+                                                },
+                                                "500": {
+                                                    "title": "16:9 crop at 500px width",
+                                                    "type": "string",
+                                                    "format": "uri",
+                                                    "pattern": "^https://"
+                                                }
+                                            },
+                                            "required": [
+                                                "250",
+                                                "500"
+                                            ]
+                                        },
+                                        "1:1": {
+                                            "type": "object",
+                                            "properties": {
+                                                "70": {
+                                                    "title": "1:1 crop at 70px width",
+                                                    "type": "string",
+                                                    "format": "uri",
+                                                    "pattern": "^https://"
+                                                },
+                                                "140": {
+                                                    "title": "1:1 crop at 140px width",
+                                                    "type": "string",
+                                                    "format": "uri",
+                                                    "pattern": "^https://"
+                                                }
+                                            },
+                                            "required": [
+                                                "70",
+                                                "140"
+                                            ]
+                                        }
+                                    },
+                                    "required": [
+                                        "2:1",
+                                        "16:9",
+                                        "1:1"
+                                    ]
+                                }
+                            },
+                            "required": [
+                                "alt",
+                                "sizes"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "$schema": "http://json-schema.org/draft-04/schema#",
+            "title": "Article",
+            "type": "object",
+            "allOf": [
+                {
+                    "$ref": "#/allOf/0/allOf/0"
                 },
                 {
                     "properties": {
@@ -571,7 +571,7 @@
                                         "type": "object",
                                         "allOf": [
                                             {
-                                                "$ref": "#/allOf/1/allOf/0"
+                                                "$ref": "#/allOf/0/allOf/0"
                                             },
                                             {
                                                 "properties": {
@@ -656,7 +656,7 @@
                     "type": "object",
                     "properties": {
                         "doi": {
-                            "$ref": "#/allOf/1/allOf/0/properties/doi"
+                            "$ref": "#/allOf/0/allOf/0/properties/doi"
                         },
                         "content": {
                             "type": "array",
@@ -705,10 +705,7 @@
                                         ]
                                     },
                                     "id": {
-                                        "$schema": "http://json-schema.org/draft-04/schema#",
-                                        "title": "HTML ID",
-                                        "type": "string",
-                                        "pattern": "^[^\\s]+$"
+                                        "$ref": "#/allOf/2/properties/appendices/items/properties/id"
                                     },
                                     "title": {
                                         "title": "Text",
@@ -718,7 +715,7 @@
                                         "description": "Content",
                                         "type": "array",
                                         "items": {
-                                            "$ref": "#/allOf/2/properties/decisionLetter/properties/content/items"
+                                            "$ref": "#/allOf/2/properties/authorResponse/properties/content/items"
                                         },
                                         "minItems": 1
                                     }
@@ -748,7 +745,7 @@
                                 "type": "object",
                                 "properties": {
                                     "id": {
-                                        "$ref": "#/allOf/2/properties/body/items/allOf/0/properties/id"
+                                        "$ref": "#/allOf/2/properties/appendices/items/properties/id"
                                     },
                                     "type": {
                                         "type": "string"
@@ -931,7 +928,7 @@
                                                 "$ref": "#/allOf/2/properties/references/items/definitions/pages"
                                             },
                                             "doi": {
-                                                "$ref": "#/allOf/1/allOf/0/properties/doi"
+                                                "$ref": "#/allOf/0/allOf/0/properties/doi"
                                             },
                                             "uri": {
                                                 "type": "string",
@@ -1043,7 +1040,7 @@
                                                         "$ref": "#/allOf/2/properties/references/items/definitions/book/properties/publisher"
                                                     },
                                                     "doi": {
-                                                        "$ref": "#/allOf/1/allOf/0/properties/doi"
+                                                        "$ref": "#/allOf/0/allOf/0/properties/doi"
                                                     },
                                                     "uri": {
                                                         "type": "string",
@@ -1097,7 +1094,7 @@
                                                 "$ref": "#/allOf/2/properties/references/items/definitions/pages"
                                             },
                                             "doi": {
-                                                "$ref": "#/allOf/1/allOf/0/properties/doi"
+                                                "$ref": "#/allOf/0/allOf/0/properties/doi"
                                             },
                                             "pmid": {
                                                 "$ref": "#/allOf/2/properties/references/items/definitions/book/properties/pmid"
@@ -1251,7 +1248,7 @@
                                                 "minLength": 1
                                             },
                                             "doi": {
-                                                "$ref": "#/allOf/1/allOf/0/properties/doi"
+                                                "$ref": "#/allOf/0/allOf/0/properties/doi"
                                             },
                                             "uri": {
                                                 "type": "string",
@@ -1299,7 +1296,7 @@
                                                 "$ref": "#/allOf/2/properties/references/items/definitions/book/properties/publisher"
                                             },
                                             "doi": {
-                                                "$ref": "#/allOf/1/allOf/0/properties/doi"
+                                                "$ref": "#/allOf/0/allOf/0/properties/doi"
                                             },
                                             "pmid": {
                                                 "$ref": "#/allOf/2/properties/references/items/definitions/book/properties/pmid"
@@ -1417,7 +1414,7 @@
                                                 "$ref": "#/allOf/2/properties/references/items/definitions/book/properties/publisher"
                                             },
                                             "doi": {
-                                                "$ref": "#/allOf/1/allOf/0/properties/doi"
+                                                "$ref": "#/allOf/0/allOf/0/properties/doi"
                                             },
                                             "uri": {
                                                 "type": "string",
@@ -1551,7 +1548,7 @@
                                         "minLength": 1
                                     },
                                     "doi": {
-                                        "$ref": "#/allOf/1/allOf/0/properties/doi"
+                                        "$ref": "#/allOf/0/allOf/0/properties/doi"
                                     },
                                     "pmid": {
                                         "$schema": "http://json-schema.org/draft-04/schema#",
@@ -1612,11 +1609,41 @@
                         }
                     }
                 },
+                "appendices": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "title": "HTML ID",
+                                "type": "string",
+                                "pattern": "^[^\\s]+$"
+                            },
+                            "doi": {
+                                "$ref": "#/allOf/0/allOf/0/properties/doi"
+                            },
+                            "title": {
+                                "type": "string",
+                                "minLength": 1
+                            },
+                            "content": {
+                                "$ref": "#/allOf/2/properties/body"
+                            }
+                        },
+                        "required": [
+                            "id",
+                            "doi",
+                            "title",
+                            "content"
+                        ]
+                    }
+                },
                 "decisionLetter": {
                     "type": "object",
                     "properties": {
                         "doi": {
-                            "$ref": "#/allOf/1/allOf/0/properties/doi"
+                            "$ref": "#/allOf/0/allOf/0/properties/doi"
                         },
                         "description": {
                             "type": "array",
@@ -1624,6 +1651,26 @@
                                 "$ref": "#/allOf/2/properties/digest/properties/content/items"
                             },
                             "minItems": 1
+                        },
+                        "content": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/allOf/2/properties/authorResponse/properties/content/items"
+                            },
+                            "minItems": 1
+                        }
+                    },
+                    "required": [
+                        "doi",
+                        "description",
+                        "content"
+                    ]
+                },
+                "authorResponse": {
+                    "type": "object",
+                    "properties": {
+                        "doi": {
+                            "$ref": "#/allOf/0/allOf/0/properties/doi"
                         },
                         "content": {
                             "type": "array",
@@ -1639,7 +1686,7 @@
                                                         "type": "object",
                                                         "allOf": [
                                                             {
-                                                                "$ref": "#/allOf/2/properties/decisionLetter/properties/content/items/oneOf/0/oneOf/0/oneOf/0/definitions/image"
+                                                                "$ref": "#/allOf/2/properties/authorResponse/properties/content/items/oneOf/0/oneOf/0/oneOf/0/definitions/image"
                                                             },
                                                             {
                                                                 "properties": {
@@ -1652,7 +1699,7 @@
                                                                     "supplements": {
                                                                         "type": "array",
                                                                         "items": {
-                                                                            "$ref": "#/allOf/2/properties/decisionLetter/properties/content/items/oneOf/0/oneOf/0/oneOf/0/definitions/image"
+                                                                            "$ref": "#/allOf/2/properties/authorResponse/properties/content/items/oneOf/0/oneOf/0/oneOf/0/definitions/image"
                                                                         }
                                                                     }
                                                                 },
@@ -1666,10 +1713,10 @@
                                                                 "type": "object",
                                                                 "properties": {
                                                                     "doi": {
-                                                                        "$ref": "#/allOf/1/allOf/0/properties/doi"
+                                                                        "$ref": "#/allOf/0/allOf/0/properties/doi"
                                                                     },
                                                                     "id": {
-                                                                        "$ref": "#/allOf/2/properties/body/items/allOf/0/properties/id"
+                                                                        "$ref": "#/allOf/2/properties/appendices/items/properties/id"
                                                                     },
                                                                     "label": {
                                                                         "title": "Label",
@@ -1698,7 +1745,7 @@
                                                                                             ]
                                                                                         },
                                                                                         "id": {
-                                                                                            "$ref": "#/allOf/2/properties/body/items/allOf/0/properties/id"
+                                                                                            "$ref": "#/allOf/2/properties/appendices/items/properties/id"
                                                                                         },
                                                                                         "label": {
                                                                                             "type": "string"
@@ -1747,10 +1794,10 @@
                                                                             "type": "object",
                                                                             "properties": {
                                                                                 "doi": {
-                                                                                    "$ref": "#/allOf/1/allOf/0/properties/doi"
+                                                                                    "$ref": "#/allOf/0/allOf/0/properties/doi"
                                                                                 },
                                                                                 "id": {
-                                                                                    "$ref": "#/allOf/2/properties/body/items/allOf/0/properties/id"
+                                                                                    "$ref": "#/allOf/2/properties/appendices/items/properties/id"
                                                                                 },
                                                                                 "label": {
                                                                                     "title": "Label",
@@ -1849,7 +1896,7 @@
                                                                         {
                                                                             "type": "array",
                                                                             "items": {
-                                                                                "$ref": "#/allOf/2/properties/decisionLetter/properties/content/items/oneOf/0/oneOf/0"
+                                                                                "$ref": "#/allOf/2/properties/authorResponse/properties/content/items/oneOf/0/oneOf/0"
                                                                             },
                                                                             "minItems": 1
                                                                         }
@@ -1865,7 +1912,7 @@
                                                         ]
                                                     },
                                                     {
-                                                        "$ref": "#/allOf/2/properties/decisionLetter/properties/content/items/oneOf/0/oneOf/0/oneOf/0/definitions/image/properties/caption/items/oneOf/0"
+                                                        "$ref": "#/allOf/2/properties/authorResponse/properties/content/items/oneOf/0/oneOf/0/oneOf/0/definitions/image/properties/caption/items/oneOf/0"
                                                     },
                                                     {
                                                         "$ref": "#/allOf/2/properties/digest/properties/content/items"
@@ -1942,10 +1989,10 @@
                                                                 ]
                                                             },
                                                             "doi": {
-                                                                "$ref": "#/allOf/1/allOf/0/properties/doi"
+                                                                "$ref": "#/allOf/0/allOf/0/properties/doi"
                                                             },
                                                             "id": {
-                                                                "$ref": "#/allOf/2/properties/body/items/allOf/0/properties/id"
+                                                                "$ref": "#/allOf/2/properties/appendices/items/properties/id"
                                                             },
                                                             "label": {
                                                                 "title": "Label",
@@ -1981,7 +2028,7 @@
                                                                     "type": "object",
                                                                     "properties": {
                                                                         "id": {
-                                                                            "$ref": "#/allOf/2/properties/body/items/allOf/0/properties/id"
+                                                                            "$ref": "#/allOf/2/properties/appendices/items/properties/id"
                                                                         },
                                                                         "label": {
                                                                             "type": "string",
@@ -2012,7 +2059,7 @@
                                                                 "title": "Source data",
                                                                 "type": "array",
                                                                 "items": {
-                                                                    "$ref": "#/allOf/2/properties/decisionLetter/properties/content/items/oneOf/0/oneOf/0/oneOf/0/definitions/image/properties/sourceData/items"
+                                                                    "$ref": "#/allOf/2/properties/authorResponse/properties/content/items/oneOf/0/oneOf/0/oneOf/0/definitions/image/properties/sourceData/items"
                                                                 }
                                                             }
                                                         },
@@ -2044,10 +2091,10 @@
                                                                 ]
                                                             },
                                                             "doi": {
-                                                                "$ref": "#/allOf/1/allOf/0/properties/doi"
+                                                                "$ref": "#/allOf/0/allOf/0/properties/doi"
                                                             },
                                                             "id": {
-                                                                "$ref": "#/allOf/2/properties/body/items/allOf/0/properties/id"
+                                                                "$ref": "#/allOf/2/properties/appendices/items/properties/id"
                                                             },
                                                             "label": {
                                                                 "title": "Label",
@@ -2075,7 +2122,7 @@
                                                                         "mediaType": {
                                                                             "allOf": [
                                                                                 {
-                                                                                    "$ref": "#/allOf/2/properties/decisionLetter/properties/content/items/oneOf/0/oneOf/0/oneOf/0/definitions/image/properties/sourceData/items/properties/mediaType"
+                                                                                    "$ref": "#/allOf/2/properties/authorResponse/properties/content/items/oneOf/0/oneOf/0/oneOf/0/definitions/image/properties/sourceData/items/properties/mediaType"
                                                                                 },
                                                                                 {
                                                                                     "pattern": "^video/"
@@ -2111,6 +2158,13 @@
                                                                 "title": "Height",
                                                                 "type": "integer",
                                                                 "minimum": 1
+                                                            },
+                                                            "sourceData": {
+                                                                "title": "Source data",
+                                                                "type": "array",
+                                                                "items": {
+                                                                    "$ref": "#/allOf/2/properties/authorResponse/properties/content/items/oneOf/0/oneOf/0/oneOf/0/definitions/image/properties/sourceData/items"
+                                                                }
                                                             }
                                                         },
                                                         "required": [
@@ -2178,10 +2232,10 @@
                                                         ]
                                                     },
                                                     "doi": {
-                                                        "$ref": "#/allOf/1/allOf/0/properties/doi"
+                                                        "$ref": "#/allOf/0/allOf/0/properties/doi"
                                                     },
                                                     "id": {
-                                                        "$ref": "#/allOf/2/properties/body/items/allOf/0/properties/id"
+                                                        "$ref": "#/allOf/2/properties/appendices/items/properties/id"
                                                     },
                                                     "label": {
                                                         "title": "Label",
@@ -2197,7 +2251,7 @@
                                                         "description": "Content",
                                                         "type": "array",
                                                         "items": {
-                                                            "$ref": "#/allOf/2/properties/decisionLetter/properties/content/items/oneOf/0/oneOf/0"
+                                                            "$ref": "#/allOf/2/properties/authorResponse/properties/content/items/oneOf/0/oneOf/0"
                                                         },
                                                         "minItems": 1
                                                     }
@@ -2214,26 +2268,6 @@
                                         "$ref": "#/allOf/2/properties/body/items/allOf/0"
                                     }
                                 ]
-                            },
-                            "minItems": 1
-                        }
-                    },
-                    "required": [
-                        "doi",
-                        "description",
-                        "content"
-                    ]
-                },
-                "authorResponse": {
-                    "type": "object",
-                    "properties": {
-                        "doi": {
-                            "$ref": "#/allOf/1/allOf/0/properties/doi"
-                        },
-                        "content": {
-                            "type": "array",
-                            "items": {
-                                "$ref": "#/allOf/2/properties/decisionLetter/properties/content/items"
                             },
                             "minItems": 1
                         }
