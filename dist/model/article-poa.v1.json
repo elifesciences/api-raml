@@ -53,7 +53,16 @@
                             "type": "string",
                             "minLength": 1
                         },
+                        "titlePrefix": {
+                            "type": "string",
+                            "minLength": 1
+                        },
                         "published": {
+                            "type": "string",
+                            "format": "date-time"
+                        },
+                        "statusDate": {
+                            "description": "Date/time the `status` changed to this value (eg article moved from PoA to VoR).\n",
                             "type": "string",
                             "format": "date-time"
                         },
@@ -128,6 +137,7 @@
                         "authorLine",
                         "title",
                         "published",
+                        "statusDate",
                         "volume",
                         "elocationId"
                     ]
@@ -374,10 +384,21 @@
                                                                             "person"
                                                                         ]
                                                                     },
+                                                                    "biography": {
+                                                                        "type": "array",
+                                                                        "items": {
+                                                                            "$ref": "#/allOf/0/allOf/0/properties/abstract/properties/content/items"
+                                                                        }
+                                                                    },
                                                                     "deceased": {
                                                                         "description": "Whether the person was deceased when the article was published.",
                                                                         "type": "boolean",
                                                                         "default": false
+                                                                    },
+                                                                    "role": {
+                                                                        "description": "The person's role at eLife",
+                                                                        "type": "string",
+                                                                        "minLength": 1
                                                                     }
                                                                 }
                                                             }

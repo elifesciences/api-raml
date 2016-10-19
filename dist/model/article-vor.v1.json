@@ -39,7 +39,10 @@
                             ]
                         },
                         "doi": {
-                            "$ref": "#/allOf/2/properties/digest/properties/doi"
+                            "$schema": "http://json-schema.org/draft-04/schema#",
+                            "title": "DOI",
+                            "type": "string",
+                            "pattern": "^10[.][0-9]{4,}[^\\s\"/<>]*/[^\\s\"]+$"
                         },
                         "authorLine": {
                             "description": "For example:\n  - Ian T Baldwin\n  - Randy Schekman, Mark Patterson\n  - Lee R Berger et al\n",
@@ -50,7 +53,16 @@
                             "type": "string",
                             "minLength": 1
                         },
+                        "titlePrefix": {
+                            "type": "string",
+                            "minLength": 1
+                        },
                         "published": {
+                            "type": "string",
+                            "format": "date-time"
+                        },
+                        "statusDate": {
+                            "description": "Date/time the `status` changed to this value (eg article moved from PoA to VoR).\n",
                             "type": "string",
                             "format": "date-time"
                         },
@@ -107,6 +119,7 @@
                         "authorLine",
                         "title",
                         "published",
+                        "statusDate",
                         "volume",
                         "elocationId"
                     ]
@@ -127,7 +140,7 @@
                             "type": "object",
                             "properties": {
                                 "doi": {
-                                    "$ref": "#/allOf/2/properties/digest/properties/doi"
+                                    "$ref": "#/allOf/0/allOf/0/properties/doi"
                                 }
                             },
                             "required": [
@@ -445,10 +458,21 @@
                                                                             "person"
                                                                         ]
                                                                     },
+                                                                    "biography": {
+                                                                        "type": "array",
+                                                                        "items": {
+                                                                            "$ref": "#/allOf/2/properties/digest/properties/content/items"
+                                                                        }
+                                                                    },
                                                                     "deceased": {
                                                                         "description": "Whether the person was deceased when the article was published.",
                                                                         "type": "boolean",
                                                                         "default": false
+                                                                    },
+                                                                    "role": {
+                                                                        "description": "The person's role at eLife",
+                                                                        "type": "string",
+                                                                        "minLength": 1
                                                                     }
                                                                 }
                                                             }
@@ -632,10 +656,7 @@
                     "type": "object",
                     "properties": {
                         "doi": {
-                            "$schema": "http://json-schema.org/draft-04/schema#",
-                            "title": "DOI",
-                            "type": "string",
-                            "pattern": "^10[.][0-9]{4,}[^\\s\"/<>]*/[^\\s\"]+$"
+                            "$ref": "#/allOf/0/allOf/0/properties/doi"
                         },
                         "content": {
                             "type": "array",
@@ -684,10 +705,7 @@
                                         ]
                                     },
                                     "id": {
-                                        "$schema": "http://json-schema.org/draft-04/schema#",
-                                        "title": "HTML ID",
-                                        "type": "string",
-                                        "pattern": "^[^\\s]+$"
+                                        "$ref": "#/allOf/2/properties/appendices/items/properties/id"
                                     },
                                     "title": {
                                         "title": "Text",
@@ -727,7 +745,7 @@
                                 "type": "object",
                                 "properties": {
                                     "id": {
-                                        "$ref": "#/allOf/2/properties/body/items/allOf/0/properties/id"
+                                        "$ref": "#/allOf/2/properties/appendices/items/properties/id"
                                     },
                                     "type": {
                                         "type": "string"
@@ -910,7 +928,7 @@
                                                 "$ref": "#/allOf/2/properties/references/items/definitions/pages"
                                             },
                                             "doi": {
-                                                "$ref": "#/allOf/2/properties/digest/properties/doi"
+                                                "$ref": "#/allOf/0/allOf/0/properties/doi"
                                             },
                                             "uri": {
                                                 "type": "string",
@@ -1022,7 +1040,7 @@
                                                         "$ref": "#/allOf/2/properties/references/items/definitions/book/properties/publisher"
                                                     },
                                                     "doi": {
-                                                        "$ref": "#/allOf/2/properties/digest/properties/doi"
+                                                        "$ref": "#/allOf/0/allOf/0/properties/doi"
                                                     },
                                                     "uri": {
                                                         "type": "string",
@@ -1076,7 +1094,7 @@
                                                 "$ref": "#/allOf/2/properties/references/items/definitions/pages"
                                             },
                                             "doi": {
-                                                "$ref": "#/allOf/2/properties/digest/properties/doi"
+                                                "$ref": "#/allOf/0/allOf/0/properties/doi"
                                             },
                                             "pmid": {
                                                 "$ref": "#/allOf/2/properties/references/items/definitions/book/properties/pmid"
@@ -1230,7 +1248,7 @@
                                                 "minLength": 1
                                             },
                                             "doi": {
-                                                "$ref": "#/allOf/2/properties/digest/properties/doi"
+                                                "$ref": "#/allOf/0/allOf/0/properties/doi"
                                             },
                                             "uri": {
                                                 "type": "string",
@@ -1278,7 +1296,7 @@
                                                 "$ref": "#/allOf/2/properties/references/items/definitions/book/properties/publisher"
                                             },
                                             "doi": {
-                                                "$ref": "#/allOf/2/properties/digest/properties/doi"
+                                                "$ref": "#/allOf/0/allOf/0/properties/doi"
                                             },
                                             "pmid": {
                                                 "$ref": "#/allOf/2/properties/references/items/definitions/book/properties/pmid"
@@ -1396,7 +1414,7 @@
                                                 "$ref": "#/allOf/2/properties/references/items/definitions/book/properties/publisher"
                                             },
                                             "doi": {
-                                                "$ref": "#/allOf/2/properties/digest/properties/doi"
+                                                "$ref": "#/allOf/0/allOf/0/properties/doi"
                                             },
                                             "uri": {
                                                 "type": "string",
@@ -1530,7 +1548,7 @@
                                         "minLength": 1
                                     },
                                     "doi": {
-                                        "$ref": "#/allOf/2/properties/digest/properties/doi"
+                                        "$ref": "#/allOf/0/allOf/0/properties/doi"
                                     },
                                     "pmid": {
                                         "$schema": "http://json-schema.org/draft-04/schema#",
@@ -1584,26 +1602,48 @@
                                     },
                                     {
                                         "type": "string",
-                                        "enum": [
-                                            "in-press"
-                                        ]
-                                    },
-                                    {
-                                        "title": "eLocation ID",
-                                        "description": "Bibliographic identifier for a document that does not have traditional printed page numbers.\n",
-                                        "type": "string",
-                                        "pattern": "^[A-Za-z0-9]+$"
+                                        "minLength": 1
                                     }
                                 ]
                             }
                         }
                     }
                 },
+                "appendices": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "title": "HTML ID",
+                                "type": "string",
+                                "pattern": "^[^\\s]+$"
+                            },
+                            "doi": {
+                                "$ref": "#/allOf/0/allOf/0/properties/doi"
+                            },
+                            "title": {
+                                "type": "string",
+                                "minLength": 1
+                            },
+                            "content": {
+                                "$ref": "#/allOf/2/properties/body"
+                            }
+                        },
+                        "required": [
+                            "id",
+                            "doi",
+                            "title",
+                            "content"
+                        ]
+                    }
+                },
                 "decisionLetter": {
                     "type": "object",
                     "properties": {
                         "doi": {
-                            "$ref": "#/allOf/2/properties/digest/properties/doi"
+                            "$ref": "#/allOf/0/allOf/0/properties/doi"
                         },
                         "description": {
                             "type": "array",
@@ -1630,7 +1670,7 @@
                     "type": "object",
                     "properties": {
                         "doi": {
-                            "$ref": "#/allOf/2/properties/digest/properties/doi"
+                            "$ref": "#/allOf/0/allOf/0/properties/doi"
                         },
                         "content": {
                             "type": "array",
@@ -1673,10 +1713,10 @@
                                                                 "type": "object",
                                                                 "properties": {
                                                                     "doi": {
-                                                                        "$ref": "#/allOf/2/properties/digest/properties/doi"
+                                                                        "$ref": "#/allOf/0/allOf/0/properties/doi"
                                                                     },
                                                                     "id": {
-                                                                        "$ref": "#/allOf/2/properties/body/items/allOf/0/properties/id"
+                                                                        "$ref": "#/allOf/2/properties/appendices/items/properties/id"
                                                                     },
                                                                     "label": {
                                                                         "title": "Label",
@@ -1705,7 +1745,7 @@
                                                                                             ]
                                                                                         },
                                                                                         "id": {
-                                                                                            "$ref": "#/allOf/2/properties/body/items/allOf/0/properties/id"
+                                                                                            "$ref": "#/allOf/2/properties/appendices/items/properties/id"
                                                                                         },
                                                                                         "label": {
                                                                                             "type": "string"
@@ -1754,10 +1794,10 @@
                                                                             "type": "object",
                                                                             "properties": {
                                                                                 "doi": {
-                                                                                    "$ref": "#/allOf/2/properties/digest/properties/doi"
+                                                                                    "$ref": "#/allOf/0/allOf/0/properties/doi"
                                                                                 },
                                                                                 "id": {
-                                                                                    "$ref": "#/allOf/2/properties/body/items/allOf/0/properties/id"
+                                                                                    "$ref": "#/allOf/2/properties/appendices/items/properties/id"
                                                                                 },
                                                                                 "label": {
                                                                                     "title": "Label",
@@ -1949,10 +1989,10 @@
                                                                 ]
                                                             },
                                                             "doi": {
-                                                                "$ref": "#/allOf/2/properties/digest/properties/doi"
+                                                                "$ref": "#/allOf/0/allOf/0/properties/doi"
                                                             },
                                                             "id": {
-                                                                "$ref": "#/allOf/2/properties/body/items/allOf/0/properties/id"
+                                                                "$ref": "#/allOf/2/properties/appendices/items/properties/id"
                                                             },
                                                             "label": {
                                                                 "title": "Label",
@@ -1980,10 +2020,39 @@
                                                                     "pattern": "^<table>.+</table>$"
                                                                 }
                                                             },
-                                                            "footer": {
+                                                            "footnotes": {
                                                                 "type": "array",
                                                                 "items": {
-                                                                    "$ref": "#/allOf/2/properties/digest/properties/content/items"
+                                                                    "$schema": "http://json-schema.org/draft-04/schema#",
+                                                                    "title": "Footnote",
+                                                                    "type": "object",
+                                                                    "properties": {
+                                                                        "id": {
+                                                                            "$ref": "#/allOf/2/properties/appendices/items/properties/id"
+                                                                        },
+                                                                        "label": {
+                                                                            "type": "string",
+                                                                            "minLength": 1
+                                                                        },
+                                                                        "text": {
+                                                                            "type": "array",
+                                                                            "items": {
+                                                                                "$ref": "#/allOf/2/properties/digest/properties/content/items"
+                                                                            },
+                                                                            "minItems": 1
+                                                                        }
+                                                                    },
+                                                                    "required": [
+                                                                        "text"
+                                                                    ],
+                                                                    "dependencies": {
+                                                                        "id": [
+                                                                            "label"
+                                                                        ],
+                                                                        "label": [
+                                                                            "id"
+                                                                        ]
+                                                                    }
                                                                 }
                                                             },
                                                             "sourceData": {
@@ -2022,10 +2091,10 @@
                                                                 ]
                                                             },
                                                             "doi": {
-                                                                "$ref": "#/allOf/2/properties/digest/properties/doi"
+                                                                "$ref": "#/allOf/0/allOf/0/properties/doi"
                                                             },
                                                             "id": {
-                                                                "$ref": "#/allOf/2/properties/body/items/allOf/0/properties/id"
+                                                                "$ref": "#/allOf/2/properties/appendices/items/properties/id"
                                                             },
                                                             "label": {
                                                                 "title": "Label",
@@ -2089,6 +2158,13 @@
                                                                 "title": "Height",
                                                                 "type": "integer",
                                                                 "minimum": 1
+                                                            },
+                                                            "sourceData": {
+                                                                "title": "Source data",
+                                                                "type": "array",
+                                                                "items": {
+                                                                    "$ref": "#/allOf/2/properties/authorResponse/properties/content/items/oneOf/0/oneOf/0/oneOf/0/definitions/image/properties/sourceData/items"
+                                                                }
                                                             }
                                                         },
                                                         "required": [
@@ -2156,10 +2232,10 @@
                                                         ]
                                                     },
                                                     "doi": {
-                                                        "$ref": "#/allOf/2/properties/digest/properties/doi"
+                                                        "$ref": "#/allOf/0/allOf/0/properties/doi"
                                                     },
                                                     "id": {
-                                                        "$ref": "#/allOf/2/properties/body/items/allOf/0/properties/id"
+                                                        "$ref": "#/allOf/2/properties/appendices/items/properties/id"
                                                     },
                                                     "label": {
                                                         "title": "Label",

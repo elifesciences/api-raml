@@ -55,6 +55,11 @@ properties:
         title: Height
         type: integer
         minimum: 1
+    sourceData:
+        title: Source data
+        type: array
+        items:
+            $ref: ../misc/file.v1.yaml
 required:
   - type
   - sources

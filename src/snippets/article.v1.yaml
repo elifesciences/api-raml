@@ -36,7 +36,15 @@ properties:
     title:
         type: string
         minLength: 1
+    titlePrefix:
+        type: string
+        minLength: 1
     published:
+        type: string
+        format: date-time
+    statusDate:
+        description: |
+            Date/time the `status` changed to this value (eg article moved from PoA to VoR).
         type: string
         format: date-time
     volume:
@@ -78,5 +86,6 @@ required:
   - authorLine
   - title
   - published
+  - statusDate
   - volume
   - elocationId
