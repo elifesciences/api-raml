@@ -91,8 +91,25 @@
                                     "subjects": {
                                         "type": "array",
                                         "items": {
-                                            "type": "string",
-                                            "minLength": 1
+                                            "$schema": "http://json-schema.org/draft-04/schema#",
+                                            "title": "Subject snippet",
+                                            "type": "object",
+                                            "properties": {
+                                                "id": {
+                                                    "description": "ID",
+                                                    "type": "string",
+                                                    "minLength": 1
+                                                },
+                                                "name": {
+                                                    "description": "Name",
+                                                    "type": "string",
+                                                    "minLength": 1
+                                                }
+                                            },
+                                            "required": [
+                                                "id",
+                                                "name"
+                                            ]
                                         },
                                         "uniqueItems": true
                                     },
@@ -337,11 +354,10 @@
                                                         "$ref": "#/properties/items/items/oneOf/1/allOf/1/properties/image"
                                                     },
                                                     "subjects": {
-                                                        "description": "Collection subject IDs",
+                                                        "description": "Collection subjects",
                                                         "type": "array",
                                                         "items": {
-                                                            "type": "string",
-                                                            "minLength": 1
+                                                            "$ref": "#/properties/items/items/oneOf/0/allOf/0/properties/subjects/items"
                                                         }
                                                     },
                                                     "selectedCurator": {
@@ -711,11 +727,10 @@
                                                         "minItems": 1
                                                     },
                                                     "subjects": {
-                                                        "description": "Episode subject IDs",
+                                                        "description": "Episode subjects",
                                                         "type": "array",
                                                         "items": {
-                                                            "type": "string",
-                                                            "minLength": 1
+                                                            "$ref": "#/properties/items/items/oneOf/0/allOf/0/properties/subjects/items"
                                                         }
                                                     }
                                                 },

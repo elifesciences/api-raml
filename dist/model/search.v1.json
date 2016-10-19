@@ -91,8 +91,7 @@
                                     "subjects": {
                                         "type": "array",
                                         "items": {
-                                            "type": "string",
-                                            "minLength": 1
+                                            "$ref": "#/properties/subjects/items/allOf/0"
                                         },
                                         "uniqueItems": true
                                     },
@@ -334,11 +333,10 @@
                                                         "format": "date-time"
                                                     },
                                                     "subjects": {
-                                                        "description": "Article subject IDs",
+                                                        "description": "Article subjects",
                                                         "type": "array",
                                                         "items": {
-                                                            "type": "string",
-                                                            "minLength": 1
+                                                            "$ref": "#/properties/subjects/items/allOf/0"
                                                         },
                                                         "uniqueItems": true
                                                     }
@@ -390,11 +388,10 @@
                                                         "$ref": "#/properties/items/items/oneOf/1/allOf/1/properties/image"
                                                     },
                                                     "subjects": {
-                                                        "description": "Collection subject IDs",
+                                                        "description": "Collection subjects",
                                                         "type": "array",
                                                         "items": {
-                                                            "type": "string",
-                                                            "minLength": 1
+                                                            "$ref": "#/properties/subjects/items/allOf/0"
                                                         }
                                                     },
                                                     "selectedCurator": {
@@ -771,11 +768,10 @@
                                                         "minItems": 1
                                                     },
                                                     "subjects": {
-                                                        "description": "Episode subject IDs",
+                                                        "description": "Episode subjects",
                                                         "type": "array",
                                                         "items": {
-                                                            "type": "string",
-                                                            "minLength": 1
+                                                            "$ref": "#/properties/subjects/items/allOf/0"
                                                         }
                                                     }
                                                 },
@@ -803,27 +799,40 @@
             "items": {
                 "title": "Number of results with each subject",
                 "type": "object",
-                "properties": {
-                    "id": {
-                        "description": "ID",
-                        "type": "string",
-                        "minLength": 1
+                "allOf": [
+                    {
+                        "$schema": "http://json-schema.org/draft-04/schema#",
+                        "title": "Subject snippet",
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "description": "ID",
+                                "type": "string",
+                                "minLength": 1
+                            },
+                            "name": {
+                                "description": "Name",
+                                "type": "string",
+                                "minLength": 1
+                            }
+                        },
+                        "required": [
+                            "id",
+                            "name"
+                        ]
                     },
-                    "name": {
-                        "description": "Name",
-                        "type": "string",
-                        "minLength": 1
-                    },
-                    "results": {
-                        "description": "Results",
-                        "type": "integer",
-                        "minimum": 0
+                    {
+                        "properties": {
+                            "results": {
+                                "description": "Results",
+                                "type": "integer",
+                                "minimum": 0
+                            }
+                        },
+                        "required": [
+                            "results"
+                        ]
                     }
-                },
-                "required": [
-                    "id",
-                    "name",
-                    "results"
                 ]
             },
             "uniqueItems": true
