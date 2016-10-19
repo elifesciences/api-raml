@@ -630,6 +630,13 @@
                                                         "title": "Height",
                                                         "type": "integer",
                                                         "minimum": 1
+                                                    },
+                                                    "sourceData": {
+                                                        "title": "Source data",
+                                                        "type": "array",
+                                                        "items": {
+                                                            "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/0/definitions/image/properties/sourceData/items"
+                                                        }
                                                     }
                                                 },
                                                 "required": [
