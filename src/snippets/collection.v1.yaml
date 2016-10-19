@@ -19,11 +19,10 @@ properties:
     image:
         $ref: ../misc/image.v1.yaml
     subjects:
-        description: Collection subject IDs
+        description: Collection subjects
         type: array
         items:
-            type: string
-            minLength: 1
+            $ref: ../snippets/subject.v1.yaml
     selectedCurator:
         allOf:
           - $ref: ../snippets/person.v1.yaml

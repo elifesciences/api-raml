@@ -59,8 +59,7 @@ properties:
     subjects:
         type: array
         items:
-            type: string
-            minLength: 1
+            $ref: ../snippets/subject.v1.yaml
         uniqueItems: true
     researchOrganisms:
         type: array

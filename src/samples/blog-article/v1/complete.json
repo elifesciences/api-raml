@@ -80,6 +80,9 @@
         }
     ],
     "subjects": [
-        "biophysics-structural-biology"
+        {
+            "id": "biophysics-structural-biology",
+            "name": "Biophysics and Structural Biology"
+        }
     ]
 }

@@ -37,11 +37,10 @@ properties:
               - uri
         minItems: 1
     subjects:
-        description: Episode subject IDs
+        description: Episode subjects
         type: array
         items:
-            type: string
-            minLength: 1
+            $ref: ../snippets/subject.v1.yaml
 required:
   - number
   - title
