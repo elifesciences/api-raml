@@ -4,6 +4,13 @@ type: object
 allOf:
   - $ref: ../snippets/podcast-episode.v1.yaml
   - properties:
+        image:
+            type: object
+            properties:
+                banner:
+                    $ref: ../misc/image-banner.v1.yaml
+            required:
+              - banner
         chapters:
             type: array
             items:

@@ -4,6 +4,13 @@ type: object
 allOf:
   - $ref: ../snippets/collection.v1.yaml
   - properties:
+        image:
+            type: object
+            properties:
+                banner:
+                    $ref: ../misc/image-banner.v1.yaml
+            required:
+              - banner
         subTitle:
             description: Sub-title
             type: string

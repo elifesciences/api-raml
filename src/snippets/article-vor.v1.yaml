@@ -19,4 +19,9 @@ allOf:
             required:
               - doi
         image:
-            $ref: ../misc/image.v1.yaml
+            type: object
+            properties:
+                thumbnail:
+                    $ref: ../misc/image-thumbnail.v1.yaml
+            required:
+              - thumbnail
