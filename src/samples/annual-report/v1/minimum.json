@@ -5,10 +5,6 @@
     "image": {
         "alt": "",
         "sizes": {
-            "2:1": {
-                "900": "https://placehold.it/900x450",
-                "1800": "https://placehold.it/1800x900"
-            },
             "16:9": {
                 "250": "https://placehold.it/250x141",
                 "500": "https://placehold.it/500x281"

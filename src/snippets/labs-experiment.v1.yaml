@@ -17,7 +17,12 @@ properties:
         type: string
         format: date-time
     image:
-        $ref: ../misc/image.v1.yaml
+        type: object
+        properties:
+            thumbnail:
+                $ref: ../misc/image-thumbnail.v1.yaml
+        required:
+          - thumbnail
 required:
   - number
   - title
