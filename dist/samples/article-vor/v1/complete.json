@@ -275,19 +275,17 @@
             ],
             "impactStatement": "A new hominin species found in a South African cave is part of one of the most unusual hominin fossil assemblages on record.",
             "image": {
-                "alt": "",
-                "sizes": {
-                    "2:1": {
-                        "900": "https://placehold.it/900x450",
-                        "1800": "https://placehold.it/1800x900"
-                    },
-                    "16:9": {
-                        "250": "https://placehold.it/250x141",
-                        "500": "https://placehold.it/500x281"
-                    },
-                    "1:1": {
-                        "70": "https://placehold.it/70x70",
-                        "140": "https://placehold.it/140x140"
+                "thumbnail": {
+                    "alt": "",
+                    "sizes": {
+                        "16:9": {
+                            "250": "https://placehold.it/250x141",
+                            "500": "https://placehold.it/500x281"
+                        },
+                        "1:1": {
+                            "70": "https://placehold.it/70x70",
+                            "140": "https://placehold.it/140x140"
+                        }
                     }
                 }
             }
@@ -313,19 +311,17 @@
             ],
             "impactStatement": "More than 1500 fossils from the Rising Star cave system in South Africa have been assigned to a new human species, <i>Homo naledi</i>, which displays a unique combination of primitive and derived traits throughout the skeleton.",
             "image": {
-                "alt": "",
-                "sizes": {
-                    "2:1": {
-                        "900": "https://placehold.it/900x450",
-                        "1800": "https://placehold.it/1800x900"
-                    },
-                    "16:9": {
-                        "250": "https://placehold.it/250x141",
-                        "500": "https://placehold.it/500x281"
-                    },
-                    "1:1": {
-                        "70": "https://placehold.it/70x70",
-                        "140": "https://placehold.it/140x140"
+                "thumbnail": {
+                    "alt": "",
+                    "sizes": {
+                        "16:9": {
+                            "250": "https://placehold.it/250x141",
+                            "500": "https://placehold.it/500x281"
+                        },
+                        "1:1": {
+                            "70": "https://placehold.it/70x70",
+                            "140": "https://placehold.it/140x140"
+                        }
                     }
                 }
             }
@@ -333,19 +329,26 @@
     ],
     "impactStatement": "A new hominin species has been unearthed in the Dinaledi Chamber of the Rising Star cave system in the largest assemblage of a single species of hominins yet discovered in Africa.",
     "image": {
-        "alt": "",
-        "sizes": {
-            "2:1": {
-                "900": "https://placehold.it/900x450",
-                "1800": "https://placehold.it/1800x900"
-            },
-            "16:9": {
-                "250": "https://placehold.it/250x141",
-                "500": "https://placehold.it/500x281"
-            },
-            "1:1": {
-                "70": "https://placehold.it/70x70",
-                "140": "https://placehold.it/140x140"
+        "banner": {
+            "alt": "",
+            "sizes": {
+                "2:1": {
+                    "900": "https://placehold.it/900x450",
+                    "1800": "https://placehold.it/1800x900"
+                }
+            }
+        },
+        "thumbnail": {
+            "alt": "",
+            "sizes": {
+                "16:9": {
+                    "250": "https://placehold.it/250x141",
+                    "500": "https://placehold.it/500x281"
+                },
+                "1:1": {
+                    "70": "https://placehold.it/70x70",
+                    "140": "https://placehold.it/140x140"
+                }
             }
         }
     },
