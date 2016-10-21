@@ -8,8 +8,14 @@
     "orcid": "0000-0002-1825-0097",
     "research": {
         "expertises": [
-            "biophysics-structural-biology",
-            "immunology"
+            {
+                "id": "biophysics-structural-biology",
+                "name": "Biophysics and Structural Biology"
+            },
+            {
+                "id": "immunology",
+                "name": "Immunology"
+            }
         ],
         "focuses": [
             "Structural biology",
