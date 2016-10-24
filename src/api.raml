@@ -228,6 +228,11 @@ traits:
                                 description: |
                                     List is split over two pages.
                                 value: !include samples/article-list/v1/first-page.json
+                            mixedResults:
+                                displayName: Mixed results
+                                description: |
+                                    List contains mixed published and preview content.
+                                value: !include samples/article-list/v1/unpublished-first-page.json
                             empty:
                                 displayName: Empty list
                                 description: |
@@ -262,6 +267,13 @@ traits:
                                 complete:
                                     displayName: Complete
                                     value: !include samples/article-poa/v1/complete.json
+                                unpublishedMinimum:
+                                    displayName: PreviewMinimum
+                                    value: !include samples/article-poa/v1/unpublished-minimum.json
+                                unpublishedComplete:
+                                    displayName: PreviewComplete
+                                    value: !include samples/article-poa/v1/unpublished-complete.json
+
                         application/vnd.elife.article-vor+json;version=1:
                             schema: !include model/article-vor.v1.json
                             examples:
@@ -271,6 +283,12 @@ traits:
                                 complete:
                                     displayName: Complete
                                     value: !include samples/article-vor/v1/complete.json
+                                unpublishedMinimum:
+                                    displayName: PreviewMinimum
+                                    value: !include samples/article-vor/v1/unpublished-minimum.json
+                                unpublishedComplete:
+                                    displayName: PreviewComplete
+                                    value: !include samples/article-vor/v1/unpublished-complete.json
 
         /versions:
             type:
@@ -298,6 +316,14 @@ traits:
                                     multipleVersions:
                                         displayName: Multiple versions
                                         value: !include samples/article-history/v1/multiple-versions.json
+                                    unpublishedMinimum: 
+                                        displayName: PreviewMinimum
+                                        value: !include samples/article-history/v1/unpublished-minimum.json
+                                    unpublishedMultipleVersions:
+                                        displayName: Multiple Versions With Preview
+                                        description: |
+                                            Multiple versions including a version being previewed.
+                                        value: !include samples/article-history/v1/unpublished-multiple-versions.json
 
             /{version}:
                 type:
@@ -328,6 +354,13 @@ traits:
                                         complete:
                                             displayName: Complete
                                             value: !include samples/article-poa/v1/complete.json
+                                        unpublishedMinimum:
+                                            displayName: PreviewMinimum
+                                            value: !include samples/article-poa/v1/unpublished-minimum.json
+                                        unpublishedComplete:
+                                            displayName: PreviewComplete
+                                            value: !include samples/article-poa/v1/unpublished-complete.json
+
                                 application/vnd.elife.article-vor+json;version=1:
                                     schema: !include ../dist/model/article-vor.v1.json
                                     examples:
@@ -337,6 +370,12 @@ traits:
                                         complete:
                                             displayName: Complete
                                             value: !include samples/article-vor/v1/complete.json
+                                        unpublishedMinimum:
+                                            displayName: PreviewMinimum
+                                            value: !include samples/article-vor/v1/unpublished-minimum.json
+                                        unpublishedComplete:
+                                            displayName: PreviewComplete
+                                            value: !include samples/article-vor/v1/unpublished-complete.json
 
 /blog-articles:
     type: collection
