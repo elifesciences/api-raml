@@ -1652,19 +1652,19 @@
                                                 "title": "First page",
                                                 "description": "Page number on which the work starts.\n\nFor example:\n  - 8\n  - D760\n  - xii\n",
                                                 "type": "string",
-                                                "pattern": "^[A-Za-z0-9]+$"
+                                                "pattern": "^[A-Za-z0-9\\.]+$"
                                             },
                                             "last": {
                                                 "title": "Last page",
                                                 "description": "Page number on which the work ends. If the work is only on one page, this will be the same as `first`.\n\nFor example:\n  - 8\n  - D714\n  - xiii\n",
                                                 "type": "string",
-                                                "pattern": "^[A-Za-z0-9]+$"
+                                                "pattern": "^[A-Za-z0-9\\.]+$"
                                             },
                                             "range": {
                                                 "title": "Page ranges",
                                                 "description": "Complete page range information for the work. Contains one or more comma-seperated page ranges.\n\n`first` contains the first value, `last` the final value.\n\nFor example:\n  - 8\n  - D706–D714\n  - 8–11, 14–19, 40\n",
                                                 "type": "string",
-                                                "pattern": "^([A-Za-z0-9]+(–[A-Za-z0-9]+)?)(, ([A-Za-z0-9]+(–[A-Za-z0-9]+)?))*$"
+                                                "pattern": "^([A-Za-z0-9\\.]+(–[A-Za-z0-9\\.]+)?)(, ([A-Za-z0-9\\.]+(–[A-Za-z0-9\\.]+)?))*$"
                                             }
                                         },
                                         "required": [
