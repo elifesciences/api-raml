@@ -35,11 +35,28 @@
                         "format": "date-time"
                     },
                     "subjects": {
-                        "description": "Article subject IDs",
+                        "description": "Article subjects",
                         "type": "array",
                         "items": {
-                            "type": "string",
-                            "minLength": 1
+                            "$schema": "http://json-schema.org/draft-04/schema#",
+                            "title": "Subject snippet",
+                            "type": "object",
+                            "properties": {
+                                "id": {
+                                    "description": "ID",
+                                    "type": "string",
+                                    "minLength": 1
+                                },
+                                "name": {
+                                    "description": "Name",
+                                    "type": "string",
+                                    "minLength": 1
+                                }
+                            },
+                            "required": [
+                                "id",
+                                "name"
+                            ]
                         },
                         "uniqueItems": true
                     }

@@ -9,6 +9,116 @@
             "type": "object",
             "allOf": [
                 {
+                    "$ref": "#/allOf/1/allOf/0"
+                },
+                {
+                    "properties": {
+                        "status": {
+                            "type": "string",
+                            "enum": [
+                                "vor"
+                            ]
+                        },
+                        "impactStatement": {
+                            "type": "string",
+                            "minLength": 1
+                        },
+                        "abstract": {
+                            "type": "object",
+                            "properties": {
+                                "doi": {
+                                    "$ref": "#/allOf/2/properties/digest/properties/doi"
+                                }
+                            },
+                            "required": [
+                                "doi"
+                            ]
+                        },
+                        "image": {
+                            "type": "object",
+                            "properties": {
+                                "thumbnail": {
+                                    "$schema": "http://json-schema.org/draft-04/schema#",
+                                    "title": "Thumbnail image",
+                                    "type": "object",
+                                    "properties": {
+                                        "alt": {
+                                            "title": "Alternative text",
+                                            "type": "string"
+                                        },
+                                        "sizes": {
+                                            "title": "Sizes",
+                                            "type": "object",
+                                            "properties": {
+                                                "16:9": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "250": {
+                                                            "title": "16:9 crop at 250px width",
+                                                            "type": "string",
+                                                            "format": "uri",
+                                                            "pattern": "^https://"
+                                                        },
+                                                        "500": {
+                                                            "title": "16:9 crop at 500px width",
+                                                            "type": "string",
+                                                            "format": "uri",
+                                                            "pattern": "^https://"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "250",
+                                                        "500"
+                                                    ]
+                                                },
+                                                "1:1": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "70": {
+                                                            "title": "1:1 crop at 70px width",
+                                                            "type": "string",
+                                                            "format": "uri",
+                                                            "pattern": "^https://"
+                                                        },
+                                                        "140": {
+                                                            "title": "1:1 crop at 140px width",
+                                                            "type": "string",
+                                                            "format": "uri",
+                                                            "pattern": "^https://"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "70",
+                                                        "140"
+                                                    ]
+                                                }
+                                            },
+                                            "required": [
+                                                "16:9",
+                                                "1:1"
+                                            ]
+                                        }
+                                    },
+                                    "required": [
+                                        "alt",
+                                        "sizes"
+                                    ]
+                                }
+                            },
+                            "required": [
+                                "thumbnail"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "$schema": "http://json-schema.org/draft-04/schema#",
+            "title": "Article",
+            "type": "object",
+            "allOf": [
+                {
                     "$schema": "http://json-schema.org/draft-04/schema#",
                     "title": "Article snippet",
                     "type": "object",
@@ -39,10 +149,7 @@
                             ]
                         },
                         "doi": {
-                            "$schema": "http://json-schema.org/draft-04/schema#",
-                            "title": "DOI",
-                            "type": "string",
-                            "pattern": "^10[.][0-9]{4,}[^\\s\"/<>]*/[^\\s\"]+$"
+                            "$ref": "#/allOf/2/properties/digest/properties/doi"
                         },
                         "authorLine": {
                             "description": "For example:\n  - Ian T Baldwin\n  - Randy Schekman, Mark Patterson\n  - Lee R Berger et al\n",
@@ -81,8 +188,25 @@
                         "subjects": {
                             "type": "array",
                             "items": {
-                                "type": "string",
-                                "minLength": 1
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "title": "Subject snippet",
+                                "type": "object",
+                                "properties": {
+                                    "id": {
+                                        "description": "ID",
+                                        "type": "string",
+                                        "minLength": 1
+                                    },
+                                    "name": {
+                                        "description": "Name",
+                                        "type": "string",
+                                        "minLength": 1
+                                    }
+                                },
+                                "required": [
+                                    "id",
+                                    "name"
+                                ]
                             },
                             "uniqueItems": true
                         },
@@ -126,130 +250,56 @@
                 },
                 {
                     "properties": {
-                        "status": {
-                            "type": "string",
-                            "enum": [
-                                "vor"
-                            ]
-                        },
-                        "impactStatement": {
-                            "type": "string",
-                            "minLength": 1
-                        },
-                        "abstract": {
-                            "type": "object",
-                            "properties": {
-                                "doi": {
-                                    "$ref": "#/allOf/0/allOf/0/properties/doi"
-                                }
-                            },
-                            "required": [
-                                "doi"
-                            ]
-                        },
                         "image": {
-                            "$schema": "http://json-schema.org/draft-04/schema#",
-                            "title": "Image",
                             "type": "object",
                             "properties": {
-                                "alt": {
-                                    "title": "Alternative text",
-                                    "type": "string"
-                                },
-                                "sizes": {
-                                    "title": "Sizes",
+                                "banner": {
+                                    "$schema": "http://json-schema.org/draft-04/schema#",
+                                    "title": "Banner image",
                                     "type": "object",
                                     "properties": {
-                                        "2:1": {
-                                            "type": "object",
-                                            "properties": {
-                                                "900": {
-                                                    "title": "2:1 crop at 900px width",
-                                                    "type": "string",
-                                                    "format": "uri",
-                                                    "pattern": "^https://"
-                                                },
-                                                "1800": {
-                                                    "title": "2:1 crop at 1800px width",
-                                                    "type": "string",
-                                                    "format": "uri",
-                                                    "pattern": "^https://"
-                                                }
-                                            },
-                                            "required": [
-                                                "900",
-                                                "1800"
-                                            ]
+                                        "alt": {
+                                            "title": "Alternative text",
+                                            "type": "string"
                                         },
-                                        "16:9": {
+                                        "sizes": {
+                                            "title": "Sizes",
                                             "type": "object",
                                             "properties": {
-                                                "250": {
-                                                    "title": "16:9 crop at 250px width",
-                                                    "type": "string",
-                                                    "format": "uri",
-                                                    "pattern": "^https://"
-                                                },
-                                                "500": {
-                                                    "title": "16:9 crop at 500px width",
-                                                    "type": "string",
-                                                    "format": "uri",
-                                                    "pattern": "^https://"
+                                                "2:1": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "900": {
+                                                            "title": "2:1 crop at 900px width",
+                                                            "type": "string",
+                                                            "format": "uri",
+                                                            "pattern": "^https://"
+                                                        },
+                                                        "1800": {
+                                                            "title": "2:1 crop at 1800px width",
+                                                            "type": "string",
+                                                            "format": "uri",
+                                                            "pattern": "^https://"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "900",
+                                                        "1800"
+                                                    ]
                                                 }
                                             },
                                             "required": [
-                                                "250",
-                                                "500"
-                                            ]
-                                        },
-                                        "1:1": {
-                                            "type": "object",
-                                            "properties": {
-                                                "70": {
-                                                    "title": "1:1 crop at 70px width",
-                                                    "type": "string",
-                                                    "format": "uri",
-                                                    "pattern": "^https://"
-                                                },
-                                                "140": {
-                                                    "title": "1:1 crop at 140px width",
-                                                    "type": "string",
-                                                    "format": "uri",
-                                                    "pattern": "^https://"
-                                                }
-                                            },
-                                            "required": [
-                                                "70",
-                                                "140"
+                                                "2:1"
                                             ]
                                         }
                                     },
                                     "required": [
-                                        "2:1",
-                                        "16:9",
-                                        "1:1"
+                                        "alt",
+                                        "sizes"
                                     ]
                                 }
-                            },
-                            "required": [
-                                "alt",
-                                "sizes"
-                            ]
-                        }
-                    }
-                }
-            ]
-        },
-        {
-            "$schema": "http://json-schema.org/draft-04/schema#",
-            "title": "Article",
-            "type": "object",
-            "allOf": [
-                {
-                    "$ref": "#/allOf/0/allOf/0"
-                },
-                {
-                    "properties": {
+                            }
+                        },
                         "issue": {
                             "type": "integer",
                             "minimum": 1
@@ -571,7 +621,7 @@
                                         "type": "object",
                                         "allOf": [
                                             {
-                                                "$ref": "#/allOf/0/allOf/0"
+                                                "$ref": "#/allOf/1/allOf/0"
                                             },
                                             {
                                                 "properties": {
@@ -656,7 +706,10 @@
                     "type": "object",
                     "properties": {
                         "doi": {
-                            "$ref": "#/allOf/0/allOf/0/properties/doi"
+                            "$schema": "http://json-schema.org/draft-04/schema#",
+                            "title": "DOI",
+                            "type": "string",
+                            "pattern": "^10[.][0-9]{4,}[^\\s\"/<>]*/[^\\s\"]+$"
                         },
                         "content": {
                             "type": "array",
@@ -715,7 +768,7 @@
                                         "description": "Content",
                                         "type": "array",
                                         "items": {
-                                            "$ref": "#/allOf/2/properties/authorResponse/properties/content/items"
+                                            "$ref": "#/allOf/2/properties/decisionLetter/properties/content/items"
                                         },
                                         "minItems": 1
                                     }
@@ -928,7 +981,7 @@
                                                 "$ref": "#/allOf/2/properties/references/items/definitions/pages"
                                             },
                                             "doi": {
-                                                "$ref": "#/allOf/0/allOf/0/properties/doi"
+                                                "$ref": "#/allOf/2/properties/digest/properties/doi"
                                             },
                                             "uri": {
                                                 "type": "string",
@@ -1040,7 +1093,7 @@
                                                         "$ref": "#/allOf/2/properties/references/items/definitions/book/properties/publisher"
                                                     },
                                                     "doi": {
-                                                        "$ref": "#/allOf/0/allOf/0/properties/doi"
+                                                        "$ref": "#/allOf/2/properties/digest/properties/doi"
                                                     },
                                                     "uri": {
                                                         "type": "string",
@@ -1094,7 +1147,7 @@
                                                 "$ref": "#/allOf/2/properties/references/items/definitions/pages"
                                             },
                                             "doi": {
-                                                "$ref": "#/allOf/0/allOf/0/properties/doi"
+                                                "$ref": "#/allOf/2/properties/digest/properties/doi"
                                             },
                                             "pmid": {
                                                 "$ref": "#/allOf/2/properties/references/items/definitions/book/properties/pmid"
@@ -1248,7 +1301,7 @@
                                                 "minLength": 1
                                             },
                                             "doi": {
-                                                "$ref": "#/allOf/0/allOf/0/properties/doi"
+                                                "$ref": "#/allOf/2/properties/digest/properties/doi"
                                             },
                                             "uri": {
                                                 "type": "string",
@@ -1296,7 +1349,7 @@
                                                 "$ref": "#/allOf/2/properties/references/items/definitions/book/properties/publisher"
                                             },
                                             "doi": {
-                                                "$ref": "#/allOf/0/allOf/0/properties/doi"
+                                                "$ref": "#/allOf/2/properties/digest/properties/doi"
                                             },
                                             "pmid": {
                                                 "$ref": "#/allOf/2/properties/references/items/definitions/book/properties/pmid"
@@ -1414,7 +1467,7 @@
                                                 "$ref": "#/allOf/2/properties/references/items/definitions/book/properties/publisher"
                                             },
                                             "doi": {
-                                                "$ref": "#/allOf/0/allOf/0/properties/doi"
+                                                "$ref": "#/allOf/2/properties/digest/properties/doi"
                                             },
                                             "uri": {
                                                 "type": "string",
@@ -1548,7 +1601,7 @@
                                         "minLength": 1
                                     },
                                     "doi": {
-                                        "$ref": "#/allOf/0/allOf/0/properties/doi"
+                                        "$ref": "#/allOf/2/properties/digest/properties/doi"
                                     },
                                     "pmid": {
                                         "$schema": "http://json-schema.org/draft-04/schema#",
@@ -1621,7 +1674,7 @@
                                 "pattern": "^[^\\s]+$"
                             },
                             "doi": {
-                                "$ref": "#/allOf/0/allOf/0/properties/doi"
+                                "$ref": "#/allOf/2/properties/digest/properties/doi"
                             },
                             "title": {
                                 "type": "string",
@@ -1643,7 +1696,7 @@
                     "type": "object",
                     "properties": {
                         "doi": {
-                            "$ref": "#/allOf/0/allOf/0/properties/doi"
+                            "$ref": "#/allOf/2/properties/digest/properties/doi"
                         },
                         "description": {
                             "type": "array",
@@ -1651,26 +1704,6 @@
                                 "$ref": "#/allOf/2/properties/digest/properties/content/items"
                             },
                             "minItems": 1
-                        },
-                        "content": {
-                            "type": "array",
-                            "items": {
-                                "$ref": "#/allOf/2/properties/authorResponse/properties/content/items"
-                            },
-                            "minItems": 1
-                        }
-                    },
-                    "required": [
-                        "doi",
-                        "description",
-                        "content"
-                    ]
-                },
-                "authorResponse": {
-                    "type": "object",
-                    "properties": {
-                        "doi": {
-                            "$ref": "#/allOf/0/allOf/0/properties/doi"
                         },
                         "content": {
                             "type": "array",
@@ -1686,7 +1719,7 @@
                                                         "type": "object",
                                                         "allOf": [
                                                             {
-                                                                "$ref": "#/allOf/2/properties/authorResponse/properties/content/items/oneOf/0/oneOf/0/oneOf/0/definitions/image"
+                                                                "$ref": "#/allOf/2/properties/decisionLetter/properties/content/items/oneOf/0/oneOf/0/oneOf/0/definitions/image"
                                                             },
                                                             {
                                                                 "properties": {
@@ -1699,7 +1732,7 @@
                                                                     "supplements": {
                                                                         "type": "array",
                                                                         "items": {
-                                                                            "$ref": "#/allOf/2/properties/authorResponse/properties/content/items/oneOf/0/oneOf/0/oneOf/0/definitions/image"
+                                                                            "$ref": "#/allOf/2/properties/decisionLetter/properties/content/items/oneOf/0/oneOf/0/oneOf/0/definitions/image"
                                                                         }
                                                                     }
                                                                 },
@@ -1713,7 +1746,7 @@
                                                                 "type": "object",
                                                                 "properties": {
                                                                     "doi": {
-                                                                        "$ref": "#/allOf/0/allOf/0/properties/doi"
+                                                                        "$ref": "#/allOf/2/properties/digest/properties/doi"
                                                                     },
                                                                     "id": {
                                                                         "$ref": "#/allOf/2/properties/appendices/items/properties/id"
@@ -1794,7 +1827,7 @@
                                                                             "type": "object",
                                                                             "properties": {
                                                                                 "doi": {
-                                                                                    "$ref": "#/allOf/0/allOf/0/properties/doi"
+                                                                                    "$ref": "#/allOf/2/properties/digest/properties/doi"
                                                                                 },
                                                                                 "id": {
                                                                                     "$ref": "#/allOf/2/properties/appendices/items/properties/id"
@@ -1896,7 +1929,7 @@
                                                                         {
                                                                             "type": "array",
                                                                             "items": {
-                                                                                "$ref": "#/allOf/2/properties/authorResponse/properties/content/items/oneOf/0/oneOf/0"
+                                                                                "$ref": "#/allOf/2/properties/decisionLetter/properties/content/items/oneOf/0/oneOf/0"
                                                                             },
                                                                             "minItems": 1
                                                                         }
@@ -1912,7 +1945,7 @@
                                                         ]
                                                     },
                                                     {
-                                                        "$ref": "#/allOf/2/properties/authorResponse/properties/content/items/oneOf/0/oneOf/0/oneOf/0/definitions/image/properties/caption/items/oneOf/0"
+                                                        "$ref": "#/allOf/2/properties/decisionLetter/properties/content/items/oneOf/0/oneOf/0/oneOf/0/definitions/image/properties/caption/items/oneOf/0"
                                                     },
                                                     {
                                                         "$ref": "#/allOf/2/properties/digest/properties/content/items"
@@ -1989,7 +2022,7 @@
                                                                 ]
                                                             },
                                                             "doi": {
-                                                                "$ref": "#/allOf/0/allOf/0/properties/doi"
+                                                                "$ref": "#/allOf/2/properties/digest/properties/doi"
                                                             },
                                                             "id": {
                                                                 "$ref": "#/allOf/2/properties/appendices/items/properties/id"
@@ -2059,7 +2092,7 @@
                                                                 "title": "Source data",
                                                                 "type": "array",
                                                                 "items": {
-                                                                    "$ref": "#/allOf/2/properties/authorResponse/properties/content/items/oneOf/0/oneOf/0/oneOf/0/definitions/image/properties/sourceData/items"
+                                                                    "$ref": "#/allOf/2/properties/decisionLetter/properties/content/items/oneOf/0/oneOf/0/oneOf/0/definitions/image/properties/sourceData/items"
                                                                 }
                                                             }
                                                         },
@@ -2091,7 +2124,7 @@
                                                                 ]
                                                             },
                                                             "doi": {
-                                                                "$ref": "#/allOf/0/allOf/0/properties/doi"
+                                                                "$ref": "#/allOf/2/properties/digest/properties/doi"
                                                             },
                                                             "id": {
                                                                 "$ref": "#/allOf/2/properties/appendices/items/properties/id"
@@ -2122,7 +2155,7 @@
                                                                         "mediaType": {
                                                                             "allOf": [
                                                                                 {
-                                                                                    "$ref": "#/allOf/2/properties/authorResponse/properties/content/items/oneOf/0/oneOf/0/oneOf/0/definitions/image/properties/sourceData/items/properties/mediaType"
+                                                                                    "$ref": "#/allOf/2/properties/decisionLetter/properties/content/items/oneOf/0/oneOf/0/oneOf/0/definitions/image/properties/sourceData/items/properties/mediaType"
                                                                                 },
                                                                                 {
                                                                                     "pattern": "^video/"
@@ -2158,6 +2191,13 @@
                                                                 "title": "Height",
                                                                 "type": "integer",
                                                                 "minimum": 1
+                                                            },
+                                                            "sourceData": {
+                                                                "title": "Source data",
+                                                                "type": "array",
+                                                                "items": {
+                                                                    "$ref": "#/allOf/2/properties/decisionLetter/properties/content/items/oneOf/0/oneOf/0/oneOf/0/definitions/image/properties/sourceData/items"
+                                                                }
                                                             }
                                                         },
                                                         "required": [
@@ -2225,7 +2265,7 @@
                                                         ]
                                                     },
                                                     "doi": {
-                                                        "$ref": "#/allOf/0/allOf/0/properties/doi"
+                                                        "$ref": "#/allOf/2/properties/digest/properties/doi"
                                                     },
                                                     "id": {
                                                         "$ref": "#/allOf/2/properties/appendices/items/properties/id"
@@ -2244,7 +2284,7 @@
                                                         "description": "Content",
                                                         "type": "array",
                                                         "items": {
-                                                            "$ref": "#/allOf/2/properties/authorResponse/properties/content/items/oneOf/0/oneOf/0"
+                                                            "$ref": "#/allOf/2/properties/decisionLetter/properties/content/items/oneOf/0/oneOf/0"
                                                         },
                                                         "minItems": 1
                                                     }
@@ -2261,6 +2301,26 @@
                                         "$ref": "#/allOf/2/properties/body/items/allOf/0"
                                     }
                                 ]
+                            },
+                            "minItems": 1
+                        }
+                    },
+                    "required": [
+                        "doi",
+                        "description",
+                        "content"
+                    ]
+                },
+                "authorResponse": {
+                    "type": "object",
+                    "properties": {
+                        "doi": {
+                            "$ref": "#/allOf/2/properties/digest/properties/doi"
+                        },
+                        "content": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/allOf/2/properties/decisionLetter/properties/content/items"
                             },
                             "minItems": 1
                         }
