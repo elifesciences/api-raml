@@ -1433,5 +1433,4712 @@
                 }
             ]
         }
+    ],
+    "references": [
+        {
+            "id": "bib1",
+            "type": "journal",
+            "date": "2005",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "F Abascal",
+                        "index": "Abascal, F"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "R Zardoya",
+                        "index": "Zardoya, R"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "D Posada",
+                        "index": "Posada, D"
+                    }
+                }
+            ],
+            "articleTitle": "ProtTest: selection of best-fit models of protein evolution",
+            "journal": {
+                "name": [
+                    "Bioinformatics"
+                ]
+            },
+            "volume": "21",
+            "pages": {
+                "first": "2104",
+                "last": "2105",
+                "range": "2104–2105"
+            },
+            "doi": "10.1093/bioinformatics/bti263"
+        },
+        {
+            "id": "bib2",
+            "type": "journal",
+            "date": "2012",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "PB Abitua",
+                        "index": "Abitua, PB"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "E Wagner",
+                        "index": "Wagner, E"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "IA Navarrete",
+                        "index": "Navarrete, IA"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "M Levine",
+                        "index": "Levine, M"
+                    }
+                }
+            ],
+            "articleTitle": "Identification of a rudimentary neural crest in a non-vertebrate chordate",
+            "journal": {
+                "name": [
+                    "Nature"
+                ]
+            },
+            "volume": "492",
+            "pages": {
+                "first": "104",
+                "last": "107",
+                "range": "104–107"
+            },
+            "doi": "10.1038/nature11589"
+        },
+        {
+            "id": "bib3",
+            "type": "journal",
+            "date": "2012",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "B Bajoghli",
+                        "index": "Bajoghli, B"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "P Guo",
+                        "index": "Guo, P"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "N Aghaallaei",
+                        "index": "Aghaallaei, N"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "M Hirano",
+                        "index": "Hirano, M"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "C Strohmeier",
+                        "index": "Strohmeier, C"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "N McCurley",
+                        "index": "McCurley, N"
+                    }
+                }
+            ],
+            "articleTitle": "A thymus candidate in lampreys",
+            "journal": {
+                "name": [
+                    "Nature"
+                ]
+            },
+            "volume": "470",
+            "pages": {
+                "first": "90",
+                "last": "94",
+                "range": "90–94"
+            },
+            "doi": "10.1038/nature09655"
+        },
+        {
+            "id": "bib4",
+            "type": "journal",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "L Ballarin",
+                        "index": "Ballarin, L"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "A Menin",
+                        "index": "Menin, A"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "L Tallandini",
+                        "index": "Tallandini, L"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "V Matozzo",
+                        "index": "Matozzo, V"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "P Burighel",
+                        "index": "Burighel, P"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "G Basso",
+                        "index": "Basso, G"
+                    }
+                }
+            ],
+            "authorsEtAl": true,
+            "date": "2008",
+            "articleTitle": "Haemocytes and blastogenetic cycle in the colonial ascidian <italic>Botryllus schlosseri</italic>: a matter of life and death",
+            "journal": {
+                "name": [
+                    "Cell Tissue Res"
+                ]
+            },
+            "volume": "331",
+            "pages": {
+                "first": "555",
+                "last": "564",
+                "range": "555–564"
+            },
+            "doi": "10.1007/s00441-007-0513-4"
+        },
+        {
+            "id": "bib5",
+            "type": "journal",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "S Bartl",
+                        "index": "Bartl, S"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "D Baltimore",
+                        "index": "Baltimore, D"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "IL Weissman",
+                        "index": "Weissman, IL"
+                    }
+                }
+            ],
+            "date": "1994",
+            "articleTitle": "Molecular evolution of the vertebrate immunesystem",
+            "journal": {
+                "name": [
+                    "Proc Natl Acad Sci USA"
+                ]
+            },
+            "volume": "91",
+            "pages": {
+                "first": "10769",
+                "last": "10770",
+                "range": "10769–10770"
+            },
+            "doi": "10.1073/pnas.91.23.10769"
+        },
+        {
+            "id": "bib6",
+            "type": "journal",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "Y Benita",
+                        "index": "Benita, Y"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "Z Cao",
+                        "index": "Cao, Z"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "C Giallourakis",
+                        "index": "Giallourakis, C"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "C Li",
+                        "index": "Li, C"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "A Gardet",
+                        "index": "Gardet, A"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "RJ Xavier",
+                        "index": "Xavier, RJ"
+                    }
+                }
+            ],
+            "date": "2010",
+            "articleTitle": "Gene enrichment profiles reveal T-cell development, differentiation, and lineage-specific transcription factors including ZBTB25 as a novel NF-AT repressor",
+            "journal": {
+                "name": [
+                    "Blood"
+                ]
+            },
+            "volume": "115",
+            "pages": {
+                "first": "5376",
+                "last": "5384",
+                "range": "5376–5384"
+            },
+            "doi": "10.1182/blood-2010-01-263855"
+        },
+        {
+            "id": "bib7",
+            "type": "journal",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "SJ Bourlat",
+                        "index": "Bourlat, SJ"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "T Juliusdottir",
+                        "index": "Juliusdottir, T"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "CJ Lowe",
+                        "index": "Lowe, CJ"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "R Freeman",
+                        "index": "Freeman, R"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "J Aronowicz",
+                        "index": "Aronowicz, J"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "M Kirschner",
+                        "index": "Kirschner, M"
+                    }
+                }
+            ],
+            "authorsEtAl": true,
+            "date": "2006",
+            "articleTitle": "Deuterostome phylogeny reveals monophyletic chordates and the new phylum Xenoturbellida",
+            "journal": {
+                "name": [
+                    "Nature"
+                ]
+            },
+            "volume": "444",
+            "pages": {
+                "first": "85",
+                "last": "88",
+                "range": "85–88"
+            },
+            "doi": "10.1038/nature05241"
+        },
+        {
+            "id": "bib8",
+            "type": "journal",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "HC Boyd",
+                        "index": "Boyd, HC"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "SK Brown",
+                        "index": "Brown, SK"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "JA Harp",
+                        "index": "Harp, JA"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "IL Weissman",
+                        "index": "Weissman, IL"
+                    }
+                }
+            ],
+            "date": "1986",
+            "articleTitle": "Growth and sexual maturation of laboratory-cultured Monterey",
+            "journal": {
+                "name": [
+                    "B schlosseri Biol Bull"
+                ]
+            },
+            "volume": "170",
+            "pages": {
+                "first": "91",
+                "last": "109",
+                "range": "91–109"
+            },
+            "doi": "10.2307/1541383"
+        },
+        {
+            "id": "bib9",
+            "type": "journal",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "S Camolotto",
+                        "index": "Camolotto, S"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "A Racca",
+                        "index": "Racca, A"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "V Rena",
+                        "index": "Rena, V"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "R Nores",
+                        "index": "Nores, R"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "LC Patrito",
+                        "index": "Patrito, LC"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "S Genti-Raimondi",
+                        "index": "Genti-Raimondi, S"
+                    }
+                }
+            ],
+            "authorsEtAl": true,
+            "date": "2010",
+            "articleTitle": "Expression and transcriptional regulation of individual pregnancy specific glycoprotein genes in differentiating trophoblast cells",
+            "journal": {
+                "name": [
+                    "Placenta"
+                ]
+            },
+            "volume": "31",
+            "pages": {
+                "first": "312",
+                "last": "319",
+                "range": "312–319"
+            },
+            "doi": "10.1016/j.placenta.2010.01.004"
+        },
+        {
+            "id": "bib10",
+            "type": "journal",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "J Castresana",
+                        "index": "Castresana, J"
+                    }
+                }
+            ],
+            "date": "2000",
+            "articleTitle": "Selection of conserved blocks from multiple alignments for their use in phylogenetic analysis",
+            "journal": {
+                "name": [
+                    "Mol Biol Evol"
+                ]
+            },
+            "volume": "17",
+            "pages": {
+                "first": "540",
+                "last": "552",
+                "range": "540–552"
+            },
+            "doi": "10.1093/oxfordjournals.molbev.a026334"
+        },
+        {
+            "id": "bib12",
+            "type": "journal",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "J Chen",
+                        "index": "Chen, J"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "EE Bardes",
+                        "index": "Bardes, EE"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "BJ Aronow",
+                        "index": "Aronow, BJ"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "AG Jegga",
+                        "index": "Jegga, AG"
+                    }
+                }
+            ],
+            "date": "2009",
+            "articleTitle": "ToppGene Suite for gene list enrichment analysis and candidate gene prioritization",
+            "journal": {
+                "name": [
+                    "Nucleic Acids Res"
+                ]
+            },
+            "volume": "37",
+            "pages": {
+                "first": "W305",
+                "last": "W311",
+                "range": "W305–W311"
+            },
+            "doi": "10.1093/nar/gkp427"
+        },
+        {
+            "id": "bib13",
+            "type": "journal",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "F Cima",
+                        "index": "Cima, F"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "L Manni",
+                        "index": "Manni, L"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "G Basso",
+                        "index": "Basso, G"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "E Fortunato",
+                        "index": "Fortunato, E"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "B Accordi",
+                        "index": "Accordi, B"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "F Schiavon",
+                        "index": "Schiavon, F"
+                    }
+                }
+            ],
+            "authorsEtAl": true,
+            "date": "2009",
+            "articleTitle": "Hovering between death and life: natural apoptosis and phagocytes in the blastogenetic cycle of the colonial ascidian Botryllus schlosseri",
+            "journal": {
+                "name": [
+                    "Dev Comp Immunol"
+                ]
+            },
+            "volume": "34",
+            "pages": {
+                "first": "272",
+                "last": "285",
+                "range": "272–285"
+            },
+            "doi": "10.1016/j.dci.2009.10.005"
+        },
+        {
+            "id": "bib14",
+            "type": "journal",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "D Colombera",
+                        "index": "Colombera, D"
+                    }
+                }
+            ],
+            "date": "1963",
+            "articleTitle": "I cromosomi di <italic>Botryllus schlosseri</italic> (Ascidiacea)",
+            "journal": {
+                "name": [
+                    "Ric Sci"
+                ]
+            },
+            "volume": "33",
+            "pages": {
+                "first": "443",
+                "last": "448",
+                "range": "443–448"
+            },
+            "doi": "10.1007/BF00389087"
+        },
+        {
+            "id": "bib15",
+            "type": "book",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "C Darwin",
+                        "index": "Darwin, C"
+                    }
+                }
+            ],
+            "date": "1874",
+            "bookTitle": "The Descent of man",
+            "publisher": {
+                "name": [
+                    "The Modern library"
+                ],
+                "address": {
+                    "formatted": [
+                        "New York"
+                    ],
+                    "components": {
+                        "locality": [
+                            "New York"
+                        ]
+                    }
+                }
+            }
+        },
+        {
+            "id": "bib16",
+            "type": "journal",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "MM Davis",
+                        "index": "Davis, MM"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "YH Chien",
+                        "index": "Chien, YH"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "NR Gascoigne",
+                        "index": "Gascoigne, NR"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "SM Hedrick",
+                        "index": "Hedrick, SM"
+                    }
+                }
+            ],
+            "date": "1984",
+            "articleTitle": "A murine T cell receptor gene complex: isolation, structure and rearrangement",
+            "journal": {
+                "name": [
+                    "Immunol Rev"
+                ]
+            },
+            "volume": "81",
+            "pages": {
+                "first": "235",
+                "last": "258",
+                "range": "235–258"
+            },
+            "doi": "10.1111/j.1600-065X.1984.tb01113.x"
+        },
+        {
+            "id": "bib37",
+            "type": "journal",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "APJ de Konning",
+                        "index": "de Konning, APJ"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "W Gu",
+                        "index": "Gu, W"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "TA Castoe",
+                        "index": "Castoe, TA"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "MA Batzer",
+                        "index": "Batzer, MA"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "DD Pollock",
+                        "index": "Pollock, DD"
+                    }
+                }
+            ],
+            "date": "2011",
+            "articleTitle": "Repetitive elements may comprise over two thirds of the human genome",
+            "journal": {
+                "name": [
+                    "PLOS Genet"
+                ]
+            },
+            "volume": "7",
+            "pages": "e1002384",
+            "doi": "10.1371/journal.pgen.1002384"
+        },
+        {
+            "id": "bib17",
+            "type": "journal",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "AW De Tomaso",
+                        "index": "De Tomaso, AW"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "Y Saito",
+                        "index": "Saito, Y"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "KJ Ishizuka",
+                        "index": "Ishizuka, KJ"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "KJ Palmeri",
+                        "index": "Palmeri, KJ"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "IL Weissman",
+                        "index": "Weissman, IL"
+                    }
+                }
+            ],
+            "date": "1998",
+            "articleTitle": "Mapping the genome of a model protochordate. I. A low resolution genetic map encompassing the fusion/histocompatibility (Fu/HC) locus of <italic>B. schlosseri</italic>",
+            "journal": {
+                "name": [
+                    "Genetics"
+                ]
+            },
+            "volume": "149",
+            "pages": {
+                "first": "277",
+                "last": "287",
+                "range": "277–287"
+            }
+        },
+        {
+            "id": "bib18",
+            "type": "journal",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "P Dehal",
+                        "index": "Dehal, P"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "Y Satou",
+                        "index": "Satou, Y"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "RK Campbell",
+                        "index": "Campbell, RK"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "J Chapman",
+                        "index": "Chapman, J"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "B Degnan",
+                        "index": "Degnan, B"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "A De Tomaso",
+                        "index": "De Tomaso, A"
+                    }
+                }
+            ],
+            "authorsEtAl": true,
+            "date": "2002",
+            "articleTitle": "The draft genome of <italic>Ciona intestinalis</italic>: insights into chordate and vertebrate origins",
+            "journal": {
+                "name": [
+                    "Science"
+                ]
+            },
+            "volume": "298",
+            "pages": {
+                "first": "2157",
+                "last": "2167",
+                "range": "2157–2167"
+            },
+            "doi": "10.1126/science.1080049"
+        },
+        {
+            "id": "bib19",
+            "type": "journal",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "F Delsuc",
+                        "index": "Delsuc, F"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "H Brinkmann",
+                        "index": "Brinkmann, H"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "D Chourrout",
+                        "index": "Chourrout, D"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "H Philippe",
+                        "index": "Philippe, H"
+                    }
+                }
+            ],
+            "date": "2006",
+            "articleTitle": "Tunicate and not cephalochordates are the closest living relatives of vertebrates",
+            "journal": {
+                "name": [
+                    "Nature"
+                ]
+            },
+            "volume": "439",
+            "pages": {
+                "first": "965",
+                "last": "968",
+                "range": "965–968"
+            },
+            "doi": "10.1038/nature04336"
+        },
+        {
+            "id": "bib20",
+            "type": "journal",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "F Denoeud",
+                        "index": "Denoeud, F"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "S Henriet",
+                        "index": "Henriet, S"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "S Mungpakdee",
+                        "index": "Mungpakdee, S"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "JM Aury",
+                        "index": "Aury, JM"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "C Da Silva",
+                        "index": "Da Silva, C"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "H Brinkmann",
+                        "index": "Brinkmann, H"
+                    }
+                }
+            ],
+            "authorsEtAl": true,
+            "date": "2010",
+            "articleTitle": "Plasticity of animal genome architecture unmasked by rapid evolution of a pelagic tunicate",
+            "journal": {
+                "name": [
+                    "Science"
+                ]
+            },
+            "volume": "330",
+            "pages": {
+                "first": "1381",
+                "last": "1385",
+                "range": "1381–1385"
+            },
+            "doi": "10.1126/science.1194167"
+        },
+        {
+            "id": "bib21",
+            "type": "journal",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "LJ Dishaw",
+                        "index": "Dishaw, LJ"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "GW Litman",
+                        "index": "Litman, GW"
+                    }
+                }
+            ],
+            "date": "2009",
+            "articleTitle": "Invertebrate allorecognition: the origins of histocompatibility",
+            "journal": {
+                "name": [
+                    "Current Biol"
+                ]
+            },
+            "volume": "19",
+            "pages": {
+                "first": "R286",
+                "last": "R288",
+                "range": "R286–R288"
+            },
+            "doi": "10.1016/j.cub.2009.02.035"
+        },
+        {
+            "id": "bib22",
+            "type": "journal",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "P D’Onorio de Meo",
+                        "index": "D’Onorio de Meo, P"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "M D’Antonio",
+                        "index": "D’Antonio, M"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "F Griggio",
+                        "index": "Griggio, F"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "R Lupi",
+                        "index": "Lupi, R"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "M Borsani",
+                        "index": "Borsani, M"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "G Pavesi",
+                        "index": "Pavesi, G"
+                    }
+                }
+            ],
+            "authorsEtAl": true,
+            "date": "2012",
+            "articleTitle": "MitoZoa 2.0: a database resource and search tools for comparative and evolutionary analyses of mitochondrial genomes in Metazoa",
+            "journal": {
+                "name": [
+                    "Nucleic Acids Res"
+                ]
+            },
+            "volume": "40",
+            "pages": {
+                "first": "D1168",
+                "last": "D1172",
+                "range": "D1168–D1172"
+            },
+            "doi": "10.1093/nar/gkr1144"
+        },
+        {
+            "id": "bib23",
+            "type": "journal",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "MB Fagan",
+                        "index": "Fagan, MB"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "IL Weissman",
+                        "index": "Weissman, IL"
+                    }
+                }
+            ],
+            "date": "1998",
+            "articleTitle": "Linkage analysis of HSP70 genes and historecognition locus in <italic>Botryllus schlosseri</italic>",
+            "journal": {
+                "name": [
+                    "Immunogenetics"
+                ]
+            },
+            "volume": "47",
+            "pages": {
+                "first": "468",
+                "last": "476",
+                "range": "468–476"
+            },
+            "doi": "10.1007/s002510050384"
+        },
+        {
+            "id": "bib24",
+            "type": "journal",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "HC Fan",
+                        "index": "Fan, HC"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "J Wang",
+                        "index": "Wang, J"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "A Potanina",
+                        "index": "Potanina, A"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "SR Quake",
+                        "index": "Quake, SR"
+                    }
+                }
+            ],
+            "date": "2011",
+            "articleTitle": "Whole-genome molecular haplotyping of single cells",
+            "journal": {
+                "name": [
+                    "Nat Biotechnol"
+                ]
+            },
+            "volume": "29",
+            "pages": {
+                "first": "51",
+                "last": "57",
+                "range": "51–57"
+            },
+            "doi": "10.1038/nbt.1739"
+        },
+        {
+            "id": "bib25",
+            "type": "journal",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "MF Flajnik",
+                        "index": "Flajnik, MF"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "M Kasahara",
+                        "index": "Kasahara, M"
+                    }
+                }
+            ],
+            "date": "2010",
+            "articleTitle": "Origin and evolution of the adaptive immune system: genetic events and selective pressures",
+            "journal": {
+                "name": [
+                    "Nat Rev Genet"
+                ]
+            },
+            "volume": "11",
+            "pages": {
+                "first": "47",
+                "last": "59",
+                "range": "47–59"
+            },
+            "doi": "10.1038/nrg2703"
+        },
+        {
+            "id": "bib26",
+            "type": "journal",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "N Frey",
+                        "index": "Frey, N"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "M Luedde",
+                        "index": "Luedde, M"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "HA Katus",
+                        "index": "Katus, HA"
+                    }
+                }
+            ],
+            "date": "2012",
+            "articleTitle": "Mechanisms of disease: hypertrophic cardiomyopathy",
+            "journal": {
+                "name": [
+                    "Nat Rev Cardiol"
+                ]
+            },
+            "volume": "9",
+            "pages": {
+                "first": "91",
+                "last": "100",
+                "range": "91–100"
+            },
+            "doi": "10.1038/nrcardio.2011.159"
+        },
+        {
+            "id": "bib27",
+            "type": "journal",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "W Garstang",
+                        "index": "Garstang, W"
+                    }
+                }
+            ],
+            "date": "1928",
+            "articleTitle": "The morphology of the Tunicata, and its bearings on the phylogeny of the Chordata",
+            "journal": {
+                "name": [
+                    "Quart J Microsc Sci"
+                ]
+            },
+            "volume": "72",
+            "pages": {
+                "first": "51",
+                "last": "187",
+                "range": "51–187"
+            }
+        },
+        {
+            "id": "bib28",
+            "type": "journal",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "F Gasparini",
+                        "index": "Gasparini, F"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "P Burighel",
+                        "index": "Burighel, P"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "L Manni",
+                        "index": "Manni, L"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "G Zaniolo",
+                        "index": "Zaniolo, G"
+                    }
+                }
+            ],
+            "date": "2008",
+            "articleTitle": "Vascular regeneration and angiogenic-like sprouting mechanism in a compouned ascidian is similar to vertebrates",
+            "journal": {
+                "name": [
+                    "Evol Dev"
+                ]
+            },
+            "volume": "10",
+            "pages": {
+                "first": "591",
+                "last": "605",
+                "range": "591–605"
+            },
+            "doi": "10.1111/j.1525-142X.2008.00274.x"
+        },
+        {
+            "id": "bib29",
+            "type": "journal",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "S Guindon",
+                        "index": "Guindon, S"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "O Gascuel",
+                        "index": "Gascuel, O"
+                    }
+                }
+            ],
+            "date": "2003",
+            "articleTitle": "A simple, fast, and accurate algorithm to estimate large phylogenies by maximum likelihood",
+            "journal": {
+                "name": [
+                    "Syst Biol"
+                ]
+            },
+            "volume": "52",
+            "pages": {
+                "first": "696",
+                "last": "704",
+                "range": "696–704"
+            },
+            "doi": "10.1080/10635150390235520"
+        },
+        {
+            "id": "bib30",
+            "type": "journal",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "P Guo",
+                        "index": "Guo, P"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "M Hirano",
+                        "index": "Hirano, M"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "BR Herrin",
+                        "index": "Herrin, BR"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "J Li",
+                        "index": "Li, J"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "C Yu",
+                        "index": "Yu, C"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "A Sadlonova",
+                        "index": "Sadlonova, A"
+                    }
+                }
+            ],
+            "authorsEtAl": true,
+            "date": "2009",
+            "articleTitle": "Dual nature of the adaptive immune system in lampreys",
+            "journal": {
+                "name": [
+                    "Nature"
+                ]
+            },
+            "volume": "459",
+            "pages": {
+                "first": "796",
+                "last": "802",
+                "range": "796–802"
+            },
+            "doi": "10.1038/nature08068"
+        },
+        {
+            "id": "bib31",
+            "type": "journal",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "M Hirano",
+                        "index": "Hirano, M"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "S Das",
+                        "index": "Das, S"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "P Guo",
+                        "index": "Guo, P"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "MD Cooper",
+                        "index": "Cooper, MD"
+                    }
+                }
+            ],
+            "date": "2011",
+            "articleTitle": "Chapter 4 – the evolution of adaptive immunity in vertebrate",
+            "journal": {
+                "name": [
+                    "Adv In Immunol"
+                ]
+            },
+            "volume": "109",
+            "pages": {
+                "first": "125",
+                "last": "157",
+                "range": "125–157"
+            },
+            "doi": "10.1016/B978-0-12-387664-5.00004-2"
+        },
+        {
+            "id": "bib32",
+            "type": "journal",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "T Hosoda",
+                        "index": "Hosoda, T"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "K Monzen",
+                        "index": "Monzen, K"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "Y Hiroi",
+                        "index": "Hiroi, Y"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "T Oka",
+                        "index": "Oka, T"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "E Takimoto",
+                        "index": "Takimoto, E"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "Y Yazaki",
+                        "index": "Yazaki, Y"
+                    }
+                }
+            ],
+            "authorsEtAl": true,
+            "date": "2001",
+            "articleTitle": "A novel myocyte-specific gene Midori promotes the differentiation of P19CL6 cells into cardiomyocytes",
+            "journal": {
+                "name": [
+                    "J Biol Chem"
+                ]
+            },
+            "volume": "38",
+            "pages": {
+                "first": "35978",
+                "last": "35989",
+                "range": "35978–35989"
+            },
+            "doi": "10.1074/jbc.M100485200"
+        },
+        {
+            "id": "bib33",
+            "type": "journal",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "M Hoss",
+                        "index": "Hoss, M"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "S Paabo",
+                        "index": "Paabo, S"
+                    }
+                }
+            ],
+            "date": "1993",
+            "articleTitle": "DNA extraction from Pleistocene bones by a silica-based purification method",
+            "journal": {
+                "name": [
+                    "Nucleic Acids Res"
+                ]
+            },
+            "volume": "21",
+            "pages": {
+                "first": "3913",
+                "last": "3914",
+                "range": "3913–3914"
+            },
+            "doi": "10.1093/nar/21.16.3913"
+        },
+        {
+            "id": "bib34",
+            "type": "journal",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "WR Jeffery",
+                        "index": "Jeffery, WR"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "AG Strickler",
+                        "index": "Strickler, AG"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "Y Yamamoto",
+                        "index": "Yamamoto, Y"
+                    }
+                }
+            ],
+            "date": "2004",
+            "articleTitle": "Migratory neural crest-like cells from body pigmentation in a urochordate embryo",
+            "journal": {
+                "name": [
+                    "Nature"
+                ]
+            },
+            "volume": "431",
+            "pages": {
+                "first": "696",
+                "last": "699",
+                "range": "696–699"
+            },
+            "doi": "10.1038/nature02975"
+        },
+        {
+            "id": "bib35",
+            "type": "journal",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "JJ Johnston",
+                        "index": "Johnston, JJ"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "RI Kelley",
+                        "index": "Kelley, RI"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "TO Crawford",
+                        "index": "Crawford, TO"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "DH Morton",
+                        "index": "Morton, DH"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "R Agarwala",
+                        "index": "Agarwala, R"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "T Koch",
+                        "index": "Koch, T"
+                    }
+                }
+            ],
+            "authorsEtAl": true,
+            "date": "2000",
+            "articleTitle": "A novel nemaline myopathy in the Amish caused by a mutation in troponin T1",
+            "journal": {
+                "name": [
+                    "Am J Hum Genet"
+                ]
+            },
+            "volume": "67",
+            "pages": {
+                "first": "814",
+                "last": "821",
+                "range": "814–821"
+            },
+            "doi": "10.1086/303089"
+        },
+        {
+            "id": "bib36",
+            "type": "journal",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "K Katoh",
+                        "index": "Katoh, K"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "K Kuma",
+                        "index": "Kuma, K"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "H Toh",
+                        "index": "Toh, H"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "T Miyata",
+                        "index": "Miyata, T"
+                    }
+                }
+            ],
+            "date": "2005",
+            "articleTitle": "MAFFT version 5: improvement in accuracy of multiple sequence alignment",
+            "journal": {
+                "name": [
+                    "Nucleic Acids Res"
+                ]
+            },
+            "volume": "33",
+            "pages": {
+                "first": "511",
+                "last": "518",
+                "range": "511–518"
+            },
+            "doi": "10.1093/nar/gki198"
+        },
+        {
+            "id": "bib38",
+            "type": "journal",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "P Kott",
+                        "index": "Kott, P"
+                    }
+                }
+            ],
+            "date": "1990",
+            "articleTitle": "The Australian Ascidiacea. Part 2, Aplousobranchiata (1)",
+            "journal": {
+                "name": [
+                    "Mem Qld Mus"
+                ]
+            },
+            "volume": "29",
+            "pages": {
+                "first": "1",
+                "last": "299",
+                "range": "1–299"
+            }
+        },
+        {
+            "id": "bib39",
+            "type": "journal",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "DM Kristensen",
+                        "index": "Kristensen, DM"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "YI Wolf",
+                        "index": "Wolf, YI"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "AR Mushegian",
+                        "index": "Mushegian, AR"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "EV Koonin",
+                        "index": "Koonin, EV"
+                    }
+                }
+            ],
+            "date": "2011",
+            "articleTitle": "Computational methods for gene orthology inference",
+            "journal": {
+                "name": [
+                    "Brief Bioinform"
+                ]
+            },
+            "volume": "12",
+            "pages": {
+                "first": "379",
+                "last": "391",
+                "range": "379–391"
+            },
+            "doi": "10.1093/bib/bbr030"
+        },
+        {
+            "id": "bib40",
+            "type": "journal",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "DJ Laird",
+                        "index": "Laird, DJ"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "AW De Tomaso",
+                        "index": "De Tomaso, AW"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "MD Cooper",
+                        "index": "Cooper, MD"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "IL Weissman",
+                        "index": "Weissman, IL"
+                    }
+                }
+            ],
+            "date": "2000",
+            "articleTitle": "50 million years of chordate evolution: seeking the origins of adaptive immunity",
+            "journal": {
+                "name": [
+                    "Proc Natl Acad Sci USA"
+                ]
+            },
+            "volume": "97",
+            "pages": {
+                "first": "6924",
+                "last": "6926",
+                "range": "6924–6926"
+            },
+            "doi": "10.1073/pnas.97.13.6924"
+        },
+        {
+            "id": "bib41",
+            "type": "journal",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "DJ Laird",
+                        "index": "Laird, DJ"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "AW De Tomaso",
+                        "index": "De Tomaso, AW"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "IL Weissman",
+                        "index": "Weissman, IL"
+                    }
+                }
+            ],
+            "date": "2005",
+            "articleTitle": "Stem cells are units of natural selection in a colonial ascidian",
+            "journal": {
+                "name": [
+                    "Cell"
+                ]
+            },
+            "volume": "123",
+            "pages": {
+                "first": "1351",
+                "last": "1360",
+                "range": "1351–1360"
+            },
+            "doi": "10.1016/j.cell.2005.10.026"
+        },
+        {
+            "id": "bib42",
+            "type": "journal",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "MA Larkin",
+                        "index": "Larkin, MA"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "G Blackshields",
+                        "index": "Blackshields, G"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "NP Brown",
+                        "index": "Brown, NP"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "R Chenna",
+                        "index": "Chenna, R"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "PA McGettigan",
+                        "index": "McGettigan, PA"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "H McWilliam",
+                        "index": "McWilliam, H"
+                    }
+                }
+            ],
+            "authorsEtAl": true,
+            "date": "2007",
+            "articleTitle": "Clustal W and clustal X version 2.0",
+            "journal": {
+                "name": [
+                    "Bioinformatics"
+                ]
+            },
+            "volume": "23",
+            "pages": {
+                "first": "2947",
+                "last": "2948",
+                "range": "2947–2948"
+            },
+            "doi": "10.1093/bioinformatics/btm404"
+        },
+        {
+            "id": "bib43",
+            "type": "journal",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "N Lartillot",
+                        "index": "Lartillot, N"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "H Brinkmann",
+                        "index": "Brinkmann, H"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "H Philippe",
+                        "index": "Philippe, H"
+                    }
+                }
+            ],
+            "date": "2007",
+            "articleTitle": "Suppression of long-branch attraction artefacts in the animal phylogeny using a site-heterogeneous model",
+            "journal": {
+                "name": [
+                    "BMC Evol Biol"
+                ]
+            },
+            "volume": "7",
+            "pages": {
+                "first": "S4",
+                "last": "S4",
+                "range": "S4"
+            },
+            "doi": "10.1186/1471-2148-7-S1-S4"
+        },
+        {
+            "id": "bib44",
+            "type": "journal",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "N Lartillot",
+                        "index": "Lartillot, N"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "T Lepage",
+                        "index": "Lepage, T"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "S Blanquart",
+                        "index": "Blanquart, S"
+                    }
+                }
+            ],
+            "date": "2009",
+            "articleTitle": "PhyloBayes 3: a Bayesian software package for phylogenetic reconstruction and molecular dating",
+            "journal": {
+                "name": [
+                    "Bioinformatics"
+                ]
+            },
+            "volume": "25",
+            "pages": {
+                "first": "2286",
+                "last": "2288",
+                "range": "2286–2288"
+            },
+            "doi": "10.1093/bioinformatics/btp368"
+        },
+        {
+            "id": "bib45",
+            "type": "journal",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "RJ Lauzon",
+                        "index": "Lauzon, RJ"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "CW Patton",
+                        "index": "Patton, CW"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "IL Weissman",
+                        "index": "Weissman, IL"
+                    }
+                }
+            ],
+            "date": "1993",
+            "articleTitle": "A morphological and immunohistochemical study of programmed cell death in <italic>Botryllus schlosseri</italic> (Tunicata, Ascidiacea)",
+            "journal": {
+                "name": [
+                    "Cell Tissue Res"
+                ]
+            },
+            "volume": "272",
+            "pages": {
+                "first": "115",
+                "last": "127",
+                "range": "115–127"
+            },
+            "doi": "10.1007/BF00323577"
+        },
+        {
+            "id": "bib46",
+            "type": "journal",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "P Lemaire",
+                        "index": "Lemaire, P"
+                    }
+                }
+            ],
+            "date": "2011",
+            "articleTitle": "Evolutionary crossroads in developmental biology: the tunicates",
+            "journal": {
+                "name": [
+                    "Development"
+                ]
+            },
+            "volume": "138",
+            "pages": {
+                "first": "2143",
+                "last": "2152",
+                "range": "2143–2152"
+            },
+            "doi": "10.1242/dev.048975"
+        },
+        {
+            "id": "bib47",
+            "type": "journal",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "H Li",
+                        "index": "Li, H"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "R Durbin",
+                        "index": "Durbin, R"
+                    }
+                }
+            ],
+            "date": "2009",
+            "articleTitle": "Fast and accurate short read alignment with Burrows-Wheeler Transform",
+            "journal": {
+                "name": [
+                    "Bioinformatics"
+                ]
+            },
+            "volume": "25",
+            "pages": {
+                "first": "1754",
+                "last": "1760",
+                "range": "1754–1760"
+            },
+            "doi": "10.1093/bioinformatics/btp324"
+        },
+        {
+            "id": "bib48",
+            "type": "journal",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "H Li",
+                        "index": "Li, H"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "B Handsaker",
+                        "index": "Handsaker, B"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "A Wysoker",
+                        "index": "Wysoker, A"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "T Fennell",
+                        "index": "Fennell, T"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "J Ruan",
+                        "index": "Ruan, J"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "N Homer",
+                        "index": "Homer, N"
+                    }
+                }
+            ],
+            "authorsEtAl": true,
+            "date": "2009",
+            "articleTitle": "The sequence alignment map format and SAM tools",
+            "journal": {
+                "name": [
+                    "Bioinformatics"
+                ]
+            },
+            "volume": "25",
+            "pages": {
+                "first": "2078",
+                "last": "2079",
+                "range": "2078–2079"
+            },
+            "doi": "10.1093/bioinformatics/btp352"
+        },
+        {
+            "id": "bib49",
+            "type": "journal",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "L Manni",
+                        "index": "Manni, L"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "P Burighel",
+                        "index": "Burighel, P"
+                    }
+                }
+            ],
+            "date": "2006",
+            "articleTitle": "Common and divergent pathways in alternative developmental processes of ascidians",
+            "journal": {
+                "name": [
+                    "Bioessays"
+                ]
+            },
+            "volume": "28",
+            "pages": {
+                "first": "902",
+                "last": "912",
+                "range": "902–912"
+            },
+            "doi": "10.1002/bies.20462"
+        },
+        {
+            "id": "bib50",
+            "type": "journal",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "PC Moller",
+                        "index": "Moller, PC"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "CH Philpott",
+                        "index": "Philpott, CH"
+                    }
+                }
+            ],
+            "date": "2005",
+            "articleTitle": "The circulatory system of Amphioxus (<italic>Branchiostoma floridae</italic>)",
+            "journal": {
+                "name": [
+                    "J Morphol"
+                ]
+            },
+            "volume": "139",
+            "pages": {
+                "first": "389",
+                "last": "406",
+                "range": "389–406"
+            },
+            "doi": "10.1002/jmor.1051390403"
+        },
+        {
+            "id": "bib51",
+            "type": "journal",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "M Muramatsu",
+                        "index": "Muramatsu, M"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "K Kinoshita",
+                        "index": "Kinoshita, K"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "S Fagarasan",
+                        "index": "Fagarasan, S"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "S Yamada",
+                        "index": "Yamada, S"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "Y Shinkai",
+                        "index": "Shinkai, Y"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "T Honjo",
+                        "index": "Honjo, T"
+                    }
+                }
+            ],
+            "date": "2000",
+            "articleTitle": "Class switch recombination and hypermutation require activation-induced cytidine deaminase (AID), a potential RNA editing enzyme",
+            "journal": {
+                "name": [
+                    "Cell"
+                ]
+            },
+            "volume": "102",
+            "pages": {
+                "first": "553",
+                "last": "563",
+                "range": "553–563"
+            },
+            "doi": "10.1016/S0092-8674(00)00078-7"
+        },
+        {
+            "id": "bib52",
+            "type": "journal",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "EW Myers",
+                        "index": "Myers, EW"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "GG Sutton",
+                        "index": "Sutton, GG"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "AL Delcher",
+                        "index": "Delcher, AL"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "IM Dew",
+                        "index": "Dew, IM"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "DP Fasulo",
+                        "index": "Fasulo, DP"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "MJ Flanigan",
+                        "index": "Flanigan, MJ"
+                    }
+                }
+            ],
+            "authorsEtAl": true,
+            "date": "2000",
+            "articleTitle": "A whole-genome assembly of Drosophila",
+            "journal": {
+                "name": [
+                    "Science"
+                ]
+            },
+            "volume": "287",
+            "pages": {
+                "first": "2196",
+                "last": "2204",
+                "range": "2196–2204"
+            },
+            "doi": "10.1126/science.287.5461.2196"
+        },
+        {
+            "id": "bib53",
+            "type": "journal",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "M Nehls",
+                        "index": "Nehls, M"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "B Kyewski",
+                        "index": "Kyewski, B"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "M Messerie",
+                        "index": "Messerie, M"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "R Wadschutz",
+                        "index": "Wadschutz, R"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "K Schuddekopf",
+                        "index": "Schuddekopf, K"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "AJH Smith",
+                        "index": "Smith, AJH"
+                    }
+                }
+            ],
+            "authorsEtAl": true,
+            "date": "1996",
+            "articleTitle": "Two genetically separable steps in the differentiation of thymic epithelium",
+            "journal": {
+                "name": [
+                    "Science"
+                ]
+            },
+            "volume": "272",
+            "pages": {
+                "first": "886",
+                "last": "889",
+                "range": "886–889"
+            },
+            "doi": "10.1126/science.272.5263.886"
+        },
+        {
+            "id": "bib54",
+            "type": "journal",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "AM Newman",
+                        "index": "Newman, AM"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "JB Cooper",
+                        "index": "Cooper, JB"
+                    }
+                }
+            ],
+            "date": "2007",
+            "articleTitle": "XSTREAM: A practical algorithm for identification and architecture modeling of tandem repeats in protein sequences",
+            "journal": {
+                "name": [
+                    "BMC Bioinformatics"
+                ]
+            },
+            "volume": "8",
+            "pages": {
+                "first": "382",
+                "last": "400",
+                "range": "382–400"
+            },
+            "doi": "10.1186/1471-2105-8-382"
+        },
+        {
+            "id": "bib55",
+            "type": "journal",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "MA Oettinger",
+                        "index": "Oettinger, MA"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "DG Schatz",
+                        "index": "Schatz, DG"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "C Gorka",
+                        "index": "Gorka, C"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "D Baltimore",
+                        "index": "Baltimore, D"
+                    }
+                }
+            ],
+            "date": "1990",
+            "articleTitle": "<italic>RAG-1</italic> and <italic>RAG-2</italic>, adjacent genes that synergistically activate V(D)J recombination",
+            "journal": {
+                "name": [
+                    "Science"
+                ]
+            },
+            "volume": "248",
+            "pages": {
+                "first": "1517",
+                "last": "1523",
+                "range": "1517–1523"
+            },
+            "doi": "10.1126/science.2360047"
+        },
+        {
+            "id": "bib56",
+            "type": "journal",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "Z Pancer",
+                        "index": "Pancer, Z"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "CT Amemiya",
+                        "index": "Amemiya, CT"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "GR Ehrhardt",
+                        "index": "Ehrhardt, GR"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "J Ceitlin",
+                        "index": "Ceitlin, J"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "GL Gartland",
+                        "index": "Gartland, GL"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "MD Cooper",
+                        "index": "Cooper, MD"
+                    }
+                }
+            ],
+            "date": "2004",
+            "articleTitle": "Somatic diversification of variable lymphocyte receptors in the agnathan sea lamprey",
+            "journal": {
+                "name": [
+                    "Nature"
+                ]
+            },
+            "volume": "430",
+            "pages": {
+                "first": "174",
+                "last": "180",
+                "range": "174–180"
+            },
+            "doi": "10.1038/nature02740"
+        },
+        {
+            "id": "bib57",
+            "type": "journal",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "R Perez-Portela",
+                        "index": "Perez-Portela, R"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "JD Bishop",
+                        "index": "Bishop, JD"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "AR Davis",
+                        "index": "Davis, AR"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "X Turon",
+                        "index": "Turon, X"
+                    }
+                }
+            ],
+            "date": "2009",
+            "articleTitle": "Phylogeny of the families Pyuridae and Styelidae (Stolidobranchiata, Ascidiacea) inferred from mitochondrial and nuclear DNA sequences",
+            "journal": {
+                "name": [
+                    "Mol Phylogenet Evol"
+                ]
+            },
+            "volume": "50",
+            "pages": {
+                "first": "560",
+                "last": "570",
+                "range": "560–570"
+            },
+            "doi": "10.1016/j.ympev.2008.11.014"
+        },
+        {
+            "id": "bib58",
+            "type": "journal",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "M Perseke",
+                        "index": "Perseke, M"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "J Hetmank",
+                        "index": "Hetmank, J"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "M Bernt",
+                        "index": "Bernt, M"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "PF Stadler",
+                        "index": "Stadler, PF"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "M Schlegel",
+                        "index": "Schlegel, M"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "D Bernhard",
+                        "index": "Bernhard, D"
+                    }
+                }
+            ],
+            "date": "2011",
+            "articleTitle": "The enigmatic mitochondrial genome of <italic>Rhabdopleura compacta</italic> (Pterobranchia) reveals insights into selection of an efficient tRNA system and supports monophyly of Ambulacraria",
+            "journal": {
+                "name": [
+                    "BMC Evol Biol"
+                ]
+            },
+            "volume": "11",
+            "pages": {
+                "first": "134",
+                "last": "134",
+                "range": "134"
+            },
+            "doi": "10.1186/1471-2148-11-134"
+        },
+        {
+            "id": "bib59",
+            "type": "journal",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "H Philippe",
+                        "index": "Philippe, H"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "R Derelle",
+                        "index": "Derelle, R"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "P Lopez",
+                        "index": "Lopez, P"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "K Pick",
+                        "index": "Pick, K"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "C Borchiellini",
+                        "index": "Borchiellini, C"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "N Boury-Esnault",
+                        "index": "Boury-Esnault, N"
+                    }
+                }
+            ],
+            "authorsEtAl": true,
+            "date": "2009",
+            "articleTitle": "Phylogenomics revives traditional views on deep animal relationships",
+            "journal": {
+                "name": [
+                    "Curr Biol"
+                ]
+            },
+            "volume": "19",
+            "pages": {
+                "first": "706",
+                "last": "712",
+                "range": "706–712"
+            },
+            "doi": "10.1016/j.cub.2009.02.052"
+        },
+        {
+            "id": "bib60",
+            "type": "journal",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "AL Price",
+                        "index": "Price, AL"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "NC Jones",
+                        "index": "Jones, NC"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "PA Pevzner",
+                        "index": "Pevzner, PA"
+                    }
+                }
+            ],
+            "date": "2005",
+            "articleTitle": "De novo identification of repeat families in large genomes",
+            "journal": {
+                "name": [
+                    "Bioinformatics"
+                ]
+            },
+            "volume": "21",
+            "pages": {
+                "first": "i351",
+                "last": "i358",
+                "range": "i351–i358"
+            },
+            "doi": "10.1093/bioinformatics/bti1018"
+        },
+        {
+            "id": "bib61",
+            "type": "journal",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "NH Putnam",
+                        "index": "Putnam, NH"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "M Srivastava",
+                        "index": "Srivastava, M"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "U Hellsten",
+                        "index": "Hellsten, U"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "B Dirks",
+                        "index": "Dirks, B"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "J Chapman",
+                        "index": "Chapman, J"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "A Salamov",
+                        "index": "Salamov, A"
+                    }
+                }
+            ],
+            "authorsEtAl": true,
+            "date": "2007",
+            "articleTitle": "Sea anemone genome reveals ancestral eumetazoan gene repertoire and genomic organization",
+            "journal": {
+                "name": [
+                    "Science"
+                ]
+            },
+            "volume": "317",
+            "pages": {
+                "first": "86",
+                "last": "94",
+                "range": "86–94"
+            },
+            "doi": "10.1126/science.1139158"
+        },
+        {
+            "id": "bib62",
+            "type": "journal",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "AR Quinlan",
+                        "index": "Quinlan, AR"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "IM Hall",
+                        "index": "Hall, IM"
+                    }
+                }
+            ],
+            "date": "2010",
+            "articleTitle": "BEDTools: a flexible suite of utilities for comparing genomic features",
+            "journal": {
+                "name": [
+                    "Bioinformatics"
+                ]
+            },
+            "volume": "26",
+            "pages": {
+                "first": "841",
+                "last": "842",
+                "range": "841–842"
+            },
+            "doi": "10.1093/bioinformatics/btq033"
+        },
+        {
+            "id": "bib63",
+            "type": "journal",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "R Rabionet",
+                        "index": "Rabionet, R"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "P Gasparini",
+                        "index": "Gasparini, P"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "X Estivill",
+                        "index": "Estivill, X"
+                    }
+                }
+            ],
+            "date": "2000",
+            "articleTitle": "Molecular genetics of hearing impairment due to mutations in gap junction genes encoding beta connexins",
+            "journal": {
+                "name": [
+                    "Hum Mutat"
+                ]
+            },
+            "volume": "16",
+            "pages": {
+                "first": "190",
+                "last": "202",
+                "range": "190–202"
+            },
+            "doi": "10.1002/1098-1004(200009)16:3<190::AID-HUMU2>3.0.CO;2-I"
+        },
+        {
+            "id": "bib64",
+            "type": "journal",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "Y Rinkevich",
+                        "index": "Rinkevich, Y"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "A Voskoboynik",
+                        "index": "Voskoboynik, A"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "A Rosner",
+                        "index": "Rosner, A"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "C Rabinowitz",
+                        "index": "Rabinowitz, C"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "G Paz",
+                        "index": "Paz, G"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "M Oren",
+                        "index": "Oren, M"
+                    }
+                }
+            ],
+            "authorsEtAl": true,
+            "date": "2013",
+            "articleTitle": "Repeated, long term cycling of putative stem cells between niches in a basal chordate",
+            "journal": {
+                "name": [
+                    "Dev Cell"
+                ]
+            },
+            "volume": "24",
+            "pages": {
+                "first": "76",
+                "last": "88",
+                "range": "76–88"
+            },
+            "doi": "10.1016/j.devcel.2012.11.010"
+        },
+        {
+            "id": "bib65",
+            "type": "journal",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "IB Rogozin",
+                        "index": "Rogozin, IB"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "LM Iyer",
+                        "index": "Iyer, LM"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "L Liang",
+                        "index": "Liang, L"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "GV Glazko",
+                        "index": "Glazko, GV"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "VG Liston",
+                        "index": "Liston, VG"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "YI Pavlov",
+                        "index": "Pavlov, YI"
+                    }
+                }
+            ],
+            "authorsEtAl": true,
+            "date": "2007",
+            "articleTitle": "Evolution and diversification of lamprey antigen receptors: evidence for involvement of an AID-APOBEC family cytosine deaminase",
+            "journal": {
+                "name": [
+                    "Nature Immunol"
+                ]
+            },
+            "volume": "8",
+            "pages": {
+                "first": "647",
+                "last": "656",
+                "range": "647–656"
+            },
+            "doi": "10.1038/ni1463"
+        },
+        {
+            "id": "bib66",
+            "type": "journal",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "A Sabbadin",
+                        "index": "Sabbadin, A"
+                    }
+                }
+            ],
+            "date": "1962",
+            "articleTitle": "Le basi genetiche della capacità di fusione fra colonie in <italic>Botryllus schlosseri</italic> (Ascidiacea)",
+            "journal": {
+                "name": [
+                    "Rend Accad Naz Lincei Ser"
+                ]
+            },
+            "volume": "32",
+            "pages": {
+                "first": "1031",
+                "last": "1035",
+                "range": "1031–1035"
+            }
+        },
+        {
+            "id": "bib67",
+            "type": "journal",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "A Sabbadin",
+                        "index": "Sabbadin, A"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "G Zaniolo",
+                        "index": "Zaniolo, G"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "F Majone",
+                        "index": "Majone, F"
+                    }
+                }
+            ],
+            "date": "1975",
+            "articleTitle": "Determination of polarity and bilateral asymmetry in palleal and vascular buds of the ascidian",
+            "journal": {
+                "name": [
+                    "Botryllus schlosseri Dev Biol"
+                ]
+            },
+            "volume": "46",
+            "pages": {
+                "first": "79",
+                "last": "87",
+                "range": "79–87"
+            },
+            "doi": "10.1016/0012-1606(75)90088-3"
+        },
+        {
+            "id": "bib68",
+            "type": "journal",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "SL Salzberg",
+                        "index": "Salzberg, SL"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "AM Phillippy",
+                        "index": "Phillippy, AM"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "A Zimin",
+                        "index": "Zimin, A"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "D Puiu",
+                        "index": "Puiu, D"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "T Magoc",
+                        "index": "Magoc, T"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "S Koren",
+                        "index": "Koren, S"
+                    }
+                }
+            ],
+            "authorsEtAl": true,
+            "date": "2012",
+            "articleTitle": "GAGE: a critical evaluation of genome assemblies and assembly algorithms",
+            "journal": {
+                "name": [
+                    "Genome Res"
+                ]
+            },
+            "volume": "22",
+            "pages": {
+                "first": "557",
+                "last": "567",
+                "range": "557–567"
+            },
+            "doi": "10.1101/gr.131383.111"
+        },
+        {
+            "id": "bib69",
+            "type": "journal",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "JM Schlumpberger",
+                        "index": "Schlumpberger, JM"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "IL Weissman",
+                        "index": "Weissman, IL"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "VL Scofield",
+                        "index": "Scofield, VL"
+                    }
+                }
+            ],
+            "date": "1984",
+            "articleTitle": "Separation and labeling of specific subpopulations of <italic>Botryllus</italic> blood cells",
+            "journal": {
+                "name": [
+                    "J Exp Zool"
+                ]
+            },
+            "volume": "229",
+            "pages": {
+                "first": "41",
+                "last": "411",
+                "range": "41–411"
+            },
+            "doi": "10.1002/jez.1402290308"
+        },
+        {
+            "id": "bib70",
+            "type": "journal",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "VL Scofield",
+                        "index": "Scofield, VL"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "JM Schlumpberger",
+                        "index": "Schlumpberger, JM"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "LA West",
+                        "index": "West, LA"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "IL Weissman",
+                        "index": "Weissman, IL"
+                    }
+                }
+            ],
+            "date": "1982",
+            "articleTitle": "Protochordate allorecognition is controlled by a MHC-like gene system",
+            "journal": {
+                "name": [
+                    "Nature"
+                ]
+            },
+            "volume": "295",
+            "pages": {
+                "first": "499",
+                "last": "502",
+                "range": "499–502"
+            },
+            "doi": "10.1038/295499a0"
+        },
+        {
+            "id": "bib71",
+            "type": "journal",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "J Seita",
+                        "index": "Seita, J"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "D Sahoo",
+                        "index": "Sahoo, D"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "DJ Rossi",
+                        "index": "Rossi, DJ"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "D Bhattacharya",
+                        "index": "Bhattacharya, D"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "T Serwold",
+                        "index": "Serwold, T"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "MA Inlay",
+                        "index": "Inlay, MA"
+                    }
+                }
+            ],
+            "authorsEtAl": true,
+            "date": "2012",
+            "articleTitle": "Gene expression commons: an open platform for absolute gene expression profiling",
+            "journal": {
+                "name": [
+                    "PLOS ONE"
+                ]
+            },
+            "volume": "7",
+            "pages": "e40321",
+            "doi": "10.1371/journal.pone.0040321"
+        },
+        {
+            "id": "bib72",
+            "type": "journal",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "C Shinzato",
+                        "index": "Shinzato, C"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "E Shoguchi",
+                        "index": "Shoguchi, E"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "T Kawashima",
+                        "index": "Kawashima, T"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "M Hamada",
+                        "index": "Hamada, M"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "K Hisata",
+                        "index": "Hisata, K"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "M Tanaka",
+                        "index": "Tanaka, M"
+                    }
+                }
+            ],
+            "authorsEtAl": true,
+            "date": "2011",
+            "articleTitle": "Using the <italic>Acropora digitifera</italic> genome to understand coral responses to environmental change",
+            "journal": {
+                "name": [
+                    "Nature"
+                ]
+            },
+            "volume": "476",
+            "pages": {
+                "first": "320",
+                "last": "323",
+                "range": "320–323"
+            },
+            "doi": "10.1038/nature10249"
+        },
+        {
+            "id": "bib73",
+            "type": "journal",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "E Shoguchi",
+                        "index": "Shoguchi, E"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "T Ikuta",
+                        "index": "Ikuta, T"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "F Yoshizaki",
+                        "index": "Yoshizaki, F"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "Y Satou",
+                        "index": "Satou, Y"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "N Satoh",
+                        "index": "Satoh, N"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "K Asano",
+                        "index": "Asano, K"
+                    }
+                }
+            ],
+            "authorsEtAl": true,
+            "date": "2004",
+            "articleTitle": "Fluorescent in situ hybridization to ascidian chromosomes",
+            "journal": {
+                "name": [
+                    "Zoolog Sci"
+                ]
+            },
+            "volume": "21",
+            "pages": {
+                "first": "153",
+                "last": "157",
+                "range": "153–157"
+            },
+            "doi": "10.2108/zsj.21.153"
+        },
+        {
+            "id": "bib74",
+            "type": "unknown",
+            "date": "1996",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "AFA Smit",
+                        "index": "Smit, AFA"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "R Hubley",
+                        "index": "Hubley, R"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "P Green",
+                        "index": "Green, P"
+                    }
+                }
+            ],
+            "title": "RepeatMasker Open-3.0",
+            "uri": "http://www.repeatmasker.org/"
+        },
+        {
+            "id": "bib75",
+            "type": "journal",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "TR Singh",
+                        "index": "Singh, TR"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "G Tsagkogeorga",
+                        "index": "Tsagkogeorga, G"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "F Delsuc",
+                        "index": "Delsuc, F"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "S Blanquart",
+                        "index": "Blanquart, S"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "N Shenkar",
+                        "index": "Shenkar, N"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "Y Loya",
+                        "index": "Loya, Y"
+                    }
+                }
+            ],
+            "authorsEtAl": true,
+            "date": "2009",
+            "articleTitle": "Tunicate mitogenomics and phylogenetics: peculiarities of the <italic>Herdmania momus</italic> mitochondrial genome and support for the new chordate phylogeny",
+            "journal": {
+                "name": [
+                    "BMC Genomics"
+                ]
+            },
+            "volume": "10",
+            "pages": {
+                "first": "534",
+                "last": "534",
+                "range": "534"
+            },
+            "doi": "10.1186/1471-2164-10-534"
+        },
+        {
+            "id": "bib76",
+            "type": "journal",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "M Srivastava",
+                        "index": "Srivastava, M"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "O Simakov",
+                        "index": "Simakov, O"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "J Chapman",
+                        "index": "Chapman, J"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "B Fahey",
+                        "index": "Fahey, B"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "ME Gauthier",
+                        "index": "Gauthier, ME"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "T Mitros",
+                        "index": "Mitros, T"
+                    }
+                }
+            ],
+            "authorsEtAl": true,
+            "date": "2010",
+            "articleTitle": "The <italic>Amphimedon queenslandica</italic> genome and the evolution of animal complexity",
+            "journal": {
+                "name": [
+                    "Nature"
+                ]
+            },
+            "volume": "466",
+            "pages": {
+                "first": "720",
+                "last": "726",
+                "range": "720–726"
+            },
+            "doi": "10.1038/nature09201"
+        },
+        {
+            "id": "bib77",
+            "type": "journal",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "M Stanke",
+                        "index": "Stanke, M"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "M Diekhans",
+                        "index": "Diekhans, M"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "R Baertsch",
+                        "index": "Baertsch, R"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "D Haussler",
+                        "index": "Haussler, D"
+                    }
+                }
+            ],
+            "date": "2008",
+            "articleTitle": "Using native and syntenically mapped cDNA alignments to improve <italic>de novo</italic> gene finding",
+            "journal": {
+                "name": [
+                    "Bioinformatics"
+                ]
+            },
+            "volume": "24",
+            "pages": {
+                "first": "637",
+                "last": "644",
+                "range": "637–644"
+            },
+            "doi": "10.1093/bioinformatics/btn013"
+        },
+        {
+            "id": "bib78",
+            "type": "journal",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "DS Stoner",
+                        "index": "Stoner, DS"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "IL Weissman",
+                        "index": "Weissman, IL"
+                    }
+                }
+            ],
+            "date": "1996",
+            "articleTitle": "Somatic and germ cell parasitism in a colonial ascidian possible role for a highly polymorphic allorecognition system",
+            "journal": {
+                "name": [
+                    "Proc Natl Acad Sci USA"
+                ]
+            },
+            "volume": "24",
+            "pages": {
+                "first": "15254",
+                "last": "15259",
+                "range": "15254–15259"
+            },
+            "doi": "10.1073/pnas.93.26.15254"
+        },
+        {
+            "id": "bib79",
+            "type": "journal",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "DS Stoner",
+                        "index": "Stoner, DS"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "B Rinkevich",
+                        "index": "Rinkevich, B"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "IL Weissman",
+                        "index": "Weissman, IL"
+                    }
+                }
+            ],
+            "date": "1999",
+            "articleTitle": "Heritable germ and somatic cell lineage competitions in chimeric colonial protochordates",
+            "journal": {
+                "name": [
+                    "Proc Natl Acad Sci USA"
+                ]
+            },
+            "volume": "96",
+            "pages": {
+                "first": "9148",
+                "last": "9153",
+                "range": "9148–9153"
+            },
+            "doi": "10.1073/pnas.96.16.9148"
+        },
+        {
+            "id": "bib80",
+            "type": "journal",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "DS Stoner",
+                        "index": "Stoner, DS"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "R Ben-Shlomo",
+                        "index": "Ben-Shlomo, R"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "B Rinkevich",
+                        "index": "Rinkevich, B"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "IL Weissman",
+                        "index": "Weissman, IL"
+                    }
+                }
+            ],
+            "date": "2002",
+            "articleTitle": "Genetic variability of <italic>Botryllus schlosseri</italic> invasions to the east and west coasts of the USA",
+            "journal": {
+                "name": [
+                    "Mar Ecol Prog Ser"
+                ]
+            },
+            "volume": "243",
+            "pages": {
+                "first": "93",
+                "last": "100",
+                "range": "93–100"
+            },
+            "doi": "10.3354/meps243093"
+        },
+        {
+            "id": "bib81",
+            "type": "journal",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "W Sun",
+                        "index": "Sun, W"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "X Xiao",
+                        "index": "Xiao, X"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "S Li",
+                        "index": "Li, S"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "X Guo",
+                        "index": "Guo, X"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "Q Zhang",
+                        "index": "Zhang, Q"
+                    }
+                }
+            ],
+            "date": "2011",
+            "articleTitle": "Mutation analysis of 12 genes in Chinese families with congenital cataracts",
+            "journal": {
+                "name": [
+                    "Mol Vis"
+                ]
+            },
+            "volume": "17",
+            "pages": {
+                "first": "2197",
+                "last": "2206",
+                "range": "2197–2206"
+            }
+        },
+        {
+            "id": "bib82",
+            "type": "journal",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "BJ Swalla",
+                        "index": "Swalla, BJ"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "CB Cameron",
+                        "index": "Cameron, CB"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "LS Corley",
+                        "index": "Corley, LS"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "JR Garey",
+                        "index": "Garey, JR"
+                    }
+                }
+            ],
+            "date": "2000",
+            "articleTitle": "Urochordates are monophyletic within the deuterostomes",
+            "journal": {
+                "name": [
+                    "Syst Biol"
+                ]
+            },
+            "volume": "49",
+            "pages": {
+                "first": "52",
+                "last": "52",
+                "range": "52"
+            },
+            "doi": "10.1080/10635150050207384"
+        },
+        {
+            "id": "bib83",
+            "type": "journal",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "S Tiozzo",
+                        "index": "Tiozzo, S"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "A Voskoboynik",
+                        "index": "Voskoboynik, A"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "FD Brown",
+                        "index": "Brown, FD"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "AW De Tomaso",
+                        "index": "De Tomaso, AW"
+                    }
+                }
+            ],
+            "date": "2008",
+            "articleTitle": "A conserved role of the VEGF pathway in angiogenesis of an ectodermally-derived vasculature",
+            "journal": {
+                "name": [
+                    "Dev Biol"
+                ]
+            },
+            "volume": "315",
+            "pages": {
+                "first": "243",
+                "last": "255",
+                "range": "243–255"
+            },
+            "doi": "10.1016/j.ydbio.2007.12.035"
+        },
+        {
+            "id": "bib84",
+            "type": "journal",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "C Trapnell",
+                        "index": "Trapnell, C"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "BA Williams",
+                        "index": "Williams, BA"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "G Pertea",
+                        "index": "Pertea, G"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "A Mortazavi",
+                        "index": "Mortazavi, A"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "G Kwan",
+                        "index": "Kwan, G"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "MJ van Baren",
+                        "index": "van Baren, MJ"
+                    }
+                }
+            ],
+            "authorsEtAl": true,
+            "date": "2010",
+            "articleTitle": "Transcript assembly and quantification by RNA-Seq reveals unannotated transcripts and isoform switching during cell differentiation",
+            "journal": {
+                "name": [
+                    "Nat Biotechnol"
+                ]
+            },
+            "volume": "28",
+            "pages": {
+                "first": "511",
+                "last": "515",
+                "range": "511–515"
+            },
+            "doi": "10.1038/nbt.1621"
+        },
+        {
+            "id": "bib85",
+            "type": "journal",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "G Tsagkogeorga",
+                        "index": "Tsagkogeorga, G"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "X Turon",
+                        "index": "Turon, X"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "R Hopcroft",
+                        "index": "Hopcroft, R"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "M Tilak",
+                        "index": "Tilak, M"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "T Feldstein",
+                        "index": "Feldstein, T"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "N Shenkar",
+                        "index": "Shenkar, N"
+                    }
+                }
+            ],
+            "authorsEtAl": true,
+            "date": "2009",
+            "articleTitle": "18S rRNA phylogeny of tunicates based on mixture and secondary structure modes",
+            "journal": {
+                "name": [
+                    "BMC Evoul Biol"
+                ]
+            },
+            "volume": "9",
+            "pages": {
+                "first": "187",
+                "last": "187",
+                "range": "187"
+            },
+            "doi": "10.1186/1471-2148-9-187"
+        },
+        {
+            "id": "bib86",
+            "type": "journal",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "X Turon",
+                        "index": "Turon, X"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "S Lopez-Legentil",
+                        "index": "Lopez-Legentil, S"
+                    }
+                }
+            ],
+            "date": "2004",
+            "articleTitle": "Ascidian molecular phylogeny inferred from mtDNA data with emphasis on the Aplousobranchiata",
+            "journal": {
+                "name": [
+                    "Mol Phylogenet Evol"
+                ]
+            },
+            "volume": "33",
+            "pages": {
+                "first": "309",
+                "last": "320",
+                "range": "309–320"
+            },
+            "doi": "10.1016/j.ympev.2004.06.011"
+        },
+        {
+            "id": "bib87",
+            "type": "journal",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "A Voskoboynik",
+                        "index": "Voskoboynik, A"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "N Simon-Blecher",
+                        "index": "Simon-Blecher, N"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "Y Soen",
+                        "index": "Soen, Y"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "B Rinkevich",
+                        "index": "Rinkevich, B"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "AW De Tomaso",
+                        "index": "De Tomaso, AW"
+                    }
+                }
+            ],
+            "authorsEtAl": true,
+            "date": "2007",
+            "articleTitle": "Striving for normality: whole body regeneration through a series of abnormal generations",
+            "journal": {
+                "name": [
+                    "FASEB J"
+                ]
+            },
+            "volume": "21",
+            "pages": {
+                "first": "1335",
+                "last": "1344",
+                "range": "1335–1344"
+            },
+            "doi": "10.1096/fj.06-7337com"
+        },
+        {
+            "id": "bib88",
+            "type": "journal",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "A Voskoboynik",
+                        "index": "Voskoboynik, A"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "Y Soen",
+                        "index": "Soen, Y"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "Y Rinkevich",
+                        "index": "Rinkevich, Y"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "A Rosner",
+                        "index": "Rosner, A"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "H Ueno",
+                        "index": "Ueno, H"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "R Reshef",
+                        "index": "Reshef, R"
+                    }
+                }
+            ],
+            "authorsEtAl": true,
+            "date": "2008",
+            "articleTitle": "Identification of the endostyle as a stem cell niche in a colonial chordate",
+            "journal": {
+                "name": [
+                    "Cell Stem Cell"
+                ]
+            },
+            "volume": "3",
+            "pages": {
+                "first": "456",
+                "last": "464",
+                "range": "456–464"
+            },
+            "doi": "10.1016/j.stem.2008.07.023"
+        },
+        {
+            "id": "bib89",
+            "type": "book-chapter",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "A Voskoboynik",
+                        "index": "Voskoboynik, A"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "B Rinkevich",
+                        "index": "Rinkevich, B"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "IL Weissman",
+                        "index": "Weissman, IL"
+                    }
+                }
+            ],
+            "date": "2009",
+            "chapterTitle": "Stem cells chimerism and tolerance: lessons from mammals and ascidians",
+            "bookTitle": "Stem Cells in Marine Organisms",
+            "editors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "B Rinkevich",
+                        "index": "Rinkevich, B"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "V Matranga",
+                        "index": "Matranga, V"
+                    }
+                }
+            ],
+            "publisher": {
+                "name": [
+                    "Springer"
+                ],
+                "address": {
+                    "formatted": [
+                        "The Netherlands"
+                    ],
+                    "components": {
+                        "country": "The Netherlands"
+                    }
+                }
+            },
+            "pages": {
+                "first": "281",
+                "last": "308",
+                "range": "281–308"
+            }
+        },
+        {
+            "id": "bib97",
+            "type": "journal",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "A Voskoboynik",
+                        "index": "Voskoboynik, A"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "AM Newman",
+                        "index": "Newman, AM"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "DM Corey",
+                        "index": "Corey, DM"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "D Sahoo",
+                        "index": "Sahoo, D"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "D Pushkarev",
+                        "index": "Pushkarev, D"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "NF Neff",
+                        "index": "Neff, NF"
+                    }
+                }
+            ],
+            "authorsEtAl": true,
+            "date": "2013",
+            "articleTitle": "Identification of a colonial chordate histocompatibility gene",
+            "journal": {
+                "name": [
+                    "Science"
+                ]
+            },
+            "pages": "in press"
+        },
+        {
+            "id": "bib90",
+            "type": "journal",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "MG Weigert",
+                        "index": "Weigert, MG"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "IM Cesari",
+                        "index": "Cesari, IM"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "SJ Yonkovich",
+                        "index": "Yonkovich, SJ"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "M Cohn",
+                        "index": "Cohn, M"
+                    }
+                }
+            ],
+            "date": "1970",
+            "articleTitle": "Variability in the λ light chain sequences of mouse antibody",
+            "journal": {
+                "name": [
+                    "Nature"
+                ]
+            },
+            "volume": "228",
+            "pages": {
+                "first": "1045",
+                "last": "1047",
+                "range": "1045–1047"
+            },
+            "doi": "10.1038/2281045a0"
+        },
+        {
+            "id": "bib91",
+            "type": "journal",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "ER Wilcox",
+                        "index": "Wilcox, ER"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "QL Burton",
+                        "index": "Burton, QL"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "S Naz",
+                        "index": "Naz, S"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "S Riazuddin",
+                        "index": "Riazuddin, S"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "TN Smith",
+                        "index": "Smith, TN"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "B Ploplis",
+                        "index": "Ploplis, B"
+                    }
+                }
+            ],
+            "authorsEtAl": true,
+            "date": "2001",
+            "articleTitle": "Mutations in the gene encoding tight junction claudin-14 cause autosomal recessive deafness DFNB29",
+            "journal": {
+                "name": [
+                    "Cell"
+                ]
+            },
+            "volume": "104",
+            "pages": {
+                "first": "165",
+                "last": "172",
+                "range": "165–172"
+            },
+            "doi": "10.1016/S0092-8674(01)00200-8"
+        },
+        {
+            "id": "bib92",
+            "type": "journal",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "X Xu",
+                        "index": "Xu, X"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "H Nagarajan",
+                        "index": "Nagarajan, H"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "NE Lewis",
+                        "index": "Lewis, NE"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "S Pan",
+                        "index": "Pan, S"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "Z Cai",
+                        "index": "Cai, Z"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "X Liu",
+                        "index": "Liu, X"
+                    }
+                }
+            ],
+            "authorsEtAl": true,
+            "date": "2011",
+            "articleTitle": "The genomic sequence of the Chinese hamster ovary (CHO)-K1 cell line",
+            "journal": {
+                "name": [
+                    "Nat Biotechnol"
+                ]
+            },
+            "volume": "29",
+            "pages": {
+                "first": "735",
+                "last": "741",
+                "range": "735–741"
+            },
+            "doi": "10.1038/nbt.1932"
+        },
+        {
+            "id": "bib93",
+            "type": "journal",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "S Yokobori",
+                        "index": "Yokobori, S"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "T Oshima",
+                        "index": "Oshima, T"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "H Wada",
+                        "index": "Wada, H"
+                    }
+                }
+            ],
+            "date": "2005",
+            "articleTitle": "Complete nucleotide sequence of the mitochondrial genome of <italic>Doliolum nationalis</italic> with implications for evolution of urochordates",
+            "journal": {
+                "name": [
+                    "Mol Phylogenet Evol"
+                ]
+            },
+            "volume": "34",
+            "pages": {
+                "first": "273",
+                "last": "273",
+                "range": "273"
+            },
+            "doi": "10.1016/j.ympev.2004.10.002"
+        },
+        {
+            "id": "bib94",
+            "type": "journal",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "S Yokobori",
+                        "index": "Yokobori, S"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "A Kurabayashi",
+                        "index": "Kurabayashi, A"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "BA Neilan",
+                        "index": "Neilan, BA"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "T Maruyama",
+                        "index": "Maruyama, T"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "E Hirose",
+                        "index": "Hirose, E"
+                    }
+                }
+            ],
+            "date": "2006",
+            "articleTitle": "Multiple origins of the ascidian-Prochloron symbiosis: molecular phylogeny of photosymbiotic and non-symbiotic colonial ascidians inferred from 18S rDNA sequences",
+            "journal": {
+                "name": [
+                    "Mol Phylogenet Evol"
+                ]
+            },
+            "volume": "40",
+            "pages": {
+                "first": "8",
+                "last": "8",
+                "range": "8"
+            },
+            "doi": "10.1016/j.ympev.2005.11.025"
+        },
+        {
+            "id": "bib95",
+            "type": "journal",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "L Zeng",
+                        "index": "Zeng, L"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "MW Jacobs",
+                        "index": "Jacobs, MW"
+                    }
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "BJ Swalla",
+                        "index": "Swalla, BJ"
+                    }
+                }
+            ],
+            "date": "2006",
+            "articleTitle": "Coloniality has evolved once in <italic>Stolidobranch Ascidians</italic>",
+            "journal": {
+                "name": [
+                    "Integr Comp Biol"
+                ]
+            },
+            "volume": "46",
+            "pages": {
+                "first": "255",
+                "last": "268",
+                "range": "255–268"
+            },
+            "doi": "10.1093/icb/icj035"
+        },
+        {
+            "id": "bib96",
+            "type": "journal",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "DR Zerbino",
+                        "index": "Zerbino, DR"
+                    }
+                }
+            ],
+            "date": "2010",
+            "articleTitle": "Using the Velvet de novo assembler for short-read sequencing technologies",
+            "journal": {
+                "name": [
+                    "Curr Protoc Bioinformatics"
+                ]
+            },
+            "volume": "11",
+            "pages": {
+                "first": "11.5.1",
+                "last": "11.5.12",
+                "range": "11.5.1–1.5.12"
+            },
+            "doi": "10.1002/0471250953.bi1105s31"
+        }
     ]
 }
