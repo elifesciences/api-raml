@@ -811,154 +811,154 @@
                             "text": "Our findings demonstrate that the cortical grasping network transforms visual object attributes into motor plans and actions. We found highly different coding schemes between the frontoparietal circuits of AIP and F5, indicating widely separated processing of visual and motor features. These findings suggest that visuomotor transformation is achieved effectively by visual object descriptions that activate linked motor plans in the reciprocal network of AIP and F5. Strong feature communication between F5 and M1 further suggest a common motor network that executes and refines the prepared motor plan."
                         }
                     ]
+                }
+            ]
+        },
+        {
+            "type": "section",
+            "id": "s4",
+            "title": "Materials and methods",
+            "content": [
+                {
+                    "type": "section",
+                    "id": "s4-1",
+                    "title": "Animal training and experimental setup",
+                    "content": [
+                        {
+                            "type": "paragraph",
+                            "text": "Two rhesus monkeys (<i>Macaca mulatta</i>) participated in this study (animal Z: female, 7.0 kg body weight; animal M: male, 10.5 kg). Animal housing, care, and all experimental procedures were conducted in accordance with German and European laws governing animal welfare and were in agreement with the guidelines for the care and use of mammals in neuroscience and behavioural research (<a href=\"#bib28\">National Research Council, 2003</a>; see also Ethics statement)."
+                        },
+                        {
+                            "type": "paragraph",
+                            "text": "We developed an experimental setup that allowed us to present a large number of graspable objects to the monkeys while monitoring their behaviour, neural activity and hand kinematics. During each recording session, monkeys grasped a total of 42–48 objects of equal weight that were placed on 8 interchangeable turntables (<a href=\"#fig1\">Figure 1a–b</a>). Objects were of different shapes and sizes including <i>rings</i> (diameter of 15, 20, 25, 30, 35, and 40 mm), <i>cubes</i> (length of 15, 20, 25, 30, 35, and 40 mm), <i>spheres</i> (diameter of 15, 20, 25, 30, 35 and 40 mm), <i>horizontal cylinders</i> (diameter of 15, 20, 25, 30, 35, 40 mm, equal length), <i>vertical cylinders</i> (diameter: 15, 20, 25, 30, 35, 40 mm, equal height), and <i>bars</i> (depth of 15, 20, 25, 30, 35, and 40 mm, equal height and width). Furthermore, a <i>mixed</i> turntable held objects of different shapes of average size. Important for this study, a special turntable was holding objects of <i>abstract forms</i>, which differed largely visually but required identical hand configurations for grasping (<a href=\"#fig1\">Figure 1b</a>). Both monkeys were also trained to grasp a single object, a handle, either with a precision grip or a power grip. This extended our task by two more conditions (to a total of 50) that evoked similar visual, but different motor responses. In 20 recording sessions (10 per animal), each condition was repeated at least 10 times."
+                        },
+                        {
+                            "type": "paragraph",
+                            "text": "Precision and power grips applied on the handle as well as grasping and lifting the 3D-objects were detected with photoelectric barriers (<a href=\"#bib38\">Schaffelhofer et al., 2015a</a>). The turntable position was controlled with a step motor. Furthermore, the monkey’s eye position was monitored with an optical eye tracking system (model AA-EL-200; ISCAN Inc.). All behavioural and task-relevant parameters were controlled using a custom-written control software implemented in LabVIEW Realtime (National Instruments, Austin, TX)."
+                        }
+                    ]
                 },
                 {
                     "type": "section",
-                    "id": "s4",
-                    "title": "Materials and methods",
+                    "id": "s4-2",
+                    "title": "Task paradigm",
+                    "content": [
+                        {
+                            "type": "paragraph",
+                            "text": "Monkeys were trained to grasp 49 objects (<a href=\"#fig1\">Figure 1b</a>) in a delayed grasp-and-hold task (<a href=\"#fig1\" >Figure 1d</a>). While sitting in the dark the monkeys could initiate a trial (self-paced) by placing their grasping hand (left hand in monkey Z, right hand in monkey M) onto a rest sensor that enabled a fixation LED close to the object. Looking at (fixating) this spot for a variable time (fixation epoch, duration: 500–800 ms) activated a spot light that illuminated the graspable object (cue epoch: 700 ms). After the light was turned off the monkeys had to withhold movement execution (planning epoch: 600–1000 ms) until the fixation LED blinked for 100 ms. After this, the monkeys released the rest sensor, reached for and grasped the object (movement epoch), and briefly lifted it up (hold epoch: 500 ms). The monkeys had to fixate the LED throughout the task (max. deviation: ~5 deg of visual angle). In trials where the handle was grasped, one of two additional LEDs was presented during the cue epoch, which indicated to perform either a precision grip (yellow LED) or a power grip (green LED). All correctly executed trials were rewarded with a liquid reward (juice) and monkeys could initiate the next trial after a short delay. Error trials were immediately aborted without reward and excluded from analysis."
+                        }
+                    ]
+                },
+                {
+                    "type": "section",
+                    "id": "s4-3",
+                    "title": "Kinematics recording",
+                    "content": [
+                        {
+                            "type": "paragraph",
+                            "text": "Finger, hand, and arm kinematics of the acting hand were tracked with an instrumented glove for small primates (<a href=\"#fig1\">Figure 1a,c</a>). Seven magnetic sensor coils (model WAVE, Northern Digital) were placed onto the fingernails, the hand’s dorsum as well as the wrist to compute the centres of 18 individual joints in 3D space, including thumb, digits, wrist, elbow and shoulder. The method and its underlying computational model have been described previously (<a href=\"#bib37\" >Schaffelhofer and Scherberger, 2012</a>)."
+                        },
+                        {
+                            "type": "paragraph",
+                            "text": "Recorded joint trajectories were then used to drive a 3D-musculoskeletal model (<a href=\"#bib39\">Schaffelhofer et al., 2015b</a>), which was adjusted to the specific anatomy of each monkey. The model was implemented in OpenSim (<a href=\"#bib10\">Delp et al., 2007</a>) and allowed extracting a total of 27 DOF [see <a href=\"#bib39\">Schaffelhofer et al. (2015b)</a> for detailed list of DOF]. All extracted joint angles from the model were low-pass filtered (Kaiser window, finite impulse response filter, passband cutoff: 5–20 Hz), downsampled to 50 Hz and used to describe the hand configuration in a 27-dimensional joint space (J-space)."
+                        }
+                    ]
+                },
+                {
+                    "type": "section",
+                    "id": "s4-4",
+                    "title": "Electrophysiological recordings",
+                    "content": [
+                        {
+                            "type": "paragraph",
+                            "text": "Single and multiunit activity was recorded simultaneously using floating microelectrode arrays (FMA, Microprobe Inc., Gaithersburg, MD, USA). In each monkey we recorded from in total 192 channels of 6 individual arrays implanted into the cortical areas AIP, F5, and M1 (see <a href=\"#fig1\" >Figure 1e–g</a>). In each array, the lengths of the electrodes increased towards the sulcus and ranged from 1.5 (1<sup>st</sup> row) to 7.1 mm (4<sup>th</sup> row). In area F5, one array was placed in the posterior bank of the inferior arcuate sulcus approximately targeting F5a (longer electrodes) (<a href=\"#bib46\">Theys et al., 2012a</a>) and approaching the F5 convexity (F5c; shorter electrodes). The second and more dorsally located array was positioned to target F5p. In AIP, the arrays were implanted into the end of the posterior intraparietal sulcus at the level of area PF and more dorsally at the level of area PFG. In M1, both arrays were placed into the hand area of M1 into the anterior bank of the central sulcus at the level of the spur of the arcuate sulcus (<a href=\"#bib33\" >Rathelot and Strick, 2009</a>). See <a href=\"#bib38\" >Schaffelhofer et al. (2015a)</a> for details on surgical procedures. Neural activity was recorded at full bandwidth with a sampling frequency of 24 kHz and a resolution of 16 bits (model: RZ2 Biosignal Processor; Tucker Davis Technologies, FL, USA). Neural data was synchronously stored to disk together with the behavioural and kinematic data. Raw recordings were filtered offline (bandpass cutoff: 0.3––7 kHz) before spikes were detected (threshold: 3.5x std) and extracted. Spike sorting was processed in two steps: First, we applied super-paramagnetic clustering (<a href=\"#bib31\">Quiroga et al., 2004</a>) and then revised the results by visual inspection using Offline sorter (Plexon, TX, USA) to detect and remove neuronal drift and artefacts. No other pre-selection was applied and single and multiunit activity have been analysed together."
+                        }
+                    ]
+                },
+                {
+                    "type": "section",
+                    "id": "s4-5",
+                    "title": "Data analysis",
                     "content": [
                         {
                             "type": "section",
-                            "id": "s4-1",
-                            "title": "Animal training and experimental setup",
+                            "id": "s4-5-1",
+                            "title": "Firing rate and modulation depth",
                             "content": [
                                 {
                                     "type": "paragraph",
-                                    "text": "Two rhesus monkeys (<i>Macaca mulatta</i>) participated in this study (animal Z: female, 7.0 kg body weight; animal M: male, 10.5 kg). Animal housing, care, and all experimental procedures were conducted in accordance with German and European laws governing animal welfare and were in agreement with the guidelines for the care and use of mammals in neuroscience and behavioural research (<a href=\"#bib28\">National Research Council, 2003</a>; see also Ethics statement)."
-                                },
-                                {
-                                    "type": "paragraph",
-                                    "text": "We developed an experimental setup that allowed us to present a large number of graspable objects to the monkeys while monitoring their behaviour, neural activity and hand kinematics. During each recording session, monkeys grasped a total of 42–48 objects of equal weight that were placed on 8 interchangeable turntables (<a href=\"#fig1\">Figure 1a–b</a>). Objects were of different shapes and sizes including <i>rings</i> (diameter of 15, 20, 25, 30, 35, and 40 mm), <i>cubes</i> (length of 15, 20, 25, 30, 35, and 40 mm), <i>spheres</i> (diameter of 15, 20, 25, 30, 35 and 40 mm), <i>horizontal cylinders</i> (diameter of 15, 20, 25, 30, 35, 40 mm, equal length), <i>vertical cylinders</i> (diameter: 15, 20, 25, 30, 35, 40 mm, equal height), and <i>bars</i> (depth of 15, 20, 25, 30, 35, and 40 mm, equal height and width). Furthermore, a <i>mixed</i> turntable held objects of different shapes of average size. Important for this study, a special turntable was holding objects of <i>abstract forms</i>, which differed largely visually but required identical hand configurations for grasping (<a href=\"#fig1\">Figure 1b</a>). Both monkeys were also trained to grasp a single object, a handle, either with a precision grip or a power grip. This extended our task by two more conditions (to a total of 50) that evoked similar visual, but different motor responses. In 20 recording sessions (10 per animal), each condition was repeated at least 10 times."
-                                },
-                                {
-                                    "type": "paragraph",
-                                    "text": "Precision and power grips applied on the handle as well as grasping and lifting the 3D-objects were detected with photoelectric barriers (<a href=\"#bib38\">Schaffelhofer et al., 2015a</a>). The turntable position was controlled with a step motor. Furthermore, the monkey’s eye position was monitored with an optical eye tracking system (model AA-EL-200; ISCAN Inc.). All behavioural and task-relevant parameters were controlled using a custom-written control software implemented in LabVIEW Realtime (National Instruments, Austin, TX)."
+                                    "text": "Firing rate plots were created in order to visualize the activity of example neurons across time. For this, spike rates were smoothed with a Gaussian Kernel (σ = 50 ms) over time and then averaged across trials of the same condition (<a href=\"#bib1\">Baumann et al., 2009</a>). To illustrate the response of a specific condition we used the colour code as introduced in <a href=\"#fig1\">Figure 1b</a>. Furthermore, we visualized the modulation depth (MD) of example neurons in specific epochs of interest. The MD between two conditions was defined as their absolute difference in average firing rate. This measure was computed for all possible pairs of conditions and visualized as a colour-map. In addition, we performed multi-comparison tests to check whether the differences in firing rate between conditions were significant (ANOVA, Tukey-Kramer criterion, p&lt;0.01; ≥10 trials/condition, ≥500 trials/session, Matlab functions: anova1, multcompare)."
                                 }
                             ]
                         },
                         {
                             "type": "section",
-                            "id": "s4-2",
-                            "title": "Task paradigm",
+                            "id": "s4-5-2",
+                            "title": "Sliding ANOVA population analysis",
                             "content": [
                                 {
                                     "type": "paragraph",
-                                    "text": "Monkeys were trained to grasp 49 objects (<a href=\"#fig1\">Figure 1b</a>) in a delayed grasp-and-hold task (<a href=\"#fig1\" >Figure 1d</a>). While sitting in the dark the monkeys could initiate a trial (self-paced) by placing their grasping hand (left hand in monkey Z, right hand in monkey M) onto a rest sensor that enabled a fixation LED close to the object. Looking at (fixating) this spot for a variable time (fixation epoch, duration: 500–800 ms) activated a spot light that illuminated the graspable object (cue epoch: 700 ms). After the light was turned off the monkeys had to withhold movement execution (planning epoch: 600–1000 ms) until the fixation LED blinked for 100 ms. After this, the monkeys released the rest sensor, reached for and grasped the object (movement epoch), and briefly lifted it up (hold epoch: 500 ms). The monkeys had to fixate the LED throughout the task (max. deviation: ~5 deg of visual angle). In trials where the handle was grasped, one of two additional LEDs was presented during the cue epoch, which indicated to perform either a precision grip (yellow LED) or a power grip (green LED). All correctly executed trials were rewarded with a liquid reward (juice) and monkeys could initiate the next trial after a short delay. Error trials were immediately aborted without reward and excluded from analysis."
+                                    "text": "To investigate the population activity during the course of the trial, we tested for significant tuning at multiple time points t using a 1-way ANOVA. Similar to the visualization of firing rates, we first smoothed all spike trains with a Gaussian kernel (σ = 50 ms) and then performed a sliding ANOVA in time steps of 1 ms (p&lt;0.01; no multi-comparison correction, ≥10 trials/condition). Sliding ANOVA results were then averaged across all recording sessions to visualize results (<a href=\"#fig3\" >Figure 3</a>). Due to the variable length of the planning epoch, trials were first aligned to the cue-onset and then to the grasp-onset event. Abstract shapes were introduced at a later stage of the project (included in 12 recording sessions, <a href=\"#fig3\">Figure 3e</a>), whereas all other conditions were tested in all 20 recording sessions (<a href=\"#fig3\">Figure 3b</a>). Please note: Irregular grips were detected in the J-space and excluded for the sliding ANOVA analysis of the abstract shapes (<a href=\"#fig3\" >Figure 3b</a>). Only 17 trials in 12 recording sessions were excluded to guarantee equal hand configurations for statistical analysis."
+                                },
+                                {
+                                    "type": "paragraph",
+                                    "text": "To calculate the visual response times of an area of interest (i.e. AIP and F5) we measured the time between cue onset and 75% of the population’s peak activity. Response times were averaged across recording sessions for each animal and tested for significant differences."
                                 }
                             ]
                         },
                         {
                             "type": "section",
-                            "id": "s4-3",
-                            "title": "Kinematics recording",
+                            "id": "s4-5-3",
+                            "title": "Dimensionality reduction",
                             "content": [
                                 {
                                     "type": "paragraph",
-                                    "text": "Finger, hand, and arm kinematics of the acting hand were tracked with an instrumented glove for small primates (<a href=\"#fig1\">Figure 1a,c</a>). Seven magnetic sensor coils (model WAVE, Northern Digital) were placed onto the fingernails, the hand’s dorsum as well as the wrist to compute the centres of 18 individual joints in 3D space, including thumb, digits, wrist, elbow and shoulder. The method and its underlying computational model have been described previously (<a href=\"#bib37\" >Schaffelhofer and Scherberger, 2012</a>)."
+                                    "text": "To compare and visualize the simultaneously recorded high-dimensional data (J- and N-space), we applied dimensionality reduction methods. We used principal component analysis (PCA) to express the data variability of the J-space in a compact, lower-dimensional fashion. This approach was demonstrated to be optimal for describing hand shapes (<a href=\"#bib30\">Pesyna et al., 2011</a>). As an input for PCA, we computed for each trial and DOF the mean joint angle during the hold epoch (in degrees). This let for each trial to a 27-dimensional joint position vector in J-space that robustly described the monkey’s average hand configuration during the hold epoch, and across all trials to an input matrix of dimension: trials x DOF."
                                 },
                                 {
                                     "type": "paragraph",
-                                    "text": "Recorded joint trajectories were then used to drive a 3D-musculoskeletal model (<a href=\"#bib39\">Schaffelhofer et al., 2015b</a>), which was adjusted to the specific anatomy of each monkey. The model was implemented in OpenSim (<a href=\"#bib10\">Delp et al., 2007</a>) and allowed extracting a total of 27 DOF [see <a href=\"#bib39\">Schaffelhofer et al. (2015b)</a> for detailed list of DOF]. All extracted joint angles from the model were low-pass filtered (Kaiser window, finite impulse response filter, passband cutoff: 5–20 Hz), downsampled to 50 Hz and used to describe the hand configuration in a 27-dimensional joint space (J-space)."
+                                    "text": "For exploring the N-space (neuronal population space), we applied canonical discriminant analysis (CDA). Similar to PCA, CDA creates a new transform of the original dataset spanned by linear combinations of the original variables. Whereas PCA creates the new coordinate system in a way that maximizes the total variance, CDA transforms the data in order to maximize the separation of groups (here: task conditions). The first axis in the new transform (first canonical variable) therefore reflects the linear combination of original variables that show the most significant F-statistic in a one-way analysis of variance. The second canonical variable is orthogonal to the first one and has maximum separation within the remaining dimensions."
+                                },
+                                {
+                                    "type": "paragraph",
+                                    "text": "We performed CDA based on the population's mean firing rates of a specific task epoch of interest (e.g., grasp epoch) relative to baseline activity. This means, a population matrix consists of entries that correspond to the mean firing rate of individual neurons for all trials in a certain time interval (dimensions: trials x number of neurons). In contrast to other dimensionality reduction methods, CDA considers only variances of the signal related to conditional differences. Due to this advantage, noise or condition-irrelevant modulations get suppressed."
+                                },
+                                {
+                                    "type": "paragraph",
+                                    "text": "For a fair comparison, all dimensionality reduction results presented for the individual areas originated from the same recording session per monkey (e.g. AIP, F5 and M1 populations shown from monkey Z or M) and were therefore recorded simultaneously."
                                 }
                             ]
                         },
                         {
                             "type": "section",
-                            "id": "s4-4",
-                            "title": "Electrophysiological recordings",
+                            "id": "s4-5-4",
+                            "title": "Procrustes analysis",
                             "content": [
                                 {
                                     "type": "paragraph",
-                                    "text": "Single and multiunit activity was recorded simultaneously using floating microelectrode arrays (FMA, Microprobe Inc., Gaithersburg, MD, USA). In each monkey we recorded from in total 192 channels of 6 individual arrays implanted into the cortical areas AIP, F5, and M1 (see <a href=\"#fig1\" >Figure 1e–g</a>). In each array, the lengths of the electrodes increased towards the sulcus and ranged from 1.5 (1<sup>st</sup> row) to 7.1 mm (4<sup>th</sup> row). In area F5, one array was placed in the posterior bank of the inferior arcuate sulcus approximately targeting F5a (longer electrodes) (<a href=\"#bib46\">Theys et al., 2012a</a>) and approaching the F5 convexity (F5c; shorter electrodes). The second and more dorsally located array was positioned to target F5p. In AIP, the arrays were implanted into the end of the posterior intraparietal sulcus at the level of area PF and more dorsally at the level of area PFG. In M1, both arrays were placed into the hand area of M1 into the anterior bank of the central sulcus at the level of the spur of the arcuate sulcus (<a href=\"#bib33\" >Rathelot and Strick, 2009</a>). See <a href=\"#bib38\" >Schaffelhofer et al. (2015a)</a> for details on surgical procedures. Neural activity was recorded at full bandwidth with a sampling frequency of 24 kHz and a resolution of 16 bits (model: RZ2 Biosignal Processor; Tucker Davis Technologies, FL, USA). Neural data was synchronously stored to disk together with the behavioural and kinematic data. Raw recordings were filtered offline (bandpass cutoff: 0.3––7 kHz) before spikes were detected (threshold: 3.5x std) and extracted. Spike sorting was processed in two steps: First, we applied super-paramagnetic clustering (<a href=\"#bib31\">Quiroga et al., 2004</a>) and then revised the results by visual inspection using Offline sorter (Plexon, TX, USA) to detect and remove neuronal drift and artefacts. No other pre-selection was applied and single and multiunit activity have been analysed together."
+                                    "text": "Procrustes analysis (PCRA) can be used to test similarities or differences between multidimensional datasets of different measures and scales. In the context of this study, PCRA was used to evaluate the resemblance between the J- and the N-space (firing rates). For this, we reduced both representations to their highest common dimension (i.e., 27 DOF of hand and arm) using the dimensionality reduction methods explained above (i.e., CDA for N-space). This produced datasets of identical number of trials (e.g., 600) and dimensions (e.g., 27). Then PCRA was used to translate and rotate the space of interest (e.g., N-space of M1, F5, or AIP) in a way that minimized the sum of squared distances (SSD) to the corresponding points in the reference space (e.g., J-space) (Matlab function: procrustes). The resulting transform was used to visualize and quantify the amount of similarity to the reference space (J-space). As a numerical measure of similarity, the sum of squared distances between the new transform and the reference frame was computed and normalized by the sum of squared distances between points of the reference space to their dimensional means (Matlab function: procrustes). This similarity measure is a non-negative number with values near 0 implying a high similarity between the multidimensional spaces and values approaching (or exceeding) 1 implying strong dissimilarity."
                                 }
                             ]
                         },
                         {
                             "type": "section",
-                            "id": "s4-5",
-                            "title": "Data analysis",
+                            "id": "s4-5-5",
+                            "title": "Hierarchical cluster analysis",
                             "content": [
                                 {
-                                    "type": "section",
-                                    "id": "s4-5-1",
-                                    "title": "Firing rate and modulation depth",
-                                    "content": [
-                                        {
-                                            "type": "paragraph",
-                                            "text": "Firing rate plots were created in order to visualize the activity of example neurons across time. For this, spike rates were smoothed with a Gaussian Kernel (σ = 50 ms) over time and then averaged across trials of the same condition (<a href=\"#bib1\">Baumann et al., 2009</a>). To illustrate the response of a specific condition we used the colour code as introduced in <a href=\"#fig1\">Figure 1b</a>. Furthermore, we visualized the modulation depth (MD) of example neurons in specific epochs of interest. The MD between two conditions was defined as their absolute difference in average firing rate. This measure was computed for all possible pairs of conditions and visualized as a colour-map. In addition, we performed multi-comparison tests to check whether the differences in firing rate between conditions were significant (ANOVA, Tukey-Kramer criterion, p&lt;0.01; ≥10 trials/condition, ≥500 trials/session, Matlab functions: anova1, multcompare)."
-                                        }
-                                    ]
-                                },
+                                    "type": "paragraph",
+                                    "text": "To illustrate and compare the many conditions of our task in an untransformed, full-dimensional way, we performed hierarchical cluster analysis (HCA). We first computed the Mahalanobis distances between the population activities (N-space) of all possible pairs of task conditions in an epoch of interest (Matlab function: manova1). This resulting distance matrix (e.g., for 50 x 50 conditions) was used to create an agglomerative hierarchical cluster tree based on the average linkage criterion (Matlab function: manovacluster), presenting the cluster solutions of an individual recording session as dendrograms (e.g. <a href=\"#fig2\" >Figure 2e–f</a> for AIP of animal Z). Additionally, we averaged the Mahalanobis distance matrices of all individual session to build dendrograms expressing the N-space of an animal across all recording sessions (e.g. <a href=\"#fig2s1\">Figure 2—figure supplement 1</a> for AIP of animal Z)."
+                                }
+                            ]
+                        },
+                        {
+                            "type": "section",
+                            "id": "s4-5-6",
+                            "title": "Feature code correlation",
+                            "content": [
                                 {
-                                    "type": "section",
-                                    "id": "s4-5-2",
-                                    "title": "Sliding ANOVA population analysis",
-                                    "content": [
-                                        {
-                                            "type": "paragraph",
-                                            "text": "To investigate the population activity during the course of the trial, we tested for significant tuning at multiple time points t using a 1-way ANOVA. Similar to the visualization of firing rates, we first smoothed all spike trains with a Gaussian kernel (σ = 50 ms) and then performed a sliding ANOVA in time steps of 1 ms (p&lt;0.01; no multi-comparison correction, ≥10 trials/condition). Sliding ANOVA results were then averaged across all recording sessions to visualize results (<a href=\"#fig3\" >Figure 3</a>). Due to the variable length of the planning epoch, trials were first aligned to the cue-onset and then to the grasp-onset event. Abstract shapes were introduced at a later stage of the project (included in 12 recording sessions, <a href=\"#fig3\">Figure 3e</a>), whereas all other conditions were tested in all 20 recording sessions (<a href=\"#fig3\">Figure 3b</a>). Please note: Irregular grips were detected in the J-space and excluded for the sliding ANOVA analysis of the abstract shapes (<a href=\"#fig3\" >Figure 3b</a>). Only 17 trials in 12 recording sessions were excluded to guarantee equal hand configurations for statistical analysis."
-                                        },
-                                        {
-                                            "type": "paragraph",
-                                            "text": "To calculate the visual response times of an area of interest (i.e. AIP and F5) we measured the time between cue onset and 75% of the population’s peak activity. Response times were averaged across recording sessions for each animal and tested for significant differences."
-                                        }
-                                    ]
-                                },
-                                {
-                                    "type": "section",
-                                    "id": "s4-5-3",
-                                    "title": "Dimensionality reduction",
-                                    "content": [
-                                        {
-                                            "type": "paragraph",
-                                            "text": "To compare and visualize the simultaneously recorded high-dimensional data (J- and N-space), we applied dimensionality reduction methods. We used principal component analysis (PCA) to express the data variability of the J-space in a compact, lower-dimensional fashion. This approach was demonstrated to be optimal for describing hand shapes (<a href=\"#bib30\">Pesyna et al., 2011</a>). As an input for PCA, we computed for each trial and DOF the mean joint angle during the hold epoch (in degrees). This let for each trial to a 27-dimensional joint position vector in J-space that robustly described the monkey’s average hand configuration during the hold epoch, and across all trials to an input matrix of dimension: trials x DOF."
-                                        },
-                                        {
-                                            "type": "paragraph",
-                                            "text": "For exploring the N-space (neuronal population space), we applied canonical discriminant analysis (CDA). Similar to PCA, CDA creates a new transform of the original dataset spanned by linear combinations of the original variables. Whereas PCA creates the new coordinate system in a way that maximizes the total variance, CDA transforms the data in order to maximize the separation of groups (here: task conditions). The first axis in the new transform (first canonical variable) therefore reflects the linear combination of original variables that show the most significant F-statistic in a one-way analysis of variance. The second canonical variable is orthogonal to the first one and has maximum separation within the remaining dimensions."
-                                        },
-                                        {
-                                            "type": "paragraph",
-                                            "text": "We performed CDA based on the population's mean firing rates of a specific task epoch of interest (e.g., grasp epoch) relative to baseline activity. This means, a population matrix consists of entries that correspond to the mean firing rate of individual neurons for all trials in a certain time interval (dimensions: trials x number of neurons). In contrast to other dimensionality reduction methods, CDA considers only variances of the signal related to conditional differences. Due to this advantage, noise or condition-irrelevant modulations get suppressed."
-                                        },
-                                        {
-                                            "type": "paragraph",
-                                            "text": "For a fair comparison, all dimensionality reduction results presented for the individual areas originated from the same recording session per monkey (e.g. AIP, F5 and M1 populations shown from monkey Z or M) and were therefore recorded simultaneously."
-                                        }
-                                    ]
-                                },
-                                {
-                                    "type": "section",
-                                    "id": "s4-5-4",
-                                    "title": "Procrustes analysis",
-                                    "content": [
-                                        {
-                                            "type": "paragraph",
-                                            "text": "Procrustes analysis (PCRA) can be used to test similarities or differences between multidimensional datasets of different measures and scales. In the context of this study, PCRA was used to evaluate the resemblance between the J- and the N-space (firing rates). For this, we reduced both representations to their highest common dimension (i.e., 27 DOF of hand and arm) using the dimensionality reduction methods explained above (i.e., CDA for N-space). This produced datasets of identical number of trials (e.g., 600) and dimensions (e.g., 27). Then PCRA was used to translate and rotate the space of interest (e.g., N-space of M1, F5, or AIP) in a way that minimized the sum of squared distances (SSD) to the corresponding points in the reference space (e.g., J-space) (Matlab function: procrustes). The resulting transform was used to visualize and quantify the amount of similarity to the reference space (J-space). As a numerical measure of similarity, the sum of squared distances between the new transform and the reference frame was computed and normalized by the sum of squared distances between points of the reference space to their dimensional means (Matlab function: procrustes). This similarity measure is a non-negative number with values near 0 implying a high similarity between the multidimensional spaces and values approaching (or exceeding) 1 implying strong dissimilarity."
-                                        }
-                                    ]
-                                },
-                                {
-                                    "type": "section",
-                                    "id": "s4-5-5",
-                                    "title": "Hierarchical cluster analysis",
-                                    "content": [
-                                        {
-                                            "type": "paragraph",
-                                            "text": "To illustrate and compare the many conditions of our task in an untransformed, full-dimensional way, we performed hierarchical cluster analysis (HCA). We first computed the Mahalanobis distances between the population activities (N-space) of all possible pairs of task conditions in an epoch of interest (Matlab function: manova1). This resulting distance matrix (e.g., for 50 x 50 conditions) was used to create an agglomerative hierarchical cluster tree based on the average linkage criterion (Matlab function: manovacluster), presenting the cluster solutions of an individual recording session as dendrograms (e.g. <a href=\"#fig2\" >Figure 2e–f</a> for AIP of animal Z). Additionally, we averaged the Mahalanobis distance matrices of all individual session to build dendrograms expressing the N-space of an animal across all recording sessions (e.g. <a href=\"#fig2s1\">Figure 2—figure supplement 1</a> for AIP of animal Z)."
-                                        }
-                                    ]
-                                },
-                                {
-                                    "type": "section",
-                                    "id": "s4-5-6",
-                                    "title": "Feature code correlation",
-                                    "content": [
-                                        {
-                                            "type": "paragraph",
-                                            "text": "For correlating the dynamic feature communicated within the grasping network we (1) binned the spiking activity of each individual neuron (bin width = 10 ms), (2) smoothed the firing rates with a Gaussian kernel (σ = 300 ms) and (3) aligned the firing vectors to both cue and grasp onset. Within each of the resulting bins we then (4) computed the Euclidean distance between all possible pairs of trials in the N-space. This leads, separately for each area AIP, F5 and M1, to a distance matrix of the size <i>m<sup>2</sup></i>, where m is the number of trials that represents the neural population difference across different trials and trial conditions. Pairs of such matrices from AIP, F5, and M1 were then (5) correlated for every time bin (Spearman’s correlation coefficient), which led to a correlation function across time for each pair of areas (AIP-F5, AIP-M1, and F5-M1). This correlation function represents for every time in the task the similarity of the encoded features between both areas. <a href=\"#fig8\">Figure 8</a> and <a href=\"#media5\">Video 5</a> visualizes these distance matrices and the resulting correlation function over the time."
-                                        }
-                                    ]
+                                    "type": "paragraph",
+                                    "text": "For correlating the dynamic feature communicated within the grasping network we (1) binned the spiking activity of each individual neuron (bin width = 10 ms), (2) smoothed the firing rates with a Gaussian kernel (σ = 300 ms) and (3) aligned the firing vectors to both cue and grasp onset. Within each of the resulting bins we then (4) computed the Euclidean distance between all possible pairs of trials in the N-space. This leads, separately for each area AIP, F5 and M1, to a distance matrix of the size <i>m<sup>2</sup></i>, where m is the number of trials that represents the neural population difference across different trials and trial conditions. Pairs of such matrices from AIP, F5, and M1 were then (5) correlated for every time bin (Spearman’s correlation coefficient), which led to a correlation function across time for each pair of areas (AIP-F5, AIP-M1, and F5-M1). This correlation function represents for every time in the task the similarity of the encoded features between both areas. <a href=\"#fig8\">Figure 8</a> and <a href=\"#media5\">Video 5</a> visualizes these distance matrices and the resulting correlation function over the time."
                                 }
                             ]
                         }
