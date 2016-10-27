@@ -3261,6 +3261,12 @@
             "doi": "10.1523/JNEUROSCI.1574-15.2015"
         }
     ],
+    "acknowledgements": [
+        {
+            "type": "paragraph",
+            "text": "The authors thank M Sartori, M Dörge, K Menz, R Ahlert, N Nazarenus, and L Burchardt for assistance and MM Fabiszak, M Hepp-Reymond, and W Freiwald for helpful comments on an earlier version of the manuscript. This work was supported by the Federal Ministry of Education and Research (Bernstein Center for Computational Neuroscience II Grant DPZ-01GQ1005C, the German Research Foundation (SCHE 1575/3-1), the European Union Grant FP7– 611687 (NEBIAS), and the Humboldt Foundation."
+        }
+    ],
     "decisionLetter": {
         "doi": "10.7554/eLife.15278.023",
         "description": [
