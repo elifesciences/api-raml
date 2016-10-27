@@ -36,22 +36,7 @@
         {
             "number": 1,
             "title": "Green drug factories",
-            "time": 0,
-            "content": [
-                {
-                    "type": "research-article",
-                    "status": "vor",
-                    "id": "13664",
-                    "version": 1,
-                    "doi": "10.7554/eLife.13664",
-                    "authorLine": "Paulina Fuentes et al",
-                    "title": "A new synthetic biology approach allows transfer of an entire metabolic pathway from a medicinal plant to a biomass crop",
-                    "published": "2016-06-14T07:00:15Z",
-                    "statusDate": "2016-06-14T07:00:15Z",
-                    "volume": 5,
-                    "elocationId": "e13664"
-                }
-            ]
+            "time": 0
         }
     ]
 }

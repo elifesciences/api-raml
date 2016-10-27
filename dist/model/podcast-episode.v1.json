@@ -613,8 +613,7 @@
                         "required": [
                             "number",
                             "title",
-                            "time",
-                            "content"
+                            "time"
                         ]
                     },
                     "minItems": 1
