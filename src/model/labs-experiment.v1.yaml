@@ -4,6 +4,13 @@ type: object
 allOf:
   - $ref: ../snippets/labs-experiment.v1.yaml
   - properties:
+        image:
+            type: object
+            properties:
+                banner:
+                    $ref: ../misc/image-banner.v1.yaml
+            required:
+              - banner
         content:
             description: Content
             type: array

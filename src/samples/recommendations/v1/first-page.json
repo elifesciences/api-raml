@@ -30,23 +30,24 @@
             "elocationId": "e09560",
             "pdf": "https://elifesciences.org/content/4/e09560.pdf",
             "subjects": [
-                "genomics-evolutionary-biology"
+                {
+                    "id": "genomics-evolutionary-biology",
+                    "name": "Genomics and Evolutionary Biology"
+                }
             ],
             "impactStatement": "A new hominin species has been unearthed in the Dinaledi Chamber of the Rising Star cave system in the largest assemblage of a single species of hominins yet discovered in Africa.",
             "image": {
-                "alt": "",
-                "sizes": {
-                    "2:1": {
-                        "900": "https://placehold.it/900x450",
-                        "1800": "https://placehold.it/1800x900"
-                    },
-                    "16:9": {
-                        "250": "https://placehold.it/250x141",
-                        "500": "https://placehold.it/500x281"
-                    },
-                    "1:1": {
-                        "70": "https://placehold.it/70x70",
-                        "140": "https://placehold.it/140x140"
+                "thumbnail": {
+                    "alt": "",
+                    "sizes": {
+                        "16:9": {
+                            "250": "https://placehold.it/250x141",
+                            "500": "https://placehold.it/500x281"
+                        },
+                        "1:1": {
+                            "70": "https://placehold.it/70x70",
+                            "140": "https://placehold.it/140x140"
+                        }
                     }
                 }
             }
@@ -68,19 +69,17 @@
             "title": "April/May 2016",
             "published": "2016-05-27T13:19:42+00:00",
             "image": {
-                "alt": "",
-                "sizes": {
-                    "2:1": {
-                        "900": "https://placehold.it/900x450",
-                        "1800": "https://placehold.it/1800x900"
-                    },
-                    "16:9": {
-                        "250": "https://placehold.it/250x141",
-                        "500": "https://placehold.it/500x281"
-                    },
-                    "1:1": {
-                        "70": "https://placehold.it/70x70",
-                        "140": "https://placehold.it/140x140"
+                "thumbnail": {
+                    "alt": "",
+                    "sizes": {
+                        "16:9": {
+                            "250": "https://placehold.it/250x141",
+                            "500": "https://placehold.it/500x281"
+                        },
+                        "1:1": {
+                            "70": "https://placehold.it/70x70",
+                            "140": "https://placehold.it/140x140"
+                        }
                     }
                 }
             },
@@ -97,19 +96,17 @@
             "title": "Tropical disease",
             "updated": "2015-09-16T11:19:26+00:00",
             "image": {
-                "alt": "",
-                "sizes": {
-                    "2:1": {
-                        "900": "https://placehold.it/900x450",
-                        "1800": "https://placehold.it/1800x900"
-                    },
-                    "16:9": {
-                        "250": "https://placehold.it/250x141",
-                        "500": "https://placehold.it/500x281"
-                    },
-                    "1:1": {
-                        "70": "https://placehold.it/70x70",
-                        "140": "https://placehold.it/140x140"
+                "thumbnail": {
+                    "alt": "",
+                    "sizes": {
+                        "16:9": {
+                            "250": "https://placehold.it/250x141",
+                            "500": "https://placehold.it/500x281"
+                        },
+                        "1:1": {
+                            "70": "https://placehold.it/70x70",
+                            "140": "https://placehold.it/140x140"
+                        }
                     }
                 }
             },

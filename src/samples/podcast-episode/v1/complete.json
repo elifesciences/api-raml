@@ -4,19 +4,26 @@
     "impactStatement": "In this episode of the eLife podcast we hear about drug production, early career researchers, honeybees, human migrations and pain.",
     "published": "2016-07-01T08:30:15+00:00",
     "image": {
-        "alt": "",
-        "sizes": {
-            "2:1": {
-                "900": "https://placehold.it/900x450",
-                "1800": "https://placehold.it/1800x900"
-            },
-            "16:9": {
-                "250": "https://placehold.it/250x141",
-                "500": "https://placehold.it/500x281"
-            },
-            "1:1": {
-                "70": "https://placehold.it/70x70",
-                "140": "https://placehold.it/140x140"
+        "banner": {
+            "alt": "",
+            "sizes": {
+                "2:1": {
+                    "900": "https://placehold.it/900x450",
+                    "1800": "https://placehold.it/1800x900"
+                }
+            }
+        },
+        "thumbnail": {
+            "alt": "",
+            "sizes": {
+                "16:9": {
+                    "250": "https://placehold.it/250x141",
+                    "500": "https://placehold.it/500x281"
+                },
+                "1:1": {
+                    "70": "https://placehold.it/70x70",
+                    "140": "https://placehold.it/140x140"
+                }
             }
         }
     },
@@ -27,8 +34,14 @@
         }
     ],
     "subjects": [
-        "biochemistry",
-        "ecology"
+        {
+            "id": "biochemistry",
+            "name": "Biochemistry"
+        },
+        {
+            "id": "ecology",
+            "name": "Ecology"
+        }
     ],
     "chapters": [
         {
@@ -52,24 +65,28 @@
                     "elocationId": "e13664",
                     "pdf": "https://elifesciences.org/content/5/e13664.pdf",
                     "subjects": [
-                        "biochemistry",
-                        "plant-biology"
+                        {
+                            "id": "biochemistry",
+                            "name": "Biochemistry"
+                        },
+                        {
+                            "id": "plant-biology",
+                            "name": "Plant Biology"
+                        }
                     ],
                     "impactStatement": "A combination of chloroplast transformation with nuclear transformation and large-scale metabolic screening of supertransformed plant lines has enabled an entire biochemical pathway to be transferred from a medicinal plant to a high-biomass crop.",
                     "image": {
-                        "alt": "",
-                        "sizes": {
-                            "2:1": {
-                                "900": "https://placehold.it/900x450",
-                                "1800": "https://placehold.it/1800x900"
-                            },
-                            "16:9": {
-                                "250": "https://placehold.it/250x141",
-                                "500": "https://placehold.it/500x281"
-                            },
-                            "1:1": {
-                                "70": "https://placehold.it/70x70",
-                                "140": "https://placehold.it/140x140"
+                        "thumbnail": {
+                            "alt": "",
+                            "sizes": {
+                                "16:9": {
+                                    "250": "https://placehold.it/250x141",
+                                    "500": "https://placehold.it/500x281"
+                                },
+                                "1:1": {
+                                    "70": "https://placehold.it/70x70",
+                                    "140": "https://placehold.it/140x140"
+                                }
                             }
                         }
                     }
@@ -98,19 +115,17 @@
                     "pdf": "https://elifesciences.org/content/5/17393.pdf",
                     "impactStatement": "By sharing their experiences, early-career scientists can help to make the case for increased government funding for researchers.",
                     "image": {
-                        "alt": "",
-                        "sizes": {
-                            "2:1": {
-                                "900": "https://placehold.it/900x450",
-                                "1800": "https://placehold.it/1800x900"
-                            },
-                            "16:9": {
-                                "250": "https://placehold.it/250x141",
-                                "500": "https://placehold.it/500x281"
-                            },
-                            "1:1": {
-                                "70": "https://placehold.it/70x70",
-                                "140": "https://placehold.it/140x140"
+                        "thumbnail": {
+                            "alt": "",
+                            "sizes": {
+                                "16:9": {
+                                    "250": "https://placehold.it/250x141",
+                                    "500": "https://placehold.it/500x281"
+                                },
+                                "1:1": {
+                                    "70": "https://placehold.it/70x70",
+                                    "140": "https://placehold.it/140x140"
+                                }
                             }
                         }
                     }
@@ -121,19 +136,17 @@
                     "title": "Tropical disease",
                     "updated": "2015-09-16T11:19:26+00:00",
                     "image": {
-                        "alt": "",
-                        "sizes": {
-                            "2:1": {
-                                "900": "https://placehold.it/900x450",
-                                "1800": "https://placehold.it/1800x900"
-                            },
-                            "16:9": {
-                                "250": "https://placehold.it/250x141",
-                                "500": "https://placehold.it/500x281"
-                            },
-                            "1:1": {
-                                "70": "https://placehold.it/70x70",
-                                "140": "https://placehold.it/140x140"
+                        "thumbnail": {
+                            "alt": "",
+                            "sizes": {
+                                "16:9": {
+                                    "250": "https://placehold.it/250x141",
+                                    "500": "https://placehold.it/500x281"
+                                },
+                                "1:1": {
+                                    "70": "https://placehold.it/70x70",
+                                    "140": "https://placehold.it/140x140"
+                                }
                             }
                         }
                     },

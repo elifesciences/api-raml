@@ -239,7 +239,10 @@
     ],
     "pdf": "https://elifesciences.org/content/4/e09560.pdf",
     "subjects": [
-        "genomics-evolutionary-biology"
+        {
+            "id": "genomics-evolutionary-biology",
+            "name": "Genomics and Evolutionary Biology"
+        }
     ],
     "researchOrganisms": [
         "<i>Homo naledi</i>"
@@ -265,23 +268,24 @@
             "elocationId": "e09561",
             "pdf": "https://elifesciences.org/content/4/e09561.pdf",
             "subjects": [
-                "genomics-evolutionary-biology"
+                {
+                    "id": "genomics-evolutionary-biology",
+                    "name": "Genomics and Evolutionary Biology"
+                }
             ],
             "impactStatement": "A new hominin species found in a South African cave is part of one of the most unusual hominin fossil assemblages on record.",
             "image": {
-                "alt": "",
-                "sizes": {
-                    "2:1": {
-                        "900": "https://placehold.it/900x450",
-                        "1800": "https://placehold.it/1800x900"
-                    },
-                    "16:9": {
-                        "250": "https://placehold.it/250x141",
-                        "500": "https://placehold.it/500x281"
-                    },
-                    "1:1": {
-                        "70": "https://placehold.it/70x70",
-                        "140": "https://placehold.it/140x140"
+                "thumbnail": {
+                    "alt": "",
+                    "sizes": {
+                        "16:9": {
+                            "250": "https://placehold.it/250x141",
+                            "500": "https://placehold.it/500x281"
+                        },
+                        "1:1": {
+                            "70": "https://placehold.it/70x70",
+                            "140": "https://placehold.it/140x140"
+                        }
                     }
                 }
             }
@@ -300,23 +304,24 @@
             "elocationId": "e10627",
             "pdf": "https://elifesciences.org/content/4/e10627.pdf",
             "subjects": [
-                "genomics-evolutionary-biology"
+                {
+                    "id": "genomics-evolutionary-biology",
+                    "name": "Genomics and Evolutionary Biology"
+                }
             ],
             "impactStatement": "More than 1500 fossils from the Rising Star cave system in South Africa have been assigned to a new human species, <i>Homo naledi</i>, which displays a unique combination of primitive and derived traits throughout the skeleton.",
             "image": {
-                "alt": "",
-                "sizes": {
-                    "2:1": {
-                        "900": "https://placehold.it/900x450",
-                        "1800": "https://placehold.it/1800x900"
-                    },
-                    "16:9": {
-                        "250": "https://placehold.it/250x141",
-                        "500": "https://placehold.it/500x281"
-                    },
-                    "1:1": {
-                        "70": "https://placehold.it/70x70",
-                        "140": "https://placehold.it/140x140"
+                "thumbnail": {
+                    "alt": "",
+                    "sizes": {
+                        "16:9": {
+                            "250": "https://placehold.it/250x141",
+                            "500": "https://placehold.it/500x281"
+                        },
+                        "1:1": {
+                            "70": "https://placehold.it/70x70",
+                            "140": "https://placehold.it/140x140"
+                        }
                     }
                 }
             }
@@ -324,19 +329,26 @@
     ],
     "impactStatement": "A new hominin species has been unearthed in the Dinaledi Chamber of the Rising Star cave system in the largest assemblage of a single species of hominins yet discovered in Africa.",
     "image": {
-        "alt": "",
-        "sizes": {
-            "2:1": {
-                "900": "https://placehold.it/900x450",
-                "1800": "https://placehold.it/1800x900"
-            },
-            "16:9": {
-                "250": "https://placehold.it/250x141",
-                "500": "https://placehold.it/500x281"
-            },
-            "1:1": {
-                "70": "https://placehold.it/70x70",
-                "140": "https://placehold.it/140x140"
+        "banner": {
+            "alt": "",
+            "sizes": {
+                "2:1": {
+                    "900": "https://placehold.it/900x450",
+                    "1800": "https://placehold.it/1800x900"
+                }
+            }
+        },
+        "thumbnail": {
+            "alt": "",
+            "sizes": {
+                "16:9": {
+                    "250": "https://placehold.it/250x141",
+                    "500": "https://placehold.it/500x281"
+                },
+                "1:1": {
+                    "70": "https://placehold.it/70x70",
+                    "140": "https://placehold.it/140x140"
+                }
             }
         }
     },
@@ -536,7 +548,23 @@
                     ],
                     "image": "https://static-movie-usa.glencoesoftware.com/jpg/10.7554/659/0f10378e095dde7aaf579af504c4bfdc6fb86550/elife-00569-media1.jpg",
                     "width": 640,
-                    "height": 480
+                    "height": 480,
+                    "sourceData": [
+                        {
+                            "doi": "10.7554/eLife.00666.015",
+                            "id": "video1sdata1",
+                            "label": "Video 1—Source data 1",
+                            "title": "Title of the source code",
+                            "caption": [
+                                {
+                                    "type": "paragraph",
+                                    "text": "Legend of the source code."
+                                }
+                            ],
+                            "mediaType": "text/plain",
+                            "uri": "https://elife-publishing-cdn.s3.amazonaws.com/00011/elife-00011-fig2-data1-v1.txt"
+                        }
+                    ]
                 }
             ]
         }
@@ -793,9 +821,9 @@
                 }
             },
             "pages": {
-                "first": "231",
-                "last": "452",
-                "range": "231–236, 423–452"
+                "first": "11.5.1",
+                "last": "11.5.12",
+                "range": "11.5.1–11.5.3, 11.5.11–11.5.12"
             },
             "doi": "10.1007/978-3-642-00599-2_12",
             "uri": "https://dx.doi.org/10.1007/978-3-642-00599-2_12"
@@ -1303,6 +1331,43 @@
             "website": "A website",
             "accessed": "2016-09-16",
             "uri": "http://www.example.com/"
+        },
+        {
+            "type": "unknown",
+            "id": "bib27",
+            "date": "2014",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "Person One",
+                        "index": "One, Person"
+                    }
+                }
+            ],
+            "title": "Minimal unknown"
+        },
+        {
+            "type": "unknown",
+            "id": "bib28",
+            "date": "2014",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "Person One",
+                        "index": "One, Person"
+                    }
+                },
+                {
+                    "type": "group",
+                    "name": "Group One"
+                }
+            ],
+            "authorsEtAl": true,
+            "title": "Complete unknown",
+            "details": "Some details",
+            "uri": "http://www.example.com/"
         }
     ],
     "appendices": [
@@ -1338,6 +1403,12 @@
                     ]
                 }
             ]
+        }
+    ],
+    "acknowledgements": [
+        {
+            "type": "paragraph",
+            "text": "The authors would like to thank the many funding agencies that supported various aspects of this work. In particular the authors would like to thank the National Geographic Society, the South African National Research Foundation and the Gauteng Provincial Government for particularly significant funding of the discovery, recovery and analysis of this material. Other funding agencies include and the Palaeontological Scientific Trust, the Texas A&amp;M College of Liberal Arts Seed Grant Program, the Lyda Hill Foundation and the Wisconsin Alumni Research Foundation. We wish to thank the Jacobs Family for access to the site and the South African Heritage Resource Agency and Cradle of Humankind UNESCO World Heritage Site Management Authority for issuing the various permits required for this work, including the excavation permit (PermitID: 952). We would also like to thank the University of the Witwatersrand and the Evolutionary Studies Institute as well as the South African National Centre of Excellence in PalaeoSciences for curating the material and hosting the authors while studying the material."
         }
     ],
     "decisionLetter": {

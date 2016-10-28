@@ -466,6 +466,32 @@ allOf:
           - authors
           - title
           - uri
+      - properties:
+            type:
+                type: string
+                enum:
+                  - unknown # This is purely for legacy references which are incomplete
+            authors:
+                type: array
+                items:
+                    $ref: author.v1.yaml
+                minItems: 1
+            authorsEtAl:
+                description: If there are more authors.
+                type: boolean
+                default: false
+            title:
+                type: string
+                minLength: 1
+            details:
+                type: string
+                minLength: 1
+            uri:
+                type: string
+                format: uri
+        required:
+          - authors
+          - title
 
 definitions:
     book:
@@ -504,7 +530,7 @@ definitions:
                           - D760
                           - xii
                     type: string
-                    pattern: ^[A-Za-z0-9]+$
+                    pattern: ^[A-Za-z0-9\.]+$
                 last:
                     title: Last page
                     description: |
@@ -515,7 +541,7 @@ definitions:
                           - D714
                           - xiii
                     type: string
-                    pattern: ^[A-Za-z0-9]+$
+                    pattern: ^[A-Za-z0-9\.]+$
                 range:
                     title: Page ranges
                     description: |
@@ -528,7 +554,7 @@ definitions:
                           - D706–D714
                           - 8–11, 14–19, 40
                     type: string
-                    pattern: ^([A-Za-z0-9]+(–[A-Za-z0-9]+)?)(, ([A-Za-z0-9]+(–[A-Za-z0-9]+)?))*$
+                    pattern: ^([A-Za-z0-9\.]+(–[A-Za-z0-9\.]+)?)(, ([A-Za-z0-9\.]+(–[A-Za-z0-9\.]+)?))*$
             required:
               - first
               - last

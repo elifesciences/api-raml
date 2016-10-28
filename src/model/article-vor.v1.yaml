@@ -54,6 +54,11 @@ allOf:
                   - doi
                   - title
                   - content
+        acknowledgements:
+            type: array
+            items:
+                $ref: ../blocks/paragraph.v1.yaml
+            minItems: 1
         decisionLetter:
             type: object
             properties:

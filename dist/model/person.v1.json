@@ -62,8 +62,14 @@
                             ]
                         },
                         "image": {
+                            "$schema": "http://json-schema.org/draft-04/schema#",
+                            "title": "Thumbnail image",
                             "type": "object",
                             "properties": {
+                                "alt": {
+                                    "title": "Alternative text",
+                                    "type": "string"
+                                },
                                 "sizes": {
                                     "title": "Sizes",
                                     "type": "object",
@@ -118,6 +124,7 @@
                                 }
                             },
                             "required": [
+                                "alt",
                                 "sizes"
                             ]
                         }
@@ -137,11 +144,27 @@
                     "properties": {
                         "expertises": {
                             "title": "Expertises",
-                            "description": "Subject IDs",
                             "type": "array",
                             "items": {
-                                "type": "string",
-                                "minLength": 1
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "title": "Subject snippet",
+                                "type": "object",
+                                "properties": {
+                                    "id": {
+                                        "description": "ID",
+                                        "type": "string",
+                                        "minLength": 1
+                                    },
+                                    "name": {
+                                        "description": "Name",
+                                        "type": "string",
+                                        "minLength": 1
+                                    }
+                                },
+                                "required": [
+                                    "id",
+                                    "name"
+                                ]
                             },
                             "minItems": 1,
                             "uniqueItems": true

@@ -93,8 +93,14 @@
     ],
     "pdf": "https://elifesciences.org/content/5/e14107.pdf",
     "subjects": [
-        "biochemistry",
-        "biophysics-structural-biology"
+        {
+            "id": "biochemistry",
+            "name": "Biochemistry"
+        },
+        {
+            "id": "biophysics-structural-biology",
+            "name": "Biophysics and Structural Biology"
+        }
     ],
     "researchOrganisms": [
         "Human",
