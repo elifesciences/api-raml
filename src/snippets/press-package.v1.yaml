@@ -1,0 +1,26 @@
+$schema: http://json-schema.org/draft-04/schema#
+title: Press package snippet
+type: object
+properties:
+    id:
+        $ref: ../misc/id.v1.yaml
+    title:
+        description: Title
+        type: string
+    impactStatement:
+        description: Description of the press package
+        type: string
+    published:
+        description: Publication date (UTC)
+        type: string
+        format: date-time
+    subjects:
+        description: Press package subjects
+        type: array
+        items:
+            $ref: ../snippets/subject.v1.yaml
+        uniqueItems: true
+required:
+  - id
+  - title
+  - published
