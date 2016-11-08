@@ -724,17 +724,17 @@
                             "text": "F5 modulations strongly increased before movement execution and were followed by M1 activity after movement onset (see <a href=\"#media5\">Video 5</a>), suggesting that premotor cortex drives M1. Signals did not only follow in time but also in modulation patterns, as expressed by the impressively high correlation coefficients in both animals (t2 in <a href=\"#fig8\">Figure 8</a>), and in agreement with similar motor coding schemes observed with the population analysis. Together, these results expand the static feature coding found with CDA by demonstrating dynamical functional coupling of AIP, F5, and M1 during the course of the delayed grasp and hold task."
                         }
                     ]
-                },
+                }
+            ]
+        },
+        {
+            "type": "section",
+            "id": "s3",
+            "title": "Discussion",
+            "content": [
                 {
-                    "type": "section",
-                    "id": "s3",
-                    "title": "Discussion",
-                    "content": [
-                        {
-                            "type": "paragraph",
-                            "text": "In this study, we took advantage of a rich set of objects and parallel recording techniques to study visuomotor transformation. We show that the cortical grasping network differentiates visual from motor processes to achieve this transformation. Area AIP revealed a strong visual role and a specialisation for processing object shapes. In contrast, area F5 coded objects only partially and temporarily in visual terms and switched to dominant motor signals towards movement planning and execution. The encoded motor features of F5 showed striking similarities with M1 thereby suggesting a strong collaboration of both areas during hand and movement control."
-                        }
-                    ]
+                    "type": "paragraph",
+                    "text": "In this study, we took advantage of a rich set of objects and parallel recording techniques to study visuomotor transformation. We show that the cortical grasping network differentiates visual from motor processes to achieve this transformation. Area AIP revealed a strong visual role and a specialisation for processing object shapes. In contrast, area F5 coded objects only partially and temporarily in visual terms and switched to dominant motor signals towards movement planning and execution. The encoded motor features of F5 showed striking similarities with M1 thereby suggesting a strong collaboration of both areas during hand and movement control."
                 },
                 {
                     "type": "section",
