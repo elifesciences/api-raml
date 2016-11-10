@@ -29,10 +29,7 @@
                                 "doi": {
                                     "$ref": "#/allOf/2/properties/decisionLetter/properties/doi"
                                 }
-                            },
-                            "required": [
-                                "doi"
-                            ]
+                            }
                         },
                         "image": {
                             "type": "object",

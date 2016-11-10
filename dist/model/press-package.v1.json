@@ -873,10 +873,7 @@
                                                     "doi": {
                                                         "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/1/properties/doi"
                                                     }
-                                                },
-                                                "required": [
-                                                    "doi"
-                                                ]
+                                                }
                                             },
                                             "image": {
                                                 "type": "object",

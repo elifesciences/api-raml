@@ -461,10 +461,7 @@
                                                     "doi": {
                                                         "$ref": "#/allOf/1/properties/content/items/oneOf/1/allOf/0/properties/doi"
                                                     }
-                                                },
-                                                "required": [
-                                                    "doi"
-                                                ]
+                                                }
                                             },
                                             "image": {
                                                 "type": "object",
