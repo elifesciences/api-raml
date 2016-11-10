@@ -1,0 +1,23 @@
+{
+    "total": 2,
+    "items": [
+        {
+            "id": "2",
+            "title": "How fake hand foxes brain",
+            "impactStatement": "New research published in eLife reveals how the brain can be tricked into feeling disembodied from a body part and a sense ownership over a fake one.",
+            "published": "2016-10-20T12:22:00+00:00"
+        },
+        {
+            "id": "1",
+            "title": "Females react differently than males to social isolation",
+            "impactStatement": "While male and female mice have similar responses to physical stress, research from the Hotchkiss Brain Institute at the University of Calgary, Canada, suggests females, not males, feel stressed when alone.",
+            "published": "2016-10-11T17:00:00+00:00",
+            "subjects": [
+                {
+                    "id": "neuroscience",
+                    "name": "Neuroscience"
+                }
+            ]
+        }
+    ]
+}
