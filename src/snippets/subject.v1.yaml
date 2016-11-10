@@ -3,9 +3,7 @@ title: Subject snippet
 type: object
 properties:
     id:
-        description: ID
-        type: string
-        minLength: 1
+        $ref: ../misc/id.v1.yaml
     name:
         description: Name
         type: string

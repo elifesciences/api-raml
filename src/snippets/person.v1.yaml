@@ -5,9 +5,7 @@ allOf:
   - $ref: ../misc/person.v1.yaml
   - properties:
         id:
-            title: ID
-            type: string
-            minLength: 1
+            $ref: ../misc/id.v1.yaml
         type:
             title: Type
             type: string
