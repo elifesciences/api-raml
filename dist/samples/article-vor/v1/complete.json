@@ -656,7 +656,7 @@
             ],
             "bookTitle": "Minimum book",
             "chapterTitle": "Minimum chapter",
-            "pages": "in press",
+            "pages": "In press",
             "publisher": {
                 "name": [
                     "A publisher"
@@ -826,7 +826,7 @@
                 "range": "11.5.1–11.5.3, 11.5.11–11.5.12"
             },
             "doi": "10.1007/978-3-642-00599-2_12",
-            "uri": "https://dx.doi.org/10.1007/978-3-642-00599-2_12"
+            "uri": "https://doi.org/10.1007/978-3-642-00599-2_12"
         },
         {
             "type": "data",
@@ -911,7 +911,7 @@
                 }
             },
             "doi": "10.2210/pdb4qen/pdb",
-            "uri": "https://dx.doi.org/10.2210/pdb4qen/pdb"
+            "uri": "https://doi.org/10.2210/pdb4qen/pdb"
         },
         {
             "type": "journal",
@@ -932,7 +932,7 @@
                     "A journal"
                 ]
             },
-            "pages": "in press"
+            "pages": "In press"
         },
         {
             "type": "journal",
@@ -1052,7 +1052,7 @@
                     "A periodical"
                 ]
             },
-            "pages": "in press"
+            "pages": "In press"
         },
         {
             "type": "periodical",
@@ -1124,7 +1124,7 @@
             "articleTitle": "Complete preprint",
             "source": "A repository",
             "doi": "10.1101/004564",
-            "uri": "https://dx.doi.org/10.1101/004564"
+            "uri": "https://doi.org/10.1101/004564"
         },
         {
             "type": "report",
@@ -1185,7 +1185,7 @@
             "doi": "10.1007/1-4020-4466-6",
             "pmid": 26677505,
             "isbn": "978-0-08-086125-8",
-            "uri": "https://dx.doi.org/10.1007/1-4020-4466-6"
+            "uri": "https://doi.org/10.1007/1-4020-4466-6"
         },
         {
             "type": "software",
@@ -1291,7 +1291,7 @@
                 }
             },
             "doi": "10.1371/journal.pgen.0030218",
-            "uri": "https://dx.doi.org/10.1371/journal.pgen.0030218"
+            "uri": "https://doi.org/10.1371/journal.pgen.0030218"
         },
         {
             "type": "web",
