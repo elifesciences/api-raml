@@ -2708,6 +2708,7 @@
                 }
             ],
             "date": "2015",
+            "discriminator": "a",
             "articleTitle": "Decoding a wide range of hand configurations from macaque motor, premotor, and parietal cortices",
             "journal": {
                 "name": [
@@ -2756,6 +2757,7 @@
                 }
             ],
             "date": "2015",
+            "discriminator": "b",
             "articleTitle": "Musculoskeletal representation of a large repertoire of hand grasping actions in primates",
             "journal": {
                 "name": [
@@ -3040,6 +3042,7 @@
                 }
             ],
             "date": "2012",
+            "discriminator": "a",
             "articleTitle": "Selectivity for three-dimensional shape and grasping-related activity in the macaque ventral premotor cortex",
             "journal": {
                 "name": [
@@ -3095,6 +3098,7 @@
                 }
             ],
             "date": "2012",
+            "discriminator": "b",
             "articleTitle": "Selectivity for three-dimensional contours and surfaces in the anterior intraparietal area",
             "journal": {
                 "name": [
