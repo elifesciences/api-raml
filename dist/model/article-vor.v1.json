@@ -788,6 +788,11 @@
                                         "description": "A date, where the month and/or day may not be known/available.\n\nFor example:\n  - 2016\n  - 2016-09\n  - 2016-09-16\n",
                                         "type": "string",
                                         "pattern": "^[1-2][0-9]{3}(-((0[1-9])|(1[0-2]))(-((0[1-9])|([1-2][0-9])|(3[0-1])))?)?$"
+                                    },
+                                    "discriminator": {
+                                        "description": "If the first author of a reference has two or more references published in the same year in the same\nlist, this property will be a letter (starting at 'a') that can be used to distinguish between them.\n\nFor example, 'John Smith, 2016a' and 'John Smith, 2016b' would refer to two references, one with the\nyear discriminator 'a' and a second with 'b'.\n",
+                                        "type": "string",
+                                        "pattern": "^[a-z]+$"
                                     }
                                 },
                                 "required": [
