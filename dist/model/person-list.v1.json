@@ -54,9 +54,10 @@
                     {
                         "properties": {
                             "id": {
-                                "title": "ID",
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "title": "eLife ID",
                                 "type": "string",
-                                "minLength": 1
+                                "pattern": "^[a-z0-9-]+$"
                             },
                             "type": {
                                 "title": "Type",

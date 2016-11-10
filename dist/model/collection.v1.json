@@ -9,9 +9,10 @@
             "type": "object",
             "properties": {
                 "id": {
-                    "description": "ID",
+                    "$schema": "http://json-schema.org/draft-04/schema#",
+                    "title": "eLife ID",
                     "type": "string",
-                    "minLength": 1
+                    "pattern": "^[a-z0-9-]+$"
                 },
                 "title": {
                     "description": "Title",
@@ -110,9 +111,7 @@
                         "type": "object",
                         "properties": {
                             "id": {
-                                "description": "ID",
-                                "type": "string",
-                                "minLength": 1
+                                "$ref": "#/allOf/0/properties/id"
                             },
                             "name": {
                                 "description": "Name",
@@ -256,9 +255,7 @@
                             {
                                 "properties": {
                                     "id": {
-                                        "title": "ID",
-                                        "type": "string",
-                                        "minLength": 1
+                                        "$ref": "#/allOf/0/properties/id"
                                     },
                                     "type": {
                                         "title": "Type",
@@ -295,13 +292,32 @@
                                 "type": "object",
                                 "allOf": [
                                     {
+                                        "$ref": "#/allOf/1/properties/content/items/oneOf/1/allOf/0"
+                                    },
+                                    {
+                                        "properties": {
+                                            "status": {
+                                                "type": "string",
+                                                "enum": [
+                                                    "poa"
+                                                ]
+                                            }
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "title": "Article VoR snippet",
+                                "type": "object",
+                                "allOf": [
+                                    {
                                         "$schema": "http://json-schema.org/draft-04/schema#",
                                         "title": "Article snippet",
                                         "type": "object",
                                         "properties": {
                                             "id": {
-                                                "type": "string",
-                                                "minLength": 1
+                                                "$ref": "#/allOf/0/properties/id"
                                             },
                                             "version": {
                                                 "type": "integer",
@@ -432,26 +448,6 @@
                                             "status": {
                                                 "type": "string",
                                                 "enum": [
-                                                    "poa"
-                                                ]
-                                            }
-                                        }
-                                    }
-                                ]
-                            },
-                            {
-                                "$schema": "http://json-schema.org/draft-04/schema#",
-                                "title": "Article VoR snippet",
-                                "type": "object",
-                                "allOf": [
-                                    {
-                                        "$ref": "#/allOf/1/properties/content/items/oneOf/0/allOf/0"
-                                    },
-                                    {
-                                        "properties": {
-                                            "status": {
-                                                "type": "string",
-                                                "enum": [
                                                     "vor"
                                                 ]
                                             },
@@ -463,7 +459,7 @@
                                                 "type": "object",
                                                 "properties": {
                                                     "doi": {
-                                                        "$ref": "#/allOf/1/properties/content/items/oneOf/0/allOf/0/properties/doi"
+                                                        "$ref": "#/allOf/1/properties/content/items/oneOf/1/allOf/0/properties/doi"
                                                     }
                                                 },
                                                 "required": [
@@ -513,9 +509,7 @@
                                                         "type": "object",
                                                         "properties": {
                                                             "id": {
-                                                                "description": "ID",
-                                                                "type": "string",
-                                                                "minLength": 1
+                                                                "$ref": "#/allOf/0/properties/id"
                                                             },
                                                             "title": {
                                                                 "description": "Title",
@@ -565,9 +559,7 @@
                                                         "type": "object",
                                                         "properties": {
                                                             "id": {
-                                                                "description": "ID",
-                                                                "type": "string",
-                                                                "minLength": 1
+                                                                "$ref": "#/allOf/0/properties/id"
                                                             },
                                                             "interviewee": {
                                                                 "$ref": "#/allOf/1/properties/curators/items/allOf/0"
