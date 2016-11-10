@@ -573,7 +573,8 @@
         {
             "type": "book",
             "id": "bib1",
-            "date": "1818",
+            "date": "2000",
+            "discriminator": "a",
             "authors": [
                 {
                     "type": "person",
@@ -593,7 +594,8 @@
         {
             "type": "book",
             "id": "bib2",
-            "date": "2007",
+            "date": "2000",
+            "discriminator": "b",
             "authors": [
                 {
                     "type": "person",

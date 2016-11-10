@@ -9,6 +9,15 @@ allOf:
             type: string
         date:
             $ref: partial-date.v1.yaml
+        discriminator:
+            description: |
+                If the first author of a reference has two or more references published in the same year in the same
+                list, this property will be a letter (starting at 'a') that can be used to distinguish between them.
+
+                For example, 'John Smith, 2016a' and 'John Smith, 2016b' would refer to two references, one with the
+                year discriminator 'a' and a second with 'b'.
+            type: string
+            pattern: ^[a-z]+$
     required:
       - id
       - type
