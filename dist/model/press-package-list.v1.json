@@ -1,0 +1,76 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "Press package list",
+    "type": "object",
+    "properties": {
+        "total": {
+            "title": "Total number of press packages",
+            "type": "integer",
+            "minimum": 0
+        },
+        "items": {
+            "title": "Press package",
+            "type": "array",
+            "items": {
+                "$schema": "http://json-schema.org/draft-04/schema#",
+                "title": "Press package snippet",
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "$schema": "http://json-schema.org/draft-04/schema#",
+                        "title": "eLife ID",
+                        "type": "string",
+                        "pattern": "^[a-z0-9-]+$"
+                    },
+                    "title": {
+                        "description": "Title",
+                        "type": "string"
+                    },
+                    "impactStatement": {
+                        "description": "Description of the press package",
+                        "type": "string"
+                    },
+                    "published": {
+                        "description": "Publication date (UTC)",
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "subjects": {
+                        "description": "Press package subjects",
+                        "type": "array",
+                        "items": {
+                            "$schema": "http://json-schema.org/draft-04/schema#",
+                            "title": "Subject snippet",
+                            "type": "object",
+                            "properties": {
+                                "id": {
+                                    "$ref": "#/properties/items/items/properties/id"
+                                },
+                                "name": {
+                                    "description": "Name",
+                                    "type": "string",
+                                    "minLength": 1
+                                }
+                            },
+                            "required": [
+                                "id",
+                                "name"
+                            ]
+                        },
+                        "uniqueItems": true
+                    }
+                },
+                "required": [
+                    "id",
+                    "title",
+                    "published"
+                ]
+            },
+            "uniqueItems": true
+        }
+    },
+    "required": [
+        "total",
+        "items"
+    ]
+}
