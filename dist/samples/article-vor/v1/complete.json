@@ -437,7 +437,8 @@
                                     "label": "Figure 1—figure supplement 1—source data 1",
                                     "title": "Gene expression values for all UCSC genes from our mouse liver Nascent-Seq dataset",
                                     "mediaType": "text/plain",
-                                    "uri": "https://elife-publishing-cdn.s3.amazonaws.com/00011/elife-00011-fig2-data1-v1.txt"
+                                    "uri": "https://elife-publishing-cdn.s3.amazonaws.com/00011/elife-00011-fig2-data1-v1.txt",
+                                    "filename": "elife-00011-fig2-data1-v1.txt"
                                 }
                             ]
                         }
@@ -562,7 +563,8 @@
                                 }
                             ],
                             "mediaType": "text/plain",
-                            "uri": "https://elife-publishing-cdn.s3.amazonaws.com/00011/elife-00011-fig2-data1-v1.txt"
+                            "uri": "https://elife-publishing-cdn.s3.amazonaws.com/00011/elife-00011-fig2-data1-v1.txt",
+                            "filename": "elife-00011-fig2-data1-v1.txt"
                         }
                     ]
                 }
