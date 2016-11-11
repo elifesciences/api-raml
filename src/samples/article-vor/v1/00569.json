@@ -1021,7 +1021,8 @@
                                         }
                                     ],
                                     "mediaType": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-                                    "uri": "https://elife-publishing-cdn.s3.amazonaws.com/00569/elife-00569-fig4-data1-v1-download.xlsx"
+                                    "uri": "https://elife-publishing-cdn.s3.amazonaws.com/00569/elife-00569-fig4-data1-v1-download.xlsx",
+                                    "filename": "elife-00569-fig4-data1-v1-download.xlsx"
                                 }
                             ]
                         },
