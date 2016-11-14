@@ -3271,6 +3271,12 @@
             "text": "The authors thank M Sartori, M Dörge, K Menz, R Ahlert, N Nazarenus, and L Burchardt for assistance and MM Fabiszak, M Hepp-Reymond, and W Freiwald for helpful comments on an earlier version of the manuscript. This work was supported by the Federal Ministry of Education and Research (Bernstein Center for Computational Neuroscience II Grant DPZ-01GQ1005C, the German Research Foundation (SCHE 1575/3-1), the European Union Grant FP7– 611687 (NEBIAS), and the Humboldt Foundation."
         }
     ],
+    "ethics": [
+        {
+            "type": "paragraph",
+            "text": "Animal experimentation: All procedures and animal were conducted in accordance with the guidelines for the care and use of mammals in neuroscience and behavioral research (National Research Council, 2003), and were in agreement with German and European laws governing animal care. Authorization for conducting this study has been granted by the regional government office, the Animal Welfare Division of the Office for Consumer Protection and Food Safety of the State of Lower Saxony, Germany (permit no. 032/09). Monkey handling also followed the recommendations of the Weatherall Report of good animal practice. Animals were pairhoused in a spacious cage (well exceeding legal requirements) and were maintained on a 12-hour on/off lighting schedule. Housing procedures included an environmental enrichment program with access to toys, swings, and hidden treats (e.g., seeds in sawdust). Monkeys had visual and auditory contact to other monkeys. They were fed on a diet of enriched biscuits and fruits. Daily access to fluids was controlled during training and experimental periods to promote behavioral motivation. All surgical procedures were performed under anesthesia, and all efforts were made to minimize post-surgical pain or suffering. Institutional veterinarians continually monitored animal health and well-being."
+        }
+    ],
     "decisionLetter": {
         "doi": "10.7554/eLife.15278.023",
         "description": [
