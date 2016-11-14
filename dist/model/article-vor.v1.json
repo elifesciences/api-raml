@@ -221,7 +221,7 @@
                                 "content": {
                                     "type": "array",
                                     "items": {
-                                        "$ref": "#/allOf/2/properties/acknowledgements/items"
+                                        "$ref": "#/allOf/2/properties/ethics/items"
                                     },
                                     "minItems": 1
                                 }
@@ -508,7 +508,7 @@
                                                                     "biography": {
                                                                         "type": "array",
                                                                         "items": {
-                                                                            "$ref": "#/allOf/2/properties/acknowledgements/items"
+                                                                            "$ref": "#/allOf/2/properties/ethics/items"
                                                                         }
                                                                     },
                                                                     "deceased": {
@@ -708,7 +708,7 @@
                         "content": {
                             "type": "array",
                             "items": {
-                                "$ref": "#/allOf/2/properties/acknowledgements/items"
+                                "$ref": "#/allOf/2/properties/ethics/items"
                             },
                             "minItems": 1
                         }
@@ -1714,6 +1714,13 @@
                 "acknowledgements": {
                     "type": "array",
                     "items": {
+                        "$ref": "#/allOf/2/properties/ethics/items"
+                    },
+                    "minItems": 1
+                },
+                "ethics": {
+                    "type": "array",
+                    "items": {
                         "$schema": "http://json-schema.org/draft-04/schema#",
                         "title": "Paragraph",
                         "type": "object",
@@ -1748,7 +1755,7 @@
                         "description": {
                             "type": "array",
                             "items": {
-                                "$ref": "#/allOf/2/properties/acknowledgements/items"
+                                "$ref": "#/allOf/2/properties/ethics/items"
                             },
                             "minItems": 1
                         },
@@ -1842,7 +1849,7 @@
                                                                                     ]
                                                                                 },
                                                                                 {
-                                                                                    "$ref": "#/allOf/2/properties/acknowledgements/items"
+                                                                                    "$ref": "#/allOf/2/properties/ethics/items"
                                                                                 }
                                                                             ]
                                                                         },
@@ -1893,7 +1900,7 @@
                                                                                     "title": "Caption",
                                                                                     "type": "array",
                                                                                     "items": {
-                                                                                        "$ref": "#/allOf/2/properties/acknowledgements/items"
+                                                                                        "$ref": "#/allOf/2/properties/ethics/items"
                                                                                     },
                                                                                     "minItems": 1
                                                                                 },
@@ -2001,7 +2008,7 @@
                                                         "$ref": "#/allOf/2/properties/decisionLetter/properties/content/items/oneOf/0/oneOf/0/oneOf/0/definitions/image/properties/caption/items/oneOf/0"
                                                     },
                                                     {
-                                                        "$ref": "#/allOf/2/properties/acknowledgements/items"
+                                                        "$ref": "#/allOf/2/properties/ethics/items"
                                                     },
                                                     {
                                                         "$schema": "http://json-schema.org/draft-04/schema#",
@@ -2023,7 +2030,7 @@
                                                                 "title": "Answer",
                                                                 "type": "array",
                                                                 "items": {
-                                                                    "$ref": "#/allOf/2/properties/acknowledgements/items"
+                                                                    "$ref": "#/allOf/2/properties/ethics/items"
                                                                 },
                                                                 "minItems": 1
                                                             }
@@ -2049,7 +2056,7 @@
                                                                 "title": "Text",
                                                                 "type": "array",
                                                                 "items": {
-                                                                    "$ref": "#/allOf/2/properties/acknowledgements/items"
+                                                                    "$ref": "#/allOf/2/properties/ethics/items"
                                                                 },
                                                                 "minItems": 1
                                                             },
@@ -2094,7 +2101,7 @@
                                                                 "title": "Caption",
                                                                 "type": "array",
                                                                 "items": {
-                                                                    "$ref": "#/allOf/2/properties/acknowledgements/items"
+                                                                    "$ref": "#/allOf/2/properties/ethics/items"
                                                                 },
                                                                 "minItems": 1
                                                             },
@@ -2123,7 +2130,7 @@
                                                                         "text": {
                                                                             "type": "array",
                                                                             "items": {
-                                                                                "$ref": "#/allOf/2/properties/acknowledgements/items"
+                                                                                "$ref": "#/allOf/2/properties/ethics/items"
                                                                             },
                                                                             "minItems": 1
                                                                         }
@@ -2196,7 +2203,7 @@
                                                                 "title": "Caption",
                                                                 "type": "array",
                                                                 "items": {
-                                                                    "$ref": "#/allOf/2/properties/acknowledgements/items"
+                                                                    "$ref": "#/allOf/2/properties/ethics/items"
                                                                 },
                                                                 "minItems": 1
                                                             },
