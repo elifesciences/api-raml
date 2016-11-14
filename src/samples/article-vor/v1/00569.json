@@ -6130,6 +6130,47 @@
             "doi": "10.1002/0471250953.bi1105s31"
         }
     ],
+    "additionalFiles": [
+        {
+            "doi": "10.7554/eLife.00569.021",
+            "id": "SD2-data",
+            "label": "Supplementary file 1.",
+            "title": "Species classification and Accession Number (AC) of the complete mtDNA sequences used in the tunicate phylogenetic reconstructions.",
+            "mediaType": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+            "uri": "https://elife-publishing-cdn.s3.amazonaws.com/00569/elife-00569-supp1-v1-download.xlsx",
+            "filename": "elife-00569-supp1-v1.xlsx"
+        },
+        {
+            "doi": "10.7554/eLife.00569.022",
+            "id": "SD3-data",
+            "label": "Supplementary file 2.",
+            "title": "<i>B. schlosseri</i> genome statistics.",
+            "caption": [
+                {
+                    "type": "paragraph",
+                    "text": "(<b>A</b>) Statistics of Velvet assembly of wells per every 356a genomic library preparation. (<b>B</b>) Detailed statistics of Velvet assembly of wells per every 356a genomic library preparation. Name: barcode number; #reads: number of filtered reads obtained, NumCtgs: number of assembled contigs, Min: minimum contig length obtained, Max: maximum contig length obtained, Middle: length of the middle contig; Sum: sum of assembled contigs (bp), N50: length of N50 (bp), NumAbove8k: number of assembled contigs above 8k, NumAbove20k: number of assembled contigs above 20k. Kmer: Kmer used by Velvet assembly, Ecov: estimated coverage, CovCutoff: minimum coverage used. (<b>C</b>) Total gDNA and RNA sequence data obtained. Genomic DNA was extracted from tissue from two long-lived colonies (356a and Sc6a-b) raised in our mariculture facility. Sequence reads from colony Sc6a-b were obtained using Roche 454 Titanium and Illumina GAIIx. Sequence reads from colony 356a and 21 individual chromosomes isolated from a wild colony were obtained by Illumina HiSeq 2000. RNA-seq reads from several tissues (endostyle, vasculature, gonads and digestive system) were obtained by Illumina GAIIx and Illumina MiSeq. RNA-seq reads from 19 different lab reared colonies were obtained by Illumina HiSeq 2000. (<b>D</b>) <i>B. schlosseri</i> genome assemblies and chromosome scaffolds statistics. (<b>E</b>) Interspersed repeats in <i>B. schlosseri.</i> Analysis of interspersed repeat content in <i>B. schlosseri</i>, compared to <i>C. intestinalis</i> (version ci2, downloaded from the UCSC genome browser). RepeatScout (version 1.0.5; <a href=\"bib60\">Price et al., 2005</a>) was used to identify interspersed repeat elements de novo using a k-mer length of 14. All identified repeats were subsequently filtered for tandem repeat and low complexity content, using RepeatScout. Genome-wide interspersed repeats were catalogued using RepeatMasker (version open-4.0) (<a href=\"bib74\">Smit et al., 1996–2010</a>). (<b>F</b>) Alignment statistic of all of the <i>B. schlosseri</i> non mitochondrial genes (66), expressed sequence tags (98,611 EST’s) and fosmids (11) available on NCBI and, Sc6a-b assembly (518,856 contigs) with the <i>B. schlosseri</i> 356a chromosome hybrid draft genome assembly. (<b>G</b>) Genome assemblies statistics of several wild type species. (<b>H</b>) <i>B. schlosseri</i> predicted gene structure statistics. (<b>I</b>) Barcoded adapters list for 192 wells."
+                }
+            ],
+            "mediaType": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+            "uri": "https://elife-publishing-cdn.s3.amazonaws.com/00569/elife-00569-supp2-v1-download.xlsx",
+            "filename": "elife-00569-supp2-v1.xlsx"
+        },
+        {
+            "doi": "10.7554/eLife.00569.023",
+            "id": "SD4-data",
+            "label": "Supplementary file 3.",
+            "title": "Potential precursors of human hematopoietic populations in <i>B. schlosseri</i>.",
+            "caption": [
+                {
+                    "type": "paragraph",
+                    "text": "We analyzed gene expression microarray data from 26 different human blood cell populations, along with a large diversity of non-blood human tissue samples, and identified a set of twenty signature genes with highly enriched expression profiles for each hematopoietic population. The 20 signature genes for each blood-related gene set, and the identified orthologous gene sequences in <i>B. schlosseri</i> are presented. Status = 1 predicted gene is present in <i>B. schlosseri</i> genome; Status = 0 predicted gene is absent from <i>B. schlosseri</i> genome."
+                }
+            ],
+            "mediaType": "application/vnd.ms-excel",
+            "uri": "https://elife-publishing-cdn.s3.amazonaws.com/00569/elife-00569-supp3-v1-download.xls",
+            "filename": "elife-00569-supp3-v1.xls"
+        }
+    ],
     "acknowledgements": [
         {
             "type": "paragraph",
