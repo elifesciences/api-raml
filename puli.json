@@ -3,7 +3,8 @@
     "name": "elife/api",
     "path-mappings": {
         "/elife/api/api.raml": "dist/api.raml",
-        "/elife/api/model": "dist/model"
+        "/elife/api/model": "dist/model",
+        "/elife/api/samples": "dist/samples"
     },
     "config": {
         "bootstrap-file": "vendor/autoload.php"
