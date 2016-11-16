@@ -65,44 +65,15 @@ allOf:
             items:
                 $ref: ../misc/file.v1.yaml
         datasets:
-            type: array
-            items:
-                type: object
-                properties:
-                    id:
-                        $ref: ../misc/html-id.v1.yaml
-                    date:
-                        $ref: ../misc/partial-date.v1.yaml
-                    authors:
-                        type: array
-                        items:
-                            $ref: ../misc/author.v1.yaml
-                        minItems: 1
-                    authorsEtAl:
-                        description: If there are more authors.
-                        type: boolean
-                        default: false
-                    title:
-                        type: string
-                        minLength: 1
-                    dataId:
-                        title: Data ID
-                        type: string
-                        minLength: 1
-                    details:
-                        type: string
-                        minLength: 1
-                    doi:
-                        $ref: ../misc/doi.v1.yaml
-                    uri:
-                        type: string
-                        format: uri
-                required:
-                  - id
-                  - date
-                  - authors
-                  - title
-                  - uri
+            type: object
+            generated:
+                type: array
+                items:
+                    $ref: ../misc/dataset.v1.yaml
+            used:
+                type: array
+                items:
+                    $ref: ../misc/dataset.v1.yaml
         ethics:
             type: array
             items:
