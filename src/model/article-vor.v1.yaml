@@ -64,16 +64,16 @@ allOf:
             type: array
             items:
                 $ref: ../misc/file.v1.yaml
-        datasets:
+        dataSets:
             type: object
             generated:
                 type: array
                 items:
-                    $ref: ../misc/dataset.v1.yaml
+                    $ref: ../misc/data-set.v1.yaml
             used:
                 type: array
                 items:
-                    $ref: ../misc/dataset.v1.yaml
+                    $ref: ../misc/data-set.v1.yaml
         ethics:
             type: array
             items:
