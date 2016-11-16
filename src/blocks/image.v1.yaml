@@ -2,43 +2,21 @@ $schema: http://json-schema.org/draft-04/schema#
 title: Image
 type: object
 allOf:
-  - $ref: '#/definitions/image'
+  - $ref: ../misc/asset.v1.yaml
   - properties:
         type:
             type: string
             enum:
               - image
-        supplements:
-            type: array
-            items:
-                $ref: '#/definitions/image'
+        alt:
+            title: Alternative text
+            type: string
+        uri:
+            title: Image URI
+            type: string
+            format: uri
+            pattern: ^https://
     required:
       - type
-
-definitions:
-    image:
-        type: object
-        allOf:
-          - $ref: ../misc/asset.v1.yaml
-          - properties:
-                alt:
-                    title: Alternative text
-                    type: string
-                uri:
-                    title: Image URI
-                    type: string
-                    format: uri
-                    pattern: ^https://
-                attribution:
-                    title: Attribution
-                    type: array
-                    items:
-                        type: string
-                sourceData:
-                    title: Source data
-                    type: array
-                    items:
-                        $ref: ../misc/file.v1.yaml
-            required:
-              - alt
-              - uri
+      - alt
+      - uri

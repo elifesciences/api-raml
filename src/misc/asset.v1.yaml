@@ -37,6 +37,11 @@ properties:
                             pattern: ^<table>[\s\S]+</table>$
                 additionalProperties: false
         minItems: 1
+    attribution:
+        title: Attribution
+        type: array
+        items:
+            type: string
 dependencies:
     caption: [title]
     label: [title]

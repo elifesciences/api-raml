@@ -47,11 +47,6 @@ allOf:
             title: Whether to loop the video.
             type: boolean
             default: false
-        sourceData:
-            title: Source data
-            type: array
-            items:
-                $ref: ../misc/file.v1.yaml
     required:
       - type
       - sources

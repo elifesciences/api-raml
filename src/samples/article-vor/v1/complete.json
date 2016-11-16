@@ -374,33 +374,36 @@
                     "text": "Fossil hominins were first recognized in the Dinaledi Chamber in the Rising Star cave system in October 2013. During a relatively short excavation, our team recovered an extensive collection of 1550 hominin specimens, representing nearly every element of the skeleton multiple times (Figure 1), including many complete elements and morphologically informative fragments, some in articulation, as well as smaller fragments many of which could be refit into more complete elements. The collection is a morphologically homogeneous sample that can be attributed to no previously-known hominin species. Here we describe this new species, <i>Homo naledi</i>. We have not defined <i>H. naledi</i> narrowly based on a single jaw or skull because the entire body of material has informed our understanding of its biology."
                 },
                 {
-                    "type": "image",
-                    "doi": "10.7554/eLife.09560.003",
-                    "id": "fig1",
-                    "label": "Figure 1",
-                    "title": "Dinaledi skeletal specimens.",
-                    "caption": [
+                    "type": "figure",
+                    "assets": [
                         {
-                            "type": "paragraph",
-                            "text": "The figure includes approximately all of the material incorporated in this diagnosis, including the holotype specimen, paratypes and referred material. These make up 737 partial or complete anatomical elements, many of which consist of several refitted specimens. Specimens not identified to element, such as non-diagnostic long bone or cranial fragments, and a subset of fragile specimens are not shown here. The ‘skeleton’ layout in the center of the photo is a composite of elements that represent multiple individuals. This view is foreshortened; the table upon which the bones are arranged is 120-cm wide for scale."
+                            "type": "image",
+                            "doi": "10.7554/eLife.09560.003",
+                            "id": "fig1",
+                            "label": "Figure 1",
+                            "title": "Dinaledi skeletal specimens.",
+                            "caption": [
+                                {
+                                    "type": "paragraph",
+                                    "text": "The figure includes approximately all of the material incorporated in this diagnosis, including the holotype specimen, paratypes and referred material. These make up 737 partial or complete anatomical elements, many of which consist of several refitted specimens. Specimens not identified to element, such as non-diagnostic long bone or cranial fragments, and a subset of fragile specimens are not shown here. The ‘skeleton’ layout in the center of the photo is a composite of elements that represent multiple individuals. This view is foreshortened; the table upon which the bones are arranged is 120-cm wide for scale."
+                                },
+                                {
+                                    "type": "mathml",
+                                    "id": "eqn1",
+                                    "label": "[1]",
+                                    "mathml": "<math><mrow><msub><mtext>e</mtext><mn>0</mn></msub><mo>=</mo><mfrac><mrow><msub><mtext>e</mtext><mrow><mn>0</mn><mo>,</mo><mtext>max</mtext></mrow></msub><mo>×</mo><mtext>GDP</mtext></mrow><mrow><mtext>GDP</mtext><mo>+</mo><msub><mtext>K</mtext><mrow><mtext>inc</mtext></mrow></msub></mrow></mfrac><mo>,</mo></mrow></math>"
+                                },
+                                {
+                                    "type": "table",
+                                    "id": "tbl1",
+                                    "tables": [
+                                        "<table><thead><tr><th>Names of scaffold</th><th>Chromosome preparation 1</th><th>…</th><th>Chromosome preparation n</th></tr></thead><tbody><tr><td>scaffold 1</td><td>Number of reads associated with the scaffold and preparation</td><td>…</td><td>…</td></tr><tr><td>…</td><td>…</td><td>…</td><td>…</td></tr><tr><td>Scaffold n</td><td>…</td><td>…</td><td>…</td></tr></tbody></table>"
+                                    ]
+                                }
+                            ],
+                            "alt": "",
+                            "uri": "https://elife-publishing-cdn.s3.amazonaws.com/09560/elife-09560-fig1-v1.jpg"
                         },
-                        {
-                            "type": "mathml",
-                            "id": "eqn1",
-                            "label": "[1]",
-                            "mathml": "<math>\n<mrow><msub><mtext>e</mtext><mn>0</mn></msub><mo>=</mo><mfrac><mrow><msub><mtext>e</mtext><mrow><mn>0</mn><mo>,</mo><mtext>max</mtext></mrow></msub><mo>×</mo><mtext>GDP</mtext></mrow><mrow><mtext>GDP</mtext><mo>+</mo><msub><mtext>K</mtext><mrow><mtext>inc</mtext></mrow></msub></mrow></mfrac><mo>,</mo></mrow></math>"
-                        },
-                        {
-                            "type": "table",
-                            "id": "tbl1",
-                            "tables": [
-                                "<table><thead><tr><th>Names of scaffold</th><th>Chromosome preparation 1</th><th>…</th><th>Chromosome preparation n</th></tr></thead><tbody><tr><td>scaffold 1</td><td>Number of reads associated with the scaffold and preparation</td><td>…</td><td>…</td></tr><tr><td>…</td><td>…</td><td>…</td><td>…</td></tr><tr><td>Scaffold n</td><td>…</td><td>…</td><td>…</td></tr></tbody></table>"
-                            ]
-                        }
-                    ],
-                    "alt": "",
-                    "uri": "https://elife-publishing-cdn.s3.amazonaws.com/09560/elife-09560-fig1-v1.jpg",
-                    "supplements": [
                         {
                             "type": "image",
                             "doi": "10.7554/eLife.09560.019",
@@ -424,6 +427,53 @@
                                     "id": "fig1s1data1",
                                     "label": "Figure 1—figure supplement 1—source data 1",
                                     "title": "Gene expression values for all UCSC genes from our mouse liver Nascent-Seq dataset",
+                                    "mediaType": "text/plain",
+                                    "uri": "https://elife-publishing-cdn.s3.amazonaws.com/00011/elife-00011-fig2-data1-v1.txt",
+                                    "filename": "elife-00011-fig2-data1-v1.txt"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "video",
+                            "doi": "10.7554/eLife.00569.020",
+                            "id": "fig1v1",
+                            "label": "Figure 1—Video 1",
+                            "title": "<i>B. schlosseri</i> blood circulation",
+                            "caption": [
+                                {
+                                    "type": "paragraph",
+                                    "text": "(<b>A)</b> Time-lapse acquisition of blood flow in the blood vessels (bv) and ampullae of a chimeric <em>B. schlosseri</em> colony, generated from a fusion between a mother and its offspring (fused). (<b>B</b>) Ampullae contract, buds develop, and a colony gets ready to replace the old generation. (<b>C</b>) Old generation zooids are getting resorbed (res. z) and replaced by the new generation (buds). (<b>D</b>) A heart beating and pumping blood in the primary bud of a different colony. (<b>E</b>) Blood flow through a common blood vessel between two allogeneic/compatible colonies, creating a natural chimera."
+                                }
+                            ],
+                            "sources": [
+                                {
+                                    "mediaType": "video/mp4; codecs=\"avc1.42E01E, mp4a.40.2\"",
+                                    "uri": "https://static-movie-usa.glencoesoftware.com/mp4/10.7554/659/0f10378e095dde7aaf579af504c4bfdc6fb86550/elife-00569-media1.mp4"
+                                },
+                                {
+                                    "mediaType": "video/webm; codecs=\"vp8.0, vorbis\"",
+                                    "uri": "https://static-movie-usa.glencoesoftware.com/webm/10.7554/659/0f10378e095dde7aaf579af504c4bfdc6fb86550/elife-00569-media1.webm"
+                                },
+                                {
+                                    "mediaType": "video/ogg; codecs=\"theora, vorbis\"",
+                                    "uri": "https://static-movie-usa.glencoesoftware.com/ogv/10.7554/659/0f10378e095dde7aaf579af504c4bfdc6fb86550/elife-00569-media1.ogv"
+                                }
+                            ],
+                            "image": "https://static-movie-usa.glencoesoftware.com/jpg/10.7554/659/0f10378e095dde7aaf579af504c4bfdc6fb86550/elife-00569-media1.jpg",
+                            "width": 640,
+                            "height": 480,
+                            "sourceData": [
+                                {
+                                    "doi": "10.7554/eLife.00666.015",
+                                    "id": "video1sdata1",
+                                    "label": "Video 1—Source data 1",
+                                    "title": "Title of the source code",
+                                    "caption": [
+                                        {
+                                            "type": "paragraph",
+                                            "text": "Legend of the source code."
+                                        }
+                                    ],
                                     "mediaType": "text/plain",
                                     "uri": "https://elife-publishing-cdn.s3.amazonaws.com/00011/elife-00011-fig2-data1-v1.txt",
                                     "filename": "elife-00011-fig2-data1-v1.txt"
