@@ -41,7 +41,7 @@
                             ]
                         },
                         "doi": {
-                            "$ref": "#/allOf/2/properties/authorResponse/properties/doi"
+                            "$ref": "#/allOf/2/properties/digest/properties/doi"
                         },
                         "authorLine": {
                             "description": "For example:\n  - Ian T Baldwin\n  - Randy Schekman, Mark Patterson\n  - Lee R Berger et al\n",
@@ -154,7 +154,7 @@
                             "type": "object",
                             "properties": {
                                 "doi": {
-                                    "$ref": "#/allOf/2/properties/authorResponse/properties/doi"
+                                    "$ref": "#/allOf/2/properties/digest/properties/doi"
                                 }
                             }
                         },
@@ -703,7 +703,10 @@
                     "type": "object",
                     "properties": {
                         "doi": {
-                            "$ref": "#/allOf/2/properties/authorResponse/properties/doi"
+                            "$schema": "http://json-schema.org/draft-04/schema#",
+                            "title": "DOI",
+                            "type": "string",
+                            "pattern": "^10[.][0-9]{4,}[^\\s\"/<>]*/[^\\s\"]+$"
                         },
                         "content": {
                             "type": "array",
@@ -780,11 +783,7 @@
                                         "type": "string"
                                     },
                                     "date": {
-                                        "$schema": "http://json-schema.org/draft-04/schema#",
-                                        "title": "Partial date",
-                                        "description": "A date, where the month and/or day may not be known/available.\n\nFor example:\n  - 2016\n  - 2016-09\n  - 2016-09-16\n",
-                                        "type": "string",
-                                        "pattern": "^[1-2][0-9]{3}(-((0[1-9])|(1[0-2]))(-((0[1-9])|([1-2][0-9])|(3[0-1])))?)?$"
+                                        "$ref": "#/allOf/2/properties/dataSets/generated/items/properties/date"
                                     },
                                     "discriminator": {
                                         "description": "If the first author of a reference has two or more references published in the same year in the same\nlist, this property will be a letter (starting at 'a') that can be used to distinguish between them.\n\nFor example, 'John Smith, 2016a' and 'John Smith, 2016b' would refer to two references, one with the\nyear discriminator 'a' and a second with 'b'.\n",
@@ -962,7 +961,7 @@
                                                 "$ref": "#/allOf/2/properties/references/items/definitions/pages"
                                             },
                                             "doi": {
-                                                "$ref": "#/allOf/2/properties/authorResponse/properties/doi"
+                                                "$ref": "#/allOf/2/properties/digest/properties/doi"
                                             },
                                             "uri": {
                                                 "type": "string",
@@ -1074,7 +1073,7 @@
                                                         "$ref": "#/allOf/2/properties/references/items/definitions/book/properties/publisher"
                                                     },
                                                     "doi": {
-                                                        "$ref": "#/allOf/2/properties/authorResponse/properties/doi"
+                                                        "$ref": "#/allOf/2/properties/digest/properties/doi"
                                                     },
                                                     "uri": {
                                                         "type": "string",
@@ -1128,7 +1127,7 @@
                                                 "$ref": "#/allOf/2/properties/references/items/definitions/pages"
                                             },
                                             "doi": {
-                                                "$ref": "#/allOf/2/properties/authorResponse/properties/doi"
+                                                "$ref": "#/allOf/2/properties/digest/properties/doi"
                                             },
                                             "pmid": {
                                                 "$ref": "#/allOf/2/properties/references/items/definitions/book/properties/pmid"
@@ -1282,7 +1281,7 @@
                                                 "minLength": 1
                                             },
                                             "doi": {
-                                                "$ref": "#/allOf/2/properties/authorResponse/properties/doi"
+                                                "$ref": "#/allOf/2/properties/digest/properties/doi"
                                             },
                                             "uri": {
                                                 "type": "string",
@@ -1330,7 +1329,7 @@
                                                 "$ref": "#/allOf/2/properties/references/items/definitions/book/properties/publisher"
                                             },
                                             "doi": {
-                                                "$ref": "#/allOf/2/properties/authorResponse/properties/doi"
+                                                "$ref": "#/allOf/2/properties/digest/properties/doi"
                                             },
                                             "pmid": {
                                                 "$ref": "#/allOf/2/properties/references/items/definitions/book/properties/pmid"
@@ -1448,7 +1447,7 @@
                                                 "$ref": "#/allOf/2/properties/references/items/definitions/book/properties/publisher"
                                             },
                                             "doi": {
-                                                "$ref": "#/allOf/2/properties/authorResponse/properties/doi"
+                                                "$ref": "#/allOf/2/properties/digest/properties/doi"
                                             },
                                             "uri": {
                                                 "type": "string",
@@ -1497,7 +1496,7 @@
                                                 "minLength": 1
                                             },
                                             "accessed": {
-                                                "$ref": "#/allOf/2/properties/references/items/allOf/0/properties/date"
+                                                "$ref": "#/allOf/2/properties/dataSets/generated/items/properties/date"
                                             },
                                             "uri": {
                                                 "type": "string",
@@ -1620,7 +1619,7 @@
                                         "minLength": 1
                                     },
                                     "doi": {
-                                        "$ref": "#/allOf/2/properties/authorResponse/properties/doi"
+                                        "$ref": "#/allOf/2/properties/digest/properties/doi"
                                     },
                                     "pmid": {
                                         "$schema": "http://json-schema.org/draft-04/schema#",
@@ -1693,7 +1692,7 @@
                                 "pattern": "^[^\\s]+$"
                             },
                             "doi": {
-                                "$ref": "#/allOf/2/properties/authorResponse/properties/doi"
+                                "$ref": "#/allOf/2/properties/digest/properties/doi"
                             },
                             "title": {
                                 "type": "string",
@@ -1727,7 +1726,7 @@
                         "type": "object",
                         "properties": {
                             "doi": {
-                                "$ref": "#/allOf/2/properties/authorResponse/properties/doi"
+                                "$ref": "#/allOf/2/properties/digest/properties/doi"
                             },
                             "id": {
                                 "$ref": "#/allOf/2/properties/appendices/items/properties/id"
@@ -1785,6 +1784,74 @@
                         }
                     }
                 },
+                "dataSets": {
+                    "type": "object",
+                    "generated": {
+                        "type": "array",
+                        "items": {
+                            "$schema": "http://json-schema.org/draft-04/schema#",
+                            "title": "Data set",
+                            "type": "object",
+                            "properties": {
+                                "id": {
+                                    "$ref": "#/allOf/2/properties/appendices/items/properties/id"
+                                },
+                                "date": {
+                                    "$schema": "http://json-schema.org/draft-04/schema#",
+                                    "title": "Partial date",
+                                    "description": "A date, where the month and/or day may not be known/available.\n\nFor example:\n  - 2016\n  - 2016-09\n  - 2016-09-16\n",
+                                    "type": "string",
+                                    "pattern": "^[1-2][0-9]{3}(-((0[1-9])|(1[0-2]))(-((0[1-9])|([1-2][0-9])|(3[0-1])))?)?$"
+                                },
+                                "authors": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/allOf/1/allOf/1/properties/authors/items"
+                                    },
+                                    "minItems": 1
+                                },
+                                "authorsEtAl": {
+                                    "description": "If there are more authors.",
+                                    "type": "boolean",
+                                    "default": false
+                                },
+                                "title": {
+                                    "type": "string",
+                                    "minLength": 1
+                                },
+                                "dataId": {
+                                    "title": "Data ID",
+                                    "type": "string",
+                                    "minLength": 1
+                                },
+                                "details": {
+                                    "type": "string",
+                                    "minLength": 1
+                                },
+                                "doi": {
+                                    "$ref": "#/allOf/2/properties/digest/properties/doi"
+                                },
+                                "uri": {
+                                    "type": "string",
+                                    "format": "uri"
+                                }
+                            },
+                            "required": [
+                                "id",
+                                "date",
+                                "authors",
+                                "title",
+                                "uri"
+                            ]
+                        }
+                    },
+                    "used": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/allOf/2/properties/dataSets/generated/items"
+                        }
+                    }
+                },
                 "ethics": {
                     "type": "array",
                     "items": {
@@ -1814,7 +1881,7 @@
                     "type": "object",
                     "properties": {
                         "doi": {
-                            "$ref": "#/allOf/2/properties/authorResponse/properties/doi"
+                            "$ref": "#/allOf/2/properties/digest/properties/doi"
                         },
                         "description": {
                             "type": "array",
@@ -1864,7 +1931,7 @@
                                                                 "type": "object",
                                                                 "properties": {
                                                                     "doi": {
-                                                                        "$ref": "#/allOf/2/properties/authorResponse/properties/doi"
+                                                                        "$ref": "#/allOf/2/properties/digest/properties/doi"
                                                                     },
                                                                     "id": {
                                                                         "$ref": "#/allOf/2/properties/appendices/items/properties/id"
@@ -2086,7 +2153,7 @@
                                                                 ]
                                                             },
                                                             "doi": {
-                                                                "$ref": "#/allOf/2/properties/authorResponse/properties/doi"
+                                                                "$ref": "#/allOf/2/properties/digest/properties/doi"
                                                             },
                                                             "id": {
                                                                 "$ref": "#/allOf/2/properties/appendices/items/properties/id"
@@ -2188,7 +2255,7 @@
                                                                 ]
                                                             },
                                                             "doi": {
-                                                                "$ref": "#/allOf/2/properties/authorResponse/properties/doi"
+                                                                "$ref": "#/allOf/2/properties/digest/properties/doi"
                                                             },
                                                             "id": {
                                                                 "$ref": "#/allOf/2/properties/appendices/items/properties/id"
@@ -2329,7 +2396,7 @@
                                                         ]
                                                     },
                                                     "doi": {
-                                                        "$ref": "#/allOf/2/properties/authorResponse/properties/doi"
+                                                        "$ref": "#/allOf/2/properties/digest/properties/doi"
                                                     },
                                                     "id": {
                                                         "$ref": "#/allOf/2/properties/appendices/items/properties/id"
@@ -2379,10 +2446,7 @@
                     "type": "object",
                     "properties": {
                         "doi": {
-                            "$schema": "http://json-schema.org/draft-04/schema#",
-                            "title": "DOI",
-                            "type": "string",
-                            "pattern": "^10[.][0-9]{4,}[^\\s\"/<>]*/[^\\s\"]+$"
+                            "$ref": "#/allOf/2/properties/digest/properties/doi"
                         },
                         "content": {
                             "type": "array",
