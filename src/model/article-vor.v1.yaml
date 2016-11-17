@@ -79,6 +79,8 @@ allOf:
             items:
                 $ref: ../blocks/paragraph.v1.yaml
             minItems: 1
+        funding:
+            $ref: ../misc/funding.v1.yaml
         decisionLetter:
             type: object
             properties:
