@@ -51,7 +51,6 @@ allOf:
                         $ref: '#/allOf/2/properties/body'
                 required:
                   - id
-                  - doi
                   - title
                   - content
         acknowledgements:
