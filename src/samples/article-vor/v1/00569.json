@@ -6171,6 +6171,1433 @@
             "filename": "elife-00569-supp3-v1.xls"
         }
     ],
+    "dataSets": {
+        "generated": [
+            {
+                "id": "dataro1",
+                "authors": [
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "A Voskoboynik",
+                            "index": "Voskoboynik, A"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "NF Neff",
+                            "index": "Neff, NF"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "D Sahoo",
+                            "index": "Sahoo, D"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "AM Newman",
+                            "index": "Newman, AM"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "D Pushkarev",
+                            "index": "Pushkarev, D"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "W Koh",
+                            "index": "Koh, W"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "B Passarelli",
+                            "index": "Passarelli, B"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "CH Fan",
+                            "index": "Fan, CH"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "GL Mantalas",
+                            "index": "Mantalas, GL"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "KJ Palmeri",
+                            "index": "Palmeri, KJ"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "KJ Ishizuka",
+                            "index": "Ishizuka, KJ"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "C Gissi",
+                            "index": "Gissi, C"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "F Griggio",
+                            "index": "Griggio, F"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "R Ben-Shlomo",
+                            "index": "Ben-Shlomo, R"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "DM Corey",
+                            "index": "Corey, DM"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "L Penland",
+                            "index": "Penland, L"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "RA White III",
+                            "index": "White, RA, III"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "IL Weissman",
+                            "index": "Weissman, IL"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "SR Quake",
+                            "index": "Quake, SR"
+                        }
+                    }
+                ],
+                "date": "2013",
+                "title": "The genome sequence of the colonial chordate, Botryllus schlosseri",
+                "dataId": "PRJNA205369",
+                "uri": "http://www.ncbi.nlm.nih.gov/bioproject/PRJNA205369",
+                "details": "Publicly available at NCBI BioProject (<a href=\"http://www.ncbi.nlm.nih.gov/bioproject\">http://www.ncbi.nlm.nih.gov/bioproject</a>)."
+            },
+            {
+                "id": "dataro2",
+                "authors": [
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "A Voskoboynik",
+                            "index": "Voskoboynik, A"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "NF Neff",
+                            "index": "Neff, NF"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "D Sahoo",
+                            "index": "Sahoo, D"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "AM Newman",
+                            "index": "Newman, AM"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "D Pushkarev",
+                            "index": "Pushkarev, D"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "W Koh",
+                            "index": "Koh, W"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "B Passarelli",
+                            "index": "Passarelli, B"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "CH Fan",
+                            "index": "Fan, CH"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "GL Mantalas",
+                            "index": "Mantalas, GL"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "KJ Palmeri",
+                            "index": "Palmeri, KJ"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "KJ Ishizuka",
+                            "index": "Ishizuka, KJ"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "C Gissi",
+                            "index": "Gissi, C"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "F Griggio",
+                            "index": "Griggio, F"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "R Ben-Shlomo",
+                            "index": "Ben-Shlomo, R"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "DM Corey",
+                            "index": "Corey, DM"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "L Penland",
+                            "index": "Penland, L"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "RA White III",
+                            "index": "White, RA, III"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "IL Weissman",
+                            "index": "Weissman, IL"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "SR Quake",
+                            "index": "Quake, SR"
+                        }
+                    }
+                ],
+                "date": "2013",
+                "title": "Botryllus schlosseri complete mitochondrial genome, isolate sc6a-b",
+                "dataId": "HF548551",
+                "uri": "http://www.ebi.ac.uk/cgi-bin/sva/sva.pl?search=Go&amp;query=HF548551",
+                "details": "Publicly available at the European Nucleotide Archive (<a href=\"http://www.ebi.ac.uk/ena/\">http://www.ebi.ac.uk/ena/</a>)."
+            },
+            {
+                "id": "dataro3",
+                "authors": [
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "A Voskoboynik",
+                            "index": "Voskoboynik, A"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "NF Neff",
+                            "index": "Neff, NF"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "D Sahoo",
+                            "index": "Sahoo, D"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "AM Newman",
+                            "index": "Newman, AM"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "D Pushkarev",
+                            "index": "Pushkarev, D"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "W Koh",
+                            "index": "Koh, W"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "B Passarelli",
+                            "index": "Passarelli, B"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "CH Fan",
+                            "index": "Fan, CH"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "GL Mantalas",
+                            "index": "Mantalas, GL"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "KJ Palmeri",
+                            "index": "Palmeri, KJ"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "KJ Ishizuka",
+                            "index": "Ishizuka, KJ"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "C Gissi",
+                            "index": "Gissi, C"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "F Griggio",
+                            "index": "Griggio, F"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "R Ben-Shlomo",
+                            "index": "Ben-Shlomo, R"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "DM Corey",
+                            "index": "Corey, DM"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "L Penland",
+                            "index": "Penland, L"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "RA White III",
+                            "index": "White, RA, III"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "IL Weissman",
+                            "index": "Weissman, IL"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "SR Quake",
+                            "index": "Quake, SR"
+                        }
+                    }
+                ],
+                "date": "2013",
+                "title": "Botryllus schlosseri Genome Project",
+                "uri": "http://genepyramid.stanford.edu/botryllusgenome/",
+                "details": "Publicly available"
+            }
+        ],
+        "used": [
+            {
+                "id": "dataro4",
+                "authors": [
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "M Bhatla",
+                            "index": "Bhatla, M"
+                        }
+                    }
+                ],
+                "date": "2006",
+                "title": "Molecular signatures orchestrating the fate of human hematopoietic stem cells originating from different stages of ontogeny",
+                "dataId": "GSE3823",
+                "uri": "http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE3823",
+                "details": "Publicly available at the Gene Expression Omnibus (<a href=\"http://www.ncbi.nlm.nih.gov/geo/\">http://www.ncbi.nlm.nih.gov/geo/</a>)."
+            },
+            {
+                "id": "dataro5",
+                "authors": [
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "CE Eckfeldt",
+                            "index": "Eckfeldt, CE"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "EM Mendenhall",
+                            "index": "Mendenhall, EM"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "CM Flynn",
+                            "index": "Flynn, CM"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "T Wang",
+                            "index": "Wang, T"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "SM Grindle",
+                            "index": "Grindle, SM"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "SC Ekker",
+                            "index": "Ekker, SC"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "CM Verfallie",
+                            "index": "Verfallie, CM"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "MA Pickart",
+                            "index": "Pickart, MA"
+                        }
+                    }
+                ],
+                "date": "2005",
+                "title": "Human Hematopoietic Stem Cell (HSC) and Progenitor Cell (HPC) expression profilies",
+                "dataId": "GSE2666",
+                "uri": "http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE2666",
+                "details": "Publicly available at the Gene Expression Omnibus (<a href=\"http://www.ncbi.nlm.nih.gov/geo/\">http://www.ncbi.nlm.nih.gov/geo/</a>)."
+            },
+            {
+                "id": "dataro6",
+                "authors": [
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "C Gustafsson",
+                            "index": "Gustafsson, C"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "J Mjüsberg",
+                            "index": "Mjüsberg, J"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "A Matussek",
+                            "index": "Matussek, A"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "R Geffers",
+                            "index": "Geffers, R"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "L Matthiesen",
+                            "index": "Matthiesen, L"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "G Berg",
+                            "index": "Berg, G"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "S Sharma",
+                            "index": "Sharma, S"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "J Buer",
+                            "index": "Buer, J"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "J Ernerudh",
+                            "index": "Ernerudh, J"
+                        }
+                    }
+                ],
+                "date": "2008",
+                "title": "Gene expression profiling of human decidual macrophages: evidence for immunosuppressive phenotype",
+                "dataId": "GSE10612",
+                "uri": "http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE10612",
+                "details": "Publicly available at the Gene Expression Omnibus (<a href=\"http://www.ncbi.nlm.nih.gov/geo/\">http://www.ncbi.nlm.nih.gov/geo/</a>)."
+            },
+            {
+                "id": "dataro7",
+                "authors": [
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "J Hutcheson",
+                            "index": "Hutcheson, J"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "JC Scatizzi",
+                            "index": "Scatizzi, JC"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "AM Siddiqui",
+                            "index": "Siddiqui, AM"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "GK Haines 3rd",
+                            "index": "Haines, GK, 3rd"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "T Wu",
+                            "index": "Wu, T"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "QZ Li",
+                            "index": "Li, QZ"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "LS Davis",
+                            "index": "Davis, LS"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "C Mohan",
+                            "index": "Mohan, C"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "H Perlman",
+                            "index": "Perlman, H"
+                        }
+                    }
+                ],
+                "date": "2008",
+                "title": "Combined deficiency of proapoptotic regulators Bim and Fas results in the early onset of systemic autoimmunity",
+                "dataId": "GSE10325",
+                "uri": "http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE10325",
+                "details": "Publicly available at the Gene Expression Omnibus (<a href=\"http://www.ncbi.nlm.nih.gov/geo/\">http://www.ncbi.nlm.nih.gov/geo/</a>)."
+            },
+            {
+                "id": "dataro8",
+                "authors": [
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "MD Hyrcza",
+                            "index": "Hyrcza, MD"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "C Kovacs",
+                            "index": "Kovacs, C"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "M Loutfy",
+                            "index": "Loutfy, M"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "R Halpenny",
+                            "index": "Halpenny, R"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "L Heisler",
+                            "index": "Heisler, L"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "S Yang",
+                            "index": "Yang, S"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "O Wilkins",
+                            "index": "Wilkins, O"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "M Ostrowski",
+                            "index": "Ostrowski, M"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "SD Der",
+                            "index": "Der, SD"
+                        }
+                    }
+                ],
+                "date": "2007",
+                "title": "Distinct transcriptional profiles in ex vivo CD4+ and CD8+ T cells are established early in human immunodeficiency virus type 1 infection and are characterized by a chronic interferon response as well as extensive transcriptional changes in CD8+ T cells",
+                "dataId": "GSE6740",
+                "uri": "http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE6740",
+                "details": "Publicly available at the Gene Expression Omnibus <a href=\"http://www.ncbi.nlm.nih.gov/geo/\">http://www.ncbi.nlm.nih.gov/geo/</a>)."
+            },
+            {
+                "id": "dataro9",
+                "authors": [
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "J Jura",
+                            "index": "Jura, J"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "P Wegrzyn",
+                            "index": "Wegrzyn, P"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "M Korostyński",
+                            "index": "Korostyński, M"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "K Guzik",
+                            "index": "Guzik, K"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "M Oczko-Wojciechowska",
+                            "index": "Oczko-Wojciechowska, M"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "M Jarzab",
+                            "index": "Jarzab, M"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "M Kowalska",
+                            "index": "Kowalska, M"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "M Piechota",
+                            "index": "Piechota, M"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "R Przewłocki",
+                            "index": "Przewłocki, R"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "A Koj",
+                            "index": "Koj, A"
+                        }
+                    }
+                ],
+                "date": "2007",
+                "title": "Identification of interleukin-1 and interleukin-6-responsive genes in human monocyte-derived macrophages using microarrays",
+                "dataId": "GSE8515",
+                "uri": "http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE8515",
+                "details": "Publicly available at the Gene Expression Omnibus (<a href=\"http://www.ncbi.nlm.nih.gov/geo/\">http://www.ncbi.nlm.nih.gov/geo/</a>)."
+            },
+            {
+                "id": "dataro10",
+                "authors": [
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "MS Lee",
+                            "index": "Lee, MS"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "K Hanspers",
+                            "index": "Hanspers, K"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "CS Barker",
+                            "index": "Barker, CS"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "AP Korn",
+                            "index": "Korn, AP"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "JM McCune",
+                            "index": "McCune, JM"
+                        }
+                    }
+                ],
+                "date": "2004",
+                "title": "Gene expression profiles during human CD4+ T cell differentiation",
+                "dataId": "GSE1460",
+                "uri": "http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE1460",
+                "details": "Publicly available at the Gene Expression Omnibus (<a href=\"http://www.ncbi.nlm.nih.gov/geo/\">http://www.ncbi.nlm.nih.gov/geo/</a>)."
+            },
+            {
+                "id": "dataro11",
+                "authors": [
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "H Liu",
+                            "index": "Liu, H"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "B Shi",
+                            "index": "Shi, B"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "CC Huang",
+                            "index": "Huang, CC"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "P Eksarko",
+                            "index": "Eksarko, P"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "RM Pope",
+                            "index": "Pope, RM"
+                        }
+                    }
+                ],
+                "date": "2007",
+                "title": "Transcriptional diversity during monocyte to macrophage differentiation",
+                "dataId": "GSE8286",
+                "uri": "http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE8286",
+                "details": "Publicly available at the Gene Expression Omnibus (<a href=\"http://www.ncbi.nlm.nih.gov/geo/\">http://www.ncbi.nlm.nih.gov/geo/</a>)."
+            },
+            {
+                "id": "dataro12",
+                "authors": [
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "RJ Lund",
+                            "index": "Lund, RJ"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "T Aittokallio",
+                            "index": "Aittokallio, T"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "O Nevalainen",
+                            "index": "Nevalainen, O"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "R Lahesmaa",
+                            "index": "Lahesmaa, R"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "E Kainonen",
+                            "index": "Kainonen, E"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "A Lahesmaa",
+                            "index": "Lahesmaa, A"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "C Dixon",
+                            "index": "Dixon, C"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "H Ahlfors",
+                            "index": "Ahlfors, H"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "O Melin",
+                            "index": "Melin, O"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "M Miller",
+                            "index": "Miller, M"
+                        }
+                    }
+                ],
+                "date": "2005",
+                "title": "Identification of novel genes regulated by IL-12, IL-4, or TGF-beta during the early polarization of CD4+ lymphocytes",
+                "dataId": "GSE2770",
+                "uri": "http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE2770",
+                "details": "Publicly available at the Gene Expression Omnibus (<a href=\"http://www.ncbi.nlm.nih.gov/geo/\">http://www.ncbi.nlm.nih.gov/geo/</a>)."
+            },
+            {
+                "id": "dataro13",
+                "authors": [
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "JH Martens",
+                            "index": "Martens, JH"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "J Kzhyshkowska",
+                            "index": "Kzhyshkowska, J"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "M Falkowski-Hansen",
+                            "index": "Falkowski-Hansen, M"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "K Schledzewski",
+                            "index": "Schledzewski, K"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "A Gratchev",
+                            "index": "Gratchev, A"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "U Mansmann",
+                            "index": "Mansmann, U"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "C Schmuttermaier",
+                            "index": "Schmuttermaier, C"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "E Dippel",
+                            "index": "Dippel, E"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "W Koenen",
+                            "index": "Koenen, W"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "F Riedel",
+                            "index": "Riedel, F"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "S Goerdt",
+                            "index": "Goerdt, S"
+                        }
+                    }
+                ],
+                "date": "2006",
+                "title": "Differential expression of a gene signature for scavenger/lectin receptors by endothelial cells and macrophages in human lymph node sinuses, the primary sites of regional metastasis",
+                "dataId": "GSE2665",
+                "uri": "http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE2665",
+                "details": "Publicly available at the Gene Expression Omnibus (<a href=\"http://www.ncbi.nlm.nih.gov/geo/\">http://www.ncbi.nlm.nih.gov/geo/</a>)."
+            },
+            {
+                "id": "dataro14",
+                "authors": [
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "F Ocklenburg",
+                            "index": "Ocklenburg, F"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "D Moharregh-Khiabani",
+                            "index": "Moharregh-Khiabani, D"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "R Geffers",
+                            "index": "Geffers, R"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "V Janke",
+                            "index": "Janke, V"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "S Pfoertner",
+                            "index": "Pfoertner, S"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "H Garritsen",
+                            "index": "Garritsen, H"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "L Groebe",
+                            "index": "Groebe, L"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "J Klempnauer",
+                            "index": "Klempnauer, J"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "KE Dittmar",
+                            "index": "Dittmar, KE"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "S Weiss",
+                            "index": "Weiss, S"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "J Buer",
+                            "index": "Buer, J"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "M Probst-Kepper",
+                            "index": "Probst-Kepper, M"
+                        }
+                    }
+                ],
+                "date": "2006",
+                "title": "UBD, a downstream element of FOXP3, allows the identification of LGALS3, a new marker of human regulatory T cells",
+                "dataId": "GSE4527",
+                "uri": "http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE4527",
+                "details": "Publicly available at the Gene Expression Omnibus (<a href=\"http://www.ncbi.nlm.nih.gov/geo/\">http://www.ncbi.nlm.nih.gov/geo/</a>)."
+            },
+            {
+                "id": "dataro15",
+                "authors": [
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "A Popov",
+                            "index": "Popov, A"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "J Driesen",
+                            "index": "Driesen, J"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "Z Abdullah",
+                            "index": "Abdullah, Z"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "C Wickenhauser",
+                            "index": "Wickenhauser, C"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "M Beyer",
+                            "index": "Beyer, M"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "S Debey-Pascher",
+                            "index": "Debey-Pascher, S"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "T Saric",
+                            "index": "Saric, T"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "S Kummer",
+                            "index": "Kummer, S"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "O Takikawa",
+                            "index": "Takikawa, O"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "E Domann",
+                            "index": "Domann, E"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "T Chakraborty",
+                            "index": "Chakraborty, T"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "M Krünke",
+                            "index": "Krünke, M"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "O Utermühlen",
+                            "index": "Utermühlen, O"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "JL Schultze",
+                            "index": "Schultze, JL"
+                        }
+                    }
+                ],
+                "date": "2008",
+                "title": "Infection of myeloid dendritic cells with Listeria monocytogenes leads to the suppression of T cell function by multiple inhibitory mechanisms",
+                "dataId": "GSE9946",
+                "uri": "http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE9946",
+                "details": "Publicly available at the Gene Expression Omnibus (<a href=\"http://www.ncbi.nlm.nih.gov/geo/\">http://www.ncbi.nlm.nih.gov/geo/</a>)."
+            },
+            {
+                "id": "dataro16",
+                "authors": [
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "J Seita",
+                            "index": "Seita, J"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "D Sahoo",
+                            "index": "Sahoo, D"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "DJ Rossi",
+                            "index": "Rossi, DJ"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "D Bhattacharya",
+                            "index": "Bhattacharya, D"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "T Serwold",
+                            "index": "Serwold, T"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "M Inlay",
+                            "index": "Inlay, M"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "LI Ehrlich",
+                            "index": "Ehrlich, LI"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "JW Fathman",
+                            "index": "Fathman, JW"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "DL Dill",
+                            "index": "Dill, DL"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "IL Weissman",
+                            "index": "Weissman, IL"
+                        }
+                    }
+                ],
+                "date": "2012",
+                "title": "Gene expression common: an open platform for absolute gene expression profiling",
+                "dataId": "GSE34723",
+                "uri": "http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE34723",
+                "details": "Publicly available at the Gene Expression Omnibus (<a href=\"http://www.ncbi.nlm.nih.gov/geo/\">http://www.ncbi.nlm.nih.gov/geo/</a>)."
+            },
+            {
+                "id": "dataro17",
+                "authors": [
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "P D’Onorio de Meo",
+                            "index": "D’Onorio de Meo, P"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "M D’Antonio",
+                            "index": "D’Antonio, M"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "F Griggio",
+                            "index": "Griggio, F"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "R Lupi",
+                            "index": "Lupi, R"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "M Borsani",
+                            "index": "Borsani, M"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "G Pavesi",
+                            "index": "Pavesi, G"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "T Castrignanü",
+                            "index": "Castrignanü, T"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "G Pesole",
+                            "index": "Pesole, G"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "C Gissi",
+                            "index": "Gissi, C"
+                        }
+                    }
+                ],
+                "date": "2012",
+                "title": "MitoZoa 2.0: a database resource and search tools for comparative and evolutionary analyses of mitochondrial genomes in Metazoa",
+                "dataId": "PMID: 22123747",
+                "uri": "http://mi.caspur.it/mitozoa/"
+            }
+        ]
+    },
     "acknowledgements": [
         {
             "type": "paragraph",
