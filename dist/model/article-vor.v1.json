@@ -1701,7 +1701,6 @@
                         },
                         "required": [
                             "id",
-                            "doi",
                             "title",
                             "content"
                         ]
