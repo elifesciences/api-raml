@@ -230,79 +230,94 @@
                     "text": "Two macaque monkeys grasped a large set of 49 objects causing highly variable visual stimuli and motor responses (<a href=\"#fig1\">Figure 1a–b</a>, <a href=\"#media1\">Video 1</a>). During the experiments we recorded hand and arm kinematics from an instrumented glove (<a href=\"#bib37\">Schaffelhofer and Scherberger, 2012</a>) (see <a href=\"#fig1\">Figure 1c</a>, <a href=\"#media2\" >Video 2</a>) in conjunction with neuronal activity from 6 cortical microelectrode arrays (6 x 32 channels) (<a href=\"#fig1\">Figure 1e–g</a>)."
                 },
                 {
-                    "type": "image",
-                    "doi": "10.7554/eLife.15278.003",
-                    "id": "fig1",
-                    "label": "Figure 1.",
-                    "title": "Behavioural design and implantation details.",
-                    "caption": [
+                    "type": "figure",
+                    "assets": [
                         {
-                            "type": "paragraph",
-                            "text": "(<b>a–b</b>) Two monkeys were trained to grasp a total of 48 objects presented on a PC-controlled turntable. In addition, monkeys were instructed to perform either precision or power grips on a handle. Each of the 50 grasping conditions was denoted with a double-digit number (ID1, ID2), a colour code, and a symbol to allow easy identification throughout this manuscript. (<b>c</b>) An instrumented glove equipped with electro-magnetic sensors allowed monitoring and recording the monkeys’ hand and arm kinematics in 27 DOF. (<b>d</b>) All grasping actions were performed as a delayed grasp-and-hold task consisting of eye-fixation, cue, planning, grasping and hold epochs. (<b>e–g</b>) Neural activity was recorded simultaneously from six floating microelectrode arrays implanted in the cortical areas AIP, F5, and M1. (<b>f</b>) Electrode placement in monkey Z (right hemisphere). Each array consisted of 2 ground and 2 reference electrodes (black), as well as 32 recording channels (white) aligned in a 4x9 matrix. Electrode length for each row increased towards the sulcus from 1.5–7.1 mm. (<b>g</b>) Same for monkey M (left hemisphere). Two arrays were implanted in each area. AIP: toward the lateral end of the intraparietal sulcus (IPS); F5: on the posterior bank of the arcuate sulcus (AS); hand area of M1: on the anterior bank of the central sulcus (CS)."
+                            "type": "image",
+                            "doi": "10.7554/eLife.15278.003",
+                            "id": "fig1",
+                            "label": "Figure 1.",
+                            "title": "Behavioural design and implantation details.",
+                            "caption": [
+                                {
+                                    "type": "paragraph",
+                                    "text": "(<b>a–b</b>) Two monkeys were trained to grasp a total of 48 objects presented on a PC-controlled turntable. In addition, monkeys were instructed to perform either precision or power grips on a handle. Each of the 50 grasping conditions was denoted with a double-digit number (ID1, ID2), a colour code, and a symbol to allow easy identification throughout this manuscript. (<b>c</b>) An instrumented glove equipped with electro-magnetic sensors allowed monitoring and recording the monkeys’ hand and arm kinematics in 27 DOF. (<b>d</b>) All grasping actions were performed as a delayed grasp-and-hold task consisting of eye-fixation, cue, planning, grasping and hold epochs. (<b>e–g</b>) Neural activity was recorded simultaneously from six floating microelectrode arrays implanted in the cortical areas AIP, F5, and M1. (<b>f</b>) Electrode placement in monkey Z (right hemisphere). Each array consisted of 2 ground and 2 reference electrodes (black), as well as 32 recording channels (white) aligned in a 4x9 matrix. Electrode length for each row increased towards the sulcus from 1.5–7.1 mm. (<b>g</b>) Same for monkey M (left hemisphere). Two arrays were implanted in each area. AIP: toward the lateral end of the intraparietal sulcus (IPS); F5: on the posterior bank of the arcuate sulcus (AS); hand area of M1: on the anterior bank of the central sulcus (CS)."
+                                }
+                            ],
+                            "alt": "",
+                            "uri": "https://elife-publishing-cdn.s3.amazonaws.com/15278/elife-15278-fig1-v1.jpg"
                         }
-                    ],
-                    "alt": "",
-                    "uri": "https://elife-publishing-cdn.s3.amazonaws.com/15278/elife-15278-fig1-v1.jpg"
+                    ]
                 },
                 {
-                    "type": "video",
-                    "doi": "10.7554/eLife.15278.004",
-                    "id": "media1",
-                    "label": "Video 1.",
-                    "title": "Experimental task.",
-                    "caption": [
+                    "type": "figure",
+                    "assets": [
                         {
-                            "type": "paragraph",
-                            "text": "A monkey grasped and held highly variable objects presented on a PC-controlled turntable. Note: For presentation purposes, the video was captured in the light."
+                            "type": "video",
+                            "doi": "10.7554/eLife.15278.004",
+                            "id": "media1",
+                            "label": "Video 1.",
+                            "title": "Experimental task.",
+                            "caption": [
+                                {
+                                    "type": "paragraph",
+                                    "text": "A monkey grasped and held highly variable objects presented on a PC-controlled turntable. Note: For presentation purposes, the video was captured in the light."
+                                }
+                            ],
+                            "sources": [
+                                {
+                                    "mediaType": "video/mp4; codecs=\"avc1.42E01E, mp4a.40.2\"",
+                                    "uri": "https://static-movie-usa.glencoesoftware.com/mp4/10.7554/774/b24b6a5e3f0d60d41388aad7d9fa00d2e5ec9a92/elife-15278-media1.mp4"
+                                },
+                                {
+                                    "mediaType": "video/webm; codecs=\"vp8.0, vorbis\"",
+                                    "uri": "https://static-movie-usa.glencoesoftware.com/webm/10.7554/774/b24b6a5e3f0d60d41388aad7d9fa00d2e5ec9a92/elife-15278-media1.webm"
+                                },
+                                {
+                                    "mediaType": "video/ogg; codecs=\"theora, vorbis\"",
+                                    "uri": "https://static-movie-usa.glencoesoftware.com/ogv/10.7554/774/b24b6a5e3f0d60d41388aad7d9fa00d2e5ec9a92/elife-15278-media1.ogv"
+                                }
+                            ],
+                            "image": "https://static-movie-usa.glencoesoftware.com/jpg/10.7554/774/b24b6a5e3f0d60d41388aad7d9fa00d2e5ec9a92/elife-15278-media1.jpg",
+                            "width": 1920,
+                            "height": 1080
                         }
-                    ],
-                    "sources": [
-                        {
-                            "mediaType": "video/mp4; codecs=\"avc1.42E01E, mp4a.40.2\"",
-                            "uri": "https://static-movie-usa.glencoesoftware.com/mp4/10.7554/774/b24b6a5e3f0d60d41388aad7d9fa00d2e5ec9a92/elife-15278-media1.mp4"
-                        },
-                        {
-                            "mediaType": "video/webm; codecs=\"vp8.0, vorbis\"",
-                            "uri": "https://static-movie-usa.glencoesoftware.com/webm/10.7554/774/b24b6a5e3f0d60d41388aad7d9fa00d2e5ec9a92/elife-15278-media1.webm"
-                        },
-                        {
-                            "mediaType": "video/ogg; codecs=\"theora, vorbis\"",
-                            "uri": "https://static-movie-usa.glencoesoftware.com/ogv/10.7554/774/b24b6a5e3f0d60d41388aad7d9fa00d2e5ec9a92/elife-15278-media1.ogv"
-                        }
-                    ],
-                    "image": "https://static-movie-usa.glencoesoftware.com/jpg/10.7554/774/b24b6a5e3f0d60d41388aad7d9fa00d2e5ec9a92/elife-15278-media1.jpg",
-                    "width": 1920,
-                    "height": 1080
+                    ]
                 },
                 {
-                    "type": "video",
-                    "doi": "10.7554/eLife.15278.005",
-                    "id": "media2",
-                    "label": "Video 2.",
-                    "title": "Hand and arm tracking.",
-                    "caption": [
+                    "type": "figure",
+                    "assets": [
                         {
-                            "type": "paragraph",
-                            "text": "18 joints of the primate hand were tracked with electromagnetic sensors and used to drive a 3-D primate-specific musculoskeletal model to extract 27 joint angles. Thumb, index, wrist, elbow, and shoulder angles are shown while the monkey is grasping a ring, a ball and a cylinder. The video runs at half speed."
+                            "type": "video",
+                            "doi": "10.7554/eLife.15278.005",
+                            "id": "media2",
+                            "label": "Video 2.",
+                            "title": "Hand and arm tracking.",
+                            "caption": [
+                                {
+                                    "type": "paragraph",
+                                    "text": "18 joints of the primate hand were tracked with electromagnetic sensors and used to drive a 3-D primate-specific musculoskeletal model to extract 27 joint angles. Thumb, index, wrist, elbow, and shoulder angles are shown while the monkey is grasping a ring, a ball and a cylinder. The video runs at half speed."
+                                }
+                            ],
+                            "sources": [
+                                {
+                                    "mediaType": "video/mp4; codecs=\"avc1.42E01E, mp4a.40.2\"",
+                                    "uri": "https://static-movie-usa.glencoesoftware.com/mp4/10.7554/774/b24b6a5e3f0d60d41388aad7d9fa00d2e5ec9a92/elife-15278-media2.mp4"
+                                },
+                                {
+                                    "mediaType": "video/webm; codecs=\"vp8.0, vorbis\"",
+                                    "uri": "https://static-movie-usa.glencoesoftware.com/webm/10.7554/774/b24b6a5e3f0d60d41388aad7d9fa00d2e5ec9a92/elife-15278-media2.webm"
+                                },
+                                {
+                                    "mediaType": "video/ogg; codecs=\"theora, vorbis\"",
+                                    "uri": "https://static-movie-usa.glencoesoftware.com/ogv/10.7554/774/b24b6a5e3f0d60d41388aad7d9fa00d2e5ec9a92/elife-15278-media2.ogv"
+                                }
+                            ],
+                            "image": "https://static-movie-usa.glencoesoftware.com/jpg/10.7554/774/b24b6a5e3f0d60d41388aad7d9fa00d2e5ec9a92/elife-15278-media2.jpg",
+                            "width": 1920,
+                            "height": 1080
                         }
-                    ],
-                    "sources": [
-                        {
-                            "mediaType": "video/mp4; codecs=\"avc1.42E01E, mp4a.40.2\"",
-                            "uri": "https://static-movie-usa.glencoesoftware.com/mp4/10.7554/774/b24b6a5e3f0d60d41388aad7d9fa00d2e5ec9a92/elife-15278-media2.mp4"
-                        },
-                        {
-                            "mediaType": "video/webm; codecs=\"vp8.0, vorbis\"",
-                            "uri": "https://static-movie-usa.glencoesoftware.com/webm/10.7554/774/b24b6a5e3f0d60d41388aad7d9fa00d2e5ec9a92/elife-15278-media2.webm"
-                        },
-                        {
-                            "mediaType": "video/ogg; codecs=\"theora, vorbis\"",
-                            "uri": "https://static-movie-usa.glencoesoftware.com/ogv/10.7554/774/b24b6a5e3f0d60d41388aad7d9fa00d2e5ec9a92/elife-15278-media2.ogv"
-                        }
-                    ],
-                    "image": "https://static-movie-usa.glencoesoftware.com/jpg/10.7554/774/b24b6a5e3f0d60d41388aad7d9fa00d2e5ec9a92/elife-15278-media2.jpg",
-                    "width": 1920,
-                    "height": 1080
+                    ]
                 },
                 {
                     "type": "paragraph",
@@ -322,21 +337,25 @@
                             "text": "Presenting 3D objects to the monkeys lead to vigorous discharge (<a href=\"#bib1\">Baumann et al., 2009</a>; <a href=\"#bib25\">Murata et al., 2000</a>) of AIP-neurons (<a href=\"#fig2\">Figure 2a–b</a>). The modulated population was not only larger (sliding ANOVA, <a href=\"#fig3\" >Figure 3</a>), but also significantly faster appearing after stimulus onset than in F5 (49.7 ms and 54.9 ms, monkey M and Z respectively). Impressively, individual AIP cells were capable of differentiating object shapes at high precision (e.g., <a href=\"#fig2\">Figure 2a</a>). To quantify this attribute, we computed a modulation depth analysis that determined the relative difference in firing rate between all pairs of conditions (objects) during the cue epoch (see Materials and methods). The example cell of <a href=\"#fig2\">Figure 2b</a> revealed a chequered structure caused by the shape-wise order of object conditions 00–76 (for object id, see <a href=\"#fig1\">Figure 1b</a>) and a maximum modulation depth (MD) of 62 Hz. Statistical analysis between all conditions (ANOVA and post-hoc Tukey-Kramer criterion, p&lt;0.01; see Materials and methods) revealed a high encoding capacity of the example neuron that could significantly separate 71% of the 946 condition pairs (44 conditions). Interestingly, the neuron decreased its MD in darkness but maintained its encoding of shape (as also indicated in <a href=\"#fig2\">Figure 2a</a>)."
                         },
                         {
-                            "type": "image",
-                            "doi": "10.7554/eLife.15278.006",
-                            "id": "fig2",
-                            "label": "Figure 2.",
-                            "title": "Visual object processing in area AIP.",
-                            "caption": [
+                            "type": "figure",
+                            "assets": [
                                 {
-                                    "type": "paragraph",
-                                    "text": "(<b>a</b>) Example neuron of AIP responding to the presentation of graspable objects (each curve represents one task condition). (<b>b</b>) Modulation depth plot illustrating the absolute firing rate difference in the cue epoch between all condition pairs (conditions 00 – 76 placed on axis in ascending order). Warm colours: high modulation depth, cool colours: low modulation depth. (<b>c</b>) Shape-wise clustering of objects in the AIP population during the cue epoch, as demonstrated by CDA. Arrows indicate a shift in position when big horizontal cylinders (red triangles) were grasped from below instead from above (black triangles). (<b>d</b>) Same as c, but during the grasp epoch. (<b>e–f</b>) Dendrograms illustrating the neural distance between object conditions in the simultaneously recorded AIP population in the cue and grasp epoch (N = 62). Symbols and colour code in a, c-f as in <a href=\"#fig1\">Figure 1b</a>. Percentages in c and d describe how much variance of the data is explained by the shown components (1st, 2nd and 3rd). Note: <a href=\"#media3\">Video 3</a> visualizes the N-space of AIP of an additional recording in the same animal (Z). See <a href=\"#fig2s1\">Figure 2—figure supplement 1–2</a> for the averaged population results of animal Z and animal M, respectively."
-                                }
-                            ],
-                            "alt": "",
-                            "uri": "https://elife-publishing-cdn.s3.amazonaws.com/15278/elife-15278-fig2-v1.jpg",
-                            "supplements": [
+                                    "type": "image",
+                                    "doi": "10.7554/eLife.15278.006",
+                                    "id": "fig2",
+                                    "label": "Figure 2.",
+                                    "title": "Visual object processing in area AIP.",
+                                    "caption": [
+                                        {
+                                            "type": "paragraph",
+                                            "text": "(<b>a</b>) Example neuron of AIP responding to the presentation of graspable objects (each curve represents one task condition). (<b>b</b>) Modulation depth plot illustrating the absolute firing rate difference in the cue epoch between all condition pairs (conditions 00 – 76 placed on axis in ascending order). Warm colours: high modulation depth, cool colours: low modulation depth. (<b>c</b>) Shape-wise clustering of objects in the AIP population during the cue epoch, as demonstrated by CDA. Arrows indicate a shift in position when big horizontal cylinders (red triangles) were grasped from below instead from above (black triangles). (<b>d</b>) Same as c, but during the grasp epoch. (<b>e–f</b>) Dendrograms illustrating the neural distance between object conditions in the simultaneously recorded AIP population in the cue and grasp epoch (N = 62). Symbols and colour code in a, c-f as in <a href=\"#fig1\">Figure 1b</a>. Percentages in c and d describe how much variance of the data is explained by the shown components (1st, 2nd and 3rd). Note: <a href=\"#media3\">Video 3</a> visualizes the N-space of AIP of an additional recording in the same animal (Z). See <a href=\"#fig2s1\">Figure 2—figure supplement 1–2</a> for the averaged population results of animal Z and animal M, respectively."
+                                        }
+                                    ],
+                                    "alt": "",
+                                    "uri": "https://elife-publishing-cdn.s3.amazonaws.com/15278/elife-15278-fig2-v1.jpg"
+                                },
                                 {
+                                    "type": "image",
                                     "doi": "10.7554/eLife.15278.007",
                                     "id": "fig2s1",
                                     "label": "Figure 2—figure supplement 1.",
@@ -351,6 +370,7 @@
                                     "uri": "https://elife-publishing-cdn.s3.amazonaws.com/15278/elife-15278-fig2-figsupp1-v1.jpg"
                                 },
                                 {
+                                    "type": "image",
                                     "doi": "10.7554/eLife.15278.008",
                                     "id": "fig2s2",
                                     "label": "Figure 2—figure supplement 2.",
@@ -367,83 +387,98 @@
                             ]
                         },
                         {
-                            "type": "video",
-                            "doi": "10.7554/eLife.15278.009",
-                            "id": "media3",
-                            "label": "Video 3.",
-                            "title": "Population coding in AIP.",
-                            "caption": [
+                            "type": "figure",
+                            "assets": [
                                 {
-                                    "type": "paragraph",
-                                    "text": "The first three canonical variables of the AIP population are shown in 3D and are animated for presentation purposes. Each symbol represents one trial. Symbols and colours as in <a href=\"#fig1\">Figure 1b</a>."
+                                    "type": "video",
+                                    "doi": "10.7554/eLife.15278.009",
+                                    "id": "media3",
+                                    "label": "Video 3.",
+                                    "title": "Population coding in AIP.",
+                                    "caption": [
+                                        {
+                                            "type": "paragraph",
+                                            "text": "The first three canonical variables of the AIP population are shown in 3D and are animated for presentation purposes. Each symbol represents one trial. Symbols and colours as in <a href=\"#fig1\">Figure 1b</a>."
+                                        }
+                                    ],
+                                    "sources": [
+                                        {
+                                            "mediaType": "video/mp4; codecs=\"avc1.42E01E, mp4a.40.2\"",
+                                            "uri": "https://static-movie-usa.glencoesoftware.com/mp4/10.7554/774/b24b6a5e3f0d60d41388aad7d9fa00d2e5ec9a92/elife-15278-media3.mp4"
+                                        },
+                                        {
+                                            "mediaType": "video/webm; codecs=\"vp8.0, vorbis\"",
+                                            "uri": "https://static-movie-usa.glencoesoftware.com/webm/10.7554/774/b24b6a5e3f0d60d41388aad7d9fa00d2e5ec9a92/elife-15278-media3.webm"
+                                        },
+                                        {
+                                            "mediaType": "video/ogg; codecs=\"theora, vorbis\"",
+                                            "uri": "https://static-movie-usa.glencoesoftware.com/ogv/10.7554/774/b24b6a5e3f0d60d41388aad7d9fa00d2e5ec9a92/elife-15278-media3.ogv"
+                                        }
+                                    ],
+                                    "image": "https://static-movie-usa.glencoesoftware.com/jpg/10.7554/774/b24b6a5e3f0d60d41388aad7d9fa00d2e5ec9a92/elife-15278-media3.jpg",
+                                    "width": 1920,
+                                    "height": 1080
                                 }
-                            ],
-                            "sources": [
-                                {
-                                    "mediaType": "video/mp4; codecs=\"avc1.42E01E, mp4a.40.2\"",
-                                    "uri": "https://static-movie-usa.glencoesoftware.com/mp4/10.7554/774/b24b6a5e3f0d60d41388aad7d9fa00d2e5ec9a92/elife-15278-media3.mp4"
-                                },
-                                {
-                                    "mediaType": "video/webm; codecs=\"vp8.0, vorbis\"",
-                                    "uri": "https://static-movie-usa.glencoesoftware.com/webm/10.7554/774/b24b6a5e3f0d60d41388aad7d9fa00d2e5ec9a92/elife-15278-media3.webm"
-                                },
-                                {
-                                    "mediaType": "video/ogg; codecs=\"theora, vorbis\"",
-                                    "uri": "https://static-movie-usa.glencoesoftware.com/ogv/10.7554/774/b24b6a5e3f0d60d41388aad7d9fa00d2e5ec9a92/elife-15278-media3.ogv"
-                                }
-                            ],
-                            "image": "https://static-movie-usa.glencoesoftware.com/jpg/10.7554/774/b24b6a5e3f0d60d41388aad7d9fa00d2e5ec9a92/elife-15278-media3.jpg",
-                            "width": 1920,
-                            "height": 1080
+                            ]
                         },
                         {
-                            "type": "image",
-                            "doi": "10.7554/eLife.15278.010",
-                            "id": "fig3",
-                            "label": "Figure 3.",
-                            "title": "Visual processing of object shapes.",
-                            "caption": [
+                            "type": "figure",
+                            "assets": [
                                 {
-                                    "type": "paragraph",
-                                    "text": "(<b>a</b>) A set of six 'mixed' objects elicited different visual stimuli and different motor responses. (<b>b</b>) Percentage of tuned neurons of the AIP, F5, and M1 population express the significant modulation with respect to the mixed objects across time (sliding one-way ANOVA). (<b>c</b>) Tuned neurons (shades of red) were mapped to their recording location during the visual (t = 0.16 s after object presentation) and motor phase (t = 0.7 s after movement onset). (<b>d</b>) As a contrast and to elicit pure visual responses, 'abstract' objects caused different visual stimuli but the same grip. (<b>e</b>) Similar to b, but for the abstract objects set. (<b>f</b>) Similar to c, but showing the map of tuned neurons (shades of green) with respect to the abstract object set. For b, e: Data is doubly aligned on cue onset and on the grasp (go) signal. Sliding ANOVA was computed for each session individually and averaged across all 10 recording sessions per animal. Shades represent standard error from mean (s.e.m.) across recording sessions. For <b>c</b>, <b>f</b>: The number of tuned neurons per channel were averaged across all recording sessions and visualized in shades of green and red for the abstract and mixed objects, respectively. Channels without any identified neurons were highlighted in light grey. Map of monkey M is mirrored along vertical axis for better comparison of both animals."
+                                    "type": "image",
+                                    "doi": "10.7554/eLife.15278.010",
+                                    "id": "fig3",
+                                    "label": "Figure 3.",
+                                    "title": "Visual processing of object shapes.",
+                                    "caption": [
+                                        {
+                                            "type": "paragraph",
+                                            "text": "(<b>a</b>) A set of six 'mixed' objects elicited different visual stimuli and different motor responses. (<b>b</b>) Percentage of tuned neurons of the AIP, F5, and M1 population express the significant modulation with respect to the mixed objects across time (sliding one-way ANOVA). (<b>c</b>) Tuned neurons (shades of red) were mapped to their recording location during the visual (t = 0.16 s after object presentation) and motor phase (t = 0.7 s after movement onset). (<b>d</b>) As a contrast and to elicit pure visual responses, 'abstract' objects caused different visual stimuli but the same grip. (<b>e</b>) Similar to b, but for the abstract objects set. (<b>f</b>) Similar to c, but showing the map of tuned neurons (shades of green) with respect to the abstract object set. For b, e: Data is doubly aligned on cue onset and on the grasp (go) signal. Sliding ANOVA was computed for each session individually and averaged across all 10 recording sessions per animal. Shades represent standard error from mean (s.e.m.) across recording sessions. For <b>c</b>, <b>f</b>: The number of tuned neurons per channel were averaged across all recording sessions and visualized in shades of green and red for the abstract and mixed objects, respectively. Channels without any identified neurons were highlighted in light grey. Map of monkey M is mirrored along vertical axis for better comparison of both animals."
+                                        }
+                                    ],
+                                    "alt": "",
+                                    "uri": "https://elife-publishing-cdn.s3.amazonaws.com/15278/elife-15278-fig3-v1.jpg"
                                 }
-                            ],
-                            "alt": "",
-                            "uri": "https://elife-publishing-cdn.s3.amazonaws.com/15278/elife-15278-fig3-v1.jpg"
+                            ]
                         },
                         {
                             "type": "paragraph",
                             "text": "To investigate this effect at the neuronal population level, we performed canonical discriminant analysis (CDA; see Materials and methods), which allowed reducing the neuronal state space (N-space) to its most informative dimensions. <a href=\"#fig2\">Figure 2c and 2d</a> show the first three canonical variables during the cue and grasp epoch, respectively. In them, each marker represents the neuronal state of an individual trial in the AIP population (see <a href=\"#fig1\">Figure 1b</a> for symbol and colour code). In this N-space of AIP, we found objects to be separated based on their shape. Independent of the way the objects were grasped, the neural space accurately differentiated horizontal cylinders (black), vertical cylinders (green), rings (magenta), spheres (orange), cubes (blue), and bars (black) (see <a href=\"#media3\">Video 3</a> for an animated 3D view of a typical N-space)."
                         },
                         {
-                            "type": "video",
-                            "doi": "10.7554/eLife.15278.011",
-                            "id": "media4",
-                            "label": "Video 4.",
-                            "title": "Population coding in F5.",
-                            "caption": [
+                            "type": "figure",
+                            "assets": [
                                 {
-                                    "type": "paragraph",
-                                    "text": "Joint angles and the population activity of F5 were recorded together and for visual display reduced to their most informative dimensions (component 1 and 2). The video displays the evolving hand kinematics (top, left) and neuronal population activity (bottom, left) during three subsequent grasping actions. Arrows point at these trials in the J- (top, right) and N-space (bottom, right). The audio-track plays the spiking activity of an individual F5 neuron, which is highlighted in the raster plot in blue."
+                                    "type": "video",
+                                    "doi": "10.7554/eLife.15278.011",
+                                    "id": "media4",
+                                    "label": "Video 4.",
+                                    "title": "Population coding in F5.",
+                                    "caption": [
+                                        {
+                                            "type": "paragraph",
+                                            "text": "Joint angles and the population activity of F5 were recorded together and for visual display reduced to their most informative dimensions (component 1 and 2). The video displays the evolving hand kinematics (top, left) and neuronal population activity (bottom, left) during three subsequent grasping actions. Arrows point at these trials in the J- (top, right) and N-space (bottom, right). The audio-track plays the spiking activity of an individual F5 neuron, which is highlighted in the raster plot in blue."
+                                        }
+                                    ],
+                                    "sources": [
+                                        {
+                                            "mediaType": "video/mp4; codecs=\"avc1.42E01E, mp4a.40.2\"",
+                                            "uri": "https://static-movie-usa.glencoesoftware.com/mp4/10.7554/774/b24b6a5e3f0d60d41388aad7d9fa00d2e5ec9a92/elife-15278-media4.mp4"
+                                        },
+                                        {
+                                            "mediaType": "video/webm; codecs=\"vp8.0, vorbis\"",
+                                            "uri": "https://static-movie-usa.glencoesoftware.com/webm/10.7554/774/b24b6a5e3f0d60d41388aad7d9fa00d2e5ec9a92/elife-15278-media4.webm"
+                                        },
+                                        {
+                                            "mediaType": "video/ogg; codecs=\"theora, vorbis\"",
+                                            "uri": "https://static-movie-usa.glencoesoftware.com/ogv/10.7554/774/b24b6a5e3f0d60d41388aad7d9fa00d2e5ec9a92/elife-15278-media4.ogv"
+                                        }
+                                    ],
+                                    "image": "https://static-movie-usa.glencoesoftware.com/jpg/10.7554/774/b24b6a5e3f0d60d41388aad7d9fa00d2e5ec9a92/elife-15278-media4.jpg",
+                                    "width": 1920,
+                                    "height": 1080
                                 }
-                            ],
-                            "sources": [
-                                {
-                                    "mediaType": "video/mp4; codecs=\"avc1.42E01E, mp4a.40.2\"",
-                                    "uri": "https://static-movie-usa.glencoesoftware.com/mp4/10.7554/774/b24b6a5e3f0d60d41388aad7d9fa00d2e5ec9a92/elife-15278-media4.mp4"
-                                },
-                                {
-                                    "mediaType": "video/webm; codecs=\"vp8.0, vorbis\"",
-                                    "uri": "https://static-movie-usa.glencoesoftware.com/webm/10.7554/774/b24b6a5e3f0d60d41388aad7d9fa00d2e5ec9a92/elife-15278-media4.webm"
-                                },
-                                {
-                                    "mediaType": "video/ogg; codecs=\"theora, vorbis\"",
-                                    "uri": "https://static-movie-usa.glencoesoftware.com/ogv/10.7554/774/b24b6a5e3f0d60d41388aad7d9fa00d2e5ec9a92/elife-15278-media4.ogv"
-                                }
-                            ],
-                            "image": "https://static-movie-usa.glencoesoftware.com/jpg/10.7554/774/b24b6a5e3f0d60d41388aad7d9fa00d2e5ec9a92/elife-15278-media4.jpg",
-                            "width": 1920,
-                            "height": 1080
+                            ]
                         },
                         {
                             "type": "paragraph",
@@ -470,36 +505,45 @@
                             "text": "We found further indicators for this hypothesis when focusing on objects that caused, in contrast to the abstract objects, equal visual stimuli but different motor responses. To create such a scenario, monkeys were trained to perform power or precision grips on the same object, the handle (condition 00 and 01). Although both conditions were located most distantly in the kinematic or joint-angle (J-) space in both monkeys (see <a href=\"#fig4\" >Figure 4e</a> and <a href=\"#fig5\">5a</a>), they were located closest to each other in the N-space of AIP (see <a href=\"#fig2\">Figure 2e–f</a>), clearly implying a visual representation of the handle. Statistical analysis revealed, however, that both conditions (00, 01) slightly increased their neural distance (<a href=\"#fig2\" >Figure 2d</a>) towards planning and movement execution, as expressed by an average of 21% and 16% of significantly tuned AIP neurons in monkey Z and M (ANOVA tested in grasp epoch, p&lt;0.01). These observations suggest a visual representation of the handle and a further differentiation of its parts that are relevant for grasping."
                         },
                         {
-                            "type": "image",
-                            "doi": "10.7554/eLife.15278.012",
-                            "id": "fig4",
-                            "label": "Figure 4.",
-                            "title": "Motor planning and execution in F5.",
-                            "caption": [
+                            "type": "figure",
+                            "assets": [
                                 {
-                                    "type": "paragraph",
-                                    "text": "(<b>a</b>) Example neuron of F5, responding to all 50 task conditions (colour code as in <a href=\"#fig1\">Figure 1b</a>). (<b>b</b>) Modulation depth plots (as in <a href=\"#fig2\">Figure 2b</a>) in the planning and grasp epoch. (<b>c</b>) Recorded kinematics was used to drive a monkey-specific musculoskeletal model that allowed extracting 27 DOF. (<b>d</b>) A selection of DOFs is presented for three sequential grips: thumb and index finger, wrist, elbow, and shoulder. (<b>e</b>) PCA performed on the J-space during the hold epoch allowed visualizing the grip types of all conditions and trials of one recording session (showing 1<sup>st</sup> and 2<sup>nd</sup> PCA component). (<b>f–g</b>) Raster plot shows the spiking activity of F5-neurons recorded from a single FMA (F5-ventral). (<b>h</b>) Mean firing rates during the grasp epoch (N-space) were transformed with CDA to reduce and visualize the multidimensional representation of the complete F5 population (N = 119, simultaneously recorded). In d,g, example trials t1, t2 and t3 are highlighted in yellow (hold epoch in d, grasp epoch in g) and marked with arrows in e,h. (<b>i</b>) Neuronal state space evolution shows the course of the task determined by the CDA. e,h and i: For visual comparison the N-space was aligned to the J-space using PCRA; Symbols and colours as in <a href=\"#fig1\">Figure 1b</a>, symbol size corresponds to object size."
+                                    "type": "image",
+                                    "doi": "10.7554/eLife.15278.012",
+                                    "id": "fig4",
+                                    "label": "Figure 4.",
+                                    "title": "Motor planning and execution in F5.",
+                                    "caption": [
+                                        {
+                                            "type": "paragraph",
+                                            "text": "(<b>a</b>) Example neuron of F5, responding to all 50 task conditions (colour code as in <a href=\"#fig1\">Figure 1b</a>). (<b>b</b>) Modulation depth plots (as in <a href=\"#fig2\">Figure 2b</a>) in the planning and grasp epoch. (<b>c</b>) Recorded kinematics was used to drive a monkey-specific musculoskeletal model that allowed extracting 27 DOF. (<b>d</b>) A selection of DOFs is presented for three sequential grips: thumb and index finger, wrist, elbow, and shoulder. (<b>e</b>) PCA performed on the J-space during the hold epoch allowed visualizing the grip types of all conditions and trials of one recording session (showing 1<sup>st</sup> and 2<sup>nd</sup> PCA component). (<b>f–g</b>) Raster plot shows the spiking activity of F5-neurons recorded from a single FMA (F5-ventral). (<b>h</b>) Mean firing rates during the grasp epoch (N-space) were transformed with CDA to reduce and visualize the multidimensional representation of the complete F5 population (N = 119, simultaneously recorded). In d,g, example trials t1, t2 and t3 are highlighted in yellow (hold epoch in d, grasp epoch in g) and marked with arrows in e,h. (<b>i</b>) Neuronal state space evolution shows the course of the task determined by the CDA. e,h and i: For visual comparison the N-space was aligned to the J-space using PCRA; Symbols and colours as in <a href=\"#fig1\">Figure 1b</a>, symbol size corresponds to object size."
+                                        }
+                                    ],
+                                    "alt": "",
+                                    "uri": "https://elife-publishing-cdn.s3.amazonaws.com/15278/elife-15278-fig4-v1.jpg"
                                 }
-                            ],
-                            "alt": "",
-                            "uri": "https://elife-publishing-cdn.s3.amazonaws.com/15278/elife-15278-fig4-v1.jpg"
+                            ]
                         },
                         {
-                            "type": "image",
-                            "doi": "10.7554/eLife.15278.013",
-                            "id": "fig5",
-                            "label": "Figure 5.",
-                            "title": "Hierarchical cluster analysis of the F5 population.",
-                            "caption": [
+                            "type": "figure",
+                            "assets": [
                                 {
-                                    "type": "paragraph",
-                                    "text": "(<b>a</b>) Dendrogram of J-space (27 DOF). (<b>b–c</b>) Dendrogram of F5’s complete N-space during the plan and the grasp epoch. Condition numbers as in <a href=\"#fig1\">Figure 1b</a>. A selection of grip types and their corresponding objects are illustrated. In a-c, similar motor characteristics are highlighted with coloured boxes (see text). (<b>b</b>,<b>c</b>) is based on the complete F5 population (N = 119, simultaneously recorded neurons), in contrast to its illustration in the reduced neural space in <a href=\"#fig4\">Figure 4</a>. See <a href=\"#fig5s1\">Figure 5—figure supplement 1–2</a> for the averaged population results across all sessions of animal M and animal Z, respectively."
-                                }
-                            ],
-                            "alt": "",
-                            "uri": "https://elife-publishing-cdn.s3.amazonaws.com/15278/elife-15278-fig5-v1.jpg",
-                            "supplements": [
+                                    "type": "image",
+                                    "doi": "10.7554/eLife.15278.013",
+                                    "id": "fig5",
+                                    "label": "Figure 5.",
+                                    "title": "Hierarchical cluster analysis of the F5 population.",
+                                    "caption": [
+                                        {
+                                            "type": "paragraph",
+                                            "text": "(<b>a</b>) Dendrogram of J-space (27 DOF). (<b>b–c</b>) Dendrogram of F5’s complete N-space during the plan and the grasp epoch. Condition numbers as in <a href=\"#fig1\">Figure 1b</a>. A selection of grip types and their corresponding objects are illustrated. In a-c, similar motor characteristics are highlighted with coloured boxes (see text). (<b>b</b>,<b>c</b>) is based on the complete F5 population (N = 119, simultaneously recorded neurons), in contrast to its illustration in the reduced neural space in <a href=\"#fig4\">Figure 4</a>. See <a href=\"#fig5s1\">Figure 5—figure supplement 1–2</a> for the averaged population results across all sessions of animal M and animal Z, respectively."
+                                        }
+                                    ],
+                                    "alt": "",
+                                    "uri": "https://elife-publishing-cdn.s3.amazonaws.com/15278/elife-15278-fig5-v1.jpg"
+                                },
                                 {
+                                    "type": "image",
                                     "doi": "10.7554/eLife.15278.014",
                                     "id": "fig5s1",
                                     "label": "Figure 5—figure supplement 1.",
@@ -514,6 +558,7 @@
                                     "uri": "https://elife-publishing-cdn.s3.amazonaws.com/15278/elife-15278-fig5-figsupp1-v1.jpg"
                                 },
                                 {
+                                    "type": "image",
                                     "doi": "10.7554/eLife.15278.015",
                                     "id": "fig5s2",
                                     "label": "Figure 5—figure supplement 2.",
@@ -584,21 +629,25 @@
                             "text": "The J-space demonstrated a high variability of hand configurations across conditions and closely reflected the hand’s wrist orientation (1<sup>st</sup> principal component) and hand aperture (2<sup>nd</sup> principal component). Furthermore, the reduced J-space allowed observing the most relevant kinematic observations with respect to the presented objects, as shown in <a href=\"#fig4\">Figure 4e</a> and <a href=\"#fig5\">5a</a>: (1) Objects of small sizes such as the small rings (condition ID 21, 22), spheres (11,41,42) and cubes (31, 32) were grasped similarly (index finger and thumb) and thus were located close to each other in the reduced and the complete J-space. (2) Vertical cylinders and big rings (16, 23–26, 71–76) were enclosed with the digits and required 90° of wrist rotation. Therefore, these grips are located close to each other in J-space. (3) All abstract objects (91–96) shared a compact cluster and demonstrated their similarity in J-space. (4) Precision (00) and power grips (01) performed on the same handle required highly different hand configurations and were located distant in J-space. (5) The highest separation of hand configuration across objects of similar shape was evoked from the rings that were grasped with precision (21, 22) or power grips (23–26). Small rings and big rings are therefore separated in the J-space."
                         },
                         {
-                            "type": "image",
-                            "doi": "10.7554/eLife.15278.016",
-                            "id": "fig6",
-                            "label": "Figure 6.",
-                            "title": "Motor execution in M1.",
-                            "caption": [
+                            "type": "figure",
+                            "assets": [
                                 {
-                                    "type": "paragraph",
-                                    "text": "(<b>a</b>) Example neuron of M1 in monkey M, curves show firing rates separately for all 50 task conditions (colour code as in <a href=\"#fig1\" >Figure 1b</a>). (<b>b</b>) Modulation depth plots (as in <a href=\"#fig4\">Figure 4b</a>) for the planning and hold epoch of the example neuron in a. (<b>c</b>) Population activity from the reduced and (<b>d</b>) the complete kinematic space (J-space) is compared to (<b>e</b>) the reduced and (<b>f</b>) the complete neural population space (N-space) of M1 during the hold epoch of the task (N = 151, simultaneously recorded). In e, N-space was aligned to J-space with PCRA; symbols and colours as in <a href=\"#fig1\">Figure 1b</a>; symbol size corresponds to object size. Arrows t1-t3 highlight the example trials of <a href=\"#fig4\">Figure 4d,g</a>. See <a href=\"#fig6s1\">Figure 6—figure supplement 1</a>–<a href=\"#fig6s2\">2</a> for the averaged population results of animal M and animal Z, respectively."
-                                }
-                            ],
-                            "alt": "",
-                            "uri": "https://elife-publishing-cdn.s3.amazonaws.com/15278/elife-15278-fig6-v1.jpg",
-                            "supplements": [
+                                    "type": "image",
+                                    "doi": "10.7554/eLife.15278.016",
+                                    "id": "fig6",
+                                    "label": "Figure 6.",
+                                    "title": "Motor execution in M1.",
+                                    "caption": [
+                                        {
+                                            "type": "paragraph",
+                                            "text": "(<b>a</b>) Example neuron of M1 in monkey M, curves show firing rates separately for all 50 task conditions (colour code as in <a href=\"#fig1\" >Figure 1b</a>). (<b>b</b>) Modulation depth plots (as in <a href=\"#fig4\">Figure 4b</a>) for the planning and hold epoch of the example neuron in a. (<b>c</b>) Population activity from the reduced and (<b>d</b>) the complete kinematic space (J-space) is compared to (<b>e</b>) the reduced and (<b>f</b>) the complete neural population space (N-space) of M1 during the hold epoch of the task (N = 151, simultaneously recorded). In e, N-space was aligned to J-space with PCRA; symbols and colours as in <a href=\"#fig1\">Figure 1b</a>; symbol size corresponds to object size. Arrows t1-t3 highlight the example trials of <a href=\"#fig4\">Figure 4d,g</a>. See <a href=\"#fig6s1\">Figure 6—figure supplement 1</a>–<a href=\"#fig6s2\">2</a> for the averaged population results of animal M and animal Z, respectively."
+                                        }
+                                    ],
+                                    "alt": "",
+                                    "uri": "https://elife-publishing-cdn.s3.amazonaws.com/15278/elife-15278-fig6-v1.jpg"
+                                },
                                 {
+                                    "type": "image",
                                     "doi": "10.7554/eLife.15278.017",
                                     "id": "fig6s1",
                                     "label": "Figure 6—figure supplement 1.",
@@ -613,6 +662,7 @@
                                     "uri": "https://elife-publishing-cdn.s3.amazonaws.com/15278/elife-15278-fig6-figsupp1-v1.jpg"
                                 },
                                 {
+                                    "type": "image",
                                     "doi": "10.7554/eLife.15278.018",
                                     "id": "fig6s2",
                                     "label": "Figure 6—figure supplement 2.",
@@ -633,19 +683,24 @@
                             "text": "Importantly, the majority of kinematic observations were also found in the N-space of F5 during motor execution (<a href=\"#fig4\">Figure 4h</a>). In contrast to AIP, conditions of different visual stimuli but equal grips were located close to each other in the neural space (observation 1–3), whereas conditions of similar visual stimuli but different motor responses caused a separation (observation 4–5). These results were further supported by the high similarity between the J- (<a href=\"#fig4\">Figure 4e</a>) and N-space (<a href=\"#fig4\">Figure 4h</a>) during movement execution (for quantification see section ‘Numerical comparison’ and <a href=\"#fig7\">Figure 7</a>). The findings demonstrate clearly different coding properties with respect to AIP and reveal a primary motor role of F5 during movement execution. CDA and PRCA were further used to visualize the evolution of the F5 population during the task. Similar to observations at the single unit level (see <a href=\"#fig4\" >Figure 4a–b</a>), the F5 population demonstrated first modulations and expressions of the upcoming motor actions already during motor preparation."
                         },
                         {
-                            "type": "image",
-                            "doi": "10.7554/eLife.15278.019",
-                            "id": "fig7",
-                            "label": "Figure 7.",
-                            "title": "Motor similarity measure.",
-                            "caption": [
+                            "type": "figure",
+                            "assets": [
                                 {
-                                    "type": "paragraph",
-                                    "text": "Boxplots illustrating similarity between the population coding of J-space and N-space during the hold epoch of the task, as provided by the PCRA analysis. Left: results in AIP, F5, and M1 across all 10 recording sessions for monkey Z. Right: same for monkey M. Red horizontal lines indicate median value, boxes show lower and upper quartile of data (25%–75%), and whiskers indicate maximum and minimal values."
+                                    "type": "image",
+                                    "doi": "10.7554/eLife.15278.019",
+                                    "id": "fig7",
+                                    "label": "Figure 7.",
+                                    "title": "Motor similarity measure.",
+                                    "caption": [
+                                        {
+                                            "type": "paragraph",
+                                            "text": "Boxplots illustrating similarity between the population coding of J-space and N-space during the hold epoch of the task, as provided by the PCRA analysis. Left: results in AIP, F5, and M1 across all 10 recording sessions for monkey Z. Right: same for monkey M. Red horizontal lines indicate median value, boxes show lower and upper quartile of data (25%–75%), and whiskers indicate maximum and minimal values."
+                                        }
+                                    ],
+                                    "alt": "",
+                                    "uri": "https://elife-publishing-cdn.s3.amazonaws.com/15278/elife-15278-fig7-v1.jpg"
                                 }
-                            ],
-                            "alt": "",
-                            "uri": "https://elife-publishing-cdn.s3.amazonaws.com/15278/elife-15278-fig7-v1.jpg"
+                            ]
                         },
                         {
                             "type": "paragraph",
@@ -697,49 +752,59 @@
                             "text": "For visualizing the communication of features between areas, we correlated the dynamic modulations on a trial-basis (see Materials and methods). In this, the elicited modulation patterns of each neuronal population were correlated in a pair-wise fashion (AIP vs. F5, F5 vs. M1, AIP vs. M1) across time (<a href=\"#fig8\">Figure 8</a>, <a href=\"#media5\">Video 5</a>)."
                         },
                         {
-                            "type": "image",
-                            "doi": "10.7554/eLife.15278.020",
-                            "id": "fig8",
-                            "label": "Figure 8.",
-                            "title": "Temporal feature correlation between areas.",
-                            "caption": [
+                            "type": "figure",
+                            "assets": [
                                 {
-                                    "type": "paragraph",
-                                    "text": "The distance (in firing rate) between all possible trial-pairs was computed separately in the N-space of area AIP, F5 and M1. The resulting distance maps thus represent the neuronal modulations of a population (e.g. AIP) for a specific time t. (Right) Example maps show the neural modulation patterns at key times t1 (object presentation) and t2 (during hold). Warm colours: long neural distances, cool colours: short neural distances. (Left) Correlating the neuronal patterns across time (Spearman’s r) allowed visualizing the similarity between the areas for animal Z (top row) and animal M (bottom row). For computation, spiking activity was aligned to the beginning of the cue and grasping onset. For an animation of the feature code correlation see <a href=\"#media5\">Video 5</a>."
+                                    "type": "image",
+                                    "doi": "10.7554/eLife.15278.020",
+                                    "id": "fig8",
+                                    "label": "Figure 8.",
+                                    "title": "Temporal feature correlation between areas.",
+                                    "caption": [
+                                        {
+                                            "type": "paragraph",
+                                            "text": "The distance (in firing rate) between all possible trial-pairs was computed separately in the N-space of area AIP, F5 and M1. The resulting distance maps thus represent the neuronal modulations of a population (e.g. AIP) for a specific time t. (Right) Example maps show the neural modulation patterns at key times t1 (object presentation) and t2 (during hold). Warm colours: long neural distances, cool colours: short neural distances. (Left) Correlating the neuronal patterns across time (Spearman’s r) allowed visualizing the similarity between the areas for animal Z (top row) and animal M (bottom row). For computation, spiking activity was aligned to the beginning of the cue and grasping onset. For an animation of the feature code correlation see <a href=\"#media5\">Video 5</a>."
+                                        }
+                                    ],
+                                    "alt": "",
+                                    "uri": "https://elife-publishing-cdn.s3.amazonaws.com/15278/elife-15278-fig8-v1.jpg"
                                 }
-                            ],
-                            "alt": "",
-                            "uri": "https://elife-publishing-cdn.s3.amazonaws.com/15278/elife-15278-fig8-v1.jpg"
+                            ]
                         },
                         {
-                            "type": "video",
-                            "doi": "10.7554/eLife.15278.021",
-                            "id": "media5",
-                            "label": "Video 5.",
-                            "title": "Temporal feature correlation between areas.",
-                            "caption": [
+                            "type": "figure",
+                            "assets": [
                                 {
-                                    "type": "paragraph",
-                                    "text": "The neural distance (in firing rate) between all pairs of trials within a neuronal population provided a modulation pattern between trials (top) for area AIP, F5, and M1. Correlating these neuronal patterns for each moment in the task allowed visualizing the coding similarity between pairs of areas across time (AIP-F5 in green, AIP-M1 in cyan, and F5-M1 in magenta). Feature correlations are based on all trials, whereas the presented object and corresponding grasp movement are shown for an example trial."
+                                    "type": "video",
+                                    "doi": "10.7554/eLife.15278.021",
+                                    "id": "media5",
+                                    "label": "Video 5.",
+                                    "title": "Temporal feature correlation between areas.",
+                                    "caption": [
+                                        {
+                                            "type": "paragraph",
+                                            "text": "The neural distance (in firing rate) between all pairs of trials within a neuronal population provided a modulation pattern between trials (top) for area AIP, F5, and M1. Correlating these neuronal patterns for each moment in the task allowed visualizing the coding similarity between pairs of areas across time (AIP-F5 in green, AIP-M1 in cyan, and F5-M1 in magenta). Feature correlations are based on all trials, whereas the presented object and corresponding grasp movement are shown for an example trial."
+                                        }
+                                    ],
+                                    "sources": [
+                                        {
+                                            "mediaType": "video/mp4; codecs=\"avc1.42E01E, mp4a.40.2\"",
+                                            "uri": "https://static-movie-usa.glencoesoftware.com/mp4/10.7554/774/b24b6a5e3f0d60d41388aad7d9fa00d2e5ec9a92/elife-15278-media5.mp4"
+                                        },
+                                        {
+                                            "mediaType": "video/webm; codecs=\"vp8.0, vorbis\"",
+                                            "uri": "https://static-movie-usa.glencoesoftware.com/webm/10.7554/774/b24b6a5e3f0d60d41388aad7d9fa00d2e5ec9a92/elife-15278-media5.webm"
+                                        },
+                                        {
+                                            "mediaType": "video/ogg; codecs=\"theora, vorbis\"",
+                                            "uri": "https://static-movie-usa.glencoesoftware.com/ogv/10.7554/774/b24b6a5e3f0d60d41388aad7d9fa00d2e5ec9a92/elife-15278-media5.ogv"
+                                        }
+                                    ],
+                                    "image": "https://static-movie-usa.glencoesoftware.com/jpg/10.7554/774/b24b6a5e3f0d60d41388aad7d9fa00d2e5ec9a92/elife-15278-media5.jpg",
+                                    "width": 1920,
+                                    "height": 1078
                                 }
-                            ],
-                            "sources": [
-                                {
-                                    "mediaType": "video/mp4; codecs=\"avc1.42E01E, mp4a.40.2\"",
-                                    "uri": "https://static-movie-usa.glencoesoftware.com/mp4/10.7554/774/b24b6a5e3f0d60d41388aad7d9fa00d2e5ec9a92/elife-15278-media5.mp4"
-                                },
-                                {
-                                    "mediaType": "video/webm; codecs=\"vp8.0, vorbis\"",
-                                    "uri": "https://static-movie-usa.glencoesoftware.com/webm/10.7554/774/b24b6a5e3f0d60d41388aad7d9fa00d2e5ec9a92/elife-15278-media5.webm"
-                                },
-                                {
-                                    "mediaType": "video/ogg; codecs=\"theora, vorbis\"",
-                                    "uri": "https://static-movie-usa.glencoesoftware.com/ogv/10.7554/774/b24b6a5e3f0d60d41388aad7d9fa00d2e5ec9a92/elife-15278-media5.ogv"
-                                }
-                            ],
-                            "image": "https://static-movie-usa.glencoesoftware.com/jpg/10.7554/774/b24b6a5e3f0d60d41388aad7d9fa00d2e5ec9a92/elife-15278-media5.jpg",
-                            "width": 1920,
-                            "height": 1078
+                            ]
                         },
                         {
                             "type": "paragraph",
@@ -3707,19 +3772,24 @@
                 ]
             },
             {
-                "type": "image",
-                "id": "fig9",
-                "doi": "10.7554/eLife.15278.022",
-                "label": "Author response image 1.",
-                "title": "Visualization of (<b>a</b>) reduced and (<b>b</b>) complete population show perfectly overlapping clusters of small (black triangles, 51-54) and large cylinders (red triangles, 55-56) in the early cue phase (100 ms after cue onset).",
-                "caption": [
+                "type": "figure",
+                "assets": [
                     {
-                        "type": "paragraph",
-                        "text": "These conditions start separating over time as shown in <a href=\"#fig2\">Figure 2c,d</a> and <a href=\"#fig2\">Figure 2e,f</a>."
+                        "type": "image",
+                        "id": "fig9",
+                        "doi": "10.7554/eLife.15278.022",
+                        "label": "Author response image 1.",
+                        "title": "Visualization of (<b>a</b>) reduced and (<b>b</b>) complete population show perfectly overlapping clusters of small (black triangles, 51-54) and large cylinders (red triangles, 55-56) in the early cue phase (100 ms after cue onset).",
+                        "caption": [
+                            {
+                                "type": "paragraph",
+                                "text": "These conditions start separating over time as shown in <a href=\"#fig2\">Figure 2c,d</a> and <a href=\"#fig2\">Figure 2e,f</a>."
+                            }
+                        ],
+                        "alt": "",
+                        "uri": "https://elife-publishing-cdn.s3.amazonaws.com/15278/elife-15278-resp-fig1-v1.jpg"
                     }
-                ],
-                "alt": "",
-                "uri": "https://elife-publishing-cdn.s3.amazonaws.com/15278/elife-15278-resp-fig1-v1.jpg"
+                ]
             },
             {
                 "type": "paragraph",
