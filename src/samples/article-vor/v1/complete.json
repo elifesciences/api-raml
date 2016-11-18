@@ -1507,6 +1507,44 @@
             "text": "Animal subjects: If there were animal subjects involved in the study the approval number for the research along with protocol approval would be listed here."
         }
     ],
+    "funding": {
+        "awards": [
+            {
+                "id": "par-1",
+                "source": {
+                    "funderId": "10.13039/501100001659",
+                    "name": [
+                        "Deutsche Forschungsgemeinschaft"
+                    ]
+                },
+                "awardId": "SCHE 1575/3-1",
+                "recipients": [
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "Lee R Berger",
+                            "index": "Berger, Lee R"
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "par-3",
+                "source": {
+                    "name": [
+                        "Bundesministerium für Bildung und Forschung"
+                    ]
+                },
+                "recipients": [
+                    {
+                        "type": "group",
+                        "name": "Naledi group"
+                    }
+                ]
+            }
+        ],
+        "statement": "The funders had no role in study design, data collection and interpretation, or the decision to submit the work for publication."
+    },
     "decisionLetter": {
         "doi": "10.7554/eLife.09560.030",
         "description": [
