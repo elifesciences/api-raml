@@ -1,0 +1,15 @@
+$schema: http://json-schema.org/draft-04/schema#
+title: Reviewer
+type: object
+allOf:
+  - $ref: person.v1.yaml
+  - properties:
+        affiliations:
+            type: array
+            items:
+                $ref: place.v1.yaml
+        role:
+            type: string
+            minLength: 1
+    required:
+      - role

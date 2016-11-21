@@ -687,6 +687,31 @@
             ]
         }
     ],
+    "reviewers": [
+        {
+            "name": {
+                "preferred": "Marianne E Bronner",
+                "index": "Bronner, Marianne E"
+            },
+            "role": "Reviewing editor",
+            "affiliations": [
+                {
+                    "name": [
+                        "California Institute of Technology"
+                    ],
+                    "address": {
+                        "formatted": [
+                            "United States"
+                        ],
+                        "components": {
+                            "country": "United States"
+                        }
+                    }
+                }
+            ],
+            "orcid": "0000-0003-4274-1862"
+        }
+    ],
     "keywords": [
         "Botryllus schlosseri",
         "tunicate",
