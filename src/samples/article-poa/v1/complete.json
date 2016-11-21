@@ -90,6 +90,31 @@
             "email": "kuriyan@berkeley.edu"
         }
     ],
+    "reviewers": [
+        {
+            "name": {
+                "preferred": "Volker Dötsch",
+                "index": "Dötsch, Volker"
+            },
+            "role": "Reviewing editor",
+            "affiliations": [
+                {
+                    "name": [
+                        "Goethe University"
+                    ],
+                    "address": {
+                        "formatted": [
+                            "Germany"
+                        ],
+                        "components": {
+                            "country": "Germany"
+                        }
+                    }
+                }
+            ],
+            "orcid": "0000-0001-5720-212X"
+        }
+    ],
     "pdf": "https://elifesciences.org/content/5/e14107.pdf",
     "subjects": [
         {

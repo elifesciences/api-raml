@@ -237,6 +237,53 @@
             "onBehalfOf": "on behalf of An Organisation"
         }
     ],
+    "reviewers": [
+        {
+            "name": {
+                "preferred": "Johannes Krause",
+                "index": "Krause, Johannes"
+            },
+            "role": "Reviewing editor",
+            "affiliations": [
+                {
+                    "name": [
+                        "University of Tübingen"
+                    ],
+                    "address": {
+                        "formatted": [
+                            "Germany"
+                        ],
+                        "components": {
+                            "country": "Germany"
+                        }
+                    }
+                }
+            ],
+            "orcid": "0000-0001-5475-4690"
+        },
+        {
+            "name": {
+                "preferred": "Nicholas J Conard",
+                "index": "Conard, Nicholas J"
+            },
+            "role": "Reviewing editor",
+            "affiliations": [
+                {
+                    "name": [
+                        "University of Tübingen"
+                    ],
+                    "address": {
+                        "formatted": [
+                            "Germany"
+                        ],
+                        "components": {
+                            "country": "Germany"
+                        }
+                    }
+                }
+            ]
+        }
+    ],
     "pdf": "https://elifesciences.org/content/4/e09560.pdf",
     "subjects": [
         {
