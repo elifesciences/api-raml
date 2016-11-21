@@ -304,7 +304,7 @@
                                                     "affiliations": {
                                                         "type": "array",
                                                         "items": {
-                                                            "$ref": "#/allOf/0/allOf/1/properties/relatedArticles/items/oneOf/2/allOf/1/properties/journal"
+                                                            "$ref": "#/allOf/0/allOf/1/properties/reviewers/items/allOf/1/properties/affiliations/items"
                                                         }
                                                     },
                                                     "competingInterests": {
@@ -409,39 +409,7 @@
                                                     {
                                                         "allOf": [
                                                             {
-                                                                "$schema": "http://json-schema.org/draft-04/schema#",
-                                                                "title": "Person",
-                                                                "type": "object",
-                                                                "properties": {
-                                                                    "name": {
-                                                                        "title": "Name",
-                                                                        "type": "object",
-                                                                        "properties": {
-                                                                            "preferred": {
-                                                                                "title": "Preferred name",
-                                                                                "description": "This is generally the name that is used by the person for English-language publications.\n\nFor example:\n  - Randy Schekman\n  - K. VijayRaghavan\n  - Li Wenhui\n",
-                                                                                "type": "string",
-                                                                                "minLength": 1
-                                                                            },
-                                                                            "index": {
-                                                                                "title": "Index name",
-                                                                                "description": "This is the name that should be used for indexing people.\n\nFor example:\n  - Schekman, Randy\n  - VijayRaghavan, Krishnaswamy\n  - Li Wenhui\n"
-                                                                            }
-                                                                        },
-                                                                        "required": [
-                                                                            "preferred",
-                                                                            "index"
-                                                                        ]
-                                                                    },
-                                                                    "orcid": {
-                                                                        "title": "ORCID",
-                                                                        "type": "string",
-                                                                        "pattern": "^[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{3}[0-9X]$"
-                                                                    }
-                                                                },
-                                                                "required": [
-                                                                    "name"
-                                                                ]
+                                                                "$ref": "#/allOf/0/allOf/1/properties/reviewers/items/allOf/0"
                                                             },
                                                             {
                                                                 "properties": {
@@ -505,7 +473,7 @@
                                                                             "people": {
                                                                                 "type": "array",
                                                                                 "items": {
-                                                                                    "$ref": "#/allOf/0/allOf/1/properties/authors/items/oneOf/1/allOf/1/oneOf/0/allOf/0"
+                                                                                    "$ref": "#/allOf/0/allOf/1/properties/reviewers/items/allOf/0"
                                                                                 },
                                                                                 "minItems": 2
                                                                             }
@@ -526,7 +494,7 @@
                                                                                 "additionalProperties": {
                                                                                     "type": "array",
                                                                                     "items": {
-                                                                                        "$ref": "#/allOf/0/allOf/1/properties/authors/items/oneOf/1/allOf/1/oneOf/0/allOf/0"
+                                                                                        "$ref": "#/allOf/0/allOf/1/properties/reviewers/items/allOf/0"
                                                                                     },
                                                                                     "minItems": 2
                                                                                 },
@@ -553,6 +521,118 @@
                                 ]
                             },
                             "minItems": 1
+                        },
+                        "reviewers": {
+                            "type": "array",
+                            "items": {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "title": "Reviewer",
+                                "type": "object",
+                                "allOf": [
+                                    {
+                                        "$schema": "http://json-schema.org/draft-04/schema#",
+                                        "title": "Person",
+                                        "type": "object",
+                                        "properties": {
+                                            "name": {
+                                                "title": "Name",
+                                                "type": "object",
+                                                "properties": {
+                                                    "preferred": {
+                                                        "title": "Preferred name",
+                                                        "description": "This is generally the name that is used by the person for English-language publications.\n\nFor example:\n  - Randy Schekman\n  - K. VijayRaghavan\n  - Li Wenhui\n",
+                                                        "type": "string",
+                                                        "minLength": 1
+                                                    },
+                                                    "index": {
+                                                        "title": "Index name",
+                                                        "description": "This is the name that should be used for indexing people.\n\nFor example:\n  - Schekman, Randy\n  - VijayRaghavan, Krishnaswamy\n  - Li Wenhui\n"
+                                                    }
+                                                },
+                                                "required": [
+                                                    "preferred",
+                                                    "index"
+                                                ]
+                                            },
+                                            "orcid": {
+                                                "title": "ORCID",
+                                                "type": "string",
+                                                "pattern": "^[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{3}[0-9X]$"
+                                            }
+                                        },
+                                        "required": [
+                                            "name"
+                                        ]
+                                    },
+                                    {
+                                        "properties": {
+                                            "affiliations": {
+                                                "type": "array",
+                                                "items": {
+                                                    "$schema": "http://json-schema.org/draft-04/schema#",
+                                                    "title": "Place",
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "id": {
+                                                            "title": "Google Place ID",
+                                                            "type": "string",
+                                                            "minLength": 1
+                                                        },
+                                                        "coordinates": {
+                                                            "type": "object",
+                                                            "properties": {
+                                                                "latitude": {
+                                                                    "type": "number",
+                                                                    "maximum": 90,
+                                                                    "minimum": -90
+                                                                },
+                                                                "longitude": {
+                                                                    "type": "number",
+                                                                    "maximum": 180,
+                                                                    "minimum": -180
+                                                                }
+                                                            },
+                                                            "required": [
+                                                                "latitude",
+                                                                "longitude"
+                                                            ]
+                                                        },
+                                                        "name": {
+                                                            "type": "array",
+                                                            "items": {
+                                                                "type": "string",
+                                                                "minLength": 1
+                                                            },
+                                                            "minItems": 1
+                                                        },
+                                                        "address": {
+                                                            "$ref": "#/allOf/0/allOf/1/properties/authors/items/oneOf/1/allOf/0/properties/postalAddresses/items"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "name"
+                                                    ],
+                                                    "dependencies": {
+                                                        "id": [
+                                                            "coordinates"
+                                                        ],
+                                                        "coordinates": [
+                                                            "address"
+                                                        ]
+                                                    }
+                                                }
+                                            },
+                                            "role": {
+                                                "type": "string",
+                                                "minLength": 1
+                                            }
+                                        },
+                                        "required": [
+                                            "role"
+                                        ]
+                                    }
+                                ]
+                            }
                         },
                         "relatedArticles": {
                             "type": "array",
@@ -690,57 +770,7 @@
                                                         "minLength": 1
                                                     },
                                                     "journal": {
-                                                        "$schema": "http://json-schema.org/draft-04/schema#",
-                                                        "title": "Place",
-                                                        "type": "object",
-                                                        "properties": {
-                                                            "id": {
-                                                                "title": "Google Place ID",
-                                                                "type": "string",
-                                                                "minLength": 1
-                                                            },
-                                                            "coordinates": {
-                                                                "type": "object",
-                                                                "properties": {
-                                                                    "latitude": {
-                                                                        "type": "number",
-                                                                        "maximum": 90,
-                                                                        "minimum": -90
-                                                                    },
-                                                                    "longitude": {
-                                                                        "type": "number",
-                                                                        "maximum": 180,
-                                                                        "minimum": -180
-                                                                    }
-                                                                },
-                                                                "required": [
-                                                                    "latitude",
-                                                                    "longitude"
-                                                                ]
-                                                            },
-                                                            "name": {
-                                                                "type": "array",
-                                                                "items": {
-                                                                    "type": "string",
-                                                                    "minLength": 1
-                                                                },
-                                                                "minItems": 1
-                                                            },
-                                                            "address": {
-                                                                "$ref": "#/allOf/0/allOf/1/properties/authors/items/oneOf/1/allOf/0/properties/postalAddresses/items"
-                                                            }
-                                                        },
-                                                        "required": [
-                                                            "name"
-                                                        ],
-                                                        "dependencies": {
-                                                            "id": [
-                                                                "coordinates"
-                                                            ],
-                                                            "coordinates": [
-                                                                "address"
-                                                            ]
-                                                        }
+                                                        "$ref": "#/allOf/0/allOf/1/properties/reviewers/items/allOf/1/properties/affiliations/items"
                                                     },
                                                     "authorLine": {
                                                         "description": "For example:\n  - Ian T Baldwin\n  - Randy Schekman, Mark Patterson\n  - Lee R Berger et al\n",

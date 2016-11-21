@@ -133,6 +133,30 @@
             ]
         }
     ],
+    "reviewers": [
+        {
+            "name": {
+                "preferred": "Sabine Kastner",
+                "index": "Kastner, Sabine"
+            },
+            "role": "Reviewing editor",
+            "affiliations": [
+                {
+                    "name": [
+                        "Princeton University"
+                    ],
+                    "address": {
+                        "formatted": [
+                            "United States"
+                        ],
+                        "components": {
+                            "country": "United States"
+                        }
+                    }
+                }
+            ]
+        }
+    ],
     "keywords": [
         "parietal cortex",
         "premotor cortex",
