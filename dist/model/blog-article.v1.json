@@ -9,9 +9,10 @@
             "type": "object",
             "properties": {
                 "id": {
-                    "description": "ID",
+                    "$schema": "http://json-schema.org/draft-04/schema#",
+                    "title": "eLife ID",
                     "type": "string",
-                    "minLength": 1
+                    "pattern": "^[a-z0-9-]+$"
                 },
                 "title": {
                     "description": "Title",
@@ -35,9 +36,7 @@
                         "type": "object",
                         "properties": {
                             "id": {
-                                "description": "ID",
-                                "type": "string",
-                                "minLength": 1
+                                "$ref": "#/allOf/0/properties/id"
                             },
                             "name": {
                                 "description": "Name",
@@ -235,11 +234,17 @@
                                                                             "title": "Source data URI",
                                                                             "type": "string",
                                                                             "format": "uri"
+                                                                        },
+                                                                        "filename": {
+                                                                            "title": "Filename",
+                                                                            "type": "string",
+                                                                            "pattern": "^[A-Za-z0-9_. ()-]+\\.[a-z0-9]+$"
                                                                         }
                                                                     },
                                                                     "required": [
                                                                         "mediaType",
-                                                                        "uri"
+                                                                        "uri",
+                                                                        "filename"
                                                                     ],
                                                                     "dependencies": {
                                                                         "caption": [

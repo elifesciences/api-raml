@@ -220,7 +220,7 @@ traits:
                 description: |
                     List of articles, sorted by date.
                 body:
-                    application/vnd.elife.articles-list+json;version=1:
+                    application/vnd.elife.article-list+json;version=1:
                         schema: !include model/article-list.v1.json
                         examples:
                             paginated:
@@ -289,6 +289,12 @@ traits:
                                 unpublishedComplete:
                                     displayName: PreviewComplete
                                     value: !include samples/article-vor/v1/unpublished-complete.json
+                                00569:
+                                    displayName: 00569
+                                    value: !include samples/article-vor/v1/00569.json
+                                15278:
+                                    displayName: 15278
+                                    value: !include samples/article-vor/v1/15278.json
 
         /versions:
             type:
@@ -912,6 +918,64 @@ traits:
                                 complete:
                                     displayName: Complete
                                     value: !include samples/podcast-episode/v1/complete.json
+
+/press-packages:
+    type: collection
+    description: |
+        Press packages
+    get:
+        description: |
+            Get a list of press packages, sorted by publication date.
+        is:
+          - paged: { resources: Press packages }
+          - subjected: { resources: Press packages }
+        responses:
+            200:
+                description: |
+                    List of press packages, sorted by publication date.
+                body:
+                    application/vnd.elife.press-package-list+json;version=1:
+                        schema: !include ../dist/model/press-package-list.v1.json
+                        examples:
+                            paginated:
+                                displayName: First page
+                                description: |
+                                    List is split over two pages.
+                                value: !include samples/press-package-list/v1/first-page.json
+                            empty:
+                                displayName: Empty list
+                                description: |
+                                    Demonstration of the list being empty (the first page will always return a valid result).
+                                value: !include samples/press-package-list/v1/empty.json
+
+    /{id}:
+        type:
+            item:
+                resource: Press package
+        description: |
+            Individual press package.
+        uriParameters:
+            id:
+                description: |
+                    Press package ID.
+                type: string
+        get:
+            description: |
+                Get a press package.
+            responses:
+                200:
+                    description: |
+                        Press package.
+                    body:
+                        application/vnd.elife.press-package+json;version=1:
+                            schema: !include ../dist/model/press-package.v1.json
+                            examples:
+                                minimum:
+                                    displayName: Minimum
+                                    value: !include samples/press-package/v1/minimum.json
+                                complete:
+                                    displayName: Complete
+                                    value: !include samples/press-package/v1/complete.json
 
 /recommendations/{type}/{id}:
     type: collection

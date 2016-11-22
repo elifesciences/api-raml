@@ -49,6 +49,10 @@ allOf:
             items:
                 $ref: author.v1.yaml
             minItems: 1
+        reviewers:
+            type: array
+            items:
+                $ref: reviewer.v1.yaml
         relatedArticles:
             type: array
             items:

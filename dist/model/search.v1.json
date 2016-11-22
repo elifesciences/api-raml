@@ -24,8 +24,10 @@
                                 "type": "object",
                                 "properties": {
                                     "id": {
+                                        "$schema": "http://json-schema.org/draft-04/schema#",
+                                        "title": "eLife ID",
                                         "type": "string",
-                                        "minLength": 1
+                                        "pattern": "^[a-z0-9-]+$"
                                     },
                                     "version": {
                                         "type": "integer",
@@ -189,10 +191,7 @@
                                             "doi": {
                                                 "$ref": "#/properties/items/items/oneOf/0/allOf/0/properties/doi"
                                             }
-                                        },
-                                        "required": [
-                                            "doi"
-                                        ]
+                                        }
                                     },
                                     "image": {
                                         "type": "object",
@@ -301,9 +300,7 @@
                                                 "type": "object",
                                                 "properties": {
                                                     "id": {
-                                                        "description": "ID",
-                                                        "type": "string",
-                                                        "minLength": 1
+                                                        "$ref": "#/properties/items/items/oneOf/0/allOf/0/properties/id"
                                                     },
                                                     "title": {
                                                         "description": "Title",
@@ -353,9 +350,7 @@
                                                 "type": "object",
                                                 "properties": {
                                                     "id": {
-                                                        "description": "ID",
-                                                        "type": "string",
-                                                        "minLength": 1
+                                                        "$ref": "#/properties/items/items/oneOf/0/allOf/0/properties/id"
                                                     },
                                                     "title": {
                                                         "description": "Title",
@@ -401,9 +396,7 @@
                                                                     {
                                                                         "properties": {
                                                                             "id": {
-                                                                                "title": "ID",
-                                                                                "type": "string",
-                                                                                "minLength": 1
+                                                                                "$ref": "#/properties/items/items/oneOf/0/allOf/0/properties/id"
                                                                             },
                                                                             "type": {
                                                                                 "title": "Type",
@@ -467,9 +460,7 @@
                                                 "type": "object",
                                                 "properties": {
                                                     "id": {
-                                                        "description": "ID",
-                                                        "type": "string",
-                                                        "minLength": 1
+                                                        "$ref": "#/properties/items/items/oneOf/0/allOf/0/properties/id"
                                                     },
                                                     "title": {
                                                         "description": "Title",
@@ -522,9 +513,7 @@
                                                 "type": "object",
                                                 "properties": {
                                                     "id": {
-                                                        "description": "ID",
-                                                        "type": "string",
-                                                        "minLength": 1
+                                                        "$ref": "#/properties/items/items/oneOf/0/allOf/0/properties/id"
                                                     },
                                                     "interviewee": {
                                                         "$schema": "http://json-schema.org/draft-04/schema#",
@@ -759,9 +748,7 @@
                         "type": "object",
                         "properties": {
                             "id": {
-                                "description": "ID",
-                                "type": "string",
-                                "minLength": 1
+                                "$ref": "#/properties/items/items/oneOf/0/allOf/0/properties/id"
                             },
                             "name": {
                                 "description": "Name",

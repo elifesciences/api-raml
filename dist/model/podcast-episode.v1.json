@@ -142,9 +142,10 @@
                         "type": "object",
                         "properties": {
                             "id": {
-                                "description": "ID",
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "title": "eLife ID",
                                 "type": "string",
-                                "minLength": 1
+                                "pattern": "^[a-z0-9-]+$"
                             },
                             "name": {
                                 "description": "Name",
@@ -280,8 +281,7 @@
                                                     "type": "object",
                                                     "properties": {
                                                         "id": {
-                                                            "type": "string",
-                                                            "minLength": 1
+                                                            "$ref": "#/allOf/0/properties/subjects/items/properties/id"
                                                         },
                                                         "version": {
                                                             "type": "integer",
@@ -425,10 +425,7 @@
                                                                 "doi": {
                                                                     "$ref": "#/allOf/1/properties/chapters/items/properties/content/items/oneOf/1/allOf/0/properties/doi"
                                                                 }
-                                                            },
-                                                            "required": [
-                                                                "doi"
-                                                            ]
+                                                            }
                                                         },
                                                         "image": {
                                                             "type": "object",
@@ -473,9 +470,7 @@
                                                                     "type": "object",
                                                                     "properties": {
                                                                         "id": {
-                                                                            "description": "ID",
-                                                                            "type": "string",
-                                                                            "minLength": 1
+                                                                            "$ref": "#/allOf/0/properties/subjects/items/properties/id"
                                                                         },
                                                                         "title": {
                                                                             "description": "Title",
@@ -553,9 +548,7 @@
                                                                                         {
                                                                                             "properties": {
                                                                                                 "id": {
-                                                                                                    "title": "ID",
-                                                                                                    "type": "string",
-                                                                                                    "minLength": 1
+                                                                                                    "$ref": "#/allOf/0/properties/subjects/items/properties/id"
                                                                                                 },
                                                                                                 "type": {
                                                                                                     "title": "Type",

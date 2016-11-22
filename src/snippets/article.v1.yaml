@@ -3,8 +3,7 @@ title: Article snippet
 type: object
 properties:
     id:
-        type: string
-        minLength: 1
+        $ref: ../misc/id.v1.yaml
     version:
         type: integer
         minimum: 1

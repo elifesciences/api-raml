@@ -1,0 +1,79 @@
+{
+    "id": "1",
+    "title": "Females react differently than males to social isolation",
+    "impactStatement": "While male and female mice have similar responses to physical stress, research from the Hotchkiss Brain Institute at the University of Calgary, Canada, suggests females, not males, feel stressed when alone.",
+    "published": "2016-10-11T17:00:00+00:00",
+    "content": [
+        {
+            "type": "paragraph",
+            "text": "The findings, to be published in the journal eLife, provide further proof that strategies for coping with stress are sex-specific. They also highlight the importance of a social network for females in particular and pave the way for future research into whether females befriend others as a coping mechanism during stressful situations."
+        },
+        {
+            "type": "paragraph",
+            "text": "“Many species, including humans, use social interaction to reduce the effects of stress. In fact, the lack of a social network may itself be stressful,” says senior author Jaideep Bains, PhD, Professor of Physiology & Pharmacology at the University of Calgary, Cumming School of Medicine."
+        },
+        {
+            "type": "paragraph",
+            "text": "“Recent research suggests that young girls are more sensitive to social stress than boys. This could mean that social networks are more important for females in general, and that young females from different species, such as mice, may be more sensitive towards social isolation than males.”"
+        },
+        {
+            "type": "paragraph",
+            "text": "To test whether isolating individuals from their social group impacts on the brain in sex-specific ways, Bains and his team studied preadolescent mice that had been housed in same-sex groups after weaning. These mice were either left in their same-sex groups, housed in pairs, or were isolated altogether from their littermates for 16 to 18 hours. Following this period, the team examined the effects on the animals’ brain cells that control the release of stress hormones."
+        }
+    ],
+    "relatedContent": [
+        {
+            "type": "research-article",
+            "status": "vor",
+            "id": "18726",
+            "version": 1,
+            "doi": "10.7554/eLife.18726",
+            "authorLine": "Laura Senst et al",
+            "title": "Sexually dimorphic neuronal responses to social isolation",
+            "published": "2016-10-11T00:00:00Z",
+            "statusDate": "2016-10-11T00:00:00Z",
+            "volume": 5,
+            "elocationId": "e18726"
+        }
+    ],
+    "mediaContacts": [
+        {
+            "name": {
+                "preferred": "Ramanath Hegde",
+                "index": "Hegde, Ramanath"
+            },
+            "emailAddresses": [
+                "Lee.Berger@wits.ac.za"
+            ],
+            "phoneNumbers": [
+                "+12025550182;ext=555"
+            ],
+            "affiliations": [
+                {
+                    "name": [
+                        "Department of Molecular and Cell Biology",
+                        "University of California, Berkeley"
+                    ],
+                    "address": {
+                        "formatted": [
+                            "Berkeley",
+                            "United States"
+                        ],
+                        "components": {
+                            "locality": [
+                                "Berkeley"
+                            ],
+                            "country": "United States"
+                        }
+                    }
+                }
+            ]
+        }
+    ],
+    "subjects": [
+        {
+            "id": "neuroscience",
+            "name": "Neuroscience"
+        }
+    ]
+}

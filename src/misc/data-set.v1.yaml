@@ -1,0 +1,38 @@
+$schema: http://json-schema.org/draft-04/schema#
+title: Data set
+type: object
+properties:
+    id:
+        $ref: ../misc/html-id.v1.yaml
+    date:
+        $ref: ../misc/partial-date.v1.yaml
+    authors:
+        type: array
+        items:
+            $ref: ../misc/author.v1.yaml
+        minItems: 1
+    authorsEtAl:
+        description: If there are more authors.
+        type: boolean
+        default: false
+    title:
+        type: string
+        minLength: 1
+    dataId:
+        title: Data ID
+        type: string
+        minLength: 1
+    details:
+        type: string
+        minLength: 1
+    doi:
+        $ref: ../misc/doi.v1.yaml
+    uri:
+        type: string
+        format: uri
+required:
+  - id
+  - date
+  - authors
+  - title
+  - uri

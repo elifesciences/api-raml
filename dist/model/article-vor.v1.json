@@ -27,12 +27,9 @@
                             "type": "object",
                             "properties": {
                                 "doi": {
-                                    "$ref": "#/allOf/2/properties/decisionLetter/properties/doi"
+                                    "$ref": "#/allOf/2/properties/digest/properties/doi"
                                 }
-                            },
-                            "required": [
-                                "doi"
-                            ]
+                            }
                         },
                         "image": {
                             "type": "object",
@@ -124,8 +121,10 @@
                     "type": "object",
                     "properties": {
                         "id": {
+                            "$schema": "http://json-schema.org/draft-04/schema#",
+                            "title": "eLife ID",
                             "type": "string",
-                            "minLength": 1
+                            "pattern": "^[a-z0-9-]+$"
                         },
                         "version": {
                             "type": "integer",
@@ -149,7 +148,7 @@
                             ]
                         },
                         "doi": {
-                            "$ref": "#/allOf/2/properties/decisionLetter/properties/doi"
+                            "$ref": "#/allOf/2/properties/digest/properties/doi"
                         },
                         "authorLine": {
                             "description": "For example:\n  - Ian T Baldwin\n  - Randy Schekman, Mark Patterson\n  - Lee R Berger et al\n",
@@ -193,9 +192,7 @@
                                 "type": "object",
                                 "properties": {
                                     "id": {
-                                        "description": "ID",
-                                        "type": "string",
-                                        "minLength": 1
+                                        "$ref": "#/allOf/1/allOf/0/properties/id"
                                     },
                                     "name": {
                                         "description": "Name",
@@ -498,7 +495,7 @@
                                                     {
                                                         "allOf": [
                                                             {
-                                                                "$ref": "#/allOf/2/properties/references/items/allOf/1/oneOf/11/properties/author"
+                                                                "$ref": "#/allOf/1/allOf/1/properties/reviewers/items/allOf/0"
                                                             },
                                                             {
                                                                 "properties": {
@@ -562,7 +559,7 @@
                                                                             "people": {
                                                                                 "type": "array",
                                                                                 "items": {
-                                                                                    "$ref": "#/allOf/2/properties/references/items/allOf/1/oneOf/11/properties/author"
+                                                                                    "$ref": "#/allOf/1/allOf/1/properties/reviewers/items/allOf/0"
                                                                                 },
                                                                                 "minItems": 2
                                                                             }
@@ -583,7 +580,7 @@
                                                                                 "additionalProperties": {
                                                                                     "type": "array",
                                                                                     "items": {
-                                                                                        "$ref": "#/allOf/2/properties/references/items/allOf/1/oneOf/11/properties/author"
+                                                                                        "$ref": "#/allOf/1/allOf/1/properties/reviewers/items/allOf/0"
                                                                                     },
                                                                                     "minItems": 2
                                                                                 },
@@ -610,6 +607,68 @@
                                 ]
                             },
                             "minItems": 1
+                        },
+                        "reviewers": {
+                            "type": "array",
+                            "items": {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "title": "Reviewer",
+                                "type": "object",
+                                "allOf": [
+                                    {
+                                        "$schema": "http://json-schema.org/draft-04/schema#",
+                                        "title": "Person",
+                                        "type": "object",
+                                        "properties": {
+                                            "name": {
+                                                "title": "Name",
+                                                "type": "object",
+                                                "properties": {
+                                                    "preferred": {
+                                                        "title": "Preferred name",
+                                                        "description": "This is generally the name that is used by the person for English-language publications.\n\nFor example:\n  - Randy Schekman\n  - K. VijayRaghavan\n  - Li Wenhui\n",
+                                                        "type": "string",
+                                                        "minLength": 1
+                                                    },
+                                                    "index": {
+                                                        "title": "Index name",
+                                                        "description": "This is the name that should be used for indexing people.\n\nFor example:\n  - Schekman, Randy\n  - VijayRaghavan, Krishnaswamy\n  - Li Wenhui\n"
+                                                    }
+                                                },
+                                                "required": [
+                                                    "preferred",
+                                                    "index"
+                                                ]
+                                            },
+                                            "orcid": {
+                                                "title": "ORCID",
+                                                "type": "string",
+                                                "pattern": "^[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{3}[0-9X]$"
+                                            }
+                                        },
+                                        "required": [
+                                            "name"
+                                        ]
+                                    },
+                                    {
+                                        "properties": {
+                                            "affiliations": {
+                                                "type": "array",
+                                                "items": {
+                                                    "$ref": "#/allOf/2/properties/references/items/definitions/book/properties/publisher"
+                                                }
+                                            },
+                                            "role": {
+                                                "type": "string",
+                                                "minLength": 1
+                                            }
+                                        },
+                                        "required": [
+                                            "role"
+                                        ]
+                                    }
+                                ]
+                            }
                         },
                         "relatedArticles": {
                             "type": "array",
@@ -706,7 +765,10 @@
                     "type": "object",
                     "properties": {
                         "doi": {
-                            "$ref": "#/allOf/2/properties/decisionLetter/properties/doi"
+                            "$schema": "http://json-schema.org/draft-04/schema#",
+                            "title": "DOI",
+                            "type": "string",
+                            "pattern": "^10[.][0-9]{4,}[^\\s\"/<>]*/[^\\s\"]+$"
                         },
                         "content": {
                             "type": "array",
@@ -783,11 +845,12 @@
                                         "type": "string"
                                     },
                                     "date": {
-                                        "$schema": "http://json-schema.org/draft-04/schema#",
-                                        "title": "Partial date",
-                                        "description": "A date, where the month and/or day may not be known/available.\n\nFor example:\n  - 2016\n  - 2016-09\n  - 2016-09-16\n",
+                                        "$ref": "#/allOf/2/properties/dataSets/generated/items/properties/date"
+                                    },
+                                    "discriminator": {
+                                        "description": "If the first author of a reference has two or more references published in the same year in the same\nlist, this property will be a letter (starting at 'a') that can be used to distinguish between them.\n\nFor example, 'John Smith, 2016a' and 'John Smith, 2016b' would refer to two references, one with the\nyear discriminator 'a' and a second with 'b'.\n",
                                         "type": "string",
-                                        "pattern": "^[1-2][0-9]{3}(-((0[1-9])|(1[0-2]))(-((0[1-9])|([1-2][0-9])|(3[0-1])))?)?$"
+                                        "pattern": "^[a-z]+$"
                                     }
                                 },
                                 "required": [
@@ -960,7 +1023,7 @@
                                                 "$ref": "#/allOf/2/properties/references/items/definitions/pages"
                                             },
                                             "doi": {
-                                                "$ref": "#/allOf/2/properties/decisionLetter/properties/doi"
+                                                "$ref": "#/allOf/2/properties/digest/properties/doi"
                                             },
                                             "uri": {
                                                 "type": "string",
@@ -1072,7 +1135,7 @@
                                                         "$ref": "#/allOf/2/properties/references/items/definitions/book/properties/publisher"
                                                     },
                                                     "doi": {
-                                                        "$ref": "#/allOf/2/properties/decisionLetter/properties/doi"
+                                                        "$ref": "#/allOf/2/properties/digest/properties/doi"
                                                     },
                                                     "uri": {
                                                         "type": "string",
@@ -1126,7 +1189,7 @@
                                                 "$ref": "#/allOf/2/properties/references/items/definitions/pages"
                                             },
                                             "doi": {
-                                                "$ref": "#/allOf/2/properties/decisionLetter/properties/doi"
+                                                "$ref": "#/allOf/2/properties/digest/properties/doi"
                                             },
                                             "pmid": {
                                                 "$ref": "#/allOf/2/properties/references/items/definitions/book/properties/pmid"
@@ -1280,7 +1343,7 @@
                                                 "minLength": 1
                                             },
                                             "doi": {
-                                                "$ref": "#/allOf/2/properties/decisionLetter/properties/doi"
+                                                "$ref": "#/allOf/2/properties/digest/properties/doi"
                                             },
                                             "uri": {
                                                 "type": "string",
@@ -1328,7 +1391,7 @@
                                                 "$ref": "#/allOf/2/properties/references/items/definitions/book/properties/publisher"
                                             },
                                             "doi": {
-                                                "$ref": "#/allOf/2/properties/decisionLetter/properties/doi"
+                                                "$ref": "#/allOf/2/properties/digest/properties/doi"
                                             },
                                             "pmid": {
                                                 "$ref": "#/allOf/2/properties/references/items/definitions/book/properties/pmid"
@@ -1403,39 +1466,7 @@
                                                 ]
                                             },
                                             "author": {
-                                                "$schema": "http://json-schema.org/draft-04/schema#",
-                                                "title": "Person",
-                                                "type": "object",
-                                                "properties": {
-                                                    "name": {
-                                                        "title": "Name",
-                                                        "type": "object",
-                                                        "properties": {
-                                                            "preferred": {
-                                                                "title": "Preferred name",
-                                                                "description": "This is generally the name that is used by the person for English-language publications.\n\nFor example:\n  - Randy Schekman\n  - K. VijayRaghavan\n  - Li Wenhui\n",
-                                                                "type": "string",
-                                                                "minLength": 1
-                                                            },
-                                                            "index": {
-                                                                "title": "Index name",
-                                                                "description": "This is the name that should be used for indexing people.\n\nFor example:\n  - Schekman, Randy\n  - VijayRaghavan, Krishnaswamy\n  - Li Wenhui\n"
-                                                            }
-                                                        },
-                                                        "required": [
-                                                            "preferred",
-                                                            "index"
-                                                        ]
-                                                    },
-                                                    "orcid": {
-                                                        "title": "ORCID",
-                                                        "type": "string",
-                                                        "pattern": "^[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{3}[0-9X]$"
-                                                    }
-                                                },
-                                                "required": [
-                                                    "name"
-                                                ]
+                                                "$ref": "#/allOf/1/allOf/1/properties/reviewers/items/allOf/0"
                                             },
                                             "title": {
                                                 "title": "Thesis title",
@@ -1446,7 +1477,7 @@
                                                 "$ref": "#/allOf/2/properties/references/items/definitions/book/properties/publisher"
                                             },
                                             "doi": {
-                                                "$ref": "#/allOf/2/properties/decisionLetter/properties/doi"
+                                                "$ref": "#/allOf/2/properties/digest/properties/doi"
                                             },
                                             "uri": {
                                                 "type": "string",
@@ -1495,7 +1526,7 @@
                                                 "minLength": 1
                                             },
                                             "accessed": {
-                                                "$ref": "#/allOf/2/properties/references/items/allOf/0/properties/date"
+                                                "$ref": "#/allOf/2/properties/dataSets/generated/items/properties/date"
                                             },
                                             "uri": {
                                                 "type": "string",
@@ -1618,7 +1649,7 @@
                                         "minLength": 1
                                     },
                                     "doi": {
-                                        "$ref": "#/allOf/2/properties/decisionLetter/properties/doi"
+                                        "$ref": "#/allOf/2/properties/digest/properties/doi"
                                     },
                                     "pmid": {
                                         "$schema": "http://json-schema.org/draft-04/schema#",
@@ -1691,7 +1722,7 @@
                                 "pattern": "^[^\\s]+$"
                             },
                             "doi": {
-                                "$ref": "#/allOf/2/properties/decisionLetter/properties/doi"
+                                "$ref": "#/allOf/2/properties/digest/properties/doi"
                             },
                             "title": {
                                 "type": "string",
@@ -1703,7 +1734,6 @@
                         },
                         "required": [
                             "id",
-                            "doi",
                             "title",
                             "content"
                         ]
@@ -1734,14 +1764,251 @@
                     },
                     "minItems": 1
                 },
+                "additionalFiles": {
+                    "title": "Additional files",
+                    "type": "array",
+                    "items": {
+                        "$schema": "http://json-schema.org/draft-04/schema#",
+                        "title": "File",
+                        "type": "object",
+                        "properties": {
+                            "doi": {
+                                "$ref": "#/allOf/2/properties/digest/properties/doi"
+                            },
+                            "id": {
+                                "$ref": "#/allOf/2/properties/appendices/items/properties/id"
+                            },
+                            "label": {
+                                "title": "Label",
+                                "type": "string",
+                                "minLength": 1
+                            },
+                            "title": {
+                                "title": "Title",
+                                "type": "string",
+                                "minLength": 1
+                            },
+                            "caption": {
+                                "title": "Caption",
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/allOf/2/properties/acknowledgements/items"
+                                },
+                                "minItems": 1
+                            },
+                            "mediaType": {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "title": "Media type",
+                                "type": "string",
+                                "pattern": "^([a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+/[a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+)(; *[a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+=(([a-zA-Z0-9\\.\\-]+)|(\".+\")))*$"
+                            },
+                            "uri": {
+                                "title": "Source data URI",
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            "filename": {
+                                "title": "Filename",
+                                "type": "string",
+                                "pattern": "^[A-Za-z0-9_. ()-]+\\.[a-z0-9]+$"
+                            }
+                        },
+                        "required": [
+                            "mediaType",
+                            "uri",
+                            "filename"
+                        ],
+                        "dependencies": {
+                            "caption": [
+                                "title"
+                            ],
+                            "label": [
+                                "title"
+                            ],
+                            "title": [
+                                "label"
+                            ]
+                        }
+                    }
+                },
+                "dataSets": {
+                    "type": "object",
+                    "generated": {
+                        "type": "array",
+                        "items": {
+                            "$schema": "http://json-schema.org/draft-04/schema#",
+                            "title": "Data set",
+                            "type": "object",
+                            "properties": {
+                                "id": {
+                                    "$ref": "#/allOf/2/properties/appendices/items/properties/id"
+                                },
+                                "date": {
+                                    "$schema": "http://json-schema.org/draft-04/schema#",
+                                    "title": "Partial date",
+                                    "description": "A date, where the month and/or day may not be known/available.\n\nFor example:\n  - 2016\n  - 2016-09\n  - 2016-09-16\n",
+                                    "type": "string",
+                                    "pattern": "^[1-2][0-9]{3}(-((0[1-9])|(1[0-2]))(-((0[1-9])|([1-2][0-9])|(3[0-1])))?)?$"
+                                },
+                                "authors": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/allOf/1/allOf/1/properties/authors/items"
+                                    },
+                                    "minItems": 1
+                                },
+                                "authorsEtAl": {
+                                    "description": "If there are more authors.",
+                                    "type": "boolean",
+                                    "default": false
+                                },
+                                "title": {
+                                    "type": "string",
+                                    "minLength": 1
+                                },
+                                "dataId": {
+                                    "title": "Data ID",
+                                    "type": "string",
+                                    "minLength": 1
+                                },
+                                "details": {
+                                    "type": "string",
+                                    "minLength": 1
+                                },
+                                "doi": {
+                                    "$ref": "#/allOf/2/properties/digest/properties/doi"
+                                },
+                                "uri": {
+                                    "type": "string",
+                                    "format": "uri"
+                                }
+                            },
+                            "required": [
+                                "id",
+                                "date",
+                                "authors",
+                                "title",
+                                "uri"
+                            ]
+                        }
+                    },
+                    "used": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/allOf/2/properties/dataSets/generated/items"
+                        }
+                    }
+                },
+                "ethics": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/allOf/2/properties/acknowledgements/items"
+                    },
+                    "minItems": 1
+                },
+                "funding": {
+                    "$schema": "http://json-schema.org/draft-04/schema#",
+                    "title": "Funding",
+                    "type": "object",
+                    "properties": {
+                        "awards": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "id": {
+                                        "$ref": "#/allOf/2/properties/appendices/items/properties/id"
+                                    },
+                                    "source": {
+                                        "allOf": [
+                                            {
+                                                "$ref": "#/allOf/2/properties/references/items/definitions/book/properties/publisher"
+                                            },
+                                            {
+                                                "properties": {
+                                                    "funderId": {
+                                                        "$ref": "#/allOf/2/properties/digest/properties/doi"
+                                                    }
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    "awardId": {
+                                        "type": "string",
+                                        "minLength": 1
+                                    },
+                                    "recipients": {
+                                        "type": "array",
+                                        "items": {
+                                            "oneOf": [
+                                                {
+                                                    "allOf": [
+                                                        {
+                                                            "type": "object",
+                                                            "properties": {
+                                                                "type": {
+                                                                    "type": "string",
+                                                                    "enum": [
+                                                                        "person"
+                                                                    ]
+                                                                }
+                                                            },
+                                                            "required": [
+                                                                "type"
+                                                            ]
+                                                        },
+                                                        {
+                                                            "$ref": "#/allOf/1/allOf/1/properties/reviewers/items/allOf/0"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "type": {
+                                                            "type": "string",
+                                                            "enum": [
+                                                                "group"
+                                                            ]
+                                                        },
+                                                        "name": {
+                                                            "type": "string",
+                                                            "minLength": 1
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "type",
+                                                        "name"
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        "minItems": 1
+                                    }
+                                },
+                                "required": [
+                                    "id",
+                                    "source",
+                                    "recipients"
+                                ]
+                            },
+                            "minItems": 1
+                        },
+                        "statement": {
+                            "type": "string",
+                            "minLength": 1
+                        }
+                    },
+                    "required": [
+                        "awards",
+                        "statement"
+                    ]
+                },
                 "decisionLetter": {
                     "type": "object",
                     "properties": {
                         "doi": {
-                            "$schema": "http://json-schema.org/draft-04/schema#",
-                            "title": "DOI",
-                            "type": "string",
-                            "pattern": "^10[.][0-9]{4,}[^\\s\"/<>]*/[^\\s\"]+$"
+                            "$ref": "#/allOf/2/properties/digest/properties/doi"
                         },
                         "description": {
                             "type": "array",
@@ -1768,7 +2035,7 @@
                     "type": "object",
                     "properties": {
                         "doi": {
-                            "$ref": "#/allOf/2/properties/decisionLetter/properties/doi"
+                            "$ref": "#/allOf/2/properties/digest/properties/doi"
                         },
                         "content": {
                             "type": "array",
@@ -1811,7 +2078,7 @@
                                                                 "type": "object",
                                                                 "properties": {
                                                                     "doi": {
-                                                                        "$ref": "#/allOf/2/properties/decisionLetter/properties/doi"
+                                                                        "$ref": "#/allOf/2/properties/digest/properties/doi"
                                                                     },
                                                                     "id": {
                                                                         "$ref": "#/allOf/2/properties/appendices/items/properties/id"
@@ -1887,61 +2154,7 @@
                                                                         "title": "Source data",
                                                                         "type": "array",
                                                                         "items": {
-                                                                            "$schema": "http://json-schema.org/draft-04/schema#",
-                                                                            "title": "File",
-                                                                            "type": "object",
-                                                                            "properties": {
-                                                                                "doi": {
-                                                                                    "$ref": "#/allOf/2/properties/decisionLetter/properties/doi"
-                                                                                },
-                                                                                "id": {
-                                                                                    "$ref": "#/allOf/2/properties/appendices/items/properties/id"
-                                                                                },
-                                                                                "label": {
-                                                                                    "title": "Label",
-                                                                                    "type": "string",
-                                                                                    "minLength": 1
-                                                                                },
-                                                                                "title": {
-                                                                                    "title": "Title",
-                                                                                    "type": "string",
-                                                                                    "minLength": 1
-                                                                                },
-                                                                                "caption": {
-                                                                                    "title": "Caption",
-                                                                                    "type": "array",
-                                                                                    "items": {
-                                                                                        "$ref": "#/allOf/2/properties/acknowledgements/items"
-                                                                                    },
-                                                                                    "minItems": 1
-                                                                                },
-                                                                                "mediaType": {
-                                                                                    "$schema": "http://json-schema.org/draft-04/schema#",
-                                                                                    "title": "Media type",
-                                                                                    "type": "string",
-                                                                                    "pattern": "^([a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+/[a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+)(; *[a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+=(([a-zA-Z0-9\\.\\-]+)|(\".+\")))*$"
-                                                                                },
-                                                                                "uri": {
-                                                                                    "title": "Source data URI",
-                                                                                    "type": "string",
-                                                                                    "format": "uri"
-                                                                                }
-                                                                            },
-                                                                            "required": [
-                                                                                "mediaType",
-                                                                                "uri"
-                                                                            ],
-                                                                            "dependencies": {
-                                                                                "caption": [
-                                                                                    "title"
-                                                                                ],
-                                                                                "label": [
-                                                                                    "title"
-                                                                                ],
-                                                                                "title": [
-                                                                                    "label"
-                                                                                ]
-                                                                            }
+                                                                            "$ref": "#/allOf/2/properties/additionalFiles/items"
                                                                         }
                                                                     }
                                                                 },
@@ -2087,7 +2300,7 @@
                                                                 ]
                                                             },
                                                             "doi": {
-                                                                "$ref": "#/allOf/2/properties/decisionLetter/properties/doi"
+                                                                "$ref": "#/allOf/2/properties/digest/properties/doi"
                                                             },
                                                             "id": {
                                                                 "$ref": "#/allOf/2/properties/appendices/items/properties/id"
@@ -2157,7 +2370,7 @@
                                                                 "title": "Source data",
                                                                 "type": "array",
                                                                 "items": {
-                                                                    "$ref": "#/allOf/2/properties/authorResponse/properties/content/items/oneOf/0/oneOf/0/oneOf/0/definitions/image/properties/sourceData/items"
+                                                                    "$ref": "#/allOf/2/properties/additionalFiles/items"
                                                                 }
                                                             }
                                                         },
@@ -2189,7 +2402,7 @@
                                                                 ]
                                                             },
                                                             "doi": {
-                                                                "$ref": "#/allOf/2/properties/decisionLetter/properties/doi"
+                                                                "$ref": "#/allOf/2/properties/digest/properties/doi"
                                                             },
                                                             "id": {
                                                                 "$ref": "#/allOf/2/properties/appendices/items/properties/id"
@@ -2220,7 +2433,7 @@
                                                                         "mediaType": {
                                                                             "allOf": [
                                                                                 {
-                                                                                    "$ref": "#/allOf/2/properties/authorResponse/properties/content/items/oneOf/0/oneOf/0/oneOf/0/definitions/image/properties/sourceData/items/properties/mediaType"
+                                                                                    "$ref": "#/allOf/2/properties/additionalFiles/items/properties/mediaType"
                                                                                 },
                                                                                 {
                                                                                     "pattern": "^video/"
@@ -2261,7 +2474,7 @@
                                                                 "title": "Source data",
                                                                 "type": "array",
                                                                 "items": {
-                                                                    "$ref": "#/allOf/2/properties/authorResponse/properties/content/items/oneOf/0/oneOf/0/oneOf/0/definitions/image/properties/sourceData/items"
+                                                                    "$ref": "#/allOf/2/properties/additionalFiles/items"
                                                                 }
                                                             }
                                                         },
@@ -2330,7 +2543,7 @@
                                                         ]
                                                     },
                                                     "doi": {
-                                                        "$ref": "#/allOf/2/properties/decisionLetter/properties/doi"
+                                                        "$ref": "#/allOf/2/properties/digest/properties/doi"
                                                     },
                                                     "id": {
                                                         "$ref": "#/allOf/2/properties/appendices/items/properties/id"

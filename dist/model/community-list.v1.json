@@ -19,33 +19,15 @@
                         "type": "object",
                         "allOf": [
                             {
-                                "$ref": "#/properties/items/items/oneOf/1/allOf/0"
-                            },
-                            {
-                                "properties": {
-                                    "status": {
-                                        "type": "string",
-                                        "enum": [
-                                            "poa"
-                                        ]
-                                    }
-                                }
-                            }
-                        ]
-                    },
-                    {
-                        "$schema": "http://json-schema.org/draft-04/schema#",
-                        "title": "Article VoR snippet",
-                        "type": "object",
-                        "allOf": [
-                            {
                                 "$schema": "http://json-schema.org/draft-04/schema#",
                                 "title": "Article snippet",
                                 "type": "object",
                                 "properties": {
                                     "id": {
+                                        "$schema": "http://json-schema.org/draft-04/schema#",
+                                        "title": "eLife ID",
                                         "type": "string",
-                                        "minLength": 1
+                                        "pattern": "^[a-z0-9-]+$"
                                     },
                                     "version": {
                                         "type": "integer",
@@ -116,9 +98,7 @@
                                             "type": "object",
                                             "properties": {
                                                 "id": {
-                                                    "description": "ID",
-                                                    "type": "string",
-                                                    "minLength": 1
+                                                    "$ref": "#/properties/items/items/oneOf/0/allOf/0/properties/id"
                                                 },
                                                 "name": {
                                                     "description": "Name",
@@ -194,6 +174,26 @@
                                     "status": {
                                         "type": "string",
                                         "enum": [
+                                            "poa"
+                                        ]
+                                    }
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "$schema": "http://json-schema.org/draft-04/schema#",
+                        "title": "Article VoR snippet",
+                        "type": "object",
+                        "allOf": [
+                            {
+                                "$ref": "#/properties/items/items/oneOf/0/allOf/0"
+                            },
+                            {
+                                "properties": {
+                                    "status": {
+                                        "type": "string",
+                                        "enum": [
                                             "vor"
                                         ]
                                     },
@@ -205,12 +205,9 @@
                                         "type": "object",
                                         "properties": {
                                             "doi": {
-                                                "$ref": "#/properties/items/items/oneOf/1/allOf/0/properties/doi"
+                                                "$ref": "#/properties/items/items/oneOf/0/allOf/0/properties/doi"
                                             }
-                                        },
-                                        "required": [
-                                            "doi"
-                                        ]
+                                        }
                                     },
                                     "image": {
                                         "type": "object",
@@ -319,9 +316,7 @@
                                                 "type": "object",
                                                 "properties": {
                                                     "id": {
-                                                        "description": "ID",
-                                                        "type": "string",
-                                                        "minLength": 1
+                                                        "$ref": "#/properties/items/items/oneOf/0/allOf/0/properties/id"
                                                     },
                                                     "title": {
                                                         "description": "Title",
@@ -340,7 +335,7 @@
                                                         "description": "Article subjects",
                                                         "type": "array",
                                                         "items": {
-                                                            "$ref": "#/properties/items/items/oneOf/1/allOf/0/properties/subjects/items"
+                                                            "$ref": "#/properties/items/items/oneOf/0/allOf/0/properties/subjects/items"
                                                         },
                                                         "uniqueItems": true
                                                     }
@@ -371,9 +366,7 @@
                                                 "type": "object",
                                                 "properties": {
                                                     "id": {
-                                                        "description": "ID",
-                                                        "type": "string",
-                                                        "minLength": 1
+                                                        "$ref": "#/properties/items/items/oneOf/0/allOf/0/properties/id"
                                                     },
                                                     "title": {
                                                         "description": "Title",
@@ -403,7 +396,7 @@
                                                         "description": "Collection subjects",
                                                         "type": "array",
                                                         "items": {
-                                                            "$ref": "#/properties/items/items/oneOf/1/allOf/0/properties/subjects/items"
+                                                            "$ref": "#/properties/items/items/oneOf/0/allOf/0/properties/subjects/items"
                                                         }
                                                     },
                                                     "selectedCurator": {
@@ -419,9 +412,7 @@
                                                                     {
                                                                         "properties": {
                                                                             "id": {
-                                                                                "title": "ID",
-                                                                                "type": "string",
-                                                                                "minLength": 1
+                                                                                "$ref": "#/properties/items/items/oneOf/0/allOf/0/properties/id"
                                                                             },
                                                                             "type": {
                                                                                 "title": "Type",
@@ -485,9 +476,7 @@
                                                 "type": "object",
                                                 "properties": {
                                                     "id": {
-                                                        "description": "ID",
-                                                        "type": "string",
-                                                        "minLength": 1
+                                                        "$ref": "#/properties/items/items/oneOf/0/allOf/0/properties/id"
                                                     },
                                                     "title": {
                                                         "description": "Title",
@@ -540,9 +529,7 @@
                                                 "type": "object",
                                                 "properties": {
                                                     "id": {
-                                                        "description": "ID",
-                                                        "type": "string",
-                                                        "minLength": 1
+                                                        "$ref": "#/properties/items/items/oneOf/0/allOf/0/properties/id"
                                                     },
                                                     "interviewee": {
                                                         "$schema": "http://json-schema.org/draft-04/schema#",
@@ -742,7 +729,7 @@
                                                         "description": "Episode subjects",
                                                         "type": "array",
                                                         "items": {
-                                                            "$ref": "#/properties/items/items/oneOf/1/allOf/0/properties/subjects/items"
+                                                            "$ref": "#/properties/items/items/oneOf/0/allOf/0/properties/subjects/items"
                                                         }
                                                     }
                                                 },

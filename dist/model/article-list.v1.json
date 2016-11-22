@@ -25,8 +25,10 @@
                                     "type": "object",
                                     "properties": {
                                         "id": {
+                                            "$schema": "http://json-schema.org/draft-04/schema#",
+                                            "title": "eLife ID",
                                             "type": "string",
-                                            "minLength": 1
+                                            "pattern": "^[a-z0-9-]+$"
                                         },
                                         "version": {
                                             "type": "integer",
@@ -97,9 +99,7 @@
                                                 "type": "object",
                                                 "properties": {
                                                     "id": {
-                                                        "description": "ID",
-                                                        "type": "string",
-                                                        "minLength": 1
+                                                        "$ref": "#/properties/items/items/0/oneOf/0/allOf/0/properties/id"
                                                     },
                                                     "name": {
                                                         "description": "Name",
@@ -208,10 +208,7 @@
                                                 "doi": {
                                                     "$ref": "#/properties/items/items/0/oneOf/0/allOf/0/properties/doi"
                                                 }
-                                            },
-                                            "required": [
-                                                "doi"
-                                            ]
+                                            }
                                         },
                                         "image": {
                                             "type": "object",

@@ -1,0 +1,17 @@
+$schema: http://json-schema.org/draft-04/schema#
+title: Press package list
+type: object
+properties:
+    total:
+        title: Total number of press packages
+        type: integer
+        minimum: 0
+    items:
+        title: Press package
+        type: array
+        items:
+            $ref: ../snippets/press-package.v1.yaml
+        uniqueItems: true
+required:
+  - total
+  - items

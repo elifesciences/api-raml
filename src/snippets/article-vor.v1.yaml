@@ -16,8 +16,6 @@ allOf:
             properties:
                 doi:
                     $ref: ../misc/doi.v1.yaml
-            required:
-              - doi
         image:
             type: object
             properties:
