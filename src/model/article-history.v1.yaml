@@ -27,7 +27,6 @@ properties:
             required:
                 - version
                 - status
-                - published
         minItems: 1
 dependencies:
     received:
