@@ -7629,5 +7629,202 @@
             "type": "paragraph",
             "text": "The authors would like to thank Thomas Snyder, Ivan Dimov, Jun Seita, Chris Lowe, Kevin Uhlinger, Shukry Habib, Jennifer Okamoto, Lisa Me, Lisa Ooi, Antonia Dominguez, Kirill Zdornyy, Seth Karten, Chris Patton, Libuse Jerabek, and Terry Storm for invaluable technical advice and help."
         }
-    ]
+    ],
+    "funding": {
+        "awards": [
+            {
+                "id": "par-1",
+                "source": {
+                    "name": [
+                        "National Institutes of Health"
+                    ]
+                },
+                "awardId": "1R56AI089968-01",
+                "recipients": [
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "Ayelet Voskoboynik",
+                            "index": "Voskoboynik, Ayelet"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "Irving L Weissman",
+                            "index": "Weissman, Irving L"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "Stephen R Quake",
+                            "index": "Quake, Stephen R"
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "par-2",
+                "source": {
+                    "name": [
+                        "National Institutes of Health"
+                    ]
+                },
+                "awardId": "RO1GM100315-01",
+                "recipients": [
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "Ayelet Voskoboynik",
+                            "index": "Voskoboynik, Ayelet"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "Irving L Weissman",
+                            "index": "Weissman, Irving L"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "Stephen R Quake",
+                            "index": "Quake, Stephen R"
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "par-3",
+                "source": {
+                    "name": [
+                        "National Institutes of Health"
+                    ]
+                },
+                "awardId": "1R01AG037968-01",
+                "recipients": [
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "Ayelet Voskoboynik",
+                            "index": "Voskoboynik, Ayelet"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "Irving L Weissman",
+                            "index": "Weissman, Irving L"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "Stephen R Quake",
+                            "index": "Quake, Stephen R"
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "par-4",
+                "source": {
+                    "name": [
+                        "PRIN"
+                    ]
+                },
+                "awardId": "PRIN2009",
+                "recipients": [
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "Carmela Gissi",
+                            "index": "Gissi, Carmela"
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "par-5",
+                "source": {
+                    "name": [
+                        "National Institutes of Health"
+                    ]
+                },
+                "awardId": "K99CA151673-01A1",
+                "recipients": [
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "Debashis Sahoo",
+                            "index": "Sahoo, Debashis"
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "par-6",
+                "source": {
+                    "name": [
+                        "Siebel Foundation"
+                    ]
+                },
+                "awardId": "Siebel Stem Cell Institute and the Thomas and Stacey Siebel Foundation",
+                "recipients": [
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "Debashis Sahoo",
+                            "index": "Sahoo, Debashis"
+                        }
+                    },
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "Aaron M Newman",
+                            "index": "Newman, Aaron M"
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "par-7",
+                "source": {
+                    "name": [
+                        "Department of Defense Grant"
+                    ]
+                },
+                "awardId": "W81XWH-10-1-0500",
+                "recipients": [
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "Debashis Sahoo",
+                            "index": "Sahoo, Debashis"
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "par-8",
+                "source": {
+                    "name": [
+                        "The Virginia and D K Ludwig Fund for Cancer Research"
+                    ]
+                },
+                "recipients": [
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "Irving L Weissman",
+                            "index": "Weissman, Irving L"
+                        }
+                    }
+                ]
+            }
+        ],
+        "statement": "The funders had no role in study design, data collection and interpretation, or the decision to submit the work for publication."
+    }
 }
