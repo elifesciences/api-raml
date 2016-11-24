@@ -29,7 +29,7 @@ properties:
         items:
             title: HTML table
             type: string
-            pattern: ^<table>.+</table>$
+            pattern: ^<table>[\s\S]+</table>$
     footnotes:
         type: array
         items:
