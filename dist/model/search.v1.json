@@ -69,12 +69,25 @@
                                         "type": "string",
                                         "minLength": 1
                                     },
+                                    "stage": {
+                                        "type": "string",
+                                        "enum": [
+                                            "preview",
+                                            "published"
+                                        ]
+                                    },
                                     "published": {
+                                        "description": "Date and time this article was first published.\nNot present if 'stage' is 'preview' and version is '1'.\n",
+                                        "type": "string",
+                                        "format": "date-time"
+                                    },
+                                    "versionDate": {
+                                        "description": "Date and time this version of the article was published.\nOnly present if 'stage' is 'published'.\n",
                                         "type": "string",
                                         "format": "date-time"
                                     },
                                     "statusDate": {
-                                        "description": "Date/time the `status` changed to this value (eg article moved from PoA to VoR).\n",
+                                        "description": "Date and time this article transitioned to current status.\nNot present if 'stage' is 'preview' and version is '1'.\n",
                                         "type": "string",
                                         "format": "date-time"
                                     },
@@ -147,8 +160,7 @@
                                     "doi",
                                     "authorLine",
                                     "title",
-                                    "published",
-                                    "statusDate",
+                                    "stage",
                                     "volume",
                                     "elocationId"
                                 ]

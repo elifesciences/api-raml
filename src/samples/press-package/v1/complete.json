@@ -31,6 +31,7 @@
             "authorLine": "Laura Senst et al",
             "title": "Sexually dimorphic neuronal responses to social isolation",
             "published": "2016-10-11T00:00:00Z",
+            "stage": "published",
             "statusDate": "2016-10-11T00:00:00Z",
             "volume": 5,
             "elocationId": "e18726"
@@ -74,6 +75,16 @@
         {
             "id": "neuroscience",
             "name": "Neuroscience"
+        }
+    ],
+    "about": [
+        {
+            "type": "paragraph",
+            "text": "The South African <b>Department of Science and Technology</b> (<a href=\"http://www.dst.gov.za/\">DST</a>) has made many important contributions to South Africa’s development and continues to do so, living up to its mandate to use science and technology to improve the country’s economy, create employment and improve the quality of life of all citizens. The <b>National Research Foundation</b> (<a href=\"http://www.nrf.ac.za/\">NRF</a>) is as an independent government agency with the mandate to promote and support research through funding, human resource development and the provision of the necessary research facilities in order to facilitate the creation of knowledge, innovation and development in all fields of science and technology, including indigenous knowledge, and thereby contribute to the improvement of the quality of life of all South Africans."
+        },
+        {
+            "type": "paragraph",
+            "text": "The <b>University of the Witwatersrand</b> is a renowned research University and a world leader in palaeosciences research. Through its Evolutionary Studies Institute and the DST-NRF Centre of Excellence in Palaeosciences, it has a long association with the COHWHS in terms of scientific discoveries and research. Wits owns and manages important fossil sites in the Cradle and for nearly 90 years, its scientists have made some of the most extraordinary fossil finds in this area. Details: <a href=\"http://www.wits.ac.za\">www.wits.ac.za</a> or find us on <a href=\"https://www.facebook.com/witsuniversity\">Facebook</a>, <a href=\"https://twitter.com/Wits_News\">Twitter</a>, <a href=\"https://www.youtube.com/user/WitsWebmaster\">YouTube</a> and <a href=\"http://www.linkedin.com/company/university-of-the-witwatersrand?trk=company_logo\">LinkedIn</a>."
         }
     ]
 }

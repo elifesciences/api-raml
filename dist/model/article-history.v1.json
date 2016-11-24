@@ -34,8 +34,7 @@
                 },
                 "required": [
                     "version",
-                    "status",
-                    "published"
+                    "status"
                 ]
             },
             "minItems": 1

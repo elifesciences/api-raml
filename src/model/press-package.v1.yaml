@@ -39,6 +39,12 @@ allOf:
                             type: array
                             items:
                                 $ref: ../misc/place.v1.yaml
+        about:
+            description: Descriptions of the publications referenced in the press package
+            type: array
+            items:
+                $ref: ../blocks/paragraph.v1.yaml
+            minItems: 1
     required:
       - content
       - relatedContent
