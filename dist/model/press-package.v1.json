@@ -142,7 +142,7 @@
                                                                                 "mathml": {
                                                                                     "title": "MathML",
                                                                                     "type": "string",
-                                                                                    "pattern": "^<math>.+</math>$"
+                                                                                    "pattern": "^<math>[\\s\\S]+</math>$"
                                                                                 }
                                                                             },
                                                                             "required": [
@@ -412,7 +412,7 @@
                                                         "items": {
                                                             "title": "HTML table",
                                                             "type": "string",
-                                                            "pattern": "^<table>.+</table>$"
+                                                            "pattern": "^<table>[\\s\\S]+</table>$"
                                                         }
                                                     },
                                                     "footnotes": {
