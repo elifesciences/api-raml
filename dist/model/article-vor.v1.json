@@ -815,7 +815,8 @@
                                     },
                                     "title": {
                                         "title": "Text",
-                                        "type": "string"
+                                        "type": "string",
+                                        "minLength": 1
                                     },
                                     "content": {
                                         "description": "Content",
