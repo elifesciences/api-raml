@@ -22,8 +22,7 @@ properties:
                         - poa
                         - vor
                 published:
-                    type: string
-                    format: date-time
+                    $ref: ../misc/date-time.v1.yaml
             required:
                 - version
                 - status

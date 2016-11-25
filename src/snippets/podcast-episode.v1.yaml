@@ -14,8 +14,7 @@ properties:
         type: string
     published:
         description: Publication date (UTC)
-        type: string
-        format: date-time
+        $ref: ../misc/date-time.v1.yaml
     image:
         type: object
         properties:
