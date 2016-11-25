@@ -78,18 +78,19 @@
                                     },
                                     "published": {
                                         "description": "Date and time this article was first published.\nNot present if 'stage' is 'preview' and version is '1'.\n",
+                                        "$schema": "http://json-schema.org/draft-04/schema#",
+                                        "title": "Date-time ISO8601 with numeric UTC timezone",
                                         "type": "string",
-                                        "format": "date-time"
+                                        "format": "date-time",
+                                        "pattern": "^....-..-..T..:..:..Z$"
                                     },
                                     "versionDate": {
                                         "description": "Date and time this version of the article was published.\nOnly present if 'stage' is 'published'.\n",
-                                        "type": "string",
-                                        "format": "date-time"
+                                        "$ref": "#/properties/items/items/oneOf/0/allOf/0/properties/published"
                                     },
                                     "statusDate": {
                                         "description": "Date and time this article transitioned to current status.\nNot present if 'stage' is 'preview' and version is '1'.\n",
-                                        "type": "string",
-                                        "format": "date-time"
+                                        "$ref": "#/properties/items/items/oneOf/0/allOf/0/properties/published"
                                     },
                                     "volume": {
                                         "type": "integer",
@@ -324,8 +325,7 @@
                                                     },
                                                     "published": {
                                                         "description": "Publication date (UTC)",
-                                                        "type": "string",
-                                                        "format": "date-time"
+                                                        "$ref": "#/properties/items/items/oneOf/0/allOf/0/properties/published"
                                                     },
                                                     "subjects": {
                                                         "description": "Article subjects",
@@ -374,8 +374,7 @@
                                                     },
                                                     "updated": {
                                                         "description": "Updated date (UTC)",
-                                                        "type": "string",
-                                                        "format": "date-time"
+                                                        "$ref": "#/properties/items/items/oneOf/0/allOf/0/properties/published"
                                                     },
                                                     "image": {
                                                         "type": "object",
@@ -484,13 +483,11 @@
                                                     },
                                                     "starts": {
                                                         "description": "Start date/time (UTC)",
-                                                        "type": "string",
-                                                        "format": "date-time"
+                                                        "$ref": "#/properties/items/items/oneOf/0/allOf/0/properties/published"
                                                     },
                                                     "ends": {
                                                         "description": "Ends date/time (UTC)",
-                                                        "type": "string",
-                                                        "format": "date-time"
+                                                        "$ref": "#/properties/items/items/oneOf/0/allOf/0/properties/published"
                                                     },
                                                     "timezone": {
                                                         "description": "Timezone (from the IANA time zone database) for non-online events",
@@ -574,8 +571,7 @@
                                                     },
                                                     "published": {
                                                         "title": "Publication date (UTC)",
-                                                        "type": "string",
-                                                        "format": "date-time"
+                                                        "$ref": "#/properties/items/items/oneOf/0/allOf/0/properties/published"
                                                     }
                                                 },
                                                 "required": [
@@ -619,8 +615,7 @@
                                                     },
                                                     "published": {
                                                         "description": "Publication date (UTC)",
-                                                        "type": "string",
-                                                        "format": "date-time"
+                                                        "$ref": "#/properties/items/items/oneOf/0/allOf/0/properties/published"
                                                     },
                                                     "image": {
                                                         "type": "object",
@@ -675,8 +670,7 @@
                                                     },
                                                     "published": {
                                                         "description": "Publication date (UTC)",
-                                                        "type": "string",
-                                                        "format": "date-time"
+                                                        "$ref": "#/properties/items/items/oneOf/0/allOf/0/properties/published"
                                                     },
                                                     "image": {
                                                         "type": "object",

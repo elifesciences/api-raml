@@ -27,7 +27,7 @@
                             "type": "object",
                             "properties": {
                                 "doi": {
-                                    "$ref": "#/allOf/2/properties/digest/properties/doi"
+                                    "$ref": "#/allOf/1/allOf/0/properties/doi"
                                 }
                             }
                         },
@@ -148,7 +148,10 @@
                             ]
                         },
                         "doi": {
-                            "$ref": "#/allOf/2/properties/digest/properties/doi"
+                            "$schema": "http://json-schema.org/draft-04/schema#",
+                            "title": "DOI",
+                            "type": "string",
+                            "pattern": "^10[.][0-9]{4,}[^\\s\"/<>]*/[^\\s\"]+$"
                         },
                         "authorLine": {
                             "description": "For example:\n  - Ian T Baldwin\n  - Randy Schekman, Mark Patterson\n  - Lee R Berger et al\n",
@@ -172,18 +175,19 @@
                         },
                         "published": {
                             "description": "Date and time this article was first published.\nNot present if 'stage' is 'preview' and version is '1'.\n",
-                            "type": "string",
-                            "format": "date-time"
+                            "$ref": "#/allOf/1/allOf/0/properties/versionDate"
                         },
                         "versionDate": {
                             "description": "Date and time this version of the article was published.\nOnly present if 'stage' is 'published'.\n",
+                            "$schema": "http://json-schema.org/draft-04/schema#",
+                            "title": "Date-time ISO8601 with numeric UTC timezone",
                             "type": "string",
-                            "format": "date-time"
+                            "format": "date-time",
+                            "pattern": "^....-..-..T..:..:..Z$"
                         },
                         "statusDate": {
                             "description": "Date and time this article transitioned to current status.\nNot present if 'stage' is 'preview' and version is '1'.\n",
-                            "type": "string",
-                            "format": "date-time"
+                            "$ref": "#/allOf/1/allOf/0/properties/versionDate"
                         },
                         "volume": {
                             "type": "integer",
@@ -784,10 +788,7 @@
                     "type": "object",
                     "properties": {
                         "doi": {
-                            "$schema": "http://json-schema.org/draft-04/schema#",
-                            "title": "DOI",
-                            "type": "string",
-                            "pattern": "^10[.][0-9]{4,}[^\\s\"/<>]*/[^\\s\"]+$"
+                            "$ref": "#/allOf/1/allOf/0/properties/doi"
                         },
                         "content": {
                             "type": "array",
@@ -829,7 +830,7 @@
                                         "description": "Content",
                                         "type": "array",
                                         "items": {
-                                            "$ref": "#/allOf/2/properties/authorResponse/properties/content/items"
+                                            "$ref": "#/allOf/2/properties/decisionLetter/properties/content/items"
                                         },
                                         "minItems": 1
                                     }
@@ -1043,7 +1044,7 @@
                                                 "$ref": "#/allOf/2/properties/references/items/definitions/pages"
                                             },
                                             "doi": {
-                                                "$ref": "#/allOf/2/properties/digest/properties/doi"
+                                                "$ref": "#/allOf/1/allOf/0/properties/doi"
                                             },
                                             "uri": {
                                                 "type": "string",
@@ -1155,7 +1156,7 @@
                                                         "$ref": "#/allOf/2/properties/references/items/definitions/book/properties/publisher"
                                                     },
                                                     "doi": {
-                                                        "$ref": "#/allOf/2/properties/digest/properties/doi"
+                                                        "$ref": "#/allOf/1/allOf/0/properties/doi"
                                                     },
                                                     "uri": {
                                                         "type": "string",
@@ -1209,7 +1210,7 @@
                                                 "$ref": "#/allOf/2/properties/references/items/definitions/pages"
                                             },
                                             "doi": {
-                                                "$ref": "#/allOf/2/properties/digest/properties/doi"
+                                                "$ref": "#/allOf/1/allOf/0/properties/doi"
                                             },
                                             "pmid": {
                                                 "$ref": "#/allOf/2/properties/references/items/definitions/book/properties/pmid"
@@ -1363,7 +1364,7 @@
                                                 "minLength": 1
                                             },
                                             "doi": {
-                                                "$ref": "#/allOf/2/properties/digest/properties/doi"
+                                                "$ref": "#/allOf/1/allOf/0/properties/doi"
                                             },
                                             "uri": {
                                                 "type": "string",
@@ -1411,7 +1412,7 @@
                                                 "$ref": "#/allOf/2/properties/references/items/definitions/book/properties/publisher"
                                             },
                                             "doi": {
-                                                "$ref": "#/allOf/2/properties/digest/properties/doi"
+                                                "$ref": "#/allOf/1/allOf/0/properties/doi"
                                             },
                                             "pmid": {
                                                 "$ref": "#/allOf/2/properties/references/items/definitions/book/properties/pmid"
@@ -1497,7 +1498,7 @@
                                                 "$ref": "#/allOf/2/properties/references/items/definitions/book/properties/publisher"
                                             },
                                             "doi": {
-                                                "$ref": "#/allOf/2/properties/digest/properties/doi"
+                                                "$ref": "#/allOf/1/allOf/0/properties/doi"
                                             },
                                             "uri": {
                                                 "type": "string",
@@ -1669,7 +1670,7 @@
                                         "minLength": 1
                                     },
                                     "doi": {
-                                        "$ref": "#/allOf/2/properties/digest/properties/doi"
+                                        "$ref": "#/allOf/1/allOf/0/properties/doi"
                                     },
                                     "pmid": {
                                         "$schema": "http://json-schema.org/draft-04/schema#",
@@ -1742,7 +1743,7 @@
                                 "pattern": "^[^\\s]+$"
                             },
                             "doi": {
-                                "$ref": "#/allOf/2/properties/digest/properties/doi"
+                                "$ref": "#/allOf/1/allOf/0/properties/doi"
                             },
                             "title": {
                                 "type": "string",
@@ -1793,7 +1794,7 @@
                         "type": "object",
                         "properties": {
                             "doi": {
-                                "$ref": "#/allOf/2/properties/digest/properties/doi"
+                                "$ref": "#/allOf/1/allOf/0/properties/doi"
                             },
                             "id": {
                                 "$ref": "#/allOf/2/properties/appendices/items/properties/id"
@@ -1896,7 +1897,7 @@
                                     "minLength": 1
                                 },
                                 "doi": {
-                                    "$ref": "#/allOf/2/properties/digest/properties/doi"
+                                    "$ref": "#/allOf/1/allOf/0/properties/doi"
                                 },
                                 "uri": {
                                     "type": "string",
@@ -1946,7 +1947,7 @@
                                             {
                                                 "properties": {
                                                     "funderId": {
-                                                        "$ref": "#/allOf/2/properties/digest/properties/doi"
+                                                        "$ref": "#/allOf/1/allOf/0/properties/doi"
                                                     }
                                                 }
                                             }
@@ -2027,7 +2028,7 @@
                     "type": "object",
                     "properties": {
                         "doi": {
-                            "$ref": "#/allOf/2/properties/digest/properties/doi"
+                            "$ref": "#/allOf/1/allOf/0/properties/doi"
                         },
                         "description": {
                             "type": "array",
@@ -2035,26 +2036,6 @@
                                 "$ref": "#/allOf/2/properties/acknowledgements/items"
                             },
                             "minItems": 1
-                        },
-                        "content": {
-                            "type": "array",
-                            "items": {
-                                "$ref": "#/allOf/2/properties/authorResponse/properties/content/items"
-                            },
-                            "minItems": 1
-                        }
-                    },
-                    "required": [
-                        "doi",
-                        "description",
-                        "content"
-                    ]
-                },
-                "authorResponse": {
-                    "type": "object",
-                    "properties": {
-                        "doi": {
-                            "$ref": "#/allOf/2/properties/digest/properties/doi"
                         },
                         "content": {
                             "type": "array",
@@ -2070,7 +2051,7 @@
                                                         "type": "object",
                                                         "allOf": [
                                                             {
-                                                                "$ref": "#/allOf/2/properties/authorResponse/properties/content/items/oneOf/0/oneOf/0/oneOf/0/definitions/image"
+                                                                "$ref": "#/allOf/2/properties/decisionLetter/properties/content/items/oneOf/0/oneOf/0/oneOf/0/definitions/image"
                                                             },
                                                             {
                                                                 "properties": {
@@ -2083,7 +2064,7 @@
                                                                     "supplements": {
                                                                         "type": "array",
                                                                         "items": {
-                                                                            "$ref": "#/allOf/2/properties/authorResponse/properties/content/items/oneOf/0/oneOf/0/oneOf/0/definitions/image"
+                                                                            "$ref": "#/allOf/2/properties/decisionLetter/properties/content/items/oneOf/0/oneOf/0/oneOf/0/definitions/image"
                                                                         }
                                                                     }
                                                                 },
@@ -2097,7 +2078,7 @@
                                                                 "type": "object",
                                                                 "properties": {
                                                                     "doi": {
-                                                                        "$ref": "#/allOf/2/properties/digest/properties/doi"
+                                                                        "$ref": "#/allOf/1/allOf/0/properties/doi"
                                                                     },
                                                                     "id": {
                                                                         "$ref": "#/allOf/2/properties/appendices/items/properties/id"
@@ -2226,7 +2207,7 @@
                                                                         {
                                                                             "type": "array",
                                                                             "items": {
-                                                                                "$ref": "#/allOf/2/properties/authorResponse/properties/content/items/oneOf/0/oneOf/0"
+                                                                                "$ref": "#/allOf/2/properties/decisionLetter/properties/content/items/oneOf/0/oneOf/0"
                                                                             },
                                                                             "minItems": 1
                                                                         }
@@ -2242,7 +2223,7 @@
                                                         ]
                                                     },
                                                     {
-                                                        "$ref": "#/allOf/2/properties/authorResponse/properties/content/items/oneOf/0/oneOf/0/oneOf/0/definitions/image/properties/caption/items/oneOf/0"
+                                                        "$ref": "#/allOf/2/properties/decisionLetter/properties/content/items/oneOf/0/oneOf/0/oneOf/0/definitions/image/properties/caption/items/oneOf/0"
                                                     },
                                                     {
                                                         "$ref": "#/allOf/2/properties/acknowledgements/items"
@@ -2319,7 +2300,7 @@
                                                                 ]
                                                             },
                                                             "doi": {
-                                                                "$ref": "#/allOf/2/properties/digest/properties/doi"
+                                                                "$ref": "#/allOf/1/allOf/0/properties/doi"
                                                             },
                                                             "id": {
                                                                 "$ref": "#/allOf/2/properties/appendices/items/properties/id"
@@ -2421,7 +2402,7 @@
                                                                 ]
                                                             },
                                                             "doi": {
-                                                                "$ref": "#/allOf/2/properties/digest/properties/doi"
+                                                                "$ref": "#/allOf/1/allOf/0/properties/doi"
                                                             },
                                                             "id": {
                                                                 "$ref": "#/allOf/2/properties/appendices/items/properties/id"
@@ -2562,7 +2543,7 @@
                                                         ]
                                                     },
                                                     "doi": {
-                                                        "$ref": "#/allOf/2/properties/digest/properties/doi"
+                                                        "$ref": "#/allOf/1/allOf/0/properties/doi"
                                                     },
                                                     "id": {
                                                         "$ref": "#/allOf/2/properties/appendices/items/properties/id"
@@ -2581,7 +2562,7 @@
                                                         "description": "Content",
                                                         "type": "array",
                                                         "items": {
-                                                            "$ref": "#/allOf/2/properties/authorResponse/properties/content/items/oneOf/0/oneOf/0"
+                                                            "$ref": "#/allOf/2/properties/decisionLetter/properties/content/items/oneOf/0/oneOf/0"
                                                         },
                                                         "minItems": 1
                                                     }
@@ -2598,6 +2579,26 @@
                                         "$ref": "#/allOf/2/properties/body/items/allOf/0"
                                     }
                                 ]
+                            },
+                            "minItems": 1
+                        }
+                    },
+                    "required": [
+                        "doi",
+                        "description",
+                        "content"
+                    ]
+                },
+                "authorResponse": {
+                    "type": "object",
+                    "properties": {
+                        "doi": {
+                            "$ref": "#/allOf/1/allOf/0/properties/doi"
+                        },
+                        "content": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/allOf/2/properties/decisionLetter/properties/content/items"
                             },
                             "minItems": 1
                         }
