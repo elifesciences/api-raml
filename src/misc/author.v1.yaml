@@ -16,6 +16,11 @@ oneOf:
       - onBehalfOf
   - allOf:
       - properties:
+            additionalInformation:
+                type: array
+                items:
+                    type: string
+                    minLength: 1
             affiliations:
                 type: array
                 items:
