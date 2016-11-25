@@ -76,7 +76,10 @@
             "phoneNumbers": [
                 "+12025550182;ext=555"
             ],
-            "contribution": "Conception and design, Acquisition of data, Analysis and interpretation of data, Drafting or revising the article, Contributed unpublished essential data or reagents"
+            "contribution": "Conception and design, Acquisition of data, Analysis and interpretation of data, Drafting or revising the article, Contributed unpublished essential data or reagents",
+            "additionalInformation": [
+                "Some additional information"
+            ]
         },
         {
             "type": "group",
@@ -172,6 +175,9 @@
                     ],
                     "contribution": "Conception and design, Acquisition of data, Analysis and interpretation of data, Drafting or revising the article, Contributed unpublished essential data or reagents"
                 }
+            ],
+            "additionalInformation": [
+                "Some additional information"
             ]
         },
         {
