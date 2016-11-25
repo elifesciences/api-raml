@@ -12,8 +12,7 @@ properties:
         type: string
     updated:
         description: Updated date (UTC)
-        type: string
-        format: date-time
+        $ref: ../misc/date-time.v1.yaml
     image:
         type: object
         properties:

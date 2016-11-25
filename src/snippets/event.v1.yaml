@@ -12,12 +12,10 @@ properties:
         type: string
     starts:
         description: Start date/time (UTC)
-        type: string
-        format: date-time
+        $ref: ../misc/date-time.v1.yaml
     ends:
         description: Ends date/time (UTC)
-        type: string
-        format: date-time
+        $ref: ../misc/date-time.v1.yaml
     timezone:
         description: Timezone (from the IANA time zone database) for non-online events
         type: string

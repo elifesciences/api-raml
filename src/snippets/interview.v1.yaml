@@ -16,8 +16,7 @@ properties:
         minLength: 1
     published:
         title: Publication date (UTC)
-        type: string
-        format: date-time
+        $ref: ../misc/date-time.v1.yaml
 required:
   - id
   - interviewee

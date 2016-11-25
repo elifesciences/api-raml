@@ -57,7 +57,7 @@
             "id": "1",
             "title": "Media coverage: Slime can see",
             "impactStatement": "In their research paper – Cyanobacteria use micro-optics to sense light direction – Schuergers et al. reveal how bacterial cells act as the equivalent of a microscopic eyeball or the world’s oldest and smallest camera eye, allowing them to ‘see’.",
-            "published": "2016-07-08T08:33:25+00:00",
+            "published": "2016-07-08T08:33:25Z",
             "subjects": [
                 {
                     "id": "biophysics-structural-biology",
@@ -69,7 +69,7 @@
             "type": "labs-experiment",
             "number": 1,
             "title": "Experimental eLife Lens search page",
-            "published": "2015-04-01T11:32:47+00:00",
+            "published": "2015-04-01T11:32:47Z",
             "image": {
                 "thumbnail": {
                     "alt": "",
@@ -90,7 +90,7 @@
             "type": "podcast-episode",
             "number": 29,
             "title": "April/May 2016",
-            "published": "2016-05-27T13:19:42+00:00",
+            "published": "2016-05-27T13:19:42Z",
             "image": {
                 "thumbnail": {
                     "alt": "",
@@ -118,15 +118,15 @@
             "id": "1",
             "title": "Changing peer review in cancer research: a seminar at Fred Hutch",
             "impactStatement": "How eLife is influencing the culture of peer review",
-            "starts": "2016-04-22T20:00:00+00:00",
-            "ends": "2016-04-22T21:00:00+00:00",
+            "starts": "2016-04-22T20:00:00Z",
+            "ends": "2016-04-22T21:00:00Z",
             "timezone": "America/Seattle"
         },
         {
             "type": "collection",
             "id": "1",
             "title": "Tropical disease",
-            "updated": "2015-09-16T11:19:26+00:00",
+            "updated": "2015-09-16T11:19:26Z",
             "image": {
                 "thumbnail": {
                     "alt": "",
@@ -163,7 +163,7 @@
             },
             "title": "Controlling traffic",
             "impactStatement": "Ramanath Hegde is a Postdoctoral Fellow at the Institute of Protein Biochemistry in Naples, Italy, where he investigates ways of preventing cells from destroying mutant proteins.",
-            "published": "2016-01-29T16:22:28+00:00"
+            "published": "2016-01-29T16:22:28Z"
         }
     ]
 }
