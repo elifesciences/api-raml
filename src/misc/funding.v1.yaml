@@ -49,10 +49,8 @@ properties:
               - id
               - source
               - recipients
-        minItems: 1
     statement:
         type: string
         minLength: 1
 required:
-  - awards
   - statement
