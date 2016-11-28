@@ -2011,8 +2011,7 @@
                                     "source",
                                     "recipients"
                                 ]
-                            },
-                            "minItems": 1
+                            }
                         },
                         "statement": {
                             "type": "string",
@@ -2020,7 +2019,6 @@
                         }
                     },
                     "required": [
-                        "awards",
                         "statement"
                     ]
                 },
