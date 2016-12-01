@@ -16,12 +16,12 @@ properties:
                         title: 16:9 crop at 250px width
                         type: string
                         format: uri
-                        pattern: ^https://.*\.(tif|jpg)
+                        pattern: ^https://.*\.(tif|jpg|png)
                     500:
                         title: 16:9 crop at 500px width
                         type: string
                         format: uri
-                        pattern: ^https://.*\.(tif|jpg)
+                        pattern: ^https://.*\.(tif|jpg|png)
                 required:
                   - '250'
                   - '500'
@@ -32,12 +32,12 @@ properties:
                         title: 1:1 crop at 70px width
                         type: string
                         format: uri
-                        pattern: ^https://.*\.(tif|jpg)
+                        pattern: ^https://.*\.(tif|jpg|png)
                     140:
                         title: 1:1 crop at 140px width
                         type: string
                         format: uri
-                        pattern: ^https://.*\.(tif|jpg)
+                        pattern: ^https://.*\.(tif|jpg|png)
                 required:
                   - '70'
                   - '140'
