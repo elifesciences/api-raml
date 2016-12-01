@@ -46,7 +46,7 @@ definitions:
                 title: Image URI
                 type: string
                 format: uri
-                pattern: ^https://.*\.(tif|jpg|png)
+                pattern: ^https://.*\.(tif|jpg|png|gif)
             attribution:
                 title: Attribution
                 type: array
