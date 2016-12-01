@@ -16,12 +16,12 @@ properties:
                         title: 2:1 crop at 900px width
                         type: string
                         format: uri
-                        pattern: ^https://
+                        pattern: ^https://.*\.(tif|jpg)
                     1800:
                         title: 2:1 crop at 1800px width
                         type: string
                         format: uri
-                        pattern: ^https://
+                        pattern: ^https://.*\.(tif|jpg)
                 required:
                   - '900'
                   - '1800'
