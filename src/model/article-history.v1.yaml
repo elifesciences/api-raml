@@ -9,23 +9,12 @@ properties:
         type: string
         format: date
     versions:
+        description: List of article versions, sorted by version in descending order
         type: array
         items:
-            type: object
-            properties:
-                version:
-                    type: integer
-                    minimum: 1
-                status:
-                    type: string
-                    enum:
-                        - poa
-                        - vor
-                published:
-                    $ref: ../misc/date-time.v1.yaml
-            required:
-                - version
-                - status
+          - oneOf:
+              - $ref: ../snippets/article-poa.v1.yaml
+              - $ref: ../snippets/article-vor.v1.yaml
         minItems: 1
 dependencies:
     received:
