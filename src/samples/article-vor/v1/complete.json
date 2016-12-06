@@ -497,6 +497,53 @@
                                     "filename": "elife-00011-fig2-data1-v1.txt"
                                 }
                             ]
+                        },
+                        {
+                            "type": "video",
+                            "doi": "10.7554/eLife.00569.020",
+                            "id": "fig1v1",
+                            "label": "Figure 1—Video 1",
+                            "title": "<i>B. schlosseri</i> blood circulation",
+                            "caption": [
+                                {
+                                    "type": "paragraph",
+                                    "text": "(<b>A)</b> Time-lapse acquisition of blood flow in the blood vessels (bv) and ampullae of a chimeric <em>B. schlosseri</em> colony, generated from a fusion between a mother and its offspring (fused). (<b>B</b>) Ampullae contract, buds develop, and a colony gets ready to replace the old generation. (<b>C</b>) Old generation zooids are getting resorbed (res. z) and replaced by the new generation (buds). (<b>D</b>) A heart beating and pumping blood in the primary bud of a different colony. (<b>E</b>) Blood flow through a common blood vessel between two allogeneic/compatible colonies, creating a natural chimera."
+                                }
+                            ],
+                            "sources": [
+                                {
+                                    "mediaType": "video/mp4; codecs=\"avc1.42E01E, mp4a.40.2\"",
+                                    "uri": "https://static-movie-usa.glencoesoftware.com/mp4/10.7554/659/0f10378e095dde7aaf579af504c4bfdc6fb86550/elife-00569-media1.mp4"
+                                },
+                                {
+                                    "mediaType": "video/webm; codecs=\"vp8.0, vorbis\"",
+                                    "uri": "https://static-movie-usa.glencoesoftware.com/webm/10.7554/659/0f10378e095dde7aaf579af504c4bfdc6fb86550/elife-00569-media1.webm"
+                                },
+                                {
+                                    "mediaType": "video/ogg; codecs=\"theora, vorbis\"",
+                                    "uri": "https://static-movie-usa.glencoesoftware.com/ogv/10.7554/659/0f10378e095dde7aaf579af504c4bfdc6fb86550/elife-00569-media1.ogv"
+                                }
+                            ],
+                            "image": "https://static-movie-usa.glencoesoftware.com/jpg/10.7554/659/0f10378e095dde7aaf579af504c4bfdc6fb86550/elife-00569-media1.jpg",
+                            "width": 640,
+                            "height": 480,
+                            "sourceData": [
+                                {
+                                    "doi": "10.7554/eLife.00666.015",
+                                    "id": "video1sdata1",
+                                    "label": "Video 1—Source data 1",
+                                    "title": "Title of the source code",
+                                    "caption": [
+                                        {
+                                            "type": "paragraph",
+                                            "text": "Legend of the source code."
+                                        }
+                                    ],
+                                    "mediaType": "text/plain",
+                                    "uri": "https://elife-publishing-cdn.s3.amazonaws.com/00011/elife-00011-fig2-data1-v1.txt",
+                                    "filename": "elife-00011-fig2-data1-v1.txt"
+                                }
+                            ]
                         }
                     ]
                 },
