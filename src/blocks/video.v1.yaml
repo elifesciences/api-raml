@@ -46,7 +46,7 @@ properties:
         title: Image URI
         type: string
         format: uri
-        pattern: ^https://
+        pattern: ^https://.*\.(tif|jpg|png|gif)
     width:
         title: Width
         type: integer
