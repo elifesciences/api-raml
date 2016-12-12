@@ -1,48 +1,28 @@
 $schema: http://json-schema.org/draft-04/schema#
 title: Table
 type: object
-properties:
-    type:
-        type: string
-        enum:
-          - table
-    doi:
-        $ref: ../misc/doi.v1.yaml
-    id:
-        $ref: ../misc/html-id.v1.yaml
-    label:
-        title: Label
-        type: string
-        minLength: 1
-    title:
-        title: Title
-        type: string
-        minLength: 1
-    caption:
-        title: Caption
-        type: array
-        items:
-            $ref: ../blocks/paragraph.v1.yaml
-        minItems: 1
-    tables:
-        type: array
-        items:
-            title: HTML table
+allOf:
+  - $ref: ../misc/asset.v1.yaml
+  - properties:
+        type:
             type: string
-            pattern: ^<table>[\s\S]+</table>$
-    footnotes:
-        type: array
-        items:
-            $ref: ../misc/footnote.v1.yaml
-    sourceData:
-        title: Source data
-        type: array
-        items:
-            $ref: ../misc/file.v1.yaml
-required:
-  - type
-  - tables
-dependencies:
-    caption: [title]
-    label: [title]
-    title: [label]
+            enum:
+              - table
+        tables:
+            type: array
+            items:
+                title: HTML table
+                type: string
+                pattern: ^<table>[\s\S]+</table>$
+        footnotes:
+            type: array
+            items:
+                $ref: ../misc/footnote.v1.yaml
+        sourceData:
+            title: Source data
+            type: array
+            items:
+                $ref: ../misc/file.v1.yaml
+    required:
+      - type
+      - tables
