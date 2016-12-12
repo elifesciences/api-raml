@@ -67,6 +67,11 @@ allOf:
                                   - external-article
                       - $ref: ../misc/external-article.v1.yaml
                 uniqueItems: true
+        additionalFiles:
+            title: Additional files
+            type: array
+            items:
+                $ref: ../misc/file.v1.yaml
     required:
       - copyright
       - authors

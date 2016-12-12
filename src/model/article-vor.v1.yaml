@@ -61,11 +61,6 @@ allOf:
             items:
                 $ref: ../blocks/paragraph.v1.yaml
             minItems: 1
-        additionalFiles:
-            title: Additional files
-            type: array
-            items:
-                $ref: ../misc/file.v1.yaml
         dataSets:
             type: object
             generated:
