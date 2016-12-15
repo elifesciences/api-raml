@@ -528,6 +528,51 @@ traits:
                                     Demonstration of the list being empty (the first page will always return a valid result).
                                 value: !include samples/community-list/v1/empty.json
 
+/covers:
+    type: collection
+    description: |
+        Covers
+    get:
+        description: |
+            Get a list of covers.
+        is:
+          - paged: { resources: Covers }
+        responses:
+            200:
+                description: |
+                    List of covers.
+                body:
+                    application/vnd.elife.cover-list+json;version=1:
+                        schema: !include ../dist/model/cover-list.v1.json
+                        examples:
+                            paginated:
+                                displayName: First page
+                                description: |
+                                    List is split over two pages.
+                                value: !include samples/cover-list/v1/first-page.json
+                            empty:
+                                displayName: Empty list
+                                description: |
+                                    Demonstration of the list being empty (the first page will always return a valid result).
+                                value: !include samples/cover-list/v1/empty.json
+
+    /current:
+        type: collection
+        description: |
+            Current covers
+        get:
+            description: |
+                Get a list of current covers.
+            responses:
+                200:
+                    description: |
+                        List of current covers.
+                    body:
+                        application/vnd.elife.cover-list+json;version=1:
+                            schema: !include ../dist/model/cover-list.v1.json
+                            example:
+                                value: !include samples/cover-list/v1/first-page.json
+
 /events:
     type: collection
     description: |
