@@ -1,40 +1,20 @@
 $schema: http://json-schema.org/draft-04/schema#
 title: File
 type: object
-properties:
-    doi:
-        $ref: doi.v1.yaml
-    id:
-        $ref: html-id.v1.yaml
-    label:
-        title: Label
-        type: string
-        minLength: 1
-    title:
-        title: Title
-        type: string
-        minLength: 1
-    caption:
-        title: Caption
-        type: array
-        items:
-            $ref: ../blocks/paragraph.v1.yaml
-        minItems: 1
-    mediaType:
-        $ref: media-type.v1.yaml
-    uri:
-        title: Source data URI
-        type: string
-        format: uri
-    filename:
-        title: Filename
-        type: string
-        pattern: ^[A-Za-z0-9_. ()-]+\.[a-z0-9]+$
-required:
-  - mediaType
-  - uri
-  - filename
-dependencies:
-    caption: [title]
-    label: [title]
-    title: [label]
+allOf:
+  - $ref: asset.v1.yaml
+  - properties:
+        mediaType:
+            $ref: media-type.v1.yaml
+        uri:
+            title: Source data URI
+            type: string
+            format: uri
+        filename:
+            title: Filename
+            type: string
+            pattern: ^[A-Za-z0-9_. ()-]+\.[a-z0-9]+$
+    required:
+      - mediaType
+      - uri
+      - filename

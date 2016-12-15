@@ -1,71 +1,51 @@
 $schema: http://json-schema.org/draft-04/schema#
 title: Video
 type: object
-properties:
-    type:
-        type: string
-        enum:
-          - video
-    doi:
-        $ref: ../misc/doi.v1.yaml
-    id:
-        $ref: ../misc/html-id.v1.yaml
-    label:
-        title: Label
-        type: string
-        minLength: 1
-    title:
-        title: Title
-        type: string
-        minLength: 1
-    caption:
-        title: Caption
-        type: array
-        items:
-            $ref: ../blocks/paragraph.v1.yaml
-        minItems: 1
-    sources:
-        type: array
-        items:
-            type: object
-            properties:
-                mediaType:
-                    allOf:
-                      - $ref: ../misc/media-type.v1.yaml
-                      - pattern: ^video/
-                uri:
-                    title: URI
-                    type: string
-                    format: uri
-                    pattern: ^https://
-            required:
-              - mediaType
-              - uri
-        minItems: 1
-    image:
-        title: Image URI
-        type: string
-        format: uri
-        pattern: ^https://
-    width:
-        title: Width
-        type: integer
-        minimum: 1
-    height:
-        title: Height
-        type: integer
-        minimum: 1
-    sourceData:
-        title: Source data
-        type: array
-        items:
-            $ref: ../misc/file.v1.yaml
-required:
-  - type
-  - sources
-  - width
-  - height
-dependencies:
-    caption: [title]
-    label: [title]
-    title: [label]
+allOf:
+  - $ref: ../misc/asset.v1.yaml
+  - properties:
+        type:
+            type: string
+            enum:
+              - video
+        sources:
+            type: array
+            items:
+                type: object
+                properties:
+                    mediaType:
+                        allOf:
+                          - $ref: ../misc/media-type.v1.yaml
+                          - pattern: ^video/
+                    uri:
+                        title: URI
+                        type: string
+                        format: uri
+                        pattern: ^https://
+                required:
+                  - mediaType
+                  - uri
+            minItems: 1
+        image:
+            title: Image URI
+            type: string
+            format: uri
+            pattern: ^https://
+        width:
+            title: Width
+            type: integer
+            minimum: 1
+        height:
+            title: Height
+            type: integer
+            minimum: 1
+        sourceData:
+            title: Source data
+            type: array
+            items:
+                $ref: ../misc/file.v1.yaml
+    required:
+      - type
+      - sources
+      - width
+      - height

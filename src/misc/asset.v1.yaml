@@ -1,0 +1,27 @@
+$schema: http://json-schema.org/draft-04/schema#
+title: Asset
+type: object
+properties:
+    doi:
+        $ref: doi.v1.yaml
+    id:
+        $ref: html-id.v1.yaml
+    label:
+        title: Label
+        type: string
+        minLength: 1
+    title:
+        title: Title
+        type: string
+        minLength: 1
+    caption:
+        title: Caption
+        type: array
+        items:
+            oneOf:
+              - $ref: ../blocks/mathml.v1.yaml
+              - $ref: ../blocks/paragraph.v1.yaml
+        minItems: 1
+dependencies:
+    caption: [title]
+    label: [title]
