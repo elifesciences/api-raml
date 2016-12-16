@@ -1,0 +1,25 @@
+$schema: http://json-schema.org/draft-04/schema#
+title: Code
+type: object
+properties:
+    type:
+        type: string
+        enum:
+          - code
+    language:
+        title: Language name
+        description: |
+            For example:
+              - Python
+              - Java
+              - PHP
+              - JavaScript
+        type: string
+    code:
+        title: Code
+        description: Code, contain nessecary indentation and line breaks.
+        type: string
+        minLength: 1
+required:
+  - type
+  - code
