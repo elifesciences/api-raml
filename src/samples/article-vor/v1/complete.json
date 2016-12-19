@@ -1448,23 +1448,23 @@
                         {
                             "type": "paragraph",
                             "text": "The composite model of DH3 and DH4 was used to estimate the cranial capacity for the smaller morphotype. In GeoMagic Studio 14.0, the endocranial surface of the composite was carefully selected from the ectocranial surface and copied as a new object. In order to obtain a volume calculation the model has to be a closed surface, meaning that all of the holes in the surface model had to be filled. Small holes in the model were filled using the ‘Fill by Curvature’ function. Larger holes were filled in by sections. For example, the cranial base was filled in using a number of transverse sections, so that in the absence of the cranial base the contour of the various cranial fossae and the petrous portions of the temporal could be preserved as best as possible. When appropriate (e.g., around angular portions of the petrous bone), small sections were filled using a flat hole filling function. The new surfaces created by the hole-filling mechanism were carefully monitored and repeated until an acceptable model that appeared to best approximate the missing portions was obtained. The result is a closed model approximation of the endocranium, of which a volume can be calculated by GeoMagic Studio (Figure 19, Figure 20). The volume of the smaller composite cranium (DH3 and DH4) indicates a cranial capacity of approximately 465 cm<sup>3</sup>."
-                        },
-                        {
-                            "type": "image",
-                            "doi": "10.7554/eLife.09560.024",
-                            "id": "fig19",
-                            "label": "Figure 19",
-                            "title": "Virtual reconstruction of the endocranium of the composite cranium from DH3 and DH4.",
-                            "caption": [
-                                {
-                                    "type": "paragraph",
-                                    "text": "(<b>A</b>) Lateral view. (<b>B</b>) Superior view. (<b>C</b>) Inferior view. In all views, anterior is to towards the left."
-                                }
-                            ],
-                            "alt": "",
-                            "uri": "https://elife-publishing-cdn.s3.amazonaws.com/09560/elife-09560-fig19-v1.jpg"
                         }
                     ]
+                },
+                {
+                    "type": "image",
+                    "doi": "10.7554/eLife.09560.024",
+                    "id": "fig19",
+                    "label": "Figure 19",
+                    "title": "Virtual reconstruction of the endocranium of the composite cranium from DH3 and DH4.",
+                    "caption": [
+                        {
+                            "type": "paragraph",
+                            "text": "(<b>A</b>) Lateral view. (<b>B</b>) Superior view. (<b>C</b>) Inferior view. In all views, anterior is to towards the left."
+                        }
+                    ],
+                    "alt": "",
+                    "uri": "https://elife-publishing-cdn.s3.amazonaws.com/09560/elife-09560-fig19-v1.jpg"
                 }
             ]
         }
