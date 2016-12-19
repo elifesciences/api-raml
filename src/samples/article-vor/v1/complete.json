@@ -623,6 +623,10 @@
                             "filename": "elife-00011-fig2-data1-v1.txt"
                         }
                     ]
+                },
+                {
+                    "type": "code",
+                    "code": "/path/rosetta_scripts.default.linuxgccrelease\n  -database /path/main/database\n  -parser:protocol rosetta_scripts_protocol.xml\n  -in:file:native BINDI.pdb\n  -nstruct 3\n  -ex1\n  -ex2\n  -ignore_zero_occupancy false"
                 }
             ]
         }
