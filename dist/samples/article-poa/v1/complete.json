@@ -154,5 +154,138 @@
                 "text": "The epidermal growth factor receptor (EGFR) is activated by dimerization, but activation also generates higher-order multimers, whose nature and function are poorly understood. We have characterized ligand-induced dimerization and multimerization of EGFR using single-molecule analysis, and show that multimerization can be blocked by mutations in a specific region of Domain IV of the extracellular module. These mutations reduce autophosphorylation of the C-terminal tail of EGFR and attenuate phosphorylation of phosphatidyl inositol 3-kinase, which is recruited by EGFR. The catalytic activity of EGFR is switched on through allosteric activation of one kinase domain by another, and we show that if this is restricted to dimers, then sites in the tail that are proximal to the kinase domain are phosphorylated in only one subunit. We propose a structural model for EGFR multimerization through self-association of ligand-bound dimers, in which the majority of kinase domains are activated cooperatively, thereby boosting tail phosphorylation."
             }
         ]
-    }
+    },
+    "dataSets": {
+        "generated": [
+            {
+                "id": "dataset1",
+                "date": "2016-11-16",
+                "authors": [
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "Person One",
+                            "index": "One, Person"
+                        }
+                    },
+                    {
+                        "type": "group",
+                        "name": "Group One"
+                    }
+                ],
+                "authorsEtAl": true,
+                "title": "Complete dataset",
+                "dataId": "123456ABC",
+                "details": "Some details.",
+                "doi": "10.2210/pdb4qen/pdb",
+                "uri": "https://doi.org/10.2210/pdb4qen/pdb"
+            },
+            {
+                "id": "dataset2",
+                "date": "2016",
+                "authors": [
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "Person One",
+                            "index": "One, Person"
+                        }
+                    }
+                ],
+                "title": "Minimum dataset"
+            }
+        ],
+        "used": [
+            {
+                "id": "dataset1",
+                "date": "2016-11-16",
+                "authors": [
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "Person One",
+                            "index": "One, Person"
+                        }
+                    },
+                    {
+                        "type": "group",
+                        "name": "Group One"
+                    }
+                ],
+                "authorsEtAl": true,
+                "title": "Complete dataset",
+                "dataId": "123456ABC",
+                "details": "Some details.",
+                "doi": "10.2210/pdb4qen/pdb",
+                "uri": "https://doi.org/10.2210/pdb4qen/pdb"
+            },
+            {
+                "id": "dataset2",
+                "date": "2016",
+                "authors": [
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "Person One",
+                            "index": "One, Person"
+                        }
+                    }
+                ],
+                "title": "Minimum dataset"
+            }
+        ]
+    },
+    "funding": {
+        "awards": [
+            {
+                "id": "par-1",
+                "source": {
+                    "funderId": "10.13039/501100001659",
+                    "name": [
+                        "Deutsche Forschungsgemeinschaft"
+                    ]
+                },
+                "awardId": "SCHE 1575/3-1",
+                "recipients": [
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "Lee R Berger",
+                            "index": "Berger, Lee R"
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "par-3",
+                "source": {
+                    "name": [
+                        "Bundesministerium für Bildung und Forschung"
+                    ]
+                },
+                "recipients": [
+                    {
+                        "type": "group",
+                        "name": "Naledi group"
+                    }
+                ]
+            }
+        ],
+        "statement": "The funders had no role in study design, data collection and interpretation, or the decision to submit the work for publication."
+    },
+    "additionalFiles": [
+        {
+            "id": "fig-data",
+            "title": "Download zip",
+            "caption": [
+                {
+                    "type": "paragraph",
+                    "text": "Any figures and tables for this article are included in the PDF. The zip folder contains additional supplemental files."
+                }
+            ],
+            "mediaType": "application/zip",
+            "uri": "https://elife-publishing-cdn.s3.amazonaws.com/21393/elife-21393-supp-v1.zip",
+            "filename": "elife-21393-supp-v1.zip"
+        }
+    ]
 }

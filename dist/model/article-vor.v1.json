@@ -27,7 +27,7 @@
                             "type": "object",
                             "properties": {
                                 "doi": {
-                                    "$ref": "#/allOf/2/properties/digest/properties/doi"
+                                    "$ref": "#/allOf/2/properties/decisionLetter/properties/doi"
                                 }
                             }
                         },
@@ -148,7 +148,7 @@
                             ]
                         },
                         "doi": {
-                            "$ref": "#/allOf/2/properties/digest/properties/doi"
+                            "$ref": "#/allOf/2/properties/decisionLetter/properties/doi"
                         },
                         "authorLine": {
                             "description": "For example:\n  - Ian T Baldwin\n  - Randy Schekman, Mark Patterson\n  - Lee R Berger et al\n",
@@ -235,7 +235,7 @@
                                 "content": {
                                     "type": "array",
                                     "items": {
-                                        "$ref": "#/allOf/2/properties/ethics/items"
+                                        "$ref": "#/allOf/2/properties/acknowledgements/items"
                                     },
                                     "minItems": 1
                                 }
@@ -528,7 +528,7 @@
                                                                     "biography": {
                                                                         "type": "array",
                                                                         "items": {
-                                                                            "$ref": "#/allOf/2/properties/ethics/items"
+                                                                            "$ref": "#/allOf/2/properties/acknowledgements/items"
                                                                         }
                                                                     },
                                                                     "deceased": {
@@ -763,6 +763,274 @@
                                 ],
                                 "uniqueItems": true
                             }
+                        },
+                        "dataSets": {
+                            "type": "object",
+                            "generated": {
+                                "type": "array",
+                                "items": {
+                                    "$schema": "http://json-schema.org/draft-04/schema#",
+                                    "title": "Data set",
+                                    "type": "object",
+                                    "properties": {
+                                        "id": {
+                                            "$ref": "#/allOf/2/properties/appendices/items/properties/id"
+                                        },
+                                        "date": {
+                                            "$ref": "#/allOf/2/properties/references/items/allOf/0/properties/date"
+                                        },
+                                        "authors": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "#/allOf/1/allOf/1/properties/authors/items"
+                                            },
+                                            "minItems": 1
+                                        },
+                                        "authorsEtAl": {
+                                            "description": "If there are more authors.",
+                                            "type": "boolean",
+                                            "default": false
+                                        },
+                                        "title": {
+                                            "type": "string",
+                                            "minLength": 1
+                                        },
+                                        "dataId": {
+                                            "title": "Data ID",
+                                            "type": "string",
+                                            "minLength": 1
+                                        },
+                                        "details": {
+                                            "type": "string",
+                                            "minLength": 1
+                                        },
+                                        "doi": {
+                                            "$ref": "#/allOf/2/properties/decisionLetter/properties/doi"
+                                        },
+                                        "uri": {
+                                            "type": "string",
+                                            "format": "uri"
+                                        }
+                                    },
+                                    "required": [
+                                        "id",
+                                        "date",
+                                        "authors",
+                                        "title"
+                                    ]
+                                }
+                            },
+                            "used": {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/allOf/1/allOf/1/properties/dataSets/generated/items"
+                                }
+                            }
+                        },
+                        "funding": {
+                            "$schema": "http://json-schema.org/draft-04/schema#",
+                            "title": "Funding",
+                            "type": "object",
+                            "properties": {
+                                "awards": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "properties": {
+                                            "id": {
+                                                "$ref": "#/allOf/2/properties/appendices/items/properties/id"
+                                            },
+                                            "source": {
+                                                "allOf": [
+                                                    {
+                                                        "$ref": "#/allOf/2/properties/references/items/definitions/book/properties/publisher"
+                                                    },
+                                                    {
+                                                        "properties": {
+                                                            "funderId": {
+                                                                "$ref": "#/allOf/2/properties/decisionLetter/properties/doi"
+                                                            }
+                                                        }
+                                                    }
+                                                ]
+                                            },
+                                            "awardId": {
+                                                "type": "string",
+                                                "minLength": 1
+                                            },
+                                            "recipients": {
+                                                "type": "array",
+                                                "items": {
+                                                    "oneOf": [
+                                                        {
+                                                            "allOf": [
+                                                                {
+                                                                    "type": "object",
+                                                                    "properties": {
+                                                                        "type": {
+                                                                            "type": "string",
+                                                                            "enum": [
+                                                                                "person"
+                                                                            ]
+                                                                        }
+                                                                    },
+                                                                    "required": [
+                                                                        "type"
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    "$ref": "#/allOf/1/allOf/1/properties/reviewers/items/allOf/0"
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "type": "object",
+                                                            "properties": {
+                                                                "type": {
+                                                                    "type": "string",
+                                                                    "enum": [
+                                                                        "group"
+                                                                    ]
+                                                                },
+                                                                "name": {
+                                                                    "type": "string",
+                                                                    "minLength": 1
+                                                                }
+                                                            },
+                                                            "required": [
+                                                                "type",
+                                                                "name"
+                                                            ]
+                                                        }
+                                                    ]
+                                                },
+                                                "minItems": 1
+                                            }
+                                        },
+                                        "required": [
+                                            "id",
+                                            "source",
+                                            "recipients"
+                                        ]
+                                    }
+                                },
+                                "statement": {
+                                    "type": "string",
+                                    "minLength": 1
+                                }
+                            },
+                            "required": [
+                                "statement"
+                            ]
+                        },
+                        "additionalFiles": {
+                            "title": "Additional files",
+                            "type": "array",
+                            "items": {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "title": "File",
+                                "type": "object",
+                                "allOf": [
+                                    {
+                                        "$schema": "http://json-schema.org/draft-04/schema#",
+                                        "title": "Asset",
+                                        "type": "object",
+                                        "properties": {
+                                            "doi": {
+                                                "$ref": "#/allOf/2/properties/decisionLetter/properties/doi"
+                                            },
+                                            "id": {
+                                                "$ref": "#/allOf/2/properties/appendices/items/properties/id"
+                                            },
+                                            "label": {
+                                                "title": "Label",
+                                                "type": "string",
+                                                "minLength": 1
+                                            },
+                                            "title": {
+                                                "title": "Title",
+                                                "type": "string",
+                                                "minLength": 1
+                                            },
+                                            "caption": {
+                                                "title": "Caption",
+                                                "type": "array",
+                                                "items": {
+                                                    "oneOf": [
+                                                        {
+                                                            "$schema": "http://json-schema.org/draft-04/schema#",
+                                                            "title": "MathML",
+                                                            "type": "object",
+                                                            "properties": {
+                                                                "type": {
+                                                                    "type": "string",
+                                                                    "enum": [
+                                                                        "mathml"
+                                                                    ]
+                                                                },
+                                                                "id": {
+                                                                    "$ref": "#/allOf/2/properties/appendices/items/properties/id"
+                                                                },
+                                                                "label": {
+                                                                    "type": "string"
+                                                                },
+                                                                "mathml": {
+                                                                    "title": "MathML",
+                                                                    "type": "string",
+                                                                    "pattern": "^<math>[\\s\\S]+</math>$"
+                                                                }
+                                                            },
+                                                            "required": [
+                                                                "type",
+                                                                "mathml"
+                                                            ]
+                                                        },
+                                                        {
+                                                            "$ref": "#/allOf/2/properties/acknowledgements/items"
+                                                        }
+                                                    ]
+                                                },
+                                                "minItems": 1
+                                            }
+                                        },
+                                        "dependencies": {
+                                            "caption": [
+                                                "title"
+                                            ],
+                                            "label": [
+                                                "title"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "properties": {
+                                            "mediaType": {
+                                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                                "title": "Media type",
+                                                "type": "string",
+                                                "pattern": "^([a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+/[a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+)(; *[a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+=(([a-zA-Z0-9\\.\\-]+)|(\".+\")))*$"
+                                            },
+                                            "uri": {
+                                                "title": "Source data URI",
+                                                "type": "string",
+                                                "format": "uri"
+                                            },
+                                            "filename": {
+                                                "title": "Filename",
+                                                "type": "string",
+                                                "pattern": "^[A-Za-z0-9_. ()-]+\\.[a-z0-9]+$"
+                                            }
+                                        },
+                                        "required": [
+                                            "id",
+                                            "title",
+                                            "mediaType",
+                                            "uri",
+                                            "filename"
+                                        ]
+                                    }
+                                ]
+                            }
                         }
                     },
                     "required": [
@@ -785,15 +1053,12 @@
                     "type": "object",
                     "properties": {
                         "doi": {
-                            "$schema": "http://json-schema.org/draft-04/schema#",
-                            "title": "DOI",
-                            "type": "string",
-                            "pattern": "^10[.][0-9]{4,}[^\\s\"/<>]*/[^\\s\"]+$"
+                            "$ref": "#/allOf/2/properties/decisionLetter/properties/doi"
                         },
                         "content": {
                             "type": "array",
                             "items": {
-                                "$ref": "#/allOf/2/properties/ethics/items"
+                                "$ref": "#/allOf/2/properties/acknowledgements/items"
                             },
                             "minItems": 1
                         }
@@ -830,7 +1095,7 @@
                                         "description": "Content",
                                         "type": "array",
                                         "items": {
-                                            "$ref": "#/allOf/2/properties/authorResponse/properties/content/items"
+                                            "$ref": "#/allOf/2/properties/decisionLetter/properties/content/items"
                                         },
                                         "minItems": 1
                                     }
@@ -866,7 +1131,11 @@
                                         "type": "string"
                                     },
                                     "date": {
-                                        "$ref": "#/allOf/2/properties/dataSets/generated/items/properties/date"
+                                        "$schema": "http://json-schema.org/draft-04/schema#",
+                                        "title": "Partial date",
+                                        "description": "A date, where the month and/or day may not be known/available.\n\nFor example:\n  - 2016\n  - 2016-09\n  - 2016-09-16\n",
+                                        "type": "string",
+                                        "pattern": "^[1-2][0-9]{3}(-((0[1-9])|(1[0-2]))(-((0[1-9])|([1-2][0-9])|(3[0-1])))?)?$"
                                     },
                                     "discriminator": {
                                         "description": "If the first author of a reference has two or more references published in the same year in the same\nlist, this property will be a letter (starting at 'a') that can be used to distinguish between them.\n\nFor example, 'John Smith, 2016a' and 'John Smith, 2016b' would refer to two references, one with the\nyear discriminator 'a' and a second with 'b'.\n",
@@ -1044,7 +1313,7 @@
                                                 "$ref": "#/allOf/2/properties/references/items/definitions/pages"
                                             },
                                             "doi": {
-                                                "$ref": "#/allOf/2/properties/digest/properties/doi"
+                                                "$ref": "#/allOf/2/properties/decisionLetter/properties/doi"
                                             },
                                             "uri": {
                                                 "type": "string",
@@ -1156,7 +1425,7 @@
                                                         "$ref": "#/allOf/2/properties/references/items/definitions/book/properties/publisher"
                                                     },
                                                     "doi": {
-                                                        "$ref": "#/allOf/2/properties/digest/properties/doi"
+                                                        "$ref": "#/allOf/2/properties/decisionLetter/properties/doi"
                                                     },
                                                     "uri": {
                                                         "type": "string",
@@ -1210,7 +1479,7 @@
                                                 "$ref": "#/allOf/2/properties/references/items/definitions/pages"
                                             },
                                             "doi": {
-                                                "$ref": "#/allOf/2/properties/digest/properties/doi"
+                                                "$ref": "#/allOf/2/properties/decisionLetter/properties/doi"
                                             },
                                             "pmid": {
                                                 "$ref": "#/allOf/2/properties/references/items/definitions/book/properties/pmid"
@@ -1364,7 +1633,7 @@
                                                 "minLength": 1
                                             },
                                             "doi": {
-                                                "$ref": "#/allOf/2/properties/digest/properties/doi"
+                                                "$ref": "#/allOf/2/properties/decisionLetter/properties/doi"
                                             },
                                             "uri": {
                                                 "type": "string",
@@ -1412,7 +1681,7 @@
                                                 "$ref": "#/allOf/2/properties/references/items/definitions/book/properties/publisher"
                                             },
                                             "doi": {
-                                                "$ref": "#/allOf/2/properties/digest/properties/doi"
+                                                "$ref": "#/allOf/2/properties/decisionLetter/properties/doi"
                                             },
                                             "pmid": {
                                                 "$ref": "#/allOf/2/properties/references/items/definitions/book/properties/pmid"
@@ -1498,7 +1767,7 @@
                                                 "$ref": "#/allOf/2/properties/references/items/definitions/book/properties/publisher"
                                             },
                                             "doi": {
-                                                "$ref": "#/allOf/2/properties/digest/properties/doi"
+                                                "$ref": "#/allOf/2/properties/decisionLetter/properties/doi"
                                             },
                                             "uri": {
                                                 "type": "string",
@@ -1547,7 +1816,7 @@
                                                 "minLength": 1
                                             },
                                             "accessed": {
-                                                "$ref": "#/allOf/2/properties/dataSets/generated/items/properties/date"
+                                                "$ref": "#/allOf/2/properties/references/items/allOf/0/properties/date"
                                             },
                                             "uri": {
                                                 "type": "string",
@@ -1670,7 +1939,7 @@
                                         "minLength": 1
                                     },
                                     "doi": {
-                                        "$ref": "#/allOf/2/properties/digest/properties/doi"
+                                        "$ref": "#/allOf/2/properties/decisionLetter/properties/doi"
                                     },
                                     "pmid": {
                                         "$schema": "http://json-schema.org/draft-04/schema#",
@@ -1743,7 +2012,7 @@
                                 "pattern": "^[^\\s]+$"
                             },
                             "doi": {
-                                "$ref": "#/allOf/2/properties/digest/properties/doi"
+                                "$ref": "#/allOf/2/properties/decisionLetter/properties/doi"
                             },
                             "title": {
                                 "type": "string",
@@ -1752,7 +2021,7 @@
                             "content": {
                                 "type": "array",
                                 "items": {
-                                    "$ref": "#/allOf/2/properties/authorResponse/properties/content/items"
+                                    "$ref": "#/allOf/2/properties/decisionLetter/properties/content/items"
                                 },
                                 "minItems": 1
                             }
@@ -1765,119 +2034,6 @@
                     }
                 },
                 "acknowledgements": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "#/allOf/2/properties/ethics/items"
-                    },
-                    "minItems": 1
-                },
-                "additionalFiles": {
-                    "title": "Additional files",
-                    "type": "array",
-                    "items": {
-                        "$schema": "http://json-schema.org/draft-04/schema#",
-                        "title": "File",
-                        "type": "object",
-                        "allOf": [
-                            {
-                                "$ref": "#/allOf/2/properties/authorResponse/properties/content/items/oneOf/0/oneOf/0/oneOf/1/definitions/image/allOf/0"
-                            },
-                            {
-                                "properties": {
-                                    "mediaType": {
-                                        "$schema": "http://json-schema.org/draft-04/schema#",
-                                        "title": "Media type",
-                                        "type": "string",
-                                        "pattern": "^([a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+/[a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+)(; *[a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+=(([a-zA-Z0-9\\.\\-]+)|(\".+\")))*$"
-                                    },
-                                    "uri": {
-                                        "title": "Source data URI",
-                                        "type": "string",
-                                        "format": "uri"
-                                    },
-                                    "filename": {
-                                        "title": "Filename",
-                                        "type": "string",
-                                        "pattern": "^[A-Za-z0-9_. ()-]+\\.[a-z0-9]+$"
-                                    }
-                                },
-                                "required": [
-                                    "mediaType",
-                                    "uri",
-                                    "filename"
-                                ]
-                            }
-                        ]
-                    }
-                },
-                "dataSets": {
-                    "type": "object",
-                    "generated": {
-                        "type": "array",
-                        "items": {
-                            "$schema": "http://json-schema.org/draft-04/schema#",
-                            "title": "Data set",
-                            "type": "object",
-                            "properties": {
-                                "id": {
-                                    "$ref": "#/allOf/2/properties/appendices/items/properties/id"
-                                },
-                                "date": {
-                                    "$schema": "http://json-schema.org/draft-04/schema#",
-                                    "title": "Partial date",
-                                    "description": "A date, where the month and/or day may not be known/available.\n\nFor example:\n  - 2016\n  - 2016-09\n  - 2016-09-16\n",
-                                    "type": "string",
-                                    "pattern": "^[1-2][0-9]{3}(-((0[1-9])|(1[0-2]))(-((0[1-9])|([1-2][0-9])|(3[0-1])))?)?$"
-                                },
-                                "authors": {
-                                    "type": "array",
-                                    "items": {
-                                        "$ref": "#/allOf/1/allOf/1/properties/authors/items"
-                                    },
-                                    "minItems": 1
-                                },
-                                "authorsEtAl": {
-                                    "description": "If there are more authors.",
-                                    "type": "boolean",
-                                    "default": false
-                                },
-                                "title": {
-                                    "type": "string",
-                                    "minLength": 1
-                                },
-                                "dataId": {
-                                    "title": "Data ID",
-                                    "type": "string",
-                                    "minLength": 1
-                                },
-                                "details": {
-                                    "type": "string",
-                                    "minLength": 1
-                                },
-                                "doi": {
-                                    "$ref": "#/allOf/2/properties/digest/properties/doi"
-                                },
-                                "uri": {
-                                    "type": "string",
-                                    "format": "uri"
-                                }
-                            },
-                            "required": [
-                                "id",
-                                "date",
-                                "authors",
-                                "title"
-                            ]
-                        }
-                    },
-                    "used": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/allOf/2/properties/dataSets/generated/items"
-                        }
-                    }
-                },
-                "ethics": {
                     "type": "array",
                     "items": {
                         "$schema": "http://json-schema.org/draft-04/schema#",
@@ -1902,134 +2058,28 @@
                     },
                     "minItems": 1
                 },
-                "funding": {
-                    "$schema": "http://json-schema.org/draft-04/schema#",
-                    "title": "Funding",
-                    "type": "object",
-                    "properties": {
-                        "awards": {
-                            "type": "array",
-                            "items": {
-                                "type": "object",
-                                "properties": {
-                                    "id": {
-                                        "$ref": "#/allOf/2/properties/appendices/items/properties/id"
-                                    },
-                                    "source": {
-                                        "allOf": [
-                                            {
-                                                "$ref": "#/allOf/2/properties/references/items/definitions/book/properties/publisher"
-                                            },
-                                            {
-                                                "properties": {
-                                                    "funderId": {
-                                                        "$ref": "#/allOf/2/properties/digest/properties/doi"
-                                                    }
-                                                }
-                                            }
-                                        ]
-                                    },
-                                    "awardId": {
-                                        "type": "string",
-                                        "minLength": 1
-                                    },
-                                    "recipients": {
-                                        "type": "array",
-                                        "items": {
-                                            "oneOf": [
-                                                {
-                                                    "allOf": [
-                                                        {
-                                                            "type": "object",
-                                                            "properties": {
-                                                                "type": {
-                                                                    "type": "string",
-                                                                    "enum": [
-                                                                        "person"
-                                                                    ]
-                                                                }
-                                                            },
-                                                            "required": [
-                                                                "type"
-                                                            ]
-                                                        },
-                                                        {
-                                                            "$ref": "#/allOf/1/allOf/1/properties/reviewers/items/allOf/0"
-                                                        }
-                                                    ]
-                                                },
-                                                {
-                                                    "type": "object",
-                                                    "properties": {
-                                                        "type": {
-                                                            "type": "string",
-                                                            "enum": [
-                                                                "group"
-                                                            ]
-                                                        },
-                                                        "name": {
-                                                            "type": "string",
-                                                            "minLength": 1
-                                                        }
-                                                    },
-                                                    "required": [
-                                                        "type",
-                                                        "name"
-                                                    ]
-                                                }
-                                            ]
-                                        },
-                                        "minItems": 1
-                                    }
-                                },
-                                "required": [
-                                    "id",
-                                    "source",
-                                    "recipients"
-                                ]
-                            }
-                        },
-                        "statement": {
-                            "type": "string",
-                            "minLength": 1
-                        }
+                "ethics": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/allOf/2/properties/acknowledgements/items"
                     },
-                    "required": [
-                        "statement"
-                    ]
+                    "minItems": 1
                 },
                 "decisionLetter": {
                     "type": "object",
                     "properties": {
                         "doi": {
-                            "$ref": "#/allOf/2/properties/digest/properties/doi"
+                            "$schema": "http://json-schema.org/draft-04/schema#",
+                            "title": "DOI",
+                            "type": "string",
+                            "pattern": "^10[.][0-9]{4,}[^\\s\"/<>]*/[^\\s\"]+$"
                         },
                         "description": {
                             "type": "array",
                             "items": {
-                                "$ref": "#/allOf/2/properties/ethics/items"
+                                "$ref": "#/allOf/2/properties/acknowledgements/items"
                             },
                             "minItems": 1
-                        },
-                        "content": {
-                            "type": "array",
-                            "items": {
-                                "$ref": "#/allOf/2/properties/authorResponse/properties/content/items"
-                            },
-                            "minItems": 1
-                        }
-                    },
-                    "required": [
-                        "doi",
-                        "description",
-                        "content"
-                    ]
-                },
-                "authorResponse": {
-                    "type": "object",
-                    "properties": {
-                        "doi": {
-                            "$ref": "#/allOf/2/properties/digest/properties/doi"
                         },
                         "content": {
                             "type": "array",
@@ -2073,7 +2123,7 @@
                                                         "type": "object",
                                                         "allOf": [
                                                             {
-                                                                "$ref": "#/allOf/2/properties/authorResponse/properties/content/items/oneOf/0/oneOf/0/oneOf/1/definitions/image"
+                                                                "$ref": "#/allOf/2/properties/decisionLetter/properties/content/items/oneOf/0/oneOf/0/oneOf/1/definitions/image"
                                                             },
                                                             {
                                                                 "properties": {
@@ -2086,7 +2136,7 @@
                                                                     "supplements": {
                                                                         "type": "array",
                                                                         "items": {
-                                                                            "$ref": "#/allOf/2/properties/authorResponse/properties/content/items/oneOf/0/oneOf/0/oneOf/1/definitions/image"
+                                                                            "$ref": "#/allOf/2/properties/decisionLetter/properties/content/items/oneOf/0/oneOf/0/oneOf/1/definitions/image"
                                                                         }
                                                                     }
                                                                 },
@@ -2100,50 +2150,7 @@
                                                                 "type": "object",
                                                                 "allOf": [
                                                                     {
-                                                                        "$schema": "http://json-schema.org/draft-04/schema#",
-                                                                        "title": "Asset",
-                                                                        "type": "object",
-                                                                        "properties": {
-                                                                            "doi": {
-                                                                                "$ref": "#/allOf/2/properties/digest/properties/doi"
-                                                                            },
-                                                                            "id": {
-                                                                                "$ref": "#/allOf/2/properties/appendices/items/properties/id"
-                                                                            },
-                                                                            "label": {
-                                                                                "title": "Label",
-                                                                                "type": "string",
-                                                                                "minLength": 1
-                                                                            },
-                                                                            "title": {
-                                                                                "title": "Title",
-                                                                                "type": "string",
-                                                                                "minLength": 1
-                                                                            },
-                                                                            "caption": {
-                                                                                "title": "Caption",
-                                                                                "type": "array",
-                                                                                "items": {
-                                                                                    "oneOf": [
-                                                                                        {
-                                                                                            "$ref": "#/allOf/2/properties/authorResponse/properties/content/items/oneOf/0/oneOf/0/oneOf/3"
-                                                                                        },
-                                                                                        {
-                                                                                            "$ref": "#/allOf/2/properties/ethics/items"
-                                                                                        }
-                                                                                    ]
-                                                                                },
-                                                                                "minItems": 1
-                                                                            }
-                                                                        },
-                                                                        "dependencies": {
-                                                                            "caption": [
-                                                                                "title"
-                                                                            ],
-                                                                            "label": [
-                                                                                "title"
-                                                                            ]
-                                                                        }
+                                                                        "$ref": "#/allOf/1/allOf/1/properties/additionalFiles/items/allOf/0"
                                                                     },
                                                                     {
                                                                         "properties": {
@@ -2168,7 +2175,7 @@
                                                                                 "title": "Source data",
                                                                                 "type": "array",
                                                                                 "items": {
-                                                                                    "$ref": "#/allOf/2/properties/additionalFiles/items"
+                                                                                    "$ref": "#/allOf/1/allOf/1/properties/additionalFiles/items"
                                                                                 }
                                                                             }
                                                                         },
@@ -2215,7 +2222,7 @@
                                                                         {
                                                                             "type": "array",
                                                                             "items": {
-                                                                                "$ref": "#/allOf/2/properties/authorResponse/properties/content/items/oneOf/0/oneOf/0"
+                                                                                "$ref": "#/allOf/2/properties/decisionLetter/properties/content/items/oneOf/0/oneOf/0"
                                                                             },
                                                                             "minItems": 1
                                                                         }
@@ -2231,35 +2238,10 @@
                                                         ]
                                                     },
                                                     {
-                                                        "$schema": "http://json-schema.org/draft-04/schema#",
-                                                        "title": "MathML",
-                                                        "type": "object",
-                                                        "properties": {
-                                                            "type": {
-                                                                "type": "string",
-                                                                "enum": [
-                                                                    "mathml"
-                                                                ]
-                                                            },
-                                                            "id": {
-                                                                "$ref": "#/allOf/2/properties/appendices/items/properties/id"
-                                                            },
-                                                            "label": {
-                                                                "type": "string"
-                                                            },
-                                                            "mathml": {
-                                                                "title": "MathML",
-                                                                "type": "string",
-                                                                "pattern": "^<math>[\\s\\S]+</math>$"
-                                                            }
-                                                        },
-                                                        "required": [
-                                                            "type",
-                                                            "mathml"
-                                                        ]
+                                                        "$ref": "#/allOf/1/allOf/1/properties/additionalFiles/items/allOf/0/properties/caption/items/oneOf/0"
                                                     },
                                                     {
-                                                        "$ref": "#/allOf/2/properties/ethics/items"
+                                                        "$ref": "#/allOf/2/properties/acknowledgements/items"
                                                     },
                                                     {
                                                         "$schema": "http://json-schema.org/draft-04/schema#",
@@ -2281,7 +2263,7 @@
                                                                 "title": "Answer",
                                                                 "type": "array",
                                                                 "items": {
-                                                                    "$ref": "#/allOf/2/properties/ethics/items"
+                                                                    "$ref": "#/allOf/2/properties/acknowledgements/items"
                                                                 },
                                                                 "minItems": 1
                                                             }
@@ -2307,7 +2289,7 @@
                                                                 "title": "Text",
                                                                 "type": "array",
                                                                 "items": {
-                                                                    "$ref": "#/allOf/2/properties/ethics/items"
+                                                                    "$ref": "#/allOf/2/properties/acknowledgements/items"
                                                                 },
                                                                 "minItems": 1
                                                             },
@@ -2327,7 +2309,7 @@
                                                         "type": "object",
                                                         "allOf": [
                                                             {
-                                                                "$ref": "#/allOf/2/properties/authorResponse/properties/content/items/oneOf/0/oneOf/0/oneOf/1/definitions/image/allOf/0"
+                                                                "$ref": "#/allOf/1/allOf/1/properties/additionalFiles/items/allOf/0"
                                                             },
                                                             {
                                                                 "properties": {
@@ -2362,7 +2344,7 @@
                                                                                 "text": {
                                                                                     "type": "array",
                                                                                     "items": {
-                                                                                        "$ref": "#/allOf/2/properties/ethics/items"
+                                                                                        "$ref": "#/allOf/2/properties/acknowledgements/items"
                                                                                     },
                                                                                     "minItems": 1
                                                                                 }
@@ -2384,7 +2366,7 @@
                                                                         "title": "Source data",
                                                                         "type": "array",
                                                                         "items": {
-                                                                            "$ref": "#/allOf/2/properties/additionalFiles/items"
+                                                                            "$ref": "#/allOf/1/allOf/1/properties/additionalFiles/items"
                                                                         }
                                                                     }
                                                                 },
@@ -2401,7 +2383,7 @@
                                                         "type": "object",
                                                         "allOf": [
                                                             {
-                                                                "$ref": "#/allOf/2/properties/authorResponse/properties/content/items/oneOf/0/oneOf/0/oneOf/1/definitions/image/allOf/0"
+                                                                "$ref": "#/allOf/1/allOf/1/properties/additionalFiles/items/allOf/0"
                                                             },
                                                             {
                                                                 "properties": {
@@ -2419,7 +2401,7 @@
                                                                                 "mediaType": {
                                                                                     "allOf": [
                                                                                         {
-                                                                                            "$ref": "#/allOf/2/properties/additionalFiles/items/allOf/1/properties/mediaType"
+                                                                                            "$ref": "#/allOf/1/allOf/1/properties/additionalFiles/items/allOf/1/properties/mediaType"
                                                                                         },
                                                                                         {
                                                                                             "pattern": "^video/"
@@ -2460,7 +2442,7 @@
                                                                         "title": "Source data",
                                                                         "type": "array",
                                                                         "items": {
-                                                                            "$ref": "#/allOf/2/properties/additionalFiles/items"
+                                                                            "$ref": "#/allOf/1/allOf/1/properties/additionalFiles/items"
                                                                         }
                                                                     }
                                                                 },
@@ -2520,7 +2502,7 @@
                                                         ]
                                                     },
                                                     "doi": {
-                                                        "$ref": "#/allOf/2/properties/digest/properties/doi"
+                                                        "$ref": "#/allOf/2/properties/decisionLetter/properties/doi"
                                                     },
                                                     "id": {
                                                         "$ref": "#/allOf/2/properties/appendices/items/properties/id"
@@ -2539,7 +2521,7 @@
                                                         "description": "Content",
                                                         "type": "array",
                                                         "items": {
-                                                            "$ref": "#/allOf/2/properties/authorResponse/properties/content/items/oneOf/0/oneOf/0"
+                                                            "$ref": "#/allOf/2/properties/decisionLetter/properties/content/items/oneOf/0/oneOf/0"
                                                         },
                                                         "minItems": 1
                                                     }
@@ -2556,6 +2538,26 @@
                                         "$ref": "#/allOf/2/properties/body/items/allOf/0"
                                     }
                                 ]
+                            },
+                            "minItems": 1
+                        }
+                    },
+                    "required": [
+                        "doi",
+                        "description",
+                        "content"
+                    ]
+                },
+                "authorResponse": {
+                    "type": "object",
+                    "properties": {
+                        "doi": {
+                            "$ref": "#/allOf/2/properties/decisionLetter/properties/doi"
+                        },
+                        "content": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/allOf/2/properties/decisionLetter/properties/content/items"
                             },
                             "minItems": 1
                         }

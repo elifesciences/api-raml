@@ -214,6 +214,8 @@
                                                                                         }
                                                                                     },
                                                                                     "required": [
+                                                                                        "id",
+                                                                                        "title",
                                                                                         "mediaType",
                                                                                         "uri",
                                                                                         "filename"
