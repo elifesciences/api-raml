@@ -61,28 +61,11 @@ allOf:
             items:
                 $ref: ../blocks/paragraph.v1.yaml
             minItems: 1
-        additionalFiles:
-            title: Additional files
-            type: array
-            items:
-                $ref: ../misc/file.v1.yaml
-        dataSets:
-            type: object
-            generated:
-                type: array
-                items:
-                    $ref: ../misc/data-set.v1.yaml
-            used:
-                type: array
-                items:
-                    $ref: ../misc/data-set.v1.yaml
         ethics:
             type: array
             items:
                 $ref: ../blocks/paragraph.v1.yaml
             minItems: 1
-        funding:
-            $ref: ../misc/funding.v1.yaml
         decisionLetter:
             type: object
             properties:
