@@ -155,6 +155,124 @@
             }
         ]
     },
+    "dataSets": {
+        "generated": [
+            {
+                "id": "dataset1",
+                "date": "2016-11-16",
+                "authors": [
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "Person One",
+                            "index": "One, Person"
+                        }
+                    },
+                    {
+                        "type": "group",
+                        "name": "Group One"
+                    }
+                ],
+                "authorsEtAl": true,
+                "title": "Complete dataset",
+                "dataId": "123456ABC",
+                "details": "Some details.",
+                "doi": "10.2210/pdb4qen/pdb",
+                "uri": "https://doi.org/10.2210/pdb4qen/pdb"
+            },
+            {
+                "id": "dataset2",
+                "date": "2016",
+                "authors": [
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "Person One",
+                            "index": "One, Person"
+                        }
+                    }
+                ],
+                "title": "Minimum dataset"
+            }
+        ],
+        "used": [
+            {
+                "id": "dataset1",
+                "date": "2016-11-16",
+                "authors": [
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "Person One",
+                            "index": "One, Person"
+                        }
+                    },
+                    {
+                        "type": "group",
+                        "name": "Group One"
+                    }
+                ],
+                "authorsEtAl": true,
+                "title": "Complete dataset",
+                "dataId": "123456ABC",
+                "details": "Some details.",
+                "doi": "10.2210/pdb4qen/pdb",
+                "uri": "https://doi.org/10.2210/pdb4qen/pdb"
+            },
+            {
+                "id": "dataset2",
+                "date": "2016",
+                "authors": [
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "Person One",
+                            "index": "One, Person"
+                        }
+                    }
+                ],
+                "title": "Minimum dataset"
+            }
+        ]
+    },
+    "funding": {
+        "awards": [
+            {
+                "id": "par-1",
+                "source": {
+                    "funderId": "10.13039/501100001659",
+                    "name": [
+                        "Deutsche Forschungsgemeinschaft"
+                    ]
+                },
+                "awardId": "SCHE 1575/3-1",
+                "recipients": [
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "Lee R Berger",
+                            "index": "Berger, Lee R"
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "par-3",
+                "source": {
+                    "name": [
+                        "Bundesministerium für Bildung und Forschung"
+                    ]
+                },
+                "recipients": [
+                    {
+                        "type": "group",
+                        "name": "Naledi group"
+                    }
+                ]
+            }
+        ],
+        "statement": "The funders had no role in study design, data collection and interpretation, or the decision to submit the work for publication."
+    },
     "additionalFiles": [
         {
             "id": "fig-data",
