@@ -38,16 +38,12 @@
     ],
     "competingInterests": "Integer at tempor diam, <i>tincidunt viverra nisi</i>. Nullam vitae nulla varius ipsum pretium condimentum in vitae mauris. Praesent convallis egestas velit, non aliquet turpis aliquam sed. Nunc sed mi elementum, mollis nibh et, interdum tellus. Fusce ornare leo diam, nec consectetur ligula aliquam sed. Phasellus metus lacus, blandit eget facilisis sit amet, efficitur sit amet tortor. Nam bibendum nunc in nisl blandit, scelerisque tristique orci fringilla. Integer egestas et odio sit amet porttitor. Nullam laoreet, orci at laoreet sagittis, tortor odio scelerisque ante, sed tempor lorem ante nec ex. Maecenas commodo diam sit amet justo hendrerit, sit amet interdum est efficitur. Morbi tristique lacinia mi in facilisis.",
     "image": {
+        "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1",
         "alt": "",
-        "sizes": {
-            "16:9": {
-                "250": "https://placehold.it/250x141",
-                "500": "https://placehold.it/500x281"
-            },
-            "1:1": {
-                "70": "https://placehold.it/70x70",
-                "140": "https://placehold.it/140x140"
-            }
+        "source": {
+            "mediaType": "image/jpeg",
+            "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1/full/full/0/default.jpg",
+            "filename": "an-image.jpg"
         }
     }
 }

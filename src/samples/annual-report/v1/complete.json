@@ -4,16 +4,12 @@
     "title": "The eLife Sciences 2014 Annual Report",
     "impactStatement": "Having published almost 800 research articles by the close of 2014, in this report eLife is showcasing its achievements in attracting growing numbers of submissions, publishing a broad swath of high-quality research swiftly and constructively, supporting transparency and reproducibility, as well as the careers of early-career researchers, and exploring new publication formats.",
     "image": {
+        "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1",
         "alt": "",
-        "sizes": {
-            "16:9": {
-                "250": "https://placehold.it/250x141",
-                "500": "https://placehold.it/500x281"
-            },
-            "1:1": {
-                "70": "https://placehold.it/70x70",
-                "140": "https://placehold.it/140x140"
-            }
+        "source": {
+            "mediaType": "image/jpeg",
+            "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1/full/full/0/default.jpg",
+            "filename": "an-image.jpg"
         }
     }
 }

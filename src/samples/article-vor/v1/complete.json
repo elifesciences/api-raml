@@ -311,25 +311,21 @@
     "impactStatement": "A new hominin species has been unearthed in the Dinaledi Chamber of the Rising Star cave system in the largest assemblage of a single species of hominins yet discovered in Africa.",
     "image": {
         "banner": {
+            "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1",
             "alt": "",
-            "sizes": {
-                "2:1": {
-                    "900": "https://placehold.it/900x450",
-                    "1800": "https://placehold.it/1800x900"
-                }
+            "source": {
+                "mediaType": "image/jpeg",
+                "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1/full/full/0/default.jpg",
+                "filename": "an-image.jpg"
             }
         },
         "thumbnail": {
+            "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1",
             "alt": "",
-            "sizes": {
-                "16:9": {
-                    "250": "https://placehold.it/250x141",
-                    "500": "https://placehold.it/500x281"
-                },
-                "1:1": {
-                    "70": "https://placehold.it/70x70",
-                    "140": "https://placehold.it/140x140"
-                }
+            "source": {
+                "mediaType": "image/jpeg",
+                "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1/full/full/0/default.jpg",
+                "filename": "an-image.jpg"
             }
         }
     },
@@ -398,8 +394,15 @@
                             ]
                         }
                     ],
-                    "alt": "",
-                    "uri": "https://elife-publishing-cdn.s3.amazonaws.com/09560/elife-09560-fig1-v1.jpg",
+                    "image": {
+                        "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1",
+                        "alt": "",
+                        "source": {
+                            "mediaType": "image/jpeg",
+                            "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1/full/full/0/default.jpg",
+                            "filename": "an-image.jpg"
+                        }
+                    },
                     "supplements": [
                         {
                             "type": "image",
@@ -413,8 +416,15 @@
                                     "text": "U.W. 101-1473 cranium in (<b>A</b>) posterior and (<b>B</b>) frontal views (frontal view minus the frontal fragment to show calvaria interior). U.W. 101-1277 maxilla in (<b>C</b>) medial, (<b>D</b>) frontal, (<bold>E</bold>) superior, and (<b>F</b>) occlusal views. (<b>G</b>) U.W. 101-1473 cranium in anatomical alignment with occluded U.W. 101-1277 maxilla and U.W. 101-1261 mandible in left lateral view. U.W. 101-1277 mandible in (<b>H</b>) occlusal, (<b>I</b>) basal, (<b>J</b>) right lateral, and (<b>K</b>) anterior views. Scale bar = 10 cm."
                                 }
                             ],
-                            "alt": "",
-                            "uri": "https://elife-publishing-cdn.s3.amazonaws.com/09560/elife-09560-fig2-v1.jpg",
+                            "image": {
+                                "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1",
+                                "alt": "",
+                                "source": {
+                                    "mediaType": "image/jpeg",
+                                    "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1/full/full/0/default.jpg",
+                                    "filename": "an-image.jpg"
+                                }
+                            },
                             "attribution": [
                                 "By some person."
                             ],
@@ -1402,8 +1412,15 @@
                             "text": "(<b>A</b>) Lateral view. (<b>B</b>) Superior view. (<b>C</b>) Inferior view. In all views, anterior is to towards the left."
                         }
                     ],
-                    "alt": "",
-                    "uri": "https://elife-publishing-cdn.s3.amazonaws.com/09560/elife-09560-fig19-v1.jpg"
+                    "image": {
+                        "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1",
+                        "alt": "",
+                        "source": {
+                            "mediaType": "image/jpeg",
+                            "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1/full/full/0/default.jpg",
+                            "filename": "an-image.jpg"
+                        }
+                    }
                 }
             ]
         }

@@ -22,8 +22,15 @@
         },
         {
             "type": "image",
-            "alt": "",
-            "uri": "https://elife-cdn.s3.amazonaws.com/images/news/eLife_Lens_contextual.png",
+            "image": {
+                "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1",
+                "alt": "",
+                "source": {
+                    "mediaType": "image/jpeg",
+                    "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1/full/full/0/default.jpg",
+                    "filename": "an-image.jpg"
+                }
+            },
             "title": "contextual search results"
         },
         {
@@ -47,8 +54,15 @@
                 [
                     {
                         "type": "image",
-                        "alt": "",
-                        "uri": "https://elife-cdn.s3.amazonaws.com/images/news/eLife_Lens_Search_filters.png",
+                        "image": {
+                            "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1",
+                            "alt": "",
+                            "source": {
+                                "mediaType": "image/jpeg",
+                                "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1/full/full/0/default.jpg",
+                                "filename": "an-image.jpg"
+                            }
+                        },
                         "title": "filters showing frequency of search term in filter"
                     }
                 ],

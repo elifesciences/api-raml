@@ -22,7 +22,7 @@ allOf:
             title: Source data
             type: array
             items:
-                $ref: ../misc/file.v1.yaml
+                $ref: ../misc/asset-file.v1.yaml
     required:
       - type
       - tables

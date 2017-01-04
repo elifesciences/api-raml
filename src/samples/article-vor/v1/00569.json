@@ -769,8 +769,15 @@
                             "text": "<i>B. schlosseri</i> reproduces both through sexual and asexual (budding) pathways, giving rise to virtually identical adult body plans. Upon settlement, the tadpole phase of the <i>B. schlosseri</i> lifecycle (<b>A</b>) will metamorphose into a founder individual (oozooid) (<b>B</b>), which through asexual budding, generates a colony. The colony includes three overlapping generations: an adult zooid, a primary bud, and a secondary bud, all of which are connected via a vascular network (bv) embedded within a gelatinous matrix (termed tunic). The common vasculature terminates in finger-like protrusions (termed ampullae; <b>B</b>–<b>D</b>). Bud development commences in stage A (<b>C</b>). Through budding, <i>B. schlosseri</i> generates its entire body, including digestive (ds) and respiratory (brs) systems, a simple tube-like heart (h), an endostyle (en) that harbors a stem cell niche, a primitive neural complex, and siphons used for feeding, waste, and releasing larvae (<b>B</b>–<b>D</b>). Each week, successive buds grow large (<b>D</b>) and complete replication of all zooids in the colony, ultimately replacing the previous generation’s zooids, which die through a massive apoptosis. (<b>E</b>) A phylogenomic tree produced from analysis of 521 nuclear genes (40,798 aligned amino acids) from 15 species, including <i>B. schlosseri</i>. Scale bar-1 mm."
                         }
                     ],
-                    "alt": "",
-                    "uri": "https://elife-publishing-cdn.s3.amazonaws.com/00569/elife-00569-fig1-v1.jpg",
+                    "image": {
+                        "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1",
+                        "alt": "",
+                        "source": {
+                            "mediaType": "image/jpeg",
+                            "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1/full/full/0/default.jpg",
+                            "filename": "an-image.jpg"
+                        }
+                    },
                     "supplements": [
                         {
                             "type": "image",
@@ -784,8 +791,15 @@
                                     "text": "Based on the 13 mitochondrially-encoded proteins. The tree was inferred by PhyloBayes under a GTR+G+CAT model. Support values at nodes represents Bayesian Posterior Probability (PP) and are reported only when &gt;0.5 and &lt;0.95. Nodes with PP &lt; 0.5 were collapsed. The tree was rooted with the non-deuterostome <i>Drosophila</i> and <i>Aplysia</i> species. The main deuterostome lineages are represented in different colours. Abbreviations for tunicate orders: Stolido: Stolidobranchia; Phlebo: Phlebobranchia; Aplouso: Aplousobranchia. Colonial tunicates are indicated by an asterisk and include <i>Botryllus schlosseri</i>, all Aplousobranchia ascidians, and the thaliacean <i>Doliolum nationalis</i>."
                                 }
                             ],
-                            "alt": "",
-                            "uri": "https://elife-publishing-cdn.s3.amazonaws.com/00569/elife-00569-fig1-figsupp1-v1.jpg"
+                            "image": {
+                                "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1",
+                                "alt": "",
+                                "source": {
+                                    "mediaType": "image/jpeg",
+                                    "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1/full/full/0/default.jpg",
+                                    "filename": "an-image.jpg"
+                                }
+                            }
                         }
                     ]
                 },
@@ -825,8 +839,15 @@
                                     "text": "(<b>A</b>) Genomic DNA is sheared into 6–8 kb fragments, partitioned into twelve 96-well plates, further fragmented to 600–800 bp, barcoded and sequenced separately for each well (Illumina HiSeq 2000 2x100bp), and assembled by Velvet. (<b>B</b>) Size distribution of contigs assembled from a representative library preparation (BL5). (<b>C</b>) Limiting the number of amplifiable molecules per well (barcode) to the level that almost 100% of all amplifiable molecules are present as single copies (&lt;1000 gDNA molecules) greatly reduces the chance of having a repeated or homologous sequence within a well. Thus, sample complexity is significantly reduced, which reduces ambiguity in the reconstruction of a consensus sequence. As an example, two different predicted repeat-containing genes (g2001,1189bp; and g2002, 688bp) were assembled from two different wells (005 and 145 respectively). Although they contain highly homologous repeats (represented as a Dot Matrix plot, (<b>D</b>) these repetitive genes were resolved and reconstructed properly in the final assembly."
                                 }
                             ],
-                            "alt": "",
-                            "uri": "https://elife-publishing-cdn.s3.amazonaws.com/00569/elife-00569-fig2-v1.jpg",
+                            "image": {
+                                "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1",
+                                "alt": "",
+                                "source": {
+                                    "mediaType": "image/jpeg",
+                                    "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1/full/full/0/default.jpg",
+                                    "filename": "an-image.jpg"
+                                }
+                            },
                             "supplements": [
                                 {
                                     "doi": "10.7554/eLife.00569.006",
@@ -839,8 +860,15 @@
                                             "text": "Genomic DNA from HapMap NA7019 was prepared for LRseq. These figures show LRseq assembly statistics, obtained by mapping sequenced reads to human genome reference 36. These data were also used to estimate the concentration of amplifiable molecules in <i>B. schlosseri</i> 356a DNA samples prepared by an identical protocol."
                                         }
                                     ],
-                                    "alt": "",
-                                    "uri": "https://elife-publishing-cdn.s3.amazonaws.com/00569/elife-00569-fig2-figsupp1-v1.jpg"
+                                    "image": {
+                                        "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1",
+                                        "alt": "",
+                                        "source": {
+                                            "mediaType": "image/jpeg",
+                                            "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1/full/full/0/default.jpg",
+                                            "filename": "an-image.jpg"
+                                        }
+                                    }
                                 },
                                 {
                                     "doi": "10.7554/eLife.00569.007",
@@ -853,8 +881,15 @@
                                             "text": "(<b>A</b>) Sc6a-b clone, a long lived (7 years old when sampled), highly regenerative colony was chosen to be sequenced. Sc6a-b subclones were starved for 48 hr prior to sampling, and 400 individuals (zooids) were sampled for sequencing. Subclones of this colony are still alive and maintained in our mariculture facility. (<b>B</b>) A few zooids were taken from every sample set and tested via AFLP’s genotyping analysis, confirming that all zooids belong to one genotype. (<b>C</b> and <b>D)</b>. Sc6a-b microsatellite loci were homozygous (2 loci) and heterozygous (1 loci) confirming one genotype. (<b>E</b> and <b>F</b>) 356a clone was a highly regenerative long lived colony. 150 individuals were sampled and their gDNA was sequenced. Microsatellite loci were homozygous (<b>E</b> and <b>F</b>), confirming one genotype. Scale bar-1 mm"
                                         }
                                     ],
-                                    "alt": "",
-                                    "uri": "https://elife-publishing-cdn.s3.amazonaws.com/00569/elife-00569-fig2-figsupp2-v1.jpg"
+                                    "image": {
+                                        "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1",
+                                        "alt": "",
+                                        "source": {
+                                            "mediaType": "image/jpeg",
+                                            "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1/full/full/0/default.jpg",
+                                            "filename": "an-image.jpg"
+                                        }
+                                    }
                                 },
                                 {
                                     "doi": "10.7554/eLife.00569.008",
@@ -867,8 +902,15 @@
                                             "text": "(<b>A</b>) Contig length distribution. (<b>B</b>) Distribution of coverage of 356a assembled Celera contigs by Velvet assembled fragments."
                                         }
                                     ],
-                                    "alt": "",
-                                    "uri": "https://elife-publishing-cdn.s3.amazonaws.com/00569/elife-00569-fig2-figsupp3-v1.jpg"
+                                    "image": {
+                                        "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1",
+                                        "alt": "",
+                                        "source": {
+                                            "mediaType": "image/jpeg",
+                                            "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1/full/full/0/default.jpg",
+                                            "filename": "an-image.jpg"
+                                        }
+                                    }
                                 },
                                 {
                                     "doi": "10.7554/eLife.00569.009",
@@ -881,8 +923,15 @@
                                             "text": "(<b>A</b>) RepeatScout (version 1.0.5; <a href=\"#bib60\">Price et al., 2005</a>) was used to identify interspersed repeat elements de novo using a k-mer length of 14. All identified repeats were subsequently filtered for tandem repeat and low complexity content, using RepeatScout. Genome-wide interspersed repeats were catalogued using RepeatMasker (version open-4.0; <a href=\"#bib74\">Smit et al., 1996-2010</a>). The distribution of large interspersed repeats families (≥1kb) ordered by copy number is presented. (<b>B</b>) To identify both perfect (100% sequence identity) and degenerate genomic tandem repeats, we used XSTREAM (<a href=\"#bib54\">Newman and Cooper, 2007</a>), with a minimum repeat length of 20 bp, minimum word match of 0.8, and otherwise default parameters. 3,183,988 tandem repeats were identified, period range: 1–6525 bp, copy number range: 2.7–1096x"
                                         }
                                     ],
-                                    "alt": "",
-                                    "uri": "https://elife-publishing-cdn.s3.amazonaws.com/00569/elife-00569-fig2-figsupp4-v1.jpg"
+                                    "image": {
+                                        "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1",
+                                        "alt": "",
+                                        "source": {
+                                            "mediaType": "image/jpeg",
+                                            "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1/full/full/0/default.jpg",
+                                            "filename": "an-image.jpg"
+                                        }
+                                    }
                                 },
                                 {
                                     "doi": "10.7554/eLife.00569.010",
@@ -895,8 +944,15 @@
                                             "text": "Fosmid sequences (red lines; gi; ac numbers are shown, number=bp), were compared with <i>B. schlosseri</i> contigs using blast (e-value &lt; e<sup>−10</sup>). Best alignments between contigs &gt;500bp (black lines) are shown. Repetitive regions are marked (blue)."
                                         }
                                     ],
-                                    "alt": "",
-                                    "uri": "https://elife-publishing-cdn.s3.amazonaws.com/00569/elife-00569-fig2-figsupp5-v1.jpg"
+                                    "image": {
+                                        "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1",
+                                        "alt": "",
+                                        "source": {
+                                            "mediaType": "image/jpeg",
+                                            "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1/full/full/0/default.jpg",
+                                            "filename": "an-image.jpg"
+                                        }
+                                    }
                                 },
                                 {
                                     "doi": "10.7554/eLife.00569.011",
@@ -909,8 +965,15 @@
                                             "text": "We experimentally validated 145 <i>B. schlosseri</i> predicted genes. Genes were validated by observing expression in <i>B. schlosseri</i> cDNAs and gDNA via PCR and qPCR assays and resequencing them on Sanger. (<b>A</b>) cDNA PCR product of several early erythroid and HSC putative genes identified in <i>B. schlosseri</i> tissues (endostyle, blood or zooid). Names of the putative genes and the tissues that were tested in this experiment are indicated on the gel image. (<b>B</b>) qPCR expression in <i>B. schlosseri</i> blood of six putative immunity genes."
                                         }
                                     ],
-                                    "alt": "",
-                                    "uri": "https://elife-publishing-cdn.s3.amazonaws.com/00569/elife-00569-fig2-figsupp6-v1.jpg"
+                                    "image": {
+                                        "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1",
+                                        "alt": "",
+                                        "source": {
+                                            "mediaType": "image/jpeg",
+                                            "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1/full/full/0/default.jpg",
+                                            "filename": "an-image.jpg"
+                                        }
+                                    }
                                 }
                             ]
                         },
@@ -941,8 +1004,15 @@
                                     "text": "(<b>A</b>) We isolated and sequenced 21 metaphase chromosome mixtures using a microfluidic device. Each chromosome mixtures was amplified, barcoded and sequenced separately (IlluminaHiSeq). Genomic contigs larger than 7 kb were aligned to the chromosome reads using BWA. Subsequently, assignment of scaffolds to chromosome cluster was performed using iterative K-means clustering on the correlation matrix between each scaffold. In addition, to find the number of clusters/chromosomes we performed k-means clustering iteratively across different cluster numbers. This plot demonstrates that increasing beyond 13 clusters does little to reduce the error; therefore 13 chromosomes were successfully resolved. (<b>B</b>) To estimate the configuration after the clustering step, 17 out of the 21 wells were deduced to contain information that is used in the clustering process. The average number of normalized reads counts from each metaphase chromosome mixture (well) that align to each scaffold in a cluster group was calculated and plotted. Each peak represented can be inferred to denote the presence of a specific chromosome in the well. Examples of four representative wells are presented, metaphase chromosome mixtures contained between 1–4 chromosomes (see also <a href=\"#fig3s1\">Figure 3—figure supplement 1</a>)."
                                 }
                             ],
-                            "alt": "",
-                            "uri": "https://elife-publishing-cdn.s3.amazonaws.com/00569/elife-00569-fig3-v1.jpg",
+                            "image": {
+                                "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1",
+                                "alt": "",
+                                "source": {
+                                    "mediaType": "image/jpeg",
+                                    "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1/full/full/0/default.jpg",
+                                    "filename": "an-image.jpg"
+                                }
+                            },
                             "supplements": [
                                 {
                                     "doi": "10.7554/eLife.00569.013",
@@ -955,16 +1025,30 @@
                                             "text": "We isolated and sequenced metaphase diluted chromosome mixtures using a microfluidic device. Each chromosome mixture was amplified, barcoded and sequenced separately (IlluminaHiSeq). The average number of normalized reads counts from each diluted chromosome mixture (well) that align to each scaffold in a cluster group was calculated and plotted. Each peak represents the presence of a specific chromosome in the well. In the 17 wells presented above, chromosome mixtures contained between 1–4 chromosomes."
                                         }
                                     ],
-                                    "alt": "",
-                                    "uri": "https://elife-publishing-cdn.s3.amazonaws.com/00569/elife-00569-fig3-figsupp1-v1.jpg"
+                                    "image": {
+                                        "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1",
+                                        "alt": "",
+                                        "source": {
+                                            "mediaType": "image/jpeg",
+                                            "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1/full/full/0/default.jpg",
+                                            "filename": "an-image.jpg"
+                                        }
+                                    }
                                 },
                                 {
                                     "doi": "10.7554/eLife.00569.014",
                                     "id": "fig3s2",
                                     "label": "Figure 3—figure supplement 2.",
                                     "title": "Pipeline for the assignment of chromosome scaffolds and the 356a–chromosomes hybrid assembly process.",
-                                    "alt": "",
-                                    "uri": "https://elife-publishing-cdn.s3.amazonaws.com/00569/elife-00569-fig3-figsupp2-v1.jpg"
+                                    "image": {
+                                        "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1",
+                                        "alt": "",
+                                        "source": {
+                                            "mediaType": "image/jpeg",
+                                            "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1/full/full/0/default.jpg",
+                                            "filename": "an-image.jpg"
+                                        }
+                                    }
                                 },
                                 {
                                     "doi": "10.7554/eLife.00569.015",
@@ -977,16 +1061,30 @@
                                             "text": "Reads from each of the individual chromosome sample preparations were subsequently assembled using Velvet. The resulting chromosome level contigs were then merged with the 356a assembly to create a 356a-chromosome hybrid assembly."
                                         }
                                     ],
-                                    "alt": "",
-                                    "uri": "https://elife-publishing-cdn.s3.amazonaws.com/00569/elife-00569-fig3-figsupp3-v1.jpg"
+                                    "image": {
+                                        "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1",
+                                        "alt": "",
+                                        "source": {
+                                            "mediaType": "image/jpeg",
+                                            "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1/full/full/0/default.jpg",
+                                            "filename": "an-image.jpg"
+                                        }
+                                    }
                                 },
                                 {
                                     "doi": "10.7554/eLife.00569.016",
                                     "id": "fig3s4",
                                     "label": "Figure 3—figure supplement 4.",
                                     "title": "The fraction of <i>B. schlosseri</i> predicted intron-less genes (blue) and genes with introns (red) in the different chromosomes.",
-                                    "alt": "",
-                                    "uri": "https://elife-publishing-cdn.s3.amazonaws.com/00569/elife-00569-fig3-figsupp4-v1.jpg"
+                                    "image": {
+                                        "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1",
+                                        "alt": "",
+                                        "source": {
+                                            "mediaType": "image/jpeg",
+                                            "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1/full/full/0/default.jpg",
+                                            "filename": "an-image.jpg"
+                                        }
+                                    }
                                 }
                             ]
                         },
@@ -1033,8 +1131,15 @@
                                     "text": "Protein-encoding genes in <i>B. schlosseri</i> were compared to a diverse sampling of 18 well-annotated genomes from other species, and for each genome, the presence or absence of homology to human or mouse proteins was assessed (all vs all blastp e-value threshold of 1e<sup>−10</sup>; <a href=\"#SD1-data\">Figure 4—source data 1A</a>). Our data indicate that homologs of ∼660 human/mouse genes were present in the common ancestor of tunicates and vertebrates, but not non-chordate species <a href=\"#SD1-data\">Figure 4—source data 1B</a>). Among them are genes associated with the development, function, and pathology of vertebrate features, including heart, eye, hearing, immunity, pregnancy and cancer (<a href=\"#SD1-data\">Figure 4—source data 1C</a>). Gray box = no homology; Yellow box = homology."
                                 }
                             ],
-                            "alt": "",
-                            "uri": "https://elife-publishing-cdn.s3.amazonaws.com/00569/elife-00569-fig4-v1.jpg",
+                            "image": {
+                                "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1",
+                                "alt": "",
+                                "source": {
+                                    "mediaType": "image/jpeg",
+                                    "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1/full/full/0/default.jpg",
+                                    "filename": "an-image.jpg"
+                                }
+                            },
                             "sourceData": [
                                 {
                                     "doi": "10.7554/eLife.00569.017",
@@ -1110,8 +1215,15 @@
                                     "text": "We analyzed gene expression microarray data from 26 different human blood cell populations, organized into four cell lineages (HSC; Lymphoid Progenitors; Myeloid and Lymphoid Lineage), and identified a set of twenty signature genes with highly enriched expression profiles for each population (<a href=\"#SD4-data\">Supplementary file 3</a>). For each blood-related gene set, we identified homologous gene sequences in <i>B. schlosseri</i> and 17 other species; the fraction of genes (out of 20) found for each species is displayed as a heat map. Within each major lineage, cell populations are sorted in decreasing order by a conservation index, calculated as the average number of genes found across the 18 species (indicated by a blue bar graph)."
                                 }
                             ],
-                            "alt": "",
-                            "uri": "https://elife-publishing-cdn.s3.amazonaws.com/00569/elife-00569-fig5-v1.jpg"
+                            "image": {
+                                "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1",
+                                "alt": "",
+                                "source": {
+                                    "mediaType": "image/jpeg",
+                                    "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1/full/full/0/default.jpg",
+                                    "filename": "an-image.jpg"
+                                }
+                            }
                         },
                         {
                             "type": "paragraph",

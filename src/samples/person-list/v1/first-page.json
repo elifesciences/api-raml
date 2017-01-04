@@ -18,16 +18,12 @@
             },
             "orcid": "0000-0002-1825-0097",
             "image": {
+                "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1",
                 "alt": "",
-                "sizes": {
-                    "16:9": {
-                        "250": "https://placehold.it/250x141",
-                        "500": "https://placehold.it/500x281"
-                    },
-                    "1:1": {
-                        "70": "https://placehold.it/70x70",
-                        "140": "https://placehold.it/140x140"
-                    }
+                "source": {
+                    "mediaType": "image/jpeg",
+                    "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1/full/full/0/default.jpg",
+                    "filename": "an-image.jpg"
                 }
             }
         }

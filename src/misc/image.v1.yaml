@@ -1,0 +1,18 @@
+$schema: http://json-schema.org/draft-04/schema#
+title: IIIF image
+type: object
+properties:
+    uri:
+        title: IIIF Image
+        type: string
+        format: uri
+        pattern: ^https://
+    alt:
+        title: Alternative text
+        type: string
+    source:
+        $ref: file.v1.yaml
+required:
+  - uri
+  - alt
+  - source

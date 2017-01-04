@@ -19,16 +19,12 @@
         "title": "<i>Homo naledi</i>",
         "authorLine": "Lee R Berger et al",
         "image": {
+            "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1",
             "alt": "",
-            "sizes": {
-                "16:9": {
-                    "250": "https://placehold.it/250x141",
-                    "500": "https://placehold.it/500x281"
-                },
-                "1:1": {
-                    "70": "https://placehold.it/70x70",
-                    "140": "https://placehold.it/140x140"
-                }
+            "source": {
+                "mediaType": "image/jpeg",
+                "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1/full/full/0/default.jpg",
+                "filename": "an-image.jpg"
             }
         },
         "item": {
@@ -55,16 +51,12 @@
             "impactStatement": "A new hominin species has been unearthed in the Dinaledi Chamber of the Rising Star cave system in the largest assemblage of a single species of hominins yet discovered in Africa.",
             "image": {
                 "thumbnail": {
+                    "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1",
                     "alt": "",
-                    "sizes": {
-                        "16:9": {
-                            "250": "https://placehold.it/250x141",
-                            "500": "https://placehold.it/500x281"
-                        },
-                        "1:1": {
-                            "70": "https://placehold.it/70x70",
-                            "140": "https://placehold.it/140x140"
-                        }
+                    "source": {
+                        "mediaType": "image/jpeg",
+                        "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1/full/full/0/default.jpg",
+                        "filename": "an-image.jpg"
                     }
                 }
             }
@@ -79,16 +71,12 @@
             "published": "2016-05-27T13:19:42Z",
             "image": {
                 "thumbnail": {
+                    "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1",
                     "alt": "",
-                    "sizes": {
-                        "16:9": {
-                            "250": "https://placehold.it/250x141",
-                            "500": "https://placehold.it/500x281"
-                        },
-                        "1:1": {
-                            "70": "https://placehold.it/70x70",
-                            "140": "https://placehold.it/140x140"
-                        }
+                    "source": {
+                        "mediaType": "image/jpeg",
+                        "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1/full/full/0/default.jpg",
+                        "filename": "an-image.jpg"
                     }
                 }
             },
@@ -110,16 +98,12 @@
                 "published": "2016-07-01T08:30:15Z",
                 "image": {
                     "thumbnail": {
+                        "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1",
                         "alt": "",
-                        "sizes": {
-                            "16:9": {
-                                "250": "https://placehold.it/250x141",
-                                "500": "https://placehold.it/500x281"
-                            },
-                            "1:1": {
-                                "70": "https://placehold.it/70x70",
-                                "140": "https://placehold.it/140x140"
-                            }
+                        "source": {
+                            "mediaType": "image/jpeg",
+                            "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1/full/full/0/default.jpg",
+                            "filename": "an-image.jpg"
                         }
                     }
                 },
