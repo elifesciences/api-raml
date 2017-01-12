@@ -59,7 +59,7 @@ allOf:
         acknowledgements:
             type: array
             items:
-                $ref: ../blocks/paragraph.v1.yaml
+                $ref: ../misc/blocks-all.v1.yaml
             minItems: 1
         ethics:
             type: array
