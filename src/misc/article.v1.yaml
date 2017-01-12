@@ -69,14 +69,15 @@ allOf:
                 uniqueItems: true
         dataSets:
             type: object
-            generated:
-                type: array
-                items:
-                    $ref: ../misc/data-set.v1.yaml
-            used:
-                type: array
-                items:
-                    $ref: ../misc/data-set.v1.yaml
+            properties:
+                generated:
+                    type: array
+                    items:
+                        $ref: ../misc/data-set.v1.yaml
+                used:
+                    type: array
+                    items:
+                        $ref: ../misc/data-set.v1.yaml
         funding:
             $ref: ../misc/funding.v1.yaml
         additionalFiles:
