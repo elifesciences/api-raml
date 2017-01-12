@@ -817,71 +817,70 @@
                         },
                         "dataSets": {
                             "type": "object",
-                            "generated": {
-                                "type": "array",
-                                "items": {
-                                    "$schema": "http://json-schema.org/draft-04/schema#",
-                                    "title": "Data set",
-                                    "type": "object",
-                                    "properties": {
-                                        "id": {
-                                            "$schema": "http://json-schema.org/draft-04/schema#",
-                                            "title": "HTML ID",
-                                            "type": "string",
-                                            "pattern": "^[^\\s]+$"
-                                        },
-                                        "date": {
-                                            "$schema": "http://json-schema.org/draft-04/schema#",
-                                            "title": "Partial date",
-                                            "description": "A date, where the month and/or day may not be known/available.\n\nFor example:\n  - 2016\n  - 2016-09\n  - 2016-09-16\n",
-                                            "type": "string",
-                                            "pattern": "^[1-2][0-9]{3}(-((0[1-9])|(1[0-2]))(-((0[1-9])|([1-2][0-9])|(3[0-1])))?)?$"
-                                        },
-                                        "authors": {
-                                            "type": "array",
-                                            "items": {
-                                                "$ref": "#/allOf/0/allOf/1/properties/authors/items"
+                            "properties": {
+                                "generated": {
+                                    "type": "array",
+                                    "items": {
+                                        "$schema": "http://json-schema.org/draft-04/schema#",
+                                        "title": "Data set",
+                                        "type": "object",
+                                        "properties": {
+                                            "id": {
+                                                "$ref": "#/allOf/0/allOf/1/properties/additionalFiles/items/allOf/0/properties/id"
                                             },
-                                            "minItems": 1
+                                            "date": {
+                                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                                "title": "Partial date",
+                                                "description": "A date, where the month and/or day may not be known/available.\n\nFor example:\n  - 2016\n  - 2016-09\n  - 2016-09-16\n",
+                                                "type": "string",
+                                                "pattern": "^[1-2][0-9]{3}(-((0[1-9])|(1[0-2]))(-((0[1-9])|([1-2][0-9])|(3[0-1])))?)?$"
+                                            },
+                                            "authors": {
+                                                "type": "array",
+                                                "items": {
+                                                    "$ref": "#/allOf/0/allOf/1/properties/authors/items"
+                                                },
+                                                "minItems": 1
+                                            },
+                                            "authorsEtAl": {
+                                                "description": "If there are more authors.",
+                                                "type": "boolean",
+                                                "default": false
+                                            },
+                                            "title": {
+                                                "type": "string",
+                                                "minLength": 1
+                                            },
+                                            "dataId": {
+                                                "title": "Data ID",
+                                                "type": "string",
+                                                "minLength": 1
+                                            },
+                                            "details": {
+                                                "type": "string",
+                                                "minLength": 1
+                                            },
+                                            "doi": {
+                                                "$ref": "#/allOf/0/allOf/0/properties/doi"
+                                            },
+                                            "uri": {
+                                                "type": "string",
+                                                "format": "uri"
+                                            }
                                         },
-                                        "authorsEtAl": {
-                                            "description": "If there are more authors.",
-                                            "type": "boolean",
-                                            "default": false
-                                        },
-                                        "title": {
-                                            "type": "string",
-                                            "minLength": 1
-                                        },
-                                        "dataId": {
-                                            "title": "Data ID",
-                                            "type": "string",
-                                            "minLength": 1
-                                        },
-                                        "details": {
-                                            "type": "string",
-                                            "minLength": 1
-                                        },
-                                        "doi": {
-                                            "$ref": "#/allOf/0/allOf/0/properties/doi"
-                                        },
-                                        "uri": {
-                                            "type": "string",
-                                            "format": "uri"
-                                        }
-                                    },
-                                    "required": [
-                                        "id",
-                                        "date",
-                                        "authors",
-                                        "title"
-                                    ]
-                                }
-                            },
-                            "used": {
-                                "type": "array",
-                                "items": {
-                                    "$ref": "#/allOf/0/allOf/1/properties/dataSets/generated/items"
+                                        "required": [
+                                            "id",
+                                            "date",
+                                            "authors",
+                                            "title"
+                                        ]
+                                    }
+                                },
+                                "used": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/allOf/0/allOf/1/properties/dataSets/properties/generated/items"
+                                    }
                                 }
                             }
                         },
@@ -896,7 +895,7 @@
                                         "type": "object",
                                         "properties": {
                                             "id": {
-                                                "$ref": "#/allOf/0/allOf/1/properties/dataSets/generated/items/properties/id"
+                                                "$ref": "#/allOf/0/allOf/1/properties/additionalFiles/items/allOf/0/properties/id"
                                             },
                                             "source": {
                                                 "allOf": [
@@ -998,7 +997,10 @@
                                                 "$ref": "#/allOf/0/allOf/0/properties/doi"
                                             },
                                             "id": {
-                                                "$ref": "#/allOf/0/allOf/1/properties/dataSets/generated/items/properties/id"
+                                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                                "title": "HTML ID",
+                                                "type": "string",
+                                                "pattern": "^[^\\s]+$"
                                             },
                                             "label": {
                                                 "title": "Label",
@@ -1027,7 +1029,7 @@
                                                                     ]
                                                                 },
                                                                 "id": {
-                                                                    "$ref": "#/allOf/0/allOf/1/properties/dataSets/generated/items/properties/id"
+                                                                    "$ref": "#/allOf/0/allOf/1/properties/additionalFiles/items/allOf/0/properties/id"
                                                                 },
                                                                 "label": {
                                                                     "type": "string"

@@ -766,64 +766,66 @@
                         },
                         "dataSets": {
                             "type": "object",
-                            "generated": {
-                                "type": "array",
-                                "items": {
-                                    "$schema": "http://json-schema.org/draft-04/schema#",
-                                    "title": "Data set",
-                                    "type": "object",
-                                    "properties": {
-                                        "id": {
-                                            "$ref": "#/allOf/2/properties/appendices/items/properties/id"
-                                        },
-                                        "date": {
-                                            "$ref": "#/allOf/2/properties/references/items/allOf/0/properties/date"
-                                        },
-                                        "authors": {
-                                            "type": "array",
-                                            "items": {
-                                                "$ref": "#/allOf/1/allOf/1/properties/authors/items"
+                            "properties": {
+                                "generated": {
+                                    "type": "array",
+                                    "items": {
+                                        "$schema": "http://json-schema.org/draft-04/schema#",
+                                        "title": "Data set",
+                                        "type": "object",
+                                        "properties": {
+                                            "id": {
+                                                "$ref": "#/allOf/2/properties/appendices/items/properties/id"
                                             },
-                                            "minItems": 1
+                                            "date": {
+                                                "$ref": "#/allOf/2/properties/references/items/allOf/0/properties/date"
+                                            },
+                                            "authors": {
+                                                "type": "array",
+                                                "items": {
+                                                    "$ref": "#/allOf/1/allOf/1/properties/authors/items"
+                                                },
+                                                "minItems": 1
+                                            },
+                                            "authorsEtAl": {
+                                                "description": "If there are more authors.",
+                                                "type": "boolean",
+                                                "default": false
+                                            },
+                                            "title": {
+                                                "type": "string",
+                                                "minLength": 1
+                                            },
+                                            "dataId": {
+                                                "title": "Data ID",
+                                                "type": "string",
+                                                "minLength": 1
+                                            },
+                                            "details": {
+                                                "type": "string",
+                                                "minLength": 1
+                                            },
+                                            "doi": {
+                                                "$ref": "#/allOf/2/properties/decisionLetter/properties/doi"
+                                            },
+                                            "uri": {
+                                                "type": "string",
+                                                "format": "uri"
+                                            }
                                         },
-                                        "authorsEtAl": {
-                                            "description": "If there are more authors.",
-                                            "type": "boolean",
-                                            "default": false
-                                        },
-                                        "title": {
-                                            "type": "string",
-                                            "minLength": 1
-                                        },
-                                        "dataId": {
-                                            "title": "Data ID",
-                                            "type": "string",
-                                            "minLength": 1
-                                        },
-                                        "details": {
-                                            "type": "string",
-                                            "minLength": 1
-                                        },
-                                        "doi": {
-                                            "$ref": "#/allOf/2/properties/decisionLetter/properties/doi"
-                                        },
-                                        "uri": {
-                                            "type": "string",
-                                            "format": "uri"
-                                        }
-                                    },
-                                    "required": [
-                                        "id",
-                                        "date",
-                                        "authors",
-                                        "title"
-                                    ]
-                                }
-                            },
-                            "used": {
-                                "type": "array",
-                                "items": {
-                                    "$ref": "#/allOf/1/allOf/1/properties/dataSets/generated/items"
+                                        "required": [
+                                            "id",
+                                            "date",
+                                            "authors",
+                                            "title"
+                                        ]
+                                    }
+                                },
+                                "used": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/allOf/1/allOf/1/properties/dataSets/properties/generated/items"
+                                    }
                                 }
                             }
                         },
