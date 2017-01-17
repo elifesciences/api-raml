@@ -165,7 +165,6 @@
                         "version",
                         "type",
                         "doi",
-                        "authorLine",
                         "title",
                         "stage",
                         "volume",
@@ -1094,9 +1093,16 @@
                         }
                     },
                     "required": [
-                        "copyright",
-                        "authors"
-                    ]
+                        "copyright"
+                    ],
+                    "dependencies": {
+                        "authorLine": [
+                            "authors"
+                        ],
+                        "authors": [
+                            "authorLine"
+                        ]
+                    }
                 }
             ]
         },
