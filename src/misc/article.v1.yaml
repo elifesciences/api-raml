@@ -87,4 +87,6 @@ allOf:
                 $ref: ../misc/file.v1.yaml
     required:
       - copyright
-      - authors
+    dependencies:
+        authorLine: [authors]
+        authors: [authorLine]
