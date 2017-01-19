@@ -2,7 +2,7 @@
     "name": "elife/api",
     "description": "eLife Sciences API specification",
     "type": "library",
-    "license": "GPL-3.0+",
+    "license": "MIT",
     "require": {
         "puli/composer-plugin": "^1.0-beta9"
     },
