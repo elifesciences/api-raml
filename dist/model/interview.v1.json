@@ -201,6 +201,26 @@
                                                                                 },
                                                                                 {
                                                                                     "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/4"
+                                                                                },
+                                                                                {
+                                                                                    "allOf": [
+                                                                                        {
+                                                                                            "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/7"
+                                                                                        },
+                                                                                        {
+                                                                                            "properties": {
+                                                                                                "title": {
+                                                                                                    "not": {}
+                                                                                                },
+                                                                                                "sourceData": {
+                                                                                                    "not": {}
+                                                                                                },
+                                                                                                "doi": {
+                                                                                                    "not": {}
+                                                                                                }
+                                                                                            }
+                                                                                        }
+                                                                                    ]
                                                                                 }
                                                                             ]
                                                                         },
@@ -249,10 +269,7 @@
                                                                                 {
                                                                                     "properties": {
                                                                                         "mediaType": {
-                                                                                            "$schema": "http://json-schema.org/draft-04/schema#",
-                                                                                            "title": "Media type",
-                                                                                            "type": "string",
-                                                                                            "pattern": "^([a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+/[a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+)(; *[a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+=(([a-zA-Z0-9\\.\\-]+)|(\".+\")))*$"
+                                                                                            "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/8/allOf/1/properties/sources/items/properties/mediaType/allOf/0"
                                                                                         },
                                                                                         "uri": {
                                                                                             "title": "Source data URI",
@@ -542,7 +559,10 @@
                                                                         "mediaType": {
                                                                             "allOf": [
                                                                                 {
-                                                                                    "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/1/definitions/image/allOf/1/properties/sourceData/items/allOf/1/properties/mediaType"
+                                                                                    "$schema": "http://json-schema.org/draft-04/schema#",
+                                                                                    "title": "Media type",
+                                                                                    "type": "string",
+                                                                                    "pattern": "^([a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+/[a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+)(; *[a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+=(([a-zA-Z0-9\\.\\-]+)|(\".+\")))*$"
                                                                                 },
                                                                                 {
                                                                                     "pattern": "^video/"

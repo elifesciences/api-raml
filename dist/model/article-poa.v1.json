@@ -68,19 +68,19 @@
                         },
                         "published": {
                             "description": "Date and time this article was first published.\nNot present if 'stage' is 'preview' and version is '1'.\n",
+                            "$ref": "#/allOf/0/allOf/0/properties/versionDate"
+                        },
+                        "versionDate": {
+                            "description": "Date and time this version of the article was published.\nOnly present if 'stage' is 'published'.\n",
                             "$schema": "http://json-schema.org/draft-04/schema#",
                             "title": "Date-time ISO8601 with numeric UTC timezone",
                             "type": "string",
                             "format": "date-time",
                             "pattern": "^....-..-..T..:..:..Z$"
                         },
-                        "versionDate": {
-                            "description": "Date and time this version of the article was published.\nOnly present if 'stage' is 'published'.\n",
-                            "$ref": "#/allOf/0/allOf/0/properties/published"
-                        },
                         "statusDate": {
                             "description": "Date and time this article transitioned to current status.\nNot present if 'stage' is 'preview' and version is '1'.\n",
-                            "$ref": "#/allOf/0/allOf/0/properties/published"
+                            "$ref": "#/allOf/0/allOf/0/properties/versionDate"
                         },
                         "volume": {
                             "type": "integer",
@@ -820,12 +820,21 @@
                                 "generated": {
                                     "type": "array",
                                     "items": {
+                                        "$ref": "#/allOf/0/allOf/1/properties/dataSets/properties/used/items"
+                                    }
+                                },
+                                "used": {
+                                    "type": "array",
+                                    "items": {
                                         "$schema": "http://json-schema.org/draft-04/schema#",
                                         "title": "Data set",
                                         "type": "object",
                                         "properties": {
                                             "id": {
-                                                "$ref": "#/allOf/0/allOf/1/properties/additionalFiles/items/allOf/0/properties/id"
+                                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                                "title": "HTML ID",
+                                                "type": "string",
+                                                "pattern": "^[^\\s]+$"
                                             },
                                             "date": {
                                                 "$schema": "http://json-schema.org/draft-04/schema#",
@@ -874,12 +883,6 @@
                                             "title"
                                         ]
                                     }
-                                },
-                                "used": {
-                                    "type": "array",
-                                    "items": {
-                                        "$ref": "#/allOf/0/allOf/1/properties/dataSets/properties/generated/items"
-                                    }
                                 }
                             }
                         },
@@ -894,7 +897,7 @@
                                         "type": "object",
                                         "properties": {
                                             "id": {
-                                                "$ref": "#/allOf/0/allOf/1/properties/additionalFiles/items/allOf/0/properties/id"
+                                                "$ref": "#/allOf/0/allOf/1/properties/dataSets/properties/used/items/properties/id"
                                             },
                                             "source": {
                                                 "allOf": [
@@ -996,10 +999,7 @@
                                                 "$ref": "#/allOf/0/allOf/0/properties/doi"
                                             },
                                             "id": {
-                                                "$schema": "http://json-schema.org/draft-04/schema#",
-                                                "title": "HTML ID",
-                                                "type": "string",
-                                                "pattern": "^[^\\s]+$"
+                                                "$ref": "#/allOf/0/allOf/1/properties/dataSets/properties/used/items/properties/id"
                                             },
                                             "label": {
                                                 "title": "Label",
@@ -1028,7 +1028,7 @@
                                                                     ]
                                                                 },
                                                                 "id": {
-                                                                    "$ref": "#/allOf/0/allOf/1/properties/additionalFiles/items/allOf/0/properties/id"
+                                                                    "$ref": "#/allOf/0/allOf/1/properties/dataSets/properties/used/items/properties/id"
                                                                 },
                                                                 "label": {
                                                                     "type": "string"
@@ -1046,6 +1046,97 @@
                                                         },
                                                         {
                                                             "$ref": "#/allOf/0/allOf/0/properties/abstract/properties/content/items"
+                                                        },
+                                                        {
+                                                            "allOf": [
+                                                                {
+                                                                    "$schema": "http://json-schema.org/draft-04/schema#",
+                                                                    "title": "Table",
+                                                                    "type": "object",
+                                                                    "allOf": [
+                                                                        {
+                                                                            "$ref": "#/allOf/0/allOf/1/properties/additionalFiles/items/allOf/0"
+                                                                        },
+                                                                        {
+                                                                            "properties": {
+                                                                                "type": {
+                                                                                    "type": "string",
+                                                                                    "enum": [
+                                                                                        "table"
+                                                                                    ]
+                                                                                },
+                                                                                "tables": {
+                                                                                    "type": "array",
+                                                                                    "items": {
+                                                                                        "title": "HTML table",
+                                                                                        "type": "string",
+                                                                                        "pattern": "^<table>[\\s\\S]+</table>$"
+                                                                                    }
+                                                                                },
+                                                                                "footnotes": {
+                                                                                    "type": "array",
+                                                                                    "items": {
+                                                                                        "$schema": "http://json-schema.org/draft-04/schema#",
+                                                                                        "title": "Footnote",
+                                                                                        "type": "object",
+                                                                                        "properties": {
+                                                                                            "id": {
+                                                                                                "$ref": "#/allOf/0/allOf/1/properties/dataSets/properties/used/items/properties/id"
+                                                                                            },
+                                                                                            "label": {
+                                                                                                "type": "string",
+                                                                                                "minLength": 1
+                                                                                            },
+                                                                                            "text": {
+                                                                                                "type": "array",
+                                                                                                "items": {
+                                                                                                    "$ref": "#/allOf/0/allOf/0/properties/abstract/properties/content/items"
+                                                                                                },
+                                                                                                "minItems": 1
+                                                                                            }
+                                                                                        },
+                                                                                        "required": [
+                                                                                            "text"
+                                                                                        ],
+                                                                                        "dependencies": {
+                                                                                            "id": [
+                                                                                                "label"
+                                                                                            ],
+                                                                                            "label": [
+                                                                                                "id"
+                                                                                            ]
+                                                                                        }
+                                                                                    }
+                                                                                },
+                                                                                "sourceData": {
+                                                                                    "title": "Source data",
+                                                                                    "type": "array",
+                                                                                    "items": {
+                                                                                        "$ref": "#/allOf/0/allOf/1/properties/additionalFiles/items"
+                                                                                    }
+                                                                                }
+                                                                            },
+                                                                            "required": [
+                                                                                "type",
+                                                                                "tables"
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    "properties": {
+                                                                        "title": {
+                                                                            "not": {}
+                                                                        },
+                                                                        "sourceData": {
+                                                                            "not": {}
+                                                                        },
+                                                                        "doi": {
+                                                                            "not": {}
+                                                                        }
+                                                                    }
+                                                                }
+                                                            ]
                                                         }
                                                     ]
                                                 },

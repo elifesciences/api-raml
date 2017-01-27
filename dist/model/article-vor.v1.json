@@ -988,6 +988,97 @@
                                                         },
                                                         {
                                                             "$ref": "#/allOf/2/properties/ethics/items"
+                                                        },
+                                                        {
+                                                            "allOf": [
+                                                                {
+                                                                    "$schema": "http://json-schema.org/draft-04/schema#",
+                                                                    "title": "Table",
+                                                                    "type": "object",
+                                                                    "allOf": [
+                                                                        {
+                                                                            "$ref": "#/allOf/1/allOf/1/properties/additionalFiles/items/allOf/0"
+                                                                        },
+                                                                        {
+                                                                            "properties": {
+                                                                                "type": {
+                                                                                    "type": "string",
+                                                                                    "enum": [
+                                                                                        "table"
+                                                                                    ]
+                                                                                },
+                                                                                "tables": {
+                                                                                    "type": "array",
+                                                                                    "items": {
+                                                                                        "title": "HTML table",
+                                                                                        "type": "string",
+                                                                                        "pattern": "^<table>[\\s\\S]+</table>$"
+                                                                                    }
+                                                                                },
+                                                                                "footnotes": {
+                                                                                    "type": "array",
+                                                                                    "items": {
+                                                                                        "$schema": "http://json-schema.org/draft-04/schema#",
+                                                                                        "title": "Footnote",
+                                                                                        "type": "object",
+                                                                                        "properties": {
+                                                                                            "id": {
+                                                                                                "$ref": "#/allOf/2/properties/appendices/items/properties/id"
+                                                                                            },
+                                                                                            "label": {
+                                                                                                "type": "string",
+                                                                                                "minLength": 1
+                                                                                            },
+                                                                                            "text": {
+                                                                                                "type": "array",
+                                                                                                "items": {
+                                                                                                    "$ref": "#/allOf/2/properties/ethics/items"
+                                                                                                },
+                                                                                                "minItems": 1
+                                                                                            }
+                                                                                        },
+                                                                                        "required": [
+                                                                                            "text"
+                                                                                        ],
+                                                                                        "dependencies": {
+                                                                                            "id": [
+                                                                                                "label"
+                                                                                            ],
+                                                                                            "label": [
+                                                                                                "id"
+                                                                                            ]
+                                                                                        }
+                                                                                    }
+                                                                                },
+                                                                                "sourceData": {
+                                                                                    "title": "Source data",
+                                                                                    "type": "array",
+                                                                                    "items": {
+                                                                                        "$ref": "#/allOf/1/allOf/1/properties/additionalFiles/items"
+                                                                                    }
+                                                                                }
+                                                                            },
+                                                                            "required": [
+                                                                                "type",
+                                                                                "tables"
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    "properties": {
+                                                                        "title": {
+                                                                            "not": {}
+                                                                        },
+                                                                        "sourceData": {
+                                                                            "not": {}
+                                                                        },
+                                                                        "doi": {
+                                                                            "not": {}
+                                                                        }
+                                                                    }
+                                                                }
+                                                            ]
                                                         }
                                                     ]
                                                 },
@@ -2264,78 +2355,7 @@
                                                 ]
                                             },
                                             {
-                                                "$schema": "http://json-schema.org/draft-04/schema#",
-                                                "title": "Table",
-                                                "type": "object",
-                                                "allOf": [
-                                                    {
-                                                        "$ref": "#/allOf/1/allOf/1/properties/additionalFiles/items/allOf/0"
-                                                    },
-                                                    {
-                                                        "properties": {
-                                                            "type": {
-                                                                "type": "string",
-                                                                "enum": [
-                                                                    "table"
-                                                                ]
-                                                            },
-                                                            "tables": {
-                                                                "type": "array",
-                                                                "items": {
-                                                                    "title": "HTML table",
-                                                                    "type": "string",
-                                                                    "pattern": "^<table>[\\s\\S]+</table>$"
-                                                                }
-                                                            },
-                                                            "footnotes": {
-                                                                "type": "array",
-                                                                "items": {
-                                                                    "$schema": "http://json-schema.org/draft-04/schema#",
-                                                                    "title": "Footnote",
-                                                                    "type": "object",
-                                                                    "properties": {
-                                                                        "id": {
-                                                                            "$ref": "#/allOf/2/properties/appendices/items/properties/id"
-                                                                        },
-                                                                        "label": {
-                                                                            "type": "string",
-                                                                            "minLength": 1
-                                                                        },
-                                                                        "text": {
-                                                                            "type": "array",
-                                                                            "items": {
-                                                                                "$ref": "#/allOf/2/properties/ethics/items"
-                                                                            },
-                                                                            "minItems": 1
-                                                                        }
-                                                                    },
-                                                                    "required": [
-                                                                        "text"
-                                                                    ],
-                                                                    "dependencies": {
-                                                                        "id": [
-                                                                            "label"
-                                                                        ],
-                                                                        "label": [
-                                                                            "id"
-                                                                        ]
-                                                                    }
-                                                                }
-                                                            },
-                                                            "sourceData": {
-                                                                "title": "Source data",
-                                                                "type": "array",
-                                                                "items": {
-                                                                    "$ref": "#/allOf/1/allOf/1/properties/additionalFiles/items"
-                                                                }
-                                                            }
-                                                        },
-                                                        "required": [
-                                                            "type",
-                                                            "tables"
-                                                        ]
-                                                    }
-                                                ]
+                                                "$ref": "#/allOf/1/allOf/1/properties/additionalFiles/items/allOf/0/properties/caption/items/oneOf/2/allOf/0"
                                             },
                                             {
                                                 "$schema": "http://json-schema.org/draft-04/schema#",
