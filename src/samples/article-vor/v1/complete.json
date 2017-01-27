@@ -464,6 +464,12 @@
                             "id": "eqn1",
                             "label": "[1]",
                             "mathml": "<math>\n<mrow><msub><mtext>e</mtext><mn>0</mn></msub><mo>=</mo><mfrac><mrow><msub><mtext>e</mtext><mrow><mn>0</mn><mo>,</mo><mtext>max</mtext></mrow></msub><mo>×</mo><mtext>GDP</mtext></mrow><mrow><mtext>GDP</mtext><mo>+</mo><msub><mtext>K</mtext><mrow><mtext>inc</mtext></mrow></msub></mrow></mfrac><mo>,</mo></mrow></math>"
+                        },
+                        {
+                            "type": "table",
+                            "tables": [
+                                "<table><thead><tr><th>Names of scaffold</th><th>Chromosome preparation 1</th><th>…</th><th>Chromosome preparation n</th></tr></thead><tbody><tr><td>scaffold 1</td><td>Number of reads associated with the scaffold and preparation</td><td>…</td><td>…</td></tr><tr><td>…</td><td>…</td><td>…</td><td>…</td></tr><tr><td>Scaffold n</td><td>…</td><td>…</td><td>…</td></tr></tbody></table>"
+                            ]
                         }
                     ],
                     "alt": "",
