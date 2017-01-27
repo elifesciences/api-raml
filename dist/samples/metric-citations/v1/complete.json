@@ -1,0 +1,12 @@
+[
+    {
+        "service": "Crossref",
+        "uri": "http://www.crossref.org/",
+        "citations": 1234
+    },
+    {
+        "service": "PubMed Central",
+        "uri": "https://www.ncbi.nlm.nih.gov/pmc/",
+        "citations": 5678
+    }
+]

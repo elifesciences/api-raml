@@ -784,6 +784,32 @@ traits:
                                     Demonstration of the list being empty (the first page will always return a valid result).
                                 value: !include samples/medium-article-list/v1/empty.json
 
+/metrics/{type}/{id}/citations:
+    type: collection
+    description: |
+        Citation metrics
+    uriParameters:
+        type:
+            description: |
+                Content type.
+            type: string
+            enum:
+              - article
+        id:
+            description: |
+                Content ID.
+            type: string
+    get:
+        description: |
+            Get citation metrics for a piece of content
+        responses:
+            200:
+                body:
+                    application/vnd.elife.metric-citations+json;version=1:
+                        schema: !include model/metric-citations.v1.json
+                        example:
+                            value: !include samples/metric-citations/v1/complete.json
+
 /metrics/{type}/{id}/{metric}:
     type: collection
     description: |
@@ -804,7 +830,6 @@ traits:
                 Metric.
             type: string
             enum:
-              - citations
               - downloads
               - page-views
     get:
@@ -825,15 +850,15 @@ traits:
         responses:
             200:
                 body:
-                    application/vnd.elife.metric+json;version=1:
-                        schema: !include model/metric.v1.json
+                    application/vnd.elife.metric-time-period+json;version=1:
+                        schema: !include model/metric-time-period.v1.json
                         examples:
                             by-day:
                                 displayName: By day
-                                value: !include samples/metric/v1/by-day.json
+                                value: !include samples/metric-time-period/v1/by-day.json
                             by-month:
                                 displayName: By month
-                                value: !include samples/metric/v1/by-month.json
+                                value: !include samples/metric-time-period/v1/by-month.json
 
 /people:
     type: collection
