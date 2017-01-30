@@ -844,6 +844,10 @@
                                                 "type": "string",
                                                 "minLength": 1
                                             },
+                                            "figuresPdf": {
+                                                "type": "string",
+                                                "format": "uri"
+                                            },
                                             "abstract": {
                                                 "type": "object",
                                                 "properties": {
