@@ -665,6 +665,26 @@ traits:
                                     displayName: Complete
                                     value: !include samples/event/v1/complete.json
 
+/highlights/{list}:
+    type: collection
+    description: |
+        Highlights
+    uriParameters:
+        type:
+            description: |
+                List name.
+            type: string
+    get:
+        description: |
+            Get highlights list.
+        responses:
+            200:
+                body:
+                    application/vnd.elife.highlights+json;version=1:
+                        schema: !include ../dist/model/highlights.v1.json
+                        example:
+                            value: !include samples/highlights/v1/complete.json
+
 /interviews:
     type: collection
     description: |
