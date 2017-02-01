@@ -21,15 +21,19 @@ properties:
             oneOf:
               - $ref: ../blocks/mathml.v1.yaml
               - $ref: ../blocks/paragraph.v1.yaml
-              - allOf:
-                  - $ref: ../blocks/table.v1.yaml
-                  - properties:
-                        title:
-                            not: {}
-                        sourceData:
-                            not: {}
-                        doi:
-                            not: {}
+              - # Simplified table block
+                properties:
+                    type:
+                        type: string
+                        enum:
+                          - table
+                    tables:
+                        type: array
+                        items:
+                            title: HTML table
+                            type: string
+                            pattern: ^<table>[\s\S]+</table>$
+                additionalProperties: false
         minItems: 1
 dependencies:
     caption: [title]
