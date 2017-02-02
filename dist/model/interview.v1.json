@@ -210,6 +210,9 @@
                                                                                                 "table"
                                                                                             ]
                                                                                         },
+                                                                                        "id": {
+                                                                                            "$ref": "#/allOf/1/properties/content/items/oneOf/1/properties/id"
+                                                                                        },
                                                                                         "tables": {
                                                                                             "type": "array",
                                                                                             "items": {
