@@ -147,6 +147,20 @@ traits:
                 required: false
                 repeat: true
                 example: cell-biology
+    dateRanged:
+        queryParameters:
+            start-date:
+                description: |
+                    Only include <<resources | !lowercase>> available on or after this date.
+                type: date-only
+                required: false
+                example: 2017-01-02
+            end-date:
+                description: |
+                    Only include <<resources | !lowercase>> available before and on this date.
+                type: date-only
+                required: false
+                example: 2017-01-02
 
 /annual-reports:
     type: collection
@@ -534,9 +548,10 @@ traits:
         Covers
     get:
         description: |
-            Get a list of covers.
+            Get a list of covers, sorted by date of the item.
         is:
           - paged: { resources: Covers }
+          - dateRanged: { resources: Covers }
         responses:
             200:
                 description: |
@@ -1094,6 +1109,7 @@ traits:
         is:
           - paged: { resources: Results }
           - subjected: { resources: Results }
+          - dateRanged: { resources: Results }
         queryParameters:
             for:
                 description: |
