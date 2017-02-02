@@ -27,6 +27,8 @@ properties:
                         type: string
                         enum:
                           - table
+                    id:
+                        $ref: html-id.v1.yaml
                     tables:
                         type: array
                         items:
