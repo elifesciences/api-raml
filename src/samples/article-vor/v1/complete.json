@@ -468,6 +468,7 @@
                         },
                         {
                             "type": "table",
+                            "id": "tbl1",
                             "tables": [
                                 "<table><thead><tr><th>Names of scaffold</th><th>Chromosome preparation 1</th><th>…</th><th>Chromosome preparation n</th></tr></thead><tbody><tr><td>scaffold 1</td><td>Number of reads associated with the scaffold and preparation</td><td>…</td><td>…</td></tr><tr><td>…</td><td>…</td><td>…</td><td>…</td></tr><tr><td>Scaffold n</td><td>…</td><td>…</td><td>…</td></tr></tbody></table>"
                             ]
