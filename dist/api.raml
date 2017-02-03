@@ -548,10 +548,20 @@ traits:
         Covers
     get:
         description: |
-            Get a list of covers, sorted by date of the item.
+            Get a list of covers.
         is:
           - paged: { resources: Covers }
           - dateRanged: { resources: Covers }
+        queryParameters:
+            sort:
+                description: |
+                    Sorting method.
+                type: string
+                required: false
+                default: date
+                enum:
+                  - date
+                  - page-views
         responses:
             200:
                 description: |
