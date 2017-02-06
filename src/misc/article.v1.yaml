@@ -53,20 +53,6 @@ allOf:
             type: array
             items:
                 $ref: reviewer.v1.yaml
-        relatedArticles:
-            type: array
-            items:
-                oneOf:
-                  - $ref: ../snippets/article-poa.v1.yaml
-                  - $ref: ../snippets/article-vor.v1.yaml
-                  - allOf:
-                      - properties:
-                            type:
-                                type: string
-                                enum:
-                                  - external-article
-                      - $ref: ../misc/external-article.v1.yaml
-                uniqueItems: true
         dataSets:
             type: object
             properties:
