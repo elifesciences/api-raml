@@ -309,6 +309,23 @@ traits:
                                     displayName: '15278'
                                     value: !include samples/article-vor/v1/15278.json
 
+        /related:
+            type:
+                item:
+                    resource: Article relations
+            get:
+                description: |
+                    Get related articles.
+                responses:
+                    200:
+                        description: |
+                            Related articles.
+                        body:
+                            application/vnd.elife.article-related+json;version=1:
+                                schema: !include ../dist/model/article-related.v1.json
+                                example:
+                                    value: !include samples/article-related/v1/complete.json
+
         /versions:
             type:
                 item:
