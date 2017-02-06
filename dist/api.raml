@@ -143,10 +143,9 @@ traits:
             subject:
                 description: |
                     Only include <<resources | !lowercase>> with one of the specified subjects.
-                type: string
+                type: string[]
                 required: false
-                repeat: true
-                example: cell-biology
+                example: [cell-biology]
     dateRanged:
         queryParameters:
             start-date:
@@ -304,10 +303,10 @@ traits:
                                     displayName: PreviewComplete
                                     value: !include samples/article-vor/v1/unpublished-complete.json
                                 00569:
-                                    displayName: 00569
+                                    displayName: '00569'
                                     value: !include samples/article-vor/v1/00569.json
                                 15278:
-                                    displayName: 15278
+                                    displayName: '15278'
                                     value: !include samples/article-vor/v1/15278.json
 
         /versions:
@@ -1139,27 +1138,28 @@ traits:
             type:
                 description: |
                     Only include results of the specified types.
-                type: string
-                enum:
-                  - correction
-                  - editorial
-                  - feature
-                  - insight
-                  - research-advance
-                  - research-article
-                  - research-exchange
-                  - retraction
-                  - registered-report
-                  - replication-study
-                  - short-report
-                  - tools-resources
-                  - blog-article
-                  - event
-                  - interview
-                  - labs-experiment
-                  - podcast-episode
+                type: array
+                items:
+                    type: string
+                    enum:
+                      - correction
+                      - editorial
+                      - feature
+                      - insight
+                      - research-advance
+                      - research-article
+                      - research-exchange
+                      - retraction
+                      - registered-report
+                      - replication-study
+                      - short-report
+                      - tools-resources
+                      - blog-article
+                      - event
+                      - interview
+                      - labs-experiment
+                      - podcast-episode
                 required: false
-                repeat: true
         responses:
             200:
                 description: |
