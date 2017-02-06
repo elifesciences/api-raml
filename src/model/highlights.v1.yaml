@@ -76,7 +76,7 @@ items:
                             episode:
                                 $ref: ../snippets/podcast-episode.v1.yaml
                             chapter:
-                                $ref: podcast-episode.v1.yaml#/allOf/1/properties/chapters/items
+                                $ref: ../snippets/podcast-episode-chapter.v1.yaml
     required:
       - title
       - item
