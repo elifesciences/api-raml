@@ -2,10 +2,10 @@
     "private": true,
     "devDependencies": {
         "api-console": "^3.0",
-        "fs-extra": "^0.8",
+        "fs-extra": "^2.0",
         "http-server": "^0.9",
         "json-schema-ref-parser": "^3.1",
-        "raml-1-parser": "^0.2",
-        "recursive-readdir": "^2.0"
+        "raml-1-parser": "^1.1",
+        "recursive-readdir": "^2.1"
     }
 }
