@@ -115,15 +115,6 @@
             ]
         },
         {
-            "type": "event",
-            "id": "1",
-            "title": "Changing peer review in cancer research: a seminar at Fred Hutch",
-            "impactStatement": "How eLife is influencing the culture of peer review",
-            "starts": "2016-04-22T20:00:00Z",
-            "ends": "2016-04-22T21:00:00Z",
-            "timezone": "America/Seattle"
-        },
-        {
             "type": "collection",
             "id": "1",
             "title": "Tropical disease",
@@ -199,7 +190,6 @@
         "tools-resources": 0,
         "blog-article": 3,
         "collection": 2,
-        "event": 1,
         "interview": 2,
         "labs-experiment": 2,
         "podcast-episode": 1
