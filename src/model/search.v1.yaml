@@ -37,13 +37,6 @@ properties:
                                 type:
                                     type: string
                                     enum:
-                                      - event
-                          - $ref: ../snippets/event.v1.yaml
-                      - allOf:
-                          - properties:
-                                type:
-                                    type: string
-                                    enum:
                                       - interview
                           - $ref: ../snippets/interview.v1.yaml
                       - allOf:
@@ -137,10 +130,6 @@ properties:
                 description: Number of collections in the result set
                 type: integer
                 minimum: 0
-            event:
-                description: Number of open events in the result set
-                type: integer
-                minimum: 0
             interview:
                 description: Number of interviews in the result set
                 type: integer
@@ -168,7 +157,6 @@ properties:
           - tools-resources
           - blog-article
           - collection
-          - event
           - interview
           - labs-experiment
           - podcast-episode
