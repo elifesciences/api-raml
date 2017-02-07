@@ -61,6 +61,17 @@ documentation:
         As the endpoint itself is not versioned, functionality may be removed (including removing support for versions of content). We will try and deprecate first, and avoid removing support where possible.
 
         When something has been marked as deprecated we will add a message to responses as a the HTTP `Warning` header (a deprecation will always begin with the word 'Deprecation'). For example, `Warning: 299 api.elifesciences.org "Deprecation: 'foo' query string parameter will be removed, use 'bar' instead"`.
+  - title: HTML
+    content: |
+        Most properties may contain inline HTML 5 elements. Properties may contain specific block-level HTML 5 elements if specified.
+
+        Properties may use the following classes:
+
+        - `underline`
+        - `monospace`
+        - `small-caps`
+        - `author-callout-style-a1` through to `author-callout-style-a3` (for text colours)
+        - `author-callout-style-b1` through to `author-callout-style-b8` (for background colours)
 
 resourceTypes:
     base:
