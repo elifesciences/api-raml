@@ -487,6 +487,12 @@
                                 {
                                     "type": "paragraph",
                                     "text": "Some other footnote."
+                                },
+                                {
+                                    "type": "mathml",
+                                    "id": "eqn2",
+                                    "label": "[2]",
+                                    "mathml": "<math><mrow><msub><mtext>e</mtext><mn>0</mn></msub><mo>=</mo><mfrac><mrow><msub><mtext>e</mtext><mrow><mn>0</mn><mo>,</mo><mtext>max</mtext></mrow></msub><mo>×</mo><mtext>GDP</mtext></mrow><mrow><mtext>GDP</mtext><mo>+</mo><msub><mtext>K</mtext><mrow><mtext>inc</mtext></mrow></msub></mrow></mfrac><mo>,</mo></mrow></math>"
                                 }
                             ]
                         }
