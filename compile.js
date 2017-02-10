@@ -47,6 +47,7 @@ recursive('./src/model', function (err, files) {
 
         fs.writeFileSync('./dist/api.raml', raml);
 
+        fs.copySync('./LICENSE', './dist/LICENSE');
         fs.copySync('./src/samples', './dist/samples');
 
         try {

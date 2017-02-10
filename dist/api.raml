@@ -8,14 +8,7 @@ documentation:
     content: |
         Welcome to the eLife Sciences API. The API is described using [RAML 1.0](http://raml.org/); it is available in [its raw form](api.raml), or as this compiled documentation.
   - title: Licence
-    content: |
-        Copyright 2016 eLife Sciences. Licensed under the GPLv3.
-
-        This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
-
-        This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
-
-        You should have received a copy of the GNU General Public License along with this program. If not, see <http://www.gnu.org/licenses/>.
+    content: !include LICENSE
   - title: Versioning
     content: |
         API endpoints are not versioned, but the body of requests/responses are.
@@ -61,6 +54,17 @@ documentation:
         As the endpoint itself is not versioned, functionality may be removed (including removing support for versions of content). We will try and deprecate first, and avoid removing support where possible.
 
         When something has been marked as deprecated we will add a message to responses as a the HTTP `Warning` header (a deprecation will always begin with the word 'Deprecation'). For example, `Warning: 299 api.elifesciences.org "Deprecation: 'foo' query string parameter will be removed, use 'bar' instead"`.
+  - title: HTML
+    content: |
+        Most properties may contain inline HTML 5 elements. Properties may contain specific block-level HTML 5 elements if specified.
+
+        Properties may use the following classes:
+
+        - `underline`
+        - `monospace`
+        - `small-caps`
+        - `author-callout-style-a1` through to `author-callout-style-a3` (for text colours)
+        - `author-callout-style-b1` through to `author-callout-style-b8` (for background colours)
 
 resourceTypes:
     base:
@@ -308,6 +312,23 @@ traits:
                                 15278:
                                     displayName: '15278'
                                     value: !include samples/article-vor/v1/15278.json
+
+        /related:
+            type:
+                item:
+                    resource: Article relations
+            get:
+                description: |
+                    Get related articles.
+                responses:
+                    200:
+                        description: |
+                            Related articles.
+                        body:
+                            application/vnd.elife.article-related+json;version=1:
+                                schema: !include model/article-related.v1.json
+                                example:
+                                    value: !include samples/article-related/v1/complete.json
 
         /versions:
             type:
