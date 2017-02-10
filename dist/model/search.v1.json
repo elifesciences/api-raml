@@ -405,7 +405,7 @@
                                                                 "type": "object",
                                                                 "allOf": [
                                                                     {
-                                                                        "$ref": "#/properties/items/items/oneOf/2/allOf/1/oneOf/3/allOf/1/properties/interviewee"
+                                                                        "$ref": "#/properties/items/items/oneOf/2/allOf/1/oneOf/2/allOf/1/properties/interviewee"
                                                                     },
                                                                     {
                                                                         "properties": {
@@ -452,57 +452,6 @@
                                                     "updated",
                                                     "image",
                                                     "selectedCurator"
-                                                ]
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        "allOf": [
-                                            {
-                                                "properties": {
-                                                    "type": {
-                                                        "type": "string",
-                                                        "enum": [
-                                                            "event"
-                                                        ]
-                                                    }
-                                                }
-                                            },
-                                            {
-                                                "$schema": "http://json-schema.org/draft-04/schema#",
-                                                "title": "Event snippet",
-                                                "type": "object",
-                                                "properties": {
-                                                    "id": {
-                                                        "$ref": "#/properties/items/items/oneOf/0/allOf/0/properties/id"
-                                                    },
-                                                    "title": {
-                                                        "description": "Title",
-                                                        "type": "string"
-                                                    },
-                                                    "impactStatement": {
-                                                        "description": "Description of the article",
-                                                        "type": "string"
-                                                    },
-                                                    "starts": {
-                                                        "description": "Start date/time (UTC)",
-                                                        "$ref": "#/properties/items/items/oneOf/0/allOf/0/properties/published"
-                                                    },
-                                                    "ends": {
-                                                        "description": "Ends date/time (UTC)",
-                                                        "$ref": "#/properties/items/items/oneOf/0/allOf/0/properties/published"
-                                                    },
-                                                    "timezone": {
-                                                        "description": "Timezone (from the IANA time zone database) for non-online events",
-                                                        "type": "string",
-                                                        "pattern": "^[A-Za-z]+(/[A-Za-z_-]+)+$"
-                                                    }
-                                                },
-                                                "required": [
-                                                    "id",
-                                                    "title",
-                                                    "starts",
-                                                    "ends"
                                                 ]
                                             }
                                         ]
@@ -860,11 +809,6 @@
                     "type": "integer",
                     "minimum": 0
                 },
-                "event": {
-                    "description": "Number of open events in the result set",
-                    "type": "integer",
-                    "minimum": 0
-                },
                 "interview": {
                     "description": "Number of interviews in the result set",
                     "type": "integer",
@@ -896,7 +840,6 @@
                 "tools-resources",
                 "blog-article",
                 "collection",
-                "event",
                 "interview",
                 "labs-experiment",
                 "podcast-episode"
