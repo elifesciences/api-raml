@@ -1135,6 +1135,14 @@
                                                         "description": "If there are more authors.",
                                                         "type": "boolean",
                                                         "default": false
+                                                    },
+                                                    "authorsType": {
+                                                        "type": "string",
+                                                        "enum": [
+                                                            "authors",
+                                                            "editors"
+                                                        ],
+                                                        "default": "authors"
                                                     }
                                                 },
                                                 "required": [
