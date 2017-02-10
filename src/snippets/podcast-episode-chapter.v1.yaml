@@ -1,0 +1,22 @@
+$schema: http://json-schema.org/draft-04/schema#
+title: Podcast episode chapter
+type: object
+properties:
+    number:
+        title: Chapter number
+        type: integer
+        minimum: 1
+    title:
+        title: Chapter title
+        type: string
+    time:
+        title: Number of seconds into the episode that the chapter begins
+        type: integer
+        minimum: 0
+    impactStatement:
+        description: Description of the chapter
+        type: string
+required:
+  - number
+  - title
+  - time
