@@ -68,15 +68,7 @@ items:
                                     enum:
                                       - podcast-episode
                           - $ref: ../snippets/podcast-episode.v1.yaml
-                      - properties:
-                            type:
-                                type: string
-                                enum:
-                                  - podcast-episode-chapter
-                            episode:
-                                $ref: ../snippets/podcast-episode.v1.yaml
-                            chapter:
-                                $ref: ../snippets/podcast-episode-chapter.v1.yaml
+                      - $ref: ../misc/podcast-episode-chapter.v1.yaml
     required:
       - title
       - item
