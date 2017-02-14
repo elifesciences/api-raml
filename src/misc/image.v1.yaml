@@ -12,7 +12,43 @@ properties:
         type: string
     source:
         $ref: file.v1.yaml
+    size:
+        type: object
+        properties:
+            width:
+                type: integer
+                minimum: 1
+            height:
+                type: integer
+                minimum: 1
+        required:
+          - width
+          - height
+    focalPoint:
+        type: object
+        title: Focal point
+        description: |
+            Point on the image that is considered to be the focal point of the image.
+
+            If not present, 50 can be used for both `x` and `y`.
+        properties:
+            x:
+                description: |
+                    Percentage on the horizontal axis.
+                type: integer
+                minimum: 0
+                maximum: 100
+            y:
+                description: |
+                    Percentage on the vertical axis.
+                type: integer
+                minimum: 0
+                maximum: 100
+        required:
+          - x
+          - y
 required:
   - uri
   - alt
   - source
+  - size

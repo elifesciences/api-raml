@@ -317,6 +317,14 @@
                 "mediaType": "image/jpeg",
                 "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1/full/full/0/default.jpg",
                 "filename": "an-image.jpg"
+            },
+            "size": {
+                "width": 3441,
+                "height": 2741
+            },
+            "focalPoint": {
+                "x": 25,
+                "y": 75
             }
         },
         "thumbnail": {
@@ -326,6 +334,14 @@
                 "mediaType": "image/jpeg",
                 "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1/full/full/0/default.jpg",
                 "filename": "an-image.jpg"
+            },
+            "size": {
+                "width": 3441,
+                "height": 2741
+            },
+            "focalPoint": {
+                "x": 25,
+                "y": 75
             }
         }
     },
@@ -401,6 +417,14 @@
                             "mediaType": "image/jpeg",
                             "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1/full/full/0/default.jpg",
                             "filename": "an-image.jpg"
+                        },
+                        "size": {
+                            "width": 3441,
+                            "height": 2741
+                        },
+                        "focalPoint": {
+                            "x": 25,
+                            "y": 75
                         }
                     },
                     "supplements": [
@@ -423,6 +447,10 @@
                                     "mediaType": "image/jpeg",
                                     "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1/full/full/0/default.jpg",
                                     "filename": "an-image.jpg"
+                                },
+                                "size": {
+                                    "width": 3441,
+                                    "height": 2741
                                 }
                             },
                             "attribution": [
@@ -1419,6 +1447,10 @@
                             "mediaType": "image/jpeg",
                             "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1/full/full/0/default.jpg",
                             "filename": "an-image.jpg"
+                        },
+                        "size": {
+                            "width": 3441,
+                            "height": 2741
                         }
                     }
                 }
