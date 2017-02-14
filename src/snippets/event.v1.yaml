@@ -10,6 +10,12 @@ properties:
     impactStatement:
         description: Description of the article
         type: string
+    published:
+        title: Publication date (UTC)
+        $ref: ../misc/date-time.v1.yaml
+    updated:
+        title: Updated date (UTC)
+        $ref: ../misc/date-time.v1.yaml
     starts:
         description: Start date/time (UTC)
         $ref: ../misc/date-time.v1.yaml
@@ -23,5 +29,6 @@ properties:
 required:
   - id
   - title
+  - published
   - starts
   - ends
