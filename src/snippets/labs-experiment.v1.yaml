@@ -13,7 +13,10 @@ properties:
         description: Description of the experiment
         type: string
     published:
-        description: Publication date (UTC)
+        title: Publication date (UTC)
+        $ref: ../misc/date-time.v1.yaml
+    updated:
+        title: Updated date (UTC)
         $ref: ../misc/date-time.v1.yaml
     image:
         type: object
