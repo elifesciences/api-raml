@@ -22,12 +22,16 @@
                     "type": "string"
                 },
                 "published": {
-                    "description": "Publication date (UTC)",
+                    "title": "Publication date (UTC)",
                     "$schema": "http://json-schema.org/draft-04/schema#",
-                    "title": "Date-time ISO8601 with numeric UTC timezone",
+                    "description": "eLife restriction over the ISO8601 standard\n\nFor example:\n    - 2016-09-16T12:34:56Z\n",
                     "type": "string",
                     "format": "date-time",
                     "pattern": "^....-..-..T..:..:..Z$"
+                },
+                "updated": {
+                    "title": "Updated date (UTC)",
+                    "$ref": "#/allOf/0/properties/published"
                 },
                 "image": {
                     "type": "object",
@@ -508,8 +512,12 @@
                                                                                     "description": "Description of the collection",
                                                                                     "type": "string"
                                                                                 },
+                                                                                "published": {
+                                                                                    "title": "Publication date (UTC)",
+                                                                                    "$ref": "#/allOf/0/properties/published"
+                                                                                },
                                                                                 "updated": {
-                                                                                    "description": "Updated date (UTC)",
+                                                                                    "title": "Updated date (UTC)",
                                                                                     "$ref": "#/allOf/0/properties/published"
                                                                                 },
                                                                                 "image": {
@@ -614,7 +622,7 @@
                                                                             "required": [
                                                                                 "id",
                                                                                 "title",
-                                                                                "updated",
+                                                                                "published",
                                                                                 "image",
                                                                                 "selectedCurator"
                                                                             ]

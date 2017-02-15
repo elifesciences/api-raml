@@ -342,8 +342,12 @@
                                                         "description": "Description of the collection",
                                                         "type": "string"
                                                     },
+                                                    "published": {
+                                                        "title": "Publication date (UTC)",
+                                                        "$ref": "#/properties/items/items/oneOf/0/allOf/0/properties/published"
+                                                    },
                                                     "updated": {
-                                                        "description": "Updated date (UTC)",
+                                                        "title": "Updated date (UTC)",
                                                         "$ref": "#/properties/items/items/oneOf/0/allOf/0/properties/published"
                                                     },
                                                     "image": {
@@ -448,7 +452,7 @@
                                                 "required": [
                                                     "id",
                                                     "title",
-                                                    "updated",
+                                                    "published",
                                                     "image",
                                                     "selectedCurator"
                                                 ]
@@ -631,7 +635,11 @@
                                                         "type": "string"
                                                     },
                                                     "published": {
-                                                        "description": "Publication date (UTC)",
+                                                        "title": "Publication date (UTC)",
+                                                        "$ref": "#/properties/items/items/oneOf/0/allOf/0/properties/published"
+                                                    },
+                                                    "updated": {
+                                                        "title": "Updated date (UTC)",
                                                         "$ref": "#/properties/items/items/oneOf/0/allOf/0/properties/published"
                                                     },
                                                     "image": {
