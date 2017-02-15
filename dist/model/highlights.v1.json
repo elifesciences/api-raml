@@ -759,6 +759,9 @@
                                         ]
                                     },
                                     {
+                                        "$schema": "http://json-schema.org/draft-04/schema#",
+                                        "title": "Podcast episode chapter",
+                                        "type": "object",
                                         "properties": {
                                             "type": {
                                                 "type": "string",
@@ -799,7 +802,12 @@
                                                     "time"
                                                 ]
                                             }
-                                        }
+                                        },
+                                        "required": [
+                                            "type",
+                                            "episode",
+                                            "chapter"
+                                        ]
                                     }
                                 ]
                             }

@@ -64,31 +64,39 @@
             "uri": "https://doi.org/10.1016/j.cell.2012.08.026"
         },
         {
-            "type": "podcast-episode",
-            "number": 29,
-            "title": "April/May 2016",
-            "published": "2016-05-27T13:19:42Z",
-            "image": {
-                "thumbnail": {
-                    "alt": "",
-                    "sizes": {
-                        "16:9": {
-                            "250": "https://placehold.it/250x141",
-                            "500": "https://placehold.it/500x281"
-                        },
-                        "1:1": {
-                            "70": "https://placehold.it/70x70",
-                            "140": "https://placehold.it/140x140"
+            "type": "podcast-episode-chapter",
+            "episode": {
+                "number": 29,
+                "title": "April/May 2016",
+                "published": "2016-05-27T13:19:42Z",
+                "image": {
+                    "thumbnail": {
+                        "alt": "",
+                        "sizes": {
+                            "16:9": {
+                                "250": "https://placehold.it/250x141",
+                                "500": "https://placehold.it/500x281"
+                            },
+                            "1:1": {
+                                "70": "https://placehold.it/70x70",
+                                "140": "https://placehold.it/140x140"
+                            }
                         }
                     }
-                }
+                },
+                "sources": [
+                    {
+                        "mediaType": "audio/mpeg",
+                        "uri": "https://nakeddiscovery.com/scripts/mp3s/audio/eLife_Podcast_16.05.mp3"
+                    }
+                ]
             },
-            "sources": [
-                {
-                    "mediaType": "audio/mpeg",
-                    "uri": "https://nakeddiscovery.com/scripts/mp3s/audio/eLife_Podcast_16.05.mp3"
-                }
-            ]
+            "chapter": {
+                "number": 2,
+                "title": "Lost generation",
+                "time": 300,
+                "impactStatement": "Is science at risk of losing talented researchers to other professions?"
+            }
         },
         {
             "type": "collection",

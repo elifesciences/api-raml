@@ -602,18 +602,17 @@
                                         ]
                                     },
                                     {
-                                        "allOf": [
-                                            {
-                                                "properties": {
-                                                    "type": {
-                                                        "type": "string",
-                                                        "enum": [
-                                                            "podcast-episode"
-                                                        ]
-                                                    }
-                                                }
+                                        "$schema": "http://json-schema.org/draft-04/schema#",
+                                        "title": "Podcast episode chapter",
+                                        "type": "object",
+                                        "properties": {
+                                            "type": {
+                                                "type": "string",
+                                                "enum": [
+                                                    "podcast-episode-chapter"
+                                                ]
                                             },
-                                            {
+                                            "episode": {
                                                 "$schema": "http://json-schema.org/draft-04/schema#",
                                                 "title": "Podcast episode snippet",
                                                 "type": "object",
@@ -693,7 +692,42 @@
                                                     "image",
                                                     "sources"
                                                 ]
+                                            },
+                                            "chapter": {
+                                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                                "title": "Podcast episode chapter",
+                                                "type": "object",
+                                                "properties": {
+                                                    "number": {
+                                                        "title": "Chapter number",
+                                                        "type": "integer",
+                                                        "minimum": 1
+                                                    },
+                                                    "title": {
+                                                        "title": "Chapter title",
+                                                        "type": "string"
+                                                    },
+                                                    "time": {
+                                                        "title": "Number of seconds into the episode that the chapter begins",
+                                                        "type": "integer",
+                                                        "minimum": 0
+                                                    },
+                                                    "impactStatement": {
+                                                        "description": "Description of the chapter",
+                                                        "type": "string"
+                                                    }
+                                                },
+                                                "required": [
+                                                    "number",
+                                                    "title",
+                                                    "time"
+                                                ]
                                             }
+                                        },
+                                        "required": [
+                                            "type",
+                                            "episode",
+                                            "chapter"
                                         ]
                                     }
                                 ]
