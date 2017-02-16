@@ -4,6 +4,7 @@
         {
             "id": "2",
             "title": "eLife Continuum webinar",
+            "published": "2016-08-01T00:00:00Z",
             "starts": "2016-08-04T15:00:00Z",
             "ends": "2016-08-04T16:00:00Z"
         },
@@ -11,6 +12,8 @@
             "id": "1",
             "title": "Changing peer review in cancer research: a seminar at Fred Hutch",
             "impactStatement": "How eLife is influencing the culture of peer review",
+            "published": "2016-08-01T00:00:00Z",
+            "updated": "2016-08-02T00:00:00Z",
             "starts": "2016-04-22T20:00:00Z",
             "ends": "2016-04-22T21:00:00Z",
             "timezone": "America/Seattle"

@@ -343,7 +343,11 @@
                                                         "type": "string"
                                                     },
                                                     "published": {
-                                                        "description": "Publication date (UTC)",
+                                                        "title": "Publication date (UTC)",
+                                                        "$ref": "#/properties/items/items/oneOf/0/allOf/0/properties/published"
+                                                    },
+                                                    "updated": {
+                                                        "title": "Updated date (UTC)",
                                                         "$ref": "#/properties/items/items/oneOf/0/allOf/0/properties/published"
                                                     },
                                                     "subjects": {
@@ -391,8 +395,12 @@
                                                         "description": "Description of the collection",
                                                         "type": "string"
                                                     },
+                                                    "published": {
+                                                        "title": "Publication date (UTC)",
+                                                        "$ref": "#/properties/items/items/oneOf/0/allOf/0/properties/published"
+                                                    },
                                                     "updated": {
-                                                        "description": "Updated date (UTC)",
+                                                        "title": "Updated date (UTC)",
                                                         "$ref": "#/properties/items/items/oneOf/0/allOf/0/properties/published"
                                                     },
                                                     "image": {
@@ -465,7 +473,7 @@
                                                 "required": [
                                                     "id",
                                                     "title",
-                                                    "updated",
+                                                    "published",
                                                     "image",
                                                     "selectedCurator"
                                                 ]
@@ -500,6 +508,14 @@
                                                         "description": "Description of the article",
                                                         "type": "string"
                                                     },
+                                                    "published": {
+                                                        "title": "Publication date (UTC)",
+                                                        "$ref": "#/properties/items/items/oneOf/0/allOf/0/properties/published"
+                                                    },
+                                                    "updated": {
+                                                        "title": "Updated date (UTC)",
+                                                        "$ref": "#/properties/items/items/oneOf/0/allOf/0/properties/published"
+                                                    },
                                                     "starts": {
                                                         "description": "Start date/time (UTC)",
                                                         "$ref": "#/properties/items/items/oneOf/0/allOf/0/properties/published"
@@ -517,6 +533,7 @@
                                                 "required": [
                                                     "id",
                                                     "title",
+                                                    "published",
                                                     "starts",
                                                     "ends"
                                                 ]
@@ -591,6 +608,10 @@
                                                     "published": {
                                                         "title": "Publication date (UTC)",
                                                         "$ref": "#/properties/items/items/oneOf/0/allOf/0/properties/published"
+                                                    },
+                                                    "updated": {
+                                                        "title": "Updated date (UTC)",
+                                                        "$ref": "#/properties/items/items/oneOf/0/allOf/0/properties/published"
                                                     }
                                                 },
                                                 "required": [
@@ -633,7 +654,11 @@
                                                         "type": "string"
                                                     },
                                                     "published": {
-                                                        "description": "Publication date (UTC)",
+                                                        "title": "Publication date (UTC)",
+                                                        "$ref": "#/properties/items/items/oneOf/0/allOf/0/properties/published"
+                                                    },
+                                                    "updated": {
+                                                        "title": "Updated date (UTC)",
                                                         "$ref": "#/properties/items/items/oneOf/0/allOf/0/properties/published"
                                                     },
                                                     "image": {
@@ -688,7 +713,11 @@
                                                         "type": "string"
                                                     },
                                                     "published": {
-                                                        "description": "Publication date (UTC)",
+                                                        "title": "Publication date (UTC)",
+                                                        "$ref": "#/properties/items/items/oneOf/0/allOf/0/properties/published"
+                                                    },
+                                                    "updated": {
+                                                        "title": "Updated date (UTC)",
                                                         "$ref": "#/properties/items/items/oneOf/0/allOf/0/properties/published"
                                                     },
                                                     "image": {

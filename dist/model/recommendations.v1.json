@@ -342,8 +342,12 @@
                                                         "description": "Description of the collection",
                                                         "type": "string"
                                                     },
+                                                    "published": {
+                                                        "title": "Publication date (UTC)",
+                                                        "$ref": "#/properties/items/items/oneOf/0/allOf/0/properties/published"
+                                                    },
                                                     "updated": {
-                                                        "description": "Updated date (UTC)",
+                                                        "title": "Updated date (UTC)",
                                                         "$ref": "#/properties/items/items/oneOf/0/allOf/0/properties/published"
                                                     },
                                                     "image": {
@@ -448,7 +452,7 @@
                                                 "required": [
                                                     "id",
                                                     "title",
-                                                    "updated",
+                                                    "published",
                                                     "image",
                                                     "selectedCurator"
                                                 ]
@@ -602,18 +606,17 @@
                                         ]
                                     },
                                     {
-                                        "allOf": [
-                                            {
-                                                "properties": {
-                                                    "type": {
-                                                        "type": "string",
-                                                        "enum": [
-                                                            "podcast-episode"
-                                                        ]
-                                                    }
-                                                }
+                                        "$schema": "http://json-schema.org/draft-04/schema#",
+                                        "title": "Podcast episode chapter",
+                                        "type": "object",
+                                        "properties": {
+                                            "type": {
+                                                "type": "string",
+                                                "enum": [
+                                                    "podcast-episode-chapter"
+                                                ]
                                             },
-                                            {
+                                            "episode": {
                                                 "$schema": "http://json-schema.org/draft-04/schema#",
                                                 "title": "Podcast episode snippet",
                                                 "type": "object",
@@ -632,7 +635,11 @@
                                                         "type": "string"
                                                     },
                                                     "published": {
-                                                        "description": "Publication date (UTC)",
+                                                        "title": "Publication date (UTC)",
+                                                        "$ref": "#/properties/items/items/oneOf/0/allOf/0/properties/published"
+                                                    },
+                                                    "updated": {
+                                                        "title": "Updated date (UTC)",
                                                         "$ref": "#/properties/items/items/oneOf/0/allOf/0/properties/published"
                                                     },
                                                     "image": {
@@ -693,7 +700,42 @@
                                                     "image",
                                                     "sources"
                                                 ]
+                                            },
+                                            "chapter": {
+                                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                                "title": "Podcast episode chapter",
+                                                "type": "object",
+                                                "properties": {
+                                                    "number": {
+                                                        "title": "Chapter number",
+                                                        "type": "integer",
+                                                        "minimum": 1
+                                                    },
+                                                    "title": {
+                                                        "title": "Chapter title",
+                                                        "type": "string"
+                                                    },
+                                                    "time": {
+                                                        "title": "Number of seconds into the episode that the chapter begins",
+                                                        "type": "integer",
+                                                        "minimum": 0
+                                                    },
+                                                    "impactStatement": {
+                                                        "description": "Description of the chapter",
+                                                        "type": "string"
+                                                    }
+                                                },
+                                                "required": [
+                                                    "number",
+                                                    "title",
+                                                    "time"
+                                                ]
                                             }
+                                        },
+                                        "required": [
+                                            "type",
+                                            "episode",
+                                            "chapter"
                                         ]
                                     }
                                 ]
