@@ -164,6 +164,17 @@ traits:
                 type: date-only
                 required: false
                 example: 2017-01-02
+            use-date:
+                description: |
+                    Which date to use for ordering and filtering.
+
+                    `default` refers to the default date per content type, which may change over time. `published` refers to the original publication date, which does not change.
+                type: string
+                enum:
+                  - default
+                  - published
+                required: false
+                default: default
 
 /annual-reports:
     type: collection
