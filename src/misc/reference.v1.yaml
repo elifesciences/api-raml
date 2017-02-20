@@ -29,23 +29,11 @@ allOf:
                     type: string
                     enum:
                       - book
-                authors:
-                    type: array
-                    items:
-                        $ref: author.v1.yaml
-                    minItems: 1
-                authorsEtAl:
-                    description: If there are more authors.
-                    type: boolean
-                    default: false
-                authorsType:
-                    type: string
-                    enum:
-                      - authors
-                      - editors
-                    default: authors
-            required:
-              - authors
+            anyOf:
+              - required:
+                 - authors
+              - required:
+                 - editors
           - $ref: '#/definitions/book'
       - allOf:
           - properties:
@@ -53,24 +41,6 @@ allOf:
                     type: string
                     enum:
                       - book-chapter
-                authors:
-                    type: array
-                    items:
-                        $ref: author.v1.yaml
-                    minItems: 1
-                authorsEtAl:
-                    description: If there are more authors.
-                    type: boolean
-                    default: false
-                editors:
-                    type: array
-                    items:
-                        $ref: author.v1.yaml
-                    minItems: 1
-                editorsEtAl:
-                    description: If there are more editors.
-                    type: boolean
-                    default: false
                 chapterTitle:
                     type: string
                     minLength: 1
@@ -514,6 +484,24 @@ definitions:
             bookTitle:
                 type: string
                 minLength: 1
+            authors:
+                type: array
+                items:
+                    $ref: author.v1.yaml
+                minItems: 1
+            authorsEtAl:
+                description: If there are more authors.
+                type: boolean
+                default: false
+            editors:
+                type: array
+                items:
+                    $ref: author.v1.yaml
+                minItems: 1
+            editorsEtAl:
+                description: If there are more editors.
+                type: boolean
+                default: false
             publisher:
                 $ref: place.v1.yaml
             volume:
