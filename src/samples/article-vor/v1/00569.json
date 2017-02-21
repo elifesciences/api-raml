@@ -1479,11 +1479,7 @@
                 }
             ],
             "articleTitle": "ProtTest: selection of best-fit models of protein evolution",
-            "journal": {
-                "name": [
-                    "Bioinformatics"
-                ]
-            },
+            "journal": "Bioinformatics",
             "volume": "21",
             "pages": {
                 "first": "2104",
@@ -1527,11 +1523,7 @@
                 }
             ],
             "articleTitle": "Identification of a rudimentary neural crest in a non-vertebrate chordate",
-            "journal": {
-                "name": [
-                    "Nature"
-                ]
-            },
+            "journal": "Nature",
             "volume": "492",
             "pages": {
                 "first": "104",
@@ -1589,11 +1581,7 @@
                 }
             ],
             "articleTitle": "A thymus candidate in lampreys",
-            "journal": {
-                "name": [
-                    "Nature"
-                ]
-            },
+            "journal": "Nature",
             "volume": "470",
             "pages": {
                 "first": "90",
@@ -1652,11 +1640,7 @@
             "authorsEtAl": true,
             "date": "2008",
             "articleTitle": "Haemocytes and blastogenetic cycle in the colonial ascidian <i>Botryllus schlosseri</i>: a matter of life and death",
-            "journal": {
-                "name": [
-                    "Cell Tissue Res"
-                ]
-            },
+            "journal": "Cell Tissue Res",
             "volume": "331",
             "pages": {
                 "first": "555",
@@ -1693,11 +1677,7 @@
             ],
             "date": "1994",
             "articleTitle": "Molecular evolution of the vertebrate immunesystem",
-            "journal": {
-                "name": [
-                    "Proc Natl Acad Sci USA"
-                ]
-            },
+            "journal": "Proc Natl Acad Sci USA",
             "volume": "91",
             "pages": {
                 "first": "10769",
@@ -1755,11 +1735,7 @@
             ],
             "date": "2010",
             "articleTitle": "Gene enrichment profiles reveal T-cell development, differentiation, and lineage-specific transcription factors including ZBTB25 as a novel NF-AT repressor",
-            "journal": {
-                "name": [
-                    "Blood"
-                ]
-            },
+            "journal": "Blood",
             "volume": "115",
             "pages": {
                 "first": "5376",
@@ -1818,11 +1794,7 @@
             "authorsEtAl": true,
             "date": "2006",
             "articleTitle": "Deuterostome phylogeny reveals monophyletic chordates and the new phylum Xenoturbellida",
-            "journal": {
-                "name": [
-                    "Nature"
-                ]
-            },
+            "journal": "Nature",
             "volume": "444",
             "pages": {
                 "first": "85",
@@ -1866,11 +1838,7 @@
             ],
             "date": "1986",
             "articleTitle": "Growth and sexual maturation of laboratory-cultured Monterey",
-            "journal": {
-                "name": [
-                    "B schlosseri Biol Bull"
-                ]
-            },
+            "journal": "B schlosseri Biol Bull",
             "volume": "170",
             "pages": {
                 "first": "91",
@@ -1929,11 +1897,7 @@
             "authorsEtAl": true,
             "date": "2010",
             "articleTitle": "Expression and transcriptional regulation of individual pregnancy specific glycoprotein genes in differentiating trophoblast cells",
-            "journal": {
-                "name": [
-                    "Placenta"
-                ]
-            },
+            "journal": "Placenta",
             "volume": "31",
             "pages": {
                 "first": "312",
@@ -1956,11 +1920,7 @@
             ],
             "date": "2000",
             "articleTitle": "Selection of conserved blocks from multiple alignments for their use in phylogenetic analysis",
-            "journal": {
-                "name": [
-                    "Mol Biol Evol"
-                ]
-            },
+            "journal": "Mol Biol Evol",
             "volume": "17",
             "pages": {
                 "first": "540",
@@ -2004,11 +1964,7 @@
             ],
             "date": "2009",
             "articleTitle": "ToppGene Suite for gene list enrichment analysis and candidate gene prioritization",
-            "journal": {
-                "name": [
-                    "Nucleic Acids Res"
-                ]
-            },
+            "journal": "Nucleic Acids Res",
             "volume": "37",
             "pages": {
                 "first": "W305",
@@ -2067,11 +2023,7 @@
             "authorsEtAl": true,
             "date": "2009",
             "articleTitle": "Hovering between death and life: natural apoptosis and phagocytes in the blastogenetic cycle of the colonial ascidian Botryllus schlosseri",
-            "journal": {
-                "name": [
-                    "Dev Comp Immunol"
-                ]
-            },
+            "journal": "Dev Comp Immunol",
             "volume": "34",
             "pages": {
                 "first": "272",
@@ -2094,11 +2046,7 @@
             ],
             "date": "1963",
             "articleTitle": "I cromosomi di <i>Botryllus schlosseri</i> (Ascidiacea)",
-            "journal": {
-                "name": [
-                    "Ric Sci"
-                ]
-            },
+            "journal": "Ric Sci",
             "volume": "33",
             "pages": {
                 "first": "443",
@@ -2172,11 +2120,7 @@
             ],
             "date": "1984",
             "articleTitle": "A murine T cell receptor gene complex: isolation, structure and rearrangement",
-            "journal": {
-                "name": [
-                    "Immunol Rev"
-                ]
-            },
+            "journal": "Immunol Rev",
             "volume": "81",
             "pages": {
                 "first": "235",
@@ -2227,11 +2171,7 @@
             ],
             "date": "2011",
             "articleTitle": "Repetitive elements may comprise over two thirds of the human genome",
-            "journal": {
-                "name": [
-                    "PLOS Genet"
-                ]
-            },
+            "journal": "PLOS Genet",
             "volume": "7",
             "pages": "e1002384",
             "doi": "10.1371/journal.pgen.1002384"
@@ -2278,11 +2218,7 @@
             ],
             "date": "1998",
             "articleTitle": "Mapping the genome of a model protochordate. I. A low resolution genetic map encompassing the fusion/histocompatibility (Fu/HC) locus of <i>B. schlosseri</i>",
-            "journal": {
-                "name": [
-                    "Genetics"
-                ]
-            },
+            "journal": "Genetics",
             "volume": "149",
             "pages": {
                 "first": "277",
@@ -2340,11 +2276,7 @@
             "authorsEtAl": true,
             "date": "2002",
             "articleTitle": "The draft genome of <i>Ciona intestinalis</i>: insights into chordate and vertebrate origins",
-            "journal": {
-                "name": [
-                    "Science"
-                ]
-            },
+            "journal": "Science",
             "volume": "298",
             "pages": {
                 "first": "2157",
@@ -2388,11 +2320,7 @@
             ],
             "date": "2006",
             "articleTitle": "Tunicate and not cephalochordates are the closest living relatives of vertebrates",
-            "journal": {
-                "name": [
-                    "Nature"
-                ]
-            },
+            "journal": "Nature",
             "volume": "439",
             "pages": {
                 "first": "965",
@@ -2451,11 +2379,7 @@
             "authorsEtAl": true,
             "date": "2010",
             "articleTitle": "Plasticity of animal genome architecture unmasked by rapid evolution of a pelagic tunicate",
-            "journal": {
-                "name": [
-                    "Science"
-                ]
-            },
+            "journal": "Science",
             "volume": "330",
             "pages": {
                 "first": "1381",
@@ -2485,11 +2409,7 @@
             ],
             "date": "2009",
             "articleTitle": "Invertebrate allorecognition: the origins of histocompatibility",
-            "journal": {
-                "name": [
-                    "Current Biol"
-                ]
-            },
+            "journal": "Current Biol",
             "volume": "19",
             "pages": {
                 "first": "R286",
@@ -2548,11 +2468,7 @@
             "authorsEtAl": true,
             "date": "2012",
             "articleTitle": "MitoZoa 2.0: a database resource and search tools for comparative and evolutionary analyses of mitochondrial genomes in Metazoa",
-            "journal": {
-                "name": [
-                    "Nucleic Acids Res"
-                ]
-            },
+            "journal": "Nucleic Acids Res",
             "volume": "40",
             "pages": {
                 "first": "D1168",
@@ -2582,11 +2498,7 @@
             ],
             "date": "1998",
             "articleTitle": "Linkage analysis of HSP70 genes and historecognition locus in <i>Botryllus schlosseri</i>",
-            "journal": {
-                "name": [
-                    "Immunogenetics"
-                ]
-            },
+            "journal": "Immunogenetics",
             "volume": "47",
             "pages": {
                 "first": "468",
@@ -2630,11 +2542,7 @@
             ],
             "date": "2011",
             "articleTitle": "Whole-genome molecular haplotyping of single cells",
-            "journal": {
-                "name": [
-                    "Nat Biotechnol"
-                ]
-            },
+            "journal": "Nat Biotechnol",
             "volume": "29",
             "pages": {
                 "first": "51",
@@ -2664,11 +2572,7 @@
             ],
             "date": "2010",
             "articleTitle": "Origin and evolution of the adaptive immune system: genetic events and selective pressures",
-            "journal": {
-                "name": [
-                    "Nat Rev Genet"
-                ]
-            },
+            "journal": "Nat Rev Genet",
             "volume": "11",
             "pages": {
                 "first": "47",
@@ -2705,11 +2609,7 @@
             ],
             "date": "2012",
             "articleTitle": "Mechanisms of disease: hypertrophic cardiomyopathy",
-            "journal": {
-                "name": [
-                    "Nat Rev Cardiol"
-                ]
-            },
+            "journal": "Nat Rev Cardiol",
             "volume": "9",
             "pages": {
                 "first": "91",
@@ -2732,11 +2632,7 @@
             ],
             "date": "1928",
             "articleTitle": "The morphology of the Tunicata, and its bearings on the phylogeny of the Chordata",
-            "journal": {
-                "name": [
-                    "Quart J Microsc Sci"
-                ]
-            },
+            "journal": "Quart J Microsc Sci",
             "volume": "72",
             "pages": {
                 "first": "51",
@@ -2779,11 +2675,7 @@
             ],
             "date": "2008",
             "articleTitle": "Vascular regeneration and angiogenic-like sprouting mechanism in a compouned ascidian is similar to vertebrates",
-            "journal": {
-                "name": [
-                    "Evol Dev"
-                ]
-            },
+            "journal": "Evol Dev",
             "volume": "10",
             "pages": {
                 "first": "591",
@@ -2813,11 +2705,7 @@
             ],
             "date": "2003",
             "articleTitle": "A simple, fast, and accurate algorithm to estimate large phylogenies by maximum likelihood",
-            "journal": {
-                "name": [
-                    "Syst Biol"
-                ]
-            },
+            "journal": "Syst Biol",
             "volume": "52",
             "pages": {
                 "first": "696",
@@ -2876,11 +2764,7 @@
             "authorsEtAl": true,
             "date": "2009",
             "articleTitle": "Dual nature of the adaptive immune system in lampreys",
-            "journal": {
-                "name": [
-                    "Nature"
-                ]
-            },
+            "journal": "Nature",
             "volume": "459",
             "pages": {
                 "first": "796",
@@ -2924,11 +2808,7 @@
             ],
             "date": "2011",
             "articleTitle": "Chapter 4 – the evolution of adaptive immunity in vertebrate",
-            "journal": {
-                "name": [
-                    "Adv In Immunol"
-                ]
-            },
+            "journal": "Adv In Immunol",
             "volume": "109",
             "pages": {
                 "first": "125",
@@ -2987,11 +2867,7 @@
             "authorsEtAl": true,
             "date": "2001",
             "articleTitle": "A novel myocyte-specific gene Midori promotes the differentiation of P19CL6 cells into cardiomyocytes",
-            "journal": {
-                "name": [
-                    "J Biol Chem"
-                ]
-            },
+            "journal": "J Biol Chem",
             "volume": "38",
             "pages": {
                 "first": "35978",
@@ -3021,11 +2897,7 @@
             ],
             "date": "1993",
             "articleTitle": "DNA extraction from Pleistocene bones by a silica-based purification method",
-            "journal": {
-                "name": [
-                    "Nucleic Acids Res"
-                ]
-            },
+            "journal": "Nucleic Acids Res",
             "volume": "21",
             "pages": {
                 "first": "3913",
@@ -3062,11 +2934,7 @@
             ],
             "date": "2004",
             "articleTitle": "Migratory neural crest-like cells from body pigmentation in a urochordate embryo",
-            "journal": {
-                "name": [
-                    "Nature"
-                ]
-            },
+            "journal": "Nature",
             "volume": "431",
             "pages": {
                 "first": "696",
@@ -3125,11 +2993,7 @@
             "authorsEtAl": true,
             "date": "2000",
             "articleTitle": "A novel nemaline myopathy in the Amish caused by a mutation in troponin T1",
-            "journal": {
-                "name": [
-                    "Am J Hum Genet"
-                ]
-            },
+            "journal": "Am J Hum Genet",
             "volume": "67",
             "pages": {
                 "first": "814",
@@ -3173,11 +3037,7 @@
             ],
             "date": "2005",
             "articleTitle": "MAFFT version 5: improvement in accuracy of multiple sequence alignment",
-            "journal": {
-                "name": [
-                    "Nucleic Acids Res"
-                ]
-            },
+            "journal": "Nucleic Acids Res",
             "volume": "33",
             "pages": {
                 "first": "511",
@@ -3200,11 +3060,7 @@
             ],
             "date": "1990",
             "articleTitle": "The Australian Ascidiacea. Part 2, Aplousobranchiata (1)",
-            "journal": {
-                "name": [
-                    "Mem Qld Mus"
-                ]
-            },
+            "journal": "Mem Qld Mus",
             "volume": "29",
             "pages": {
                 "first": "1",
@@ -3247,11 +3103,7 @@
             ],
             "date": "2011",
             "articleTitle": "Computational methods for gene orthology inference",
-            "journal": {
-                "name": [
-                    "Brief Bioinform"
-                ]
-            },
+            "journal": "Brief Bioinform",
             "volume": "12",
             "pages": {
                 "first": "379",
@@ -3295,11 +3147,7 @@
             ],
             "date": "2000",
             "articleTitle": "50 million years of chordate evolution: seeking the origins of adaptive immunity",
-            "journal": {
-                "name": [
-                    "Proc Natl Acad Sci USA"
-                ]
-            },
+            "journal": "Proc Natl Acad Sci USA",
             "volume": "97",
             "pages": {
                 "first": "6924",
@@ -3336,11 +3184,7 @@
             ],
             "date": "2005",
             "articleTitle": "Stem cells are units of natural selection in a colonial ascidian",
-            "journal": {
-                "name": [
-                    "Cell"
-                ]
-            },
+            "journal": "Cell",
             "volume": "123",
             "pages": {
                 "first": "1351",
@@ -3399,11 +3243,7 @@
             "authorsEtAl": true,
             "date": "2007",
             "articleTitle": "Clustal W and clustal X version 2.0",
-            "journal": {
-                "name": [
-                    "Bioinformatics"
-                ]
-            },
+            "journal": "Bioinformatics",
             "volume": "23",
             "pages": {
                 "first": "2947",
@@ -3440,11 +3280,7 @@
             ],
             "date": "2007",
             "articleTitle": "Suppression of long-branch attraction artefacts in the animal phylogeny using a site-heterogeneous model",
-            "journal": {
-                "name": [
-                    "BMC Evol Biol"
-                ]
-            },
+            "journal": "BMC Evol Biol",
             "volume": "7",
             "pages": {
                 "first": "S4",
@@ -3481,11 +3317,7 @@
             ],
             "date": "2009",
             "articleTitle": "PhyloBayes 3: a Bayesian software package for phylogenetic reconstruction and molecular dating",
-            "journal": {
-                "name": [
-                    "Bioinformatics"
-                ]
-            },
+            "journal": "Bioinformatics",
             "volume": "25",
             "pages": {
                 "first": "2286",
@@ -3522,11 +3354,7 @@
             ],
             "date": "1993",
             "articleTitle": "A morphological and immunohistochemical study of programmed cell death in <i>Botryllus schlosseri</i> (Tunicata, Ascidiacea)",
-            "journal": {
-                "name": [
-                    "Cell Tissue Res"
-                ]
-            },
+            "journal": "Cell Tissue Res",
             "volume": "272",
             "pages": {
                 "first": "115",
@@ -3549,11 +3377,7 @@
             ],
             "date": "2011",
             "articleTitle": "Evolutionary crossroads in developmental biology: the tunicates",
-            "journal": {
-                "name": [
-                    "Development"
-                ]
-            },
+            "journal": "Development",
             "volume": "138",
             "pages": {
                 "first": "2143",
@@ -3583,11 +3407,7 @@
             ],
             "date": "2009",
             "articleTitle": "Fast and accurate short read alignment with Burrows-Wheeler Transform",
-            "journal": {
-                "name": [
-                    "Bioinformatics"
-                ]
-            },
+            "journal": "Bioinformatics",
             "volume": "25",
             "pages": {
                 "first": "1754",
@@ -3646,11 +3466,7 @@
             "authorsEtAl": true,
             "date": "2009",
             "articleTitle": "The sequence alignment map format and SAM tools",
-            "journal": {
-                "name": [
-                    "Bioinformatics"
-                ]
-            },
+            "journal": "Bioinformatics",
             "volume": "25",
             "pages": {
                 "first": "2078",
@@ -3680,11 +3496,7 @@
             ],
             "date": "2006",
             "articleTitle": "Common and divergent pathways in alternative developmental processes of ascidians",
-            "journal": {
-                "name": [
-                    "Bioessays"
-                ]
-            },
+            "journal": "Bioessays",
             "volume": "28",
             "pages": {
                 "first": "902",
@@ -3714,11 +3526,7 @@
             ],
             "date": "2005",
             "articleTitle": "The circulatory system of Amphioxus (<i>Branchiostoma floridae</i>)",
-            "journal": {
-                "name": [
-                    "J Morphol"
-                ]
-            },
+            "journal": "J Morphol",
             "volume": "139",
             "pages": {
                 "first": "389",
@@ -3776,11 +3584,7 @@
             ],
             "date": "2000",
             "articleTitle": "Class switch recombination and hypermutation require activation-induced cytidine deaminase (AID), a potential RNA editing enzyme",
-            "journal": {
-                "name": [
-                    "Cell"
-                ]
-            },
+            "journal": "Cell",
             "volume": "102",
             "pages": {
                 "first": "553",
@@ -3839,11 +3643,7 @@
             "authorsEtAl": true,
             "date": "2000",
             "articleTitle": "A whole-genome assembly of Drosophila",
-            "journal": {
-                "name": [
-                    "Science"
-                ]
-            },
+            "journal": "Science",
             "volume": "287",
             "pages": {
                 "first": "2196",
@@ -3902,11 +3702,7 @@
             "authorsEtAl": true,
             "date": "1996",
             "articleTitle": "Two genetically separable steps in the differentiation of thymic epithelium",
-            "journal": {
-                "name": [
-                    "Science"
-                ]
-            },
+            "journal": "Science",
             "volume": "272",
             "pages": {
                 "first": "886",
@@ -3936,11 +3732,7 @@
             ],
             "date": "2007",
             "articleTitle": "XSTREAM: A practical algorithm for identification and architecture modeling of tandem repeats in protein sequences",
-            "journal": {
-                "name": [
-                    "BMC Bioinformatics"
-                ]
-            },
+            "journal": "BMC Bioinformatics",
             "volume": "8",
             "pages": {
                 "first": "382",
@@ -3984,11 +3776,7 @@
             ],
             "date": "1990",
             "articleTitle": "<i>RAG-1</i> and <i>RAG-2</i>, adjacent genes that synergistically activate V(D)J recombination",
-            "journal": {
-                "name": [
-                    "Science"
-                ]
-            },
+            "journal": "Science",
             "volume": "248",
             "pages": {
                 "first": "1517",
@@ -4046,11 +3834,7 @@
             ],
             "date": "2004",
             "articleTitle": "Somatic diversification of variable lymphocyte receptors in the agnathan sea lamprey",
-            "journal": {
-                "name": [
-                    "Nature"
-                ]
-            },
+            "journal": "Nature",
             "volume": "430",
             "pages": {
                 "first": "174",
@@ -4094,11 +3878,7 @@
             ],
             "date": "2009",
             "articleTitle": "Phylogeny of the families Pyuridae and Styelidae (Stolidobranchiata, Ascidiacea) inferred from mitochondrial and nuclear DNA sequences",
-            "journal": {
-                "name": [
-                    "Mol Phylogenet Evol"
-                ]
-            },
+            "journal": "Mol Phylogenet Evol",
             "volume": "50",
             "pages": {
                 "first": "560",
@@ -4156,11 +3936,7 @@
             ],
             "date": "2011",
             "articleTitle": "The enigmatic mitochondrial genome of <i>Rhabdopleura compacta</i> (Pterobranchia) reveals insights into selection of an efficient tRNA system and supports monophyly of Ambulacraria",
-            "journal": {
-                "name": [
-                    "BMC Evol Biol"
-                ]
-            },
+            "journal": "BMC Evol Biol",
             "volume": "11",
             "pages": {
                 "first": "134",
@@ -4219,11 +3995,7 @@
             "authorsEtAl": true,
             "date": "2009",
             "articleTitle": "Phylogenomics revives traditional views on deep animal relationships",
-            "journal": {
-                "name": [
-                    "Curr Biol"
-                ]
-            },
+            "journal": "Curr Biol",
             "volume": "19",
             "pages": {
                 "first": "706",
@@ -4260,11 +4032,7 @@
             ],
             "date": "2005",
             "articleTitle": "De novo identification of repeat families in large genomes",
-            "journal": {
-                "name": [
-                    "Bioinformatics"
-                ]
-            },
+            "journal": "Bioinformatics",
             "volume": "21",
             "pages": {
                 "first": "i351",
@@ -4323,11 +4091,7 @@
             "authorsEtAl": true,
             "date": "2007",
             "articleTitle": "Sea anemone genome reveals ancestral eumetazoan gene repertoire and genomic organization",
-            "journal": {
-                "name": [
-                    "Science"
-                ]
-            },
+            "journal": "Science",
             "volume": "317",
             "pages": {
                 "first": "86",
@@ -4357,11 +4121,7 @@
             ],
             "date": "2010",
             "articleTitle": "BEDTools: a flexible suite of utilities for comparing genomic features",
-            "journal": {
-                "name": [
-                    "Bioinformatics"
-                ]
-            },
+            "journal": "Bioinformatics",
             "volume": "26",
             "pages": {
                 "first": "841",
@@ -4398,11 +4158,7 @@
             ],
             "date": "2000",
             "articleTitle": "Molecular genetics of hearing impairment due to mutations in gap junction genes encoding beta connexins",
-            "journal": {
-                "name": [
-                    "Hum Mutat"
-                ]
-            },
+            "journal": "Hum Mutat",
             "volume": "16",
             "pages": {
                 "first": "190",
@@ -4461,11 +4217,7 @@
             "authorsEtAl": true,
             "date": "2013",
             "articleTitle": "Repeated, long term cycling of putative stem cells between niches in a basal chordate",
-            "journal": {
-                "name": [
-                    "Dev Cell"
-                ]
-            },
+            "journal": "Dev Cell",
             "volume": "24",
             "pages": {
                 "first": "76",
@@ -4524,11 +4276,7 @@
             "authorsEtAl": true,
             "date": "2007",
             "articleTitle": "Evolution and diversification of lamprey antigen receptors: evidence for involvement of an AID-APOBEC family cytosine deaminase",
-            "journal": {
-                "name": [
-                    "Nature Immunol"
-                ]
-            },
+            "journal": "Nature Immunol",
             "volume": "8",
             "pages": {
                 "first": "647",
@@ -4551,11 +4299,7 @@
             ],
             "date": "1962",
             "articleTitle": "Le basi genetiche della capacità di fusione fra colonie in <i>Botryllus schlosseri</i> (Ascidiacea)",
-            "journal": {
-                "name": [
-                    "Rend Accad Naz Lincei Ser"
-                ]
-            },
+            "journal": "Rend Accad Naz Lincei Ser",
             "volume": "32",
             "pages": {
                 "first": "1031",
@@ -4591,11 +4335,7 @@
             ],
             "date": "1975",
             "articleTitle": "Determination of polarity and bilateral asymmetry in palleal and vascular buds of the ascidian",
-            "journal": {
-                "name": [
-                    "Botryllus schlosseri Dev Biol"
-                ]
-            },
+            "journal": "Botryllus schlosseri Dev Biol",
             "volume": "46",
             "pages": {
                 "first": "79",
@@ -4654,11 +4394,7 @@
             "authorsEtAl": true,
             "date": "2012",
             "articleTitle": "GAGE: a critical evaluation of genome assemblies and assembly algorithms",
-            "journal": {
-                "name": [
-                    "Genome Res"
-                ]
-            },
+            "journal": "Genome Res",
             "volume": "22",
             "pages": {
                 "first": "557",
@@ -4695,11 +4431,7 @@
             ],
             "date": "1984",
             "articleTitle": "Separation and labeling of specific subpopulations of <i>Botryllus</i> blood cells",
-            "journal": {
-                "name": [
-                    "J Exp Zool"
-                ]
-            },
+            "journal": "J Exp Zool",
             "volume": "229",
             "pages": {
                 "first": "41",
@@ -4743,11 +4475,7 @@
             ],
             "date": "1982",
             "articleTitle": "Protochordate allorecognition is controlled by a MHC-like gene system",
-            "journal": {
-                "name": [
-                    "Nature"
-                ]
-            },
+            "journal": "Nature",
             "volume": "295",
             "pages": {
                 "first": "499",
@@ -4806,11 +4534,7 @@
             "authorsEtAl": true,
             "date": "2012",
             "articleTitle": "Gene expression commons: an open platform for absolute gene expression profiling",
-            "journal": {
-                "name": [
-                    "PLOS ONE"
-                ]
-            },
+            "journal": "PLOS ONE",
             "volume": "7",
             "pages": "e40321",
             "doi": "10.1371/journal.pone.0040321"
@@ -4865,11 +4589,7 @@
             "authorsEtAl": true,
             "date": "2011",
             "articleTitle": "Using the <i>Acropora digitifera</i> genome to understand coral responses to environmental change",
-            "journal": {
-                "name": [
-                    "Nature"
-                ]
-            },
+            "journal": "Nature",
             "volume": "476",
             "pages": {
                 "first": "320",
@@ -4928,11 +4648,7 @@
             "authorsEtAl": true,
             "date": "2004",
             "articleTitle": "Fluorescent in situ hybridization to ascidian chromosomes",
-            "journal": {
-                "name": [
-                    "Zoolog Sci"
-                ]
-            },
+            "journal": "Zoolog Sci",
             "volume": "21",
             "pages": {
                 "first": "153",
@@ -5021,11 +4737,7 @@
             "authorsEtAl": true,
             "date": "2009",
             "articleTitle": "Tunicate mitogenomics and phylogenetics: peculiarities of the <i>Herdmania momus</i> mitochondrial genome and support for the new chordate phylogeny",
-            "journal": {
-                "name": [
-                    "BMC Genomics"
-                ]
-            },
+            "journal": "BMC Genomics",
             "volume": "10",
             "pages": {
                 "first": "534",
@@ -5084,11 +4796,7 @@
             "authorsEtAl": true,
             "date": "2010",
             "articleTitle": "The <i>Amphimedon queenslandica</i> genome and the evolution of animal complexity",
-            "journal": {
-                "name": [
-                    "Nature"
-                ]
-            },
+            "journal": "Nature",
             "volume": "466",
             "pages": {
                 "first": "720",
@@ -5132,11 +4840,7 @@
             ],
             "date": "2008",
             "articleTitle": "Using native and syntenically mapped cDNA alignments to improve <i>de novo</i> gene finding",
-            "journal": {
-                "name": [
-                    "Bioinformatics"
-                ]
-            },
+            "journal": "Bioinformatics",
             "volume": "24",
             "pages": {
                 "first": "637",
@@ -5166,11 +4870,7 @@
             ],
             "date": "1996",
             "articleTitle": "Somatic and germ cell parasitism in a colonial ascidian possible role for a highly polymorphic allorecognition system",
-            "journal": {
-                "name": [
-                    "Proc Natl Acad Sci USA"
-                ]
-            },
+            "journal": "Proc Natl Acad Sci USA",
             "volume": "24",
             "pages": {
                 "first": "15254",
@@ -5207,11 +4907,7 @@
             ],
             "date": "1999",
             "articleTitle": "Heritable germ and somatic cell lineage competitions in chimeric colonial protochordates",
-            "journal": {
-                "name": [
-                    "Proc Natl Acad Sci USA"
-                ]
-            },
+            "journal": "Proc Natl Acad Sci USA",
             "volume": "96",
             "pages": {
                 "first": "9148",
@@ -5255,11 +4951,7 @@
             ],
             "date": "2002",
             "articleTitle": "Genetic variability of <i>Botryllus schlosseri</i> invasions to the east and west coasts of the USA",
-            "journal": {
-                "name": [
-                    "Mar Ecol Prog Ser"
-                ]
-            },
+            "journal": "Mar Ecol Prog Ser",
             "volume": "243",
             "pages": {
                 "first": "93",
@@ -5310,11 +5002,7 @@
             ],
             "date": "2011",
             "articleTitle": "Mutation analysis of 12 genes in Chinese families with congenital cataracts",
-            "journal": {
-                "name": [
-                    "Mol Vis"
-                ]
-            },
+            "journal": "Mol Vis",
             "volume": "17",
             "pages": {
                 "first": "2197",
@@ -5357,11 +5045,7 @@
             ],
             "date": "2000",
             "articleTitle": "Urochordates are monophyletic within the deuterostomes",
-            "journal": {
-                "name": [
-                    "Syst Biol"
-                ]
-            },
+            "journal": "Syst Biol",
             "volume": "49",
             "pages": {
                 "first": "52",
@@ -5405,11 +5089,7 @@
             ],
             "date": "2008",
             "articleTitle": "A conserved role of the VEGF pathway in angiogenesis of an ectodermally-derived vasculature",
-            "journal": {
-                "name": [
-                    "Dev Biol"
-                ]
-            },
+            "journal": "Dev Biol",
             "volume": "315",
             "pages": {
                 "first": "243",
@@ -5468,11 +5148,7 @@
             "authorsEtAl": true,
             "date": "2010",
             "articleTitle": "Transcript assembly and quantification by RNA-Seq reveals unannotated transcripts and isoform switching during cell differentiation",
-            "journal": {
-                "name": [
-                    "Nat Biotechnol"
-                ]
-            },
+            "journal": "Nat Biotechnol",
             "volume": "28",
             "pages": {
                 "first": "511",
@@ -5531,11 +5207,7 @@
             "authorsEtAl": true,
             "date": "2009",
             "articleTitle": "18S rRNA phylogeny of tunicates based on mixture and secondary structure modes",
-            "journal": {
-                "name": [
-                    "BMC Evoul Biol"
-                ]
-            },
+            "journal": "BMC Evoul Biol",
             "volume": "9",
             "pages": {
                 "first": "187",
@@ -5565,11 +5237,7 @@
             ],
             "date": "2004",
             "articleTitle": "Ascidian molecular phylogeny inferred from mtDNA data with emphasis on the Aplousobranchiata",
-            "journal": {
-                "name": [
-                    "Mol Phylogenet Evol"
-                ]
-            },
+            "journal": "Mol Phylogenet Evol",
             "volume": "33",
             "pages": {
                 "first": "309",
@@ -5621,11 +5289,7 @@
             "authorsEtAl": true,
             "date": "2007",
             "articleTitle": "Striving for normality: whole body regeneration through a series of abnormal generations",
-            "journal": {
-                "name": [
-                    "FASEB J"
-                ]
-            },
+            "journal": "FASEB J",
             "volume": "21",
             "pages": {
                 "first": "1335",
@@ -5684,11 +5348,7 @@
             "authorsEtAl": true,
             "date": "2008",
             "articleTitle": "Identification of the endostyle as a stem cell niche in a colonial chordate",
-            "journal": {
-                "name": [
-                    "Cell Stem Cell"
-                ]
-            },
+            "journal": "Cell Stem Cell",
             "volume": "3",
             "pages": {
                 "first": "456",
@@ -5811,11 +5471,7 @@
             "authorsEtAl": true,
             "date": "2013",
             "articleTitle": "Identification of a colonial chordate histocompatibility gene",
-            "journal": {
-                "name": [
-                    "Science"
-                ]
-            },
+            "journal": "Science",
             "pages": "in press"
         },
         {
@@ -5853,11 +5509,7 @@
             ],
             "date": "1970",
             "articleTitle": "Variability in the λ light chain sequences of mouse antibody",
-            "journal": {
-                "name": [
-                    "Nature"
-                ]
-            },
+            "journal": "Nature",
             "volume": "228",
             "pages": {
                 "first": "1045",
@@ -5916,11 +5568,7 @@
             "authorsEtAl": true,
             "date": "2001",
             "articleTitle": "Mutations in the gene encoding tight junction claudin-14 cause autosomal recessive deafness DFNB29",
-            "journal": {
-                "name": [
-                    "Cell"
-                ]
-            },
+            "journal": "Cell",
             "volume": "104",
             "pages": {
                 "first": "165",
@@ -5979,11 +5627,7 @@
             "authorsEtAl": true,
             "date": "2011",
             "articleTitle": "The genomic sequence of the Chinese hamster ovary (CHO)-K1 cell line",
-            "journal": {
-                "name": [
-                    "Nat Biotechnol"
-                ]
-            },
+            "journal": "Nat Biotechnol",
             "volume": "29",
             "pages": {
                 "first": "735",
@@ -6020,11 +5664,7 @@
             ],
             "date": "2005",
             "articleTitle": "Complete nucleotide sequence of the mitochondrial genome of <i>Doliolum nationalis</i> with implications for evolution of urochordates",
-            "journal": {
-                "name": [
-                    "Mol Phylogenet Evol"
-                ]
-            },
+            "journal": "Mol Phylogenet Evol",
             "volume": "34",
             "pages": {
                 "first": "273",
@@ -6075,11 +5715,7 @@
             ],
             "date": "2006",
             "articleTitle": "Multiple origins of the ascidian-Prochloron symbiosis: molecular phylogeny of photosymbiotic and non-symbiotic colonial ascidians inferred from 18S rDNA sequences",
-            "journal": {
-                "name": [
-                    "Mol Phylogenet Evol"
-                ]
-            },
+            "journal": "Mol Phylogenet Evol",
             "volume": "40",
             "pages": {
                 "first": "8",
@@ -6116,11 +5752,7 @@
             ],
             "date": "2006",
             "articleTitle": "Coloniality has evolved once in <i>Stolidobranch Ascidians</i>",
-            "journal": {
-                "name": [
-                    "Integr Comp Biol"
-                ]
-            },
+            "journal": "Integr Comp Biol",
             "volume": "46",
             "pages": {
                 "first": "255",
@@ -6143,11 +5775,7 @@
             ],
             "date": "2010",
             "articleTitle": "Using the Velvet de novo assembler for short-read sequencing technologies",
-            "journal": {
-                "name": [
-                    "Curr Protoc Bioinformatics"
-                ]
-            },
+            "journal": "Curr Protoc Bioinformatics",
             "volume": "11",
             "pages": {
                 "first": "11.5.1",

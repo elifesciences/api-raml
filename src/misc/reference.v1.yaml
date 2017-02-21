@@ -232,7 +232,8 @@ allOf:
                 type: string
                 minLength: 1
             journal:
-                $ref: place.v1.yaml
+                type: string
+                minLength: 1
             volume:
                 type: string
                 minLength: 1

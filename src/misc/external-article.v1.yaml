@@ -6,7 +6,8 @@ properties:
         type: string
         minLength: 1
     journal:
-        $ref: place.v1.yaml
+        type: string
+        minLength: 1
     authorLine:
         description: |
             For example:
