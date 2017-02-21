@@ -610,7 +610,20 @@
                 }
             ],
             "authorsEtAl": true,
-            "authorsType": "editors",
+            "editors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "Person One",
+                        "index": "One, Person"
+                    }
+                },
+                {
+                    "type": "group",
+                    "name": "Group One"
+                }
+            ],
+            "editorsEtAl": true,
             "bookTitle": "Complete book",
             "volume": "Volume 1",
             "edition": "2nd edition",

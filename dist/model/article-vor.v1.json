@@ -41,7 +41,7 @@
                             ]
                         },
                         "doi": {
-                            "$ref": "#/allOf/2/properties/digest/properties/doi"
+                            "$ref": "#/allOf/2/properties/authorResponse/properties/doi"
                         },
                         "authorLine": {
                             "description": "For example:\n  - Ian T Baldwin\n  - Randy Schekman, Mark Patterson\n  - Lee R Berger et al\n",
@@ -170,7 +170,7 @@
                             "type": "object",
                             "properties": {
                                 "doi": {
-                                    "$ref": "#/allOf/2/properties/digest/properties/doi"
+                                    "$ref": "#/allOf/2/properties/authorResponse/properties/doi"
                                 }
                             }
                         },
@@ -735,7 +735,7 @@
                                                 "minLength": 1
                                             },
                                             "doi": {
-                                                "$ref": "#/allOf/2/properties/digest/properties/doi"
+                                                "$ref": "#/allOf/2/properties/authorResponse/properties/doi"
                                             },
                                             "uri": {
                                                 "type": "string",
@@ -779,7 +779,7 @@
                                                     {
                                                         "properties": {
                                                             "funderId": {
-                                                                "$ref": "#/allOf/2/properties/digest/properties/doi"
+                                                                "$ref": "#/allOf/2/properties/authorResponse/properties/doi"
                                                             }
                                                         }
                                                     }
@@ -868,7 +868,7 @@
                                         "type": "object",
                                         "properties": {
                                             "doi": {
-                                                "$ref": "#/allOf/2/properties/digest/properties/doi"
+                                                "$ref": "#/allOf/2/properties/authorResponse/properties/doi"
                                             },
                                             "id": {
                                                 "$ref": "#/allOf/2/properties/appendices/items/properties/id"
@@ -1013,10 +1013,7 @@
                     "type": "object",
                     "properties": {
                         "doi": {
-                            "$schema": "http://json-schema.org/draft-04/schema#",
-                            "title": "DOI",
-                            "type": "string",
-                            "pattern": "^10[.][0-9]{4,}[^\\s\"/<>]*/[^\\s\"]+$"
+                            "$ref": "#/allOf/2/properties/authorResponse/properties/doi"
                         },
                         "content": {
                             "type": "array",
@@ -1123,30 +1120,19 @@
                                                         "enum": [
                                                             "book"
                                                         ]
-                                                    },
-                                                    "authors": {
-                                                        "type": "array",
-                                                        "items": {
-                                                            "$ref": "#/allOf/1/allOf/1/properties/authors/items"
-                                                        },
-                                                        "minItems": 1
-                                                    },
-                                                    "authorsEtAl": {
-                                                        "description": "If there are more authors.",
-                                                        "type": "boolean",
-                                                        "default": false
-                                                    },
-                                                    "authorsType": {
-                                                        "type": "string",
-                                                        "enum": [
-                                                            "authors",
-                                                            "editors"
-                                                        ],
-                                                        "default": "authors"
                                                     }
                                                 },
-                                                "required": [
-                                                    "authors"
+                                                "anyOf": [
+                                                    {
+                                                        "required": [
+                                                            "authors"
+                                                        ]
+                                                    },
+                                                    {
+                                                        "required": [
+                                                            "editors"
+                                                        ]
+                                                    }
                                                 ]
                                             },
                                             {
@@ -1163,30 +1149,6 @@
                                                         "enum": [
                                                             "book-chapter"
                                                         ]
-                                                    },
-                                                    "authors": {
-                                                        "type": "array",
-                                                        "items": {
-                                                            "$ref": "#/allOf/1/allOf/1/properties/authors/items"
-                                                        },
-                                                        "minItems": 1
-                                                    },
-                                                    "authorsEtAl": {
-                                                        "description": "If there are more authors.",
-                                                        "type": "boolean",
-                                                        "default": false
-                                                    },
-                                                    "editors": {
-                                                        "type": "array",
-                                                        "items": {
-                                                            "$ref": "#/allOf/1/allOf/1/properties/authors/items"
-                                                        },
-                                                        "minItems": 1
-                                                    },
-                                                    "editorsEtAl": {
-                                                        "description": "If there are more editors.",
-                                                        "type": "boolean",
-                                                        "default": false
                                                     },
                                                     "chapterTitle": {
                                                         "type": "string",
@@ -1284,7 +1246,7 @@
                                                 "$ref": "#/allOf/2/properties/references/items/definitions/pages"
                                             },
                                             "doi": {
-                                                "$ref": "#/allOf/2/properties/digest/properties/doi"
+                                                "$ref": "#/allOf/2/properties/authorResponse/properties/doi"
                                             },
                                             "uri": {
                                                 "type": "string",
@@ -1396,7 +1358,7 @@
                                                         "$ref": "#/allOf/2/properties/references/items/definitions/book/properties/publisher"
                                                     },
                                                     "doi": {
-                                                        "$ref": "#/allOf/2/properties/digest/properties/doi"
+                                                        "$ref": "#/allOf/2/properties/authorResponse/properties/doi"
                                                     },
                                                     "uri": {
                                                         "type": "string",
@@ -1450,7 +1412,7 @@
                                                 "$ref": "#/allOf/2/properties/references/items/definitions/pages"
                                             },
                                             "doi": {
-                                                "$ref": "#/allOf/2/properties/digest/properties/doi"
+                                                "$ref": "#/allOf/2/properties/authorResponse/properties/doi"
                                             },
                                             "pmid": {
                                                 "$ref": "#/allOf/2/properties/references/items/definitions/book/properties/pmid"
@@ -1604,7 +1566,7 @@
                                                 "minLength": 1
                                             },
                                             "doi": {
-                                                "$ref": "#/allOf/2/properties/digest/properties/doi"
+                                                "$ref": "#/allOf/2/properties/authorResponse/properties/doi"
                                             },
                                             "uri": {
                                                 "type": "string",
@@ -1652,7 +1614,7 @@
                                                 "$ref": "#/allOf/2/properties/references/items/definitions/book/properties/publisher"
                                             },
                                             "doi": {
-                                                "$ref": "#/allOf/2/properties/digest/properties/doi"
+                                                "$ref": "#/allOf/2/properties/authorResponse/properties/doi"
                                             },
                                             "pmid": {
                                                 "$ref": "#/allOf/2/properties/references/items/definitions/book/properties/pmid"
@@ -1738,7 +1700,7 @@
                                                 "$ref": "#/allOf/2/properties/references/items/definitions/book/properties/publisher"
                                             },
                                             "doi": {
-                                                "$ref": "#/allOf/2/properties/digest/properties/doi"
+                                                "$ref": "#/allOf/2/properties/authorResponse/properties/doi"
                                             },
                                             "uri": {
                                                 "type": "string",
@@ -1848,6 +1810,30 @@
                                         "type": "string",
                                         "minLength": 1
                                     },
+                                    "authors": {
+                                        "type": "array",
+                                        "items": {
+                                            "$ref": "#/allOf/1/allOf/1/properties/authors/items"
+                                        },
+                                        "minItems": 1
+                                    },
+                                    "authorsEtAl": {
+                                        "description": "If there are more authors.",
+                                        "type": "boolean",
+                                        "default": false
+                                    },
+                                    "editors": {
+                                        "type": "array",
+                                        "items": {
+                                            "$ref": "#/allOf/1/allOf/1/properties/authors/items"
+                                        },
+                                        "minItems": 1
+                                    },
+                                    "editorsEtAl": {
+                                        "description": "If there are more editors.",
+                                        "type": "boolean",
+                                        "default": false
+                                    },
                                     "publisher": {
                                         "$schema": "http://json-schema.org/draft-04/schema#",
                                         "title": "Place",
@@ -1910,7 +1896,7 @@
                                         "minLength": 1
                                     },
                                     "doi": {
-                                        "$ref": "#/allOf/2/properties/digest/properties/doi"
+                                        "$ref": "#/allOf/2/properties/authorResponse/properties/doi"
                                     },
                                     "pmid": {
                                         "$schema": "http://json-schema.org/draft-04/schema#",
@@ -1983,7 +1969,7 @@
                                 "pattern": "^[^\\s]+$"
                             },
                             "doi": {
-                                "$ref": "#/allOf/2/properties/digest/properties/doi"
+                                "$ref": "#/allOf/2/properties/authorResponse/properties/doi"
                             },
                             "title": {
                                 "type": "string",
@@ -2432,7 +2418,7 @@
                                                 ]
                                             },
                                             "doi": {
-                                                "$ref": "#/allOf/2/properties/digest/properties/doi"
+                                                "$ref": "#/allOf/2/properties/authorResponse/properties/doi"
                                             },
                                             "id": {
                                                 "$ref": "#/allOf/2/properties/appendices/items/properties/id"
@@ -2500,7 +2486,7 @@
                     "type": "object",
                     "properties": {
                         "doi": {
-                            "$ref": "#/allOf/2/properties/digest/properties/doi"
+                            "$ref": "#/allOf/2/properties/authorResponse/properties/doi"
                         },
                         "description": {
                             "type": "array",
@@ -2527,7 +2513,10 @@
                     "type": "object",
                     "properties": {
                         "doi": {
-                            "$ref": "#/allOf/2/properties/digest/properties/doi"
+                            "$schema": "http://json-schema.org/draft-04/schema#",
+                            "title": "DOI",
+                            "type": "string",
+                            "pattern": "^10[.][0-9]{4,}[^\\s\"/<>]*/[^\\s\"]+$"
                         },
                         "content": {
                             "type": "array",
