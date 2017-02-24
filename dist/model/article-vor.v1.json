@@ -1518,7 +1518,8 @@
                                                 "minLength": 1
                                             },
                                             "periodical": {
-                                                "$ref": "#/allOf/2/properties/references/items/definitions/book/properties/publisher"
+                                                "type": "string",
+                                                "minLength": 1
                                             },
                                             "volume": {
                                                 "type": "string",
