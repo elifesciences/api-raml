@@ -10,8 +10,11 @@ properties:
     impactStatement:
         description: Description of the collection
         type: string
+    published:
+        title: Publication date (UTC)
+        $ref: ../misc/date-time.v1.yaml
     updated:
-        description: Updated date (UTC)
+        title: Updated date (UTC)
         $ref: ../misc/date-time.v1.yaml
     image:
         type: object
@@ -36,6 +39,6 @@ properties:
 required:
   - id
   - title
-  - updated
+  - published
   - image
   - selectedCurator

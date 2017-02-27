@@ -89,6 +89,26 @@
                         "type": "object",
                         "allOf": [
                             {
+                                "$ref": "#/items/properties/item/oneOf/1/allOf/0"
+                            },
+                            {
+                                "properties": {
+                                    "status": {
+                                        "type": "string",
+                                        "enum": [
+                                            "poa"
+                                        ]
+                                    }
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "$schema": "http://json-schema.org/draft-04/schema#",
+                        "title": "Article VoR snippet",
+                        "type": "object",
+                        "allOf": [
+                            {
                                 "$schema": "http://json-schema.org/draft-04/schema#",
                                 "title": "Article snippet",
                                 "type": "object",
@@ -156,11 +176,11 @@
                                     },
                                     "versionDate": {
                                         "description": "Date and time this version of the article was published.\nOnly present if 'stage' is 'published'.\n",
-                                        "$ref": "#/items/properties/item/oneOf/0/allOf/0/properties/published"
+                                        "$ref": "#/items/properties/item/oneOf/1/allOf/0/properties/published"
                                     },
                                     "statusDate": {
                                         "description": "Date and time this article transitioned to current status.\nNot present if 'stage' is 'preview' and version is '1'.\n",
-                                        "$ref": "#/items/properties/item/oneOf/0/allOf/0/properties/published"
+                                        "$ref": "#/items/properties/item/oneOf/1/allOf/0/properties/published"
                                     },
                                     "volume": {
                                         "type": "integer",
@@ -182,7 +202,7 @@
                                             "type": "object",
                                             "properties": {
                                                 "id": {
-                                                    "$ref": "#/items/properties/item/oneOf/0/allOf/0/properties/id"
+                                                    "$ref": "#/items/properties/item/oneOf/1/allOf/0/properties/id"
                                                 },
                                                 "name": {
                                                     "description": "Name",
@@ -256,26 +276,6 @@
                                     "status": {
                                         "type": "string",
                                         "enum": [
-                                            "poa"
-                                        ]
-                                    }
-                                }
-                            }
-                        ]
-                    },
-                    {
-                        "$schema": "http://json-schema.org/draft-04/schema#",
-                        "title": "Article VoR snippet",
-                        "type": "object",
-                        "allOf": [
-                            {
-                                "$ref": "#/items/properties/item/oneOf/0/allOf/0"
-                            },
-                            {
-                                "properties": {
-                                    "status": {
-                                        "type": "string",
-                                        "enum": [
                                             "vor"
                                         ]
                                     },
@@ -291,7 +291,7 @@
                                         "type": "object",
                                         "properties": {
                                             "doi": {
-                                                "$ref": "#/items/properties/item/oneOf/0/allOf/0/properties/doi"
+                                                "$ref": "#/items/properties/item/oneOf/1/allOf/0/properties/doi"
                                             }
                                         }
                                     },
@@ -338,7 +338,7 @@
                                                 "type": "object",
                                                 "properties": {
                                                     "id": {
-                                                        "$ref": "#/items/properties/item/oneOf/0/allOf/0/properties/id"
+                                                        "$ref": "#/items/properties/item/oneOf/1/allOf/0/properties/id"
                                                     },
                                                     "title": {
                                                         "description": "Title",
@@ -349,14 +349,18 @@
                                                         "type": "string"
                                                     },
                                                     "published": {
-                                                        "description": "Publication date (UTC)",
-                                                        "$ref": "#/items/properties/item/oneOf/0/allOf/0/properties/published"
+                                                        "title": "Publication date (UTC)",
+                                                        "$ref": "#/items/properties/item/oneOf/1/allOf/0/properties/published"
+                                                    },
+                                                    "updated": {
+                                                        "title": "Updated date (UTC)",
+                                                        "$ref": "#/items/properties/item/oneOf/1/allOf/0/properties/published"
                                                     },
                                                     "subjects": {
                                                         "description": "Article subjects",
                                                         "type": "array",
                                                         "items": {
-                                                            "$ref": "#/items/properties/item/oneOf/0/allOf/0/properties/subjects/items"
+                                                            "$ref": "#/items/properties/item/oneOf/1/allOf/0/properties/subjects/items"
                                                         },
                                                         "uniqueItems": true
                                                     }
@@ -387,7 +391,7 @@
                                                 "type": "object",
                                                 "properties": {
                                                     "id": {
-                                                        "$ref": "#/items/properties/item/oneOf/0/allOf/0/properties/id"
+                                                        "$ref": "#/items/properties/item/oneOf/1/allOf/0/properties/id"
                                                     },
                                                     "title": {
                                                         "description": "Title",
@@ -397,9 +401,13 @@
                                                         "description": "Description of the collection",
                                                         "type": "string"
                                                     },
+                                                    "published": {
+                                                        "title": "Publication date (UTC)",
+                                                        "$ref": "#/items/properties/item/oneOf/1/allOf/0/properties/published"
+                                                    },
                                                     "updated": {
-                                                        "description": "Updated date (UTC)",
-                                                        "$ref": "#/items/properties/item/oneOf/0/allOf/0/properties/published"
+                                                        "title": "Updated date (UTC)",
+                                                        "$ref": "#/items/properties/item/oneOf/1/allOf/0/properties/published"
                                                     },
                                                     "image": {
                                                         "type": "object",
@@ -416,7 +424,7 @@
                                                         "description": "Collection subjects",
                                                         "type": "array",
                                                         "items": {
-                                                            "$ref": "#/items/properties/item/oneOf/0/allOf/0/properties/subjects/items"
+                                                            "$ref": "#/items/properties/item/oneOf/1/allOf/0/properties/subjects/items"
                                                         }
                                                     },
                                                     "selectedCurator": {
@@ -432,7 +440,7 @@
                                                                     {
                                                                         "properties": {
                                                                             "id": {
-                                                                                "$ref": "#/items/properties/item/oneOf/0/allOf/0/properties/id"
+                                                                                "$ref": "#/items/properties/item/oneOf/1/allOf/0/properties/id"
                                                                             },
                                                                             "type": {
                                                                                 "title": "Type",
@@ -471,7 +479,7 @@
                                                 "required": [
                                                     "id",
                                                     "title",
-                                                    "updated",
+                                                    "published",
                                                     "image",
                                                     "selectedCurator"
                                                 ]
@@ -496,7 +504,7 @@
                                                 "type": "object",
                                                 "properties": {
                                                     "id": {
-                                                        "$ref": "#/items/properties/item/oneOf/0/allOf/0/properties/id"
+                                                        "$ref": "#/items/properties/item/oneOf/1/allOf/0/properties/id"
                                                     },
                                                     "title": {
                                                         "description": "Title",
@@ -506,13 +514,21 @@
                                                         "description": "Description of the article",
                                                         "type": "string"
                                                     },
+                                                    "published": {
+                                                        "title": "Publication date (UTC)",
+                                                        "$ref": "#/items/properties/item/oneOf/1/allOf/0/properties/published"
+                                                    },
+                                                    "updated": {
+                                                        "title": "Updated date (UTC)",
+                                                        "$ref": "#/items/properties/item/oneOf/1/allOf/0/properties/published"
+                                                    },
                                                     "starts": {
                                                         "description": "Start date/time (UTC)",
-                                                        "$ref": "#/items/properties/item/oneOf/0/allOf/0/properties/published"
+                                                        "$ref": "#/items/properties/item/oneOf/1/allOf/0/properties/published"
                                                     },
                                                     "ends": {
                                                         "description": "Ends date/time (UTC)",
-                                                        "$ref": "#/items/properties/item/oneOf/0/allOf/0/properties/published"
+                                                        "$ref": "#/items/properties/item/oneOf/1/allOf/0/properties/published"
                                                     },
                                                     "timezone": {
                                                         "description": "Timezone (from the IANA time zone database) for non-online events",
@@ -523,6 +539,7 @@
                                                 "required": [
                                                     "id",
                                                     "title",
+                                                    "published",
                                                     "starts",
                                                     "ends"
                                                 ]
@@ -547,7 +564,7 @@
                                                 "type": "object",
                                                 "properties": {
                                                     "id": {
-                                                        "$ref": "#/items/properties/item/oneOf/0/allOf/0/properties/id"
+                                                        "$ref": "#/items/properties/item/oneOf/1/allOf/0/properties/id"
                                                     },
                                                     "interviewee": {
                                                         "$schema": "http://json-schema.org/draft-04/schema#",
@@ -596,7 +613,11 @@
                                                     },
                                                     "published": {
                                                         "title": "Publication date (UTC)",
-                                                        "$ref": "#/items/properties/item/oneOf/0/allOf/0/properties/published"
+                                                        "$ref": "#/items/properties/item/oneOf/1/allOf/0/properties/published"
+                                                    },
+                                                    "updated": {
+                                                        "title": "Updated date (UTC)",
+                                                        "$ref": "#/items/properties/item/oneOf/1/allOf/0/properties/published"
                                                     }
                                                 },
                                                 "required": [
@@ -639,8 +660,12 @@
                                                         "type": "string"
                                                     },
                                                     "published": {
-                                                        "description": "Publication date (UTC)",
-                                                        "$ref": "#/items/properties/item/oneOf/0/allOf/0/properties/published"
+                                                        "title": "Publication date (UTC)",
+                                                        "$ref": "#/items/properties/item/oneOf/1/allOf/0/properties/published"
+                                                    },
+                                                    "updated": {
+                                                        "title": "Updated date (UTC)",
+                                                        "$ref": "#/items/properties/item/oneOf/1/allOf/0/properties/published"
                                                     },
                                                     "image": {
                                                         "type": "object",
@@ -676,6 +701,22 @@
                                                 }
                                             },
                                             {
+                                                "$ref": "#/items/properties/item/oneOf/2/allOf/1/oneOf/6/properties/episode"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "$schema": "http://json-schema.org/draft-04/schema#",
+                                        "title": "Podcast episode chapter",
+                                        "type": "object",
+                                        "properties": {
+                                            "type": {
+                                                "type": "string",
+                                                "enum": [
+                                                    "podcast-episode-chapter"
+                                                ]
+                                            },
+                                            "episode": {
                                                 "$schema": "http://json-schema.org/draft-04/schema#",
                                                 "title": "Podcast episode snippet",
                                                 "type": "object",
@@ -694,8 +735,12 @@
                                                         "type": "string"
                                                     },
                                                     "published": {
-                                                        "description": "Publication date (UTC)",
-                                                        "$ref": "#/items/properties/item/oneOf/0/allOf/0/properties/published"
+                                                        "title": "Publication date (UTC)",
+                                                        "$ref": "#/items/properties/item/oneOf/1/allOf/0/properties/published"
+                                                    },
+                                                    "updated": {
+                                                        "title": "Updated date (UTC)",
+                                                        "$ref": "#/items/properties/item/oneOf/1/allOf/0/properties/published"
                                                     },
                                                     "image": {
                                                         "type": "object",
@@ -744,7 +789,7 @@
                                                         "description": "Episode subjects",
                                                         "type": "array",
                                                         "items": {
-                                                            "$ref": "#/items/properties/item/oneOf/0/allOf/0/properties/subjects/items"
+                                                            "$ref": "#/items/properties/item/oneOf/1/allOf/0/properties/subjects/items"
                                                         }
                                                     }
                                                 },
@@ -755,22 +800,6 @@
                                                     "image",
                                                     "sources"
                                                 ]
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        "$schema": "http://json-schema.org/draft-04/schema#",
-                                        "title": "Podcast episode chapter",
-                                        "type": "object",
-                                        "properties": {
-                                            "type": {
-                                                "type": "string",
-                                                "enum": [
-                                                    "podcast-episode-chapter"
-                                                ]
-                                            },
-                                            "episode": {
-                                                "$ref": "#/items/properties/item/oneOf/2/allOf/1/oneOf/5/allOf/1"
                                             },
                                             "chapter": {
                                                 "$schema": "http://json-schema.org/draft-04/schema#",

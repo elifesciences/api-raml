@@ -65,19 +65,19 @@
                         },
                         "published": {
                             "description": "Date and time this article was first published.\nNot present if 'stage' is 'preview' and version is '1'.\n",
-                            "$ref": "#/allOf/0/allOf/0/properties/statusDate"
-                        },
-                        "versionDate": {
-                            "description": "Date and time this version of the article was published.\nOnly present if 'stage' is 'published'.\n",
-                            "$ref": "#/allOf/0/allOf/0/properties/statusDate"
-                        },
-                        "statusDate": {
-                            "description": "Date and time this article transitioned to current status.\nNot present if 'stage' is 'preview' and version is '1'.\n",
                             "$schema": "http://json-schema.org/draft-04/schema#",
                             "title": "Date-time ISO8601 with numeric UTC timezone",
                             "type": "string",
                             "format": "date-time",
                             "pattern": "^....-..-..T..:..:..Z$"
+                        },
+                        "versionDate": {
+                            "description": "Date and time this version of the article was published.\nOnly present if 'stage' is 'published'.\n",
+                            "$ref": "#/allOf/0/allOf/0/properties/published"
+                        },
+                        "statusDate": {
+                            "description": "Date and time this article transitioned to current status.\nNot present if 'stage' is 'preview' and version is '1'.\n",
+                            "$ref": "#/allOf/0/allOf/0/properties/published"
                         },
                         "volume": {
                             "type": "integer",
@@ -1123,30 +1123,19 @@
                                                         "enum": [
                                                             "book"
                                                         ]
-                                                    },
-                                                    "authors": {
-                                                        "type": "array",
-                                                        "items": {
-                                                            "$ref": "#/allOf/1/allOf/1/properties/authors/items"
-                                                        },
-                                                        "minItems": 1
-                                                    },
-                                                    "authorsEtAl": {
-                                                        "description": "If there are more authors.",
-                                                        "type": "boolean",
-                                                        "default": false
-                                                    },
-                                                    "authorsType": {
-                                                        "type": "string",
-                                                        "enum": [
-                                                            "authors",
-                                                            "editors"
-                                                        ],
-                                                        "default": "authors"
                                                     }
                                                 },
-                                                "required": [
-                                                    "authors"
+                                                "anyOf": [
+                                                    {
+                                                        "required": [
+                                                            "authors"
+                                                        ]
+                                                    },
+                                                    {
+                                                        "required": [
+                                                            "editors"
+                                                        ]
+                                                    }
                                                 ]
                                             },
                                             {
@@ -1163,30 +1152,6 @@
                                                         "enum": [
                                                             "book-chapter"
                                                         ]
-                                                    },
-                                                    "authors": {
-                                                        "type": "array",
-                                                        "items": {
-                                                            "$ref": "#/allOf/1/allOf/1/properties/authors/items"
-                                                        },
-                                                        "minItems": 1
-                                                    },
-                                                    "authorsEtAl": {
-                                                        "description": "If there are more authors.",
-                                                        "type": "boolean",
-                                                        "default": false
-                                                    },
-                                                    "editors": {
-                                                        "type": "array",
-                                                        "items": {
-                                                            "$ref": "#/allOf/1/allOf/1/properties/authors/items"
-                                                        },
-                                                        "minItems": 1
-                                                    },
-                                                    "editorsEtAl": {
-                                                        "description": "If there are more editors.",
-                                                        "type": "boolean",
-                                                        "default": false
                                                     },
                                                     "chapterTitle": {
                                                         "type": "string",
@@ -1440,7 +1405,8 @@
                                                 "minLength": 1
                                             },
                                             "journal": {
-                                                "$ref": "#/allOf/2/properties/references/items/definitions/book/properties/publisher"
+                                                "type": "string",
+                                                "minLength": 1
                                             },
                                             "volume": {
                                                 "type": "string",
@@ -1552,7 +1518,8 @@
                                                 "minLength": 1
                                             },
                                             "periodical": {
-                                                "$ref": "#/allOf/2/properties/references/items/definitions/book/properties/publisher"
+                                                "type": "string",
+                                                "minLength": 1
                                             },
                                             "volume": {
                                                 "type": "string",
@@ -1847,6 +1814,30 @@
                                     "bookTitle": {
                                         "type": "string",
                                         "minLength": 1
+                                    },
+                                    "authors": {
+                                        "type": "array",
+                                        "items": {
+                                            "$ref": "#/allOf/1/allOf/1/properties/authors/items"
+                                        },
+                                        "minItems": 1
+                                    },
+                                    "authorsEtAl": {
+                                        "description": "If there are more authors.",
+                                        "type": "boolean",
+                                        "default": false
+                                    },
+                                    "editors": {
+                                        "type": "array",
+                                        "items": {
+                                            "$ref": "#/allOf/1/allOf/1/properties/authors/items"
+                                        },
+                                        "minItems": 1
+                                    },
+                                    "editorsEtAl": {
+                                        "description": "If there are more editors.",
+                                        "type": "boolean",
+                                        "default": false
                                     },
                                     "publisher": {
                                         "$schema": "http://json-schema.org/draft-04/schema#",

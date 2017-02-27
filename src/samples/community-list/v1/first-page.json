@@ -122,6 +122,7 @@
             "id": "1",
             "title": "Changing peer review in cancer research: a seminar at Fred Hutch",
             "impactStatement": "How eLife is influencing the culture of peer review",
+            "published": "2016-08-01T00:00:00Z",
             "starts": "2016-04-22T20:00:00Z",
             "ends": "2016-04-22T21:00:00Z",
             "timezone": "America/Seattle"
@@ -130,7 +131,7 @@
             "type": "collection",
             "id": "1",
             "title": "Tropical disease",
-            "updated": "2015-09-16T11:19:26Z",
+            "published": "2015-09-16T11:19:26Z",
             "image": {
                 "thumbnail": {
                     "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1",

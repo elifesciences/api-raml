@@ -937,11 +937,7 @@
                 }
             ],
             "articleTitle": "Minimal journal article",
-            "journal": {
-                "name": [
-                    "A journal"
-                ]
-            },
+            "journal": "A journal",
             "pages": "In press"
         },
         {
@@ -962,23 +958,7 @@
                 }
             ],
             "articleTitle": "Complete journal article",
-            "journal": {
-                "name": [
-                    "A journal"
-                ],
-                "address": {
-                    "formatted": [
-                        "London",
-                        "United Kingdom"
-                    ],
-                    "components": {
-                        "locality": [
-                            "London"
-                        ],
-                        "country": "United Kingdom"
-                    }
-                }
-            },
+            "journal": "A journal",
             "volume": "365",
             "pages": {
                 "first": "231",
@@ -1057,11 +1037,7 @@
                 }
             ],
             "articleTitle": "Minimal periodical article",
-            "periodical": {
-                "name": [
-                    "A periodical"
-                ]
-            },
+            "periodical": "A periodical",
             "pages": "In press"
         },
         {
@@ -1083,11 +1059,7 @@
             ],
             "authorsEtAl": true,
             "articleTitle": "Complete periodical article",
-            "periodical": {
-                "name": [
-                    "A periodical"
-                ]
-            },
+            "periodical": "A periodical",
             "volume": "Volume 1",
             "pages": {
                 "first": "231",

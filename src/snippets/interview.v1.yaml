@@ -17,6 +17,9 @@ properties:
     published:
         title: Publication date (UTC)
         $ref: ../misc/date-time.v1.yaml
+    updated:
+        title: Updated date (UTC)
+        $ref: ../misc/date-time.v1.yaml
 required:
   - id
   - interviewee

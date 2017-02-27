@@ -74,6 +74,10 @@
                         "type": "string",
                         "format": "date-time",
                         "pattern": "^....-..-..T..:..:..Z$"
+                    },
+                    "updated": {
+                        "title": "Updated date (UTC)",
+                        "$ref": "#/properties/items/items/properties/published"
                     }
                 },
                 "required": [
