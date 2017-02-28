@@ -281,7 +281,19 @@
                             "uri": "https://static-movie-usa.glencoesoftware.com/ogv/10.7554/774/b24b6a5e3f0d60d41388aad7d9fa00d2e5ec9a92/elife-15278-media1.ogv"
                         }
                     ],
-                    "image": "https://static-movie-usa.glencoesoftware.com/jpg/10.7554/774/b24b6a5e3f0d60d41388aad7d9fa00d2e5ec9a92/elife-15278-media1.jpg",
+                    "placeholder": {
+                        "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1",
+                        "alt": "",
+                        "source": {
+                            "mediaType": "image/jpeg",
+                            "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1/full/full/0/default.jpg",
+                            "filename": "an-image.jpg"
+                        },
+                        "size": {
+                            "width": 3441,
+                            "height": 2741
+                        }
+                    },
                     "width": 1920,
                     "height": 1080
                 },
@@ -311,7 +323,19 @@
                             "uri": "https://static-movie-usa.glencoesoftware.com/ogv/10.7554/774/b24b6a5e3f0d60d41388aad7d9fa00d2e5ec9a92/elife-15278-media2.ogv"
                         }
                     ],
-                    "image": "https://static-movie-usa.glencoesoftware.com/jpg/10.7554/774/b24b6a5e3f0d60d41388aad7d9fa00d2e5ec9a92/elife-15278-media2.jpg",
+                    "placeholder": {
+                        "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1",
+                        "alt": "",
+                        "source": {
+                            "mediaType": "image/jpeg",
+                            "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1/full/full/0/default.jpg",
+                            "filename": "an-image.jpg"
+                        },
+                        "size": {
+                            "width": 3441,
+                            "height": 2741
+                        }
+                    },
                     "width": 1920,
                     "height": 1080
                 },
@@ -436,7 +460,19 @@
                                     "uri": "https://static-movie-usa.glencoesoftware.com/ogv/10.7554/774/b24b6a5e3f0d60d41388aad7d9fa00d2e5ec9a92/elife-15278-media3.ogv"
                                 }
                             ],
-                            "image": "https://static-movie-usa.glencoesoftware.com/jpg/10.7554/774/b24b6a5e3f0d60d41388aad7d9fa00d2e5ec9a92/elife-15278-media3.jpg",
+                            "placeholder": {
+                                "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1",
+                                "alt": "",
+                                "source": {
+                                    "mediaType": "image/jpeg",
+                                    "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1/full/full/0/default.jpg",
+                                    "filename": "an-image.jpg"
+                                },
+                                "size": {
+                                    "width": 3441,
+                                    "height": 2741
+                                }
+                            },
                             "width": 1920,
                             "height": 1080
                         },
@@ -496,7 +532,19 @@
                                     "uri": "https://static-movie-usa.glencoesoftware.com/ogv/10.7554/774/b24b6a5e3f0d60d41388aad7d9fa00d2e5ec9a92/elife-15278-media4.ogv"
                                 }
                             ],
-                            "image": "https://static-movie-usa.glencoesoftware.com/jpg/10.7554/774/b24b6a5e3f0d60d41388aad7d9fa00d2e5ec9a92/elife-15278-media4.jpg",
+                            "placeholder": {
+                                "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1",
+                                "alt": "",
+                                "source": {
+                                    "mediaType": "image/jpeg",
+                                    "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1/full/full/0/default.jpg",
+                                    "filename": "an-image.jpg"
+                                },
+                                "size": {
+                                    "width": 3441,
+                                    "height": 2741
+                                }
+                            },
                             "width": 1920,
                             "height": 1080
                         },
@@ -891,7 +939,19 @@
                                     "uri": "https://static-movie-usa.glencoesoftware.com/ogv/10.7554/774/b24b6a5e3f0d60d41388aad7d9fa00d2e5ec9a92/elife-15278-media5.ogv"
                                 }
                             ],
-                            "image": "https://static-movie-usa.glencoesoftware.com/jpg/10.7554/774/b24b6a5e3f0d60d41388aad7d9fa00d2e5ec9a92/elife-15278-media5.jpg",
+                            "placeholder": {
+                                "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1",
+                                "alt": "",
+                                "source": {
+                                    "mediaType": "image/jpeg",
+                                    "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1/full/full/0/default.jpg",
+                                    "filename": "an-image.jpg"
+                                },
+                                "size": {
+                                    "width": 3441,
+                                    "height": 2741
+                                }
+                            },
                             "width": 1920,
                             "height": 1078
                         },
