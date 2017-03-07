@@ -12,8 +12,18 @@ allOf:
             minItems: 1
         venue:
             $ref: ../misc/place.v1.yaml
-    required:
-      - content
-    dependencies:
-        timezone: [venue]
-        venue: [timezone]
+    oneOf:
+      - required:
+          - content
+        not:
+            required:
+              - uri
+        dependencies:
+            timezone: [venue]
+            venue: [timezone]
+      - required:
+          - uri
+        not:
+            required:
+              - content
+              - venue
