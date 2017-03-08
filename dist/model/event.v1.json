@@ -69,6 +69,33 @@
                                         "oneOf": [
                                             {
                                                 "$schema": "http://json-schema.org/draft-04/schema#",
+                                                "title": "Button",
+                                                "type": "object",
+                                                "properties": {
+                                                    "type": {
+                                                        "type": "string",
+                                                        "enum": [
+                                                            "button"
+                                                        ]
+                                                    },
+                                                    "text": {
+                                                        "title": "Text",
+                                                        "type": "string"
+                                                    },
+                                                    "uri": {
+                                                        "title": "URI",
+                                                        "type": "string",
+                                                        "format": "uri"
+                                                    }
+                                                },
+                                                "required": [
+                                                    "type",
+                                                    "text",
+                                                    "uri"
+                                                ]
+                                            },
+                                            {
+                                                "$schema": "http://json-schema.org/draft-04/schema#",
                                                 "title": "Code",
                                                 "type": "object",
                                                 "properties": {
@@ -101,7 +128,7 @@
                                                 "type": "object",
                                                 "allOf": [
                                                     {
-                                                        "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/1/definitions/image"
+                                                        "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/2/definitions/image"
                                                     },
                                                     {
                                                         "properties": {
@@ -114,7 +141,7 @@
                                                             "supplements": {
                                                                 "type": "array",
                                                                 "items": {
-                                                                    "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/1/definitions/image"
+                                                                    "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/2/definitions/image"
                                                                 }
                                                             }
                                                         },
@@ -154,10 +181,10 @@
                                                                         "items": {
                                                                             "oneOf": [
                                                                                 {
-                                                                                    "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/3"
+                                                                                    "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/4"
                                                                                 },
                                                                                 {
-                                                                                    "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/4"
+                                                                                    "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/5"
                                                                                 },
                                                                                 {
                                                                                     "properties": {
@@ -223,7 +250,7 @@
                                                                             "type": "object",
                                                                             "allOf": [
                                                                                 {
-                                                                                    "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/1/definitions/image/allOf/0"
+                                                                                    "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/2/definitions/image/allOf/0"
                                                                                 },
                                                                                 {
                                                                                     "properties": {
@@ -383,7 +410,7 @@
                                                         "title": "Answer",
                                                         "type": "array",
                                                         "items": {
-                                                            "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/4"
+                                                            "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/5"
                                                         },
                                                         "minItems": 1
                                                     }
@@ -409,7 +436,7 @@
                                                         "title": "Text",
                                                         "type": "array",
                                                         "items": {
-                                                            "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/4"
+                                                            "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/5"
                                                         },
                                                         "minItems": 1
                                                     },
@@ -429,7 +456,7 @@
                                                 "type": "object",
                                                 "allOf": [
                                                     {
-                                                        "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/1/definitions/image/allOf/0"
+                                                        "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/2/definitions/image/allOf/0"
                                                     },
                                                     {
                                                         "properties": {
@@ -466,10 +493,10 @@
                                                                             "items": {
                                                                                 "oneOf": [
                                                                                     {
-                                                                                        "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/4"
+                                                                                        "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/5"
                                                                                     },
                                                                                     {
-                                                                                        "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/3"
+                                                                                        "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/4"
                                                                                     }
                                                                                 ]
                                                                             },
@@ -493,7 +520,7 @@
                                                                 "title": "Source data",
                                                                 "type": "array",
                                                                 "items": {
-                                                                    "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/1/definitions/image/allOf/1/properties/sourceData/items"
+                                                                    "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/2/definitions/image/allOf/1/properties/sourceData/items"
                                                                 }
                                                             }
                                                         },
@@ -510,7 +537,7 @@
                                                 "type": "object",
                                                 "allOf": [
                                                     {
-                                                        "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/1/definitions/image/allOf/0"
+                                                        "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/2/definitions/image/allOf/0"
                                                     },
                                                     {
                                                         "properties": {
@@ -528,7 +555,7 @@
                                                                         "mediaType": {
                                                                             "allOf": [
                                                                                 {
-                                                                                    "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/1/definitions/image/allOf/1/properties/sourceData/items/allOf/1/properties/mediaType"
+                                                                                    "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/2/definitions/image/allOf/1/properties/sourceData/items/allOf/1/properties/mediaType"
                                                                                 },
                                                                                 {
                                                                                     "pattern": "^video/"
@@ -569,7 +596,7 @@
                                                                 "title": "Source data",
                                                                 "type": "array",
                                                                 "items": {
-                                                                    "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/1/definitions/image/allOf/1/properties/sourceData/items"
+                                                                    "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/2/definitions/image/allOf/1/properties/sourceData/items"
                                                                 }
                                                             }
                                                         },
