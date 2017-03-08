@@ -10,20 +10,14 @@ allOf:
             items:
                 $ref: ../misc/blocks-all.v1.yaml
             minItems: 1
-        venue:
-            $ref: ../misc/place.v1.yaml
     oneOf:
       - required:
           - content
         not:
             required:
               - uri
-        dependencies:
-            timezone: [venue]
-            venue: [timezone]
       - required:
           - uri
         not:
             required:
               - content
-              - venue
