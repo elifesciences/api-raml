@@ -7,39 +7,6 @@
     "starts": "2016-04-22T20:00:00Z",
     "ends": "2016-04-22T21:00:00Z",
     "timezone": "America/Los_Angeles",
-    "venue": {
-        "id": "ChIJzT5V0iQVkFQR0L1g2ZzelL0",
-        "coordinates": {
-            "latitude": 47.6272994,
-            "longitude": -122.3324216
-        },
-        "name": [
-            "D1-080/084 (Thomas Building)",
-            "Fred Hutchinson Cancer Research Center"
-        ],
-        "address": {
-            "formatted": [
-                "1100 Fairview Ave N",
-                "Seattle, WA 98109",
-                "United States"
-            ],
-            "components": {
-                "streetAddress": [
-                    "1100 Fairview Ave North"
-                ],
-                "locality": [
-                    "South Lake Union",
-                    "Seattle"
-                ],
-                "area": [
-                    "King County",
-                    "Washington"
-                ],
-                "country": "United States",
-                "postalCode": "98109"
-            }
-        }
-    },
     "content": [
         {
             "type": "paragraph",
