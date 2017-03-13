@@ -583,6 +583,16 @@
                                                                 "type": "integer",
                                                                 "minimum": 1
                                                             },
+                                                            "autoplay": {
+                                                                "title": "Whether to autoplay the video.",
+                                                                "type": "boolean",
+                                                                "default": false
+                                                            },
+                                                            "loop": {
+                                                                "title": "Whether to loop the video.",
+                                                                "type": "boolean",
+                                                                "default": false
+                                                            },
                                                             "sourceData": {
                                                                 "title": "Source data",
                                                                 "type": "array",
