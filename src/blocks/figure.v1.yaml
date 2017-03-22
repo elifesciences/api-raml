@@ -15,6 +15,12 @@ properties:
                   - $ref: table.v1.yaml
                   - $ref: video.v1.yaml
               - properties:
+                    doi:
+                        $ref: ../misc/doi.v1.yaml
+                    label:
+                        title: Label
+                        type: string
+                        minLength: 1
                     sourceData:
                         title: Source data
                         type: array
@@ -23,7 +29,6 @@ properties:
                 required:
                   - id
                   - label
-                  - title
         minItems: 1
 required:
   - type
