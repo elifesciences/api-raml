@@ -3,9 +3,7 @@
     "description": "eLife Sciences API specification",
     "type": "library",
     "license": "MIT",
-    "require": {
-        "puli/composer-plugin": "^1.0-beta9"
-    },
-    "minimum-stability": "beta",
-    "prefer-stable": true
+    "conflict": {
+        "justinrainbow/json-schema": "<3.0.0"
+    }
 }

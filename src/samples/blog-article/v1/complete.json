@@ -104,6 +104,11 @@
                     "text": "Quote Incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint est laborum."
                 }
             ]
+        },
+        {
+            "type": "button",
+            "text": "Search for something",
+            "uri": "https://www.google.co.uk/"
         }
     ],
     "subjects": [

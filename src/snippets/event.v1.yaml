@@ -26,6 +26,10 @@ properties:
         description: Timezone (from the IANA time zone database) for non-online events
         type: string
         pattern: ^[A-Za-z]+(/[A-Za-z_-]+)+$
+    uri:
+        description: URI if the event details are held elsewhere
+        type: string
+        format: uri
 required:
   - id
   - title
