@@ -1234,7 +1234,7 @@
         }
       };
     })
-    .controller('RamlConsoleController', 
+    .controller('RamlConsoleController',
       ['$attrs', '$scope', '$rootScope', '$timeout', '$window', function RamlConsoleController(
       $attrs, $scope, $rootScope, $timeout, $window
     ) {
@@ -1245,6 +1245,8 @@
       $scope.disableThemeSwitcher       = $attrs.hasOwnProperty('disableThemeSwitcher');
       $scope.disableTitle               = $attrs.hasOwnProperty('disableTitle');
       $scope.disableTryIt               = $attrs.hasOwnProperty('disableTryIt');
+      $scope.disableDescription         = $attrs.hasOwnProperty('disableDescription');
+      $scope.descriptionLimit           = $attrs.hasOwnProperty('descriptionLimit') || 50;
       $scope.documentationCollapsed     = $attrs.hasOwnProperty('documentationCollapsed');
       $scope.proxy                      = $window.RAML.Settings.proxy;
       $scope.readResourceTraits         = readResourceTraits;
@@ -3085,7 +3087,7 @@
         };
 
         $scope.ownerOptionsEnabled = function () {
-          return $scope.credentials.grant === 'owner';
+          return $scope.credentials.grant === 'password';
         };
 
         $scope.isImplicitEnabled = function () {
@@ -3111,15 +3113,7 @@
           },
           {
             label: 'Resource Owner Password Credentials',
-            value: 'owner'
-          },
-          {
-            label: 'Resource Owner Password Credentials',
             value: 'password'
-          },
-          {
-            label: 'Client Credentials',
-            value: 'credentials'
           },
           {
             label: 'Client Credentials',
@@ -3683,7 +3677,7 @@
       popup(auth[grantType].getUri());
     }
 
-    if (grantType === 'owner' || grantType === 'password') {
+    if (grantType === 'password') {
       auth.owner.getToken(this.credentials.username, this.credentials.password, function (err, user, raw) {
         if (err) {
           done(raw, err);
@@ -3697,7 +3691,7 @@
       });
     }
 
-    if (grantType === 'credentials'|| grantType === 'client_credentials') {
+    if (grantType === 'client_credentials') {
       auth.credentials.getToken(function (err, user, raw) {
         if (err) {
           done(raw, err);
@@ -7161,6 +7155,15 @@ angular.module('ramlConsoleApp').run(['$templateCache', function($templateCache)
     "  </div>\n" +
     "\n" +
     "  <h1 ng-if=\"!disableTitle\" class=\"raml-console-title\">{{raml.title}}</h1>\n" +
+    "\n" +
+    "\n" +
+    "  <div ng-if=\"!disableDescription\" ng-init=\"actualSize = descriptionLimit\" >\n" +
+    "    <div class=\"raml-console-root-description\" markdown=\"raml.description | limitTo : actualSize\"></div>\n" +
+    "    <span>\n" +
+    "      <a class=\"raml-console-show-more-less\" ng-click=\"actualSize = descriptionLimit\" ng-hide=\"raml.description.length > actualSize || raml.description.length < actualSize\">show less</a>\n" +
+    "      <a class=\"raml-console-show-more-less\" ng-click=\"actualSize = raml.description.length\" ng-hide=\"raml.description.length == actualSize\">show more</a>\n" +
+    "    </span>\n" +
+    "  </div>\n" +
     "\n" +
     "  <root-documentation></root-documentation>\n" +
     "\n" +
