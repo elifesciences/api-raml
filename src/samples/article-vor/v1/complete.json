@@ -325,16 +325,16 @@
     "impactStatement": "A new hominin species has been unearthed in the Dinaledi Chamber of the Rising Star cave system in the largest assemblage of a single species of hominins yet discovered in Africa.",
     "image": {
         "banner": {
-            "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1",
+            "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif",
             "alt": "",
             "source": {
                 "mediaType": "image/jpeg",
-                "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1/full/full/0/default.jpg",
+                "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif/full/full/0/default.jpg",
                 "filename": "an-image.jpg"
             },
             "size": {
-                "width": 3441,
-                "height": 2741
+                "width": 4194,
+                "height": 4714
             },
             "focalPoint": {
                 "x": 25,
@@ -342,16 +342,16 @@
             }
         },
         "thumbnail": {
-            "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1",
+            "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif",
             "alt": "",
             "source": {
                 "mediaType": "image/jpeg",
-                "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1/full/full/0/default.jpg",
+                "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif/full/full/0/default.jpg",
                 "filename": "an-image.jpg"
             },
             "size": {
-                "width": 3441,
-                "height": 2741
+                "width": 4194,
+                "height": 4714
             },
             "focalPoint": {
                 "x": 25,
@@ -425,16 +425,16 @@
                         }
                     ],
                     "image": {
-                        "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1",
+                        "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif",
                         "alt": "",
                         "source": {
                             "mediaType": "image/jpeg",
-                            "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1/full/full/0/default.jpg",
+                            "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif/full/full/0/default.jpg",
                             "filename": "an-image.jpg"
                         },
                         "size": {
-                            "width": 3441,
-                            "height": 2741
+                            "width": 4194,
+                            "height": 4714
                         },
                         "focalPoint": {
                             "x": 25,
@@ -455,16 +455,16 @@
                                 }
                             ],
                             "image": {
-                                "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1",
+                                "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif",
                                 "alt": "",
                                 "source": {
                                     "mediaType": "image/jpeg",
-                                    "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1/full/full/0/default.jpg",
+                                    "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif/full/full/0/default.jpg",
                                     "filename": "an-image.jpg"
                                 },
                                 "size": {
-                                    "width": 3441,
-                                    "height": 2741
+                                    "width": 4194,
+                                    "height": 4714
                                 }
                             },
                             "attribution": [
@@ -594,16 +594,16 @@
                         }
                     ],
                     "placeholder": {
-                        "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1",
+                        "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif",
                         "alt": "",
                         "source": {
                             "mediaType": "image/jpeg",
-                            "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1/full/full/0/default.jpg",
+                            "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif/full/full/0/default.jpg",
                             "filename": "an-image.jpg"
                         },
                         "size": {
-                            "width": 3441,
-                            "height": 2741
+                            "width": 4194,
+                            "height": 4714
                         }
                     },
                     "width": 640,
@@ -1454,16 +1454,16 @@
                         }
                     ],
                     "image": {
-                        "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1",
+                        "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif",
                         "alt": "",
                         "source": {
                             "mediaType": "image/jpeg",
-                            "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1/full/full/0/default.jpg",
+                            "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif/full/full/0/default.jpg",
                             "filename": "an-image.jpg"
                         },
                         "size": {
-                            "width": 3441,
-                            "height": 2741
+                            "width": 4194,
+                            "height": 4714
                         }
                     }
                 }

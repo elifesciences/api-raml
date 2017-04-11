@@ -6,16 +6,16 @@
     "updated": "2016-07-02T08:30:15Z",
     "image": {
         "banner": {
-            "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1",
+            "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif",
             "alt": "",
             "source": {
                 "mediaType": "image/jpeg",
-                "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1/full/full/0/default.jpg",
+                "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif/full/full/0/default.jpg",
                 "filename": "an-image.jpg"
             },
             "size": {
-                "width": 3441,
-                "height": 2741
+                "width": 4194,
+                "height": 4714
             },
             "focalPoint": {
                 "x": 25,
@@ -23,16 +23,16 @@
             }
         },
         "thumbnail": {
-            "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1",
+            "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif",
             "alt": "",
             "source": {
                 "mediaType": "image/jpeg",
-                "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1/full/full/0/default.jpg",
+                "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif/full/full/0/default.jpg",
                 "filename": "an-image.jpg"
             },
             "size": {
-                "width": 3441,
-                "height": 2741
+                "width": 4194,
+                "height": 4714
             },
             "focalPoint": {
                 "x": 25,
@@ -90,16 +90,16 @@
                     "impactStatement": "A combination of chloroplast transformation with nuclear transformation and large-scale metabolic screening of supertransformed plant lines has enabled an entire biochemical pathway to be transferred from a medicinal plant to a high-biomass crop.",
                     "image": {
                         "thumbnail": {
-                            "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1",
+                            "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif",
                             "alt": "",
                             "source": {
                                 "mediaType": "image/jpeg",
-                                "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1/full/full/0/default.jpg",
+                                "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif/full/full/0/default.jpg",
                                 "filename": "an-image.jpg"
                             },
                             "size": {
-                                "width": 3441,
-                                "height": 2741
+                                "width": 4194,
+                                "height": 4714
                             }
                         }
                     }
@@ -129,16 +129,16 @@
                     "impactStatement": "By sharing their experiences, early-career scientists can help to make the case for increased government funding for researchers.",
                     "image": {
                         "thumbnail": {
-                            "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1",
+                            "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif",
                             "alt": "",
                             "source": {
                                 "mediaType": "image/jpeg",
-                                "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1/full/full/0/default.jpg",
+                                "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif/full/full/0/default.jpg",
                                 "filename": "an-image.jpg"
                             },
                             "size": {
-                                "width": 3441,
-                                "height": 2741
+                                "width": 4194,
+                                "height": 4714
                             }
                         }
                     }
@@ -151,16 +151,16 @@
                     "updated": "2015-09-16T11:19:26Z",
                     "image": {
                         "thumbnail": {
-                            "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1",
+                            "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif",
                             "alt": "",
                             "source": {
                                 "mediaType": "image/jpeg",
-                                "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1/full/full/0/default.jpg",
+                                "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif/full/full/0/default.jpg",
                                 "filename": "an-image.jpg"
                             },
                             "size": {
-                                "width": 3441,
-                                "height": 2741
+                                "width": 4194,
+                                "height": 4714
                             }
                         }
                     },

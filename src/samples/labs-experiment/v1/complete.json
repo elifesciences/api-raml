@@ -6,16 +6,16 @@
     "updated": "2015-04-02T11:32:47Z",
     "image": {
         "banner": {
-            "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1",
+            "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif",
             "alt": "",
             "source": {
                 "mediaType": "image/jpeg",
-                "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1/full/full/0/default.jpg",
+                "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif/full/full/0/default.jpg",
                 "filename": "an-image.jpg"
             },
             "size": {
-                "width": 3441,
-                "height": 2741
+                "width": 4194,
+                "height": 4714
             },
             "focalPoint": {
                 "x": 25,
@@ -23,16 +23,16 @@
             }
         },
         "thumbnail": {
-            "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1",
+            "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif",
             "alt": "",
             "source": {
                 "mediaType": "image/jpeg",
-                "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1/full/full/0/default.jpg",
+                "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif/full/full/0/default.jpg",
                 "filename": "an-image.jpg"
             },
             "size": {
-                "width": 3441,
-                "height": 2741
+                "width": 4194,
+                "height": 4714
             },
             "focalPoint": {
                 "x": 25,
@@ -78,16 +78,16 @@
         {
             "type": "image",
             "image": {
-                "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1",
+                "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif",
                 "alt": "",
                 "source": {
                     "mediaType": "image/jpeg",
-                    "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1/full/full/0/default.jpg",
+                    "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif/full/full/0/default.jpg",
                     "filename": "an-image.jpg"
                 },
                 "size": {
-                    "width": 3441,
-                    "height": 2741
+                    "width": 4194,
+                    "height": 4714
                 },
                 "focalPoint": {
                     "x": 25,
@@ -99,16 +99,16 @@
         {
             "type": "image",
             "image": {
-                "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1",
+                "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif",
                 "alt": "",
                 "source": {
                     "mediaType": "image/jpeg",
-                    "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1/full/full/0/default.jpg",
+                    "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif/full/full/0/default.jpg",
                     "filename": "an-image.jpg"
                 },
                 "size": {
-                    "width": 3441,
-                    "height": 2741
+                    "width": 4194,
+                    "height": 4714
                 }
             },
             "title": "type ahead search results"
@@ -116,16 +116,16 @@
         {
             "type": "image",
             "image": {
-                "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1",
+                "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif",
                 "alt": "",
                 "source": {
                     "mediaType": "image/jpeg",
-                    "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1/full/full/0/default.jpg",
+                    "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif/full/full/0/default.jpg",
                     "filename": "an-image.jpg"
                 },
                 "size": {
-                    "width": 3441,
-                    "height": 2741
+                    "width": 4194,
+                    "height": 4714
                 }
             },
             "title": "filters showing frequency of search term in filter"
@@ -146,16 +146,16 @@
                     {
                         "type": "image",
                         "image": {
-                            "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1",
+                            "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif",
                             "alt": "",
                             "source": {
                                 "mediaType": "image/jpeg",
-                                "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1/full/full/0/default.jpg",
+                                "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif/full/full/0/default.jpg",
                                 "filename": "an-image.jpg"
                             },
                             "size": {
-                                "width": 3441,
-                                "height": 2741
+                                "width": 4194,
+                                "height": 4714
                             }
                         },
                         "title": "filters showing frequency of search term in filter"

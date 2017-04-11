@@ -29,16 +29,16 @@
         "impactStatement": "A new hominin species found in a South African cave is part of one of the most unusual hominin fossil assemblages on record.",
         "image": {
             "thumbnail": {
-                "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1",
+                "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif",
                 "alt": "",
                 "source": {
                     "mediaType": "image/jpeg",
-                    "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1/full/full/0/default.jpg",
+                    "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif/full/full/0/default.jpg",
                     "filename": "an-image.jpg"
                 },
                 "size": {
-                    "width": 3441,
-                    "height": 2741
+                    "width": 4194,
+                    "height": 4714
                 }
             }
         }
@@ -66,16 +66,16 @@
         "impactStatement": "More than 1500 fossils from the Rising Star cave system in South Africa have been assigned to a new human species, <i>Homo naledi</i>, which displays a unique combination of primitive and derived traits throughout the skeleton.",
         "image": {
             "thumbnail": {
-                "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1",
+                "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif",
                 "alt": "",
                 "source": {
                     "mediaType": "image/jpeg",
-                    "uri": "https://rucore.libraries.rutgers.edu/api/iiif/image/2.0/rutgers-lib:20682;PTIF-1/full/full/0/default.jpg",
+                    "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif/full/full/0/default.jpg",
                     "filename": "an-image.jpg"
                 },
                 "size": {
-                    "width": 3441,
-                    "height": 2741
+                    "width": 4194,
+                    "height": 4714
                 }
             }
         }
