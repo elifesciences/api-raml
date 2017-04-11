@@ -903,6 +903,9 @@
                                             }
                                         },
                                         "dependencies": {
+                                            "doi": [
+                                                "id"
+                                            ],
                                             "caption": [
                                                 "title"
                                             ],

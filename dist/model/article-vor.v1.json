@@ -904,6 +904,9 @@
                                             }
                                         },
                                         "dependencies": {
+                                            "doi": [
+                                                "id"
+                                            ],
                                             "caption": [
                                                 "title"
                                             ],
@@ -2409,7 +2412,12 @@
                                             "type",
                                             "title",
                                             "content"
-                                        ]
+                                        ],
+                                        "dependencies": {
+                                            "doi": [
+                                                "id"
+                                            ]
+                                        }
                                     }
                                 ]
                             },
