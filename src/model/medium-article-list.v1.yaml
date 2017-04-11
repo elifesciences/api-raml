@@ -26,7 +26,7 @@ properties:
                     description: Publication date (UTC)
                     $ref: ../misc/date-time.v1.yaml
                 image:
-                    $ref: ../misc/image-thumbnail.v1.yaml
+                    $ref: ../misc/image.v1.yaml
             required:
               - uri
               - title

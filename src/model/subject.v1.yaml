@@ -11,9 +11,9 @@ allOf:
             type: object
             properties:
                 banner:
-                    $ref: ../misc/image-banner.v1.yaml
+                    $ref: ../misc/image.v1.yaml
                 thumbnail:
-                    $ref: ../misc/image-thumbnail.v1.yaml
+                    $ref: ../misc/image.v1.yaml
             required:
               - banner
               - thumbnail

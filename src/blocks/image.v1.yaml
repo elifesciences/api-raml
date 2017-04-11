@@ -21,14 +21,8 @@ definitions:
         allOf:
           - $ref: ../misc/asset.v1.yaml
           - properties:
-                alt:
-                    title: Alternative text
-                    type: string
-                uri:
-                    title: Image URI
-                    type: string
-                    format: uri
-                    pattern: ^https://
+                image:
+                    $ref: ../misc/image.v1.yaml
                 attribution:
                     title: Attribution
                     type: array
@@ -38,7 +32,6 @@ definitions:
                     title: Source data
                     type: array
                     items:
-                        $ref: ../misc/file.v1.yaml
+                        $ref: ../misc/asset-file.v1.yaml
             required:
-              - alt
-              - uri
+              - image
