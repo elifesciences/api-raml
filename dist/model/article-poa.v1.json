@@ -68,19 +68,19 @@
                         },
                         "published": {
                             "description": "Date and time this article was first published.\nNot present if 'stage' is 'preview' and version is '1'.\n",
-                            "$ref": "#/allOf/0/allOf/0/properties/statusDate"
+                            "$ref": "#/allOf/0/allOf/0/properties/versionDate"
                         },
                         "versionDate": {
                             "description": "Date and time this version of the article was published.\nOnly present if 'stage' is 'published'.\n",
-                            "$ref": "#/allOf/0/allOf/0/properties/statusDate"
-                        },
-                        "statusDate": {
-                            "description": "Date and time this article transitioned to current status.\nNot present if 'stage' is 'preview' and version is '1'.\n",
                             "$schema": "http://json-schema.org/draft-04/schema#",
                             "title": "Date-time ISO8601 with numeric UTC timezone",
                             "type": "string",
                             "format": "date-time",
                             "pattern": "^....-..-..T..:..:..Z$"
+                        },
+                        "statusDate": {
+                            "description": "Date and time this article transitioned to current status.\nNot present if 'stage' is 'preview' and version is '1'.\n",
+                            "$ref": "#/allOf/0/allOf/0/properties/versionDate"
                         },
                         "volume": {
                             "type": "integer",
@@ -178,47 +178,68 @@
                             "properties": {
                                 "banner": {
                                     "$schema": "http://json-schema.org/draft-04/schema#",
-                                    "title": "Banner image",
+                                    "title": "IIIF image",
                                     "type": "object",
                                     "properties": {
+                                        "uri": {
+                                            "title": "IIIF Image",
+                                            "type": "string",
+                                            "format": "uri",
+                                            "pattern": "^https://"
+                                        },
                                         "alt": {
                                             "title": "Alternative text",
                                             "type": "string"
                                         },
-                                        "sizes": {
-                                            "title": "Sizes",
+                                        "source": {
+                                            "$ref": "#/allOf/0/allOf/1/properties/additionalFiles/items/allOf/2"
+                                        },
+                                        "size": {
                                             "type": "object",
                                             "properties": {
-                                                "2:1": {
-                                                    "type": "object",
-                                                    "properties": {
-                                                        "900": {
-                                                            "title": "2:1 crop at 900px width",
-                                                            "type": "string",
-                                                            "format": "uri",
-                                                            "pattern": "^https://"
-                                                        },
-                                                        "1800": {
-                                                            "title": "2:1 crop at 1800px width",
-                                                            "type": "string",
-                                                            "format": "uri",
-                                                            "pattern": "^https://"
-                                                        }
-                                                    },
-                                                    "required": [
-                                                        "900",
-                                                        "1800"
-                                                    ]
+                                                "width": {
+                                                    "type": "integer",
+                                                    "minimum": 1
+                                                },
+                                                "height": {
+                                                    "type": "integer",
+                                                    "minimum": 1
                                                 }
                                             },
                                             "required": [
-                                                "2:1"
+                                                "width",
+                                                "height"
+                                            ]
+                                        },
+                                        "focalPoint": {
+                                            "type": "object",
+                                            "title": "Focal point",
+                                            "description": "Point on the image that is considered to be the focal point of the image.\n\nIf not present, 50 can be used for both `x` and `y`.\n",
+                                            "properties": {
+                                                "x": {
+                                                    "description": "Percentage on the horizontal axis.\n",
+                                                    "type": "integer",
+                                                    "minimum": 0,
+                                                    "maximum": 100
+                                                },
+                                                "y": {
+                                                    "description": "Percentage on the vertical axis.\n",
+                                                    "type": "integer",
+                                                    "minimum": 0,
+                                                    "maximum": 100
+                                                }
+                                            },
+                                            "required": [
+                                                "x",
+                                                "y"
                                             ]
                                         }
                                     },
                                     "required": [
+                                        "uri",
                                         "alt",
-                                        "sizes"
+                                        "source",
+                                        "size"
                                     ]
                                 }
                             }
@@ -794,7 +815,7 @@
                             "type": "array",
                             "items": {
                                 "$schema": "http://json-schema.org/draft-04/schema#",
-                                "title": "File",
+                                "title": "Asset file",
                                 "type": "object",
                                 "allOf": [
                                     {
@@ -891,6 +912,15 @@
                                         }
                                     },
                                     {
+                                        "required": [
+                                            "id",
+                                            "title"
+                                        ]
+                                    },
+                                    {
+                                        "$schema": "http://json-schema.org/draft-04/schema#",
+                                        "title": "File",
+                                        "type": "object",
                                         "properties": {
                                             "mediaType": {
                                                 "$schema": "http://json-schema.org/draft-04/schema#",
@@ -910,8 +940,6 @@
                                             }
                                         },
                                         "required": [
-                                            "id",
-                                            "title",
                                             "mediaType",
                                             "uri",
                                             "filename"

@@ -31,7 +31,7 @@
                             "type": "object",
                             "properties": {
                                 "doi": {
-                                    "$ref": "#/allOf/1/allOf/0/properties/doi"
+                                    "$ref": "#/allOf/2/properties/digest/properties/doi"
                                 }
                             }
                         },
@@ -40,69 +40,68 @@
                             "properties": {
                                 "thumbnail": {
                                     "$schema": "http://json-schema.org/draft-04/schema#",
-                                    "title": "Thumbnail image",
+                                    "title": "IIIF image",
                                     "type": "object",
                                     "properties": {
+                                        "uri": {
+                                            "title": "IIIF Image",
+                                            "type": "string",
+                                            "format": "uri",
+                                            "pattern": "^https://"
+                                        },
                                         "alt": {
                                             "title": "Alternative text",
                                             "type": "string"
                                         },
-                                        "sizes": {
-                                            "title": "Sizes",
+                                        "source": {
+                                            "$ref": "#/allOf/1/allOf/1/properties/additionalFiles/items/allOf/2"
+                                        },
+                                        "size": {
                                             "type": "object",
                                             "properties": {
-                                                "16:9": {
-                                                    "type": "object",
-                                                    "properties": {
-                                                        "250": {
-                                                            "title": "16:9 crop at 250px width",
-                                                            "type": "string",
-                                                            "format": "uri",
-                                                            "pattern": "^https://"
-                                                        },
-                                                        "500": {
-                                                            "title": "16:9 crop at 500px width",
-                                                            "type": "string",
-                                                            "format": "uri",
-                                                            "pattern": "^https://"
-                                                        }
-                                                    },
-                                                    "required": [
-                                                        "250",
-                                                        "500"
-                                                    ]
+                                                "width": {
+                                                    "type": "integer",
+                                                    "minimum": 1
                                                 },
-                                                "1:1": {
-                                                    "type": "object",
-                                                    "properties": {
-                                                        "70": {
-                                                            "title": "1:1 crop at 70px width",
-                                                            "type": "string",
-                                                            "format": "uri",
-                                                            "pattern": "^https://"
-                                                        },
-                                                        "140": {
-                                                            "title": "1:1 crop at 140px width",
-                                                            "type": "string",
-                                                            "format": "uri",
-                                                            "pattern": "^https://"
-                                                        }
-                                                    },
-                                                    "required": [
-                                                        "70",
-                                                        "140"
-                                                    ]
+                                                "height": {
+                                                    "type": "integer",
+                                                    "minimum": 1
                                                 }
                                             },
                                             "required": [
-                                                "16:9",
-                                                "1:1"
+                                                "width",
+                                                "height"
+                                            ]
+                                        },
+                                        "focalPoint": {
+                                            "type": "object",
+                                            "title": "Focal point",
+                                            "description": "Point on the image that is considered to be the focal point of the image.\n\nIf not present, 50 can be used for both `x` and `y`.\n",
+                                            "properties": {
+                                                "x": {
+                                                    "description": "Percentage on the horizontal axis.\n",
+                                                    "type": "integer",
+                                                    "minimum": 0,
+                                                    "maximum": 100
+                                                },
+                                                "y": {
+                                                    "description": "Percentage on the vertical axis.\n",
+                                                    "type": "integer",
+                                                    "minimum": 0,
+                                                    "maximum": 100
+                                                }
+                                            },
+                                            "required": [
+                                                "x",
+                                                "y"
                                             ]
                                         }
                                     },
                                     "required": [
+                                        "uri",
                                         "alt",
-                                        "sizes"
+                                        "source",
+                                        "size"
                                     ]
                                 }
                             },
@@ -152,10 +151,7 @@
                             ]
                         },
                         "doi": {
-                            "$schema": "http://json-schema.org/draft-04/schema#",
-                            "title": "DOI",
-                            "type": "string",
-                            "pattern": "^10[.][0-9]{4,}[^\\s\"/<>]*/[^\\s\"]+$"
+                            "$ref": "#/allOf/2/properties/digest/properties/doi"
                         },
                         "authorLine": {
                             "description": "For example:\n  - Ian T Baldwin\n  - Randy Schekman, Mark Patterson\n  - Lee R Berger et al\n",
@@ -179,19 +175,19 @@
                         },
                         "published": {
                             "description": "Date and time this article was first published.\nNot present if 'stage' is 'preview' and version is '1'.\n",
-                            "$ref": "#/allOf/1/allOf/0/properties/versionDate"
-                        },
-                        "versionDate": {
-                            "description": "Date and time this version of the article was published.\nOnly present if 'stage' is 'published'.\n",
                             "$schema": "http://json-schema.org/draft-04/schema#",
                             "title": "Date-time ISO8601 with numeric UTC timezone",
                             "type": "string",
                             "format": "date-time",
                             "pattern": "^....-..-..T..:..:..Z$"
                         },
+                        "versionDate": {
+                            "description": "Date and time this version of the article was published.\nOnly present if 'stage' is 'published'.\n",
+                            "$ref": "#/allOf/1/allOf/0/properties/published"
+                        },
                         "statusDate": {
                             "description": "Date and time this article transitioned to current status.\nNot present if 'stage' is 'preview' and version is '1'.\n",
-                            "$ref": "#/allOf/1/allOf/0/properties/versionDate"
+                            "$ref": "#/allOf/1/allOf/0/properties/published"
                         },
                         "volume": {
                             "type": "integer",
@@ -270,49 +266,7 @@
                             "type": "object",
                             "properties": {
                                 "banner": {
-                                    "$schema": "http://json-schema.org/draft-04/schema#",
-                                    "title": "Banner image",
-                                    "type": "object",
-                                    "properties": {
-                                        "alt": {
-                                            "title": "Alternative text",
-                                            "type": "string"
-                                        },
-                                        "sizes": {
-                                            "title": "Sizes",
-                                            "type": "object",
-                                            "properties": {
-                                                "2:1": {
-                                                    "type": "object",
-                                                    "properties": {
-                                                        "900": {
-                                                            "title": "2:1 crop at 900px width",
-                                                            "type": "string",
-                                                            "format": "uri",
-                                                            "pattern": "^https://"
-                                                        },
-                                                        "1800": {
-                                                            "title": "2:1 crop at 1800px width",
-                                                            "type": "string",
-                                                            "format": "uri",
-                                                            "pattern": "^https://"
-                                                        }
-                                                    },
-                                                    "required": [
-                                                        "900",
-                                                        "1800"
-                                                    ]
-                                                }
-                                            },
-                                            "required": [
-                                                "2:1"
-                                            ]
-                                        }
-                                    },
-                                    "required": [
-                                        "alt",
-                                        "sizes"
-                                    ]
+                                    "$ref": "#/allOf/0/allOf/1/properties/image/properties/thumbnail"
                                 }
                             }
                         },
@@ -702,12 +656,6 @@
                                 "generated": {
                                     "type": "array",
                                     "items": {
-                                        "$ref": "#/allOf/1/allOf/1/properties/dataSets/properties/used/items"
-                                    }
-                                },
-                                "used": {
-                                    "type": "array",
-                                    "items": {
                                         "$schema": "http://json-schema.org/draft-04/schema#",
                                         "title": "Data set",
                                         "type": "object",
@@ -744,7 +692,7 @@
                                                 "minLength": 1
                                             },
                                             "doi": {
-                                                "$ref": "#/allOf/1/allOf/0/properties/doi"
+                                                "$ref": "#/allOf/2/properties/digest/properties/doi"
                                             },
                                             "uri": {
                                                 "type": "string",
@@ -757,6 +705,12 @@
                                             "authors",
                                             "title"
                                         ]
+                                    }
+                                },
+                                "used": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/allOf/1/allOf/1/properties/dataSets/properties/generated/items"
                                     }
                                 }
                             }
@@ -782,7 +736,7 @@
                                                     {
                                                         "properties": {
                                                             "funderId": {
-                                                                "$ref": "#/allOf/1/allOf/0/properties/doi"
+                                                                "$ref": "#/allOf/2/properties/digest/properties/doi"
                                                             }
                                                         }
                                                     }
@@ -862,7 +816,7 @@
                             "type": "array",
                             "items": {
                                 "$schema": "http://json-schema.org/draft-04/schema#",
-                                "title": "File",
+                                "title": "Asset file",
                                 "type": "object",
                                 "allOf": [
                                     {
@@ -871,7 +825,7 @@
                                         "type": "object",
                                         "properties": {
                                             "doi": {
-                                                "$ref": "#/allOf/1/allOf/0/properties/doi"
+                                                "$ref": "#/allOf/2/properties/digest/properties/doi"
                                             },
                                             "id": {
                                                 "$ref": "#/allOf/2/properties/appendices/items/properties/id"
@@ -959,6 +913,15 @@
                                         }
                                     },
                                     {
+                                        "required": [
+                                            "id",
+                                            "title"
+                                        ]
+                                    },
+                                    {
+                                        "$schema": "http://json-schema.org/draft-04/schema#",
+                                        "title": "File",
+                                        "type": "object",
                                         "properties": {
                                             "mediaType": {
                                                 "$schema": "http://json-schema.org/draft-04/schema#",
@@ -978,8 +941,6 @@
                                             }
                                         },
                                         "required": [
-                                            "id",
-                                            "title",
                                             "mediaType",
                                             "uri",
                                             "filename"
@@ -1016,7 +977,10 @@
                     "type": "object",
                     "properties": {
                         "doi": {
-                            "$ref": "#/allOf/1/allOf/0/properties/doi"
+                            "$schema": "http://json-schema.org/draft-04/schema#",
+                            "title": "DOI",
+                            "type": "string",
+                            "pattern": "^10[.][0-9]{4,}[^\\s\"/<>]*/[^\\s\"]+$"
                         },
                         "content": {
                             "type": "array",
@@ -1249,7 +1213,7 @@
                                                 "$ref": "#/allOf/2/properties/references/items/definitions/pages"
                                             },
                                             "doi": {
-                                                "$ref": "#/allOf/1/allOf/0/properties/doi"
+                                                "$ref": "#/allOf/2/properties/digest/properties/doi"
                                             },
                                             "uri": {
                                                 "type": "string",
@@ -1361,7 +1325,7 @@
                                                         "$ref": "#/allOf/2/properties/references/items/definitions/book/properties/publisher"
                                                     },
                                                     "doi": {
-                                                        "$ref": "#/allOf/1/allOf/0/properties/doi"
+                                                        "$ref": "#/allOf/2/properties/digest/properties/doi"
                                                     },
                                                     "uri": {
                                                         "type": "string",
@@ -1416,7 +1380,7 @@
                                                 "$ref": "#/allOf/2/properties/references/items/definitions/pages"
                                             },
                                             "doi": {
-                                                "$ref": "#/allOf/1/allOf/0/properties/doi"
+                                                "$ref": "#/allOf/2/properties/digest/properties/doi"
                                             },
                                             "pmid": {
                                                 "$ref": "#/allOf/2/properties/references/items/definitions/book/properties/pmid"
@@ -1571,7 +1535,7 @@
                                                 "minLength": 1
                                             },
                                             "doi": {
-                                                "$ref": "#/allOf/1/allOf/0/properties/doi"
+                                                "$ref": "#/allOf/2/properties/digest/properties/doi"
                                             },
                                             "uri": {
                                                 "type": "string",
@@ -1619,7 +1583,7 @@
                                                 "$ref": "#/allOf/2/properties/references/items/definitions/book/properties/publisher"
                                             },
                                             "doi": {
-                                                "$ref": "#/allOf/1/allOf/0/properties/doi"
+                                                "$ref": "#/allOf/2/properties/digest/properties/doi"
                                             },
                                             "pmid": {
                                                 "$ref": "#/allOf/2/properties/references/items/definitions/book/properties/pmid"
@@ -1705,7 +1669,7 @@
                                                 "$ref": "#/allOf/2/properties/references/items/definitions/book/properties/publisher"
                                             },
                                             "doi": {
-                                                "$ref": "#/allOf/1/allOf/0/properties/doi"
+                                                "$ref": "#/allOf/2/properties/digest/properties/doi"
                                             },
                                             "uri": {
                                                 "type": "string",
@@ -1869,7 +1833,7 @@
                                         "minLength": 1
                                     },
                                     "doi": {
-                                        "$ref": "#/allOf/1/allOf/0/properties/doi"
+                                        "$ref": "#/allOf/2/properties/digest/properties/doi"
                                     },
                                     "pmid": {
                                         "$schema": "http://json-schema.org/draft-04/schema#",
@@ -1942,7 +1906,7 @@
                                 "pattern": "^[^\\s]+$"
                             },
                             "doi": {
-                                "$ref": "#/allOf/1/allOf/0/properties/doi"
+                                "$ref": "#/allOf/2/properties/digest/properties/doi"
                             },
                             "title": {
                                 "type": "string",
@@ -2063,15 +2027,8 @@
                                                             },
                                                             {
                                                                 "properties": {
-                                                                    "alt": {
-                                                                        "title": "Alternative text",
-                                                                        "type": "string"
-                                                                    },
-                                                                    "uri": {
-                                                                        "title": "Image URI",
-                                                                        "type": "string",
-                                                                        "format": "uri",
-                                                                        "pattern": "^https://"
+                                                                    "image": {
+                                                                        "$ref": "#/allOf/0/allOf/1/properties/image/properties/thumbnail"
                                                                     },
                                                                     "attribution": {
                                                                         "title": "Attribution",
@@ -2089,8 +2046,7 @@
                                                                     }
                                                                 },
                                                                 "required": [
-                                                                    "alt",
-                                                                    "uri"
+                                                                    "image"
                                                                 ]
                                                             }
                                                         ]
@@ -2317,7 +2273,7 @@
                                                                         "mediaType": {
                                                                             "allOf": [
                                                                                 {
-                                                                                    "$ref": "#/allOf/1/allOf/1/properties/additionalFiles/items/allOf/1/properties/mediaType"
+                                                                                    "$ref": "#/allOf/1/allOf/1/properties/additionalFiles/items/allOf/2/properties/mediaType"
                                                                                 },
                                                                                 {
                                                                                     "pattern": "^video/"
@@ -2338,11 +2294,8 @@
                                                                 },
                                                                 "minItems": 1
                                                             },
-                                                            "image": {
-                                                                "title": "Image URI",
-                                                                "type": "string",
-                                                                "format": "uri",
-                                                                "pattern": "^https://"
+                                                            "placeholder": {
+                                                                "$ref": "#/allOf/0/allOf/1/properties/image/properties/thumbnail"
                                                             },
                                                             "width": {
                                                                 "title": "Width",
@@ -2428,7 +2381,7 @@
                                                 ]
                                             },
                                             "doi": {
-                                                "$ref": "#/allOf/1/allOf/0/properties/doi"
+                                                "$ref": "#/allOf/2/properties/digest/properties/doi"
                                             },
                                             "id": {
                                                 "$ref": "#/allOf/2/properties/appendices/items/properties/id"
@@ -2496,7 +2449,7 @@
                     "type": "object",
                     "properties": {
                         "doi": {
-                            "$ref": "#/allOf/1/allOf/0/properties/doi"
+                            "$ref": "#/allOf/2/properties/digest/properties/doi"
                         },
                         "description": {
                             "type": "array",
@@ -2523,7 +2476,7 @@
                     "type": "object",
                     "properties": {
                         "doi": {
-                            "$ref": "#/allOf/1/allOf/0/properties/doi"
+                            "$ref": "#/allOf/2/properties/digest/properties/doi"
                         },
                         "content": {
                             "type": "array",
