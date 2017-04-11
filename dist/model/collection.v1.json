@@ -24,84 +24,108 @@
                 },
                 "published": {
                     "title": "Publication date (UTC)",
-                    "$ref": "#/allOf/0/properties/updated"
-                },
-                "updated": {
-                    "title": "Updated date (UTC)",
                     "$schema": "http://json-schema.org/draft-04/schema#",
                     "description": "eLife restriction over the ISO8601 standard\n\nFor example:\n    - 2016-09-16T12:34:56Z\n",
                     "type": "string",
                     "format": "date-time",
                     "pattern": "^....-..-..T..:..:..Z$"
                 },
+                "updated": {
+                    "title": "Updated date (UTC)",
+                    "$ref": "#/allOf/0/properties/published"
+                },
                 "image": {
                     "type": "object",
                     "properties": {
                         "thumbnail": {
                             "$schema": "http://json-schema.org/draft-04/schema#",
-                            "title": "Thumbnail image",
+                            "title": "IIIF image",
                             "type": "object",
                             "properties": {
+                                "uri": {
+                                    "title": "IIIF Image",
+                                    "type": "string",
+                                    "format": "uri",
+                                    "pattern": "^https://"
+                                },
                                 "alt": {
                                     "title": "Alternative text",
                                     "type": "string"
                                 },
-                                "sizes": {
-                                    "title": "Sizes",
+                                "source": {
+                                    "$schema": "http://json-schema.org/draft-04/schema#",
+                                    "title": "File",
                                     "type": "object",
                                     "properties": {
-                                        "16:9": {
-                                            "type": "object",
-                                            "properties": {
-                                                "250": {
-                                                    "title": "16:9 crop at 250px width",
-                                                    "type": "string",
-                                                    "format": "uri",
-                                                    "pattern": "^https://"
-                                                },
-                                                "500": {
-                                                    "title": "16:9 crop at 500px width",
-                                                    "type": "string",
-                                                    "format": "uri",
-                                                    "pattern": "^https://"
-                                                }
-                                            },
-                                            "required": [
-                                                "250",
-                                                "500"
-                                            ]
+                                        "mediaType": {
+                                            "$schema": "http://json-schema.org/draft-04/schema#",
+                                            "title": "Media type",
+                                            "type": "string",
+                                            "pattern": "^([a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+/[a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+)(; *[a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+=(([a-zA-Z0-9\\.\\-]+)|(\".+\")))*$"
                                         },
-                                        "1:1": {
-                                            "type": "object",
-                                            "properties": {
-                                                "70": {
-                                                    "title": "1:1 crop at 70px width",
-                                                    "type": "string",
-                                                    "format": "uri",
-                                                    "pattern": "^https://"
-                                                },
-                                                "140": {
-                                                    "title": "1:1 crop at 140px width",
-                                                    "type": "string",
-                                                    "format": "uri",
-                                                    "pattern": "^https://"
-                                                }
-                                            },
-                                            "required": [
-                                                "70",
-                                                "140"
-                                            ]
+                                        "uri": {
+                                            "title": "Source data URI",
+                                            "type": "string",
+                                            "format": "uri"
+                                        },
+                                        "filename": {
+                                            "title": "Filename",
+                                            "type": "string",
+                                            "pattern": "^[A-Za-z0-9_. ()-]+\\.[a-z0-9]+$"
                                         }
                                     },
                                     "required": [
-                                        "16:9",
-                                        "1:1"
+                                        "mediaType",
+                                        "uri",
+                                        "filename"
+                                    ]
+                                },
+                                "size": {
+                                    "type": "object",
+                                    "properties": {
+                                        "width": {
+                                            "type": "integer",
+                                            "minimum": 1
+                                        },
+                                        "height": {
+                                            "type": "integer",
+                                            "minimum": 1
+                                        }
+                                    },
+                                    "required": [
+                                        "width",
+                                        "height"
+                                    ]
+                                },
+                                "focalPoint": {
+                                    "type": "object",
+                                    "title": "Focal point",
+                                    "description": "Point on the image that is considered to be the focal point of the image.\n\nIf not present, 50 can be used for both `x` and `y`.\n",
+                                    "properties": {
+                                        "x": {
+                                            "description": "Percentage on the horizontal axis.\n",
+                                            "type": "integer",
+                                            "minimum": 0,
+                                            "maximum": 100
+                                        },
+                                        "y": {
+                                            "description": "Percentage on the vertical axis.\n",
+                                            "type": "integer",
+                                            "minimum": 0,
+                                            "maximum": 100
+                                        }
+                                    },
+                                    "required": [
+                                        "x",
+                                        "y"
                                     ]
                                 }
                             },
                             "required": [
+                                "uri",
                                 "alt",
-                                "sizes"
+                                "source",
+                                "size"
                             ]
                         }
                     },
@@ -163,49 +187,7 @@
                     "type": "object",
                     "properties": {
                         "banner": {
-                            "$schema": "http://json-schema.org/draft-04/schema#",
-                            "title": "Banner image",
-                            "type": "object",
-                            "properties": {
-                                "alt": {
-                                    "title": "Alternative text",
-                                    "type": "string"
-                                },
-                                "sizes": {
-                                    "title": "Sizes",
-                                    "type": "object",
-                                    "properties": {
-                                        "2:1": {
-                                            "type": "object",
-                                            "properties": {
-                                                "900": {
-                                                    "title": "2:1 crop at 900px width",
-                                                    "type": "string",
-                                                    "format": "uri",
-                                                    "pattern": "^https://"
-                                                },
-                                                "1800": {
-                                                    "title": "2:1 crop at 1800px width",
-                                                    "type": "string",
-                                                    "format": "uri",
-                                                    "pattern": "^https://"
-                                                }
-                                            },
-                                            "required": [
-                                                "900",
-                                                "1800"
-                                            ]
-                                        }
-                                    },
-                                    "required": [
-                                        "2:1"
-                                    ]
-                                }
-                            },
-                            "required": [
-                                "alt",
-                                "sizes"
-                            ]
+                            "$ref": "#/allOf/0/properties/image/properties/thumbnail"
                         }
                     },
                     "required": [
@@ -299,6 +281,26 @@
                                 "type": "object",
                                 "allOf": [
                                     {
+                                        "$ref": "#/allOf/1/properties/content/items/oneOf/1/allOf/0"
+                                    },
+                                    {
+                                        "properties": {
+                                            "status": {
+                                                "type": "string",
+                                                "enum": [
+                                                    "poa"
+                                                ]
+                                            }
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "title": "Article VoR snippet",
+                                "type": "object",
+                                "allOf": [
+                                    {
                                         "$schema": "http://json-schema.org/draft-04/schema#",
                                         "title": "Article snippet",
                                         "type": "object",
@@ -355,15 +357,15 @@
                                             },
                                             "published": {
                                                 "description": "Date and time this article was first published.\nNot present if 'stage' is 'preview' and version is '1'.\n",
-                                                "$ref": "#/allOf/0/properties/updated"
+                                                "$ref": "#/allOf/0/properties/published"
                                             },
                                             "versionDate": {
                                                 "description": "Date and time this version of the article was published.\nOnly present if 'stage' is 'published'.\n",
-                                                "$ref": "#/allOf/0/properties/updated"
+                                                "$ref": "#/allOf/0/properties/published"
                                             },
                                             "statusDate": {
                                                 "description": "Date and time this article transitioned to current status.\nNot present if 'stage' is 'preview' and version is '1'.\n",
-                                                "$ref": "#/allOf/0/properties/updated"
+                                                "$ref": "#/allOf/0/properties/published"
                                             },
                                             "volume": {
                                                 "type": "integer",
@@ -443,26 +445,6 @@
                                             "status": {
                                                 "type": "string",
                                                 "enum": [
-                                                    "poa"
-                                                ]
-                                            }
-                                        }
-                                    }
-                                ]
-                            },
-                            {
-                                "$schema": "http://json-schema.org/draft-04/schema#",
-                                "title": "Article VoR snippet",
-                                "type": "object",
-                                "allOf": [
-                                    {
-                                        "$ref": "#/allOf/1/properties/content/items/oneOf/0/allOf/0"
-                                    },
-                                    {
-                                        "properties": {
-                                            "status": {
-                                                "type": "string",
-                                                "enum": [
                                                     "vor"
                                                 ]
                                             },
@@ -478,7 +460,7 @@
                                                 "type": "object",
                                                 "properties": {
                                                     "doi": {
-                                                        "$ref": "#/allOf/1/properties/content/items/oneOf/0/allOf/0/properties/doi"
+                                                        "$ref": "#/allOf/1/properties/content/items/oneOf/1/allOf/0/properties/doi"
                                                     }
                                                 }
                                             },
@@ -537,11 +519,11 @@
                                                             },
                                                             "published": {
                                                                 "title": "Publication date (UTC)",
-                                                                "$ref": "#/allOf/0/properties/updated"
+                                                                "$ref": "#/allOf/0/properties/published"
                                                             },
                                                             "updated": {
                                                                 "title": "Updated date (UTC)",
-                                                                "$ref": "#/allOf/0/properties/updated"
+                                                                "$ref": "#/allOf/0/properties/published"
                                                             },
                                                             "subjects": {
                                                                 "description": "Article subjects",
@@ -595,11 +577,11 @@
                                                             },
                                                             "published": {
                                                                 "title": "Publication date (UTC)",
-                                                                "$ref": "#/allOf/0/properties/updated"
+                                                                "$ref": "#/allOf/0/properties/published"
                                                             },
                                                             "updated": {
                                                                 "title": "Updated date (UTC)",
-                                                                "$ref": "#/allOf/0/properties/updated"
+                                                                "$ref": "#/allOf/0/properties/published"
                                                             }
                                                         },
                                                         "required": [
@@ -651,11 +633,11 @@
                             },
                             "published": {
                                 "title": "Publication date (UTC)",
-                                "$ref": "#/allOf/0/properties/updated"
+                                "$ref": "#/allOf/0/properties/published"
                             },
                             "updated": {
                                 "title": "Updated date (UTC)",
-                                "$ref": "#/allOf/0/properties/updated"
+                                "$ref": "#/allOf/0/properties/published"
                             },
                             "image": {
                                 "type": "object",
@@ -676,10 +658,7 @@
                                         "mediaType": {
                                             "allOf": [
                                                 {
-                                                    "$schema": "http://json-schema.org/draft-04/schema#",
-                                                    "title": "Media type",
-                                                    "type": "string",
-                                                    "pattern": "^([a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+/[a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+)(; *[a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+=(([a-zA-Z0-9\\.\\-]+)|(\".+\")))*$"
+                                                    "$ref": "#/allOf/0/properties/image/properties/thumbnail/properties/source/properties/mediaType"
                                                 },
                                                 {
                                                     "pattern": "^audio/"

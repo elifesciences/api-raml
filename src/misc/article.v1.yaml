@@ -8,7 +8,7 @@ allOf:
             type: object
             properties:
                 banner:
-                    $ref: ../misc/image-banner.v1.yaml
+                    $ref: ../misc/image.v1.yaml
         issue:
             type: integer
             minimum: 1
@@ -70,7 +70,7 @@ allOf:
             title: Additional files
             type: array
             items:
-                $ref: ../misc/file.v1.yaml
+                $ref: ../misc/asset-file.v1.yaml
     required:
       - copyright
     dependencies:
