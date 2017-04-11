@@ -29,5 +29,8 @@ elifeLibrary {
 
         stage 'Publishing to master'
         elifeGitMoveToBranch commit, 'master'
+
+        stage 'Downstream'
+        build job: 'dependencies-bot-lax-adaptor-update-api-raml', wait: false
     }
 }
