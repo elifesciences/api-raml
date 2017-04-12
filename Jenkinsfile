@@ -16,7 +16,7 @@ elifeLibrary {
 
     elifeMainlineOnly {
         stage 'Committing'
-        elifeGitAutoCommit "Regenerated dist/", "dist/"
+        def isThereANewCommit = elifeGitAutoCommit "Regenerated dist/", "dist/"
         def commit = elifeGitRevision()
 
         stage 'Pushing to alfred/regeneration_of_dist'
@@ -31,6 +31,10 @@ elifeLibrary {
         elifeGitMoveToBranch commit, 'master'
 
         stage 'Downstream'
-        build job: 'dependencies-bot-lax-adaptor-update-api-raml', wait: false
+        if (isThereANewCommit) {
+            build job: 'dependencies-bot-lax-adaptor-update-api-raml', wait: false
+        } else {
+            echo "Nothing to do, latest commit is old"
+        }
     }
 }
