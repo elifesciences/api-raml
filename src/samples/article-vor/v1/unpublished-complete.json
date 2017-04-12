@@ -302,25 +302,37 @@
     "impactStatement": "A new hominin species has been unearthed in the Dinaledi Chamber of the Rising Star cave system in the largest assemblage of a single species of hominins yet discovered in Africa.",
     "image": {
         "banner": {
+            "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif",
             "alt": "",
-            "sizes": {
-                "2:1": {
-                    "900": "https://placehold.it/900x450",
-                    "1800": "https://placehold.it/1800x900"
-                }
+            "source": {
+                "mediaType": "image/jpeg",
+                "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif/full/full/0/default.jpg",
+                "filename": "an-image.jpg"
+            },
+            "size": {
+                "width": 4194,
+                "height": 4714
+            },
+            "focalPoint": {
+                "x": 25,
+                "y": 75
             }
         },
         "thumbnail": {
+            "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif",
             "alt": "",
-            "sizes": {
-                "16:9": {
-                    "250": "https://placehold.it/250x141",
-                    "500": "https://placehold.it/500x281"
-                },
-                "1:1": {
-                    "70": "https://placehold.it/70x70",
-                    "140": "https://placehold.it/140x140"
-                }
+            "source": {
+                "mediaType": "image/jpeg",
+                "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif/full/full/0/default.jpg",
+                "filename": "an-image.jpg"
+            },
+            "size": {
+                "width": 4194,
+                "height": 4714
+            },
+            "focalPoint": {
+                "x": 25,
+                "y": 75
             }
         }
     },
@@ -382,8 +394,19 @@
                             "mathml": "<math><mrow><msub><mtext>e</mtext><mn>0</mn></msub><mo>=</mo><mfrac><mrow><msub><mtext>e</mtext><mrow><mn>0</mn><mo>,</mo><mtext>max</mtext></mrow></msub><mo>×</mo><mtext>GDP</mtext></mrow><mrow><mtext>GDP</mtext><mo>+</mo><msub><mtext>K</mtext><mrow><mtext>inc</mtext></mrow></msub></mrow></mfrac><mo>,</mo></mrow></math>"
                         }
                     ],
-                    "alt": "",
-                    "uri": "https://elife-publishing-cdn.s3.amazonaws.com/09560/elife-09560-fig1-v1.jpg",
+                    "image": {
+                        "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif",
+                        "alt": "",
+                        "source": {
+                            "mediaType": "image/jpeg",
+                            "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif/full/full/0/default.jpg",
+                            "filename": "an-image.jpg"
+                        },
+                        "size": {
+                            "width": 4194,
+                            "height": 4714
+                        }
+                    },
                     "supplements": [
                         {
                             "type": "image",
@@ -397,8 +420,19 @@
                                     "text": "U.W. 101-1473 cranium in (<b>A</b>) posterior and (<b>B</b>) frontal views (frontal view minus the frontal fragment to show calvaria interior). U.W. 101-1277 maxilla in (<b>C</b>) medial, (<b>D</b>) frontal, (<bold>E</bold>) superior, and (<b>F</b>) occlusal views. (<b>G</b>) U.W. 101-1473 cranium in anatomical alignment with occluded U.W. 101-1277 maxilla and U.W. 101-1261 mandible in left lateral view. U.W. 101-1277 mandible in (<b>H</b>) occlusal, (<b>I</b>) basal, (<b>J</b>) right lateral, and (<b>K</b>) anterior views. Scale bar = 10 cm."
                                 }
                             ],
-                            "alt": "",
-                            "uri": "https://elife-publishing-cdn.s3.amazonaws.com/09560/elife-09560-fig2-v1.jpg",
+                            "image": {
+                                "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif",
+                                "alt": "",
+                                "source": {
+                                    "mediaType": "image/jpeg",
+                                    "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif/full/full/0/default.jpg",
+                                    "filename": "an-image.jpg"
+                                },
+                                "size": {
+                                    "width": 4194,
+                                    "height": 4714
+                                }
+                            },
                             "attribution": [
                                 "By some person."
                             ],
@@ -519,7 +553,19 @@
                             "uri": "https://static-movie-usa.glencoesoftware.com/ogv/10.7554/659/0f10378e095dde7aaf579af504c4bfdc6fb86550/elife-00569-media1.ogv"
                         }
                     ],
-                    "image": "https://static-movie-usa.glencoesoftware.com/jpg/10.7554/659/0f10378e095dde7aaf579af504c4bfdc6fb86550/elife-00569-media1.jpg",
+                    "placeholder": {
+                        "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif",
+                        "alt": "",
+                        "source": {
+                            "mediaType": "image/jpeg",
+                            "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif/full/full/0/default.jpg",
+                            "filename": "an-image.jpg"
+                        },
+                        "size": {
+                            "width": 4194,
+                            "height": 4714
+                        }
+                    },
                     "width": 640,
                     "height": 480,
                     "sourceData": [
@@ -1345,8 +1391,19 @@
                                     "text": "(<b>A</b>) Lateral view. (<b>B</b>) Superior view. (<b>C</b>) Inferior view. In all views, anterior is to towards the left."
                                 }
                             ],
-                            "alt": "",
-                            "uri": "https://elife-publishing-cdn.s3.amazonaws.com/09560/elife-09560-fig19-v1.jpg"
+                            "image": {
+                                "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif",
+                                "alt": "",
+                                "source": {
+                                    "mediaType": "image/jpeg",
+                                    "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif/full/full/0/default.jpg",
+                                    "filename": "an-image.jpg"
+                                },
+                                "size": {
+                                    "width": 4194,
+                                    "height": 4714
+                                }
+                            }
                         }
                     ]
                 }

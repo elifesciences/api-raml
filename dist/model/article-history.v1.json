@@ -234,69 +234,93 @@
                                             "properties": {
                                                 "thumbnail": {
                                                     "$schema": "http://json-schema.org/draft-04/schema#",
-                                                    "title": "Thumbnail image",
+                                                    "title": "IIIF image",
                                                     "type": "object",
                                                     "properties": {
+                                                        "uri": {
+                                                            "title": "IIIF Image",
+                                                            "type": "string",
+                                                            "format": "uri",
+                                                            "pattern": "^https://"
+                                                        },
                                                         "alt": {
                                                             "title": "Alternative text",
                                                             "type": "string"
                                                         },
-                                                        "sizes": {
-                                                            "title": "Sizes",
+                                                        "source": {
+                                                            "$schema": "http://json-schema.org/draft-04/schema#",
+                                                            "title": "File",
                                                             "type": "object",
                                                             "properties": {
-                                                                "16:9": {
-                                                                    "type": "object",
-                                                                    "properties": {
-                                                                        "250": {
-                                                                            "title": "16:9 crop at 250px width",
-                                                                            "type": "string",
-                                                                            "format": "uri",
-                                                                            "pattern": "^https://"
-                                                                        },
-                                                                        "500": {
-                                                                            "title": "16:9 crop at 500px width",
-                                                                            "type": "string",
-                                                                            "format": "uri",
-                                                                            "pattern": "^https://"
-                                                                        }
-                                                                    },
-                                                                    "required": [
-                                                                        "250",
-                                                                        "500"
-                                                                    ]
+                                                                "mediaType": {
+                                                                    "$schema": "http://json-schema.org/draft-04/schema#",
+                                                                    "title": "Media type",
+                                                                    "type": "string",
+                                                                    "pattern": "^([a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+/[a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+)(; *[a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+=(([a-zA-Z0-9\\.\\-]+)|(\".+\")))*$"
                                                                 },
-                                                                "1:1": {
-                                                                    "type": "object",
-                                                                    "properties": {
-                                                                        "70": {
-                                                                            "title": "1:1 crop at 70px width",
-                                                                            "type": "string",
-                                                                            "format": "uri",
-                                                                            "pattern": "^https://"
-                                                                        },
-                                                                        "140": {
-                                                                            "title": "1:1 crop at 140px width",
-                                                                            "type": "string",
-                                                                            "format": "uri",
-                                                                            "pattern": "^https://"
-                                                                        }
-                                                                    },
-                                                                    "required": [
-                                                                        "70",
-                                                                        "140"
-                                                                    ]
+                                                                "uri": {
+                                                                    "title": "Source data URI",
+                                                                    "type": "string",
+                                                                    "format": "uri"
+                                                                },
+                                                                "filename": {
+                                                                    "title": "Filename",
+                                                                    "type": "string",
+                                                                    "pattern": "^[A-Za-z0-9_. ()-]+\\.[a-z0-9]+$"
                                                                 }
                                                             },
                                                             "required": [
-                                                                "16:9",
-                                                                "1:1"
+                                                                "mediaType",
+                                                                "uri",
+                                                                "filename"
+                                                            ]
+                                                        },
+                                                        "size": {
+                                                            "type": "object",
+                                                            "properties": {
+                                                                "width": {
+                                                                    "type": "integer",
+                                                                    "minimum": 1
+                                                                },
+                                                                "height": {
+                                                                    "type": "integer",
+                                                                    "minimum": 1
+                                                                }
+                                                            },
+                                                            "required": [
+                                                                "width",
+                                                                "height"
+                                                            ]
+                                                        },
+                                                        "focalPoint": {
+                                                            "type": "object",
+                                                            "title": "Focal point",
+                                                            "description": "Point on the image that is considered to be the focal point of the image.\n\nIf not present, 50 can be used for both `x` and `y`.\n",
+                                                            "properties": {
+                                                                "x": {
+                                                                    "description": "Percentage on the horizontal axis.\n",
+                                                                    "type": "integer",
+                                                                    "minimum": 0,
+                                                                    "maximum": 100
+                                                                },
+                                                                "y": {
+                                                                    "description": "Percentage on the vertical axis.\n",
+                                                                    "type": "integer",
+                                                                    "minimum": 0,
+                                                                    "maximum": 100
+                                                                }
+                                                            },
+                                                            "required": [
+                                                                "x",
+                                                                "y"
                                                             ]
                                                         }
                                                     },
                                                     "required": [
+                                                        "uri",
                                                         "alt",
-                                                        "sizes"
+                                                        "source",
+                                                        "size"
                                                     ]
                                                 }
                                             },

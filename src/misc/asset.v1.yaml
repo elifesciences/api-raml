@@ -38,5 +38,6 @@ properties:
                 additionalProperties: false
         minItems: 1
 dependencies:
+    doi: [id]
     caption: [title]
     label: [title]

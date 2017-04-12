@@ -28,3 +28,5 @@ required:
   - type
   - title
   - content
+dependencies:
+    doi: [id]

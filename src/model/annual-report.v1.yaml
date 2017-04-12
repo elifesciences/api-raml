@@ -18,7 +18,7 @@ properties:
         description: Description of the annual report
         type: string
     image:
-        $ref: ../misc/image-thumbnail.v1.yaml
+        $ref: ../misc/image.v1.yaml
 required:
   - year
   - uri

@@ -1,0 +1,9 @@
+$schema: http://json-schema.org/draft-04/schema#
+title: Asset file
+type: object
+allOf:
+  - $ref: asset.v1.yaml
+  - required:
+      - id
+      - title
+  - $ref: file.v1.yaml
