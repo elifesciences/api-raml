@@ -8,7 +8,7 @@ allOf:
             type: object
             properties:
                 banner:
-                    $ref: ../misc/image-banner.v1.yaml
+                    $ref: ../misc/image.v1.yaml
             required:
               - banner
         subTitle:

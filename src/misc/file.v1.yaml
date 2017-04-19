@@ -1,22 +1,18 @@
 $schema: http://json-schema.org/draft-04/schema#
 title: File
 type: object
-allOf:
-  - $ref: asset.v1.yaml
-  - properties:
-        mediaType:
-            $ref: media-type.v1.yaml
-        uri:
-            title: Source data URI
-            type: string
-            format: uri
-        filename:
-            title: Filename
-            type: string
-            pattern: ^[A-Za-z0-9_. ()-]+\.[a-z0-9]+$
-    required:
-      - id
-      - title
-      - mediaType
-      - uri
-      - filename
+properties:
+    mediaType:
+        $ref: media-type.v1.yaml
+    uri:
+        title: Source data URI
+        type: string
+        format: uri
+    filename:
+        title: Filename
+        type: string
+        pattern: ^[A-Za-z0-9_. ()-]+\.[a-z0-9]+$
+required:
+  - mediaType
+  - uri
+  - filename

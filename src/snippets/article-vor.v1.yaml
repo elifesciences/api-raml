@@ -23,6 +23,6 @@ allOf:
             type: object
             properties:
                 thumbnail:
-                    $ref: ../misc/image-thumbnail.v1.yaml
+                    $ref: ../misc/image.v1.yaml
             required:
               - thumbnail

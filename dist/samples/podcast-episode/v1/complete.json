@@ -6,25 +6,37 @@
     "updated": "2016-07-02T08:30:15Z",
     "image": {
         "banner": {
+            "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif",
             "alt": "",
-            "sizes": {
-                "2:1": {
-                    "900": "https://placehold.it/900x450",
-                    "1800": "https://placehold.it/1800x900"
-                }
+            "source": {
+                "mediaType": "image/jpeg",
+                "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif/full/full/0/default.jpg",
+                "filename": "an-image.jpg"
+            },
+            "size": {
+                "width": 4194,
+                "height": 4714
+            },
+            "focalPoint": {
+                "x": 25,
+                "y": 75
             }
         },
         "thumbnail": {
+            "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif",
             "alt": "",
-            "sizes": {
-                "16:9": {
-                    "250": "https://placehold.it/250x141",
-                    "500": "https://placehold.it/500x281"
-                },
-                "1:1": {
-                    "70": "https://placehold.it/70x70",
-                    "140": "https://placehold.it/140x140"
-                }
+            "source": {
+                "mediaType": "image/jpeg",
+                "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif/full/full/0/default.jpg",
+                "filename": "an-image.jpg"
+            },
+            "size": {
+                "width": 4194,
+                "height": 4714
+            },
+            "focalPoint": {
+                "x": 25,
+                "y": 75
             }
         }
     },
@@ -78,16 +90,16 @@
                     "impactStatement": "A combination of chloroplast transformation with nuclear transformation and large-scale metabolic screening of supertransformed plant lines has enabled an entire biochemical pathway to be transferred from a medicinal plant to a high-biomass crop.",
                     "image": {
                         "thumbnail": {
+                            "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif",
                             "alt": "",
-                            "sizes": {
-                                "16:9": {
-                                    "250": "https://placehold.it/250x141",
-                                    "500": "https://placehold.it/500x281"
-                                },
-                                "1:1": {
-                                    "70": "https://placehold.it/70x70",
-                                    "140": "https://placehold.it/140x140"
-                                }
+                            "source": {
+                                "mediaType": "image/jpeg",
+                                "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif/full/full/0/default.jpg",
+                                "filename": "an-image.jpg"
+                            },
+                            "size": {
+                                "width": 4194,
+                                "height": 4714
                             }
                         }
                     }
@@ -117,16 +129,16 @@
                     "impactStatement": "By sharing their experiences, early-career scientists can help to make the case for increased government funding for researchers.",
                     "image": {
                         "thumbnail": {
+                            "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif",
                             "alt": "",
-                            "sizes": {
-                                "16:9": {
-                                    "250": "https://placehold.it/250x141",
-                                    "500": "https://placehold.it/500x281"
-                                },
-                                "1:1": {
-                                    "70": "https://placehold.it/70x70",
-                                    "140": "https://placehold.it/140x140"
-                                }
+                            "source": {
+                                "mediaType": "image/jpeg",
+                                "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif/full/full/0/default.jpg",
+                                "filename": "an-image.jpg"
+                            },
+                            "size": {
+                                "width": 4194,
+                                "height": 4714
                             }
                         }
                     }
@@ -139,16 +151,16 @@
                     "updated": "2015-09-16T11:19:26Z",
                     "image": {
                         "thumbnail": {
+                            "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif",
                             "alt": "",
-                            "sizes": {
-                                "16:9": {
-                                    "250": "https://placehold.it/250x141",
-                                    "500": "https://placehold.it/500x281"
-                                },
-                                "1:1": {
-                                    "70": "https://placehold.it/70x70",
-                                    "140": "https://placehold.it/140x140"
-                                }
+                            "source": {
+                                "mediaType": "image/jpeg",
+                                "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif/full/full/0/default.jpg",
+                                "filename": "an-image.jpg"
+                            },
+                            "size": {
+                                "width": 4194,
+                                "height": 4714
                             }
                         }
                     },

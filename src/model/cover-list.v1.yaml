@@ -17,7 +17,7 @@ properties:
                     type: string
                     minLength: 1
                 image:
-                    $ref: ../misc/image-banner.v1.yaml
+                    $ref: ../misc/image.v1.yaml
                 item:
                     description: Cover item
                     oneOf:
