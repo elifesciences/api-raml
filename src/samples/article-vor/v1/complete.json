@@ -548,6 +548,23 @@
                                 }
                             ]
                         }
+                    ],
+                    "sourceData": [
+                        {
+                            "doi": "10.7554/eLife.09560.013.1",
+                            "id": "tbl2sdata1",
+                            "label": "Table 2—Source data 1",
+                            "title": "Title of the source code",
+                            "caption": [
+                                {
+                                    "type": "paragraph",
+                                    "text": "Legend of the source code."
+                                }
+                            ],
+                            "mediaType": "text/plain",
+                            "uri": "https://elife-publishing-cdn.s3.amazonaws.com/00011/elife-00011-fig2-data1-v1.txt",
+                            "filename": "elife-00011-fig2-data1-v1.txt"
+                        }
                     ]
                 }
             ]
