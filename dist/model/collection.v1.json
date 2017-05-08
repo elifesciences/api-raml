@@ -270,6 +270,31 @@
                     },
                     "minItems": 1
                 },
+                "summary": {
+                    "title": "Summary",
+                    "type": "array",
+                    "items": {
+                        "$schema": "http://json-schema.org/draft-04/schema#",
+                        "title": "Paragraph",
+                        "type": "object",
+                        "properties": {
+                            "type": {
+                                "type": "string",
+                                "enum": [
+                                    "paragraph"
+                                ]
+                            },
+                            "text": {
+                                "title": "Text",
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "type",
+                            "text"
+                        ]
+                    }
+                },
                 "content": {
                     "title": "Content",
                     "type": "array",
@@ -400,25 +425,7 @@
                                                     "content": {
                                                         "type": "array",
                                                         "items": {
-                                                            "$schema": "http://json-schema.org/draft-04/schema#",
-                                                            "title": "Paragraph",
-                                                            "type": "object",
-                                                            "properties": {
-                                                                "type": {
-                                                                    "type": "string",
-                                                                    "enum": [
-                                                                        "paragraph"
-                                                                    ]
-                                                                },
-                                                                "text": {
-                                                                    "title": "Text",
-                                                                    "type": "string"
-                                                                }
-                                                            },
-                                                            "required": [
-                                                                "type",
-                                                                "text"
-                                                            ]
+                                                            "$ref": "#/allOf/1/properties/summary/items"
                                                         },
                                                         "minItems": 1
                                                     }
