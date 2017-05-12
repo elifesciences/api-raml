@@ -3,7 +3,14 @@ title: Asset file
 type: object
 allOf:
   - $ref: asset.v1.yaml
-  - required:
+  - properties:
+        doi:
+            $ref: ../misc/doi.v1.yaml
+        label:
+            title: Label
+            type: string
+            minLength: 1
+    required:
       - id
       - title
   - $ref: file.v1.yaml
