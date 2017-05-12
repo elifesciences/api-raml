@@ -8,15 +8,8 @@ allOf:
             type: string
             enum:
               - image
-        alt:
-            title: Alternative text
-            type: string
-        uri:
-            title: Image URI
-            type: string
-            format: uri
-            pattern: ^https://
+        image:
+            $ref: ../misc/image.v1.yaml
     required:
       - type
-      - alt
-      - uri
+      - image

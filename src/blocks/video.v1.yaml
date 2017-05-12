@@ -26,11 +26,8 @@ allOf:
                   - mediaType
                   - uri
             minItems: 1
-        image:
-            title: Image URI
-            type: string
-            format: uri
-            pattern: ^https://
+        placeholder:
+            $ref: ../misc/image.v1.yaml
         width:
             title: Width
             type: integer

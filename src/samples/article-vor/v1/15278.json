@@ -244,8 +244,19 @@
                                     "text": "(<b>a–b</b>) Two monkeys were trained to grasp a total of 48 objects presented on a PC-controlled turntable. In addition, monkeys were instructed to perform either precision or power grips on a handle. Each of the 50 grasping conditions was denoted with a double-digit number (ID1, ID2), a colour code, and a symbol to allow easy identification throughout this manuscript. (<b>c</b>) An instrumented glove equipped with electro-magnetic sensors allowed monitoring and recording the monkeys’ hand and arm kinematics in 27 DOF. (<b>d</b>) All grasping actions were performed as a delayed grasp-and-hold task consisting of eye-fixation, cue, planning, grasping and hold epochs. (<b>e–g</b>) Neural activity was recorded simultaneously from six floating microelectrode arrays implanted in the cortical areas AIP, F5, and M1. (<b>f</b>) Electrode placement in monkey Z (right hemisphere). Each array consisted of 2 ground and 2 reference electrodes (black), as well as 32 recording channels (white) aligned in a 4x9 matrix. Electrode length for each row increased towards the sulcus from 1.5–7.1 mm. (<b>g</b>) Same for monkey M (left hemisphere). Two arrays were implanted in each area. AIP: toward the lateral end of the intraparietal sulcus (IPS); F5: on the posterior bank of the arcuate sulcus (AS); hand area of M1: on the anterior bank of the central sulcus (CS)."
                                 }
                             ],
-                            "alt": "",
-                            "uri": "https://elife-publishing-cdn.s3.amazonaws.com/15278/elife-15278-fig1-v1.jpg"
+                            "image": {
+                                "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif",
+                                "alt": "",
+                                "source": {
+                                    "mediaType": "image/jpeg",
+                                    "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif/full/full/0/default.jpg",
+                                    "filename": "an-image.jpg"
+                                },
+                                "size": {
+                                    "width": 4194,
+                                    "height": 4714
+                                }
+                            }
                         }
                     ]
                 },
@@ -278,7 +289,19 @@
                                     "uri": "https://static-movie-usa.glencoesoftware.com/ogv/10.7554/774/b24b6a5e3f0d60d41388aad7d9fa00d2e5ec9a92/elife-15278-media1.ogv"
                                 }
                             ],
-                            "image": "https://static-movie-usa.glencoesoftware.com/jpg/10.7554/774/b24b6a5e3f0d60d41388aad7d9fa00d2e5ec9a92/elife-15278-media1.jpg",
+                            "placeholder": {
+                                "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif",
+                                "alt": "",
+                                "source": {
+                                    "mediaType": "image/jpeg",
+                                    "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif/full/full/0/default.jpg",
+                                    "filename": "an-image.jpg"
+                                },
+                                "size": {
+                                    "width": 4194,
+                                    "height": 4714
+                                }
+                            },
                             "width": 1920,
                             "height": 1080
                         }
@@ -313,7 +336,19 @@
                                     "uri": "https://static-movie-usa.glencoesoftware.com/ogv/10.7554/774/b24b6a5e3f0d60d41388aad7d9fa00d2e5ec9a92/elife-15278-media2.ogv"
                                 }
                             ],
-                            "image": "https://static-movie-usa.glencoesoftware.com/jpg/10.7554/774/b24b6a5e3f0d60d41388aad7d9fa00d2e5ec9a92/elife-15278-media2.jpg",
+                            "placeholder": {
+                                "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif",
+                                "alt": "",
+                                "source": {
+                                    "mediaType": "image/jpeg",
+                                    "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif/full/full/0/default.jpg",
+                                    "filename": "an-image.jpg"
+                                },
+                                "size": {
+                                    "width": 4194,
+                                    "height": 4714
+                                }
+                            },
                             "width": 1920,
                             "height": 1080
                         }
@@ -351,8 +386,19 @@
                                             "text": "(<b>a</b>) Example neuron of AIP responding to the presentation of graspable objects (each curve represents one task condition). (<b>b</b>) Modulation depth plot illustrating the absolute firing rate difference in the cue epoch between all condition pairs (conditions 00 – 76 placed on axis in ascending order). Warm colours: high modulation depth, cool colours: low modulation depth. (<b>c</b>) Shape-wise clustering of objects in the AIP population during the cue epoch, as demonstrated by CDA. Arrows indicate a shift in position when big horizontal cylinders (red triangles) were grasped from below instead from above (black triangles). (<b>d</b>) Same as c, but during the grasp epoch. (<b>e–f</b>) Dendrograms illustrating the neural distance between object conditions in the simultaneously recorded AIP population in the cue and grasp epoch (N = 62). Symbols and colour code in a, c-f as in <a href=\"#fig1\">Figure 1b</a>. Percentages in c and d describe how much variance of the data is explained by the shown components (1st, 2nd and 3rd). Note: <a href=\"#media3\">Video 3</a> visualizes the N-space of AIP of an additional recording in the same animal (Z). See <a href=\"#fig2s1\">Figure 2—figure supplement 1–2</a> for the averaged population results of animal Z and animal M, respectively."
                                         }
                                     ],
-                                    "alt": "",
-                                    "uri": "https://elife-publishing-cdn.s3.amazonaws.com/15278/elife-15278-fig2-v1.jpg"
+                                    "image": {
+                                        "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif",
+                                        "alt": "",
+                                        "source": {
+                                            "mediaType": "image/jpeg",
+                                            "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif/full/full/0/default.jpg",
+                                            "filename": "an-image.jpg"
+                                        },
+                                        "size": {
+                                            "width": 4194,
+                                            "height": 4714
+                                        }
+                                    }
                                 },
                                 {
                                     "type": "image",
@@ -366,8 +412,19 @@
                                             "text": "Neural distance between each pair of group means was measured for each recording session, averaged across sessions, and visualized as dendrograms for the (<b>a</b>) cue and (<b>b</b>) hold epoch. Symbols and colours as in <a href=\"#fig1\">Figure 1b</a>."
                                         }
                                     ],
-                                    "alt": "",
-                                    "uri": "https://elife-publishing-cdn.s3.amazonaws.com/15278/elife-15278-fig2-figsupp1-v1.jpg"
+                                    "image": {
+                                        "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif",
+                                        "alt": "",
+                                        "source": {
+                                            "mediaType": "image/jpeg",
+                                            "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif/full/full/0/default.jpg",
+                                            "filename": "an-image.jpg"
+                                        },
+                                        "size": {
+                                            "width": 4194,
+                                            "height": 4714
+                                        }
+                                    }
                                 },
                                 {
                                     "type": "image",
@@ -381,8 +438,19 @@
                                             "text": "(<b>a</b>) Firing rate plot of AIP example unit. (<b>b–c</b>) N-space of AIP during cue and hold epoch of one recording session (simultaneously recorded, N = 90, first three components shown). (<b>d–e</b>) Neural distances between each pair of group means were measured for each recording session, then averaged across all sessions and visualized as dendrograms for the cue and hold epoch."
                                         }
                                     ],
-                                    "alt": "",
-                                    "uri": "https://elife-publishing-cdn.s3.amazonaws.com/15278/elife-15278-fig2-figsupp2-v1.jpg"
+                                    "image": {
+                                        "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif",
+                                        "alt": "",
+                                        "source": {
+                                            "mediaType": "image/jpeg",
+                                            "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif/full/full/0/default.jpg",
+                                            "filename": "an-image.jpg"
+                                        },
+                                        "size": {
+                                            "width": 4194,
+                                            "height": 4714
+                                        }
+                                    }
                                 }
                             ]
                         },
@@ -415,7 +483,19 @@
                                             "uri": "https://static-movie-usa.glencoesoftware.com/ogv/10.7554/774/b24b6a5e3f0d60d41388aad7d9fa00d2e5ec9a92/elife-15278-media3.ogv"
                                         }
                                     ],
-                                    "image": "https://static-movie-usa.glencoesoftware.com/jpg/10.7554/774/b24b6a5e3f0d60d41388aad7d9fa00d2e5ec9a92/elife-15278-media3.jpg",
+                                    "placeholder": {
+                                        "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif",
+                                        "alt": "",
+                                        "source": {
+                                            "mediaType": "image/jpeg",
+                                            "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif/full/full/0/default.jpg",
+                                            "filename": "an-image.jpg"
+                                        },
+                                        "size": {
+                                            "width": 4194,
+                                            "height": 4714
+                                        }
+                                    },
                                     "width": 1920,
                                     "height": 1080
                                 }
@@ -436,8 +516,19 @@
                                             "text": "(<b>a</b>) A set of six 'mixed' objects elicited different visual stimuli and different motor responses. (<b>b</b>) Percentage of tuned neurons of the AIP, F5, and M1 population express the significant modulation with respect to the mixed objects across time (sliding one-way ANOVA). (<b>c</b>) Tuned neurons (shades of red) were mapped to their recording location during the visual (t = 0.16 s after object presentation) and motor phase (t = 0.7 s after movement onset). (<b>d</b>) As a contrast and to elicit pure visual responses, 'abstract' objects caused different visual stimuli but the same grip. (<b>e</b>) Similar to b, but for the abstract objects set. (<b>f</b>) Similar to c, but showing the map of tuned neurons (shades of green) with respect to the abstract object set. For b, e: Data is doubly aligned on cue onset and on the grasp (go) signal. Sliding ANOVA was computed for each session individually and averaged across all 10 recording sessions per animal. Shades represent standard error from mean (s.e.m.) across recording sessions. For <b>c</b>, <b>f</b>: The number of tuned neurons per channel were averaged across all recording sessions and visualized in shades of green and red for the abstract and mixed objects, respectively. Channels without any identified neurons were highlighted in light grey. Map of monkey M is mirrored along vertical axis for better comparison of both animals."
                                         }
                                     ],
-                                    "alt": "",
-                                    "uri": "https://elife-publishing-cdn.s3.amazonaws.com/15278/elife-15278-fig3-v1.jpg"
+                                    "image": {
+                                        "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif",
+                                        "alt": "",
+                                        "source": {
+                                            "mediaType": "image/jpeg",
+                                            "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif/full/full/0/default.jpg",
+                                            "filename": "an-image.jpg"
+                                        },
+                                        "size": {
+                                            "width": 4194,
+                                            "height": 4714
+                                        }
+                                    }
                                 }
                             ]
                         },
@@ -474,7 +565,19 @@
                                             "uri": "https://static-movie-usa.glencoesoftware.com/ogv/10.7554/774/b24b6a5e3f0d60d41388aad7d9fa00d2e5ec9a92/elife-15278-media4.ogv"
                                         }
                                     ],
-                                    "image": "https://static-movie-usa.glencoesoftware.com/jpg/10.7554/774/b24b6a5e3f0d60d41388aad7d9fa00d2e5ec9a92/elife-15278-media4.jpg",
+                                    "placeholder": {
+                                        "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif",
+                                        "alt": "",
+                                        "source": {
+                                            "mediaType": "image/jpeg",
+                                            "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif/full/full/0/default.jpg",
+                                            "filename": "an-image.jpg"
+                                        },
+                                        "size": {
+                                            "width": 4194,
+                                            "height": 4714
+                                        }
+                                    },
                                     "width": 1920,
                                     "height": 1080
                                 }
@@ -519,8 +622,19 @@
                                             "text": "(<b>a</b>) Example neuron of F5, responding to all 50 task conditions (colour code as in <a href=\"#fig1\">Figure 1b</a>). (<b>b</b>) Modulation depth plots (as in <a href=\"#fig2\">Figure 2b</a>) in the planning and grasp epoch. (<b>c</b>) Recorded kinematics was used to drive a monkey-specific musculoskeletal model that allowed extracting 27 DOF. (<b>d</b>) A selection of DOFs is presented for three sequential grips: thumb and index finger, wrist, elbow, and shoulder. (<b>e</b>) PCA performed on the J-space during the hold epoch allowed visualizing the grip types of all conditions and trials of one recording session (showing 1<sup>st</sup> and 2<sup>nd</sup> PCA component). (<b>f–g</b>) Raster plot shows the spiking activity of F5-neurons recorded from a single FMA (F5-ventral). (<b>h</b>) Mean firing rates during the grasp epoch (N-space) were transformed with CDA to reduce and visualize the multidimensional representation of the complete F5 population (N = 119, simultaneously recorded). In d,g, example trials t1, t2 and t3 are highlighted in yellow (hold epoch in d, grasp epoch in g) and marked with arrows in e,h. (<b>i</b>) Neuronal state space evolution shows the course of the task determined by the CDA. e,h and i: For visual comparison the N-space was aligned to the J-space using PCRA; Symbols and colours as in <a href=\"#fig1\">Figure 1b</a>, symbol size corresponds to object size."
                                         }
                                     ],
-                                    "alt": "",
-                                    "uri": "https://elife-publishing-cdn.s3.amazonaws.com/15278/elife-15278-fig4-v1.jpg"
+                                    "image": {
+                                        "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif",
+                                        "alt": "",
+                                        "source": {
+                                            "mediaType": "image/jpeg",
+                                            "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif/full/full/0/default.jpg",
+                                            "filename": "an-image.jpg"
+                                        },
+                                        "size": {
+                                            "width": 4194,
+                                            "height": 4714
+                                        }
+                                    }
                                 }
                             ]
                         },
@@ -539,8 +653,19 @@
                                             "text": "(<b>a</b>) Dendrogram of J-space (27 DOF). (<b>b–c</b>) Dendrogram of F5’s complete N-space during the plan and the grasp epoch. Condition numbers as in <a href=\"#fig1\">Figure 1b</a>. A selection of grip types and their corresponding objects are illustrated. In a-c, similar motor characteristics are highlighted with coloured boxes (see text). (<b>b</b>,<b>c</b>) is based on the complete F5 population (N = 119, simultaneously recorded neurons), in contrast to its illustration in the reduced neural space in <a href=\"#fig4\">Figure 4</a>. See <a href=\"#fig5s1\">Figure 5—figure supplement 1–2</a> for the averaged population results across all sessions of animal M and animal Z, respectively."
                                         }
                                     ],
-                                    "alt": "",
-                                    "uri": "https://elife-publishing-cdn.s3.amazonaws.com/15278/elife-15278-fig5-v1.jpg"
+                                    "image": {
+                                        "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif",
+                                        "alt": "",
+                                        "source": {
+                                            "mediaType": "image/jpeg",
+                                            "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif/full/full/0/default.jpg",
+                                            "filename": "an-image.jpg"
+                                        },
+                                        "size": {
+                                            "width": 4194,
+                                            "height": 4714
+                                        }
+                                    }
                                 },
                                 {
                                     "type": "image",
@@ -554,8 +679,19 @@
                                             "text": "Neural distances between each pair of group means were measured for each session, averaged across sessions, and visualized as dendograms for the (<b>a</b>) plan and (<b>b</b>) grasp epoch."
                                         }
                                     ],
-                                    "alt": "",
-                                    "uri": "https://elife-publishing-cdn.s3.amazonaws.com/15278/elife-15278-fig5-figsupp1-v1.jpg"
+                                    "image": {
+                                        "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif",
+                                        "alt": "",
+                                        "source": {
+                                            "mediaType": "image/jpeg",
+                                            "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif/full/full/0/default.jpg",
+                                            "filename": "an-image.jpg"
+                                        },
+                                        "size": {
+                                            "width": 4194,
+                                            "height": 4714
+                                        }
+                                    }
                                 },
                                 {
                                     "type": "image",
@@ -569,8 +705,19 @@
                                             "text": "(<b>a</b>) Firing rate plot of F5 example unit. (<b>b</b>) Modulation depth plot of example unit during grasp epoch. (<b>c</b>) Reduced J-space of one session recorded with instrumented glove and (<b>d</b>) reduced N-space of F5 during the grasp epoch of the same session (simultaneously recorded, N = 76, first two components shown). (<b>e–f</b>) Neural distances between each pair of group means were measured for each session, averaged across sessions, and visualized as dendograms for the plan and grasp epoch. For <b>c–e</b>: Symbols and colours as in <a href=\"#fig1\">Figure 1b</a>."
                                         }
                                     ],
-                                    "alt": "",
-                                    "uri": "https://elife-publishing-cdn.s3.amazonaws.com/15278/elife-15278-fig5-figsupp2-v1.jpg"
+                                    "image": {
+                                        "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif",
+                                        "alt": "",
+                                        "source": {
+                                            "mediaType": "image/jpeg",
+                                            "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif/full/full/0/default.jpg",
+                                            "filename": "an-image.jpg"
+                                        },
+                                        "size": {
+                                            "width": 4194,
+                                            "height": 4714
+                                        }
+                                    }
                                 }
                             ]
                         },
@@ -643,8 +790,19 @@
                                             "text": "(<b>a</b>) Example neuron of M1 in monkey M, curves show firing rates separately for all 50 task conditions (colour code as in <a href=\"#fig1\" >Figure 1b</a>). (<b>b</b>) Modulation depth plots (as in <a href=\"#fig4\">Figure 4b</a>) for the planning and hold epoch of the example neuron in a. (<b>c</b>) Population activity from the reduced and (<b>d</b>) the complete kinematic space (J-space) is compared to (<b>e</b>) the reduced and (<b>f</b>) the complete neural population space (N-space) of M1 during the hold epoch of the task (N = 151, simultaneously recorded). In e, N-space was aligned to J-space with PCRA; symbols and colours as in <a href=\"#fig1\">Figure 1b</a>; symbol size corresponds to object size. Arrows t1-t3 highlight the example trials of <a href=\"#fig4\">Figure 4d,g</a>. See <a href=\"#fig6s1\">Figure 6—figure supplement 1</a>–<a href=\"#fig6s2\">2</a> for the averaged population results of animal M and animal Z, respectively."
                                         }
                                     ],
-                                    "alt": "",
-                                    "uri": "https://elife-publishing-cdn.s3.amazonaws.com/15278/elife-15278-fig6-v1.jpg"
+                                    "image": {
+                                        "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif",
+                                        "alt": "",
+                                        "source": {
+                                            "mediaType": "image/jpeg",
+                                            "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif/full/full/0/default.jpg",
+                                            "filename": "an-image.jpg"
+                                        },
+                                        "size": {
+                                            "width": 4194,
+                                            "height": 4714
+                                        }
+                                    }
                                 },
                                 {
                                     "type": "image",
@@ -658,8 +816,19 @@
                                             "text": "Neural distances between each pair of group means were measured for each session, averaged across sessions, and visualized as dendograms during the hold epoch."
                                         }
                                     ],
-                                    "alt": "",
-                                    "uri": "https://elife-publishing-cdn.s3.amazonaws.com/15278/elife-15278-fig6-figsupp1-v1.jpg"
+                                    "image": {
+                                        "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif",
+                                        "alt": "",
+                                        "source": {
+                                            "mediaType": "image/jpeg",
+                                            "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif/full/full/0/default.jpg",
+                                            "filename": "an-image.jpg"
+                                        },
+                                        "size": {
+                                            "width": 4194,
+                                            "height": 4714
+                                        }
+                                    }
                                 },
                                 {
                                     "type": "image",
@@ -673,8 +842,19 @@
                                             "text": "(<b>a</b>) Firing rate plot of M1 example unit. (<b>b</b>) Modulation depth plot of example unit in hold epoch. (<b>c</b>–<b>d</b>) Reduced J-space of one session recorded with the instrumented glove and reduced N-space of M1 during hold epoch of the same session (simultaneously recorded, N = 62, first two components shown). (<b>e</b>) Neural distances between each pair of group means were measured for each session, averaged across all sessions, and visualized as dendograms. For c,d: Symbols and colours as in <a href=\"#fig1\">Figure 1b</a>."
                                         }
                                     ],
-                                    "alt": "",
-                                    "uri": "https://elife-publishing-cdn.s3.amazonaws.com/15278/elife-15278-fig6-figsupp2-v1.jpg"
+                                    "image": {
+                                        "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif",
+                                        "alt": "",
+                                        "source": {
+                                            "mediaType": "image/jpeg",
+                                            "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif/full/full/0/default.jpg",
+                                            "filename": "an-image.jpg"
+                                        },
+                                        "size": {
+                                            "width": 4194,
+                                            "height": 4714
+                                        }
+                                    }
                                 }
                             ]
                         },
@@ -697,8 +877,19 @@
                                             "text": "Boxplots illustrating similarity between the population coding of J-space and N-space during the hold epoch of the task, as provided by the PCRA analysis. Left: results in AIP, F5, and M1 across all 10 recording sessions for monkey Z. Right: same for monkey M. Red horizontal lines indicate median value, boxes show lower and upper quartile of data (25%–75%), and whiskers indicate maximum and minimal values."
                                         }
                                     ],
-                                    "alt": "",
-                                    "uri": "https://elife-publishing-cdn.s3.amazonaws.com/15278/elife-15278-fig7-v1.jpg"
+                                    "image": {
+                                        "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif",
+                                        "alt": "",
+                                        "source": {
+                                            "mediaType": "image/jpeg",
+                                            "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif/full/full/0/default.jpg",
+                                            "filename": "an-image.jpg"
+                                        },
+                                        "size": {
+                                            "width": 4194,
+                                            "height": 4714
+                                        }
+                                    }
                                 }
                             ]
                         },
@@ -766,8 +957,19 @@
                                             "text": "The distance (in firing rate) between all possible trial-pairs was computed separately in the N-space of area AIP, F5 and M1. The resulting distance maps thus represent the neuronal modulations of a population (e.g. AIP) for a specific time t. (Right) Example maps show the neural modulation patterns at key times t1 (object presentation) and t2 (during hold). Warm colours: long neural distances, cool colours: short neural distances. (Left) Correlating the neuronal patterns across time (Spearman’s r) allowed visualizing the similarity between the areas for animal Z (top row) and animal M (bottom row). For computation, spiking activity was aligned to the beginning of the cue and grasping onset. For an animation of the feature code correlation see <a href=\"#media5\">Video 5</a>."
                                         }
                                     ],
-                                    "alt": "",
-                                    "uri": "https://elife-publishing-cdn.s3.amazonaws.com/15278/elife-15278-fig8-v1.jpg"
+                                    "image": {
+                                        "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif",
+                                        "alt": "",
+                                        "source": {
+                                            "mediaType": "image/jpeg",
+                                            "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif/full/full/0/default.jpg",
+                                            "filename": "an-image.jpg"
+                                        },
+                                        "size": {
+                                            "width": 4194,
+                                            "height": 4714
+                                        }
+                                    }
                                 }
                             ]
                         },
@@ -800,7 +1002,19 @@
                                             "uri": "https://static-movie-usa.glencoesoftware.com/ogv/10.7554/774/b24b6a5e3f0d60d41388aad7d9fa00d2e5ec9a92/elife-15278-media5.ogv"
                                         }
                                     ],
-                                    "image": "https://static-movie-usa.glencoesoftware.com/jpg/10.7554/774/b24b6a5e3f0d60d41388aad7d9fa00d2e5ec9a92/elife-15278-media5.jpg",
+                                    "placeholder": {
+                                        "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif",
+                                        "alt": "",
+                                        "source": {
+                                            "mediaType": "image/jpeg",
+                                            "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif/full/full/0/default.jpg",
+                                            "filename": "an-image.jpg"
+                                        },
+                                        "size": {
+                                            "width": 4194,
+                                            "height": 4714
+                                        }
+                                    },
                                     "width": 1920,
                                     "height": 1078
                                 }
@@ -3786,8 +4000,19 @@
                                 "text": "These conditions start separating over time as shown in <a href=\"#fig2\">Figure 2c,d</a> and <a href=\"#fig2\">Figure 2e,f</a>."
                             }
                         ],
-                        "alt": "",
-                        "uri": "https://elife-publishing-cdn.s3.amazonaws.com/15278/elife-15278-resp-fig1-v1.jpg"
+                        "image": {
+                            "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif",
+                            "alt": "",
+                            "source": {
+                                "mediaType": "image/jpeg",
+                                "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif/full/full/0/default.jpg",
+                                "filename": "an-image.jpg"
+                            },
+                            "size": {
+                                "width": 4194,
+                                "height": 4714
+                            }
+                        }
                     }
                 ]
             },

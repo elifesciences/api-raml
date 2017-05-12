@@ -8,7 +8,7 @@ allOf:
             type: object
             properties:
                 banner:
-                    $ref: ../misc/image-banner.v1.yaml
+                    $ref: ../misc/image.v1.yaml
             required:
               - banner
         subTitle:
@@ -20,6 +20,11 @@ allOf:
             items:
                 $ref: ../snippets/person.v1.yaml
             minItems: 1
+        summary:
+            title: Summary
+            type: array
+            items:
+                $ref: ../blocks/paragraph.v1.yaml
         content:
             title: Content
             type: array

@@ -178,47 +178,68 @@
                             "properties": {
                                 "banner": {
                                     "$schema": "http://json-schema.org/draft-04/schema#",
-                                    "title": "Banner image",
+                                    "title": "IIIF image",
                                     "type": "object",
                                     "properties": {
+                                        "uri": {
+                                            "title": "IIIF Image",
+                                            "type": "string",
+                                            "format": "uri",
+                                            "pattern": "^https://"
+                                        },
                                         "alt": {
                                             "title": "Alternative text",
                                             "type": "string"
                                         },
-                                        "sizes": {
-                                            "title": "Sizes",
+                                        "source": {
+                                            "$ref": "#/allOf/0/allOf/1/properties/additionalFiles/items/allOf/2"
+                                        },
+                                        "size": {
                                             "type": "object",
                                             "properties": {
-                                                "2:1": {
-                                                    "type": "object",
-                                                    "properties": {
-                                                        "900": {
-                                                            "title": "2:1 crop at 900px width",
-                                                            "type": "string",
-                                                            "format": "uri",
-                                                            "pattern": "^https://"
-                                                        },
-                                                        "1800": {
-                                                            "title": "2:1 crop at 1800px width",
-                                                            "type": "string",
-                                                            "format": "uri",
-                                                            "pattern": "^https://"
-                                                        }
-                                                    },
-                                                    "required": [
-                                                        "900",
-                                                        "1800"
-                                                    ]
+                                                "width": {
+                                                    "type": "integer",
+                                                    "minimum": 1
+                                                },
+                                                "height": {
+                                                    "type": "integer",
+                                                    "minimum": 1
                                                 }
                                             },
                                             "required": [
-                                                "2:1"
+                                                "width",
+                                                "height"
+                                            ]
+                                        },
+                                        "focalPoint": {
+                                            "type": "object",
+                                            "title": "Focal point",
+                                            "description": "Point on the image that is considered to be the focal point of the image.\n\nIf not present, 50 can be used for both `x` and `y`.\n",
+                                            "properties": {
+                                                "x": {
+                                                    "description": "Percentage on the horizontal axis.\n",
+                                                    "type": "integer",
+                                                    "minimum": 0,
+                                                    "maximum": 100
+                                                },
+                                                "y": {
+                                                    "description": "Percentage on the vertical axis.\n",
+                                                    "type": "integer",
+                                                    "minimum": 0,
+                                                    "maximum": 100
+                                                }
+                                            },
+                                            "required": [
+                                                "x",
+                                                "y"
                                             ]
                                         }
                                     },
                                     "required": [
+                                        "uri",
                                         "alt",
-                                        "sizes"
+                                        "source",
+                                        "size"
                                     ]
                                 }
                             }
@@ -627,18 +648,15 @@
                                 "generated": {
                                     "type": "array",
                                     "items": {
-                                        "$ref": "#/allOf/0/allOf/1/properties/dataSets/properties/used/items"
-                                    }
-                                },
-                                "used": {
-                                    "type": "array",
-                                    "items": {
                                         "$schema": "http://json-schema.org/draft-04/schema#",
                                         "title": "Data set",
                                         "type": "object",
                                         "properties": {
                                             "id": {
-                                                "$ref": "#/allOf/0/allOf/1/properties/funding/properties/awards/items/properties/id"
+                                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                                "title": "HTML ID",
+                                                "type": "string",
+                                                "pattern": "^[^\\s]+$"
                                             },
                                             "date": {
                                                 "$schema": "http://json-schema.org/draft-04/schema#",
@@ -687,6 +705,12 @@
                                             "title"
                                         ]
                                     }
+                                },
+                                "used": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/allOf/0/allOf/1/properties/dataSets/properties/generated/items"
+                                    }
                                 }
                             }
                         },
@@ -701,10 +725,7 @@
                                         "type": "object",
                                         "properties": {
                                             "id": {
-                                                "$schema": "http://json-schema.org/draft-04/schema#",
-                                                "title": "HTML ID",
-                                                "type": "string",
-                                                "pattern": "^[^\\s]+$"
+                                                "$ref": "#/allOf/0/allOf/1/properties/dataSets/properties/generated/items/properties/id"
                                             },
                                             "source": {
                                                 "allOf": [
@@ -794,7 +815,7 @@
                             "type": "array",
                             "items": {
                                 "$schema": "http://json-schema.org/draft-04/schema#",
-                                "title": "File",
+                                "title": "Asset file",
                                 "type": "object",
                                 "allOf": [
                                     {
@@ -802,16 +823,8 @@
                                         "title": "Asset",
                                         "type": "object",
                                         "properties": {
-                                            "doi": {
-                                                "$ref": "#/allOf/0/allOf/0/properties/doi"
-                                            },
                                             "id": {
-                                                "$ref": "#/allOf/0/allOf/1/properties/funding/properties/awards/items/properties/id"
-                                            },
-                                            "label": {
-                                                "title": "Label",
-                                                "type": "string",
-                                                "minLength": 1
+                                                "$ref": "#/allOf/0/allOf/1/properties/dataSets/properties/generated/items/properties/id"
                                             },
                                             "title": {
                                                 "title": "Title",
@@ -835,7 +848,7 @@
                                                                     ]
                                                                 },
                                                                 "id": {
-                                                                    "$ref": "#/allOf/0/allOf/1/properties/funding/properties/awards/items/properties/id"
+                                                                    "$ref": "#/allOf/0/allOf/1/properties/dataSets/properties/generated/items/properties/id"
                                                                 },
                                                                 "label": {
                                                                     "type": "string"
@@ -863,7 +876,7 @@
                                                                     ]
                                                                 },
                                                                 "id": {
-                                                                    "$ref": "#/allOf/0/allOf/1/properties/funding/properties/awards/items/properties/id"
+                                                                    "$ref": "#/allOf/0/allOf/1/properties/dataSets/properties/generated/items/properties/id"
                                                                 },
                                                                 "tables": {
                                                                     "type": "array",
@@ -879,18 +892,26 @@
                                                     ]
                                                 },
                                                 "minItems": 1
+                                            },
+                                            "attribution": {
+                                                "title": "Attribution",
+                                                "type": "array",
+                                                "items": {
+                                                    "type": "string"
+                                                }
                                             }
-                                        },
-                                        "dependencies": {
-                                            "caption": [
-                                                "title"
-                                            ],
-                                            "label": [
-                                                "title"
-                                            ]
                                         }
                                     },
                                     {
+                                        "required": [
+                                            "id",
+                                            "title"
+                                        ]
+                                    },
+                                    {
+                                        "$schema": "http://json-schema.org/draft-04/schema#",
+                                        "title": "File",
+                                        "type": "object",
                                         "properties": {
                                             "mediaType": {
                                                 "$schema": "http://json-schema.org/draft-04/schema#",
@@ -910,8 +931,6 @@
                                             }
                                         },
                                         "required": [
-                                            "id",
-                                            "title",
                                             "mediaType",
                                             "uri",
                                             "filename"

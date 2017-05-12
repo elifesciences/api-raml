@@ -23,8 +23,23 @@
         },
         {
             "type": "image",
-            "alt": "",
-            "uri": "https://elife-cdn.s3.amazonaws.com/images/news/eLife_Lens_contextual.png",
+            "image": {
+                "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif",
+                "alt": "",
+                "source": {
+                    "mediaType": "image/jpeg",
+                    "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif/full/full/0/default.jpg",
+                    "filename": "an-image.jpg"
+                },
+                "size": {
+                    "width": 4194,
+                    "height": 4714
+                },
+                "focalPoint": {
+                    "x": 25,
+                    "y": 75
+                }
+            },
             "title": "contextual search results"
         },
         {
@@ -48,8 +63,19 @@
                 [
                     {
                         "type": "image",
-                        "alt": "",
-                        "uri": "https://elife-cdn.s3.amazonaws.com/images/news/eLife_Lens_Search_filters.png",
+                        "image": {
+                            "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif",
+                            "alt": "",
+                            "source": {
+                                "mediaType": "image/jpeg",
+                                "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif/full/full/0/default.jpg",
+                                "filename": "an-image.jpg"
+                            },
+                            "size": {
+                                "width": 4194,
+                                "height": 4714
+                            }
+                        },
                         "title": "filters showing frequency of search term in filter"
                     }
                 ],
