@@ -377,32 +377,43 @@
                     "text": "Fossil hominins were first recognized in the Dinaledi Chamber in the Rising Star cave system in October 2013. During a relatively short excavation, our team recovered an extensive collection of 1550 hominin specimens, representing nearly every element of the skeleton multiple times (Figure 1), including many complete elements and morphologically informative fragments, some in articulation, as well as smaller fragments many of which could be refit into more complete elements. The collection is a morphologically homogeneous sample that can be attributed to no previously-known hominin species. Here we describe this new species, <i>Homo naledi</i>. We have not defined <i>H. naledi</i> narrowly based on a single jaw or skull because the entire body of material has informed our understanding of its biology."
                 },
                 {
-                    "type": "figure",
-                    "assets": [
+                    "type": "image",
+                    "doi": "10.7554/eLife.09560.003",
+                    "id": "fig1",
+                    "label": "Figure 1",
+                    "title": "Dinaledi skeletal specimens.",
+                    "caption": [
                         {
-                            "type": "image",
-                            "doi": "10.7554/eLife.09560.003",
-                            "id": "fig1",
-                            "label": "Figure 1",
-                            "image": {
-                                "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif",
-                                "alt": "",
-                                "source": {
-                                    "mediaType": "image/jpeg",
-                                    "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif/full/full/0/default.jpg",
-                                    "filename": "an-image.jpg"
-                                },
-                                "size": {
-                                    "width": 4194,
-                                    "height": 4714
-                                }
-                            }
+                            "type": "paragraph",
+                            "text": "The figure includes approximately all of the material incorporated in this diagnosis, including the holotype specimen, paratypes and referred material. These make up 737 partial or complete anatomical elements, many of which consist of several refitted specimens. Specimens not identified to element, such as non-diagnostic long bone or cranial fragments, and a subset of fragile specimens are not shown here. The ‘skeleton’ layout in the center of the photo is a composite of elements that represent multiple individuals. This view is foreshortened; the table upon which the bones are arranged is 120-cm wide for scale."
                         },
+                        {
+                            "type": "mathml",
+                            "id": "eqn1",
+                            "label": "[1]",
+                            "mathml": "<math><mrow><msub><mtext>e</mtext><mn>0</mn></msub><mo>=</mo><mfrac><mrow><msub><mtext>e</mtext><mrow><mn>0</mn><mo>,</mo><mtext>max</mtext></mrow></msub><mo>×</mo><mtext>GDP</mtext></mrow><mrow><mtext>GDP</mtext><mo>+</mo><msub><mtext>K</mtext><mrow><mtext>inc</mtext></mrow></msub></mrow></mfrac><mo>,</mo></mrow></math>"
+                        }
+                    ],
+                    "image": {
+                        "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif",
+                        "alt": "",
+                        "source": {
+                            "mediaType": "image/jpeg",
+                            "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif/full/full/0/default.jpg",
+                            "filename": "an-image.jpg"
+                        },
+                        "size": {
+                            "width": 4194,
+                            "height": 4714
+                        }
+                    },
+                    "supplements": [
                         {
                             "type": "image",
                             "doi": "10.7554/eLife.09560.019",
                             "id": "fig1s1",
                             "label": "Figure 1—figure supplement 1",
+                            "title": "Holotype specimen of <i>Homo naledi</i>, Dinaledi Hominin 1 (DH1)",
                             "caption": [
                                 {
                                     "type": "paragraph",
@@ -459,46 +470,41 @@
                     ]
                 },
                 {
-                    "type": "figure",
-                    "assets": [
+                    "type": "table",
+                    "doi": "10.7554/eLife.09560.013",
+                    "id": "tbl2",
+                    "label": "Table 2",
+                    "title": "Dental measures for <i>H. naledi</i> and comparative hominin species",
+                    "tables": [
+                        "<table><thead><tr><th colspan=\"18\">Maxillary</th></tr><tr><th/><th/><th colspan=\"2\">I<sup>1</sup></th><th colspan=\"2\">I<sup>2</sup></th><th colspan=\"2\">C</th><th colspan=\"2\">P<sup>3</sup></th><th colspan=\"2\">P<sup>4</sup></th><th colspan=\"2\">M<sup>1</sup></th><th colspan=\"2\">M<sup>2</sup></th><th colspan=\"2\">M<sup>3</sup></th></tr><tr><th/><th/><th>MD</th><th>LL</th><th>MD</th><th>LL</th><th>MD</th><th>LL</th><th>MD</th><th>BL</th><th>MD</th><th>BL</th><th>MD</th><th>BL</th><th>MD</th><th>BL</th><th>MD</th><th>BL</th></tr></thead><tbody><tr><td rowspan=\"3\"><italic>Au. anamensis</italic></td><td>n</td><td>3</td><td>5</td><td>–</td><td>2</td><td>6</td><td>7</td><td>7</td><td>6</td><td>5</td><td>3</td><td>12</td><td>10</td><td>10</td><td>8</td><td>9</td><td>8</td></tr><tr><td>mean</td><td>10.8</td><td>8.7</td><td>–</td><td>7.3</td><td>11.0</td><td>10.6</td><td>9.9</td><td>12.6</td><td>8.9</td><td>13.6</td><td>11.5</td><td>12.9</td><td>13.0</td><td>14.4</td><td>12.5</td><td>14.2</td></tr><tr><td>range</td><td>9.1–12.4</td><td>8.2–9.3</td><td>–</td><td>7.0–7.5</td><td>9.9–12.3</td><td>9.1–11.8</td><td>8.2–11.8</td><td>10.1–14.3</td><td>7.2–12.1</td><td>12.6–14.2</td><td>7.8–14.3</td><td>9.0–16.7</td><td>10.9–16.3</td><td>12.9–16.1</td><td>11.1–15.7</td><td>13.0–15.7</td></tr><tr><td rowspan=\"3\"><italic>Au. afarensis</italic></td><td>n</td><td>7</td><td>8</td><td>9</td><td>9</td><td>15</td><td>15</td><td>12</td><td>10</td><td>18</td><td>12</td><td>16</td><td>13</td><td>10</td><td>11</td><td>11</td><td>11</td></tr><tr><td>mean</td><td>10.7</td><td>8.4</td><td>7.5</td><td>7.2</td><td>9.9</td><td>10.8</td><td>8.8</td><td>12.4</td><td>9.1</td><td>12.4</td><td>12.0</td><td>13.4</td><td>12.9</td><td>14.6</td><td>12.7</td><td>14.5</td></tr><tr><td>range</td><td>9.9–11.8</td><td>7.1–9.7</td><td>6.6–8.2</td><td>6.2–8.1</td><td>8.8–11.6</td><td>9.3–12.5</td><td>7.7–9.7</td><td>11.3–13.4</td><td>7.6–10.8</td><td>11.1–14.5</td><td>10.5–13.8</td><td>12.0–15.0</td><td>12.1–13.6</td><td>13.4–15.2</td><td>10.9–14.8</td><td>13.1–16.3</td></tr><tr><td rowspan=\"3\"><italic>Au. africanus</italic></td><td>n</td><td>15</td><td>15</td><td>11</td><td>10</td><td>16</td><td>13</td><td>26</td><td>25</td><td>20</td><td>20</td><td>21</td><td>20</td><td>23</td><td>24</td><td>27</td><td>28</td></tr><tr><td>mean</td><td>10.7</td><td>8.3</td><td>6.9</td><td>6.8</td><td>9.9</td><td>10.3</td><td>9.2</td><td>12.7</td><td>9.5</td><td>13.4</td><td>12.9</td><td>13.9</td><td>14.1</td><td>15.7</td><td>14.2</td><td>16.0</td></tr><tr><td>range</td><td>9.4–12.5</td><td>7.4–9.1</td><td>5.8–8.0</td><td>5.6–7.9</td><td>8.8–11.0</td><td>8.7–12.0</td><td>8.5–10.2</td><td>10.7–14.5</td><td>7.2–11.0</td><td>12.4–15.3</td><td>11.7–14.4</td><td>12.9–15.3</td><td>12.1–16.3</td><td>12.8–17.9</td><td>11.2–16.9</td><td>13.1–18.6</td></tr><tr><td rowspan=\"3\"><italic>Au. sediba</italic></td><td>n</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>2</td><td>2</td></tr><tr><td>mean</td><td>10.1</td><td>6.9</td><td>7.2</td><td>6.6</td><td>9.0</td><td>8.8</td><td>9.0</td><td>11.2</td><td>9.3</td><td>12.1</td><td>12.9</td><td>12.0</td><td>12.9</td><td>13.7</td><td>13.0</td><td>13.5</td></tr><tr><td>range</td><td>–</td><td>–</td><td>–</td><td>–</td><td>–</td><td>–</td><td>–</td><td>–</td><td>–</td><td>–</td><td>–</td><td>–</td><td>–</td><td>–</td><td>12.6–13.3</td><td>12.9–14.1</td></tr><tr><td rowspan=\"3\"><italic>H. naledi</italic></td><td>n</td><td>–</td><td>5</td><td>4</td><td>8</td><td>10</td><td>9</td><td>10</td><td>10</td><td>7</td><td>7</td><td>12</td><td>13</td><td>11</td><td>9</td><td>7</td><td>7</td></tr><tr><td>mean</td><td>9.4</td><td>6.5</td><td>6.6</td><td>6.2</td><td>8.1</td><td>8.6</td><td>8.0</td><td>10.5</td><td>8.1</td><td>11.0</td><td>11.6</td><td>11.7</td><td>12.2</td><td>12.8</td><td>11.6</td><td>12.4</td></tr><tr><td>range</td><td>8.8–9.8</td><td>6.3–7.0</td><td>6.3–7.0</td><td>5.8–6.6</td><td>7.3–8.9</td><td>8.0–9.6</td><td>7.7–8.4</td><td>9.8–11.0</td><td>7.7–8.7</td><td>10.5–11.2</td><td>10.5–12.4</td><td>11.2–12.4</td><td>11.0–13.0</td><td>11.9–13.6</td><td>11.0–12.7</td><td>11.4–13.4</td></tr><tr><td rowspan=\"3\"><italic>H. habilis</italic></td><td>n</td><td>2</td><td>2</td><td>4</td><td>4</td><td>2</td><td>3</td><td>7</td><td>7</td><td>8</td><td>8</td><td>13</td><td>13</td><td>7</td><td>7</td><td>7</td><td>7</td></tr><tr><td>mean</td><td>10.6</td><td>8.0</td><td>7.4</td><td>6.6</td><td>9.0</td><td>9.8</td><td>9.0</td><td>11.9</td><td>9.2</td><td>12.1</td><td>12.7</td><td>13.0</td><td>12.7</td><td>14.3</td><td>12.3</td><td>14.7</td></tr><tr><td>range</td><td>10.1–11.1</td><td>7.3–8.7</td><td>6.7–8.1</td><td>6.0–7.9</td><td>8.5–9.4</td><td>8.5–11.6</td><td>8.1–9.6</td><td>11.0–12.7</td><td>8.5–9.9</td><td>11.0–13.1</td><td>11.6–13.9</td><td>12.1–14.1</td><td>11.8–13.5</td><td>13.5–16.2</td><td>11.3–13.9</td><td>13.2–16.6</td></tr><tr><td rowspan=\"3\"><italic>H. rudolfensis</italic></td><td>n</td><td>1</td><td>1</td><td>–</td><td>–</td><td>1</td><td>1</td><td>1</td><td>1</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td><td>1</td><td>1</td></tr><tr><td>mean</td><td>12.3</td><td>7.7</td><td>–</td><td>–</td><td>11.5</td><td>12.5</td><td>10.5</td><td>13.6</td><td>10.2</td><td>12.5</td><td>14.0</td><td>14.0</td><td>14.3</td><td>15.8</td><td>13.3</td><td>13.5</td></tr><tr><td>range</td><td>–</td><td>–</td><td>–</td><td>–</td><td>–</td><td>–</td><td>–</td><td>–</td><td>9.7–10.7</td><td>11.1–13.8</td><td>13.9–14.2</td><td>13.3–14.8</td><td>14.1–14.6</td><td>14.1–17.6</td><td>–</td><td>–</td></tr><tr><td rowspan=\"3\"><italic>H. erectus</italic></td><td>n</td><td>11</td><td>12</td><td>6</td><td>6</td><td>12</td><td>12</td><td>27</td><td>27</td><td>30</td><td>29</td><td>34</td><td>32</td><td>22</td><td>22</td><td>16</td><td>16</td></tr><tr><td>mean</td><td>10.3</td><td>8.1</td><td>7.7</td><td>8.0</td><td>9.5</td><td>10.0</td><td>8.5</td><td>11.8</td><td>8.1</td><td>11.6</td><td>12.2</td><td>13.2</td><td>12.0</td><td>13.3</td><td>10.5</td><td>12.8</td></tr><tr><td>range</td><td>8.1–12.6</td><td>7.0–11.7</td><td>6.0–8.3</td><td>6.9–8.5</td><td>8.5–11.1</td><td>9.0–11.8</td><td>7.1–10.1</td><td>9.5–13.8</td><td>7.0–9.4</td><td>9.9–13.4</td><td>10.1–14.6</td><td>11.0–15.9</td><td>10.3–13.6</td><td>10.9–15.5</td><td>8.7–14.7</td><td>10.4–15.8</td></tr><tr><td rowspan=\"3\"><italic>H. neanderthalensis</italic></td><td>n</td><td>28</td><td>37</td><td>35</td><td>41</td><td>28</td><td>29</td><td>16</td><td>17</td><td>21</td><td>19</td><td>23</td><td>24</td><td>27</td><td>28</td><td>22</td><td>21</td></tr><tr><td>mean</td><td>9.7</td><td>8.5</td><td>8.0</td><td>8.4</td><td>8.8</td><td>10.1</td><td>8.0</td><td>10.6</td><td>7.8</td><td>10.6</td><td>11.6</td><td>12.3</td><td>10.9</td><td>12.5</td><td>9.9</td><td>12.3</td></tr><tr><td>range</td><td>8.2–11.8</td><td>7.3–9.9</td><td>5.8–9.3</td><td>5.8–9.9</td><td>7.2–10.0</td><td>7.6–11.4</td><td>6.6–9.3</td><td>8.4–11.8</td><td>5.9–11.5</td><td>8.3–11.7</td><td>9.5–13.5</td><td>11.0–14.2</td><td>8.9–15.9</td><td>10.8–14.6</td><td>8.2–11.4</td><td>9.8–14.6</td></tr><tr><td rowspan=\"3\"><italic>H. heidelbergensis</italic></td><td>n</td><td>21</td><td>23</td><td>19</td><td>21</td><td>27</td><td>29</td><td>25</td><td>25</td><td>22</td><td>23</td><td>25</td><td>24</td><td>24</td><td>23</td><td>26</td><td>27</td></tr><tr><td>mean</td><td>9.6</td><td>7.8</td><td>7.7</td><td>7.8</td><td>8.8</td><td>9.8</td><td>7.9</td><td>10.6</td><td>7.6</td><td>10.3</td><td>11.2</td><td>11.9</td><td>10.2</td><td>12.3</td><td>8.9</td><td>11.6</td></tr><tr><td>range</td><td>8.7–10.7</td><td>7.1–9.9</td><td>7.2–8.4</td><td>7.3–8.6</td><td>8.1–11.0</td><td>8.8–11.8</td><td>7.1–9.0</td><td>9.2–12.2</td><td>7.0–8.8</td><td>9.1–11.5</td><td>9.9–12.3</td><td>10.3–13.2</td><td>8.1–12.1</td><td>11.1–13.8</td><td>7.6–11.0</td><td>10.0–13.2</td></tr><tr><td rowspan=\"3\">MP/LP African Homo</td><td>n</td><td>6</td><td>6</td><td>7</td><td>8</td><td>4</td><td>4</td><td>6</td><td>6</td><td>10</td><td>10</td><td>14</td><td>14</td><td>20</td><td>20</td><td>9</td><td>9</td></tr><tr><td>mean</td><td>9.0</td><td>7.8</td><td>7.4</td><td>7.2</td><td>8.9</td><td>9.7</td><td>8.4</td><td>10.8</td><td>8.1</td><td>10.8</td><td>12.3</td><td>13.2</td><td>11.0</td><td>12.9</td><td>9.2</td><td>11.7</td></tr><tr><td>range</td><td>6.3–10.9</td><td>6.6–8.7</td><td>6.0–9.3</td><td>6.1–8.5</td><td>8.2–9.5</td><td>8.8–10.0</td><td>8.1–8.7</td><td>9.9–11.8</td><td>7.5–9.3</td><td>9.4–12.8</td><td>10.4–14.0</td><td>12.0–15.0</td><td>7.8–13.0</td><td>11.0–15.0</td><td>7.6–10.2</td><td>10.0–13.2</td></tr></tbody></table>",
+                        "<table><thead><tr><th colspan=\"18\">Mandibular</th></tr><tr><th/><th/><th colspan=\"2\">I<sub>1</sub></th><th colspan=\"2\">I<sub>2</sub></th><th colspan=\"2\">C</th><th colspan=\"2\">P<sub>3</sub></th><th colspan=\"2\">P<sub>4</sub></th><th colspan=\"2\">M<sub>1</sub></th><th colspan=\"2\">M<sub>2</sub></th><th colspan=\"2\">M<sub>3</sub></th></tr><tr><th/><th/><th>MD</th><th>LL</th><th>MD</th><th>LL</th><th>MD</th><th>LL</th><th>MD</th><th>BL</th><th>MD</th><th>BL</th><th>MD</th><th>BL</th><th>MD</th><th>BL</th><th>MD</th><th>BL</th></tr></thead><tbody><tr><td rowspan=\"3\"><italic>Au. anamensis</italic></td><td>n</td><td>2</td><td>1</td><td>4</td><td>3</td><td>7</td><td>7</td><td>8</td><td>8</td><td>8</td><td>8</td><td>9</td><td>10</td><td>7</td><td>7</td><td>8</td><td>8</td></tr><tr><td>mean</td><td>6.9</td><td>7.4</td><td>7.8</td><td>8.3</td><td>10.0</td><td>10.4</td><td>12.4</td><td>9.2</td><td>9.1</td><td>11.3</td><td>12.9</td><td>12.3</td><td>14.0</td><td>13.4</td><td>15.3</td><td>13.4</td></tr><tr><td>range</td><td>6.8–6.9</td><td>–</td><td>6.6–8.7</td><td>7.9–8.6</td><td>6.6–13.9</td><td>9.2–11.4</td><td>11.3–13.4</td><td>8.6–10.0</td><td>7.4–9.8</td><td>9.6–13.2</td><td>11.6–13.8</td><td>10.2–14.8</td><td>13.0–15.9</td><td>12.3–14.9</td><td>13.7–17.0</td><td>12.1–15.2</td></tr><tr><td rowspan=\"3\"><italic>Au. afarensis</italic></td><td>n</td><td>7</td><td>8</td><td>7</td><td>6</td><td>13</td><td>16</td><td>27</td><td>26</td><td>24</td><td>21</td><td>32</td><td>26</td><td>31</td><td>27</td><td>26</td><td>23</td></tr><tr><td>mean</td><td>6.7</td><td>7.1</td><td>6.7</td><td>8.0</td><td>8.8</td><td>10.4</td><td>9.6</td><td>10.6</td><td>9.8</td><td>11.0</td><td>13.1</td><td>12.6</td><td>14.3</td><td>13.4</td><td>15.3</td><td>13.5</td></tr><tr><td>range</td><td>5.6–7.7</td><td>5.6–8.0</td><td>5.0–8.0</td><td>6.7–8.8</td><td>7.5–11.7</td><td>8.0–12.4</td><td>7.9–12.6</td><td>8.9–13.8</td><td>7.7–11.4</td><td>9.8–12.8</td><td>10.1–14.8</td><td>11.0–14.0</td><td>12.1–16.5</td><td>11.1–15.2</td><td>13.4–18.1</td><td>11.3–15.3</td></tr><tr><td rowspan=\"3\"><italic>Au. africanus</italic></td><td>n</td><td>11</td><td>12</td><td>12</td><td>13</td><td>23</td><td>25</td><td>20</td><td>21</td><td>25</td><td>23</td><td>29</td><td>32</td><td>38</td><td>38</td><td>34</td><td>35</td></tr><tr><td>mean</td><td>6.2</td><td>6.7</td><td>7.2</td><td>7.9</td><td>9.4</td><td>10.1</td><td>9.7</td><td>11.5</td><td>10.4</td><td>11.6</td><td>14.0</td><td>13.0</td><td>15.7</td><td>14.5</td><td>16.3</td><td>14.6</td></tr><tr><td>range</td><td>4.8–6.9</td><td>5.7–7.9</td><td>5.6–8.1</td><td>6.6–9.2</td><td>8.5–10.7</td><td>8.2–12.1</td><td>8.8–11.0</td><td>9.9–13.9</td><td>8.7–12.3</td><td>9.3–13.2</td><td>12.4–15.8</td><td>11.2–15.1</td><td>14.2–17.7</td><td>12.8–16.8</td><td>13.5–18.5</td><td>12.2–16.8</td></tr><tr><td rowspan=\"3\"><italic>Au. sediba</italic></td><td>n</td><td>–</td><td>1</td><td>–</td><td>1</td><td>2</td><td>2</td><td>1</td><td>1</td><td>1</td><td>1</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td></tr><tr><td>mean</td><td>–</td><td>5.9</td><td>–</td><td>6.6</td><td>7.7</td><td>8.0</td><td>8.1</td><td>9.2</td><td>8.8</td><td>9.7</td><td>13.1</td><td>11.4</td><td>14.5</td><td>12.8</td><td>14.9</td><td>13.2</td></tr><tr><td>range</td><td>–</td><td>–</td><td>–</td><td>–</td><td>7.3–8.0</td><td>7.4–8.6</td><td>–</td><td>–</td><td>–</td><td>–</td><td>13.1–13.1</td><td>11.3–11.5</td><td>14.4–14.5</td><td>12.3–13.2</td><td>14.9–14.9</td><td>12.5–13.6</td></tr><tr><td rowspan=\"3\"><italic>H. naledi</italic></td><td>n</td><td>7</td><td>7</td><td>5</td><td>6</td><td>7</td><td>7</td><td>9</td><td>10</td><td>6</td><td>6</td><td>11</td><td>11</td><td>9</td><td>9</td><td>6</td><td>5</td></tr><tr><td>mean</td><td>6.1</td><td>5.4</td><td>6.9</td><td>5.9</td><td>7.1</td><td>7.1</td><td>9.0</td><td>8.8</td><td>8.7</td><td>9.1</td><td>12.2</td><td>10.7</td><td>13.3</td><td>11.2</td><td>13.4</td><td>12.1</td></tr><tr><td>range</td><td>5.7–7.0</td><td>5.3–5.9</td><td>6.6–7.4</td><td>5.9–6.0</td><td>6.4–7.5</td><td>6.9–7.4</td><td>8.2–9.4</td><td>8.2–9.7</td><td>8.3–9.0</td><td>8.5–10.2</td><td>11.3–12.7</td><td>10.3–11.4</td><td>12.3–14.0</td><td>10.7–12.2</td><td>12.9–13.7</td><td>11.7–12.8</td></tr><tr><td rowspan=\"3\"><italic>H. habilis</italic></td><td>n</td><td>2</td><td>2</td><td>2</td><td>2</td><td>3</td><td>2</td><td>4</td><td>4</td><td>3</td><td>3</td><td>5</td><td>5</td><td>4</td><td>4</td><td>4</td><td>4</td></tr><tr><td>mean</td><td>6.4</td><td>6.8</td><td>7.4</td><td>7.6</td><td>8.7</td><td>9.0</td><td>9.6</td><td>9.6</td><td>9.9</td><td>10.5</td><td>13.7</td><td>11.9</td><td>15.0</td><td>13.5</td><td>15.4</td><td>13.3</td></tr><tr><td>range</td><td>6.4–6.5</td><td>6.7–7.0</td><td>7.2–7.7</td><td>7.6–7.6</td><td>7.6–9.6</td><td>7.9–10.0</td><td>9.0–10.6</td><td>8.6–11.1</td><td>9.0–10.5</td><td>9.9–11.0</td><td>13.0–14.8</td><td>10.9–12.8</td><td>14.2–15.7</td><td>12.0–15.1</td><td>14.8–15.9</td><td>12.4–14.4</td></tr><tr><td rowspan=\"3\"><italic>H. rudolfensis</italic></td><td>n</td><td>–</td><td>1</td><td>–</td><td>1</td><td>–</td><td>1</td><td>3</td><td>3</td><td>6</td><td>6</td><td>5</td><td>5</td><td>6</td><td>5</td><td>3</td><td>3</td></tr><tr><td>mean</td><td>–</td><td>5.4</td><td>–</td><td>6.7</td><td>–</td><td>8.3</td><td>9.9</td><td>11.1</td><td>10.1</td><td>11.4</td><td>14.0</td><td>12.7</td><td>16.0</td><td>13.7</td><td>16.4</td><td>14.1</td></tr><tr><td>range</td><td>–</td><td>–</td><td>–</td><td>–</td><td>–</td><td>–</td><td>9.0–10.7</td><td>9.5–12.3</td><td>8.8–11.8</td><td>9.8–12.2</td><td>12.8–15.2</td><td>11.4–13.2</td><td>14.0–18.3</td><td>12.7–14.9</td><td>15.6–17.0</td><td>13.1–14.6</td></tr><tr><td rowspan=\"3\"><italic>H. erectus</italic></td><td>n</td><td>11</td><td>12</td><td>14</td><td>16</td><td>14</td><td>16</td><td>30</td><td>30</td><td>25</td><td>26</td><td>43</td><td>43</td><td>41</td><td>40</td><td>26</td><td>27</td></tr><tr><td>mean</td><td>6.2</td><td>6.4</td><td>7</td><td>7.2</td><td>8.7</td><td>9</td><td>9</td><td>10.1</td><td>8.7</td><td>10.1</td><td>12.7</td><td>11.9</td><td>13.3</td><td>12.5</td><td>12.7</td><td>11.7</td></tr><tr><td>range</td><td>4.8–7.4</td><td>5.8–7.1</td><td>5.3–8.1</td><td>6.4–8.5</td><td>7.0–10.3</td><td>8.0–10.4</td><td>7.0–12.0</td><td>8.2–12.0</td><td>7.2–10.3</td><td>8.0–12.5</td><td>9.9–14.8</td><td>10.1–13.3</td><td>11.3–15.3</td><td>10.8–14.3</td><td>10.0–15.2</td><td>10.0–14.2</td></tr><tr><td rowspan=\"3\"><italic>H. neanderthalensis</italic></td><td>n</td><td>9</td><td>16</td><td>23</td><td>31</td><td>36</td><td>41</td><td>20</td><td>21</td><td>23</td><td>25</td><td>38</td><td>40</td><td>26</td><td>27</td><td>18</td><td>20</td></tr><tr><td>mean</td><td>5.6</td><td>7.2</td><td>6.8</td><td>7.8</td><td>7.8</td><td>8.8</td><td>7.9</td><td>9.1</td><td>7.8</td><td>9.4</td><td>11.8</td><td>11.1</td><td>12.1</td><td>11.3</td><td>12.0</td><td>11.0</td></tr><tr><td>range</td><td>4.2–6.4</td><td>5.2–8.8</td><td>5.9–7.5</td><td>6.8–9.0</td><td>6.7–8.8</td><td>6.8–10.3</td><td>6.6–9.1</td><td>8.0–10.3</td><td>6.5–9.4</td><td>8.5–10.5</td><td>10.1–13.6</td><td>10.2–12.9</td><td>9.3–14.0</td><td>8.8–12.4</td><td>11.2–13.9</td><td>9.9–12.2</td></tr><tr><td rowspan=\"3\"><italic>H. heidelbergensis</italic></td><td>n</td><td>21</td><td>22</td><td>19</td><td>20</td><td>23</td><td>24</td><td>22</td><td>22</td><td>26</td><td>26</td><td>29</td><td>29</td><td>29</td><td>29</td><td>32</td><td>32</td></tr><tr><td>mean</td><td>5.6</td><td>6.7</td><td>6.5</td><td>7.3</td><td>7.6</td><td>8.7</td><td>7.9</td><td>8.9</td><td>7.2</td><td>8.7</td><td>11.3</td><td>10.6</td><td>11.2</td><td>10.5</td><td>11.5</td><td>10.0</td></tr><tr><td>range</td><td>4.8–6.5</td><td>6.0–7.5</td><td>6.0–7.2</td><td>6.6–8.0</td><td>6.9–9.0</td><td>7.3–10.0</td><td>7.2–9.0</td><td>7.6–11.6</td><td>6.6–8.8</td><td>7.2–11.7</td><td>10.4–13.8</td><td>9.6–13.0</td><td>9.7–14.6</td><td>8.5–13.9</td><td>9.7–13.2</td><td>8.6–12.5</td></tr><tr><td rowspan=\"3\">MP/LP African Homo</td><td>n</td><td>5</td><td>5</td><td>8</td><td>8</td><td>8</td><td>8</td><td>8</td><td>8</td><td>12</td><td>9</td><td>16</td><td>16</td><td>20</td><td>20</td><td>13</td><td>13</td></tr><tr><td>mean</td><td>6.0</td><td>6.8</td><td>6.8</td><td>7.2</td><td>8.8</td><td>9.6</td><td>8.6</td><td>9.8</td><td>8.6</td><td>10.3</td><td>13.1</td><td>11.8</td><td>12.5</td><td>11.7</td><td>12.4</td><td>11.5</td></tr><tr><td>range</td><td>5.7–6.4</td><td>6.1–7.2</td><td>5.6–8.3</td><td>6.4–8.0</td><td>7.8–10.0</td><td>8.8–10.3</td><td>7.7–9.0</td><td>8.6–11.2</td><td>6.9–9.6</td><td>9.3–11.4</td><td>10.7–14.2</td><td>10.0–13.0</td><td>10.8–15.0</td><td>9.2–13.6</td><td>10.6–13.5</td><td>9.9–12.7</td></tr></tbody></table>"
+                    ],
+                    "footnotes": [
                         {
-                            "type": "table",
-                            "doi": "10.7554/eLife.09560.013",
-                            "id": "tbl2",
-                            "label": "Table 2",
-                            "title": "Dental measures for <i>H. naledi</i> and comparative hominin species",
-                            "tables": [
-                                "<table><thead><tr><th colspan=\"18\">Maxillary</th></tr><tr><th/><th/><th colspan=\"2\">I<sup>1</sup></th><th colspan=\"2\">I<sup>2</sup></th><th colspan=\"2\">C</th><th colspan=\"2\">P<sup>3</sup></th><th colspan=\"2\">P<sup>4</sup></th><th colspan=\"2\">M<sup>1</sup></th><th colspan=\"2\">M<sup>2</sup></th><th colspan=\"2\">M<sup>3</sup></th></tr><tr><th/><th/><th>MD</th><th>LL</th><th>MD</th><th>LL</th><th>MD</th><th>LL</th><th>MD</th><th>BL</th><th>MD</th><th>BL</th><th>MD</th><th>BL</th><th>MD</th><th>BL</th><th>MD</th><th>BL</th></tr></thead><tbody><tr><td rowspan=\"3\"><italic>Au. anamensis</italic></td><td>n</td><td>3</td><td>5</td><td>–</td><td>2</td><td>6</td><td>7</td><td>7</td><td>6</td><td>5</td><td>3</td><td>12</td><td>10</td><td>10</td><td>8</td><td>9</td><td>8</td></tr><tr><td>mean</td><td>10.8</td><td>8.7</td><td>–</td><td>7.3</td><td>11.0</td><td>10.6</td><td>9.9</td><td>12.6</td><td>8.9</td><td>13.6</td><td>11.5</td><td>12.9</td><td>13.0</td><td>14.4</td><td>12.5</td><td>14.2</td></tr><tr><td>range</td><td>9.1–12.4</td><td>8.2–9.3</td><td>–</td><td>7.0–7.5</td><td>9.9–12.3</td><td>9.1–11.8</td><td>8.2–11.8</td><td>10.1–14.3</td><td>7.2–12.1</td><td>12.6–14.2</td><td>7.8–14.3</td><td>9.0–16.7</td><td>10.9–16.3</td><td>12.9–16.1</td><td>11.1–15.7</td><td>13.0–15.7</td></tr><tr><td rowspan=\"3\"><italic>Au. afarensis</italic></td><td>n</td><td>7</td><td>8</td><td>9</td><td>9</td><td>15</td><td>15</td><td>12</td><td>10</td><td>18</td><td>12</td><td>16</td><td>13</td><td>10</td><td>11</td><td>11</td><td>11</td></tr><tr><td>mean</td><td>10.7</td><td>8.4</td><td>7.5</td><td>7.2</td><td>9.9</td><td>10.8</td><td>8.8</td><td>12.4</td><td>9.1</td><td>12.4</td><td>12.0</td><td>13.4</td><td>12.9</td><td>14.6</td><td>12.7</td><td>14.5</td></tr><tr><td>range</td><td>9.9–11.8</td><td>7.1–9.7</td><td>6.6–8.2</td><td>6.2–8.1</td><td>8.8–11.6</td><td>9.3–12.5</td><td>7.7–9.7</td><td>11.3–13.4</td><td>7.6–10.8</td><td>11.1–14.5</td><td>10.5–13.8</td><td>12.0–15.0</td><td>12.1–13.6</td><td>13.4–15.2</td><td>10.9–14.8</td><td>13.1–16.3</td></tr><tr><td rowspan=\"3\"><italic>Au. africanus</italic></td><td>n</td><td>15</td><td>15</td><td>11</td><td>10</td><td>16</td><td>13</td><td>26</td><td>25</td><td>20</td><td>20</td><td>21</td><td>20</td><td>23</td><td>24</td><td>27</td><td>28</td></tr><tr><td>mean</td><td>10.7</td><td>8.3</td><td>6.9</td><td>6.8</td><td>9.9</td><td>10.3</td><td>9.2</td><td>12.7</td><td>9.5</td><td>13.4</td><td>12.9</td><td>13.9</td><td>14.1</td><td>15.7</td><td>14.2</td><td>16.0</td></tr><tr><td>range</td><td>9.4–12.5</td><td>7.4–9.1</td><td>5.8–8.0</td><td>5.6–7.9</td><td>8.8–11.0</td><td>8.7–12.0</td><td>8.5–10.2</td><td>10.7–14.5</td><td>7.2–11.0</td><td>12.4–15.3</td><td>11.7–14.4</td><td>12.9–15.3</td><td>12.1–16.3</td><td>12.8–17.9</td><td>11.2–16.9</td><td>13.1–18.6</td></tr><tr><td rowspan=\"3\"><italic>Au. sediba</italic></td><td>n</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>2</td><td>2</td></tr><tr><td>mean</td><td>10.1</td><td>6.9</td><td>7.2</td><td>6.6</td><td>9.0</td><td>8.8</td><td>9.0</td><td>11.2</td><td>9.3</td><td>12.1</td><td>12.9</td><td>12.0</td><td>12.9</td><td>13.7</td><td>13.0</td><td>13.5</td></tr><tr><td>range</td><td>–</td><td>–</td><td>–</td><td>–</td><td>–</td><td>–</td><td>–</td><td>–</td><td>–</td><td>–</td><td>–</td><td>–</td><td>–</td><td>–</td><td>12.6–13.3</td><td>12.9–14.1</td></tr><tr><td rowspan=\"3\"><italic>H. naledi</italic></td><td>n</td><td>–</td><td>5</td><td>4</td><td>8</td><td>10</td><td>9</td><td>10</td><td>10</td><td>7</td><td>7</td><td>12</td><td>13</td><td>11</td><td>9</td><td>7</td><td>7</td></tr><tr><td>mean</td><td>9.4</td><td>6.5</td><td>6.6</td><td>6.2</td><td>8.1</td><td>8.6</td><td>8.0</td><td>10.5</td><td>8.1</td><td>11.0</td><td>11.6</td><td>11.7</td><td>12.2</td><td>12.8</td><td>11.6</td><td>12.4</td></tr><tr><td>range</td><td>8.8–9.8</td><td>6.3–7.0</td><td>6.3–7.0</td><td>5.8–6.6</td><td>7.3–8.9</td><td>8.0–9.6</td><td>7.7–8.4</td><td>9.8–11.0</td><td>7.7–8.7</td><td>10.5–11.2</td><td>10.5–12.4</td><td>11.2–12.4</td><td>11.0–13.0</td><td>11.9–13.6</td><td>11.0–12.7</td><td>11.4–13.4</td></tr><tr><td rowspan=\"3\"><italic>H. habilis</italic></td><td>n</td><td>2</td><td>2</td><td>4</td><td>4</td><td>2</td><td>3</td><td>7</td><td>7</td><td>8</td><td>8</td><td>13</td><td>13</td><td>7</td><td>7</td><td>7</td><td>7</td></tr><tr><td>mean</td><td>10.6</td><td>8.0</td><td>7.4</td><td>6.6</td><td>9.0</td><td>9.8</td><td>9.0</td><td>11.9</td><td>9.2</td><td>12.1</td><td>12.7</td><td>13.0</td><td>12.7</td><td>14.3</td><td>12.3</td><td>14.7</td></tr><tr><td>range</td><td>10.1–11.1</td><td>7.3–8.7</td><td>6.7–8.1</td><td>6.0–7.9</td><td>8.5–9.4</td><td>8.5–11.6</td><td>8.1–9.6</td><td>11.0–12.7</td><td>8.5–9.9</td><td>11.0–13.1</td><td>11.6–13.9</td><td>12.1–14.1</td><td>11.8–13.5</td><td>13.5–16.2</td><td>11.3–13.9</td><td>13.2–16.6</td></tr><tr><td rowspan=\"3\"><italic>H. rudolfensis</italic></td><td>n</td><td>1</td><td>1</td><td>–</td><td>–</td><td>1</td><td>1</td><td>1</td><td>1</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td><td>1</td><td>1</td></tr><tr><td>mean</td><td>12.3</td><td>7.7</td><td>–</td><td>–</td><td>11.5</td><td>12.5</td><td>10.5</td><td>13.6</td><td>10.2</td><td>12.5</td><td>14.0</td><td>14.0</td><td>14.3</td><td>15.8</td><td>13.3</td><td>13.5</td></tr><tr><td>range</td><td>–</td><td>–</td><td>–</td><td>–</td><td>–</td><td>–</td><td>–</td><td>–</td><td>9.7–10.7</td><td>11.1–13.8</td><td>13.9–14.2</td><td>13.3–14.8</td><td>14.1–14.6</td><td>14.1–17.6</td><td>–</td><td>–</td></tr><tr><td rowspan=\"3\"><italic>H. erectus</italic></td><td>n</td><td>11</td><td>12</td><td>6</td><td>6</td><td>12</td><td>12</td><td>27</td><td>27</td><td>30</td><td>29</td><td>34</td><td>32</td><td>22</td><td>22</td><td>16</td><td>16</td></tr><tr><td>mean</td><td>10.3</td><td>8.1</td><td>7.7</td><td>8.0</td><td>9.5</td><td>10.0</td><td>8.5</td><td>11.8</td><td>8.1</td><td>11.6</td><td>12.2</td><td>13.2</td><td>12.0</td><td>13.3</td><td>10.5</td><td>12.8</td></tr><tr><td>range</td><td>8.1–12.6</td><td>7.0–11.7</td><td>6.0–8.3</td><td>6.9–8.5</td><td>8.5–11.1</td><td>9.0–11.8</td><td>7.1–10.1</td><td>9.5–13.8</td><td>7.0–9.4</td><td>9.9–13.4</td><td>10.1–14.6</td><td>11.0–15.9</td><td>10.3–13.6</td><td>10.9–15.5</td><td>8.7–14.7</td><td>10.4–15.8</td></tr><tr><td rowspan=\"3\"><italic>H. neanderthalensis</italic></td><td>n</td><td>28</td><td>37</td><td>35</td><td>41</td><td>28</td><td>29</td><td>16</td><td>17</td><td>21</td><td>19</td><td>23</td><td>24</td><td>27</td><td>28</td><td>22</td><td>21</td></tr><tr><td>mean</td><td>9.7</td><td>8.5</td><td>8.0</td><td>8.4</td><td>8.8</td><td>10.1</td><td>8.0</td><td>10.6</td><td>7.8</td><td>10.6</td><td>11.6</td><td>12.3</td><td>10.9</td><td>12.5</td><td>9.9</td><td>12.3</td></tr><tr><td>range</td><td>8.2–11.8</td><td>7.3–9.9</td><td>5.8–9.3</td><td>5.8–9.9</td><td>7.2–10.0</td><td>7.6–11.4</td><td>6.6–9.3</td><td>8.4–11.8</td><td>5.9–11.5</td><td>8.3–11.7</td><td>9.5–13.5</td><td>11.0–14.2</td><td>8.9–15.9</td><td>10.8–14.6</td><td>8.2–11.4</td><td>9.8–14.6</td></tr><tr><td rowspan=\"3\"><italic>H. heidelbergensis</italic></td><td>n</td><td>21</td><td>23</td><td>19</td><td>21</td><td>27</td><td>29</td><td>25</td><td>25</td><td>22</td><td>23</td><td>25</td><td>24</td><td>24</td><td>23</td><td>26</td><td>27</td></tr><tr><td>mean</td><td>9.6</td><td>7.8</td><td>7.7</td><td>7.8</td><td>8.8</td><td>9.8</td><td>7.9</td><td>10.6</td><td>7.6</td><td>10.3</td><td>11.2</td><td>11.9</td><td>10.2</td><td>12.3</td><td>8.9</td><td>11.6</td></tr><tr><td>range</td><td>8.7–10.7</td><td>7.1–9.9</td><td>7.2–8.4</td><td>7.3–8.6</td><td>8.1–11.0</td><td>8.8–11.8</td><td>7.1–9.0</td><td>9.2–12.2</td><td>7.0–8.8</td><td>9.1–11.5</td><td>9.9–12.3</td><td>10.3–13.2</td><td>8.1–12.1</td><td>11.1–13.8</td><td>7.6–11.0</td><td>10.0–13.2</td></tr><tr><td rowspan=\"3\">MP/LP African Homo</td><td>n</td><td>6</td><td>6</td><td>7</td><td>8</td><td>4</td><td>4</td><td>6</td><td>6</td><td>10</td><td>10</td><td>14</td><td>14</td><td>20</td><td>20</td><td>9</td><td>9</td></tr><tr><td>mean</td><td>9.0</td><td>7.8</td><td>7.4</td><td>7.2</td><td>8.9</td><td>9.7</td><td>8.4</td><td>10.8</td><td>8.1</td><td>10.8</td><td>12.3</td><td>13.2</td><td>11.0</td><td>12.9</td><td>9.2</td><td>11.7</td></tr><tr><td>range</td><td>6.3–10.9</td><td>6.6–8.7</td><td>6.0–9.3</td><td>6.1–8.5</td><td>8.2–9.5</td><td>8.8–10.0</td><td>8.1–8.7</td><td>9.9–11.8</td><td>7.5–9.3</td><td>9.4–12.8</td><td>10.4–14.0</td><td>12.0–15.0</td><td>7.8–13.0</td><td>11.0–15.0</td><td>7.6–10.2</td><td>10.0–13.2</td></tr></tbody></table>",
-                                "<table><thead><tr><th colspan=\"18\">Mandibular</th></tr><tr><th/><th/><th colspan=\"2\">I<sub>1</sub></th><th colspan=\"2\">I<sub>2</sub></th><th colspan=\"2\">C</th><th colspan=\"2\">P<sub>3</sub></th><th colspan=\"2\">P<sub>4</sub></th><th colspan=\"2\">M<sub>1</sub></th><th colspan=\"2\">M<sub>2</sub></th><th colspan=\"2\">M<sub>3</sub></th></tr><tr><th/><th/><th>MD</th><th>LL</th><th>MD</th><th>LL</th><th>MD</th><th>LL</th><th>MD</th><th>BL</th><th>MD</th><th>BL</th><th>MD</th><th>BL</th><th>MD</th><th>BL</th><th>MD</th><th>BL</th></tr></thead><tbody><tr><td rowspan=\"3\"><italic>Au. anamensis</italic></td><td>n</td><td>2</td><td>1</td><td>4</td><td>3</td><td>7</td><td>7</td><td>8</td><td>8</td><td>8</td><td>8</td><td>9</td><td>10</td><td>7</td><td>7</td><td>8</td><td>8</td></tr><tr><td>mean</td><td>6.9</td><td>7.4</td><td>7.8</td><td>8.3</td><td>10.0</td><td>10.4</td><td>12.4</td><td>9.2</td><td>9.1</td><td>11.3</td><td>12.9</td><td>12.3</td><td>14.0</td><td>13.4</td><td>15.3</td><td>13.4</td></tr><tr><td>range</td><td>6.8–6.9</td><td>–</td><td>6.6–8.7</td><td>7.9–8.6</td><td>6.6–13.9</td><td>9.2–11.4</td><td>11.3–13.4</td><td>8.6–10.0</td><td>7.4–9.8</td><td>9.6–13.2</td><td>11.6–13.8</td><td>10.2–14.8</td><td>13.0–15.9</td><td>12.3–14.9</td><td>13.7–17.0</td><td>12.1–15.2</td></tr><tr><td rowspan=\"3\"><italic>Au. afarensis</italic></td><td>n</td><td>7</td><td>8</td><td>7</td><td>6</td><td>13</td><td>16</td><td>27</td><td>26</td><td>24</td><td>21</td><td>32</td><td>26</td><td>31</td><td>27</td><td>26</td><td>23</td></tr><tr><td>mean</td><td>6.7</td><td>7.1</td><td>6.7</td><td>8.0</td><td>8.8</td><td>10.4</td><td>9.6</td><td>10.6</td><td>9.8</td><td>11.0</td><td>13.1</td><td>12.6</td><td>14.3</td><td>13.4</td><td>15.3</td><td>13.5</td></tr><tr><td>range</td><td>5.6–7.7</td><td>5.6–8.0</td><td>5.0–8.0</td><td>6.7–8.8</td><td>7.5–11.7</td><td>8.0–12.4</td><td>7.9–12.6</td><td>8.9–13.8</td><td>7.7–11.4</td><td>9.8–12.8</td><td>10.1–14.8</td><td>11.0–14.0</td><td>12.1–16.5</td><td>11.1–15.2</td><td>13.4–18.1</td><td>11.3–15.3</td></tr><tr><td rowspan=\"3\"><italic>Au. africanus</italic></td><td>n</td><td>11</td><td>12</td><td>12</td><td>13</td><td>23</td><td>25</td><td>20</td><td>21</td><td>25</td><td>23</td><td>29</td><td>32</td><td>38</td><td>38</td><td>34</td><td>35</td></tr><tr><td>mean</td><td>6.2</td><td>6.7</td><td>7.2</td><td>7.9</td><td>9.4</td><td>10.1</td><td>9.7</td><td>11.5</td><td>10.4</td><td>11.6</td><td>14.0</td><td>13.0</td><td>15.7</td><td>14.5</td><td>16.3</td><td>14.6</td></tr><tr><td>range</td><td>4.8–6.9</td><td>5.7–7.9</td><td>5.6–8.1</td><td>6.6–9.2</td><td>8.5–10.7</td><td>8.2–12.1</td><td>8.8–11.0</td><td>9.9–13.9</td><td>8.7–12.3</td><td>9.3–13.2</td><td>12.4–15.8</td><td>11.2–15.1</td><td>14.2–17.7</td><td>12.8–16.8</td><td>13.5–18.5</td><td>12.2–16.8</td></tr><tr><td rowspan=\"3\"><italic>Au. sediba</italic></td><td>n</td><td>–</td><td>1</td><td>–</td><td>1</td><td>2</td><td>2</td><td>1</td><td>1</td><td>1</td><td>1</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td></tr><tr><td>mean</td><td>–</td><td>5.9</td><td>–</td><td>6.6</td><td>7.7</td><td>8.0</td><td>8.1</td><td>9.2</td><td>8.8</td><td>9.7</td><td>13.1</td><td>11.4</td><td>14.5</td><td>12.8</td><td>14.9</td><td>13.2</td></tr><tr><td>range</td><td>–</td><td>–</td><td>–</td><td>–</td><td>7.3–8.0</td><td>7.4–8.6</td><td>–</td><td>–</td><td>–</td><td>–</td><td>13.1–13.1</td><td>11.3–11.5</td><td>14.4–14.5</td><td>12.3–13.2</td><td>14.9–14.9</td><td>12.5–13.6</td></tr><tr><td rowspan=\"3\"><italic>H. naledi</italic></td><td>n</td><td>7</td><td>7</td><td>5</td><td>6</td><td>7</td><td>7</td><td>9</td><td>10</td><td>6</td><td>6</td><td>11</td><td>11</td><td>9</td><td>9</td><td>6</td><td>5</td></tr><tr><td>mean</td><td>6.1</td><td>5.4</td><td>6.9</td><td>5.9</td><td>7.1</td><td>7.1</td><td>9.0</td><td>8.8</td><td>8.7</td><td>9.1</td><td>12.2</td><td>10.7</td><td>13.3</td><td>11.2</td><td>13.4</td><td>12.1</td></tr><tr><td>range</td><td>5.7–7.0</td><td>5.3–5.9</td><td>6.6–7.4</td><td>5.9–6.0</td><td>6.4–7.5</td><td>6.9–7.4</td><td>8.2–9.4</td><td>8.2–9.7</td><td>8.3–9.0</td><td>8.5–10.2</td><td>11.3–12.7</td><td>10.3–11.4</td><td>12.3–14.0</td><td>10.7–12.2</td><td>12.9–13.7</td><td>11.7–12.8</td></tr><tr><td rowspan=\"3\"><italic>H. habilis</italic></td><td>n</td><td>2</td><td>2</td><td>2</td><td>2</td><td>3</td><td>2</td><td>4</td><td>4</td><td>3</td><td>3</td><td>5</td><td>5</td><td>4</td><td>4</td><td>4</td><td>4</td></tr><tr><td>mean</td><td>6.4</td><td>6.8</td><td>7.4</td><td>7.6</td><td>8.7</td><td>9.0</td><td>9.6</td><td>9.6</td><td>9.9</td><td>10.5</td><td>13.7</td><td>11.9</td><td>15.0</td><td>13.5</td><td>15.4</td><td>13.3</td></tr><tr><td>range</td><td>6.4–6.5</td><td>6.7–7.0</td><td>7.2–7.7</td><td>7.6–7.6</td><td>7.6–9.6</td><td>7.9–10.0</td><td>9.0–10.6</td><td>8.6–11.1</td><td>9.0–10.5</td><td>9.9–11.0</td><td>13.0–14.8</td><td>10.9–12.8</td><td>14.2–15.7</td><td>12.0–15.1</td><td>14.8–15.9</td><td>12.4–14.4</td></tr><tr><td rowspan=\"3\"><italic>H. rudolfensis</italic></td><td>n</td><td>–</td><td>1</td><td>–</td><td>1</td><td>–</td><td>1</td><td>3</td><td>3</td><td>6</td><td>6</td><td>5</td><td>5</td><td>6</td><td>5</td><td>3</td><td>3</td></tr><tr><td>mean</td><td>–</td><td>5.4</td><td>–</td><td>6.7</td><td>–</td><td>8.3</td><td>9.9</td><td>11.1</td><td>10.1</td><td>11.4</td><td>14.0</td><td>12.7</td><td>16.0</td><td>13.7</td><td>16.4</td><td>14.1</td></tr><tr><td>range</td><td>–</td><td>–</td><td>–</td><td>–</td><td>–</td><td>–</td><td>9.0–10.7</td><td>9.5–12.3</td><td>8.8–11.8</td><td>9.8–12.2</td><td>12.8–15.2</td><td>11.4–13.2</td><td>14.0–18.3</td><td>12.7–14.9</td><td>15.6–17.0</td><td>13.1–14.6</td></tr><tr><td rowspan=\"3\"><italic>H. erectus</italic></td><td>n</td><td>11</td><td>12</td><td>14</td><td>16</td><td>14</td><td>16</td><td>30</td><td>30</td><td>25</td><td>26</td><td>43</td><td>43</td><td>41</td><td>40</td><td>26</td><td>27</td></tr><tr><td>mean</td><td>6.2</td><td>6.4</td><td>7</td><td>7.2</td><td>8.7</td><td>9</td><td>9</td><td>10.1</td><td>8.7</td><td>10.1</td><td>12.7</td><td>11.9</td><td>13.3</td><td>12.5</td><td>12.7</td><td>11.7</td></tr><tr><td>range</td><td>4.8–7.4</td><td>5.8–7.1</td><td>5.3–8.1</td><td>6.4–8.5</td><td>7.0–10.3</td><td>8.0–10.4</td><td>7.0–12.0</td><td>8.2–12.0</td><td>7.2–10.3</td><td>8.0–12.5</td><td>9.9–14.8</td><td>10.1–13.3</td><td>11.3–15.3</td><td>10.8–14.3</td><td>10.0–15.2</td><td>10.0–14.2</td></tr><tr><td rowspan=\"3\"><italic>H. neanderthalensis</italic></td><td>n</td><td>9</td><td>16</td><td>23</td><td>31</td><td>36</td><td>41</td><td>20</td><td>21</td><td>23</td><td>25</td><td>38</td><td>40</td><td>26</td><td>27</td><td>18</td><td>20</td></tr><tr><td>mean</td><td>5.6</td><td>7.2</td><td>6.8</td><td>7.8</td><td>7.8</td><td>8.8</td><td>7.9</td><td>9.1</td><td>7.8</td><td>9.4</td><td>11.8</td><td>11.1</td><td>12.1</td><td>11.3</td><td>12.0</td><td>11.0</td></tr><tr><td>range</td><td>4.2–6.4</td><td>5.2–8.8</td><td>5.9–7.5</td><td>6.8–9.0</td><td>6.7–8.8</td><td>6.8–10.3</td><td>6.6–9.1</td><td>8.0–10.3</td><td>6.5–9.4</td><td>8.5–10.5</td><td>10.1–13.6</td><td>10.2–12.9</td><td>9.3–14.0</td><td>8.8–12.4</td><td>11.2–13.9</td><td>9.9–12.2</td></tr><tr><td rowspan=\"3\"><italic>H. heidelbergensis</italic></td><td>n</td><td>21</td><td>22</td><td>19</td><td>20</td><td>23</td><td>24</td><td>22</td><td>22</td><td>26</td><td>26</td><td>29</td><td>29</td><td>29</td><td>29</td><td>32</td><td>32</td></tr><tr><td>mean</td><td>5.6</td><td>6.7</td><td>6.5</td><td>7.3</td><td>7.6</td><td>8.7</td><td>7.9</td><td>8.9</td><td>7.2</td><td>8.7</td><td>11.3</td><td>10.6</td><td>11.2</td><td>10.5</td><td>11.5</td><td>10.0</td></tr><tr><td>range</td><td>4.8–6.5</td><td>6.0–7.5</td><td>6.0–7.2</td><td>6.6–8.0</td><td>6.9–9.0</td><td>7.3–10.0</td><td>7.2–9.0</td><td>7.6–11.6</td><td>6.6–8.8</td><td>7.2–11.7</td><td>10.4–13.8</td><td>9.6–13.0</td><td>9.7–14.6</td><td>8.5–13.9</td><td>9.7–13.2</td><td>8.6–12.5</td></tr><tr><td rowspan=\"3\">MP/LP African Homo</td><td>n</td><td>5</td><td>5</td><td>8</td><td>8</td><td>8</td><td>8</td><td>8</td><td>8</td><td>12</td><td>9</td><td>16</td><td>16</td><td>20</td><td>20</td><td>13</td><td>13</td></tr><tr><td>mean</td><td>6.0</td><td>6.8</td><td>6.8</td><td>7.2</td><td>8.8</td><td>9.6</td><td>8.6</td><td>9.8</td><td>8.6</td><td>10.3</td><td>13.1</td><td>11.8</td><td>12.5</td><td>11.7</td><td>12.4</td><td>11.5</td></tr><tr><td>range</td><td>5.7–6.4</td><td>6.1–7.2</td><td>5.6–8.3</td><td>6.4–8.0</td><td>7.8–10.0</td><td>8.8–10.3</td><td>7.7–9.0</td><td>8.6–11.2</td><td>6.9–9.6</td><td>9.3–11.4</td><td>10.7–14.2</td><td>10.0–13.0</td><td>10.8–15.0</td><td>9.2–13.6</td><td>10.6–13.5</td><td>9.9–12.7</td></tr></tbody></table>"
-                            ],
-                            "footnotes": [
+                            "id": "tbl2-fn1",
+                            "label": "MP",
+                            "text": [
                                 {
-                                    "id": "tbl2-fn1",
-                                    "label": "MP",
-                                    "text": [
-                                        {
-                                            "type": "paragraph",
-                                            "text": "Middle Pleistocene."
-                                        }
-                                    ]
-                                },
+                                    "type": "paragraph",
+                                    "text": "Middle Pleistocene."
+                                }
+                            ]
+                        },
+                        {
+                            "id": "tbl2-fn2",
+                            "label": "LP",
+                            "text": [
                                 {
-                                    "id": "tbl2-fn2",
-                                    "label": "LP",
-                                    "text": [
-                                        {
-                                            "type": "paragraph",
-                                            "text": "Late Pleistocene."
-                                        }
-                                    ]
-                                },
+                                    "type": "paragraph",
+                                    "text": "Late Pleistocene."
+                                }
+                            ]
+                        },
+                        {
+                            "text": [
                                 {
-                                    "text": [
-                                        {
-                                            "type": "paragraph",
-                                            "text": "Some other footnote."
-                                        }
-                                    ]
+                                    "type": "paragraph",
+                                    "text": "Some other footnote."
                                 }
                             ]
                         }
@@ -522,66 +528,61 @@
                     "mathml": "<math><mrow><msub><mtext>e</mtext><mn>0</mn></msub><mo>=</mo><mfrac><mrow><msub><mtext>e</mtext><mrow><mn>0</mn><mo>,</mo><mtext>max</mtext></mrow></msub><mo>×</mo><mtext>GDP</mtext></mrow><mrow><mtext>GDP</mtext><mo>+</mo><msub><mtext>K</mtext><mrow><mtext>inc</mtext></mrow></msub></mrow></mfrac><mo>,</mo></mrow></math>"
                 },
                 {
-                    "type": "figure",
-                    "assets": [
+                    "type": "video",
+                    "doi": "10.7554/eLife.00569.019",
+                    "id": "media1",
+                    "label": "Video 1",
+                    "title": "<i>B. schlosseri</i> blood circulation",
+                    "caption": [
                         {
-                            "type": "video",
-                            "doi": "10.7554/eLife.00569.019",
-                            "id": "media1",
-                            "label": "Video 1",
-                            "title": "<i>B. schlosseri</i> blood circulation",
+                            "type": "paragraph",
+                            "text": "(<b>A)</b> Time-lapse acquisition of blood flow in the blood vessels (bv) and ampullae of a chimeric <em>B. schlosseri</em> colony, generated from a fusion between a mother and its offspring (fused). (<b>B</b>) Ampullae contract, buds develop, and a colony gets ready to replace the old generation. (<b>C</b>) Old generation zooids are getting resorbed (res. z) and replaced by the new generation (buds). (<b>D</b>) A heart beating and pumping blood in the primary bud of a different colony. (<b>E</b>) Blood flow through a common blood vessel between two allogeneic/compatible colonies, creating a natural chimera."
+                        }
+                    ],
+                    "sources": [
+                        {
+                            "mediaType": "video/mp4; codecs=\"avc1.42E01E, mp4a.40.2\"",
+                            "uri": "https://static-movie-usa.glencoesoftware.com/mp4/10.7554/659/0f10378e095dde7aaf579af504c4bfdc6fb86550/elife-00569-media1.mp4"
+                        },
+                        {
+                            "mediaType": "video/webm; codecs=\"vp8.0, vorbis\"",
+                            "uri": "https://static-movie-usa.glencoesoftware.com/webm/10.7554/659/0f10378e095dde7aaf579af504c4bfdc6fb86550/elife-00569-media1.webm"
+                        },
+                        {
+                            "mediaType": "video/ogg; codecs=\"theora, vorbis\"",
+                            "uri": "https://static-movie-usa.glencoesoftware.com/ogv/10.7554/659/0f10378e095dde7aaf579af504c4bfdc6fb86550/elife-00569-media1.ogv"
+                        }
+                    ],
+                    "placeholder": {
+                        "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif",
+                        "alt": "",
+                        "source": {
+                            "mediaType": "image/jpeg",
+                            "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif/full/full/0/default.jpg",
+                            "filename": "an-image.jpg"
+                        },
+                        "size": {
+                            "width": 4194,
+                            "height": 4714
+                        }
+                    },
+                    "width": 640,
+                    "height": 480,
+                    "sourceData": [
+                        {
+                            "doi": "10.7554/eLife.00666.015",
+                            "id": "video1sdata1",
+                            "label": "Video 1—Source data 1",
+                            "title": "Title of the source code",
                             "caption": [
                                 {
                                     "type": "paragraph",
-                                    "text": "(<b>A)</b> Time-lapse acquisition of blood flow in the blood vessels (bv) and ampullae of a chimeric <em>B. schlosseri</em> colony, generated from a fusion between a mother and its offspring (fused). (<b>B</b>) Ampullae contract, buds develop, and a colony gets ready to replace the old generation. (<b>C</b>) Old generation zooids are getting resorbed (res. z) and replaced by the new generation (buds). (<b>D</b>) A heart beating and pumping blood in the primary bud of a different colony. (<b>E</b>) Blood flow through a common blood vessel between two allogeneic/compatible colonies, creating a natural chimera."
+                                    "text": "Legend of the source code."
                                 }
                             ],
-                            "sources": [
-                                {
-                                    "mediaType": "video/mp4; codecs=\"avc1.42E01E, mp4a.40.2\"",
-                                    "uri": "https://static-movie-usa.glencoesoftware.com/mp4/10.7554/659/0f10378e095dde7aaf579af504c4bfdc6fb86550/elife-00569-media1.mp4"
-                                },
-                                {
-                                    "mediaType": "video/webm; codecs=\"vp8.0, vorbis\"",
-                                    "uri": "https://static-movie-usa.glencoesoftware.com/webm/10.7554/659/0f10378e095dde7aaf579af504c4bfdc6fb86550/elife-00569-media1.webm"
-                                },
-                                {
-                                    "mediaType": "video/ogg; codecs=\"theora, vorbis\"",
-                                    "uri": "https://static-movie-usa.glencoesoftware.com/ogv/10.7554/659/0f10378e095dde7aaf579af504c4bfdc6fb86550/elife-00569-media1.ogv"
-                                }
-                            ],
-                            "placeholder": {
-                                "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif",
-                                "alt": "",
-                                "source": {
-                                    "mediaType": "image/jpeg",
-                                    "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif/full/full/0/default.jpg",
-                                    "filename": "an-image.jpg"
-                                },
-                                "size": {
-                                    "width": 4194,
-                                    "height": 4714
-                                }
-                            },
-                            "width": 640,
-                            "height": 480,
-                            "sourceData": [
-                                {
-                                    "doi": "10.7554/eLife.00666.015",
-                                    "id": "video1sdata1",
-                                    "label": "Video 1—Source data 1",
-                                    "title": "Title of the source code",
-                                    "caption": [
-                                        {
-                                            "type": "paragraph",
-                                            "text": "Legend of the source code."
-                                        }
-                                    ],
-                                    "mediaType": "text/plain",
-                                    "uri": "https://elife-publishing-cdn.s3.amazonaws.com/00011/elife-00011-fig2-data1-v1.txt",
-                                    "filename": "elife-00011-fig2-data1-v1.txt"
-                                }
-                            ]
+                            "mediaType": "text/plain",
+                            "uri": "https://elife-publishing-cdn.s3.amazonaws.com/00011/elife-00011-fig2-data1-v1.txt",
+                            "filename": "elife-00011-fig2-data1-v1.txt"
                         }
                     ]
                 }
@@ -1379,35 +1380,30 @@
                             "text": "The composite model of DH3 and DH4 was used to estimate the cranial capacity for the smaller morphotype. In GeoMagic Studio 14.0, the endocranial surface of the composite was carefully selected from the ectocranial surface and copied as a new object. In order to obtain a volume calculation the model has to be a closed surface, meaning that all of the holes in the surface model had to be filled. Small holes in the model were filled using the ‘Fill by Curvature’ function. Larger holes were filled in by sections. For example, the cranial base was filled in using a number of transverse sections, so that in the absence of the cranial base the contour of the various cranial fossae and the petrous portions of the temporal could be preserved as best as possible. When appropriate (e.g., around angular portions of the petrous bone), small sections were filled using a flat hole filling function. The new surfaces created by the hole-filling mechanism were carefully monitored and repeated until an acceptable model that appeared to best approximate the missing portions was obtained. The result is a closed model approximation of the endocranium, of which a volume can be calculated by GeoMagic Studio (Figure 19, Figure 20). The volume of the smaller composite cranium (DH3 and DH4) indicates a cranial capacity of approximately 465 cm<sup>3</sup>."
                         },
                         {
-                            "type": "figure",
-                            "assets": [
+                            "type": "image",
+                            "doi": "10.7554/eLife.09560.024",
+                            "id": "fig19",
+                            "label": "Figure 19",
+                            "title": "Virtual reconstruction of the endocranium of the composite cranium from DH3 and DH4.",
+                            "caption": [
                                 {
-                                    "type": "image",
-                                    "doi": "10.7554/eLife.09560.024",
-                                    "id": "fig19",
-                                    "label": "Figure 19",
-                                    "title": "Virtual reconstruction of the endocranium of the composite cranium from DH3 and DH4.",
-                                    "caption": [
-                                        {
-                                            "type": "paragraph",
-                                            "text": "(<b>A</b>) Lateral view. (<b>B</b>) Superior view. (<b>C</b>) Inferior view. In all views, anterior is to towards the left."
-                                        }
-                                    ],
-                                    "image": {
-                                        "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif",
-                                        "alt": "",
-                                        "source": {
-                                            "mediaType": "image/jpeg",
-                                            "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif/full/full/0/default.jpg",
-                                            "filename": "an-image.jpg"
-                                        },
-                                        "size": {
-                                            "width": 4194,
-                                            "height": 4714
-                                        }
-                                    }
+                                    "type": "paragraph",
+                                    "text": "(<b>A</b>) Lateral view. (<b>B</b>) Superior view. (<b>C</b>) Inferior view. In all views, anterior is to towards the left."
                                 }
-                            ]
+                            ],
+                            "image": {
+                                "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif",
+                                "alt": "",
+                                "source": {
+                                    "mediaType": "image/jpeg",
+                                    "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif/full/full/0/default.jpg",
+                                    "filename": "an-image.jpg"
+                                },
+                                "size": {
+                                    "width": 4194,
+                                    "height": 4714
+                                }
+                            }
                         }
                     ]
                 }
