@@ -4,11 +4,6 @@ type: object
 allOf:
   - $ref: ../snippets/article.v1.yaml
   - properties:
-        image:
-            type: object
-            properties:
-                banner:
-                    $ref: ../misc/image.v1.yaml
         issue:
             type: integer
             minimum: 1
