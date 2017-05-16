@@ -98,10 +98,6 @@ properties:
                 description: Number of research articles in the result set
                 type: integer
                 minimum: 0
-            research-exchange:
-                description: Number of research exchanges in the result set
-                type: integer
-                minimum: 0
             retraction:
                 description: Number of retraction articles in the result set
                 type: integer
@@ -112,6 +108,10 @@ properties:
                 minimum: 0
             replication-study:
                 description: Number of replication studies in the result set
+                type: integer
+                minimum: 0
+            scientific-correspondence:
+                description: Number of scientific correspondence articles in the result set
                 type: integer
                 minimum: 0
             short-report:
@@ -149,10 +149,10 @@ properties:
           - insight
           - research-advance
           - research-article
-          - research-exchange
           - retraction
           - registered-report
           - replication-study
+          - scientific-correspondence
           - short-report
           - tools-resources
           - blog-article
