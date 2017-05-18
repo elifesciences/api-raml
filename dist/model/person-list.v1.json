@@ -13,159 +13,256 @@
             "type": "array",
             "items": {
                 "$schema": "http://json-schema.org/draft-04/schema#",
-                "title": "Person snippet",
+                "title": "Person",
                 "type": "object",
                 "allOf": [
                     {
                         "$schema": "http://json-schema.org/draft-04/schema#",
-                        "title": "Person",
+                        "title": "Person snippet",
                         "type": "object",
-                        "properties": {
-                            "name": {
-                                "title": "Name",
+                        "allOf": [
+                            {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "title": "Person",
                                 "type": "object",
                                 "properties": {
-                                    "preferred": {
-                                        "title": "Preferred name",
-                                        "description": "This is generally the name that is used by the person for English-language publications.\n\nFor example:\n  - Randy Schekman\n  - K. VijayRaghavan\n  - Li Wenhui\n",
-                                        "type": "string",
-                                        "minLength": 1
+                                    "name": {
+                                        "title": "Name",
+                                        "type": "object",
+                                        "properties": {
+                                            "preferred": {
+                                                "title": "Preferred name",
+                                                "description": "This is generally the name that is used by the person for English-language publications.\n\nFor example:\n  - Randy Schekman\n  - K. VijayRaghavan\n  - Li Wenhui\n",
+                                                "type": "string",
+                                                "minLength": 1
+                                            },
+                                            "index": {
+                                                "title": "Index name",
+                                                "description": "This is the name that should be used for indexing people.\n\nFor example:\n  - Schekman, Randy\n  - VijayRaghavan, Krishnaswamy\n  - Li Wenhui\n"
+                                            }
+                                        },
+                                        "required": [
+                                            "preferred",
+                                            "index"
+                                        ]
                                     },
-                                    "index": {
-                                        "title": "Index name",
-                                        "description": "This is the name that should be used for indexing people.\n\nFor example:\n  - Schekman, Randy\n  - VijayRaghavan, Krishnaswamy\n  - Li Wenhui\n"
+                                    "orcid": {
+                                        "title": "ORCID",
+                                        "type": "string",
+                                        "pattern": "^[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{3}[0-9X]$"
                                     }
                                 },
                                 "required": [
-                                    "preferred",
-                                    "index"
+                                    "name"
                                 ]
                             },
-                            "orcid": {
-                                "title": "ORCID",
-                                "type": "string",
-                                "pattern": "^[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{3}[0-9X]$"
+                            {
+                                "properties": {
+                                    "id": {
+                                        "$schema": "http://json-schema.org/draft-04/schema#",
+                                        "title": "eLife ID",
+                                        "type": "string",
+                                        "pattern": "^[a-z0-9-]+$"
+                                    },
+                                    "type": {
+                                        "title": "Type",
+                                        "type": "string",
+                                        "enum": [
+                                            "director",
+                                            "executive",
+                                            "leadership",
+                                            "reviewing-editor",
+                                            "senior-editor"
+                                        ]
+                                    },
+                                    "image": {
+                                        "$schema": "http://json-schema.org/draft-04/schema#",
+                                        "title": "IIIF image",
+                                        "type": "object",
+                                        "properties": {
+                                            "uri": {
+                                                "title": "IIIF Image",
+                                                "type": "string",
+                                                "format": "uri",
+                                                "pattern": "^https://"
+                                            },
+                                            "alt": {
+                                                "title": "Alternative text",
+                                                "type": "string"
+                                            },
+                                            "source": {
+                                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                                "title": "File",
+                                                "type": "object",
+                                                "properties": {
+                                                    "mediaType": {
+                                                        "$schema": "http://json-schema.org/draft-04/schema#",
+                                                        "title": "Media type",
+                                                        "type": "string",
+                                                        "pattern": "^([a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+/[a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+)(; *[a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+=(([a-zA-Z0-9\\.\\-]+)|(\".+\")))*$"
+                                                    },
+                                                    "uri": {
+                                                        "title": "Source data URI",
+                                                        "type": "string",
+                                                        "format": "uri"
+                                                    },
+                                                    "filename": {
+                                                        "title": "Filename",
+                                                        "type": "string",
+                                                        "pattern": "^[A-Za-z0-9_. ()-]+\\.[a-z0-9]+$"
+                                                    }
+                                                },
+                                                "required": [
+                                                    "mediaType",
+                                                    "uri",
+                                                    "filename"
+                                                ]
+                                            },
+                                            "size": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "width": {
+                                                        "type": "integer",
+                                                        "minimum": 1
+                                                    },
+                                                    "height": {
+                                                        "type": "integer",
+                                                        "minimum": 1
+                                                    }
+                                                },
+                                                "required": [
+                                                    "width",
+                                                    "height"
+                                                ]
+                                            },
+                                            "focalPoint": {
+                                                "type": "object",
+                                                "title": "Focal point",
+                                                "description": "Point on the image that is considered to be the focal point of the image.\n\nIf not present, 50 can be used for both `x` and `y`.\n",
+                                                "properties": {
+                                                    "x": {
+                                                        "description": "Percentage on the horizontal axis.\n",
+                                                        "type": "integer",
+                                                        "minimum": 0,
+                                                        "maximum": 100
+                                                    },
+                                                    "y": {
+                                                        "description": "Percentage on the vertical axis.\n",
+                                                        "type": "integer",
+                                                        "minimum": 0,
+                                                        "maximum": 100
+                                                    }
+                                                },
+                                                "required": [
+                                                    "x",
+                                                    "y"
+                                                ]
+                                            }
+                                        },
+                                        "required": [
+                                            "uri",
+                                            "alt",
+                                            "source",
+                                            "size"
+                                        ]
+                                    }
+                                },
+                                "required": [
+                                    "id",
+                                    "type"
+                                ]
                             }
-                        },
-                        "required": [
-                            "name"
                         ]
                     },
                     {
                         "properties": {
-                            "id": {
-                                "$schema": "http://json-schema.org/draft-04/schema#",
-                                "title": "eLife ID",
-                                "type": "string",
-                                "pattern": "^[a-z0-9-]+$"
-                            },
-                            "type": {
-                                "title": "Type",
-                                "type": "string",
-                                "enum": [
-                                    "director",
-                                    "executive",
-                                    "leadership",
-                                    "reviewing-editor",
-                                    "senior-editor"
-                                ]
-                            },
-                            "image": {
-                                "$schema": "http://json-schema.org/draft-04/schema#",
-                                "title": "IIIF image",
+                            "research": {
+                                "title": "Research details",
                                 "type": "object",
                                 "properties": {
-                                    "uri": {
-                                        "title": "IIIF Image",
-                                        "type": "string",
-                                        "format": "uri",
-                                        "pattern": "^https://"
-                                    },
-                                    "alt": {
-                                        "title": "Alternative text",
-                                        "type": "string"
-                                    },
-                                    "source": {
-                                        "$schema": "http://json-schema.org/draft-04/schema#",
-                                        "title": "File",
-                                        "type": "object",
-                                        "properties": {
-                                            "mediaType": {
-                                                "$schema": "http://json-schema.org/draft-04/schema#",
-                                                "title": "Media type",
-                                                "type": "string",
-                                                "pattern": "^([a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+/[a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+)(; *[a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+=(([a-zA-Z0-9\\.\\-]+)|(\".+\")))*$"
+                                    "expertises": {
+                                        "title": "Expertises",
+                                        "type": "array",
+                                        "items": {
+                                            "$schema": "http://json-schema.org/draft-04/schema#",
+                                            "title": "Subject snippet",
+                                            "type": "object",
+                                            "properties": {
+                                                "id": {
+                                                    "$ref": "#/properties/items/items/allOf/0/allOf/1/properties/id"
+                                                },
+                                                "name": {
+                                                    "description": "Name",
+                                                    "type": "string",
+                                                    "minLength": 1
+                                                }
                                             },
-                                            "uri": {
-                                                "title": "Source data URI",
-                                                "type": "string",
-                                                "format": "uri"
-                                            },
-                                            "filename": {
-                                                "title": "Filename",
-                                                "type": "string",
-                                                "pattern": "^[A-Za-z0-9_. ()-]+\\.[a-z0-9]+$"
-                                            }
+                                            "required": [
+                                                "id",
+                                                "name"
+                                            ]
                                         },
-                                        "required": [
-                                            "mediaType",
-                                            "uri",
-                                            "filename"
-                                        ]
+                                        "minItems": 1,
+                                        "uniqueItems": true
                                     },
-                                    "size": {
-                                        "type": "object",
-                                        "properties": {
-                                            "width": {
-                                                "type": "integer",
-                                                "minimum": 1
-                                            },
-                                            "height": {
-                                                "type": "integer",
-                                                "minimum": 1
-                                            }
+                                    "focuses": {
+                                        "title": "Research focuses",
+                                        "type": "array",
+                                        "items": {
+                                            "type": "string",
+                                            "minLength": 1
                                         },
-                                        "required": [
-                                            "width",
-                                            "height"
-                                        ]
+                                        "uniqueItems": true
                                     },
-                                    "focalPoint": {
-                                        "type": "object",
-                                        "title": "Focal point",
-                                        "description": "Point on the image that is considered to be the focal point of the image.\n\nIf not present, 50 can be used for both `x` and `y`.\n",
-                                        "properties": {
-                                            "x": {
-                                                "description": "Percentage on the horizontal axis.\n",
-                                                "type": "integer",
-                                                "minimum": 0,
-                                                "maximum": 100
-                                            },
-                                            "y": {
-                                                "description": "Percentage on the vertical axis.\n",
-                                                "type": "integer",
-                                                "minimum": 0,
-                                                "maximum": 100
-                                            }
+                                    "organisms": {
+                                        "title": "Research organisms",
+                                        "type": "array",
+                                        "items": {
+                                            "type": "string",
+                                            "minLength": 1
                                         },
-                                        "required": [
-                                            "x",
-                                            "y"
-                                        ]
+                                        "uniqueItems": true
                                     }
                                 },
                                 "required": [
-                                    "uri",
-                                    "alt",
-                                    "source",
-                                    "size"
+                                    "expertises",
+                                    "focuses"
                                 ]
+                            },
+                            "profile": {
+                                "title": "Profile",
+                                "type": "array",
+                                "items": {
+                                    "oneOf": [
+                                        {
+                                            "$schema": "http://json-schema.org/draft-04/schema#",
+                                            "title": "Paragraph",
+                                            "type": "object",
+                                            "properties": {
+                                                "type": {
+                                                    "type": "string",
+                                                    "enum": [
+                                                        "paragraph"
+                                                    ]
+                                                },
+                                                "text": {
+                                                    "title": "Text",
+                                                    "type": "string"
+                                                }
+                                            },
+                                            "required": [
+                                                "type",
+                                                "text"
+                                            ]
+                                        }
+                                    ]
+                                }
+                            },
+                            "competingInterests": {
+                                "title": "Competing interests statement",
+                                "type": "string"
                             }
-                        },
-                        "required": [
-                            "id",
-                            "type"
-                        ]
+                        }
                     }
                 ]
             },
