@@ -43,11 +43,6 @@ properties:
               - mediaType
               - uri
         minItems: 1
-    subjects:
-        description: Episode subjects
-        type: array
-        items:
-            $ref: ../snippets/subject.v1.yaml
 required:
   - number
   - title
