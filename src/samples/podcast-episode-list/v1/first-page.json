@@ -56,16 +56,6 @@
                     "mediaType": "audio/mpeg",
                     "uri": "https://nakeddiscovery.com/scripts/mp3s/audio/eLife_Podcast_16.06.mp3"
                 }
-            ],
-            "subjects": [
-                {
-                    "id": "biochemistry",
-                    "name": "Biochemistry"
-                },
-                {
-                    "id": "ecology",
-                    "name": "Ecology"
-                }
             ]
         }
     ]
