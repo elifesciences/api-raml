@@ -603,13 +603,6 @@
                                                             ]
                                                         },
                                                         "minItems": 1
-                                                    },
-                                                    "subjects": {
-                                                        "description": "Episode subjects",
-                                                        "type": "array",
-                                                        "items": {
-                                                            "$ref": "#/properties/items/items/oneOf/0/allOf/0/properties/subjects/items"
-                                                        }
                                                     }
                                                 },
                                                 "required": [

@@ -707,13 +707,6 @@
                                                             ]
                                                         },
                                                         "minItems": 1
-                                                    },
-                                                    "subjects": {
-                                                        "description": "Episode subjects",
-                                                        "type": "array",
-                                                        "items": {
-                                                            "$ref": "#/properties/subjects/items/allOf/0"
-                                                        }
                                                     }
                                                 },
                                                 "required": [

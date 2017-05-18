@@ -168,32 +168,6 @@
                             ]
                         },
                         "minItems": 1
-                    },
-                    "subjects": {
-                        "description": "Episode subjects",
-                        "type": "array",
-                        "items": {
-                            "$schema": "http://json-schema.org/draft-04/schema#",
-                            "title": "Subject snippet",
-                            "type": "object",
-                            "properties": {
-                                "id": {
-                                    "$schema": "http://json-schema.org/draft-04/schema#",
-                                    "title": "eLife ID",
-                                    "type": "string",
-                                    "pattern": "^[a-z0-9-]+$"
-                                },
-                                "name": {
-                                    "description": "Name",
-                                    "type": "string",
-                                    "minLength": 1
-                                }
-                            },
-                            "required": [
-                                "id",
-                                "name"
-                            ]
-                        }
                     }
                 },
                 "required": [
