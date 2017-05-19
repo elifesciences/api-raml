@@ -52,32 +52,38 @@
     ],
     "selectedCurator": {
         "id": "pjha",
-        "type": "senior-editor",
+        "type": {
+            "id": "senior-editor",
+            "label": "Senior Editor"
+        },
         "name": {
             "preferred": "Prabhat Jha",
             "index": "Jha, Prabhat"
         },
-        "title": "Senior Editor",
         "etAl": true
     },
     "curators": [
         {
             "id": "bcooper",
-            "type": "reviewing-editor",
+            "type": {
+                "id": "reviewing-editor",
+                "label": "Reviewing Editor"
+            },
             "name": {
                 "preferred": "Ben Cooper",
                 "index": "Cooper, Ben"
-            },
-            "title": "Reviewing Editor"
+            }
         },
         {
             "id": "pjha",
-            "type": "senior-editor",
+            "type": {
+                "id": "senior-editor",
+                "label": "Senior Editor"
+            },
             "name": {
                 "preferred": "Prabhat Jha",
                 "index": "Jha, Prabhat"
-            },
-            "title": "Senior Editor"
+            }
         }
     ],
     "summary": [

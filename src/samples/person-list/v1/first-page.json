@@ -3,21 +3,25 @@
     "items": [
         {
             "id": "rschekman",
-            "type": "leadership",
+            "type": {
+                "id": "leadership",
+                "label": "Editor-in-Chief"
+            },
             "name": {
                 "preferred": "Randy Schekman",
                 "index": "Schekman, Randy"
-            },
-            "title": "Editor-in-Chief"
+            }
         },
         {
             "id": "jsmith",
-            "type": "senior-editor",
+            "type": {
+                "id": "senior-editor",
+                "label": "Senior Editor"
+            },
             "name": {
                 "preferred": "John Smith III",
                 "index": "Smith, John, III"
             },
-            "title": "Senior Editor",
             "orcid": "0000-0002-1825-0097",
             "image": {
                 "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif",
