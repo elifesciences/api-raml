@@ -1,6 +1,9 @@
 {
     "id": "jsmith",
-    "type": "senior-editor",
+    "type": {
+        "id": "senior-editor",
+        "label": "Senior Editor"
+    },
     "name": {
         "preferred": "John Smith III",
         "index": "Smith, John, III"
