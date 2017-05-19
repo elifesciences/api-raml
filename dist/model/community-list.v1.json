@@ -462,13 +462,26 @@
                                                                             },
                                                                             "type": {
                                                                                 "title": "Type",
-                                                                                "type": "string",
-                                                                                "enum": [
-                                                                                    "director",
-                                                                                    "executive",
-                                                                                    "leadership",
-                                                                                    "reviewing-editor",
-                                                                                    "senior-editor"
+                                                                                "type": "object",
+                                                                                "properties": {
+                                                                                    "id": {
+                                                                                        "type": "string",
+                                                                                        "enum": [
+                                                                                            "director",
+                                                                                            "executive",
+                                                                                            "leadership",
+                                                                                            "reviewing-editor",
+                                                                                            "senior-editor"
+                                                                                        ]
+                                                                                    },
+                                                                                    "label": {
+                                                                                        "type": "string",
+                                                                                        "minLength": 1
+                                                                                    }
+                                                                                },
+                                                                                "required": [
+                                                                                    "id",
+                                                                                    "label"
                                                                                 ]
                                                                             },
                                                                             "image": {

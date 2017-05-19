@@ -52,7 +52,10 @@
     ],
     "selectedCurator": {
         "id": "pjha",
-        "type": "senior-editor",
+        "type": {
+            "id": "senior-editor",
+            "label": "Senior Editor"
+        },
         "name": {
             "preferred": "Prabhat Jha",
             "index": "Jha, Prabhat"
@@ -62,7 +65,10 @@
     "curators": [
         {
             "id": "bcooper",
-            "type": "reviewing-editor",
+            "type": {
+                "id": "reviewing-editor",
+                "label": "Reviewing Editor"
+            },
             "name": {
                 "preferred": "Ben Cooper",
                 "index": "Cooper, Ben"
@@ -70,7 +76,10 @@
         },
         {
             "id": "pjha",
-            "type": "senior-editor",
+            "type": {
+                "id": "senior-editor",
+                "label": "Senior Editor"
+            },
             "name": {
                 "preferred": "Prabhat Jha",
                 "index": "Jha, Prabhat"
