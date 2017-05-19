@@ -42,10 +42,10 @@
                                             "insight",
                                             "research-advance",
                                             "research-article",
-                                            "research-exchange",
                                             "retraction",
                                             "registered-report",
                                             "replication-study",
+                                            "scientific-correspondence",
                                             "short-report",
                                             "tools-resources"
                                         ]
@@ -603,13 +603,6 @@
                                                             ]
                                                         },
                                                         "minItems": 1
-                                                    },
-                                                    "subjects": {
-                                                        "description": "Episode subjects",
-                                                        "type": "array",
-                                                        "items": {
-                                                            "$ref": "#/properties/items/items/oneOf/0/allOf/0/properties/subjects/items"
-                                                        }
                                                     }
                                                 },
                                                 "required": [

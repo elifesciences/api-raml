@@ -37,27 +37,6 @@
                     "type": "object",
                     "properties": {
                         "thumbnail": {
-                            "$ref": "#/allOf/1/properties/image/properties/banner"
-                        }
-                    },
-                    "required": [
-                        "thumbnail"
-                    ]
-                }
-            },
-            "required": [
-                "number",
-                "title",
-                "published",
-                "image"
-            ]
-        },
-        {
-            "properties": {
-                "image": {
-                    "type": "object",
-                    "properties": {
-                        "banner": {
                             "$schema": "http://json-schema.org/draft-04/schema#",
                             "title": "IIIF image",
                             "type": "object",
@@ -150,9 +129,19 @@
                         }
                     },
                     "required": [
-                        "banner"
+                        "thumbnail"
                     ]
-                },
+                }
+            },
+            "required": [
+                "number",
+                "title",
+                "published",
+                "image"
+            ]
+        },
+        {
+            "properties": {
                 "content": {
                     "description": "Content",
                     "type": "array",
@@ -323,7 +312,7 @@
                                                             {
                                                                 "properties": {
                                                                     "image": {
-                                                                        "$ref": "#/allOf/1/properties/image/properties/banner"
+                                                                        "$ref": "#/allOf/0/properties/image/properties/thumbnail"
                                                                     },
                                                                     "attribution": {
                                                                         "title": "Attribution",
@@ -350,7 +339,7 @@
                                                                                     ]
                                                                                 },
                                                                                 {
-                                                                                    "$ref": "#/allOf/1/properties/image/properties/banner/properties/source"
+                                                                                    "$ref": "#/allOf/0/properties/image/properties/thumbnail/properties/source"
                                                                                 }
                                                                             ]
                                                                         }
@@ -627,7 +616,7 @@
                                                                         "mediaType": {
                                                                             "allOf": [
                                                                                 {
-                                                                                    "$ref": "#/allOf/1/properties/image/properties/banner/properties/source/properties/mediaType"
+                                                                                    "$ref": "#/allOf/0/properties/image/properties/thumbnail/properties/source/properties/mediaType"
                                                                                 },
                                                                                 {
                                                                                     "pattern": "^video/"
@@ -649,7 +638,7 @@
                                                                 "minItems": 1
                                                             },
                                                             "placeholder": {
-                                                                "$ref": "#/allOf/1/properties/image/properties/banner"
+                                                                "$ref": "#/allOf/0/properties/image/properties/thumbnail"
                                                             },
                                                             "width": {
                                                                 "title": "Width",

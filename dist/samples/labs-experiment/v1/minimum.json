@@ -3,19 +3,6 @@
     "title": "Experimental eLife Lens search page",
     "published": "2015-04-01T11:32:47Z",
     "image": {
-        "banner": {
-            "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif",
-            "alt": "",
-            "source": {
-                "mediaType": "image/jpeg",
-                "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif/full/full/0/default.jpg",
-                "filename": "an-image.jpg"
-            },
-            "size": {
-                "width": 4194,
-                "height": 4714
-            }
-        },
         "thumbnail": {
             "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif",
             "alt": "",

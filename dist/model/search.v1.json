@@ -42,10 +42,10 @@
                                             "insight",
                                             "research-advance",
                                             "research-article",
-                                            "research-exchange",
                                             "retraction",
                                             "registered-report",
                                             "replication-study",
+                                            "scientific-correspondence",
                                             "short-report",
                                             "tools-resources"
                                         ]
@@ -707,13 +707,6 @@
                                                             ]
                                                         },
                                                         "minItems": 1
-                                                    },
-                                                    "subjects": {
-                                                        "description": "Episode subjects",
-                                                        "type": "array",
-                                                        "items": {
-                                                            "$ref": "#/properties/subjects/items/allOf/0"
-                                                        }
                                                     }
                                                 },
                                                 "required": [
@@ -810,11 +803,6 @@
                     "type": "integer",
                     "minimum": 0
                 },
-                "research-exchange": {
-                    "description": "Number of research exchanges in the result set",
-                    "type": "integer",
-                    "minimum": 0
-                },
                 "retraction": {
                     "description": "Number of retraction articles in the result set",
                     "type": "integer",
@@ -827,6 +815,11 @@
                 },
                 "replication-study": {
                     "description": "Number of replication studies in the result set",
+                    "type": "integer",
+                    "minimum": 0
+                },
+                "scientific-correspondence": {
+                    "description": "Number of scientific correspondence articles in the result set",
                     "type": "integer",
                     "minimum": 0
                 },
@@ -873,10 +866,10 @@
                 "insight",
                 "research-advance",
                 "research-article",
-                "research-exchange",
                 "retraction",
                 "registered-report",
                 "replication-study",
+                "scientific-correspondence",
                 "short-report",
                 "tools-resources",
                 "blog-article",

@@ -11,9 +11,6 @@ allOf:
                     $ref: ../misc/image.v1.yaml
             required:
               - banner
-        subTitle:
-            description: Sub-title
-            type: string
         curators:
             description: List of curators, ordered by name
             type: array
