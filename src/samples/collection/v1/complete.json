@@ -57,6 +57,7 @@
             "preferred": "Prabhat Jha",
             "index": "Jha, Prabhat"
         },
+        "title": "Senior Editor",
         "etAl": true
     },
     "curators": [
@@ -66,7 +67,8 @@
             "name": {
                 "preferred": "Ben Cooper",
                 "index": "Cooper, Ben"
-            }
+            },
+            "title": "Reviewing Editor"
         },
         {
             "id": "pjha",
@@ -74,7 +76,8 @@
             "name": {
                 "preferred": "Prabhat Jha",
                 "index": "Jha, Prabhat"
-            }
+            },
+            "title": "Senior Editor"
         }
     ],
     "summary": [

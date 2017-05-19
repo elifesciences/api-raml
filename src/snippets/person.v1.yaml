@@ -15,8 +15,12 @@ allOf:
               - leadership
               - reviewing-editor
               - senior-editor
+        title:
+            title: Title
+            type: string
         image:
             $ref: ../misc/image.v1.yaml
     required:
       - id
       - type
+      - title
