@@ -18,11 +18,6 @@ allOf:
             type: array
             items:
                 $ref: ../misc/footnote.v1.yaml
-        sourceData:
-            title: Source data
-            type: array
-            items:
-                $ref: ../misc/asset-file.v1.yaml
     required:
       - type
       - tables

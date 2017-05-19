@@ -2,14 +2,8 @@ $schema: http://json-schema.org/draft-04/schema#
 title: Asset
 type: object
 properties:
-    doi:
-        $ref: doi.v1.yaml
     id:
         $ref: html-id.v1.yaml
-    label:
-        title: Label
-        type: string
-        minLength: 1
     title:
         title: Title
         type: string
@@ -37,7 +31,8 @@ properties:
                             pattern: ^<table>[\s\S]+</table>$
                 additionalProperties: false
         minItems: 1
-dependencies:
-    doi: [id]
-    caption: [title]
-    label: [title]
+    attribution:
+        title: Attribution
+        type: array
+        items:
+            type: string

@@ -758,31 +758,34 @@
                     "text": "<i>Botryllus schlosseri</i> is an invasive colonial urochordate, living in large communities consisting of multiple colonies organized into expansive mats that coat a variety of marine surfaces, such as rocks, molluscs, multicellular algae, and ship hulls (<a href=\"#bib80\">Stoner et al., 2002</a>). Communities develop among compatible colonies, governed by a genetically encoded histocompatibility system (<a href=\"#bib66\">Sabbadin, 1962</a>; <a href=\"#bib70\">Scofield et al., 1982</a>). The progeny of each colony usually represents a clone of the vascularly connected, asexually reproducing individuals (zooids) derived from a single planktonic larva (<a href=\"#bib49\">Manni and Burighel, 2006</a>; <a href=\"#fig1\">Figure 1A–D</a>). Compatible colonies fuse their blood vessels to generate a chimera, while incompatible colonies reject one another, maintaining individuality (<a href=\"#bib66\">Sabbadin, 1962</a>; <a href=\"#bib70\">Scofield et al., 1982</a>; <a href=\"#bib97\">Voskoboynik et al., 2013</a>). Following the fusion of blood vessels between colonies, the circulating stem cells of one partner colony can compete and replace the germline and/or the soma of the other partner (<a href=\"#bib78\">Stoner and Weissman, 1996</a>; <a href=\"#bib79\">Stoner et al., 1999</a>; <a href=\"#bib41\">Laird et al., 2005</a>; <a href=\"#bib88\">Voskoboynik et al., 2008</a>; <a href=\"#bib64\">Rinkevich et al., 2013</a>), a phenomenon analogous to allogeneic transplantation."
                 },
                 {
-                    "type": "image",
-                    "doi": "10.7554/eLife.00569.003",
-                    "id": "fig1",
-                    "label": "Figure 1.",
-                    "title": "<i>Botryllus schlosseri</i> anatomy, life cycle, and phylogeny.",
-                    "caption": [
+                    "type": "figure",
+                    "assets": [
                         {
-                            "type": "paragraph",
-                            "text": "<i>B. schlosseri</i> reproduces both through sexual and asexual (budding) pathways, giving rise to virtually identical adult body plans. Upon settlement, the tadpole phase of the <i>B. schlosseri</i> lifecycle (<b>A</b>) will metamorphose into a founder individual (oozooid) (<b>B</b>), which through asexual budding, generates a colony. The colony includes three overlapping generations: an adult zooid, a primary bud, and a secondary bud, all of which are connected via a vascular network (bv) embedded within a gelatinous matrix (termed tunic). The common vasculature terminates in finger-like protrusions (termed ampullae; <b>B</b>–<b>D</b>). Bud development commences in stage A (<b>C</b>). Through budding, <i>B. schlosseri</i> generates its entire body, including digestive (ds) and respiratory (brs) systems, a simple tube-like heart (h), an endostyle (en) that harbors a stem cell niche, a primitive neural complex, and siphons used for feeding, waste, and releasing larvae (<b>B</b>–<b>D</b>). Each week, successive buds grow large (<b>D</b>) and complete replication of all zooids in the colony, ultimately replacing the previous generation’s zooids, which die through a massive apoptosis. (<b>E</b>) A phylogenomic tree produced from analysis of 521 nuclear genes (40,798 aligned amino acids) from 15 species, including <i>B. schlosseri</i>. Scale bar-1 mm."
-                        }
-                    ],
-                    "image": {
-                        "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif",
-                        "alt": "",
-                        "source": {
-                            "mediaType": "image/jpeg",
-                            "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif/full/full/0/default.jpg",
-                            "filename": "an-image.jpg"
+                            "type": "image",
+                            "doi": "10.7554/eLife.00569.003",
+                            "id": "fig1",
+                            "label": "Figure 1.",
+                            "title": "<i>Botryllus schlosseri</i> anatomy, life cycle, and phylogeny.",
+                            "caption": [
+                                {
+                                    "type": "paragraph",
+                                    "text": "<i>B. schlosseri</i> reproduces both through sexual and asexual (budding) pathways, giving rise to virtually identical adult body plans. Upon settlement, the tadpole phase of the <i>B. schlosseri</i> lifecycle (<b>A</b>) will metamorphose into a founder individual (oozooid) (<b>B</b>), which through asexual budding, generates a colony. The colony includes three overlapping generations: an adult zooid, a primary bud, and a secondary bud, all of which are connected via a vascular network (bv) embedded within a gelatinous matrix (termed tunic). The common vasculature terminates in finger-like protrusions (termed ampullae; <b>B</b>–<b>D</b>). Bud development commences in stage A (<b>C</b>). Through budding, <i>B. schlosseri</i> generates its entire body, including digestive (ds) and respiratory (brs) systems, a simple tube-like heart (h), an endostyle (en) that harbors a stem cell niche, a primitive neural complex, and siphons used for feeding, waste, and releasing larvae (<b>B</b>–<b>D</b>). Each week, successive buds grow large (<b>D</b>) and complete replication of all zooids in the colony, ultimately replacing the previous generation’s zooids, which die through a massive apoptosis. (<b>E</b>) A phylogenomic tree produced from analysis of 521 nuclear genes (40,798 aligned amino acids) from 15 species, including <i>B. schlosseri</i>. Scale bar-1 mm."
+                                }
+                            ],
+                            "image": {
+                                "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif",
+                                "alt": "",
+                                "source": {
+                                    "mediaType": "image/jpeg",
+                                    "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif/full/full/0/default.jpg",
+                                    "filename": "an-image.jpg"
+                                },
+                                "size": {
+                                    "width": 4194,
+                                    "height": 4714
+                                }
+                            }
                         },
-                        "size": {
-                            "width": 4194,
-                            "height": 4714
-                        }
-                    },
-                    "supplements": [
                         {
                             "type": "image",
                             "doi": "10.7554/eLife.00569.004",
@@ -836,32 +839,36 @@
                             "text": "The <i>B. schlosseri</i> genome was previously estimated to be 725 Mb based on flow cytometry analysis (<a href=\"#bib17\">De Tomaso et al., 1998</a>), and metaphase spreads suggested that it is organized into 16 chromosomes (<a href=\"#bib14\">Colombera, 1963</a>). To accurately assemble this relatively large genome, we developed a novel method to accurately sequence many large fragments in parallel. This long read sequencing approach (LRseq) effectively increases the read length of a next generation sequencer by 50-fold, while decreasing the error rate by orders of magnitude (<a href=\"#fig2\">Figure 2</a>; ‘Materials and methods’ under ‘Genome sequencing and assembly’). Our approach began with genomic DNA sheared to 6–8 kb fragments. Limiting dilution was used to create aliquots of a few hundred to a few thousand DNA molecules. Each aliquot was amplified with PCR, fragmented (600–800 bp), barcoded, and sequenced by Illumina HiSeq 2000 (<a href=\"#fig2\">Figure 2</a>). The Velvet assembler (<a href=\"#bib96\">Zerbino, 2010</a>) was used to assemble short paired-end reads from each barcode (i.e., well) separately, thus simplifying the assembly problem and creating effective read lengths corresponding to the original large fragment sizes (<a href=\"#fig2\">Figure 2B</a>; <a href=\"#SD3-data\">Supplementary file 2A</a>, <a href=\"#SD3-data\">Supplementary file 2B</a>). Limiting the number of DNA molecules per well greatly reduces or eliminates chances of having a repeated or duplicate sequence within a defined partition. Furthermore, since each well was over-sequenced, the error rate is reduced by the coverage and is substantially improved from the intrinsic error rate of the sequencer (<a href=\"#SD3-data\">Supplementary file 2C</a>). This procedure is amenable to automation in multiwell plates, and we obtained data from twelve 96-well plates (<a href=\"#SD3-data\">Supplementary file 2A</a>, <a href=\"#SD3-data\">Supplementary file 2B</a>). We validated this method on human genomic DNA, for which an independent reference is available (<a href=\"#fig2s1\">Figure 2—figure supplement 1</a>)."
                         },
                         {
-                            "type": "image",
-                            "doi": "10.7554/eLife.00569.005",
-                            "id": "fig2",
-                            "label": "Figure 2.",
-                            "title": "A novel short read genome sequencing and assembly method for complex, repeat-rich genomes.",
-                            "caption": [
+                            "type": "figure",
+                            "assets": [
                                 {
-                                    "type": "paragraph",
-                                    "text": "(<b>A</b>) Genomic DNA is sheared into 6–8 kb fragments, partitioned into twelve 96-well plates, further fragmented to 600–800 bp, barcoded and sequenced separately for each well (Illumina HiSeq 2000 2x100bp), and assembled by Velvet. (<b>B</b>) Size distribution of contigs assembled from a representative library preparation (BL5). (<b>C</b>) Limiting the number of amplifiable molecules per well (barcode) to the level that almost 100% of all amplifiable molecules are present as single copies (&lt;1000 gDNA molecules) greatly reduces the chance of having a repeated or homologous sequence within a well. Thus, sample complexity is significantly reduced, which reduces ambiguity in the reconstruction of a consensus sequence. As an example, two different predicted repeat-containing genes (g2001,1189bp; and g2002, 688bp) were assembled from two different wells (005 and 145 respectively). Although they contain highly homologous repeats (represented as a Dot Matrix plot, (<b>D</b>) these repetitive genes were resolved and reconstructed properly in the final assembly."
-                                }
-                            ],
-                            "image": {
-                                "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif",
-                                "alt": "",
-                                "source": {
-                                    "mediaType": "image/jpeg",
-                                    "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif/full/full/0/default.jpg",
-                                    "filename": "an-image.jpg"
+                                    "type": "image",
+                                    "doi": "10.7554/eLife.00569.005",
+                                    "id": "fig2",
+                                    "label": "Figure 2.",
+                                    "title": "A novel short read genome sequencing and assembly method for complex, repeat-rich genomes.",
+                                    "caption": [
+                                        {
+                                            "type": "paragraph",
+                                            "text": "(<b>A</b>) Genomic DNA is sheared into 6–8 kb fragments, partitioned into twelve 96-well plates, further fragmented to 600–800 bp, barcoded and sequenced separately for each well (Illumina HiSeq 2000 2x100bp), and assembled by Velvet. (<b>B</b>) Size distribution of contigs assembled from a representative library preparation (BL5). (<b>C</b>) Limiting the number of amplifiable molecules per well (barcode) to the level that almost 100% of all amplifiable molecules are present as single copies (&lt;1000 gDNA molecules) greatly reduces the chance of having a repeated or homologous sequence within a well. Thus, sample complexity is significantly reduced, which reduces ambiguity in the reconstruction of a consensus sequence. As an example, two different predicted repeat-containing genes (g2001,1189bp; and g2002, 688bp) were assembled from two different wells (005 and 145 respectively). Although they contain highly homologous repeats (represented as a Dot Matrix plot, (<b>D</b>) these repetitive genes were resolved and reconstructed properly in the final assembly."
+                                        }
+                                    ],
+                                    "image": {
+                                        "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif",
+                                        "alt": "",
+                                        "source": {
+                                            "mediaType": "image/jpeg",
+                                            "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif/full/full/0/default.jpg",
+                                            "filename": "an-image.jpg"
+                                        },
+                                        "size": {
+                                            "width": 4194,
+                                            "height": 4714
+                                        }
+                                    }
                                 },
-                                "size": {
-                                    "width": 4194,
-                                    "height": 4714
-                                }
-                            },
-                            "supplements": [
                                 {
+                                    "type": "image",
                                     "doi": "10.7554/eLife.00569.006",
                                     "id": "fig2s1",
                                     "label": "Figure 2—figure supplement 1.",
@@ -887,6 +894,7 @@
                                     }
                                 },
                                 {
+                                    "type": "image",
                                     "doi": "10.7554/eLife.00569.007",
                                     "id": "fig2s2",
                                     "label": "Figure 2—figure supplement 2.",
@@ -912,6 +920,7 @@
                                     }
                                 },
                                 {
+                                    "type": "image",
                                     "doi": "10.7554/eLife.00569.008",
                                     "id": "fig2s3",
                                     "label": "Figure 2—figure supplement 3.",
@@ -937,6 +946,7 @@
                                     }
                                 },
                                 {
+                                    "type": "image",
                                     "doi": "10.7554/eLife.00569.009",
                                     "id": "fig2s4",
                                     "label": "Figure 2—figure supplement 4.",
@@ -962,6 +972,7 @@
                                     }
                                 },
                                 {
+                                    "type": "image",
                                     "doi": "10.7554/eLife.00569.010",
                                     "id": "fig2s5",
                                     "label": "Figure 2—figure supplement 5.",
@@ -987,6 +998,7 @@
                                     }
                                 },
                                 {
+                                    "type": "image",
                                     "doi": "10.7554/eLife.00569.011",
                                     "id": "fig2s6",
                                     "label": "Figure 2—figure supplement 6.",
@@ -1029,32 +1041,36 @@
                             "text": "We sought to determine the chromosomal organization of the <i>B. schlosseri</i> genome. Using embryos from a wild <i>B. schlosseri</i> colony from Monterey Bay, we loaded a dilute solution of dispersed metaphase chromosomes into a microfluidic device as previously described (<a href=\"#bib24\">Fan et al., 2011</a>). The isolated metaphase chromosome mixtures from 21 individual wells were amplified, barcoded, and sequenced separately (‘Materials and methods’ under ‘Chromosome sequencing, assignment and assembly’; <a href=\"#bib24\">Fan et al., 2011</a>; <a href=\"#bib92\">Xu et al., 2011</a>). Using the 21 chromosome mixtures, containing between 1 and 4 chromosomes each, 356a genomic contigs larger than 7 kb were aligned to the chromosome reads using BWA. Then, scaffolds were assigned to chromosome clusters by iterative K-means clustering on the correlation matrix between each scaffold (<a href=\"#fig3\">Figure 3</a>; ‘Materials and methods’ under ‘Chromosome sequencing, assignment and assembly’). Assuming that <i>B. schlosseri</i> carries 16x2 chromosomes (<a href=\"#bib14\">Colombera, 1963</a>), this approach clearly resolves 13 chromosomes with a mean chromosome meta-scaffold size of 16,234 kb and a mean N50 of 38 kb (<a href=\"#fig3\">Figure 3</a>; <a href=\"#fig3s1\">Figure 3—figure supplement 1</a>; <a href=\"#SD3-data\">Supplementary file 2D</a>). Finally, we attempted to improve our genomic assembly by incorporating the additional 21 chromosome assemblies into a hybrid assembly (‘Materials and methods’ under ‘Chromosome sequencing, assignment and assembly’; <a href=\"#fig3s2\">Figure 3—figure supplement 2</a>; <a href=\"#fig3s1\">Figure 3—figure supplement 1</a>). An overall improvement in N50 was achieved, yielding a final 580 Mbp draft assembly (<a href=\"#SD3-data\">Supplementary file 2D</a>)."
                         },
                         {
-                            "type": "image",
-                            "doi": "10.7554/eLife.00569.012",
-                            "id": "fig3",
-                            "label": "Figure 3.",
-                            "title": "Clustering and assignment of <i>B.schlosseri</i> chromosomes.",
-                            "caption": [
+                            "type": "figure",
+                            "assets": [
                                 {
-                                    "type": "paragraph",
-                                    "text": "(<b>A</b>) We isolated and sequenced 21 metaphase chromosome mixtures using a microfluidic device. Each chromosome mixtures was amplified, barcoded and sequenced separately (IlluminaHiSeq). Genomic contigs larger than 7 kb were aligned to the chromosome reads using BWA. Subsequently, assignment of scaffolds to chromosome cluster was performed using iterative K-means clustering on the correlation matrix between each scaffold. In addition, to find the number of clusters/chromosomes we performed k-means clustering iteratively across different cluster numbers. This plot demonstrates that increasing beyond 13 clusters does little to reduce the error; therefore 13 chromosomes were successfully resolved. (<b>B</b>) To estimate the configuration after the clustering step, 17 out of the 21 wells were deduced to contain information that is used in the clustering process. The average number of normalized reads counts from each metaphase chromosome mixture (well) that align to each scaffold in a cluster group was calculated and plotted. Each peak represented can be inferred to denote the presence of a specific chromosome in the well. Examples of four representative wells are presented, metaphase chromosome mixtures contained between 1–4 chromosomes (see also <a href=\"#fig3s1\">Figure 3—figure supplement 1</a>)."
-                                }
-                            ],
-                            "image": {
-                                "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif",
-                                "alt": "",
-                                "source": {
-                                    "mediaType": "image/jpeg",
-                                    "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif/full/full/0/default.jpg",
-                                    "filename": "an-image.jpg"
+                                    "type": "image",
+                                    "doi": "10.7554/eLife.00569.012",
+                                    "id": "fig3",
+                                    "label": "Figure 3.",
+                                    "title": "Clustering and assignment of <i>B.schlosseri</i> chromosomes.",
+                                    "caption": [
+                                        {
+                                            "type": "paragraph",
+                                            "text": "(<b>A</b>) We isolated and sequenced 21 metaphase chromosome mixtures using a microfluidic device. Each chromosome mixtures was amplified, barcoded and sequenced separately (IlluminaHiSeq). Genomic contigs larger than 7 kb were aligned to the chromosome reads using BWA. Subsequently, assignment of scaffolds to chromosome cluster was performed using iterative K-means clustering on the correlation matrix between each scaffold. In addition, to find the number of clusters/chromosomes we performed k-means clustering iteratively across different cluster numbers. This plot demonstrates that increasing beyond 13 clusters does little to reduce the error; therefore 13 chromosomes were successfully resolved. (<b>B</b>) To estimate the configuration after the clustering step, 17 out of the 21 wells were deduced to contain information that is used in the clustering process. The average number of normalized reads counts from each metaphase chromosome mixture (well) that align to each scaffold in a cluster group was calculated and plotted. Each peak represented can be inferred to denote the presence of a specific chromosome in the well. Examples of four representative wells are presented, metaphase chromosome mixtures contained between 1–4 chromosomes (see also <a href=\"#fig3s1\">Figure 3—figure supplement 1</a>)."
+                                        }
+                                    ],
+                                    "image": {
+                                        "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif",
+                                        "alt": "",
+                                        "source": {
+                                            "mediaType": "image/jpeg",
+                                            "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif/full/full/0/default.jpg",
+                                            "filename": "an-image.jpg"
+                                        },
+                                        "size": {
+                                            "width": 4194,
+                                            "height": 4714
+                                        }
+                                    }
                                 },
-                                "size": {
-                                    "width": 4194,
-                                    "height": 4714
-                                }
-                            },
-                            "supplements": [
                                 {
+                                    "type": "image",
                                     "doi": "10.7554/eLife.00569.013",
                                     "id": "fig3s1",
                                     "label": "Figure 3—figure supplement 1.",
@@ -1080,6 +1096,7 @@
                                     }
                                 },
                                 {
+                                    "type": "image",
                                     "doi": "10.7554/eLife.00569.014",
                                     "id": "fig3s2",
                                     "label": "Figure 3—figure supplement 2.",
@@ -1099,6 +1116,7 @@
                                     }
                                 },
                                 {
+                                    "type": "image",
                                     "doi": "10.7554/eLife.00569.015",
                                     "id": "fig3s3",
                                     "label": "Figure 3—figure supplement 3.",
@@ -1124,6 +1142,7 @@
                                     }
                                 },
                                 {
+                                    "type": "image",
                                     "doi": "10.7554/eLife.00569.016",
                                     "id": "fig3s4",
                                     "label": "Figure 3—figure supplement 4.",
@@ -1176,45 +1195,50 @@
                             "text": "Among the genes found in <i>B. schlosseri</i> (either alone or in combination with other protochordate species) and vertebrates (<a href=\"#SD1-data\">Figure 4—source data 1B</a>, <a href=\"#SD1-data\">Figure 4—source data 1C</a>), we found genes that are critical to the development and function of the vertebrate heart (e.g., <i>ALPK3</i>, <i>TNNT2</i>; <a href=\"#bib32\">Hosoda et al., 2001</a>; <a href=\"#bib26\">Frey et al., 2012</a>), and eye (gamma and beta crystallins; <a href=\"#bib81\">Sun et al., 2011</a>), and the ability to hear (<i>GJB</i>2/3/6 <i>CLDN</i>; <a href=\"#bib63\">Rabionet et al., 2000</a>; <a href=\"#bib91\">Wilcox et al., 2001</a>; <a href=\"#fig4\">Figure 4</a>, <a href=\"#SD1-data\">Figure 4—source data 1C</a>). Mutations in these genes are implicated in a variety of human diseases and disorders, including heart diseases (<a href=\"#bib26\">Frey et al., 2012</a>), cataracts (<a href=\"#bib81\">Sun et al., 2011</a>), deafness (<a href=\"#bib63\">Rabionet et al., 2000</a>; <a href=\"#bib91\">Wilcox et al., 2001</a>), and nemaline myopathy (<a href=\"#bib35\">Johnston et al., 2000</a>; <a href=\"#fig4\">Figure 4</a>, <a href=\"#SD1-data\">Figure 4—source data 1C</a>). In addition, <i>B. schlosseri</i> was the only protochordate in our analysis with proteins homologous to pregnancy-specific glycoproteins (PSGs). PSGs are the major placental polypeptides, and complications in pregnancies and spontaneous abortions have been associated with abnormally low levels of PSGs in the maternal blood (<a href=\"#bib9\">Camolotto et al., 2010</a>). Analogous to mammalian pregnancies, a common blood supply among kin is established and tolerated in <i>B. schlosseri</i> chimeras (<a href=\"#bib89\">Voskoboynik et al., 2009</a>). Thus, by studying PSG-like proteins in <i>B. schlosseri</i>, new insights might be gained into maternal and fetal medicine."
                         },
                         {
-                            "type": "image",
-                            "doi": "10.7554/eLife.00569.017",
-                            "id": "fig4",
-                            "label": "Figure 4.",
-                            "title": "Innovations underlying the emergence and early diversification of vertebrates.",
-                            "caption": [
+                            "type": "figure",
+                            "assets": [
                                 {
-                                    "type": "paragraph",
-                                    "text": "Protein-encoding genes in <i>B. schlosseri</i> were compared to a diverse sampling of 18 well-annotated genomes from other species, and for each genome, the presence or absence of homology to human or mouse proteins was assessed (all vs all blastp e-value threshold of 1e<sup>−10</sup>; <a href=\"#SD1-data\">Figure 4—source data 1A</a>). Our data indicate that homologs of ∼660 human/mouse genes were present in the common ancestor of tunicates and vertebrates, but not non-chordate species <a href=\"#SD1-data\">Figure 4—source data 1B</a>). Among them are genes associated with the development, function, and pathology of vertebrate features, including heart, eye, hearing, immunity, pregnancy and cancer (<a href=\"#SD1-data\">Figure 4—source data 1C</a>). Gray box = no homology; Yellow box = homology."
-                                }
-                            ],
-                            "image": {
-                                "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif",
-                                "alt": "",
-                                "source": {
-                                    "mediaType": "image/jpeg",
-                                    "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif/full/full/0/default.jpg",
-                                    "filename": "an-image.jpg"
-                                },
-                                "size": {
-                                    "width": 4194,
-                                    "height": 4714
-                                }
-                            },
-                            "sourceData": [
-                                {
+                                    "type": "image",
                                     "doi": "10.7554/eLife.00569.017",
-                                    "id": "SD1-data",
-                                    "label": "Figure 4—source data 1.",
-                                    "title": "Vertebrates evolution.",
+                                    "id": "fig4",
+                                    "label": "Figure 4.",
+                                    "title": "Innovations underlying the emergence and early diversification of vertebrates.",
                                     "caption": [
                                         {
                                             "type": "paragraph",
-                                            "text": "(<b>A</b>) Innovations that underline the emergence and early diversification of vertebrates. We compared protein-encoding genes in <i>B. schlosseri</i> to a diverse sampling of 18 well-annotated genomes from other species. All protein sequences were compared by blastp against all other protein sequences. Based on this data set a list was generated of genes known from human and mouse and their existence (1) or absence (0) in the tested species (e-value &lt; e<sup>−10</sup>). (<b>B</b>) The 660 putative genes present in protochordates, human and mouse, but absent in non-chordate species. This list was generated from <a href=\"#SD1-data\">Figure 4—source data 1A</a>. Per every species, or species group we filtered for genes that were present in the tested species/species group and in human or mouse, but were absent in non-chordate species. (<b>C</b>) Innovations that underline the emergence and early diversification of vertebrates. This table is based on data gathered in <a href=\"#SD1-data\">Figure 4—source data 1B</a> and is focused on the genes that are present in <i>B. schlosseri</i> and vertebrates (either alone or in combination with other protochordate species) but are absent in non-chordate species. A ToppGene analysis is presented of these sets of genes which summarized their molecular functions, biological processes, human and mouse phenotypes, and pathways they are involved in, gene families, drugs and human diseases."
+                                            "text": "Protein-encoding genes in <i>B. schlosseri</i> were compared to a diverse sampling of 18 well-annotated genomes from other species, and for each genome, the presence or absence of homology to human or mouse proteins was assessed (all vs all blastp e-value threshold of 1e<sup>−10</sup>; <a href=\"#SD1-data\">Figure 4—source data 1A</a>). Our data indicate that homologs of ∼660 human/mouse genes were present in the common ancestor of tunicates and vertebrates, but not non-chordate species <a href=\"#SD1-data\">Figure 4—source data 1B</a>). Among them are genes associated with the development, function, and pathology of vertebrate features, including heart, eye, hearing, immunity, pregnancy and cancer (<a href=\"#SD1-data\">Figure 4—source data 1C</a>). Gray box = no homology; Yellow box = homology."
                                         }
                                     ],
-                                    "mediaType": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-                                    "uri": "https://elife-publishing-cdn.s3.amazonaws.com/00569/elife-00569-fig4-data1-v1-download.xlsx",
-                                    "filename": "elife-00569-fig4-data1-v1-download.xlsx"
+                                    "image": {
+                                        "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif",
+                                        "alt": "",
+                                        "source": {
+                                            "mediaType": "image/jpeg",
+                                            "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif/full/full/0/default.jpg",
+                                            "filename": "an-image.jpg"
+                                        },
+                                        "size": {
+                                            "width": 4194,
+                                            "height": 4714
+                                        }
+                                    },
+                                    "sourceData": [
+                                        {
+                                            "doi": "10.7554/eLife.00569.017",
+                                            "id": "SD1-data",
+                                            "label": "Figure 4—source data 1.",
+                                            "title": "Vertebrates evolution.",
+                                            "caption": [
+                                                {
+                                                    "type": "paragraph",
+                                                    "text": "(<b>A</b>) Innovations that underline the emergence and early diversification of vertebrates. We compared protein-encoding genes in <i>B. schlosseri</i> to a diverse sampling of 18 well-annotated genomes from other species. All protein sequences were compared by blastp against all other protein sequences. Based on this data set a list was generated of genes known from human and mouse and their existence (1) or absence (0) in the tested species (e-value &lt; e<sup>−10</sup>). (<b>B</b>) The 660 putative genes present in protochordates, human and mouse, but absent in non-chordate species. This list was generated from <a href=\"#SD1-data\">Figure 4—source data 1A</a>. Per every species, or species group we filtered for genes that were present in the tested species/species group and in human or mouse, but were absent in non-chordate species. (<b>C</b>) Innovations that underline the emergence and early diversification of vertebrates. This table is based on data gathered in <a href=\"#SD1-data\">Figure 4—source data 1B</a> and is focused on the genes that are present in <i>B. schlosseri</i> and vertebrates (either alone or in combination with other protochordate species) but are absent in non-chordate species. A ToppGene analysis is presented of these sets of genes which summarized their molecular functions, biological processes, human and mouse phenotypes, and pathways they are involved in, gene families, drugs and human diseases."
+                                                }
+                                            ],
+                                            "mediaType": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+                                            "uri": "https://elife-publishing-cdn.s3.amazonaws.com/00569/elife-00569-fig4-data1-v1-download.xlsx",
+                                            "filename": "elife-00569-fig4-data1-v1-download.xlsx"
+                                        }
+                                    ]
                                 }
                             ]
                         },
@@ -1223,46 +1247,51 @@
                             "text": "Numerous genes predicted to have evolved in a common ancestor of <i>B. schlosseri</i> and vertebrates are essential to the immune system and hematopoiesis (<a href=\"#fig4\">Figure 4</a>, <a href=\"#SD1-data\">Figure 4—source data 1B</a>, <a href=\"#SD1-data\">Figure 4—source data 1C</a>). Six genes unique to <i>B. schlosseri</i> and vertebrates (<i>ZBTB1</i>, <i>MEFV</i>, <i>DSG3</i>, <i>NQO1</i>, <i>NQO2</i> and <i>BHLHE40</i>) are associated with increased leukocyte and hematopoietic cell numbers (<a href=\"#SD1-data\">Figure 4—source data 1C</a>; <a href=\"#bib12\">Chen et al., 2009</a>). In our analysis, these genes are absent in cephalochordates and solitary urochordates, which all lack a defined vascular system (<a href=\"#bib50\">Moller and Philpott, 2005</a>; <a href=\"#bib46\">Lemaire, 2011</a>). In contrast, the heart in each individual zooid in a <i>B. schlosseri</i> colony beats synchronously with the hearts of other zooids in the colony, driving a bidirectional blood flow throughout an interconnected vasculature (<a href=\"#media1\">Video 1</a>). Moreover, this blood system carries at least ten morphologically different cell types (<a href=\"#bib69\">Schlumpberger et al., 1984</a>; <a href=\"#bib4\">Ballarin et al., 2008</a>). Because of the anatomy of <i>B. schlosseri</i>, coupled with its hematopoietic-related gene repertoire, we hypothesize that colonial ascidians may have retained and elaborated many components of the ancestral hematopoietic program, much of which has been lost in extant solitary urochordates and cephalochordates."
                         },
                         {
-                            "type": "video",
-                            "doi": "10.7554/eLife.00569.019",
-                            "id": "media1",
-                            "label": "Video 1.",
-                            "title": "<i>B. schlosseri</i> blood circulation.",
-                            "caption": [
+                            "type": "figure",
+                            "assets": [
                                 {
-                                    "type": "paragraph",
-                                    "text": "(<b>A)</b> Time-lapse acquisition of blood flow in the blood vessels (bv) and ampullae of a chimeric <i>B. schlosseri</i> colony, generated from a fusion between a mother and its offspring (fused). (<b>B</b>) Ampullae contract, buds develop, and a colony gets ready to replace the old generation. (<b>C</b>) Old generation zooids are getting resorbed (res. z) and replaced by the new generation (buds). (<b>D</b>) A heart beating and pumping blood in the primary bud of a different colony. (<b>E</b>) Blood flow through a common blood vessel between two allogeneic/compatible colonies, creating a natural chimera."
+                                    "type": "video",
+                                    "doi": "10.7554/eLife.00569.019",
+                                    "id": "media1",
+                                    "label": "Video 1.",
+                                    "title": "<i>B. schlosseri</i> blood circulation.",
+                                    "caption": [
+                                        {
+                                            "type": "paragraph",
+                                            "text": "(<b>A)</b> Time-lapse acquisition of blood flow in the blood vessels (bv) and ampullae of a chimeric <i>B. schlosseri</i> colony, generated from a fusion between a mother and its offspring (fused). (<b>B</b>) Ampullae contract, buds develop, and a colony gets ready to replace the old generation. (<b>C</b>) Old generation zooids are getting resorbed (res. z) and replaced by the new generation (buds). (<b>D</b>) A heart beating and pumping blood in the primary bud of a different colony. (<b>E</b>) Blood flow through a common blood vessel between two allogeneic/compatible colonies, creating a natural chimera."
+                                        }
+                                    ],
+                                    "sources": [
+                                        {
+                                            "mediaType": "video/mp4; codecs=\"avc1.42E01E, mp4a.40.2\"",
+                                            "uri": "https://static-movie-usa.glencoesoftware.com/mp4/10.7554/659/0f10378e095dde7aaf579af504c4bfdc6fb86550/elife-00569-media1.mp4"
+                                        },
+                                        {
+                                            "mediaType": "video/webm; codecs=\"vp8.0, vorbis\"",
+                                            "uri": "https://static-movie-usa.glencoesoftware.com/webm/10.7554/659/0f10378e095dde7aaf579af504c4bfdc6fb86550/elife-00569-media1.webm"
+                                        },
+                                        {
+                                            "mediaType": "video/ogg; codecs=\"theora, vorbis\"",
+                                            "uri": "https://static-movie-usa.glencoesoftware.com/ogv/10.7554/659/0f10378e095dde7aaf579af504c4bfdc6fb86550/elife-00569-media1.ogv"
+                                        }
+                                    ],
+                                    "placeholder": {
+                                        "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif",
+                                        "alt": "",
+                                        "source": {
+                                            "mediaType": "image/jpeg",
+                                            "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif/full/full/0/default.jpg",
+                                            "filename": "an-image.jpg"
+                                        },
+                                        "size": {
+                                            "width": 4194,
+                                            "height": 4714
+                                        }
+                                    },
+                                    "width": 640,
+                                    "height": 480
                                 }
-                            ],
-                            "sources": [
-                                {
-                                    "mediaType": "video/mp4; codecs=\"avc1.42E01E, mp4a.40.2\"",
-                                    "uri": "https://static-movie-usa.glencoesoftware.com/mp4/10.7554/659/0f10378e095dde7aaf579af504c4bfdc6fb86550/elife-00569-media1.mp4"
-                                },
-                                {
-                                    "mediaType": "video/webm; codecs=\"vp8.0, vorbis\"",
-                                    "uri": "https://static-movie-usa.glencoesoftware.com/webm/10.7554/659/0f10378e095dde7aaf579af504c4bfdc6fb86550/elife-00569-media1.webm"
-                                },
-                                {
-                                    "mediaType": "video/ogg; codecs=\"theora, vorbis\"",
-                                    "uri": "https://static-movie-usa.glencoesoftware.com/ogv/10.7554/659/0f10378e095dde7aaf579af504c4bfdc6fb86550/elife-00569-media1.ogv"
-                                }
-                            ],
-                            "placeholder": {
-                                "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif",
-                                "alt": "",
-                                "source": {
-                                    "mediaType": "image/jpeg",
-                                    "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif/full/full/0/default.jpg",
-                                    "filename": "an-image.jpg"
-                                },
-                                "size": {
-                                    "width": 4194,
-                                    "height": 4714
-                                }
-                            },
-                            "width": 640,
-                            "height": 480
+                            ]
                         }
                     ]
                 },
@@ -1276,30 +1305,35 @@
                             "text": "We next attempted to identify potential precursors of human hematopoietic populations in <i>B. schlosseri</i> and 17 other diverse species, including fungal, plant, and mammalian species. We analyzed gene expression microarray data from 26 different human blood cell populations, and additional non-blood human tissue samples. We identified a set of twenty signature genes that were highly expressed in each of the 26 hematopoietic populations (<a href=\"#bib6\">Benita et al., 2010</a>; <a href=\"#bib71\">Seita et al., 2012</a>; ‘Materials and methods’ under ‘Evolution analysis’). For each blood-related gene set, we identified homologous gene sequences in <i>B. schlosseri</i> and 17 other species (<a href=\"#fig5\">Figure 5</a>, <a href=\"#SD4-data\">Supplementary file 3</a>). Among <i>B. schlosseri</i> homologs, we found high enrichment for gene sets predominantly expressed in human hematopoietic stem cells (HSCs; i.e., 14 of 20 cord blood HSC genes), myeloid populations (i.e., 14 of 20 early erythroid CD71+ genes), and early but not mature lymphoid populations. Consistent with previous studies (<a href=\"#bib5\">Bartl et al., 1994</a>; <a href=\"#bib40\">Laird et al., 2000</a>; <a href=\"#bib21\">Dishaw and Litman, 2009</a>; <a href=\"#bib30\">Guo et al., 2009</a>; <a href=\"#bib25\">Flajnik and Kasahara, 2010</a>; <a href=\"#bib3\">Bajoghli et al., 2011</a>; <a href=\"#bib31\">Hirano et al., 2011</a>) this analysis indicates that the evolution of adaptive immunity progressed rapidly beginning with jawless vertebrates, with much of the genetic repertoire in place by the emergence of jawed vertebrates (<a href=\"#fig5\">Figure 5</a>). However, homologs of human genes with specific expression in HSC and blood progenitor populations, including T and B progenitor cells, appear early in metazoan evolution (<a href=\"#fig5\">Figure 5</a>; <a href=\"#SD4-data\">Supplementary file 3</a>)."
                         },
                         {
-                            "type": "image",
-                            "id": "fig5",
-                            "doi": "10.7554/eLife.00569.020",
-                            "label": "Figure 5.",
-                            "title": "Analysis of blood and immune cell type-specific genes across evolution reveals evidence for hematopoietic precursors in <i>B. schlosseri</i>.",
-                            "caption": [
+                            "type": "figure",
+                            "assets": [
                                 {
-                                    "type": "paragraph",
-                                    "text": "We analyzed gene expression microarray data from 26 different human blood cell populations, organized into four cell lineages (HSC; Lymphoid Progenitors; Myeloid and Lymphoid Lineage), and identified a set of twenty signature genes with highly enriched expression profiles for each population (<a href=\"#SD4-data\">Supplementary file 3</a>). For each blood-related gene set, we identified homologous gene sequences in <i>B. schlosseri</i> and 17 other species; the fraction of genes (out of 20) found for each species is displayed as a heat map. Within each major lineage, cell populations are sorted in decreasing order by a conservation index, calculated as the average number of genes found across the 18 species (indicated by a blue bar graph)."
+                                    "type": "image",
+                                    "id": "fig5",
+                                    "doi": "10.7554/eLife.00569.020",
+                                    "label": "Figure 5.",
+                                    "title": "Analysis of blood and immune cell type-specific genes across evolution reveals evidence for hematopoietic precursors in <i>B. schlosseri</i>.",
+                                    "caption": [
+                                        {
+                                            "type": "paragraph",
+                                            "text": "We analyzed gene expression microarray data from 26 different human blood cell populations, organized into four cell lineages (HSC; Lymphoid Progenitors; Myeloid and Lymphoid Lineage), and identified a set of twenty signature genes with highly enriched expression profiles for each population (<a href=\"#SD4-data\">Supplementary file 3</a>). For each blood-related gene set, we identified homologous gene sequences in <i>B. schlosseri</i> and 17 other species; the fraction of genes (out of 20) found for each species is displayed as a heat map. Within each major lineage, cell populations are sorted in decreasing order by a conservation index, calculated as the average number of genes found across the 18 species (indicated by a blue bar graph)."
+                                        }
+                                    ],
+                                    "image": {
+                                        "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif",
+                                        "alt": "",
+                                        "source": {
+                                            "mediaType": "image/jpeg",
+                                            "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif/full/full/0/default.jpg",
+                                            "filename": "an-image.jpg"
+                                        },
+                                        "size": {
+                                            "width": 4194,
+                                            "height": 4714
+                                        }
+                                    }
                                 }
-                            ],
-                            "image": {
-                                "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif",
-                                "alt": "",
-                                "source": {
-                                    "mediaType": "image/jpeg",
-                                    "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif/full/full/0/default.jpg",
-                                    "filename": "an-image.jpg"
-                                },
-                                "size": {
-                                    "width": 4194,
-                                    "height": 4714
-                                }
-                            }
+                            ]
                         },
                         {
                             "type": "paragraph",

@@ -582,7 +582,10 @@
                                         "type": "object",
                                         "properties": {
                                             "id": {
-                                                "$ref": "#/allOf/0/allOf/1/properties/funding/properties/awards/items/properties/id"
+                                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                                "title": "HTML ID",
+                                                "type": "string",
+                                                "pattern": "^[^\\s]+$"
                                             },
                                             "date": {
                                                 "$schema": "http://json-schema.org/draft-04/schema#",
@@ -651,10 +654,7 @@
                                         "type": "object",
                                         "properties": {
                                             "id": {
-                                                "$schema": "http://json-schema.org/draft-04/schema#",
-                                                "title": "HTML ID",
-                                                "type": "string",
-                                                "pattern": "^[^\\s]+$"
+                                                "$ref": "#/allOf/0/allOf/1/properties/dataSets/properties/generated/items/properties/id"
                                             },
                                             "source": {
                                                 "allOf": [
@@ -752,16 +752,8 @@
                                         "title": "Asset",
                                         "type": "object",
                                         "properties": {
-                                            "doi": {
-                                                "$ref": "#/allOf/0/allOf/0/properties/doi"
-                                            },
                                             "id": {
-                                                "$ref": "#/allOf/0/allOf/1/properties/funding/properties/awards/items/properties/id"
-                                            },
-                                            "label": {
-                                                "title": "Label",
-                                                "type": "string",
-                                                "minLength": 1
+                                                "$ref": "#/allOf/0/allOf/1/properties/dataSets/properties/generated/items/properties/id"
                                             },
                                             "title": {
                                                 "title": "Title",
@@ -785,7 +777,7 @@
                                                                     ]
                                                                 },
                                                                 "id": {
-                                                                    "$ref": "#/allOf/0/allOf/1/properties/funding/properties/awards/items/properties/id"
+                                                                    "$ref": "#/allOf/0/allOf/1/properties/dataSets/properties/generated/items/properties/id"
                                                                 },
                                                                 "label": {
                                                                     "type": "string"
@@ -813,7 +805,7 @@
                                                                     ]
                                                                 },
                                                                 "id": {
-                                                                    "$ref": "#/allOf/0/allOf/1/properties/funding/properties/awards/items/properties/id"
+                                                                    "$ref": "#/allOf/0/allOf/1/properties/dataSets/properties/generated/items/properties/id"
                                                                 },
                                                                 "tables": {
                                                                     "type": "array",
@@ -829,21 +821,27 @@
                                                     ]
                                                 },
                                                 "minItems": 1
+                                            },
+                                            "attribution": {
+                                                "title": "Attribution",
+                                                "type": "array",
+                                                "items": {
+                                                    "type": "string"
+                                                }
                                             }
-                                        },
-                                        "dependencies": {
-                                            "doi": [
-                                                "id"
-                                            ],
-                                            "caption": [
-                                                "title"
-                                            ],
-                                            "label": [
-                                                "title"
-                                            ]
                                         }
                                     },
                                     {
+                                        "properties": {
+                                            "doi": {
+                                                "$ref": "#/allOf/0/allOf/0/properties/doi"
+                                            },
+                                            "label": {
+                                                "title": "Label",
+                                                "type": "string",
+                                                "minLength": 1
+                                            }
+                                        },
                                         "required": [
                                             "id",
                                             "title"
