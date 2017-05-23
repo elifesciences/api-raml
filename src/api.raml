@@ -780,16 +780,16 @@ traits:
 /labs-posts:
     type: collection
     description: |
-        Labs experiments
+        Labs posts
     get:
         description: |
-            Get a list of experiments, sorted by number.
+            Get a list of labs posts, sorted by publication date.
         is:
           - paged: { resources: Experiments }
         responses:
             200:
                 description: |
-                    List of experiments, sorted by number.
+                    List of labs posts, sorted by publication date.
                 body:
                     application/vnd.elife.labs-post-list+json;version=1:
                         schema: !include ../dist/model/labs-post-list.v1.json

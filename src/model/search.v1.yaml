@@ -135,7 +135,7 @@ properties:
                 type: integer
                 minimum: 0
             labs-post:
-                description: Number of Labs experiments in the result set
+                description: Number of Labs posts in the result set
                 type: integer
                 minimum: 0
             podcast-episode:
