@@ -79,7 +79,7 @@ properties:
                 type: integer
                 minimum: 0
             editorial:
-                description: Number of editoral articles in the result set
+                description: Number of editorial articles in the result set
                 type: integer
                 minimum: 0
             feature:
