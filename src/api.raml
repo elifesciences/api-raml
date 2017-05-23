@@ -785,7 +785,7 @@ traits:
         description: |
             Get a list of labs posts, sorted by publication date.
         is:
-          - paged: { resources: Experiments }
+          - paged: { resources: Posts }
         responses:
             200:
                 description: |
@@ -808,22 +808,22 @@ traits:
     /{number}:
         type:
             item:
-                resource: Experiment
+                resource: Post
         description: |
-            Individual Labs experiment.
+            Individual Labs post.
         uriParameters:
             number:
                 description: |
-                    Experiment number.
+                    Post number.
                 type: integer
                 minimum: 1
         get:
             description: |
-                Get an experiment.
+                Get an post.
             responses:
                 200:
                     description: |
-                        Experiment.
+                        Post.
                     body:
                         application/vnd.elife.labs-post+json;version=1:
                             schema: !include ../dist/model/labs-post.v1.json

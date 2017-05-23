@@ -1,5 +1,5 @@
 $schema: http://json-schema.org/draft-04/schema#
-title: Labs experiment snippet
+title: Labs post snippet
 type: object
 properties:
     id:
@@ -10,7 +10,7 @@ properties:
         description: Title
         type: string
     impactStatement:
-        description: Description of the experiment
+        description: Description of the post
         type: string
     published:
         title: Publication date (UTC)
