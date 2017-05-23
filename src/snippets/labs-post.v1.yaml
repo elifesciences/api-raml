@@ -2,9 +2,9 @@ $schema: http://json-schema.org/draft-04/schema#
 title: Labs experiment snippet
 type: object
 properties:
-    number:
-        description: Number
-        type: integer
+    id:
+        description: Identifier
+        type: string
         minimum: 1
     title:
         description: Title
