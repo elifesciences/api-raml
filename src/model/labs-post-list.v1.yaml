@@ -10,7 +10,7 @@ properties:
         title: Experiments
         type: array
         items:
-            $ref: ../snippets/labs-experiment.v1.yaml
+            $ref: ../snippets/labs-post.v1.yaml
         uniqueItems: true
 required:
   - total
