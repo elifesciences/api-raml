@@ -3,9 +3,7 @@ title: Labs post snippet
 type: object
 properties:
     id:
-        description: Identifier
-        type: string
-        minimum: 1
+        $ref: ../misc/id.v1.yaml
     title:
         description: Title
         type: string
@@ -26,7 +24,7 @@ properties:
         required:
           - thumbnail
 required:
-  - number
+  - id
   - title
   - published
   - image
