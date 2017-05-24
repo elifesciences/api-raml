@@ -712,13 +712,24 @@ traits:
     get:
         description: |
             Get highlights list.
+        is:
+          - paged: { resources: Highlights }
         responses:
             200:
                 body:
-                    application/vnd.elife.highlights+json;version=1:
-                        schema: !include model/highlights.v1.json
-                        example:
-                            value: !include samples/highlights/v1/complete.json
+                    application/vnd.elife.highlight-list+json;version=1:
+                        schema: !include model/highlight-list.v1.json
+                        examples:
+                            paginated:
+                                displayName: First page
+                                description: |
+                                    List is split over two pages.
+                                value: !include samples/highlight-list/v1/first-page.json
+                            empty:
+                                displayName: Empty list
+                                description: |
+                                    Demonstration of the list being empty (the first page will always return a valid result).
+                                value: !include samples/highlight-list/v1/empty.json
 
 /interviews:
     type: collection
