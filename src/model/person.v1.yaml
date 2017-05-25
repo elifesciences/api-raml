@@ -4,6 +4,10 @@ type: object
 allOf:
   - $ref: ../snippets/person.v1.yaml
   - properties:
+        affiliations:
+            type: array
+            items:
+                $ref: ../misc/place.v1.yaml
         research:
             title: Research details
             type: object
