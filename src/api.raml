@@ -816,18 +816,17 @@ traits:
                                     Demonstration of the list being empty (the first page will always return a valid result).
                                 value: !include samples/labs-post-list/v1/empty.json
 
-    /{number}:
+    /{id}:
         type:
             item:
                 resource: Post
         description: |
             Individual Labs post.
         uriParameters:
-            number:
+            id:
                 description: |
-                    Post number.
-                type: integer
-                minimum: 1
+                    Post ID.
+                type: string
         get:
             description: |
                 Get an post.
