@@ -72,6 +72,7 @@
                                                 "type": "string",
                                                 "enum": [
                                                     "director",
+                                                    "early-career",
                                                     "executive",
                                                     "leadership",
                                                     "reviewing-editor",
