@@ -15,14 +15,6 @@ properties:
                 title:
                     description: Title
                     type: string
-                authorLine:
-                    description: |
-                        For example:
-                          - Ian T Baldwin
-                          - Randy Schekman, Mark Patterson
-                          - Lee R Berger et al
-                    type: string
-                    minLength: 1
                 image:
                     $ref: ../misc/image.v1.yaml
                 item:

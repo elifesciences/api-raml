@@ -18,11 +18,6 @@
                         "description": "Title",
                         "type": "string"
                     },
-                    "authorLine": {
-                        "description": "For example:\n  - Ian T Baldwin\n  - Randy Schekman, Mark Patterson\n  - Lee R Berger et al\n",
-                        "type": "string",
-                        "minLength": 1
-                    },
                     "image": {
                         "$schema": "http://json-schema.org/draft-04/schema#",
                         "title": "IIIF image",
@@ -483,6 +478,7 @@
                                                                                                 "type": "string",
                                                                                                 "enum": [
                                                                                                     "director",
+                                                                                                    "early-career",
                                                                                                     "executive",
                                                                                                     "leadership",
                                                                                                     "reviewing-editor",

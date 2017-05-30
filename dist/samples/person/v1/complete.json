@@ -9,6 +9,44 @@
         "index": "Smith, John, III"
     },
     "orcid": "0000-0002-1825-0097",
+    "affiliations": [
+        {
+            "name": [
+                "Evolutionary Studies Institute and Centre of Excellence in PalaeoSciences",
+                "University of the Witwatersrand"
+            ],
+            "address": {
+                "formatted": [
+                    "Johannesburg",
+                    "South Africa"
+                ],
+                "components": {
+                    "locality": [
+                        "Johannesburg"
+                    ],
+                    "country": "South Africa"
+                }
+            }
+        },
+        {
+            "name": [
+                "School of Geosciences",
+                "University of the Witwatersrand"
+            ],
+            "address": {
+                "formatted": [
+                    "Johannesburg",
+                    "South Africa"
+                ],
+                "components": {
+                    "locality": [
+                        "Johannesburg"
+                    ],
+                    "country": "South Africa"
+                }
+            }
+        }
+    ],
     "research": {
         "expertises": [
             {
