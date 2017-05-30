@@ -592,27 +592,25 @@
                                                     "type": {
                                                         "type": "string",
                                                         "enum": [
-                                                            "labs-experiment"
+                                                            "labs-post"
                                                         ]
                                                     }
                                                 }
                                             },
                                             {
                                                 "$schema": "http://json-schema.org/draft-04/schema#",
-                                                "title": "Labs experiment snippet",
+                                                "title": "Labs post snippet",
                                                 "type": "object",
                                                 "properties": {
-                                                    "number": {
-                                                        "description": "Number",
-                                                        "type": "integer",
-                                                        "minimum": 1
+                                                    "id": {
+                                                        "$ref": "#/properties/items/items/oneOf/0/allOf/0/properties/id"
                                                     },
                                                     "title": {
                                                         "description": "Title",
                                                         "type": "string"
                                                     },
                                                     "impactStatement": {
-                                                        "description": "Description of the experiment",
+                                                        "description": "Description of the post",
                                                         "type": "string"
                                                     },
                                                     "published": {
@@ -636,7 +634,7 @@
                                                     }
                                                 },
                                                 "required": [
-                                                    "number",
+                                                    "id",
                                                     "title",
                                                     "published",
                                                     "image"
@@ -793,7 +791,7 @@
                     "minimum": 0
                 },
                 "editorial": {
-                    "description": "Number of editoral articles in the result set",
+                    "description": "Number of editorial articles in the result set",
                     "type": "integer",
                     "minimum": 0
                 },
@@ -862,8 +860,8 @@
                     "type": "integer",
                     "minimum": 0
                 },
-                "labs-experiment": {
-                    "description": "Number of Labs experiments in the result set",
+                "labs-post": {
+                    "description": "Number of Labs posts in the result set",
                     "type": "integer",
                     "minimum": 0
                 },
@@ -889,7 +887,7 @@
                 "blog-article",
                 "collection",
                 "interview",
-                "labs-experiment",
+                "labs-post",
                 "podcast-episode"
             ]
         }

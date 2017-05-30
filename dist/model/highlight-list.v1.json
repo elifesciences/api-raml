@@ -683,27 +683,25 @@
                                                             "type": {
                                                                 "type": "string",
                                                                 "enum": [
-                                                                    "labs-experiment"
+                                                                    "labs-post"
                                                                 ]
                                                             }
                                                         }
                                                     },
                                                     {
                                                         "$schema": "http://json-schema.org/draft-04/schema#",
-                                                        "title": "Labs experiment snippet",
+                                                        "title": "Labs post snippet",
                                                         "type": "object",
                                                         "properties": {
-                                                            "number": {
-                                                                "description": "Number",
-                                                                "type": "integer",
-                                                                "minimum": 1
+                                                            "id": {
+                                                                "$ref": "#/properties/items/items/properties/item/oneOf/0/allOf/0/properties/id"
                                                             },
                                                             "title": {
                                                                 "description": "Title",
                                                                 "type": "string"
                                                             },
                                                             "impactStatement": {
-                                                                "description": "Description of the experiment",
+                                                                "description": "Description of the post",
                                                                 "type": "string"
                                                             },
                                                             "published": {
@@ -727,7 +725,7 @@
                                                             }
                                                         },
                                                         "required": [
-                                                            "number",
+                                                            "id",
                                                             "title",
                                                             "published",
                                                             "image"

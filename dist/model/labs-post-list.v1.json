@@ -1,32 +1,33 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
-    "title": "Labs experiment list",
+    "title": "Labs post list",
     "type": "object",
     "properties": {
         "total": {
-            "title": "Total number of Labs experiments",
+            "title": "Total number of Labs posts",
             "type": "integer",
             "minimum": 0
         },
         "items": {
-            "title": "Experiments",
+            "title": "Posts",
             "type": "array",
             "items": {
                 "$schema": "http://json-schema.org/draft-04/schema#",
-                "title": "Labs experiment snippet",
+                "title": "Labs post snippet",
                 "type": "object",
                 "properties": {
-                    "number": {
-                        "description": "Number",
-                        "type": "integer",
-                        "minimum": 1
+                    "id": {
+                        "$schema": "http://json-schema.org/draft-04/schema#",
+                        "title": "eLife ID",
+                        "type": "string",
+                        "pattern": "^[a-z0-9-]+$"
                     },
                     "title": {
                         "description": "Title",
                         "type": "string"
                     },
                     "impactStatement": {
-                        "description": "Description of the experiment",
+                        "description": "Description of the post",
                         "type": "string"
                     },
                     "published": {
@@ -142,7 +143,7 @@
                     }
                 },
                 "required": [
-                    "number",
+                    "id",
                     "title",
                     "published",
                     "image"

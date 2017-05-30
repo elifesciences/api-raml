@@ -1,37 +1,38 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
-    "title": "Labs experiment",
+    "title": "Labs post",
     "type": "object",
     "allOf": [
         {
             "$schema": "http://json-schema.org/draft-04/schema#",
-            "title": "Labs experiment snippet",
+            "title": "Labs post snippet",
             "type": "object",
             "properties": {
-                "number": {
-                    "description": "Number",
-                    "type": "integer",
-                    "minimum": 1
+                "id": {
+                    "$schema": "http://json-schema.org/draft-04/schema#",
+                    "title": "eLife ID",
+                    "type": "string",
+                    "pattern": "^[a-z0-9-]+$"
                 },
                 "title": {
                     "description": "Title",
                     "type": "string"
                 },
                 "impactStatement": {
-                    "description": "Description of the experiment",
+                    "description": "Description of the post",
                     "type": "string"
                 },
                 "published": {
                     "title": "Publication date (UTC)",
+                    "$ref": "#/allOf/0/properties/updated"
+                },
+                "updated": {
+                    "title": "Updated date (UTC)",
                     "$schema": "http://json-schema.org/draft-04/schema#",
                     "description": "eLife restriction over the ISO8601 standard\n\nFor example:\n    - 2016-09-16T12:34:56Z\n",
                     "type": "string",
                     "format": "date-time",
                     "pattern": "^....-..-..T..:..:..Z$"
-                },
-                "updated": {
-                    "title": "Updated date (UTC)",
-                    "$ref": "#/allOf/0/properties/published"
                 },
                 "image": {
                     "type": "object",
@@ -134,7 +135,7 @@
                 }
             },
             "required": [
-                "number",
+                "id",
                 "title",
                 "published",
                 "image"

@@ -15,11 +15,11 @@ documentation:
 
         ## Content versioning
 
-        Endpoints produce/consume dedicated content type, with the version as a parameter (eg `application/vnd.elife.labs-experiment-list+json;version=1`). These are primarily JSON-based (and described using [JSON Schema](http://json-schema.org/)), but alternative representations may be available.
+        Endpoints produce/consume dedicated content type, with the version as a parameter (eg `application/vnd.elife.labs-post-list+json;version=1`). These are primarily JSON-based (and described using [JSON Schema](http://json-schema.org/)), but alternative representations may be available.
 
         This verisoning follows [semantic versioning](http://semver.org/). Note we only use the major version as minor versions are backwards compatabile (so the API will return versions `1` and `2` rather than `1.0`, `1.1`, `2.0` etc).
 
-        You can request a specific version of a response using content negotation (eg `Accept: application/vnd.elife.labs-experiment-list+json;version=1`). The most recent version will always be preferred, so without a `version` parameter on the `Accept` header the latest version will be returned.
+        You can request a specific version of a response using content negotiation (eg `Accept: application/vnd.elife.labs-post-list+json;version=1`). The most recent version will always be preferred, so without a `version` parameter on the `Accept` header the latest version will be returned.
 
         ### On a request
 
@@ -788,63 +788,62 @@ traits:
                                     displayName: Complete
                                     value: !include samples/interview/v1/complete.json
 
-/labs-experiments:
+/labs-posts:
     type: collection
     description: |
-        Labs experiments
+        Labs posts
     get:
         description: |
-            Get a list of experiments, sorted by number.
+            Get a list of labs posts, sorted by publication date.
         is:
-          - paged: { resources: Experiments }
+          - paged: { resources: Posts }
         responses:
             200:
                 description: |
-                    List of experiments, sorted by number.
+                    List of labs posts, sorted by publication date.
                 body:
-                    application/vnd.elife.labs-experiment-list+json;version=1:
-                        schema: !include model/labs-experiment-list.v1.json
+                    application/vnd.elife.labs-post-list+json;version=1:
+                        schema: !include model/labs-post-list.v1.json
                         examples:
                             paginated:
                                 displayName: First page
                                 description: |
                                     List is split over two pages.
-                                value: !include samples/labs-experiment-list/v1/first-page.json
+                                value: !include samples/labs-post-list/v1/first-page.json
                             empty:
                                 displayName: Empty list
                                 description: |
                                     Demonstration of the list being empty (the first page will always return a valid result).
-                                value: !include samples/labs-experiment-list/v1/empty.json
+                                value: !include samples/labs-post-list/v1/empty.json
 
-    /{number}:
+    /{id}:
         type:
             item:
-                resource: Experiment
+                resource: Post
         description: |
-            Individual Labs experiment.
+            Individual Labs post.
         uriParameters:
-            number:
+            id:
                 description: |
-                    Experiment number.
-                type: integer
-                minimum: 1
+                    Post ID.
+                type: string
         get:
             description: |
-                Get an experiment.
+                Get an post.
             responses:
                 200:
                     description: |
-                        Experiment.
+                        Post.
                     body:
-                        application/vnd.elife.labs-experiment+json;version=1:
-                            schema: !include model/labs-experiment.v1.json
+                        application/vnd.elife.labs-post+json;version=1:
+                            schema: !include model/labs-post.v1.json
                             examples:
                                 minimum:
                                     displayName: Minimum
-                                    value: !include samples/labs-experiment/v1/minimum.json
+                                    value: !include samples/labs-post/v1/minimum.json
                                 complete:
                                     displayName: Complete
-                                    value: !include samples/labs-experiment/v1/complete.json
+                                    value: !include samples/labs-post/v1/complete.json
 
 /medium-articles:
     type: collection
@@ -1223,7 +1222,7 @@ traits:
                       - blog-article
                       - collection
                       - interview
-                      - labs-experiment
+                      - labs-post
                       - podcast-episode
                 required: false
         responses:
