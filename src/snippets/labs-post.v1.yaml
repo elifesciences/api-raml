@@ -1,16 +1,14 @@
 $schema: http://json-schema.org/draft-04/schema#
-title: Labs experiment snippet
+title: Labs post snippet
 type: object
 properties:
-    number:
-        description: Number
-        type: integer
-        minimum: 1
+    id:
+        $ref: ../misc/id.v1.yaml
     title:
         description: Title
         type: string
     impactStatement:
-        description: Description of the experiment
+        description: Description of the post
         type: string
     published:
         title: Publication date (UTC)
@@ -26,7 +24,7 @@ properties:
         required:
           - thumbnail
 required:
-  - number
+  - id
   - title
   - published
   - image

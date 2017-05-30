@@ -44,8 +44,8 @@ properties:
                                 type:
                                     type: string
                                     enum:
-                                      - labs-experiment
-                          - $ref: ../snippets/labs-experiment.v1.yaml
+                                      - labs-post
+                          - $ref: ../snippets/labs-post.v1.yaml
                       - allOf:
                           - properties:
                                 type:
@@ -79,7 +79,7 @@ properties:
                 type: integer
                 minimum: 0
             editorial:
-                description: Number of editoral articles in the result set
+                description: Number of editorial articles in the result set
                 type: integer
                 minimum: 0
             feature:
@@ -134,8 +134,8 @@ properties:
                 description: Number of interviews in the result set
                 type: integer
                 minimum: 0
-            labs-experiment:
-                description: Number of Labs experiments in the result set
+            labs-post:
+                description: Number of Labs posts in the result set
                 type: integer
                 minimum: 0
             podcast-episode:
@@ -158,7 +158,7 @@ properties:
           - blog-article
           - collection
           - interview
-          - labs-experiment
+          - labs-post
           - podcast-episode
 required:
   - total
