@@ -1,6 +1,7 @@
 oneOf:
   - $ref: ../blocks/button.v1.yaml
   - $ref: ../blocks/code.v1.yaml
+  - $ref: ../blocks/excerpt.v1.yaml
   - $ref: ../blocks/figure.v1.yaml
   - $ref: ../blocks/image.v1.yaml
   - $ref: ../blocks/list.v1.yaml
