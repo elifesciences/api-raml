@@ -31,7 +31,7 @@
                             "type": "object",
                             "properties": {
                                 "doi": {
-                                    "$ref": "#/allOf/1/allOf/0/properties/doi"
+                                    "$ref": "#/allOf/2/properties/authorResponse/properties/doi"
                                 }
                             }
                         },
@@ -151,10 +151,7 @@
                             ]
                         },
                         "doi": {
-                            "$schema": "http://json-schema.org/draft-04/schema#",
-                            "title": "DOI",
-                            "type": "string",
-                            "pattern": "^10[.][0-9]{4,}[^\\s\"/<>]*/[^\\s\"]+$"
+                            "$ref": "#/allOf/2/properties/authorResponse/properties/doi"
                         },
                         "authorLine": {
                             "description": "For example:\n  - Ian T Baldwin\n  - Randy Schekman, Mark Patterson\n  - Lee R Berger et al\n",
@@ -178,19 +175,19 @@
                         },
                         "published": {
                             "description": "Date and time this article was first published.\nNot present if 'stage' is 'preview' and version is '1'.\n",
-                            "$ref": "#/allOf/1/allOf/0/properties/versionDate"
-                        },
-                        "versionDate": {
-                            "description": "Date and time this version of the article was published.\nOnly present if 'stage' is 'published'.\n",
                             "$schema": "http://json-schema.org/draft-04/schema#",
                             "title": "Date-time ISO8601 with numeric UTC timezone",
                             "type": "string",
                             "format": "date-time",
                             "pattern": "^....-..-..T..:..:..Z$"
                         },
+                        "versionDate": {
+                            "description": "Date and time this version of the article was published.\nOnly present if 'stage' is 'published'.\n",
+                            "$ref": "#/allOf/1/allOf/0/properties/published"
+                        },
                         "statusDate": {
                             "description": "Date and time this article transitioned to current status.\nNot present if 'stage' is 'preview' and version is '1'.\n",
-                            "$ref": "#/allOf/1/allOf/0/properties/versionDate"
+                            "$ref": "#/allOf/1/allOf/0/properties/published"
                         },
                         "volume": {
                             "type": "integer",
@@ -687,7 +684,7 @@
                                                 "minLength": 1
                                             },
                                             "doi": {
-                                                "$ref": "#/allOf/1/allOf/0/properties/doi"
+                                                "$ref": "#/allOf/2/properties/authorResponse/properties/doi"
                                             },
                                             "uri": {
                                                 "type": "string",
@@ -731,7 +728,7 @@
                                                     {
                                                         "properties": {
                                                             "funderId": {
-                                                                "$ref": "#/allOf/1/allOf/0/properties/doi"
+                                                                "$ref": "#/allOf/2/properties/authorResponse/properties/doi"
                                                             }
                                                         }
                                                     }
@@ -901,7 +898,7 @@
                                     {
                                         "properties": {
                                             "doi": {
-                                                "$ref": "#/allOf/1/allOf/0/properties/doi"
+                                                "$ref": "#/allOf/2/properties/authorResponse/properties/doi"
                                             },
                                             "label": {
                                                 "title": "Label",
@@ -973,7 +970,7 @@
                     "type": "object",
                     "properties": {
                         "doi": {
-                            "$ref": "#/allOf/1/allOf/0/properties/doi"
+                            "$ref": "#/allOf/2/properties/authorResponse/properties/doi"
                         },
                         "content": {
                             "type": "array",
@@ -1206,7 +1203,7 @@
                                                 "$ref": "#/allOf/2/properties/references/items/definitions/pages"
                                             },
                                             "doi": {
-                                                "$ref": "#/allOf/1/allOf/0/properties/doi"
+                                                "$ref": "#/allOf/2/properties/authorResponse/properties/doi"
                                             },
                                             "uri": {
                                                 "type": "string",
@@ -1318,7 +1315,7 @@
                                                         "$ref": "#/allOf/2/properties/references/items/definitions/book/properties/publisher"
                                                     },
                                                     "doi": {
-                                                        "$ref": "#/allOf/1/allOf/0/properties/doi"
+                                                        "$ref": "#/allOf/2/properties/authorResponse/properties/doi"
                                                     },
                                                     "uri": {
                                                         "type": "string",
@@ -1373,7 +1370,7 @@
                                                 "$ref": "#/allOf/2/properties/references/items/definitions/pages"
                                             },
                                             "doi": {
-                                                "$ref": "#/allOf/1/allOf/0/properties/doi"
+                                                "$ref": "#/allOf/2/properties/authorResponse/properties/doi"
                                             },
                                             "pmid": {
                                                 "$ref": "#/allOf/2/properties/references/items/definitions/book/properties/pmid"
@@ -1528,7 +1525,7 @@
                                                 "minLength": 1
                                             },
                                             "doi": {
-                                                "$ref": "#/allOf/1/allOf/0/properties/doi"
+                                                "$ref": "#/allOf/2/properties/authorResponse/properties/doi"
                                             },
                                             "uri": {
                                                 "type": "string",
@@ -1576,7 +1573,7 @@
                                                 "$ref": "#/allOf/2/properties/references/items/definitions/book/properties/publisher"
                                             },
                                             "doi": {
-                                                "$ref": "#/allOf/1/allOf/0/properties/doi"
+                                                "$ref": "#/allOf/2/properties/authorResponse/properties/doi"
                                             },
                                             "pmid": {
                                                 "$ref": "#/allOf/2/properties/references/items/definitions/book/properties/pmid"
@@ -1662,7 +1659,7 @@
                                                 "$ref": "#/allOf/2/properties/references/items/definitions/book/properties/publisher"
                                             },
                                             "doi": {
-                                                "$ref": "#/allOf/1/allOf/0/properties/doi"
+                                                "$ref": "#/allOf/2/properties/authorResponse/properties/doi"
                                             },
                                             "uri": {
                                                 "type": "string",
@@ -1826,7 +1823,7 @@
                                         "minLength": 1
                                     },
                                     "doi": {
-                                        "$ref": "#/allOf/1/allOf/0/properties/doi"
+                                        "$ref": "#/allOf/2/properties/authorResponse/properties/doi"
                                     },
                                     "pmid": {
                                         "$schema": "http://json-schema.org/draft-04/schema#",
@@ -1899,7 +1896,7 @@
                                 "pattern": "^[^\\s]+$"
                             },
                             "doi": {
-                                "$ref": "#/allOf/1/allOf/0/properties/doi"
+                                "$ref": "#/allOf/2/properties/authorResponse/properties/doi"
                             },
                             "title": {
                                 "type": "string",
@@ -1985,6 +1982,168 @@
                                             },
                                             {
                                                 "$schema": "http://json-schema.org/draft-04/schema#",
+                                                "title": "Excerpt",
+                                                "type": "object",
+                                                "properties": {
+                                                    "type": {
+                                                        "type": "string",
+                                                        "enum": [
+                                                            "excerpt"
+                                                        ]
+                                                    },
+                                                    "content": {
+                                                        "description": "Content",
+                                                        "type": "array",
+                                                        "items": {
+                                                            "oneOf": [
+                                                                {
+                                                                    "$ref": "#/allOf/2/properties/acknowledgements/items/oneOf/0/oneOf/0/oneOf/1"
+                                                                },
+                                                                {
+                                                                    "$schema": "http://json-schema.org/draft-04/schema#",
+                                                                    "title": "List",
+                                                                    "type": "object",
+                                                                    "properties": {
+                                                                        "type": {
+                                                                            "type": "string",
+                                                                            "enum": [
+                                                                                "list"
+                                                                            ]
+                                                                        },
+                                                                        "prefix": {
+                                                                            "type": "string",
+                                                                            "enum": [
+                                                                                "alpha-lower",
+                                                                                "alpha-upper",
+                                                                                "bullet",
+                                                                                "none",
+                                                                                "number",
+                                                                                "roman-lower",
+                                                                                "roman-upper"
+                                                                            ]
+                                                                        },
+                                                                        "items": {
+                                                                            "description": "List items",
+                                                                            "type": "array",
+                                                                            "items": {
+                                                                                "oneOf": [
+                                                                                    {
+                                                                                        "type": "string"
+                                                                                    },
+                                                                                    {
+                                                                                        "type": "array",
+                                                                                        "items": {
+                                                                                            "$ref": "#/allOf/2/properties/acknowledgements/items/oneOf/0/oneOf/0"
+                                                                                        },
+                                                                                        "minItems": 1
+                                                                                    }
+                                                                                ]
+                                                                            },
+                                                                            "minItems": 1
+                                                                        }
+                                                                    },
+                                                                    "required": [
+                                                                        "type",
+                                                                        "prefix",
+                                                                        "items"
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    "$ref": "#/allOf/1/allOf/1/properties/additionalFiles/items/allOf/0/properties/caption/items/oneOf/0"
+                                                                },
+                                                                {
+                                                                    "$ref": "#/allOf/2/properties/ethics/items"
+                                                                },
+                                                                {
+                                                                    "$schema": "http://json-schema.org/draft-04/schema#",
+                                                                    "title": "Table",
+                                                                    "type": "object",
+                                                                    "allOf": [
+                                                                        {
+                                                                            "$ref": "#/allOf/1/allOf/1/properties/additionalFiles/items/allOf/0"
+                                                                        },
+                                                                        {
+                                                                            "properties": {
+                                                                                "type": {
+                                                                                    "type": "string",
+                                                                                    "enum": [
+                                                                                        "table"
+                                                                                    ]
+                                                                                },
+                                                                                "tables": {
+                                                                                    "type": "array",
+                                                                                    "items": {
+                                                                                        "title": "HTML table",
+                                                                                        "type": "string",
+                                                                                        "pattern": "^<table>[\\s\\S]+</table>$"
+                                                                                    }
+                                                                                },
+                                                                                "footnotes": {
+                                                                                    "type": "array",
+                                                                                    "items": {
+                                                                                        "$schema": "http://json-schema.org/draft-04/schema#",
+                                                                                        "title": "Footnote",
+                                                                                        "type": "object",
+                                                                                        "properties": {
+                                                                                            "id": {
+                                                                                                "$ref": "#/allOf/2/properties/appendices/items/properties/id"
+                                                                                            },
+                                                                                            "label": {
+                                                                                                "type": "string",
+                                                                                                "minLength": 1
+                                                                                            },
+                                                                                            "text": {
+                                                                                                "type": "array",
+                                                                                                "items": {
+                                                                                                    "oneOf": [
+                                                                                                        {
+                                                                                                            "$ref": "#/allOf/2/properties/ethics/items"
+                                                                                                        },
+                                                                                                        {
+                                                                                                            "$ref": "#/allOf/1/allOf/1/properties/additionalFiles/items/allOf/0/properties/caption/items/oneOf/0"
+                                                                                                        }
+                                                                                                    ]
+                                                                                                },
+                                                                                                "minItems": 1
+                                                                                            }
+                                                                                        },
+                                                                                        "required": [
+                                                                                            "text"
+                                                                                        ],
+                                                                                        "dependencies": {
+                                                                                            "id": [
+                                                                                                "label"
+                                                                                            ],
+                                                                                            "label": [
+                                                                                                "id"
+                                                                                            ]
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            },
+                                                                            "required": [
+                                                                                "type",
+                                                                                "tables"
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        },
+                                                        "minItems": 1
+                                                    },
+                                                    "cite": {
+                                                        "title": "Citation",
+                                                        "type": "string"
+                                                    }
+                                                },
+                                                "required": [
+                                                    "type",
+                                                    "content"
+                                                ]
+                                            },
+                                            {
+                                                "$schema": "http://json-schema.org/draft-04/schema#",
                                                 "title": "Figure",
                                                 "type": "object",
                                                 "properties": {
@@ -2001,166 +2160,20 @@
                                                                 {
                                                                     "oneOf": [
                                                                         {
-                                                                            "$ref": "#/allOf/2/properties/acknowledgements/items/oneOf/0/oneOf/0/oneOf/3"
+                                                                            "$ref": "#/allOf/2/properties/acknowledgements/items/oneOf/0/oneOf/0/oneOf/4"
                                                                         },
                                                                         {
-                                                                            "$schema": "http://json-schema.org/draft-04/schema#",
-                                                                            "title": "Table",
-                                                                            "type": "object",
-                                                                            "allOf": [
-                                                                                {
-                                                                                    "$ref": "#/allOf/1/allOf/1/properties/additionalFiles/items/allOf/0"
-                                                                                },
-                                                                                {
-                                                                                    "properties": {
-                                                                                        "type": {
-                                                                                            "type": "string",
-                                                                                            "enum": [
-                                                                                                "table"
-                                                                                            ]
-                                                                                        },
-                                                                                        "tables": {
-                                                                                            "type": "array",
-                                                                                            "items": {
-                                                                                                "title": "HTML table",
-                                                                                                "type": "string",
-                                                                                                "pattern": "^<table>[\\s\\S]+</table>$"
-                                                                                            }
-                                                                                        },
-                                                                                        "footnotes": {
-                                                                                            "type": "array",
-                                                                                            "items": {
-                                                                                                "$schema": "http://json-schema.org/draft-04/schema#",
-                                                                                                "title": "Footnote",
-                                                                                                "type": "object",
-                                                                                                "properties": {
-                                                                                                    "id": {
-                                                                                                        "$ref": "#/allOf/2/properties/appendices/items/properties/id"
-                                                                                                    },
-                                                                                                    "label": {
-                                                                                                        "type": "string",
-                                                                                                        "minLength": 1
-                                                                                                    },
-                                                                                                    "text": {
-                                                                                                        "type": "array",
-                                                                                                        "items": {
-                                                                                                            "oneOf": [
-                                                                                                                {
-                                                                                                                    "$ref": "#/allOf/2/properties/ethics/items"
-                                                                                                                },
-                                                                                                                {
-                                                                                                                    "$ref": "#/allOf/1/allOf/1/properties/additionalFiles/items/allOf/0/properties/caption/items/oneOf/0"
-                                                                                                                }
-                                                                                                            ]
-                                                                                                        },
-                                                                                                        "minItems": 1
-                                                                                                    }
-                                                                                                },
-                                                                                                "required": [
-                                                                                                    "text"
-                                                                                                ],
-                                                                                                "dependencies": {
-                                                                                                    "id": [
-                                                                                                        "label"
-                                                                                                    ],
-                                                                                                    "label": [
-                                                                                                        "id"
-                                                                                                    ]
-                                                                                                }
-                                                                                            }
-                                                                                        }
-                                                                                    },
-                                                                                    "required": [
-                                                                                        "type",
-                                                                                        "tables"
-                                                                                    ]
-                                                                                }
-                                                                            ]
+                                                                            "$ref": "#/allOf/2/properties/acknowledgements/items/oneOf/0/oneOf/0/oneOf/2/properties/content/items/oneOf/4"
                                                                         },
                                                                         {
-                                                                            "$schema": "http://json-schema.org/draft-04/schema#",
-                                                                            "title": "Video",
-                                                                            "type": "object",
-                                                                            "allOf": [
-                                                                                {
-                                                                                    "$ref": "#/allOf/1/allOf/1/properties/additionalFiles/items/allOf/0"
-                                                                                },
-                                                                                {
-                                                                                    "properties": {
-                                                                                        "type": {
-                                                                                            "type": "string",
-                                                                                            "enum": [
-                                                                                                "video"
-                                                                                            ]
-                                                                                        },
-                                                                                        "sources": {
-                                                                                            "type": "array",
-                                                                                            "items": {
-                                                                                                "type": "object",
-                                                                                                "properties": {
-                                                                                                    "mediaType": {
-                                                                                                        "allOf": [
-                                                                                                            {
-                                                                                                                "$ref": "#/allOf/1/allOf/1/properties/additionalFiles/items/allOf/2/properties/mediaType"
-                                                                                                            },
-                                                                                                            {
-                                                                                                                "pattern": "^video/"
-                                                                                                            }
-                                                                                                        ]
-                                                                                                    },
-                                                                                                    "uri": {
-                                                                                                        "title": "URI",
-                                                                                                        "type": "string",
-                                                                                                        "format": "uri",
-                                                                                                        "pattern": "^https://"
-                                                                                                    }
-                                                                                                },
-                                                                                                "required": [
-                                                                                                    "mediaType",
-                                                                                                    "uri"
-                                                                                                ]
-                                                                                            },
-                                                                                            "minItems": 1
-                                                                                        },
-                                                                                        "placeholder": {
-                                                                                            "$ref": "#/allOf/0/allOf/1/properties/image/properties/thumbnail"
-                                                                                        },
-                                                                                        "width": {
-                                                                                            "title": "Width",
-                                                                                            "type": "integer",
-                                                                                            "minimum": 1
-                                                                                        },
-                                                                                        "height": {
-                                                                                            "title": "Height",
-                                                                                            "type": "integer",
-                                                                                            "minimum": 1
-                                                                                        },
-                                                                                        "autoplay": {
-                                                                                            "title": "Whether to autoplay the video.",
-                                                                                            "type": "boolean",
-                                                                                            "default": false
-                                                                                        },
-                                                                                        "loop": {
-                                                                                            "title": "Whether to loop the video.",
-                                                                                            "type": "boolean",
-                                                                                            "default": false
-                                                                                        }
-                                                                                    },
-                                                                                    "required": [
-                                                                                        "type",
-                                                                                        "sources",
-                                                                                        "width",
-                                                                                        "height"
-                                                                                    ]
-                                                                                }
-                                                                            ]
+                                                                            "$ref": "#/allOf/2/properties/acknowledgements/items/oneOf/0/oneOf/0/oneOf/11"
                                                                         }
                                                                     ]
                                                                 },
                                                                 {
                                                                     "properties": {
                                                                         "doi": {
-                                                                            "$ref": "#/allOf/1/allOf/0/properties/doi"
+                                                                            "$ref": "#/allOf/2/properties/authorResponse/properties/doi"
                                                                         },
                                                                         "label": {
                                                                             "title": "Label",
@@ -2218,53 +2231,7 @@
                                                 ]
                                             },
                                             {
-                                                "$schema": "http://json-schema.org/draft-04/schema#",
-                                                "title": "List",
-                                                "type": "object",
-                                                "properties": {
-                                                    "type": {
-                                                        "type": "string",
-                                                        "enum": [
-                                                            "list"
-                                                        ]
-                                                    },
-                                                    "prefix": {
-                                                        "type": "string",
-                                                        "enum": [
-                                                            "alpha-lower",
-                                                            "alpha-upper",
-                                                            "bullet",
-                                                            "none",
-                                                            "number",
-                                                            "roman-lower",
-                                                            "roman-upper"
-                                                        ]
-                                                    },
-                                                    "items": {
-                                                        "description": "List items",
-                                                        "type": "array",
-                                                        "items": {
-                                                            "oneOf": [
-                                                                {
-                                                                    "type": "string"
-                                                                },
-                                                                {
-                                                                    "type": "array",
-                                                                    "items": {
-                                                                        "$ref": "#/allOf/2/properties/acknowledgements/items/oneOf/0/oneOf/0"
-                                                                    },
-                                                                    "minItems": 1
-                                                                }
-                                                            ]
-                                                        },
-                                                        "minItems": 1
-                                                    }
-                                                },
-                                                "required": [
-                                                    "type",
-                                                    "prefix",
-                                                    "items"
-                                                ]
+                                                "$ref": "#/allOf/2/properties/acknowledgements/items/oneOf/0/oneOf/0/oneOf/2/properties/content/items/oneOf/1"
                                             },
                                             {
                                                 "$ref": "#/allOf/1/allOf/1/properties/additionalFiles/items/allOf/0/properties/caption/items/oneOf/0"
@@ -2333,10 +2300,85 @@
                                                 ]
                                             },
                                             {
-                                                "$ref": "#/allOf/2/properties/acknowledgements/items/oneOf/0/oneOf/0/oneOf/2/properties/assets/items/allOf/0/oneOf/1"
+                                                "$ref": "#/allOf/2/properties/acknowledgements/items/oneOf/0/oneOf/0/oneOf/2/properties/content/items/oneOf/4"
                                             },
                                             {
-                                                "$ref": "#/allOf/2/properties/acknowledgements/items/oneOf/0/oneOf/0/oneOf/2/properties/assets/items/allOf/0/oneOf/2"
+                                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                                "title": "Video",
+                                                "type": "object",
+                                                "allOf": [
+                                                    {
+                                                        "$ref": "#/allOf/1/allOf/1/properties/additionalFiles/items/allOf/0"
+                                                    },
+                                                    {
+                                                        "properties": {
+                                                            "type": {
+                                                                "type": "string",
+                                                                "enum": [
+                                                                    "video"
+                                                                ]
+                                                            },
+                                                            "sources": {
+                                                                "type": "array",
+                                                                "items": {
+                                                                    "type": "object",
+                                                                    "properties": {
+                                                                        "mediaType": {
+                                                                            "allOf": [
+                                                                                {
+                                                                                    "$ref": "#/allOf/1/allOf/1/properties/additionalFiles/items/allOf/2/properties/mediaType"
+                                                                                },
+                                                                                {
+                                                                                    "pattern": "^video/"
+                                                                                }
+                                                                            ]
+                                                                        },
+                                                                        "uri": {
+                                                                            "title": "URI",
+                                                                            "type": "string",
+                                                                            "format": "uri",
+                                                                            "pattern": "^https://"
+                                                                        }
+                                                                    },
+                                                                    "required": [
+                                                                        "mediaType",
+                                                                        "uri"
+                                                                    ]
+                                                                },
+                                                                "minItems": 1
+                                                            },
+                                                            "placeholder": {
+                                                                "$ref": "#/allOf/0/allOf/1/properties/image/properties/thumbnail"
+                                                            },
+                                                            "width": {
+                                                                "title": "Width",
+                                                                "type": "integer",
+                                                                "minimum": 1
+                                                            },
+                                                            "height": {
+                                                                "title": "Height",
+                                                                "type": "integer",
+                                                                "minimum": 1
+                                                            },
+                                                            "autoplay": {
+                                                                "title": "Whether to autoplay the video.",
+                                                                "type": "boolean",
+                                                                "default": false
+                                                            },
+                                                            "loop": {
+                                                                "title": "Whether to loop the video.",
+                                                                "type": "boolean",
+                                                                "default": false
+                                                            }
+                                                        },
+                                                        "required": [
+                                                            "type",
+                                                            "sources",
+                                                            "width",
+                                                            "height"
+                                                        ]
+                                                    }
+                                                ]
                                             },
                                             {
                                                 "$schema": "http://json-schema.org/draft-04/schema#",
@@ -2385,7 +2427,7 @@
                                                 ]
                                             },
                                             "doi": {
-                                                "$ref": "#/allOf/1/allOf/0/properties/doi"
+                                                "$ref": "#/allOf/2/properties/authorResponse/properties/doi"
                                             },
                                             "id": {
                                                 "$ref": "#/allOf/2/properties/appendices/items/properties/id"
@@ -2458,7 +2500,7 @@
                     "type": "object",
                     "properties": {
                         "doi": {
-                            "$ref": "#/allOf/1/allOf/0/properties/doi"
+                            "$ref": "#/allOf/2/properties/authorResponse/properties/doi"
                         },
                         "description": {
                             "type": "array",
@@ -2485,7 +2527,10 @@
                     "type": "object",
                     "properties": {
                         "doi": {
-                            "$ref": "#/allOf/1/allOf/0/properties/doi"
+                            "$schema": "http://json-schema.org/draft-04/schema#",
+                            "title": "DOI",
+                            "type": "string",
+                            "pattern": "^10[.][0-9]{4,}[^\\s\"/<>]*/[^\\s\"]+$"
                         },
                         "content": {
                             "type": "array",

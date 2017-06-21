@@ -3694,32 +3694,42 @@
         "doi": "10.7554/eLife.15278.024",
         "content": [
             {
-                "type": "paragraph",
-                "text": "<i>Essential revisions:</i>"
-            },
-            {
-                "type": "paragraph",
-                "text": "<i>The reviewers thought that all comments deserve consideration by the authors. Particularly, the reviewers felt that analyzing the data as a function of the F5 subdivisions would strengthen the study further, particularly since the authors have followed such a strategy in previous work, and we'd hope that such analysis will be straightforward. In addition, the reviewers felt that there were interpretational issues with the role of area AIP that will deserve careful attention.</i>"
-            },
-            {
-                "type": "paragraph",
-                "text": "<i>Reviewer #1:</i>"
-            },
-            {
-                "type": "paragraph",
-                "text": "<i>The study by Schaffelhofer and Scherberger on \"Object vision to hand action in macaque parietal, motor, and premotor cortices\" reports novel findings on the roles of areas AiP, F5 and M1 in the transformation of visual information to motor action. Simultaneous recordings in these areas from arrays of electrodes were performed. The animals were trained on an excellent grasping task that used a variety of 3D objects and dissociated the different parts of a grasping task into its component parts (e.g. visual, motor planning, motor action). In addition to the use of sophisticated behavioral and recording protocols, the authors also used a glove to quantitatively measure kinematic aspects of grasping movements. The complex data from multiple areas and recording channels as well as movement parameters were analyzed in sophisticated ways to permit novel insight into the transformation of visual signals in areas AIP and F5 to motor planning and action in F5 and M1. I'll leave the detailed critique to the expert reviewer. In focusing on a larger picture in this particular area, I found this paper outstanding in all respects.</i>"
+                "type": "excerpt",
+                "content": [
+                    {
+                        "type": "paragraph",
+                        "text": "Essential revisions:"
+                    },
+                    {
+                        "type": "paragraph",
+                        "text": "The reviewers thought that all comments deserve consideration by the authors. Particularly, the reviewers felt that analyzing the data as a function of the F5 subdivisions would strengthen the study further, particularly since the authors have followed such a strategy in previous work, and we'd hope that such analysis will be straightforward. In addition, the reviewers felt that there were interpretational issues with the role of area AIP that will deserve careful attention."
+                    },
+                    {
+                        "type": "paragraph",
+                        "text": "Reviewer #1:"
+                    },
+                    {
+                        "type": "paragraph",
+                        "text": "The study by Schaffelhofer and Scherberger on \"Object vision to hand action in macaque parietal, motor, and premotor cortices\" reports novel findings on the roles of areas AiP, F5 and M1 in the transformation of visual information to motor action. Simultaneous recordings in these areas from arrays of electrodes were performed. The animals were trained on an excellent grasping task that used a variety of 3D objects and dissociated the different parts of a grasping task into its component parts (e.g. visual, motor planning, motor action). In addition to the use of sophisticated behavioral and recording protocols, the authors also used a glove to quantitatively measure kinematic aspects of grasping movements. The complex data from multiple areas and recording channels as well as movement parameters were analyzed in sophisticated ways to permit novel insight into the transformation of visual signals in areas AIP and F5 to motor planning and action in F5 and M1. I'll leave the detailed critique to the expert reviewer. In focusing on a larger picture in this particular area, I found this paper outstanding in all respects."
+                    }
+                ]
             },
             {
                 "type": "paragraph",
                 "text": "Thank you for your extremely favorable evaluation of our paper in particular regarding the larger picture of this research topic."
             },
             {
-                "type": "paragraph",
-                "text": "<i>Reviewer #2:</i>"
-            },
-            {
-                "type": "paragraph",
-                "text": "<i>1) The main limit of this beautiful work is the assumption that area F5 is anatomo-functionally unitary. Recent literature not considered in this work shows that F5 is neither architectonically (Belmalih et al. 2009) nor connectionally (Gerbella et al. 2011) homogeneous: the ventral and anterior part of F5 (called F5a, where the most lateral arrays in the present study have been implanted), hosts 3D-shape-selective and \"visual-dominant\" neurons (Theys et al. 2012), commonly found also in AIP (Theys et al. 2013) but not in the dorsal part of F5 (i.e. F5p, see Bonini et al. 2014). Furthermore, while in the introduction the authors generally talk about \"connections of F5 to the spinal cord and M1\", this is true virtually only for F5p (Borra et al. 2010). Considering altogether data recorded from different F5 subdivisions was acceptable in the authors' previous paper (Schaffelhofer et al. 2015, J Neurosci), as its goal was to decode hand configurations, but not here, where the authors want to elucidate the functioning of the cortical grasping network.</i>"
+                "type": "excerpt",
+                "content": [
+                    {
+                        "type": "paragraph",
+                        "text": "Reviewer #2:"
+                    },
+                    {
+                        "type": "paragraph",
+                        "text": "1) The main limit of this beautiful work is the assumption that area F5 is anatomo-functionally unitary. Recent literature not considered in this work shows that F5 is neither architectonically (Belmalih et al. 2009) nor connectionally (Gerbella et al. 2011) homogeneous: the ventral and anterior part of F5 (called F5a, where the most lateral arrays in the present study have been implanted), hosts 3D-shape-selective and \"visual-dominant\" neurons (Theys et al. 2012), commonly found also in AIP (Theys et al. 2013) but not in the dorsal part of F5 (i.e. F5p, see Bonini et al. 2014). Furthermore, while in the introduction the authors generally talk about \"connections of F5 to the spinal cord and M1\", this is true virtually only for F5p (Borra et al. 2010). Considering altogether data recorded from different F5 subdivisions was acceptable in the authors' previous paper (Schaffelhofer et al. 2015, J Neurosci), as its goal was to decode hand configurations, but not here, where the authors want to elucidate the functioning of the cortical grasping network."
+                    }
+                ]
             },
             {
                 "type": "paragraph",
@@ -3754,8 +3764,13 @@
                 "text": "“As discussed above, premotor preparation activity primarily originated from the ventral F5 array. Thus, the modulations observed prior to movement execution, such as observed in the CDA and hierarchical clustering, mainly based on the ventral recording site. In contrast, both arrays significantly supported movement execution. The different modalities in both recording sites are in line with the architectonical (Belmalih et al., 2009) and connectionally (Borra et al., 2010; Gerbella et al., 2011) distinct subdivisions F5a and F5p, which largely correspond to the ventral and dorsal recording array, respectively. Distinct connections of F5a with SII, AIP and other subdivision of F5 (but not to M1) (Gerbella et al., 2011) suggest an integration of visual, motor and context specific information (Theys et al., 2013). On the other hand, connections of F5p to the hand area of M1 and to the spinal cord (Borra et al., 2010) suggest a rather direct contribution to hand movement control. Taken together, the multimodal preparation signals with visual and motor contribution and the distinct motor feature coding towards planning and execution supports the important role of F5 in visuomotor transformation.”"
             },
             {
-                "type": "paragraph",
-                "text": "<i>2) Strictly related to this issue, the electrodes length is unknown. From the authors' previous works (Schaffelhoefer et al. 2015a and Townsend et al. 2011) I infer that \"electrode length ranged from 1.5 to 7.1 mm\", with the longest electrodes toward the sulcus. Thus, the more superficial electrodes of the lateral arrays certainly sampled F5c motor activity, likely related to mouth and hand movements, (see Graziano et al. 1997 and Maranesi et al. 2012), while the deepest electrodes most likely sampled F5p/a visuomotor activity. Please clarify.</i>"
+                "type": "excerpt",
+                "content": [
+                    {
+                        "type": "paragraph",
+                        "text": "2) Strictly related to this issue, the electrodes length is unknown. From the authors' previous works (Schaffelhoefer et al. 2015a and Townsend et al. 2011) I infer that \"electrode length ranged from 1.5 to 7.1 mm\", with the longest electrodes toward the sulcus. Thus, the more superficial electrodes of the lateral arrays certainly sampled F5c motor activity, likely related to mouth and hand movements, (see Graziano et al. 1997 and Maranesi et al. 2012), while the deepest electrodes most likely sampled F5p/a visuomotor activity. Please clarify."
+                    }
+                ]
             },
             {
                 "type": "paragraph",
@@ -3782,8 +3797,13 @@
                 "text": "We believe that the updated <a href=\"#fig1\">Figure 1</a>–<a href=\"#fig2\">2</a> and the corresponding updates in the text now provide full details of the location of the implanted electrodes."
             },
             {
-                "type": "paragraph",
-                "text": "<i>3) \"Data have been analysed from 20 recording sessions (10 per animal)…\". I don't understand how many (single and multi) units have been used for the analyses. It seems that a total of about 202 (units)*10 (sessions)=2020 and 355*10=3550 \"units\" have been considered in the two animals, respectively: with chronic recording this approach would certainly imply some resampling of the same \"units\" across sessions, increasing their number but reducing the variability of their discharge. At the same time, the authors stated in the Materials and methods section that \"all dimensionality reduction results presented for the individual areas originated from the same recording session per monkey\", which actually sounds fair, but in contrast with the previous consideration. Please clarify.</i>"
+                "type": "excerpt",
+                "content": [
+                    {
+                        "type": "paragraph",
+                        "text": "3) \"Data have been analysed from 20 recording sessions (10 per animal)…\". I don't understand how many (single and multi) units have been used for the analyses. It seems that a total of about 202 (units)*10 (sessions)=2020 and 355*10=3550 \"units\" have been considered in the two animals, respectively: with chronic recording this approach would certainly imply some resampling of the same \"units\" across sessions, increasing their number but reducing the variability of their discharge. At the same time, the authors stated in the Materials and methods section that \"all dimensionality reduction results presented for the individual areas originated from the same recording session per monkey\", which actually sounds fair, but in contrast with the previous consideration. Please clarify."
+                    }
+                ]
             },
             {
                 "type": "paragraph",
@@ -3838,8 +3858,13 @@
                 "text": "“The similarity of J- and N-space of M1 was not only visible in the first two components, but was also quantified across all dimensions in the hierarchical cluster trees of the simultaneously recorded M1 population (<a href=\"#fig6\">Figure 6 d,f</a>) and when averaging the population response across all recording sessions (<a href=\"#fig6s1\">Figure 6 —figure supplement 1</a>-2 for monkey M and Z, resp.).”"
             },
             {
-                "type": "paragraph",
-                "text": "<i>4) I recommend using the same y-axis scales for plots in <a href=\"#fig3\">figure 3 (b and d</a>). Nevertheless, it is clear that the tuning profile of AIP does not change when abstract or mixed sets of objects are used (see <a href=\"#fig3\">Figure 3b and d</a>): I totally understand the authors' reasoning, but they will acknowledge that all the abstract objects share an elongated shape, while those of the mixed set are much more variable. Thus, the lack of difference in the AIP tuning profile between the two sets is strange and should be better explained/discussed. For example, could it be due to receptive fields properties of AIP neurons (see Romero et al. 2014; Romero and Janssen 2016)?</i>"
+                "type": "excerpt",
+                "content": [
+                    {
+                        "type": "paragraph",
+                        "text": "4) I recommend using the same y-axis scales for plots in <a href=\"#fig3\">figure 3 (b and d</a>). Nevertheless, it is clear that the tuning profile of AIP does not change when abstract or mixed sets of objects are used (see <a href=\"#fig3\">Figure 3b and d</a>): I totally understand the authors' reasoning, but they will acknowledge that all the abstract objects share an elongated shape, while those of the mixed set are much more variable. Thus, the lack of difference in the AIP tuning profile between the two sets is strange and should be better explained/discussed. For example, could it be due to receptive fields properties of AIP neurons (see Romero et al. 2014; Romero and Janssen 2016)?"
+                    }
+                ]
             },
             {
                 "type": "paragraph",
@@ -3850,40 +3875,45 @@
                 "text": "The similar quantitative responses (in terms of percentage of significantly tuned neurons) for the abstract and mixed shapes, in our opinion, are not strange but strikingly extend our findings from the complete object set. We understand that a higher variation in object shape could have affected the number of tuned cells, in stark contrast to the observed minor differences presented in <a href=\"#fig3\">Figure 3</a>. However, monkeys viewed the objects from the side, which substantially reduced the apparent visual uniformity of the abstract object set (less elongated profiles). Furthermore, we report in <a href=\"#fig3\">Figure 3</a> the percentage of significantly tuned neurons, and not, for example, the average tuning strength (e.g., the difference between the strongest and weakest response in each object set), which might have been a more sensitive measure for detecting absolute tuning differences between both object sets."
             },
             {
-                "type": "paragraph",
-                "text": "<i>Reviewer #3:</i>"
-            },
-            {
-                "type": "paragraph",
-                "text": "<i>Altogether, I consider the work exceptional. The data make new and important contributions to understanding the cortical mechanisms underlying grasp control. By concurrently recording and characterising the relationships between limb kinematics and neural activity from AIP, F5, and M1 while monkeys viewed and grasped a wide range of objects, the scope of the current investigation is unparalleled in the current primate neurophysiological literature. Also outstanding are the beautiful data visualisation methods that the authors advance here.</i>"
-            },
-            {
-                "type": "paragraph",
-                "text": "<i>I have a few suggestions, however, detailed below. My hope is that the authors will find these comments constructive.</i>"
-            },
-            {
-                "type": "paragraph",
-                "text": "<i>A) Main concerns:</i>"
-            },
-            {
-                "type": "paragraph",
-                "text": "<i>(A-1) The role of AIP</i>"
-            },
-            {
-                "type": "paragraph",
-                "text": "<i>I'm having some difficulty understanding the authors’ stance on the role of AIP. I believe they are arguing that their data suggest that AIP is encoding object properties in visual terms, and not in motoric terms. They suggest that the results of their CDA show that AIP encodes objects according to shape in visual space, independent of the way they are grasped.</i>"
-            },
-            {
-                "type": "paragraph",
-                "text": "<i>My interpretation of their stance is that AIP activity does not reflect action possibilities in sensorimotor terms – but rather reflects the 'flagging' of visual features relevant for actions, but NOT (yet) represented as spatiomotor plans.</i>"
-            },
-            {
-                "type": "paragraph",
-                "text": "<i>If this is indeed their stance, I see this as a significant departure from prior conceptualizations (Jeannerod et al., 1995).</i>"
-            },
-            {
-                "type": "paragraph",
-                "text": "<i>However, I remain confused about this argument, both (<a href=\"#bib1\">1</a>) conceptually, and (<a href=\"#bib2\" >2</a>) with respect to how some aspects of their data can be viewed as consistent these claims.</i>"
+                "type": "excerpt",
+                "content": [
+                    {
+                        "type": "paragraph",
+                        "text": "Reviewer #3:"
+                    },
+                    {
+                        "type": "paragraph",
+                        "text": "Altogether, I consider the work exceptional. The data make new and important contributions to understanding the cortical mechanisms underlying grasp control. By concurrently recording and characterising the relationships between limb kinematics and neural activity from AIP, F5, and M1 while monkeys viewed and grasped a wide range of objects, the scope of the current investigation is unparalleled in the current primate neurophysiological literature. Also outstanding are the beautiful data visualisation methods that the authors advance here."
+                    },
+                    {
+                        "type": "paragraph",
+                        "text": "I have a few suggestions, however, detailed below. My hope is that the authors will find these comments constructive."
+                    },
+                    {
+                        "type": "paragraph",
+                        "text": "A) Main concerns:"
+                    },
+                    {
+                        "type": "paragraph",
+                        "text": "(A-1) The role of AIP"
+                    },
+                    {
+                        "type": "paragraph",
+                        "text": "I'm having some difficulty understanding the authors’ stance on the role of AIP. I believe they are arguing that their data suggest that AIP is encoding object properties in visual terms, and not in motoric terms. They suggest that the results of their CDA show that AIP encodes objects according to shape in visual space, independent of the way they are grasped."
+                    },
+                    {
+                        "type": "paragraph",
+                        "text": "My interpretation of their stance is that AIP activity does not reflect action possibilities in sensorimotor terms – but rather reflects the 'flagging' of visual features relevant for actions, but NOT (yet) represented as spatiomotor plans."
+                    },
+                    {
+                        "type": "paragraph",
+                        "text": "If this is indeed their stance, I see this as a significant departure from prior conceptualizations (Jeannerod et al., 1995).</i>"
+                    },
+                    {
+                        "type": "paragraph",
+                        "text": "However, I remain confused about this argument, both (<a href=\"#bib1\">1</a>) conceptually, and (<a href=\"#bib2\" >2</a>) with respect to how some aspects of their data can be viewed as consistent these claims."
+                    }
+                ]
             },
             {
                 "type": "paragraph",
@@ -3894,68 +3924,78 @@
                 "text": "Grasping an object in different ways does not only require different motor plans, but also differentiated visual descriptions of the object. For example, when grasping a coffee cup, we need to create a geometrical description of the cup and an additional visual selection of its object parts (e.g., the handle) that we intend to grasp (e.g., perform a hook grip). Our data suggests that AIP is a dynamical visual area that might be responsible for differentiating and selecting these objects parts in a visual (geometrical) rather than in a motor space."
             },
             {
-                "type": "paragraph",
-                "text": "<i>1) Conceptually. The authors talk about \"object affordances\" as different from \"motor affordances\".</i>"
-            },
-            {
-                "type": "paragraph",
-                "text": "<i>To me, affordances = action possibilities; they are sensory representations of the external environment that are inseparably linked to the motor apparatus and capabilities of the perceiving animal. In other words, affordances are, according to my understanding, inextricably motor.</i>"
-            },
-            {
-                "type": "paragraph",
-                "text": "<i>What does it mean to \"extract object affordances relevant for grasping\", but to not at the same time encode those same objects according to the spatiomotor properties required for their manual interaction?</i>"
-            },
-            {
-                "type": "paragraph",
-                "text": "<i>They state: \"…suggest encoding of object affordances rather than motor affordances\".</i>"
-            },
-            {
-                "type": "paragraph",
-                "text": "<i>I urge the authors to better clarify what is meant by object vs. motor affordances.</i>"
+                "type": "excerpt",
+                "content": [
+                    {
+                        "type": "paragraph",
+                        "text": "1) Conceptually. The authors talk about \"object affordances\" as different from \"motor affordances\"."
+                    },
+                    {
+                        "type": "paragraph",
+                        "text": "To me, affordances = action possibilities; they are sensory representations of the external environment that are inseparably linked to the motor apparatus and capabilities of the perceiving animal. In other words, affordances are, according to my understanding, inextricably motor."
+                    },
+                    {
+                        "type": "paragraph",
+                        "text": "What does it mean to \"extract object affordances relevant for grasping\", but to not at the same time encode those same objects according to the spatiomotor properties required for their manual interaction?"
+                    },
+                    {
+                        "type": "paragraph",
+                        "text": "They state: \"…suggest encoding of object affordances rather than motor affordances\"."
+                    },
+                    {
+                        "type": "paragraph",
+                        "text": "I urge the authors to better clarify what is meant by object vs. motor affordances."
+                    }
+                ]
             },
             {
                 "type": "paragraph",
                 "text": "Your comment is directly related to comment (d) of Reviewer #2. With object affordances we intended to express the visual extraction of object features of an object part relevant for grasping. To avoid confusion, we replaced “object affordances” with “object features” throughout the manuscript."
             },
             {
-                "type": "paragraph",
-                "text": "<i>2) Data. Some aspects of AIP data suggest encoding related to motoric features.</i>"
-            },
-            {
-                "type": "paragraph",
-                "text": "<i>a) Shift for same object – big horizontal cylinders – when grasped from below vs. above.</i>"
-            },
-            {
-                "type": "paragraph",
-                "text": "<i>b) Significant differentiation of conditions 00 vs. 01.</i>"
-            },
-            {
-                "type": "paragraph",
-                "text": "<i>c) Motor similarity measures – <a href=\"#fig7\">Figure 7</a> – presumably a measure of.75 for AIP is different than a measure of \"1\" – and thus, does suggest some correspondence between N- and J-space encoding in AIP</i>"
-            },
-            {
-                "type": "paragraph",
-                "text": "<i>d) Also, there interpretation of <a href=\"#fig3\">Figure 3b</a> vs. d – \"…observed encoding of abstract objects in AIP can be explained exclusively by object shape.\"</i>"
-            },
-            {
-                "type": "paragraph",
-                "text": "<i>Is it not possible that these data may reflect the fact that abstract versus mixed object set have more graspable parts – a greater number of possible actions –, and AIP encoding is sensitive to these differences?</i>"
-            },
-            {
-                "type": "paragraph",
-                "text": "<i>This account could be considered consistent with the authors’ interpretations regarding the evidence for reduced tuning in AIP over time for abstract shapes: \"…reduction of 3D shapes to the relevant parts for grasping…\".</i>"
-            },
-            {
-                "type": "paragraph",
-                "text": "<i>Summary:</i>"
-            },
-            {
-                "type": "paragraph",
-                "text": "<i>While the authors seem to argue for a strict separation in roles between AIP and F5 – visual vs. motor, respectively – I see the data as more likely evidence for a continuum – a graded difference – visual prevalence in AIP, with motor encoding vs. motoric prevalence in F5, with visual encoding.</i>"
-            },
-            {
-                "type": "paragraph",
-                "text": "<i>I suggest that the authors clarify their stance, and/or temper their arguments.</i>"
+                "type": "excerpt",
+                "content": [
+                    {
+                        "type": "paragraph",
+                        "text": "2) Data. Some aspects of AIP data suggest encoding related to motoric features."
+                    },
+                    {
+                        "type": "paragraph",
+                        "text": "a) Shift for same object – big horizontal cylinders – when grasped from below vs. above."
+                    },
+                    {
+                        "type": "paragraph",
+                        "text": "b) Significant differentiation of conditions 00 vs. 01."
+                    },
+                    {
+                        "type": "paragraph",
+                        "text": "c) Motor similarity measures – <a href=\"#fig7\">Figure 7</a> – presumably a measure of.75 for AIP is different than a measure of \"1\" – and thus, does suggest some correspondence between N- and J-space encoding in AIP"
+                    },
+                    {
+                        "type": "paragraph",
+                        "text": "d) Also, there interpretation of <a href=\"#fig3\">Figure 3b</a> vs. d – \"…observed encoding of abstract objects in AIP can be explained exclusively by object shape.\""
+                    },
+                    {
+                        "type": "paragraph",
+                        "text": "Is it not possible that these data may reflect the fact that abstract versus mixed object set have more graspable parts – a greater number of possible actions –, and AIP encoding is sensitive to these differences?"
+                    },
+                    {
+                        "type": "paragraph",
+                        "text": "This account could be considered consistent with the authors’ interpretations regarding the evidence for reduced tuning in AIP over time for abstract shapes: \"…reduction of 3D shapes to the relevant parts for grasping…\"."
+                    },
+                    {
+                        "type": "paragraph",
+                        "text": "Summary:"
+                    },
+                    {
+                        "type": "paragraph",
+                        "text": "While the authors seem to argue for a strict separation in roles between AIP and F5 – visual vs. motor, respectively – I see the data as more likely evidence for a continuum – a graded difference – visual prevalence in AIP, with motor encoding vs. motoric prevalence in F5, with visual encoding."
+                    },
+                    {
+                        "type": "paragraph",
+                        "text": "I suggest that the authors clarify their stance, and/or temper their arguments."
+                    }
+                ]
             },
             {
                 "type": "paragraph",
@@ -4057,12 +4097,17 @@
                 "text": "“These modulations could reflect either motor (Fagg and Arbib, 1998) or visual transformations required for grasping. […] These differentiation schemes support our hypothesis of visual rather than motor transformations in AIP.”"
             },
             {
-                "type": "paragraph",
-                "text": "<i>B) Intermediate concerns</i>"
-            },
-            {
-                "type": "paragraph",
-                "text": "<i>B-1) in the Introduction, the authors state that prior work did not dissociate between visual and motor features. At first, I thought this was inconsistent with the work of Sakata and colleagues – describing visual dominant, visuomotor, and motor dominant cell types. I think some discussion of this work upfront, including how the current approach critically differs, would be helpful.</i>"
+                "type": "excerpt",
+                "content": [
+                    {
+                        "type": "paragraph",
+                        "text": "B) Intermediate concerns"
+                    },
+                    {
+                        "type": "paragraph",
+                        "text": "B-1) in the Introduction, the authors state that prior work did not dissociate between visual and motor features. At first, I thought this was inconsistent with the work of Sakata and colleagues – describing visual dominant, visuomotor, and motor dominant cell types. I think some discussion of this work upfront, including how the current approach critically differs, would be helpful."
+                    }
+                ]
             },
             {
                 "type": "paragraph",
@@ -4081,16 +4126,26 @@
                 "text": "“To create a deeper understanding of how visual information is transformed into motor commands, a precise identification and differentiation of visual and motor processes within the grasping network is required. […] Our data revealed distinct roles of the grasping network in translating visual object attributes (AIP) into planning (F5) and execution signals (M1) and allowed visualizing the propagation of these features for grasping. “"
             },
             {
-                "type": "paragraph",
-                "text": "<i>B-2) Introduction – last paragraph – it isn't clear to me what the authors mean to say here, without first reading the rest of the paper. I think this section could be made clearer.</i>"
+                "type": "excerpt",
+                "content": [
+                    {
+                        "type": "paragraph",
+                        "text": "B-2) Introduction – last paragraph – it isn't clear to me what the authors mean to say here, without first reading the rest of the paper. I think this section could be made clearer."
+                    }
+                ]
             },
             {
                 "type": "paragraph",
                 "text": "We revised the last paragraph accordingly (see above). We believe, that the concept and intention of our experiments are now better explained."
             },
             {
-                "type": "paragraph",
-                "text": "<i>B-3) I'm not sure I understand their explanation of the shape-specificity prior to fixation. Please try to make this clearer.</i>"
+                "type": "excerpt",
+                "content": [
+                    {
+                        "type": "paragraph",
+                        "text": "B-3) I'm not sure I understand their explanation of the shape-specificity prior to fixation. Please try to make this clearer."
+                    }
+                ]
             },
             {
                 "type": "paragraph",
@@ -4101,24 +4156,39 @@
                 "text": "“The large number of objects presented in one recording session required separating the 48 objects on different turntables (see <a href=\"#fig1\">Figure 1</a>), often objects of similar shape. This separation created small offsets already in the fixation epoch, but at very low modulations. An extreme case is shown in <a href=\"#fig2\">Figure 2a</a>. This might raise concerns on whether coding in AIP was really due to object shape, or rather to the object presentation order (different turntables presented sequentially). However, shape-wise clustering in AIP cannot be explained by the task design for the following reasons: (1) The offsets in the fixation epoch were very small in comparison to the visual modulations observed in AIP when the objects were presented (e.g., see <a href=\"#media5\">Video 5</a>). (2) The set of “mixed” objects – presented and grasped in the same block – clustered with other objects of the same shape (e.g. ring in mixed block clusters with other ring objects). Together, this demonstrates clear shape processing in AIP.”"
             },
             {
-                "type": "paragraph",
-                "text": "<i>B-4) At first I thought I missed something – it seemed as though AIP was not looked at in terms of J- and N-space encoding in the same way that F5 and M1 were. However, later it is clear that they did analyse AIP in the same way. Why not also show these data, as they do for F5 (<a href=\"#fig4\" >Figure 4</a>, <a href=\"#fig5\">5</a>) and M1 (<a href=\"#fig6\">Figure 6</a>)?</i>"
+                "type": "excerpt",
+                "content": [
+                    {
+                        "type": "paragraph",
+                        "text": "B-4) At first I thought I missed something – it seemed as though AIP was not looked at in terms of J- and N-space encoding in the same way that F5 and M1 were. However, later it is clear that they did analyse AIP in the same way. Why not also show these data, as they do for F5 (<a href=\"#fig4\" >Figure 4</a>, <a href=\"#fig5\">5</a>) and M1 (<a href=\"#fig6\">Figure 6</a>)?"
+                    }
+                ]
             },
             {
                 "type": "paragraph",
                 "text": "For the complete N-space the AIP, F5, and M1 populations were analyzed and visualized in the same way. In the reduced space the areas were visualized differently to represent the full dimensional space (hierarchical clustering) best. That is, showing the object separation of AIP in 3D to reveal the object-shape clusters best, whereas F5 and M1 populations were shown in 2D and aligned (rotated) to the J-space (with PCRA) to allow direct comparison of both representations next to each other. We believe that this kind of visualization reflects and explains the full-dimensional results best."
             },
             {
-                "type": "paragraph",
-                "text": "<i>B-5) <a href=\"#fig4\">Figure 4</a> – it is unclear to me why they plot J-space for the hold epoch and N-space for the grasp epoch; why not show results from the same epochs?</i>"
+                "type": "excerpt",
+                "content": [
+                    {
+                        "type": "paragraph",
+                        "text": "B-5) <a href=\"#fig4\">Figure 4</a> – it is unclear to me why they plot J-space for the hold epoch and N-space for the grasp epoch; why not show results from the same epochs?"
+                    }
+                ]
             },
             {
                 "type": "paragraph",
                 "text": "Premotor area F5 provided higher modulations (separation of conditions) in the grasping epoch, when the hand was approaching the object. This is also shown and discussed in <a href=\"#media5\">video 5</a>, where you can see F5 expressions earlier than in M1. We therefore selected this epoch in area F5 to represent motor execution. However, all epochs, including the hold epoch, are shown below in <a href=\"#fig4\">Figure 4i</a>."
             },
             {
-                "type": "paragraph",
-                "text": "<i>B-6) <a href=\"#fig8\">Figure 8</a> – and the authors' discussion of the driving influence of F5 on M1 activity – how do these findings relate to (Umilta et al., 2007; Spinks et al., 2008)? I think these studies should be explicitly discussed.</i>"
+                "type": "excerpt",
+                "content": [
+                    {
+                        "type": "paragraph",
+                        "text": "B-6) <a href=\"#fig8\">Figure 8</a> – and the authors' discussion of the driving influence of F5 on M1 activity – how do these findings relate to (Umilta et al., 2007; Spinks et al., 2008)? I think these studies should be explicitly discussed."
+                    }
+                ]
             },
             {
                 "type": "paragraph",
@@ -4141,8 +4211,13 @@
                 "text": "“The high similarity of the F5 and M1 population during movement execution (<a href=\"#fig4\">Figure 4h</a> vs. 6e, <a href=\"#fig8\">Figure 8</a>, and <a href=\"#media5\">Video 5</a>) is in agreement with findings of similar coding schemes between both areas in spiking (Umilta et al., 2007) and β-band LFP activity (Spinks et al., 2008).”"
             },
             {
-                "type": "paragraph",
-                "text": "<i>Also, is it not surprising to find so little evidence for correspondence between AIP and F5 during planning?</i>"
+                "type": "excerpt",
+                "content": [
+                    {
+                        "type": "paragraph",
+                        "text": "Also, is it not surprising to find so little evidence for correspondence between AIP and F5 during planning?"
+                    }
+                ]
             },
             {
                 "type": "paragraph",
@@ -4157,8 +4232,13 @@
                 "text": "“These results are consistent with the proportion of F5 visual cells identified in animal Z and M (<a href=\"#fig3\">Figure 3</a>), which only temporarily shared the visual coding with AIP. Interestingly, F5 and AIP demonstrated minimal similarities during movement planning, which could support the different encoding of visual and motor features described on the population level (<a href=\"#fig2\">Figure 2</a>, <a href=\"#fig4\">Figure 4</a>,<a href=\"#fig5\">5</a>).”"
             },
             {
-                "type": "paragraph",
-                "text": "<i>How does the relationship between AIP and F5 that the authors suggest according to their new results compare with prior accounts – e.g. Jeannerod et al., 1995; Fagg and Arbib, 1998?</i>"
+                "type": "excerpt",
+                "content": [
+                    {
+                        "type": "paragraph",
+                        "text": "How does the relationship between AIP and F5 that the authors suggest according to their new results compare with prior accounts – e.g. Jeannerod et al., 1995; Fagg and Arbib, 1998?"
+                    }
+                ]
             },
             {
                 "type": "paragraph",
@@ -4177,16 +4257,26 @@
                 "text": "We believe that our edits in response to this reviewer’s comment a) (see above) addresses this question."
             },
             {
-                "type": "paragraph",
-                "text": "<i>How do the authors interpret the increased AIP-M1 correspondence during grasp and hold?</i>"
+                "type": "excerpt",
+                "content": [
+                    {
+                        "type": "paragraph",
+                        "text": "How do the authors interpret the increased AIP-M1 correspondence during grasp and hold?"
+                    }
+                ]
             },
             {
                 "type": "paragraph",
                 "text": "This comment is related to comment (1b)-d. As discussed above, visual representations of objects and motor features of the hand cannot be entirely disassociated, because the object geometries define the shape of the grasping hand. Even pure motor representations, such as the recorded hand kinematics, can therefore share similarities with an object space. When M1 changes from a mostly unmodulated (planning) to a highly modulated state (grasp epoch) the similarity to an object space increases. In other words, we interpret the increase of similarity as a result of the highly increased modulations in M1."
             },
             {
-                "type": "paragraph",
-                "text": "<i>B-7) What do the authors mean by the statement regarding M1 on p.26 \"…its neuronal population has never been studied explicitly\"? What about, for e.g., the work of Umilta et al., 2007; Spinks et al., 2008?</i>"
+                "type": "excerpt",
+                "content": [
+                    {
+                        "type": "paragraph",
+                        "text": "B-7) What do the authors mean by the statement regarding M1 on p.26 \"…its neuronal population has never been studied explicitly\"? What about, for e.g., the work of Umilta et al., 2007; Spinks et al., 2008?"
+                    }
+                ]
             },
             {
                 "type": "paragraph",
