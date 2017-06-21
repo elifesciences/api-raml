@@ -13,7 +13,7 @@ properties:
             For example:
               - Ian T Baldwin
               - Randy Schekman, Mark Patterson
-              - Lee R Berger et al
+              - Lee R Berger et al.
         type: string
         minLength: 1
     uri:
