@@ -59,6 +59,11 @@ allOf:
                     type: array
                     items:
                         $ref: ../misc/data-set.v1.yaml
+        ethics:
+            type: array
+            items:
+                $ref: ../blocks/paragraph.v1.yaml
+            minItems: 1
         funding:
             $ref: ../misc/funding.v1.yaml
         additionalFiles:
