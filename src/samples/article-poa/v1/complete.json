@@ -222,6 +222,16 @@
             }
         ]
     },
+    "ethics": [
+        {
+            "type": "paragraph",
+            "text": "Human subjects: If Research Ethics Committee and Institutional Review Board approval was required for this article the details would be listed here."
+        },
+        {
+            "type": "paragraph",
+            "text": "Animal subjects: If there were animal subjects involved in the study the approval number for the research along with protocol approval would be listed here."
+        }
+    ],
     "funding": {
         "awards": [
             {
