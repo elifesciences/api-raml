@@ -13,6 +13,10 @@
             "type": "string",
             "format": "uri"
         },
+        "pdf": {
+            "type": "string",
+            "format": "uri"
+        },
         "title": {
             "description": "Title",
             "type": "string",
