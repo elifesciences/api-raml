@@ -1,0 +1,9 @@
+$schema: http://json-schema.org/draft-04/schema#
+title: Has attribution
+type: object
+properties:
+    attribution:
+        title: Attribution
+        type: array
+        items:
+            type: string
