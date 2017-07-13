@@ -1,0 +1,48 @@
+$schema: http://json-schema.org/draft-04/schema#
+title: Press package
+type: object
+allOf:
+  - $ref: ../snippets/press-package.v1.yaml
+  - properties:
+        content:
+            description: Content
+            type: array
+            items:
+                $ref: ../misc/blocks-all.v1.yaml
+            minItems: 1
+        relatedContent:
+            title: Related content
+            type: array
+            items:
+                oneOf:
+                  - $ref: ../snippets/article-poa.v1.yaml
+                  - $ref: ../snippets/article-vor.v1.yaml
+            uniqueItems: true
+        mediaContacts:
+            title: Media contacts
+            type: array
+            items:
+                allOf:
+                  - $ref: ../misc/person.v1.yaml
+                  - properties:
+                        emailAddresses:
+                            type: array
+                            items:
+                                type: string
+                                format: email
+                        phoneNumbers:
+                            type: array
+                            items:
+                                $ref: ../misc/phone-number.v1.yaml
+                        affiliations:
+                            type: array
+                            items:
+                                $ref: ../misc/place.v1.yaml
+        about:
+            description: Descriptions of the publications referenced in the press package
+            type: array
+            items:
+                $ref: ../blocks/paragraph.v1.yaml
+            minItems: 1
+    required:
+      - content
