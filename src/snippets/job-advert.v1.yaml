@@ -1,0 +1,20 @@
+$schema: http://json-schema.org/draft-04/schema#
+title: Job advert snippet
+type: object
+properties:
+    id:
+        $ref: ../misc/id.v1.yaml
+    title:
+        title: Title of the job advert
+        type: string
+        minLength: 1
+    published:
+        title: Publication date (UTC)
+        $ref: ../misc/date-time.v1.yaml
+    updated:
+        title: Updated date (UTC)
+        $ref: ../misc/date-time.v1.yaml
+required:
+  - id
+  - title
+  - published
