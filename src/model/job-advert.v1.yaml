@@ -1,0 +1,45 @@
+$schema: http://json-schema.org/draft-04/schema#
+title: Job advert
+type: object
+allOf:
+  - $ref: ../snippets/job-advert.v1.yaml
+  - properties:
+        description:
+            description: Description
+            type: array
+            items:
+                $ref: ../misc/blocks-all.v1.yaml
+            minItems: 1
+        responsibilities:
+            description: Responsibilities
+            type: array
+            items:
+                $ref: ../misc/blocks-all.v1.yaml
+            minItems: 1
+        experience:
+            description: Experience
+            type: array
+            items:
+                $ref: ../misc/blocks-all.v1.yaml
+            minItems: 1
+        termsAndConditions:
+            $ref: ../blocks/paragraph.v1.yaml
+        offer:
+            description: Experience
+            type: array
+            items:
+                $ref: ../misc/blocks-all.v1.yaml
+            minItems: 1
+        contact:
+            description: Content
+            type: string
+            format: email
+        closingDate:
+            title: Updated date (UTC)
+            $ref: ../misc/date-time.v1.yaml
+
+    required:
+      - description
+      - responsibilities
+      - termsAndConditions
+      - contact
