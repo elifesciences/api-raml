@@ -65,6 +65,7 @@ documentation:
         - `small-caps`
         - `author-callout-style-a1` through to `author-callout-style-a3` (for text colours)
         - `author-callout-style-b1` through to `author-callout-style-b8` (for background colours)
+        - `sequence` (for sequences, e.g. peptide, gene)
 
 resourceTypes:
     base:
@@ -1135,6 +1136,15 @@ traits:
                                 complete:
                                     displayName: Complete
                                     value: !include samples/press-package/v1/complete.json
+                        application/vnd.elife.press-package+json;version=2:
+                            schema: !include ../dist/model/press-package.v2.json
+                            examples:
+                                minimum:
+                                    displayName: Minimum
+                                    value: !include samples/press-package/v2/minimum.json
+                                complete:
+                                    displayName: Complete
+                                    value: !include samples/press-package/v2/complete.json
 
 /recommendations/{type}/{id}:
     type: collection
