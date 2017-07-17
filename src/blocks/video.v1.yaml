@@ -2,7 +2,8 @@ $schema: http://json-schema.org/draft-04/schema#
 title: Video
 type: object
 allOf:
-  - $ref: ../misc/asset.v1.yaml
+  - $ref: ../misc/caption.v1.yaml
+  - $ref: ../misc/attribution.v1.yaml
   - properties:
         type:
             type: string

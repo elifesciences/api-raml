@@ -7,6 +7,9 @@
     "image": {
         "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif",
         "alt": "",
+        "attribution": [
+            "By some person."
+        ],
         "source": {
             "mediaType": "image/jpeg",
             "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif/full/full/0/default.jpg",

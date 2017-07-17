@@ -1,5 +1,5 @@
 $schema: http://json-schema.org/draft-04/schema#
-title: Asset
+title: Has caption
 type: object
 properties:
     id:
@@ -31,8 +31,3 @@ properties:
                             pattern: ^<table>[\s\S]+</table>$
                 additionalProperties: false
         minItems: 1
-    attribution:
-        title: Attribution
-        type: array
-        items:
-            type: string
