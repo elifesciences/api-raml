@@ -11,7 +11,11 @@ properties:
         items:
             allOf:
               - oneOf:
-                  - $ref: image.v1.yaml
+                  - allOf:
+                      - $ref: image.v1.yaml
+                      - properties:
+                            inline:
+                                not: {} # figure images can't be inline
                   - $ref: table.v1.yaml
                   - $ref: video.v1.yaml
               - properties:
