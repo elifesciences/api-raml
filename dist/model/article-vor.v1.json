@@ -2202,7 +2202,20 @@
                                                                 {
                                                                     "oneOf": [
                                                                         {
-                                                                            "$ref": "#/allOf/2/properties/acknowledgements/items/oneOf/0/oneOf/0/oneOf/4"
+                                                                            "allOf": [
+                                                                                {
+                                                                                    "$ref": "#/allOf/2/properties/acknowledgements/items/oneOf/0/oneOf/0/oneOf/4"
+                                                                                },
+                                                                                {
+                                                                                    "properties": {
+                                                                                        "inline": {
+                                                                                            "enum": [
+                                                                                                false
+                                                                                            ]
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            ]
                                                                         },
                                                                         {
                                                                             "$ref": "#/allOf/2/properties/acknowledgements/items/oneOf/0/oneOf/0/oneOf/2/properties/content/items/oneOf/4"
@@ -2263,6 +2276,9 @@
                                                             },
                                                             "image": {
                                                                 "$ref": "#/allOf/0/allOf/1/properties/image/properties/thumbnail"
+                                                            },
+                                                            "inline": {
+                                                                "type": "boolean"
                                                             }
                                                         },
                                                         "required": [

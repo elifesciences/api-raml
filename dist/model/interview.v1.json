@@ -409,7 +409,7 @@
                                                                     "type": "object",
                                                                     "allOf": [
                                                                         {
-                                                                            "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/4/allOf/0"
+                                                                            "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/11/allOf/0"
                                                                         },
                                                                         {
                                                                             "$ref": "#/allOf/0/properties/image/properties/thumbnail/allOf/0"
@@ -512,7 +512,20 @@
                                                                 {
                                                                     "oneOf": [
                                                                         {
-                                                                            "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/4"
+                                                                            "allOf": [
+                                                                                {
+                                                                                    "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/4"
+                                                                                },
+                                                                                {
+                                                                                    "properties": {
+                                                                                        "inline": {
+                                                                                            "enum": [
+                                                                                                false
+                                                                                            ]
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            ]
                                                                         },
                                                                         {
                                                                             "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/2/properties/content/items/oneOf/4"
@@ -541,7 +554,7 @@
                                                                                 "type": "object",
                                                                                 "allOf": [
                                                                                     {
-                                                                                        "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/4/allOf/0"
+                                                                                        "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/11/allOf/0"
                                                                                     },
                                                                                     {
                                                                                         "$ref": "#/allOf/0/properties/image/properties/thumbnail/allOf/0"
@@ -590,56 +603,7 @@
                                                 "type": "object",
                                                 "allOf": [
                                                     {
-                                                        "$schema": "http://json-schema.org/draft-04/schema#",
-                                                        "title": "Has caption",
-                                                        "type": "object",
-                                                        "properties": {
-                                                            "id": {
-                                                                "$ref": "#/allOf/1/properties/content/items/oneOf/1/properties/id"
-                                                            },
-                                                            "title": {
-                                                                "title": "Title",
-                                                                "type": "string",
-                                                                "minLength": 1
-                                                            },
-                                                            "caption": {
-                                                                "title": "Caption",
-                                                                "type": "array",
-                                                                "items": {
-                                                                    "oneOf": [
-                                                                        {
-                                                                            "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/2/properties/content/items/oneOf/2"
-                                                                        },
-                                                                        {
-                                                                            "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/2/properties/content/items/oneOf/3"
-                                                                        },
-                                                                        {
-                                                                            "properties": {
-                                                                                "type": {
-                                                                                    "type": "string",
-                                                                                    "enum": [
-                                                                                        "table"
-                                                                                    ]
-                                                                                },
-                                                                                "id": {
-                                                                                    "$ref": "#/allOf/1/properties/content/items/oneOf/1/properties/id"
-                                                                                },
-                                                                                "tables": {
-                                                                                    "type": "array",
-                                                                                    "items": {
-                                                                                        "title": "HTML table",
-                                                                                        "type": "string",
-                                                                                        "pattern": "^<table>[\\s\\S]+</table>$"
-                                                                                    }
-                                                                                }
-                                                                            },
-                                                                            "additionalProperties": false
-                                                                        }
-                                                                    ]
-                                                                },
-                                                                "minItems": 1
-                                                            }
-                                                        }
+                                                        "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/11/allOf/0"
                                                     },
                                                     {
                                                         "properties": {
@@ -651,6 +615,9 @@
                                                             },
                                                             "image": {
                                                                 "$ref": "#/allOf/0/properties/image/properties/thumbnail"
+                                                            },
+                                                            "inline": {
+                                                                "type": "boolean"
                                                             }
                                                         },
                                                         "required": [
@@ -738,7 +705,56 @@
                                                 "type": "object",
                                                 "allOf": [
                                                     {
-                                                        "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/4/allOf/0"
+                                                        "$schema": "http://json-schema.org/draft-04/schema#",
+                                                        "title": "Has caption",
+                                                        "type": "object",
+                                                        "properties": {
+                                                            "id": {
+                                                                "$ref": "#/allOf/1/properties/content/items/oneOf/1/properties/id"
+                                                            },
+                                                            "title": {
+                                                                "title": "Title",
+                                                                "type": "string",
+                                                                "minLength": 1
+                                                            },
+                                                            "caption": {
+                                                                "title": "Caption",
+                                                                "type": "array",
+                                                                "items": {
+                                                                    "oneOf": [
+                                                                        {
+                                                                            "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/2/properties/content/items/oneOf/2"
+                                                                        },
+                                                                        {
+                                                                            "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/2/properties/content/items/oneOf/3"
+                                                                        },
+                                                                        {
+                                                                            "properties": {
+                                                                                "type": {
+                                                                                    "type": "string",
+                                                                                    "enum": [
+                                                                                        "table"
+                                                                                    ]
+                                                                                },
+                                                                                "id": {
+                                                                                    "$ref": "#/allOf/1/properties/content/items/oneOf/1/properties/id"
+                                                                                },
+                                                                                "tables": {
+                                                                                    "type": "array",
+                                                                                    "items": {
+                                                                                        "title": "HTML table",
+                                                                                        "type": "string",
+                                                                                        "pattern": "^<table>[\\s\\S]+</table>$"
+                                                                                    }
+                                                                                }
+                                                                            },
+                                                                            "additionalProperties": false
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                "minItems": 1
+                                                            }
+                                                        }
                                                     },
                                                     {
                                                         "$ref": "#/allOf/0/properties/image/properties/thumbnail/allOf/0"
