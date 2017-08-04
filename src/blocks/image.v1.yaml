@@ -10,6 +10,8 @@ allOf:
               - image
         image:
             $ref: ../misc/image.v1.yaml
+        inline:
+            type: boolean
     required:
       - type
       - image

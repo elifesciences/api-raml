@@ -11,7 +11,12 @@ properties:
         items:
             allOf:
               - oneOf:
-                  - $ref: image.v1.yaml
+                  - allOf:
+                      - $ref: image.v1.yaml
+                      - properties:
+                            inline:
+                                enum:
+                                  - false
                   - $ref: table.v1.yaml
                   - $ref: video.v1.yaml
               - properties:
