@@ -24,12 +24,6 @@ allOf:
             minItems: 1
         termsAndConditions:
             $ref: ../blocks/paragraph.v1.yaml
-        offer:
-            description: Experience
-            type: array
-            items:
-                $ref: ../misc/blocks-all.v1.yaml
-            minItems: 1
         closingDate:
             title: Updated date (UTC)
             $ref: ../misc/date-time.v1.yaml
