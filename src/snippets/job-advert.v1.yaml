@@ -11,6 +11,9 @@ properties:
     impactStatement:
         description: Description of the job
         type: string
+    closingDate:
+        title: Updated date (UTC)
+        $ref: ../misc/date-time.v1.yaml
     published:
         title: Publication date (UTC)
         $ref: ../misc/date-time.v1.yaml
@@ -23,3 +26,4 @@ required:
   - title
   - impactStatement
   - published
+  - closingDate

@@ -30,12 +30,8 @@ allOf:
               - essential
         termsAndConditions:
             $ref: ../blocks/paragraph.v1.yaml
-        closingDate:
-            title: Updated date (UTC)
-            $ref: ../misc/date-time.v1.yaml
 
     required:
       - description
       - responsibilities
       - termsAndConditions
-      - closingDate
