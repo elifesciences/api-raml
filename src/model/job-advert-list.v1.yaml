@@ -1,0 +1,17 @@
+$schema: http://json-schema.org/draft-04/schema#
+title: Job advert list
+type: object
+properties:
+    total:
+        title: Total number of open job adverts
+        type: integer
+        minimum: 0
+    items:
+        title: Jobs
+        type: array
+        items:
+            $ref: ../snippets/job-advert.v1.yaml
+        uniqueItems: true
+required:
+  - total
+  - items
