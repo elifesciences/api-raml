@@ -18,10 +18,16 @@ allOf:
             minItems: 1
         experience:
             description: Experience
-            type: array
-            items:
-                $ref: ../misc/blocks-all.v1.yaml
-            minItems: 1
+            type: object,
+            properties:
+                essential:
+                    $ref: ../misc/list.v1.yaml
+                    minItems: 1
+                additional:
+                    $ref: ../misc/list.v1.yaml
+                    minItems: 1
+            required:
+              - essential
         termsAndConditions:
             $ref: ../blocks/paragraph.v1.yaml
         closingDate:
