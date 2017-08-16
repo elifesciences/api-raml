@@ -30,10 +30,6 @@ allOf:
             items:
                 $ref: ../misc/blocks-all.v1.yaml
             minItems: 1
-        contact:
-            description: Content
-            type: string
-            format: email
         closingDate:
             title: Updated date (UTC)
             $ref: ../misc/date-time.v1.yaml
@@ -42,4 +38,3 @@ allOf:
       - description
       - responsibilities
       - termsAndConditions
-      - contact
