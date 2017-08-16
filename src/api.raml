@@ -368,7 +368,7 @@ traits:
                                     multipleVersions:
                                         displayName: Multiple versions
                                         value: !include samples/article-history/v1/multiple-versions.json
-                                    unpublishedMinimum: 
+                                    unpublishedMinimum:
                                         displayName: PreviewMinimum
                                         value: !include samples/article-history/v1/unpublished-minimum.json
                                     unpublishedMultipleVersions:
@@ -805,6 +805,17 @@ traits:
             Get a list of job adverts, sorted by publication date.
         is:
           - paged: { resources: Job adverts }
+        queryParameters:
+            show:
+                description: |
+                    Type of job adverts to show.
+                type: string
+                required: false
+                default: all
+                enum:
+                  - all
+                  - closed
+                  - open
         responses:
             200:
                 description: |
