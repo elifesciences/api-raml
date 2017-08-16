@@ -14,7 +14,7 @@ allOf:
             description: Responsibilities
             type: array
             items:
-                $ref: ../misc/blocks-all.v1.yaml
+                $ref: ../misc/list.v1.yaml
             minItems: 1
         experience:
             description: Experience
