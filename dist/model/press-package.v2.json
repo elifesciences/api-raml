@@ -399,7 +399,20 @@
                                                                 {
                                                                     "oneOf": [
                                                                         {
-                                                                            "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/4"
+                                                                            "allOf": [
+                                                                                {
+                                                                                    "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/4"
+                                                                                },
+                                                                                {
+                                                                                    "properties": {
+                                                                                        "inline": {
+                                                                                            "enum": [
+                                                                                                false
+                                                                                            ]
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            ]
                                                                         },
                                                                         {
                                                                             "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/2/properties/content/items/oneOf/4"
@@ -511,6 +524,9 @@
                                                             },
                                                             "image": {
                                                                 "$ref": "#/allOf/1/properties/relatedContent/items/oneOf/1/allOf/1/properties/image/properties/thumbnail"
+                                                            },
+                                                            "inline": {
+                                                                "type": "boolean"
                                                             }
                                                         },
                                                         "required": [

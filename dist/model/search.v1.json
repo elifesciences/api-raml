@@ -592,6 +592,17 @@
                                                     "updated": {
                                                         "title": "Updated date (UTC)",
                                                         "$ref": "#/properties/items/items/oneOf/0/allOf/0/properties/published"
+                                                    },
+                                                    "image": {
+                                                        "type": "object",
+                                                        "properties": {
+                                                            "thumbnail": {
+                                                                "$ref": "#/properties/items/items/oneOf/1/allOf/1/properties/image/properties/thumbnail"
+                                                            }
+                                                        },
+                                                        "required": [
+                                                            "thumbnail"
+                                                        ]
                                                     }
                                                 },
                                                 "required": [
