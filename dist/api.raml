@@ -497,6 +497,13 @@ traits:
         is:
           - paged: { resources: Collections }
           - subjected: { resources: Collections }
+        queryParameters:
+            containing[]:
+                description: |
+                    Only return collections containing at least one of these items.
+                type: string[]
+                required: false
+                example: [article/1234, interview/5678]
         responses:
             200:
                 description: |
