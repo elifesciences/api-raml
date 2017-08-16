@@ -1,4 +1,4 @@
-# 2. Use square brackets for query string parameters with multiple values
+# 1. Use square brackets for query string parameters with multiple values
 
 Date: 2017-08-03
 
