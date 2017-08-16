@@ -38,3 +38,4 @@ allOf:
       - description
       - responsibilities
       - termsAndConditions
+      - closingDate
