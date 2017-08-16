@@ -14,6 +14,17 @@ properties:
     updated:
         title: Updated date (UTC)
         $ref: ../misc/date-time.v1.yaml
+    abstract:
+        type: object
+        properties:
+            content:
+                type: array
+                items:
+                    $ref: ../blocks/paragraph.v1.yaml
+                minItems: 1
+        required:
+          - content
+
 required:
   - id
   - title
