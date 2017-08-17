@@ -5,14 +5,16 @@
             "id": "2",
             "title": "Python Developer",
             "impactStatement": "Write Python code",
-            "published": "2016-10-20T12:22:00Z"
+            "published": "2016-10-20T12:22:00Z",
+            "closingDate": "2016-11-20T12:22:00Z"
         },
         {
             "id": "1",
             "title": "Editorial Assistant",
             "impactStatement": "Support the Executive Editor in delivering an unparalleled editorial process and author experience",
             "published": "2016-10-11T17:00:00Z",
-            "updated": "2016-10-11T17:00:00Z"
+            "updated": "2016-10-11T17:00:00Z",
+            "closingDate": "2016-11-20T12:22:00Z"
         }
     ]
 }

@@ -3,7 +3,7 @@ title: Job advert list
 type: object
 properties:
     total:
-        title: Total number of open job adverts
+        title: Total number of job adverts
         type: integer
         minimum: 0
     items:

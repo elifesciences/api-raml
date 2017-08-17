@@ -24,6 +24,5 @@ properties:
 required:
   - id
   - title
-  - impactStatement
   - published
   - closingDate
