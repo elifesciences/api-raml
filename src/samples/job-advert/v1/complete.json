@@ -6,46 +6,82 @@
     "updated": "2016-10-11T17:00:00Z",
     "closingDate": "2016-10-25T17:00:00Z",
 
-    "description": {
-        "type": "paragraph",
-        "text": "eLife are seeking an Editorial Assistant to support the Executive Editor in delivering an unparalleled editorial process and author experience. This is a terrific opportunity to gain experience in scientific publishing and to be involved in a ground-breaking initiative. This is an entry-level job and the Editorial Assistant will be part of a small team."
-    },
-    "responsibilities": {
-        "type": "list",
-        "prefix": "bullet",
-        "items": [
-            "Support authors during submission",
-            "Conduct quality checks on submissions",
-            "Provide proactive support for authors, editors, and reviewers throughout the editorial process",
-            "Update and check the website",
-            "Generate and monitor journal performance metrics",
-            "Oversee administration of the submission system/database",
-            "Provide broader support for other members of the team"
-        ]
-    },
-    "experience": {
-        "essential": {
-            "type": "list",
-            "prefix": "bullet",
-            "items": [
-                "Great communication skills (spoken and written)",
-                "Strong organizational skills",
-                "An excellent eye for detail",
-                "A desire to learn about scholarly journals publishing"
+    "content": [
+        {
+            "type": "paragraph",
+            "text": "eLife are seeking an Editorial Assistant to support the Executive Editor in delivering an unparalleled editorial process and author experience. This is a terrific opportunity to gain experience in scientific publishing and to be involved in a ground-breaking initiative. This is an entry-level job and the Editorial Assistant will be part of a small team."
+        },
+        {
+            "type": "section",
+            "title": "Specific responsibilities"
+            "content": [
+                {
+                    "type": "list",
+                    "prefix": "bullet",
+                    "items": [
+                        "Support authors during submission",
+                        "Conduct quality checks on submissions",
+                        "Provide proactive support for authors, editors, and reviewers throughout the editorial process",
+                        "Update and check the website",
+                        "Generate and monitor journal performance metrics",
+                        "Oversee administration of the submission system/database",
+                        "Provide broader support for other members of the team"
+                    ]
+                }
             ]
         },
-        "additional": {
-            "type": "list",
-            "prefix": "bullet",
-            "items": [
-                "A degree-level qualification is highly desirable but not essential",
-                "In the absence of a degree-level qualification, work experience should demonstrate the attributes above and an appropriate level of maturity",
-                "Candidates should be creative, flexible, and willing to take on a variety of tasks"
+        {
+            "type": "section",
+            "title": "Experience and attributes",
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "the ideal candidate should have:"
+                },
+                {
+                    "type": "list",
+                    "prefix": "bullet",
+                    "items": [
+                        "Great communication skills (spoken and written)",
+                        "Strong organizational skills",
+                        "An excellent eye for detail",
+                        "A desire to learn about scholarly journals publishing"
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "In addition:"
+                },
+                {
+                    "type": "list",
+                    "prefix": "bullet",
+                    "items": [
+                        "A degree-level qualification is highly desirable but not essential",
+                        "In the absence of a degree-level qualification, work experience should demonstrate the attributes above and an appropriate level of maturity",
+                        "Candidates should be creative, flexible, and willing to take on a variety of tasks"
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "section",
+            "title": "Terms and conditions",
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The post is a permanent position, 37.5 hours per week, and offers a competitive basic salary and benefits. The post holder will be required to work at the eLife office in Cambridge (UK), and applicants must be able to demonstrate the right to live and work in the UK to be considered for the vacancy."
+                }
+            ]
+        },
+        {
+            "type": "section",
+            "title": "How to apply",
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Please send a covering letter and CV explaining why you are a strong candidate."
+                }
             ]
         }
-    },
-    "termsAndConditions": {
-        "type": "paragraph",
-        "text": "The post is a permanent position, 37.5 hours per week, and offers a competitive basic salary and benefits. The post holder will be required to work at the eLife office in Cambridge (UK), and applicants must be able to demonstrate the right to live and work in the UK to be considered for the vacancy."
-    }
+    ]
 }

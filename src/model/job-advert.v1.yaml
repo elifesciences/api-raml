@@ -4,34 +4,10 @@ type: object
 allOf:
   - $ref: ../snippets/job-advert.v1.yaml
   - properties:
-        description:
-            description: Description
+        content:
             type: array
             items:
                 $ref: ../misc/blocks-all.v1.yaml
             minItems: 1
-        responsibilities:
-            description: Responsibilities
-            type: array
-            items:
-                $ref: ../blocks/list.v1.yaml
-            minItems: 1
-        experience:
-            description: Experience
-            type: object,
-            properties:
-                essential:
-                    $ref: ../blocks/list.v1.yaml
-                    minItems: 1
-                additional:
-                    $ref: ../blocks/list.v1.yaml
-                    minItems: 1
-            required:
-              - essential
-        termsAndConditions:
-            $ref: ../blocks/paragraph.v1.yaml
-
     required:
-      - description
-      - responsibilities
-      - termsAndConditions
+      - content
