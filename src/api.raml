@@ -176,7 +176,7 @@ traits:
                   - published
                 required: false
                 default: default
-    contained:
+    container:
         queryParameters:
           containing[]:
               description: |
@@ -505,7 +505,7 @@ traits:
         is:
           - paged: { resources: Collections }
           - subjected: { resources: Collections }
-          - contained: { resources: Collections }
+          - container: { resources: Collections }
         responses:
             200:
                 description: |
@@ -1039,7 +1039,7 @@ traits:
             Get a list of episodes, sorted by number.
         is:
           - paged: { resources: Episodes }
-          - contained: { resources: Episodes }
+          - container: { resources: Episodes }
         responses:
             200:
                 description: |
