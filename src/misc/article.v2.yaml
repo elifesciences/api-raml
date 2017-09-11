@@ -70,7 +70,7 @@ allOf:
             title: Additional files
             type: array
             items:
-                $ref: ../misc/asset-file.v2.yaml
+                $ref: ../misc/asset-file.v1.yaml
     required:
       - copyright
     dependencies:

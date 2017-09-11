@@ -16,7 +16,7 @@ properties:
         description: Content
         type: array
         items:
-            $ref: ../misc/blocks-all.v2.yaml
+            $ref: ../misc/blocks-all.v1.yaml
         minItems: 1
 required:
   - type

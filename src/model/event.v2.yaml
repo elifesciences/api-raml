@@ -1,8 +1,8 @@
 $schema: http://json-schema.org/draft-04/schema#
-title: Labs post
+title: Event
 type: object
 allOf:
-  - $ref: ../snippets/labs-post.v1.yaml
+  - $ref: ../snippets/event.v1.yaml
   - properties:
         content:
             description: Content
@@ -10,5 +10,14 @@ allOf:
             items:
                 $ref: ../misc/blocks-all.v2.yaml
             minItems: 1
-    required:
-      - content
+    oneOf:
+      - required:
+          - content
+        not:
+            required:
+              - uri
+      - required:
+          - uri
+        not:
+            required:
+              - content
