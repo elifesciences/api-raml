@@ -1,0 +1,47 @@
+{
+    "total": 4,
+    "items": [
+        {
+            "uri": "https://hyp.is/41pgvpe9EeelPR-Oxb-4UQ/elifesciences.org/inside-elife/77dd2808/taking-a-closer-look-screening-of-images",
+            "published": "2017-09-15T14:40:52Z",
+            "updated": "2017-09-15T14:42:43Z",
+            "title": "Taking a closer look: Screening of images",
+            "target": "Rossner and Yamada 2004, Cromey 2010",
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "<strong>Bold text<strong> and <em>italic</em> with a <a href=\"https://elifesciences.org\">link</a>"
+                },
+                {
+                    "type": "quote",
+                    "text": [
+                        {
+                            "type": "paragraph",
+                            "text": "Blockquote"
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "https://cdn.elifesciences.org/style-guide-images/elife-full-color-horizontal.png"
+                },
+                {
+                    "type": "list",
+                    "prefix": "number",
+                    "items": [
+                        "Ordered list item 1",
+                        "Ordered list item 2"
+                    ]
+                },
+                {
+                    "type": "list",
+                    "prefix": "bullet",
+                    "items": [
+                        "Unordered list item 1",
+                        "Unordered list item 2"
+                    ]
+                }
+            ]
+        }
+    ]
+}

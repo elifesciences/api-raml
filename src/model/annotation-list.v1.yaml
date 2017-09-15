@@ -1,0 +1,49 @@
+$schema: http://json-schema.org/draft-04/schema#
+title: Annotation list
+type: object
+properties:
+    total:
+        title: Total number of Annotations
+        type: integer
+        minimum: 0
+    items:
+        title: Annotationss
+        type: array
+        items:
+            type: object
+            properties:
+                uri:
+                    description: Annotation URI
+                    type: string
+                    format: uri
+                title:
+                    description: Title
+                    type: string
+                target:
+                    description: Target text for the annotation
+                    type: string
+                published:
+                    description: Publication date (UTC)
+                    $ref: ../misc/date-time.v1.yaml
+                updated:
+                    title: Updated date (UTC)
+                    $ref: ../misc/date-time.v1.yaml
+                content:
+                    title: Content
+                    type: array
+                    items:
+                        oneOf:
+                          - $ref: ../blocks/list.v1.yaml
+                          - $ref: ../blocks/mathml.v1.yaml
+                          - $ref: ../blocks/paragraph.v1.yaml
+                          - $ref: ../blocks/quote.v1.yaml
+                          - $ref: ../blocks/youtube.v1.yaml
+            required:
+              - uri
+              - title
+              - published
+              - content
+        uniqueItems: true
+required:
+  - total
+  - items
