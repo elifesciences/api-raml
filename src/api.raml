@@ -191,6 +191,37 @@ traits:
               required: false
               example: [article/1234, interview/5678]
 
+/annotations/{id}:
+    type: collection
+    description: |
+        Annotations
+    uriParameters:
+        id:
+            description: |
+                Annotation author ID.
+            type: string
+    get:
+        description: |
+            Get a list of annotations.
+        is:
+          - paged: { resources: Annotations }
+        responses:
+            200:
+                body:
+                    application/vnd.elife.annotation-list+json;version=1:
+                        schema: !include ../dist/model/annotation-list.v1.json
+                        examples:
+                            paginated:
+                                displayName: First page
+                                description: |
+                                    List is split over two pages.
+                                value: !include samples/annotation-list/v1/first-page.json
+                            empty:
+                                displayName: Empty list
+                                description: |
+                                    Demonstration of the list being empty (the first page will always return a valid result).
+                                value: !include samples/annotation-list/v1/empty.json
+
 /annual-reports:
     type: collection
     description: |
