@@ -1,0 +1,12 @@
+$schema: http://json-schema.org/draft-04/schema#
+title: Annotation token
+type: object
+allOf:
+  - properties:
+        token:
+            $ref: ../misc/jwt.v1.yaml
+        expire:
+            title: Expiry date (UTC)
+            $ref: ../misc/date-time.v1.yaml
+    required:
+      - token
