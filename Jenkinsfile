@@ -7,9 +7,7 @@ elifeLibrary {
 
     elifePullRequestOnly {
         stage 'Checking dist/'
-        sh 'git remote -v'
-        sh 'git branch -a'
-        sh 'git fetch && git diff --exit-code origin/develop...HEAD dist/'
+        sh 'git fetch origin develop:refs/remotes/origin/develop && git diff --exit-code origin/develop...HEAD dist/'
     }
 
     stage 'Compiling'
