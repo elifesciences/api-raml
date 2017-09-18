@@ -176,6 +176,14 @@ traits:
                   - published
                 required: false
                 default: default
+    container:
+        queryParameters:
+          containing[]:
+              description: |
+                  Only return <<resources | !lowercase>> containing at least one of these items.
+              type: string[]
+              required: false
+              example: [article/1234, interview/5678]
 
 /annual-reports:
     type: collection
@@ -497,13 +505,7 @@ traits:
         is:
           - paged: { resources: Collections }
           - subjected: { resources: Collections }
-        queryParameters:
-            containing[]:
-                description: |
-                    Only return collections containing at least one of these items.
-                type: string[]
-                required: false
-                example: [article/1234, interview/5678]
+          - container: { resources: Collections }
         responses:
             200:
                 description: |
@@ -1105,6 +1107,7 @@ traits:
             Get a list of episodes, sorted by number.
         is:
           - paged: { resources: Episodes }
+          - container: { resources: Episodes }
         responses:
             200:
                 description: |
