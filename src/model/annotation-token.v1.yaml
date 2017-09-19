@@ -5,7 +5,7 @@ allOf:
   - properties:
         token:
             $ref: ../misc/jwt.v1.yaml
-        expire:
+        expiresAt:
             title: Expiry date (UTC)
             $ref: ../misc/date-time.v1.yaml
     required:
