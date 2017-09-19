@@ -1,5 +1,4 @@
 $schema: http://json-schema.org/draft-04/schema#
-
-title: Token
+title: JSON Web Token (JWT)
 type: string
-pattern: ^[A-Za-z0-9-_=]+\.[A-Za-z0-9-_=]+\.?[A-Za-z0-9-_.+/=]*$
+pattern: ^[A-Za-z0-9-_]+\.[A-Za-z0-9-_]+\.[A-Za-z0-9-_]*$
