@@ -24,7 +24,7 @@ properties:
               - type: string
               - type: array
                 items:
-                    $ref: ../misc/blocks-no-section-box.v2.yaml
+                    $ref: ../misc/blocks-no-section-box.v1.yaml
                 minItems: 1
         minItems: 1
 required:

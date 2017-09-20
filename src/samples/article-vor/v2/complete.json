@@ -1684,6 +1684,16 @@
         ],
         "statement": "The funders had no role in study design, data collection and interpretation, or the decision to submit the work for publication."
     },
+    "additionalFiles": [
+        {
+            "doi": "10.7554/eLife.00569.021",
+            "id": "SD2-data",
+            "label": "Supplementary file 1.",
+            "mediaType": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+            "uri": "https://elife-publishing-cdn.s3.amazonaws.com/00569/elife-00569-supp1-v1-download.xlsx",
+            "filename": "elife-00569-supp1-v1.xlsx"
+        }
+    ],
     "decisionLetter": {
         "doi": "10.7554/eLife.09560.030",
         "description": [

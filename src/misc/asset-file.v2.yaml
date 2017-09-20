@@ -13,5 +13,5 @@ allOf:
             minLength: 1
     required:
       - id
-      - title
+      - label
   - $ref: file.v1.yaml

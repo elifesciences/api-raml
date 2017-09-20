@@ -30,7 +30,7 @@ properties:
                         title: Source data
                         type: array
                         items:
-                            $ref: ../misc/asset-file.v2.yaml
+                            $ref: ../misc/asset-file.v1.yaml
                 required:
                   - id
                   - label
