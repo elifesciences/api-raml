@@ -310,6 +310,21 @@ traits:
                                 unpublishedComplete:
                                     displayName: PreviewComplete
                                     value: !include samples/article-poa/v1/unpublished-complete.json
+                        application/vnd.elife.article-poa+json;version=2:
+                            schema: !include model/article-poa.v2.json
+                            examples:
+                                minimum:
+                                    displayName: Minimum
+                                    value: !include samples/article-poa/v2/minimum.json
+                                complete:
+                                    displayName: Complete
+                                    value: !include samples/article-poa/v2/complete.json
+                                unpublishedMinimum:
+                                    displayName: PreviewMinimum
+                                    value: !include samples/article-poa/v2/unpublished-minimum.json
+                                unpublishedComplete:
+                                    displayName: PreviewComplete
+                                    value: !include samples/article-poa/v2/unpublished-complete.json
 
                         application/vnd.elife.article-vor+json;version=1:
                             schema: !include model/article-vor.v1.json
@@ -332,6 +347,27 @@ traits:
                                 15278:
                                     displayName: '15278'
                                     value: !include samples/article-vor/v1/15278.json
+                        application/vnd.elife.article-vor+json;version=2:
+                            schema: !include model/article-vor.v2.json
+                            examples:
+                                minimum:
+                                    displayName: Minimum
+                                    value: !include samples/article-vor/v2/minimum.json
+                                complete:
+                                    displayName: Complete
+                                    value: !include samples/article-vor/v2/complete.json
+                                unpublishedMinimum:
+                                    displayName: PreviewMinimum
+                                    value: !include samples/article-vor/v2/unpublished-minimum.json
+                                unpublishedComplete:
+                                    displayName: PreviewComplete
+                                    value: !include samples/article-vor/v2/unpublished-complete.json
+                                00569:
+                                    displayName: '00569'
+                                    value: !include samples/article-vor/v2/00569.json
+                                15278:
+                                    displayName: '15278'
+                                    value: !include samples/article-vor/v2/15278.json
 
         /related:
             type:
@@ -420,6 +456,21 @@ traits:
                                         unpublishedComplete:
                                             displayName: PreviewComplete
                                             value: !include samples/article-poa/v1/unpublished-complete.json
+                                application/vnd.elife.article-poa+json;version=2:
+                                    schema: !include model/article-poa.v2.json
+                                    examples:
+                                        minimum:
+                                            displayName: Minimum
+                                            value: !include samples/article-poa/v2/minimum.json
+                                        complete:
+                                            displayName: Complete
+                                            value: !include samples/article-poa/v2/complete.json
+                                        unpublishedMinimum:
+                                            displayName: PreviewMinimum
+                                            value: !include samples/article-poa/v2/unpublished-minimum.json
+                                        unpublishedComplete:
+                                            displayName: PreviewComplete
+                                            value: !include samples/article-poa/v2/unpublished-complete.json
 
                                 application/vnd.elife.article-vor+json;version=1:
                                     schema: !include model/article-vor.v1.json
@@ -436,6 +487,21 @@ traits:
                                         unpublishedComplete:
                                             displayName: PreviewComplete
                                             value: !include samples/article-vor/v1/unpublished-complete.json
+                                application/vnd.elife.article-vor+json;version=2:
+                                    schema: !include model/article-vor.v2.json
+                                    examples:
+                                        minimum:
+                                            displayName: Minimum
+                                            value: !include samples/article-vor/v2/minimum.json
+                                        complete:
+                                            displayName: Complete
+                                            value: !include samples/article-vor/v2/complete.json
+                                        unpublishedMinimum:
+                                            displayName: PreviewMinimum
+                                            value: !include samples/article-vor/v2/unpublished-minimum.json
+                                        unpublishedComplete:
+                                            displayName: PreviewComplete
+                                            value: !include samples/article-vor/v2/unpublished-complete.json
 
 /blog-articles:
     type: collection
@@ -494,6 +560,15 @@ traits:
                                 complete:
                                     displayName: Complete
                                     value: !include samples/blog-article/v1/complete.json
+                        application/vnd.elife.blog-article+json;version=2:
+                            schema: !include model/blog-article.v2.json
+                            examples:
+                                minimum:
+                                    displayName: Minimum
+                                    value: !include samples/blog-article/v2/minimum.json
+                                complete:
+                                    displayName: Complete
+                                    value: !include samples/blog-article/v2/complete.json
 
 /collections:
     type: collection
@@ -709,6 +784,18 @@ traits:
                                 complete-external:
                                     displayName: Complete external event
                                     value: !include samples/event/v1/complete-external.json
+                        application/vnd.elife.event+json;version=2:
+                            schema: !include model/event.v2.json
+                            examples:
+                                minimum:
+                                    displayName: Minimum
+                                    value: !include samples/event/v2/minimum.json
+                                complete:
+                                    displayName: Complete
+                                    value: !include samples/event/v2/complete.json
+                                complete-external:
+                                    displayName: Complete external event
+                                    value: !include samples/event/v2/complete-external.json
 
 /highlights/{list}:
     type: collection
@@ -797,6 +884,15 @@ traits:
                                 complete:
                                     displayName: Complete
                                     value: !include samples/interview/v1/complete.json
+                        application/vnd.elife.interview+json;version=2:
+                            schema: !include model/interview.v2.json
+                            examples:
+                                minimum:
+                                    displayName: Minimum
+                                    value: !include samples/interview/v2/minimum.json
+                                complete:
+                                    displayName: Complete
+                                    value: !include samples/interview/v2/complete.json
 
 /labs-posts:
     type: collection
@@ -854,6 +950,15 @@ traits:
                                 complete:
                                     displayName: Complete
                                     value: !include samples/labs-post/v1/complete.json
+                        application/vnd.elife.labs-post+json;version=2:
+                            schema: !include model/labs-post.v2.json
+                            examples:
+                                minimum:
+                                    displayName: Minimum
+                                    value: !include samples/labs-post/v2/minimum.json
+                                complete:
+                                    displayName: Complete
+                                    value: !include samples/labs-post/v2/complete.json
 
 /medium-articles:
     type: collection
@@ -1155,6 +1260,15 @@ traits:
                                 complete:
                                     displayName: Complete
                                     value: !include samples/press-package/v2/complete.json
+                        application/vnd.elife.press-package+json;version=3:
+                            schema: !include model/press-package.v3.json
+                            examples:
+                                minimum:
+                                    displayName: Minimum
+                                    value: !include samples/press-package/v3/minimum.json
+                                complete:
+                                    displayName: Complete
+                                    value: !include samples/press-package/v3/complete.json
 
 /recommendations/{type}/{id}:
     type: collection
