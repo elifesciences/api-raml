@@ -1,0 +1,17 @@
+$schema: http://json-schema.org/draft-04/schema#
+title: Profile list
+type: object
+properties:
+    total:
+        title: Total number of profiles
+        type: integer
+        minimum: 0
+    items:
+        title: Profiles
+        type: array
+        items:
+            $ref: ../snippets/profile.v1.yaml
+        uniqueItems: true
+required:
+  - total
+  - items

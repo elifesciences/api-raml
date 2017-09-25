@@ -1,0 +1,10 @@
+$schema: http://json-schema.org/draft-04/schema#
+title: Profile snippet
+type: object
+allOf:
+  - $ref: ../misc/person.v1.yaml
+  - properties:
+        id:
+            $ref: ../misc/id.v1.yaml
+    required:
+      - id
