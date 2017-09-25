@@ -12,6 +12,8 @@ Versioned APIs need to retire older versions of a schema, in order to keep compl
 
 It is not possible to deploy different services atomically so that a new version can be switched on in a short time frame. The changes needed have to be propagated to both clients and servers.
 
+We add `Warning` headers to responses that are using an old version.
+
 ## Decision
 
 We will annotate with `@deprecated` API versions that are not served by default anymore, whenever a new version is added.
