@@ -67,6 +67,10 @@ documentation:
         - `author-callout-style-b1` through to `author-callout-style-b8` (for background colours)
         - `sequence` (for sequences, e.g. peptide, gene)
 
+annotationTypes:
+    experimental:
+        type: nil | string
+
 resourceTypes:
     base:
         get?: &common
@@ -376,7 +380,7 @@ traits:
                                     multipleVersions:
                                         displayName: Multiple versions
                                         value: !include samples/article-history/v1/multiple-versions.json
-                                    unpublishedMinimum: 
+                                    unpublishedMinimum:
                                         displayName: PreviewMinimum
                                         value: !include samples/article-history/v1/unpublished-minimum.json
                                     unpublishedMultipleVersions:
@@ -797,6 +801,75 @@ traits:
                                 complete:
                                     displayName: Complete
                                     value: !include samples/interview/v1/complete.json
+
+/job-adverts:
+    (experimental):
+    type: collection
+    description: |
+        Job adverts
+    get:
+        description: |
+            Get a list of job adverts, sorted by publication date.
+        is:
+          - paged: { resources: Job adverts }
+        queryParameters:
+            show:
+                description: |
+                    Type of job adverts to show.
+                type: string
+                required: false
+                default: all
+                enum:
+                  - all
+                  - closed
+                  - open
+        responses:
+            200:
+                description: |
+                    List of job adverts, sorted by publication date.
+                body:
+                    application/vnd.elife.job-advert-list+json;version=1:
+                        schema: !include ../dist/model/job-advert-list.v1.json
+                        examples:
+                            paginated:
+                                displayName: First page
+                                description: |
+                                    List is split over two pages.
+                                value: !include samples/job-advert-list/v1/first-page.json
+                            empty:
+                                displayName: Empty list
+                                description: |
+                                    Demonstration of the list being empty (the first page will always return a valid result).
+                                value: !include samples/job-advert-list/v1/empty.json
+
+    /{id}:
+        type:
+            item:
+                resource: Job Advert
+        description: |
+            Individual job advert.
+        uriParameters:
+            id:
+                description: |
+                    Job advert ID.
+                type: string
+        get:
+            description: |
+                Get a job advert.
+            responses:
+                200:
+                    description: |
+                        Job advert.
+                    body:
+                        application/vnd.elife.job-advert+json;version=1:
+                            schema: !include ../dist/model/job-advert.v1.json
+                            examples:
+                                minimum:
+                                    displayName: Minimum
+                                    value: !include samples/job-advert/v1/minimum.json
+                                complete:
+                                    displayName: Complete
+                                    value: !include samples/job-advert/v1/complete.json
 
 /labs-posts:
     type: collection
