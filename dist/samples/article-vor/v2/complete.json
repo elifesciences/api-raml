@@ -601,13 +601,7 @@
                                 {
                                     "doi": "10.7554/eLife.09560.013.1",
                                     "id": "tbl2sdata1",
-                                    "title": "Title of the source code",
-                                    "caption": [
-                                        {
-                                            "type": "paragraph",
-                                            "text": "Legend of the source code."
-                                        }
-                                    ],
+                                    "label": "Table 2—Source data 1",
                                     "mediaType": "text/plain",
                                     "uri": "https://elife-publishing-cdn.s3.amazonaws.com/00011/elife-00011-fig2-data1-v1.txt",
                                     "filename": "elife-00011-fig2-data1-v1.txt"
@@ -1694,7 +1688,7 @@
         {
             "doi": "10.7554/eLife.00569.021",
             "id": "SD2-data",
-            "title": "Species classification and Accession Number (AC) of the complete mtDNA sequences used in the tunicate phylogenetic reconstructions.",
+            "label": "Supplementary file 1.",
             "mediaType": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
             "uri": "https://elife-publishing-cdn.s3.amazonaws.com/00569/elife-00569-supp1-v1-download.xlsx",
             "filename": "elife-00569-supp1-v1.xlsx"

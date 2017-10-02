@@ -1,0 +1,30 @@
+$schema: http://json-schema.org/draft-04/schema#
+title: Interview
+type: object
+allOf:
+  - $ref: ../snippets/interview.v1.yaml
+  - properties:
+        interviewee:
+            properties:
+                cv:
+                    type: array
+                    items:
+                        type: object
+                        properties:
+                            date:
+                                type: string
+                                minLength: 1
+                            text:
+                                type: string
+                                minLength: 1
+                        required:
+                          - date
+                          - text
+        content:
+            description: Content
+            type: array
+            items:
+                $ref: ../misc/blocks-all.v2.yaml
+            minItems: 1
+    required:
+      - content
