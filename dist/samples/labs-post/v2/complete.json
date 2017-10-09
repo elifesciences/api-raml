@@ -1,0 +1,163 @@
+{
+    "id": "80000001",
+    "title": "Experimental eLife Lens search page",
+    "impactStatement": "Today on eLife Labs we are launching a small demo of a search interface that brings together some elements of eLife Lens and some of the native power of a technology called elasticsearch. Head over to the demo to try it out now.",
+    "published": "2015-04-01T11:32:47Z",
+    "updated": "2015-04-02T11:32:47Z",
+    "image": {
+        "thumbnail": {
+            "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif",
+            "alt": "",
+            "source": {
+                "mediaType": "image/jpeg",
+                "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif/full/full/0/default.jpg",
+                "filename": "an-image.jpg"
+            },
+            "size": {
+                "width": 4194,
+                "height": 4714
+            },
+            "focalPoint": {
+                "x": 25,
+                "y": 75
+            }
+        }
+    },
+    "content": [
+        {
+            "type": "paragraph",
+            "text": "We are going to use feedback and usage stats to determine whether we can bring any features from this kind of demo over to our main site."
+        },
+        {
+            "type": "paragraph",
+            "text": "This demo does comes with a couple of strong caveats, it does not update regularly with eLife articles, but only contains a snapshot of eLife content published up to the 26th of March. It also needs javascript enabled."
+        },
+        {
+            "type": "paragraph",
+            "text": "Beyond those constraints we have tried a few interesting things with this search interface. The most interesting thing is going on behind the scenes where we have indexed each paragraphs of each article, allowing for contextual results to be returned. The hope here is to be able, at some point, to link those paragraphs in to the lens view of the article, allowing you to go straight to the part of the document that looks interesting to you."
+        },
+        {
+            "type": "paragraph",
+            "text": "We have added some type-ahead suggestions based on popular search queries."
+        },
+        {
+            "type": "paragraph",
+            "text": "There are a couple of ways of applying filters to the search and there is also a quick way to look at how many results there are for a given search term under each filter."
+        },
+        {
+            "type": "youtube",
+            "id": "-9JVFCL0fvk",
+            "width": 960,
+            "height": 720
+        },
+        {
+            "type": "paragraph",
+            "text": "We are gong to be seeing how the back end performs, and hopefully learning what works and what doesn’t through usage."
+        },
+        {
+            "type": "paragraph",
+            "text": "You can read a bit more about eLife Labs and we would love to hear <a href=\"mailto:staff@elifesciences.org\">what you think</a>."
+        },
+        {
+            "type": "image",
+            "image": {
+                "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif",
+                "alt": "",
+                "source": {
+                    "mediaType": "image/jpeg",
+                    "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif/full/full/0/default.jpg",
+                    "filename": "an-image.jpg"
+                },
+                "size": {
+                    "width": 4194,
+                    "height": 4714
+                },
+                "focalPoint": {
+                    "x": 25,
+                    "y": 75
+                }
+            },
+            "title": "contextual search results"
+        },
+        {
+            "type": "image",
+            "image": {
+                "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif",
+                "alt": "",
+                "source": {
+                    "mediaType": "image/jpeg",
+                    "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif/full/full/0/default.jpg",
+                    "filename": "an-image.jpg"
+                },
+                "size": {
+                    "width": 4194,
+                    "height": 4714
+                }
+            },
+            "title": "type ahead search results"
+        },
+        {
+            "type": "image",
+            "image": {
+                "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif",
+                "alt": "",
+                "source": {
+                    "mediaType": "image/jpeg",
+                    "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif/full/full/0/default.jpg",
+                    "filename": "an-image.jpg"
+                },
+                "size": {
+                    "width": 4194,
+                    "height": 4714
+                }
+            },
+            "title": "filters showing frequency of search term in filter"
+        },
+        {
+            "type": "table",
+            "tables": [
+                "<table><tbody><tr><td>Task</td><td><p>URL and Comments</p></td></tr><tr><td><p>Find term x in a specific document</p></td><td><p><a href=\"http://wellcomelibrary.org/annoservices/search/b19956435?q=london\">http://wellcomelibrary.org/annoservices/search/b19956435?q=london</a></p><p>The annotations returned include contextual information and enough location information for a viewer to render highlights:</p><p><a href=\"http://wellcomelibrary.org/item/b19956435#?cv=24&amp;h=london\">http://wellcomelibrary.org/item/b19956435#?cv=24&amp;h=london</a></p></td></tr><tr><td>Find term in annotations made by a particular user</td><td><p><a href=\"http://wellcomelibrary.org/annoservices/search/b19956435?q=london&amp;user=wellcome:87678\">http://wellcomelibrary.org/annoservices/search/b19956435?q=london&amp;user=wellcome:87678</a></p></td></tr><tr><td><p>Find user X’s identifications of people within a particular region of a photograph between two dates</p></td><td><p><a href=\"http://wellcomelibrary.org/annoservices/search/canvas-123454321?motivation=identifying&amp;user=wellcome:87678&amp;box=200,200,1000,1000&amp;date=2016-01-01/2016-02-01\">http://wellcomelibrary.org/annoservices/search/canvas-123454321?motivation=identifying&amp;user=wellcome:87678&amp;box=200,200,1000,1000&amp;date=2016-01-01/2016-02-01</a></p></td></tr></tbody></table>"
+            ]
+        },
+        {
+            "type": "list",
+            "prefix": "roman-lower",
+            "items": [
+                "Finding all comments made by a particular person",
+                "Finding all tags within a particular collection",
+                [
+                    {
+                        "type": "image",
+                        "image": {
+                            "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif",
+                            "alt": "",
+                            "source": {
+                                "mediaType": "image/jpeg",
+                                "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif/full/full/0/default.jpg",
+                                "filename": "an-image.jpg"
+                            },
+                            "size": {
+                                "width": 4194,
+                                "height": 4714
+                            }
+                        },
+                        "title": "filters showing frequency of search term in filter"
+                    },
+                    {
+                        "type": "list",
+                        "prefix": "number",
+                        "items": [
+                            "Finding all comments made by a particular person",
+                            [
+                                {
+                                    "type": "paragraph",
+                                    "text": "You can read a bit more about eLife Labs and we would love to hear <a href=\"mailto:staff@elifesciences.org\">what you think</a>."
+                                }
+                            ]
+                        ]
+                    }
+                ]
+            ]
+        }
+    ]
+}

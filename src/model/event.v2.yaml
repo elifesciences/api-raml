@@ -1,0 +1,23 @@
+$schema: http://json-schema.org/draft-04/schema#
+title: Event
+type: object
+allOf:
+  - $ref: ../snippets/event.v1.yaml
+  - properties:
+        content:
+            description: Content
+            type: array
+            items:
+                $ref: ../misc/blocks-all.v2.yaml
+            minItems: 1
+    oneOf:
+      - required:
+          - content
+        not:
+            required:
+              - uri
+      - required:
+          - uri
+        not:
+            required:
+              - content

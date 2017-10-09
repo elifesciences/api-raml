@@ -1,0 +1,17 @@
+$schema: http://json-schema.org/draft-04/schema#
+title: Asset file
+type: object
+allOf:
+  - $ref: caption.v1.yaml
+  - $ref: attribution.v1.yaml
+  - properties:
+        doi:
+            $ref: ../misc/doi.v1.yaml
+        label:
+            title: Label
+            type: string
+            minLength: 1
+    required:
+      - id
+      - label
+  - $ref: file.v1.yaml
