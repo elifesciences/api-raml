@@ -16,10 +16,12 @@ We add `Warning` headers to responses that are using an old version.
 
 ## Decision
 
-We will annotate with `@deprecated` API versions that are not served by default anymore, whenever a new version is added.
+Whenever a new version is added, unless it's `@experimental`, we will annotate with `@deprecated` API the previous version as it won't be served by default anymore and will soon disappear.
 
 ## Consequences
 
 After a `application/vnd.elife-covers+json;version=2` type is added, the `application/vnd.elife-covers+json;version=1` should be tagged as deprecated.
 
 The older `application/vnd.elife-covers+json;version=1` should however not be removed until there are no more clients requesting it.
+
+If instead a `application/vnd.elife-covers+json;version=2` type is added as `@experimental`, the `application/vnd.elife-covers+json;version=1` should not have changes.
