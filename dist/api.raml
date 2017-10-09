@@ -68,6 +68,8 @@ documentation:
         - `sequence` (for sequences, e.g. peptide, gene)
 
 annotationTypes:
+    deprecated:
+        type: nil | string
     experimental:
         type: nil | string
 
@@ -1324,6 +1326,7 @@ traits:
                         Press package.
                     body:
                         application/vnd.elife.press-package+json;version=1:
+                            (deprecated):
                             schema: !include model/press-package.v1.json
                             examples:
                                 minimum:
