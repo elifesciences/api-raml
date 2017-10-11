@@ -191,20 +191,23 @@ traits:
               required: false
               example: [article/1234, interview/5678]
 
-/annotations/{id}:
+/annotations:
+    (experimental):
     type: collection
     description: |
         Annotations
-    uriParameters:
-        id:
-            description: |
-                Annotation author ID.
-            type: string
     get:
         description: |
             Get a list of annotations.
         is:
           - paged: { resources: Annotations }
+        queryParameters:
+            by[]:
+                description: |
+                    Only return annotations by at least one of these authors.
+                type: string[]
+                required: true
+                example: [userid]
         responses:
             200:
                 body:
