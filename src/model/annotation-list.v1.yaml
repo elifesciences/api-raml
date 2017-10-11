@@ -7,7 +7,7 @@ properties:
         type: integer
         minimum: 0
     items:
-        title: Annotationss
+        title: Annotations
         type: array
         items:
             type: object
@@ -17,7 +17,7 @@ properties:
                     type: string
                     format: uri
                 title:
-                    description: Title
+                    description: Title of the annotated document
                     type: string
                 target:
                     description: Target text for the annotation
@@ -38,6 +38,7 @@ properties:
                           - $ref: ../blocks/paragraph.v1.yaml
                           - $ref: ../blocks/quote.v1.yaml
                           - $ref: ../blocks/youtube.v1.yaml
+                    minItems: 1
             required:
               - uri
               - title
