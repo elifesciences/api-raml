@@ -1,0 +1,15 @@
+$schema: http://json-schema.org/draft-04/schema#
+title: Profile
+type: object
+allOf:
+  - $ref: ../snippets/profile.v1.yaml
+  - properties:
+        affiliations:
+            type: array
+            items:
+                $ref: ../misc/place.v1.yaml
+        emailAddresses:
+            type: array
+            items:
+                type: string
+                format: email

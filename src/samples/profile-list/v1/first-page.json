@@ -1,0 +1,20 @@
+{
+    "total": 4,
+    "items": [
+        {
+            "id": "01234567",
+            "name": {
+                "preferred": "Randy Schekman",
+                "index": "Schekman, Randy"
+            }
+        },
+        {
+            "id": "12345678",
+            "name": {
+                "preferred": "Josiah Carberry",
+                "index": "Carberry, Josiah"
+            },
+            "orcid": "0000-0002-1825-0097"
+        }
+    ]
+}

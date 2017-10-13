@@ -1,0 +1,57 @@
+{
+    "id": "12345678",
+    "name": {
+        "preferred": "Josiah Carberry",
+        "index": "Carberry, Josiah"
+    },
+    "orcid": "0000-0002-1825-0097",
+    "emailAddresses": [
+        "j.carberry@orcid.org"
+    ],
+    "affiliations": [
+        {
+            "name": [
+                "Psychoceramics",
+                "Wesleyan University"
+            ],
+            "address": {
+                "formatted": [
+                    "Middletown",
+                    "CT",
+                    "United States"
+                ],
+                "components": {
+                    "locality": [
+                        "Middletown"
+                    ],
+                    "area": [
+                        "CT"
+                    ],
+                    "country": "United States"
+                }
+            }
+        },
+        {
+            "name": [
+                "Psychoceramics",
+                "Brown University"
+            ],
+            "address": {
+                "formatted": [
+                    "Providence",
+                    "RI",
+                    "United States"
+                ],
+                "components": {
+                    "locality": [
+                        "Providence"
+                    ],
+                    "area": [
+                        "RI"
+                    ],
+                    "country": "United States"
+                }
+            }
+        }
+    ]
+}
