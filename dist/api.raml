@@ -1355,6 +1355,64 @@ traits:
                                     displayName: Complete
                                     value: !include samples/press-package/v3/complete.json
 
+/profiles:
+    (experimental):
+    type: collection
+    description: |
+        Profiles
+    get:
+        description: |
+            Get a list of profiles, sorted by surname then given name.
+        is:
+          - paged: { resources: Profiles }
+        responses:
+            200:
+                description: |
+                    List of profiles, sorted by surname then given name.
+                body:
+                    application/vnd.elife.profile-list+json;version=1:
+                        schema: !include model/profile-list.v1.json
+                        examples:
+                            paginated:
+                                displayName: First page
+                                description: |
+                                    List is split over two pages.
+                                value: !include samples/profile-list/v1/first-page.json
+                            empty:
+                                displayName: Empty list
+                                description: |
+                                    Demonstration of the list being empty (the first page will always return a valid result).
+                                value: !include samples/profile-list/v1/empty.json
+
+    /{id}:
+        type:
+            item:
+                resource: Profile
+        description: |
+            Individual profile.
+        uriParameters:
+            id:
+                description: |
+                    Profile ID.
+                type: string
+        get:
+            description: |
+                Get a profile.
+            responses:
+                200:
+                    description: |
+                        Profile.
+                    body:
+                        application/vnd.elife.profile+json;version=1:
+                            schema: !include model/profile.v1.json
+                            examples:
+                                minimum:
+                                    displayName: Minimum
+                                    value: !include samples/profile/v1/minimum.json
+                                complete:
+                                    displayName: Complete
+                                    value: !include samples/profile/v1/complete.json
+
 /recommendations/{type}/{id}:
     type: collection
     description: |
