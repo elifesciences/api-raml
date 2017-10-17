@@ -1,0 +1,15 @@
+$schema: http://json-schema.org/draft-04/schema#
+title: Page views
+type: object
+properties:
+    path:
+        type: string
+        minLength: 1
+    count:
+        type: integer
+        minimum: 0
+required:
+  - path
+  - count
+uniqueItems: true
+minItems: 1

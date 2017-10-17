@@ -1071,6 +1071,29 @@ traits:
                                     Demonstration of the list being empty (the first page will always return a valid result).
                                 value: !include samples/medium-article-list/v1/empty.json
 
+/metrics/{target}/page-views:
+    type: collection
+    description: Page metrics
+    uriParameters:
+        target:
+            type: string
+            enum:
+                - journal
+    get:
+        description: view count for specific website path
+        queryParameters:
+            path:
+                description: looks like "/about-us"
+                type: string
+                required: true
+        responses:
+            200:
+                body:
+                    application/vnd.elife.metric-citations+json;version=1:
+                        schema: !include ../dist/model/metric-pageviews.v1.json
+                        example:
+                            value: !include samples/metric-pageviews/v1/complete.json
+
 /metrics/{type}/{id}/citations:
     type: collection
     description: |
