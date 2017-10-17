@@ -1,0 +1,11 @@
+import os
+
+import py_api_raml
+
+__version__ = '0.0.1'
+
+
+schema_directory = os.path.dirname(py_api_raml.__file__)
+
+
+__all__ = [schema_directory]
