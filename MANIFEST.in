@@ -1,1 +1,1 @@
-include py_api_raml/*.json
+include dist/model/*.json

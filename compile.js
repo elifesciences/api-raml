@@ -7,13 +7,12 @@ var recursive = require('recursive-readdir');
 var refParser = require('json-schema-ref-parser');
 
 fs.removeSync('./dist');
-fs.removeSync('./py_api_raml'); // for py
+fs.removeSync('./elife_api');
 
 fs.mkdirsSync('./dist/model');
 fs.mkdirsSync('./dist/samples');
 fs.mkdirsSync('./dist/styles');
-
-fs.mkdirsSync('./py_api_raml'); // for py
+fs.mkdirsSync('./elife_api');
 
 recursive('./src/model', function (err, files) {
     var promises = [];
@@ -68,8 +67,6 @@ recursive('./src/model', function (err, files) {
         fs.copy('./src/styles', './dist/styles');
         fs.copy('./src/index.html', './dist/index.html');
         fs.copy('./src/favicon.ico', './dist/favicon.ico');
-
-        fs.copy('./src/__init__.py_base', './py_api_raml/__init__.py'); // for py
-        fs.copy('./dist/model', './py_api_raml'); // for py
+        fs.copy('./src/__init__.py_base', './elife_api/__init__.py');
     });
 });

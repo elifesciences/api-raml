@@ -1,11 +1,11 @@
 import os
 
-import py_api_raml
+import elife_api
 
 __version__ = '0.0.1'
 
 
-schema_directory = os.path.dirname(py_api_raml.__file__)
+schema_directory = os.path.dirname(elife_api.__file__)
 
 
 __all__ = [schema_directory]
