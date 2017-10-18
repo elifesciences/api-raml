@@ -5,7 +5,7 @@ import elife_api
 setup(
     name='elife_api',
     version=elife_api.__version__,
-    description='Utility for accessing eLife API-Raml JSON schemas in Python.',
+    description='Utility for accessing eLife API JSON Schemas.',
     packages=['elife_api'],
     license='MIT',
     url='https://github.com/elifesciences/api-raml',
