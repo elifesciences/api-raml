@@ -16,7 +16,7 @@ elifeLibrary {
 
     elifeMainlineOnly {
         stage 'Committing'
-        def isThereANewCommit = elifeGitAutoCommit "Regenerated dist/", "dist/"
+        def isThereANewCommit = elifeGitAutoCommit "Regenerated dist/", "dist/", "elife_api/"
         def commit = elifeGitRevision()
 
         stage 'Pushing to alfred/regeneration_of_dist'
