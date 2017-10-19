@@ -33,6 +33,7 @@ elifeLibrary {
         stage 'Downstream'
         if (isThereANewCommit) {
             build job: 'dependencies-bot-lax-adaptor-update-api-raml', wait: false
+            build job: 'dependencies-api-validator-python-update-api-raml', wait: false
         } else {
             echo "Nothing to do, latest commit is old"
         }
