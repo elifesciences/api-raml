@@ -2,11 +2,14 @@
     "total": 4,
     "items": [
         {
-            "uri": "https://hyp.is/41pgvpe9EeelPR-Oxb-4UQ/elifesciences.org/inside-elife/77dd2808/taking-a-closer-look-screening-of-images",
+            "id": "41pgvpe9EeelPR-Oxb-4UQ",
+            "private": false,
+            "hasParent": false,
             "published": "2017-09-15T14:40:52Z",
             "updated": "2017-09-15T14:42:43Z",
             "title": "Taking a closer look: Screening of images",
             "target": "Rossner and Yamada 2004, Cromey 2010",
+            "targetUri": "https://elifesciences.org/inside-elife/77dd2808/taking-a-closer-look-screening-of-images",
             "content": [
                 {
                     "type": "paragraph",
