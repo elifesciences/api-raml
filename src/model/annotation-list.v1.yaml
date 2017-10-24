@@ -12,16 +12,27 @@ properties:
         items:
             type: object
             properties:
-                uri:
-                    description: Annotation URI
+                id:
+                    description: Annotation ID
                     type: string
-                    format: uri
+                private:
+                    description: If the annotation should only be visible to the author
+                    type: boolean
+                    default: false
+                hasParent:
+                    description: If the annotation has a parent annotation
+                    type: boolean
+                    default: false
                 title:
                     description: Title of the annotated document
                     type: string
                 target:
                     description: Target text for the annotation
                     type: string
+                targetUri:
+                    description: URI of the annotated document
+                    type: string
+                    format: uri
                 published:
                     description: Publication date (UTC)
                     $ref: ../misc/date-time.v1.yaml
@@ -38,12 +49,13 @@ properties:
                           - $ref: ../blocks/paragraph.v1.yaml
                           - $ref: ../blocks/quote.v1.yaml
                           - $ref: ../blocks/youtube.v1.yaml
-                    minItems: 1
             required:
-              - uri
+              - id
+              - private
+              - hasParent
               - title
+              - targetUri
               - published
-              - content
         uniqueItems: true
 required:
   - total
