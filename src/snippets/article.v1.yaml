@@ -43,6 +43,16 @@ properties:
         enum:
             - preview
             - published
+    received:
+        description: |
+            Date and time this article was first quality checked.
+            Not present for editorial or insight article types.
+        $ref: ../misc/date-time.v1.yaml
+    accepted:
+        description: |
+            Date and time this article was finally approved for publication.
+            Not present for editorial or insight article types.
+        $ref: ../misc/date-time.v1.yaml
     published:
         description: |
             Date and time this article was first published.
