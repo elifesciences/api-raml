@@ -1071,21 +1071,61 @@ traits:
                                     Demonstration of the list being empty (the first page will always return a valid result).
                                 value: !include samples/medium-article-list/v1/empty.json
 
-/metrics/{target}/page-views:
+/metrics/{type}/{id}/page-views:
     type: collection
     description: Page metrics
     uriParameters:
-        target:
+        type:
             type: string
             enum:
-                - journal
+                - page
+        id:
+            type: string
+            enum:
+                - about
+                - about-early-career
+                - about-innovation
+                - about-openness
+                - about-peer-review
+                - about-people
+                - alerts
+                - annual-reports
+                - archive
+                - archive-month
+                - archive-year
+                - collection
+                - collections
+                - community
+                - contact
+                - event
+                - events
+                - home
+                - inside-elife
+                - inside-elife-article
+                - interview
+                - interviews
+                - labs
+                - labs-post
+                - log-in
+                - log-in-check
+                - log-out
+                - magazine
+                - nelmio_security
+                - podcast
+                - podcast-episode
+                - press-pack
+                - press-packs
+                - resources
+                - rss-ahead
+                - rss-recent
+                - search
+                - status
+                - subject
+                - subjects
+                - terms
+                - who-we-work-with
     get:
-        description: view count for specific website path
-        queryParameters:
-            path:
-                description: looks like "/about-us"
-                type: string
-                required: true
+        description: view count for specific website page
         responses:
             200:
                 body:
