@@ -25,19 +25,19 @@
                 },
                 "closingDate": {
                     "title": "Updated date (UTC)",
-                    "$ref": "#/allOf/0/properties/updated"
+                    "$ref": "#/allOf/0/properties/published"
                 },
                 "published": {
                     "title": "Publication date (UTC)",
-                    "$ref": "#/allOf/0/properties/updated"
-                },
-                "updated": {
-                    "title": "Updated date (UTC)",
                     "$schema": "http://json-schema.org/draft-04/schema#",
                     "description": "eLife restriction over the ISO8601 standard\n\nFor example:\n    - 2016-09-16T12:34:56Z\n",
                     "type": "string",
                     "format": "date-time",
                     "pattern": "^....-..-..T..:..:..Z$"
+                },
+                "updated": {
+                    "title": "Updated date (UTC)",
+                    "$ref": "#/allOf/0/properties/published"
                 }
             },
             "required": [
@@ -235,7 +235,7 @@
                                                                     "type": "object",
                                                                     "allOf": [
                                                                         {
-                                                                            "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/11/allOf/0"
+                                                                            "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/12/allOf/0"
                                                                         },
                                                                         {
                                                                             "$schema": "http://json-schema.org/draft-04/schema#",
@@ -368,7 +368,7 @@
                                                                             "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/2/properties/content/items/oneOf/4"
                                                                         },
                                                                         {
-                                                                            "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/11"
+                                                                            "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/12"
                                                                         }
                                                                     ]
                                                                 },
@@ -391,7 +391,7 @@
                                                                                 "type": "object",
                                                                                 "allOf": [
                                                                                     {
-                                                                                        "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/11/allOf/0"
+                                                                                        "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/12/allOf/0"
                                                                                     },
                                                                                     {
                                                                                         "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/2/properties/content/items/oneOf/4/allOf/1"
@@ -409,7 +409,7 @@
                                                                                         },
                                                                                         "required": [
                                                                                             "id",
-                                                                                            "title"
+                                                                                            "label"
                                                                                         ]
                                                                                     },
                                                                                     {
@@ -418,7 +418,7 @@
                                                                                         "type": "object",
                                                                                         "properties": {
                                                                                             "mediaType": {
-                                                                                                "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/11/allOf/2/properties/sources/items/properties/mediaType/allOf/0"
+                                                                                                "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/12/allOf/2/properties/sources/items/properties/mediaType/allOf/0"
                                                                                             },
                                                                                             "uri": {
                                                                                                 "title": "Source data URI",
@@ -462,7 +462,7 @@
                                                 "type": "object",
                                                 "allOf": [
                                                     {
-                                                        "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/11/allOf/0"
+                                                        "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/12/allOf/0"
                                                     },
                                                     {
                                                         "properties": {
@@ -473,7 +473,7 @@
                                                                 ]
                                                             },
                                                             "image": {
-                                                                "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/11/allOf/2/properties/placeholder"
+                                                                "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/8/properties/image"
                                                             },
                                                             "inline": {
                                                                 "type": "boolean"
@@ -494,6 +494,104 @@
                                             },
                                             {
                                                 "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/2/properties/content/items/oneOf/3"
+                                            },
+                                            {
+                                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                                "title": "Profile",
+                                                "type": "object",
+                                                "properties": {
+                                                    "type": {
+                                                        "type": "string",
+                                                        "enum": [
+                                                            "profile"
+                                                        ]
+                                                    },
+                                                    "image": {
+                                                        "$schema": "http://json-schema.org/draft-04/schema#",
+                                                        "title": "IIIF image",
+                                                        "type": "object",
+                                                        "allOf": [
+                                                            {
+                                                                "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/2/properties/content/items/oneOf/4/allOf/1"
+                                                            },
+                                                            {
+                                                                "properties": {
+                                                                    "uri": {
+                                                                        "title": "IIIF Image",
+                                                                        "type": "string",
+                                                                        "format": "uri",
+                                                                        "pattern": "^https://"
+                                                                    },
+                                                                    "alt": {
+                                                                        "title": "Alternative text",
+                                                                        "type": "string"
+                                                                    },
+                                                                    "source": {
+                                                                        "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/3/properties/assets/items/allOf/1/properties/sourceData/items/allOf/3"
+                                                                    },
+                                                                    "size": {
+                                                                        "type": "object",
+                                                                        "properties": {
+                                                                            "width": {
+                                                                                "type": "integer",
+                                                                                "minimum": 1
+                                                                            },
+                                                                            "height": {
+                                                                                "type": "integer",
+                                                                                "minimum": 1
+                                                                            }
+                                                                        },
+                                                                        "required": [
+                                                                            "width",
+                                                                            "height"
+                                                                        ]
+                                                                    },
+                                                                    "focalPoint": {
+                                                                        "type": "object",
+                                                                        "title": "Focal point",
+                                                                        "description": "Point on the image that is considered to be the focal point of the image.\n\nIf not present, 50 can be used for both `x` and `y`.\n",
+                                                                        "properties": {
+                                                                            "x": {
+                                                                                "description": "Percentage on the horizontal axis.\n",
+                                                                                "type": "integer",
+                                                                                "minimum": 0,
+                                                                                "maximum": 100
+                                                                            },
+                                                                            "y": {
+                                                                                "description": "Percentage on the vertical axis.\n",
+                                                                                "type": "integer",
+                                                                                "minimum": 0,
+                                                                                "maximum": 100
+                                                                            }
+                                                                        },
+                                                                        "required": [
+                                                                            "x",
+                                                                            "y"
+                                                                        ]
+                                                                    }
+                                                                },
+                                                                "required": [
+                                                                    "uri",
+                                                                    "alt",
+                                                                    "source",
+                                                                    "size"
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    "content": {
+                                                        "type": "array",
+                                                        "items": {
+                                                            "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/2/properties/content/items/oneOf/3"
+                                                        },
+                                                        "minItems": 1
+                                                    }
+                                                },
+                                                "required": [
+                                                    "type",
+                                                    "image",
+                                                    "content"
+                                                ]
                                             },
                                             {
                                                 "$schema": "http://json-schema.org/draft-04/schema#",
@@ -659,77 +757,7 @@
                                                                 "minItems": 1
                                                             },
                                                             "placeholder": {
-                                                                "$schema": "http://json-schema.org/draft-04/schema#",
-                                                                "title": "IIIF image",
-                                                                "type": "object",
-                                                                "allOf": [
-                                                                    {
-                                                                        "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/2/properties/content/items/oneOf/4/allOf/1"
-                                                                    },
-                                                                    {
-                                                                        "properties": {
-                                                                            "uri": {
-                                                                                "title": "IIIF Image",
-                                                                                "type": "string",
-                                                                                "format": "uri",
-                                                                                "pattern": "^https://"
-                                                                            },
-                                                                            "alt": {
-                                                                                "title": "Alternative text",
-                                                                                "type": "string"
-                                                                            },
-                                                                            "source": {
-                                                                                "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/3/properties/assets/items/allOf/1/properties/sourceData/items/allOf/3"
-                                                                            },
-                                                                            "size": {
-                                                                                "type": "object",
-                                                                                "properties": {
-                                                                                    "width": {
-                                                                                        "type": "integer",
-                                                                                        "minimum": 1
-                                                                                    },
-                                                                                    "height": {
-                                                                                        "type": "integer",
-                                                                                        "minimum": 1
-                                                                                    }
-                                                                                },
-                                                                                "required": [
-                                                                                    "width",
-                                                                                    "height"
-                                                                                ]
-                                                                            },
-                                                                            "focalPoint": {
-                                                                                "type": "object",
-                                                                                "title": "Focal point",
-                                                                                "description": "Point on the image that is considered to be the focal point of the image.\n\nIf not present, 50 can be used for both `x` and `y`.\n",
-                                                                                "properties": {
-                                                                                    "x": {
-                                                                                        "description": "Percentage on the horizontal axis.\n",
-                                                                                        "type": "integer",
-                                                                                        "minimum": 0,
-                                                                                        "maximum": 100
-                                                                                    },
-                                                                                    "y": {
-                                                                                        "description": "Percentage on the vertical axis.\n",
-                                                                                        "type": "integer",
-                                                                                        "minimum": 0,
-                                                                                        "maximum": 100
-                                                                                    }
-                                                                                },
-                                                                                "required": [
-                                                                                    "x",
-                                                                                    "y"
-                                                                                ]
-                                                                            }
-                                                                        },
-                                                                        "required": [
-                                                                            "uri",
-                                                                            "alt",
-                                                                            "source",
-                                                                            "size"
-                                                                        ]
-                                                                    }
-                                                                ]
+                                                                "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/8/properties/image"
                                                             },
                                                             "width": {
                                                                 "title": "Width",
