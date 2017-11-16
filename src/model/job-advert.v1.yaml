@@ -7,7 +7,7 @@ allOf:
         content:
             type: array
             items:
-                $ref: ../misc/blocks-all.v1.yaml
+                $ref: ../misc/blocks-all.v2.yaml
             minItems: 1
     required:
       - content
