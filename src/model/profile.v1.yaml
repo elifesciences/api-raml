@@ -7,9 +7,19 @@ allOf:
         affiliations:
             type: array
             items:
-                $ref: ../misc/place.v1.yaml
+                type: object
+                properties:
+                    value:
+                        $ref: ../misc/place.v1.yaml
+                    access:
+                        $ref: ../misc/access-level.v1.yaml
         emailAddresses:
             type: array
             items:
-                type: string
-                format: email
+                type: object
+                properties:
+                    value:
+                        type: string
+                        format: email
+                    access:
+                        $ref: ../misc/access-level.v1.yaml
