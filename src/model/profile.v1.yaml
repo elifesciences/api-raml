@@ -13,6 +13,9 @@ allOf:
                         $ref: ../misc/place.v1.yaml
                     access:
                         $ref: ../misc/access-level.v1.yaml
+                required:
+                  - value
+                  - access
         emailAddresses:
             type: array
             items:
@@ -23,3 +26,6 @@ allOf:
                         format: email
                     access:
                         $ref: ../misc/access-level.v1.yaml
+                required:
+                  - value
+                  - access
