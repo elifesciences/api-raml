@@ -191,6 +191,28 @@ traits:
               required: false
               example: [article/1234, interview/5678]
 
+/annotation-token/{id}:
+    type:
+        item:
+            resource: Annotation token
+    uriParameters:
+        id:
+            description: |
+                Annotation author ID.
+            type: string
+    get:
+        description: |
+            Get an annotation token.
+        responses:
+            200:
+                description: |
+                    Annotation token.
+                body:
+                    application/vnd.elife.annotation-token+json;version=1:
+                        schema: !include ../dist/model/annotation-token.v1.json
+                        example:
+                            value: !include samples/annotation-token/v1/complete.json
+
 /annual-reports:
     type: collection
     description: |
