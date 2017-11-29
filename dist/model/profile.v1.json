@@ -63,29 +63,9 @@
                 "affiliations": {
                     "type": "array",
                     "items": {
-                        "oneOf": [
-                            {
-                                "type": "object",
-                                "properties": {
-                                    "value": {
-                                        "$ref": "#/allOf/1/properties/affiliations/items/oneOf/1"
-                                    },
-                                    "access": {
-                                        "$schema": "http://json-schema.org/draft-04/schema#",
-                                        "title": "Access level",
-                                        "type": "string",
-                                        "enum": [
-                                            "public",
-                                            "restricted"
-                                        ]
-                                    }
-                                },
-                                "required": [
-                                    "value",
-                                    "access"
-                                ]
-                            },
-                            {
+                        "type": "object",
+                        "properties": {
+                            "value": {
                                 "$schema": "http://json-schema.org/draft-04/schema#",
                                 "title": "Place",
                                 "type": "object",
@@ -158,34 +138,39 @@
                                 "required": [
                                     "name"
                                 ]
+                            },
+                            "access": {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "title": "Access level",
+                                "type": "string",
+                                "enum": [
+                                    "public",
+                                    "restricted"
+                                ]
                             }
+                        },
+                        "required": [
+                            "value",
+                            "access"
                         ]
                     }
                 },
                 "emailAddresses": {
                     "type": "array",
                     "items": {
-                        "oneOf": [
-                            {
-                                "type": "object",
-                                "properties": {
-                                    "value": {
-                                        "type": "string",
-                                        "format": "email"
-                                    },
-                                    "access": {
-                                        "$ref": "#/allOf/1/properties/affiliations/items/oneOf/0/properties/access"
-                                    }
-                                },
-                                "required": [
-                                    "value",
-                                    "access"
-                                ]
-                            },
-                            {
+                        "type": "object",
+                        "properties": {
+                            "value": {
                                 "type": "string",
                                 "format": "email"
+                            },
+                            "access": {
+                                "$ref": "#/allOf/1/properties/affiliations/items/properties/access"
                             }
+                        },
+                        "required": [
+                            "value",
+                            "access"
                         ]
                     }
                 }
