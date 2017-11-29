@@ -7,25 +7,30 @@ allOf:
         affiliations:
             type: array
             items:
-                type: object
-                properties:
-                    value:
-                        $ref: ../misc/place.v1.yaml
-                    access:
-                        $ref: ../misc/access-level.v1.yaml
-                required:
-                  - value
-                  - access
+                oneOf:
+                  - type: object
+                    properties:
+                        value:
+                            $ref: ../misc/place.v1.yaml
+                        access:
+                            $ref: ../misc/access-level.v1.yaml
+                    required:
+                      - value
+                      - access
+                  - $ref: ../misc/place.v1.yaml
         emailAddresses:
             type: array
             items:
-                type: object
-                properties:
-                    value:
-                        type: string
-                        format: email
-                    access:
-                        $ref: ../misc/access-level.v1.yaml
-                required:
-                  - value
-                  - access
+                oneOf:
+                  - type: object
+                    properties:
+                        value:
+                            type: string
+                            format: email
+                        access:
+                            $ref: ../misc/access-level.v1.yaml
+                    required:
+                      - value
+                      - access
+                  - type: string
+                    format: email
