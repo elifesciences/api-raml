@@ -15,24 +15,15 @@ properties:
                 id:
                     description: Annotation ID
                     type: string
-                private:
-                    description: If the annotation should only be visible to the author
-                    type: boolean
-                    default: false
+                access:
+                    $ref: ../misc/access-level.v1.yaml
                 hasParent:
                     description: If the annotation has a parent annotation
                     type: boolean
                     default: false
-                title:
-                    description: Title of the annotated document
+                highlight:
+                    description: Highlighted text
                     type: string
-                target:
-                    description: Target text for the annotation
-                    type: string
-                targetUri:
-                    description: URI of the annotated document
-                    type: string
-                    format: uri
                 published:
                     description: Publication date (UTC)
                     $ref: ../misc/date-time.v1.yaml
@@ -44,18 +35,54 @@ properties:
                     type: array
                     items:
                         oneOf:
-                          - $ref: ../blocks/list.v1.yaml
+                          - $ref: ../blocks/list.v2.yaml
                           - $ref: ../blocks/mathml.v1.yaml
                           - $ref: ../blocks/paragraph.v1.yaml
                           - $ref: ../blocks/quote.v1.yaml
                           - $ref: ../blocks/youtube.v1.yaml
+                item:
+                    oneOf:
+                      - $ref: ../snippets/article-poa.v1.yaml
+                      - $ref: ../snippets/article-vor.v1.yaml
+                      - allOf:
+                          - type: object
+                            required:
+                              - type
+                          - oneOf:
+                              - allOf:
+                                  - properties:
+                                        type:
+                                            type: string
+                                            enum:
+                                              - blog-article
+                                  - $ref: ../snippets/blog-article.v1.yaml
+                              - allOf:
+                                  - properties:
+                                        type:
+                                            type: string
+                                            enum:
+                                              - interview
+                                  - $ref: ../snippets/interview.v1.yaml
+                              - allOf:
+                                  - properties:
+                                        type:
+                                            type: string
+                                            enum:
+                                              - labs-post
+                                  - $ref: ../snippets/labs-post.v1.yaml
+                              - allOf:
+                                  - properties:
+                                        type:
+                                            type: string
+                                            enum:
+                                              - press-package
+                                  - $ref: ../snippets/press-package.v1.yaml
             required:
               - id
-              - private
+              - access
               - hasParent
-              - title
-              - targetUri
               - published
+              - item
         uniqueItems: true
 required:
   - total

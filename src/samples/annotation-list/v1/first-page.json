@@ -3,13 +3,11 @@
     "items": [
         {
             "id": "41pgvpe9EeelPR-Oxb-4UQ",
-            "private": false,
+            "access": "publis",
             "hasParent": false,
             "published": "2017-09-15T14:40:52Z",
             "updated": "2017-09-15T14:42:43Z",
-            "title": "Taking a closer look: Screening of images",
-            "target": "Rossner and Yamada 2004, Cromey 2010",
-            "targetUri": "https://elifesciences.org/inside-elife/77dd2808/taking-a-closer-look-screening-of-images",
+            "highlight": "Rossner and Yamada 2004, Cromey 2010",
             "content": [
                 {
                     "type": "paragraph",
@@ -44,7 +42,20 @@
                         "Unordered list item 2"
                     ]
                 }
-            ]
+            ],
+            "item": {
+                "status": "poa",
+                "id": "14107",
+                "version": 1,
+                "type": "research-article",
+                "doi": "10.7554/eLife.14107",
+                "title": "Molecular basis for multimerization in the activation of the epidermal growth factor",
+                "stage": "published",
+                "published": "2016-03-28T00:00:00Z",
+                "statusDate": "2016-03-28T00:00:00Z",
+                "volume": 5,
+                "elocationId": "e14107"
+            }
         }
     ]
 }
