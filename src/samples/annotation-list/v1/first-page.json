@@ -4,6 +4,10 @@
         {
             "id": "41pgvpe9EeelPR-Oxb-4UQ",
             "access": "public",
+            "document": {
+                "title": "Molecular basis for multimerization in the activation of the epidermal growth factor",
+                "uri": "https://elifesciences.org/articles/14107"
+            },
             "hasParent": false,
             "published": "2017-09-15T14:40:52Z",
             "updated": "2017-09-15T14:42:43Z",
@@ -42,20 +46,7 @@
                         "Unordered list item 2"
                     ]
                 }
-            ],
-            "item": {
-                "status": "poa",
-                "id": "14107",
-                "version": 1,
-                "type": "research-article",
-                "doi": "10.7554/eLife.14107",
-                "title": "Molecular basis for multimerization in the activation of the epidermal growth factor",
-                "stage": "published",
-                "published": "2016-03-28T00:00:00Z",
-                "statusDate": "2016-03-28T00:00:00Z",
-                "volume": 5,
-                "elocationId": "e14107"
-            }
+            ]
         }
     ]
 }

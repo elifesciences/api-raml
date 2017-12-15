@@ -21,6 +21,18 @@ properties:
                     description: If the annotation has a parent annotation
                     type: boolean
                     default: false
+                document:
+                    title: Annotated document
+                    type: object
+                    properties:
+                        title:
+                            type: string
+                        uri:
+                            type: string
+                            format: uri
+                    required:
+                      - title
+                      - uri
                 highlight:
                     description: Highlighted text
                     type: string
@@ -40,49 +52,13 @@ properties:
                           - $ref: ../blocks/paragraph.v1.yaml
                           - $ref: ../blocks/quote.v1.yaml
                           - $ref: ../blocks/youtube.v1.yaml
-                item:
-                    oneOf:
-                      - $ref: ../snippets/article-poa.v1.yaml
-                      - $ref: ../snippets/article-vor.v1.yaml
-                      - allOf:
-                          - type: object
-                            required:
-                              - type
-                          - oneOf:
-                              - allOf:
-                                  - properties:
-                                        type:
-                                            type: string
-                                            enum:
-                                              - blog-article
-                                  - $ref: ../snippets/blog-article.v1.yaml
-                              - allOf:
-                                  - properties:
-                                        type:
-                                            type: string
-                                            enum:
-                                              - interview
-                                  - $ref: ../snippets/interview.v1.yaml
-                              - allOf:
-                                  - properties:
-                                        type:
-                                            type: string
-                                            enum:
-                                              - labs-post
-                                  - $ref: ../snippets/labs-post.v1.yaml
-                              - allOf:
-                                  - properties:
-                                        type:
-                                            type: string
-                                            enum:
-                                              - press-package
-                                  - $ref: ../snippets/press-package.v1.yaml
             required:
               - id
               - access
+              - document
               - hasParent
               - published
-              - item
+              - updated
         uniqueItems: true
 required:
   - total
