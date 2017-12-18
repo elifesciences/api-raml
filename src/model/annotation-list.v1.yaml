@@ -18,7 +18,7 @@ properties:
                 access:
                     $ref: ../misc/access-level.v1.yaml
                 parents:
-                    description: Array of parent annotation ID's
+                    description: Parent annotation IDs
                     type: array
                     items:
                         type: string
@@ -27,6 +27,7 @@ properties:
                     type: object
                     properties:
                         title:
+                            description: Document title when the annotation was created
                             type: string
                         uri:
                             type: string
@@ -37,8 +38,8 @@ properties:
                 highlight:
                     description: Highlighted text
                     type: string
-                published:
-                    description: Publication date (UTC)
+                created:
+                    description: Created date (UTC)
                     $ref: ../misc/date-time.v1.yaml
                 updated:
                     title: Updated date (UTC)
@@ -58,8 +59,7 @@ properties:
               - access
               - parents
               - document
-              - published
-              - updated
+              - created
         uniqueItems: true
 required:
   - total
