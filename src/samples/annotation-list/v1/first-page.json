@@ -8,7 +8,10 @@
                 "title": "Molecular basis for multimerization in the activation of the epidermal growth factor",
                 "uri": "https://elifesciences.org/articles/14107"
             },
-            "hasParent": false,
+            "parents": [
+                "zwtToOGEEeeN329z_8T-jg",
+                "z2wMhuGEEeekCjfkA_Z1lw"
+            ],
             "published": "2017-09-15T14:40:52Z",
             "updated": "2017-09-15T14:42:43Z",
             "highlight": "Rossner and Yamada 2004, Cromey 2010",

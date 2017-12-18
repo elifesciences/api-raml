@@ -17,10 +17,12 @@ properties:
                     type: string
                 access:
                     $ref: ../misc/access-level.v1.yaml
-                hasParent:
-                    description: If the annotation has a parent annotation
-                    type: boolean
-                    default: false
+                parents:
+                    description: Array of parent annotation ID's
+                    type: array
+                    items:
+                        type: string
+                        minLength: 1
                 document:
                     title: Annotated document
                     type: object
@@ -56,7 +58,6 @@ properties:
               - id
               - access
               - document
-              - hasParent
               - published
               - updated
         uniqueItems: true
