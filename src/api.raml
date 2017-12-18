@@ -198,13 +198,13 @@ traits:
         Annotations
     get:
         description: |
-            Get a list of annotations.
+            Get a list of annotations, sorted by date.
         is:
           - paged: { resources: Annotations }
         queryParameters:
-            by[]:
+            by:
                 description: |
-                    Only return annotations by at least one of these authors.
+                    Only return annotations by this author.
                 type: string[]
                 required: true
                 example: [userid]
