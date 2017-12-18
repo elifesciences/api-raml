@@ -22,7 +22,7 @@ properties:
                     type: array
                     items:
                         type: string
-                        minLength: 1
+                    minItems: 1
                 document:
                     title: Annotated document
                     type: object
