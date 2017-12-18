@@ -208,6 +208,17 @@ traits:
                 type: string[]
                 required: true
                 example: [userid]
+            use-date:
+                description: |
+                    Which date to use for ordering.
+
+                    `updated` refers to the updated date of the annotation, which may change over time. `created` refers to the original creation date, which does not change.
+                type: string
+                enum:
+                  - updated
+                  - created
+                required: false
+                default: updated
         responses:
             200:
                 body:
