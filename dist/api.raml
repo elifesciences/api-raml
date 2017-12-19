@@ -191,6 +191,51 @@ traits:
               required: false
               example: [article/1234, interview/5678]
 
+/annotations:
+    (experimental):
+    type: collection
+    description: |
+        Annotations
+    get:
+        description: |
+            Get a list of annotations, sorted by date.
+        is:
+          - paged: { resources: Annotations }
+        queryParameters:
+            by:
+                description: |
+                    Only return annotations by this author.
+                type: string
+                required: true
+                example: userid
+            use-date:
+                description: |
+                    Which date to use for ordering.
+
+                    `updated` refers to the updated date of the annotation, which may change over time. `created` refers to the original creation date, which does not change.
+                type: string
+                enum:
+                  - updated
+                  - created
+                required: false
+                default: updated
+        responses:
+            200:
+                body:
+                    application/vnd.elife.annotation-list+json;version=1:
+                        schema: !include model/annotation-list.v1.json
+                        examples:
+                            paginated:
+                                displayName: First page
+                                description: |
+                                    List is split over two pages.
+                                value: !include samples/annotation-list/v1/first-page.json
+                            empty:
+                                displayName: Empty list
+                                description: |
+                                    Demonstration of the list being empty (the first page will always return a valid result).
+                                value: !include samples/annotation-list/v1/empty.json
+
 /annual-reports:
     type: collection
     description: |
