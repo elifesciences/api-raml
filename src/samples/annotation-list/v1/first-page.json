@@ -1,0 +1,55 @@
+{
+    "total": 4,
+    "items": [
+        {
+            "id": "41pgvpe9EeelPR-Oxb-4UQ",
+            "access": "public",
+            "document": {
+                "title": "Molecular basis for multimerization in the activation of the epidermal growth factor",
+                "uri": "https://elifesciences.org/articles/14107"
+            },
+            "parents": [
+                "zwtToOGEEeeN329z_8T-jg",
+                "z2wMhuGEEeekCjfkA_Z1lw"
+            ],
+            "created": "2017-09-15T14:40:52Z",
+            "updated": "2017-09-15T14:42:43Z",
+            "highlight": "Rossner and Yamada 2004, Cromey 2010",
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "<strong>Bold text<strong> and <em>italic</em> with a <a href=\"https://elifesciences.org\">link</a>"
+                },
+                {
+                    "type": "quote",
+                    "text": [
+                        {
+                            "type": "paragraph",
+                            "text": "Blockquote"
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "https://cdn.elifesciences.org/style-guide-images/elife-full-color-horizontal.png"
+                },
+                {
+                    "type": "list",
+                    "prefix": "number",
+                    "items": [
+                        "Ordered list item 1",
+                        "Ordered list item 2"
+                    ]
+                },
+                {
+                    "type": "list",
+                    "prefix": "bullet",
+                    "items": [
+                        "Unordered list item 1",
+                        "Unordered list item 2"
+                    ]
+                }
+            ]
+        }
+    ]
+}
