@@ -63,9 +63,9 @@ properties:
               - created
             anyOf:
               - required:
-                - highlight
+                  - highlight
               - required:
-                - content
+                  - content
         uniqueItems: true
 required:
   - total
