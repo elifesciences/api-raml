@@ -54,12 +54,18 @@ properties:
                           - $ref: ../blocks/paragraph.v1.yaml
                           - $ref: ../blocks/quote.v1.yaml
                           - $ref: ../blocks/youtube.v1.yaml
+                    minItems: 1
             required:
               - id
               - access
               - parents
               - document
               - created
+            anyOf:
+              - required:
+                - highlight
+              - required:
+                - content
         uniqueItems: true
 required:
   - total
