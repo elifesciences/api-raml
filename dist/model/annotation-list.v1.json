@@ -861,7 +861,8 @@
                                     ]
                                 }
                             ]
-                        }
+                        },
+                        "minItems": 1
                     }
                 },
                 "required": [
@@ -870,6 +871,18 @@
                     "parents",
                     "document",
                     "created"
+                ],
+                "anyOf": [
+                    {
+                        "required": [
+                            "highlight"
+                        ]
+                    },
+                    {
+                        "required": [
+                            "content"
+                        ]
+                    }
                 ]
             },
             "uniqueItems": true
