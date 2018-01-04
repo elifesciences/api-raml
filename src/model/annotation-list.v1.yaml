@@ -58,7 +58,6 @@ properties:
             required:
               - id
               - access
-              - parents
               - document
               - created
             anyOf:
