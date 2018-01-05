@@ -21,6 +21,10 @@
                     "text": "<strong>Bold text</strong> and <em>italic</em> with a <a href=\"https://elifesciences.org\">link</a>"
                 },
                 {
+                    "type": "code",
+                    "code": "sample code"
+                },
+                {
                     "type": "quote",
                     "text": [
                         {
