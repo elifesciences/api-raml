@@ -18,7 +18,7 @@ properties:
                 access:
                     $ref: ../misc/access-level.v1.yaml
                 ancestors:
-                    description: IDs of previous annotations in this thread
+                    description: IDs of previous annotations in this thread (oldest first)
                     type: array
                     items:
                         type: string
