@@ -1495,6 +1495,33 @@ traits:
                                     Demonstration of the list being empty (the first page will always return a valid result).
                                 value: !include samples/recommendations/v1/empty.json
 
+/report/{name}:
+    type: collection
+    uriParameters:
+        name:
+            type: string
+            enum:
+                - latest-articles
+                - latest-articles-by-subject
+                - upcoming-articles
+                - published-research-article-index
+    get:
+        queryParameters:
+            format:
+                description: report serialisation type
+                type: string
+                required: false
+                example: csv
+        responses:
+            200:
+                body:
+                    text/csv:
+                    text/xml:
+                    application/json:
+            404:
+                body:
+                    text/html:
+
 /search:
     type: collection
     description: |
