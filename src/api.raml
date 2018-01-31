@@ -219,6 +219,16 @@ traits:
                   - created
                 required: false
                 default: updated
+            access:
+                description: |
+                    Return annotations if you have access.
+
+                    `restricted` will also return `public` annotations.
+                type: string
+                enum:
+                  - public
+                  - restricted
+                default: public
         responses:
             200:
                 body:
