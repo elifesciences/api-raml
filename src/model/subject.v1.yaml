@@ -7,6 +7,12 @@ allOf:
         impactStatement:
             description: Description of the subject
             type: string
+        aimsAndScope:
+            title: Aims and scope
+            type: array
+            items:
+                oneOf:
+                  - $ref: ../blocks/paragraph.v1.yaml
         image:
             type: object
             properties:
@@ -19,4 +25,5 @@ allOf:
               - thumbnail
     required:
       - impactStatement
+      - aimsAndScope
       - image
