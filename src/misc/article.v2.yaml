@@ -4,6 +4,9 @@ type: object
 allOf:
   - $ref: ../snippets/article.v1.yaml
   - properties:
+        xml:
+            type: string
+            format: uri
         issue:
             type: integer
             minimum: 1
