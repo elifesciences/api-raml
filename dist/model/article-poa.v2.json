@@ -155,6 +155,10 @@
                 },
                 {
                     "properties": {
+                        "xml": {
+                            "type": "string",
+                            "format": "uri"
+                        },
                         "issue": {
                             "type": "integer",
                             "minimum": 1
