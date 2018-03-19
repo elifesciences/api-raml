@@ -1558,6 +1558,12 @@
         }
     ],
     "dataSets": {
+        "availability": [
+            {
+                "type": "paragraph",
+                "text": "This is the text entered for the data availability text entry box."
+            }
+        ],
         "generated": [
             {
                 "id": "dataset1",
