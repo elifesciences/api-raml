@@ -54,6 +54,10 @@ allOf:
         dataSets:
             type: object
             properties:
+                availability:
+                    type: array
+                    items:
+                        $ref: ../blocks/paragraph.v1.yaml
                 generated:
                     type: array
                     items:
