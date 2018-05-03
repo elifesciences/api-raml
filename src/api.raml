@@ -1163,6 +1163,11 @@ traits:
             type: string
             enum:
               - article
+              - blog-article
+              - event
+              - interview
+              - labs-post
+              - press-package
         id:
             description: |
                 Content ID.
@@ -1176,7 +1181,7 @@ traits:
               - page-views
     get:
         description: |
-            Get a metric for a piece of content
+            Get a metric for a piece of content, by time period if available
         is:
           - paged: { resources: Time periods }
         queryParameters:
