@@ -1,4 +1,4 @@
 /*.* export-ignore
 /adr export-ignore
-/Jenkinsfile export-ignore
+/Jenkinsfile* export-ignore
 /src export-ignore
