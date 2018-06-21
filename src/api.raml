@@ -1164,6 +1164,7 @@ traits:
             enum:
               - article
               - blog-article
+              - collection
               - event
               - interview
               - labs-post
@@ -1181,7 +1182,7 @@ traits:
               - page-views
     get:
         description: |
-            Get a metric for a piece of content, by time period if available
+            Get a metric for a piece of content
         is:
           - paged: { resources: Time periods }
         queryParameters:
