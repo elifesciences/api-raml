@@ -1126,6 +1126,69 @@ traits:
                                     Demonstration of the list being empty (the first page will always return a valid result).
                                 value: !include samples/medium-article-list/v1/empty.json
 
+/metrics/{type}/{id}/page-views:
+    type: collection
+    description: Page metrics
+    uriParameters:
+        type:
+            type: string
+            enum:
+                - page
+        id:
+            type: string
+            enum:
+                - about
+                - about-early-career
+                - about-innovation
+                - about-openness
+                - about-peer-review
+                - about-people
+                - alerts
+                - annual-reports
+                - archive
+                - archive-month
+                - archive-year
+                - collection
+                - collections
+                - community
+                - contact
+                - event
+                - events
+                - home
+                - inside-elife
+                - inside-elife-article
+                - interview
+                - interviews
+                - labs
+                - labs-post
+                - log-in
+                - log-in-check
+                - log-out
+                - magazine
+                - nelmio_security
+                - podcast
+                - podcast-episode
+                - press-pack
+                - press-packs
+                - resources
+                - rss-ahead
+                - rss-recent
+                - search
+                - status
+                - subject
+                - subjects
+                - terms
+                - who-we-work-with
+    get:
+        description: view count for specific website page
+        responses:
+            200:
+                body:
+                    application/vnd.elife.metric-pageviews+json;version=1:
+                        schema: !include ../dist/model/metric-pageviews.v1.json
+                        example:
+                            value: !include samples/metric-pageviews/v1/complete.json
+
 /metrics/{type}/{id}/citations:
     type: collection
     description: |

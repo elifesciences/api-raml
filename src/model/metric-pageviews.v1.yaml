@@ -1,0 +1,14 @@
+$schema: http://json-schema.org/draft-04/schema#
+title: Page views
+type: object
+properties:
+    page:
+        title: Name of page
+        type: string
+    totalValue:
+        title: Total value of the metric
+        type: integer
+        minimum: 0
+required:
+    - page
+    - totalValue
