@@ -16,13 +16,13 @@ properties:
           - insight
           - research-advance
           - research-article
+          - research-communication
           - retraction
           - registered-report
           - replication-study
           - scientific-correspondence
           - short-report
           - tools-resources
-          - research-communication
     doi:
         $ref: ../misc/doi.v1.yaml
     authorLine:
