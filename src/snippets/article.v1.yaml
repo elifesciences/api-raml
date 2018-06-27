@@ -22,6 +22,7 @@ properties:
           - scientific-correspondence
           - short-report
           - tools-resources
+          - research-communication
     doi:
         $ref: ../misc/doi.v1.yaml
     authorLine:
