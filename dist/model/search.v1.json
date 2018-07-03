@@ -42,6 +42,7 @@
                                             "insight",
                                             "research-advance",
                                             "research-article",
+                                            "research-communication",
                                             "retraction",
                                             "registered-report",
                                             "replication-study",
@@ -844,6 +845,11 @@
                     "type": "integer",
                     "minimum": 0
                 },
+                "research-communication": {
+                    "description": "Number of research communication articles in the result set",
+                    "type": "integer",
+                    "minimum": 0
+                },
                 "retraction": {
                     "description": "Number of retraction articles in the result set",
                     "type": "integer",
@@ -907,6 +913,7 @@
                 "insight",
                 "research-advance",
                 "research-article",
+                "research-communication",
                 "retraction",
                 "registered-report",
                 "replication-study",
