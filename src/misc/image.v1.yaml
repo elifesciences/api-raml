@@ -8,7 +8,7 @@ allOf:
             title: IIIF Image
             type: string
             format: uri
-            pattern: ^https://
+            pattern: ^https://.+/[^/?#\[\]@]+$ # http://iiif.io/api/image/2.1/#uri-encoding-and-decoding, with support for percent encoding
         alt:
             title: Alternative text
             type: string
