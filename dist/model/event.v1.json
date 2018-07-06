@@ -687,7 +687,7 @@
                                                                                 "title": "IIIF Image",
                                                                                 "type": "string",
                                                                                 "format": "uri",
-                                                                                "pattern": "^https://"
+                                                                                "pattern": "^https://[^/]+(?:/[^?#\\[\\]@]+)?/[^/?#\\[\\]@]+$"
                                                                             },
                                                                             "alt": {
                                                                                 "title": "Alternative text",
