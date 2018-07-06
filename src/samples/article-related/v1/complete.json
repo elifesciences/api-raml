@@ -29,14 +29,14 @@
         "impactStatement": "A new hominin species found in a South African cave is part of one of the most unusual hominin fossil assemblages on record.",
         "image": {
             "thumbnail": {
-                "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif",
+                "uri": "https://iiif.elifesciences.org/lax:09560%2Felife-09560-fig1-v1.tif",
                 "alt": "",
                 "attribution": [
                     "By some person."
                 ],
                 "source": {
                     "mediaType": "image/jpeg",
-                    "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif/full/full/0/default.jpg",
+                    "uri": "https://iiif.elifesciences.org/lax:09560%2Felife-09560-fig1-v1.tif/full/full/0/default.jpg",
                     "filename": "an-image.jpg"
                 },
                 "size": {
@@ -69,11 +69,11 @@
         "impactStatement": "More than 1500 fossils from the Rising Star cave system in South Africa have been assigned to a new human species, <i>Homo naledi</i>, which displays a unique combination of primitive and derived traits throughout the skeleton.",
         "image": {
             "thumbnail": {
-                "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif",
+                "uri": "https://iiif.elifesciences.org/lax:09560%2Felife-09560-fig1-v1.tif",
                 "alt": "",
                 "source": {
                     "mediaType": "image/jpeg",
-                    "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif/full/full/0/default.jpg",
+                    "uri": "https://iiif.elifesciences.org/lax:09560%2Felife-09560-fig1-v1.tif/full/full/0/default.jpg",
                     "filename": "an-image.jpg"
                 },
                 "size": {
