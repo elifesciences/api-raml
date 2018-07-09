@@ -36,7 +36,22 @@
         {
             "id": "1",
             "title": "A new platform for understanding health",
-            "published": "2018-07-05T10:21:01Z"
+            "published": "2018-07-05T10:21:01Z",
+            "image": {
+                "thumbnail": {
+                    "uri": "https://iiif.elifesciences.org/medium:1*sjGQw7eyGhREFVBVSOZKOA.jpeg",
+                    "alt": "",
+                    "source": {
+                        "mediaType": "image/jpeg",
+                        "uri": "https://cdn-images-1.medium.com/1*sjGQw7eyGhREFVBVSOZKOA.jpeg",
+                        "filename": "1 sjGQw7eyGhREFVBVSOZKOA.jpeg"
+                    },
+                    "size": {
+                        "width": 2258,
+                        "height": 3070
+                    }
+                }
+            }
         }
     ]
 }
