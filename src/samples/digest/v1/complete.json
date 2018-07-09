@@ -1,0 +1,74 @@
+{
+    "id": "2",
+    "title": "Neighborhood watch",
+    "impactStatement": "Roundworms modify the chemical signals they produce to tell others whether they’re in a good or bad environment.",
+    "published": "2018-07-06T09:06:01Z",
+    "updated": "2018-07-06T16:23:24Z",
+    "image": {
+        "thumbnail": {
+            "uri": "https://iiif.elifesciences.org/medium:1*UaX-QIG8sgCXp6BDzc617w.jpeg",
+            "alt": "",
+            "source": {
+                "mediaType": "image/jpeg",
+                "uri": "https://cdn-images-1.medium.com/1*UaX-QIG8sgCXp6BDzc617w.jpeg",
+                "filename": "1 UaX-QIG8sgCXp6BDzc617w.jpeg"
+            },
+            "size": {
+                "width": 1152,
+                "height": 864
+            },
+            "focalPoint": {
+                "x": 25,
+                "y": 75
+            }
+        }
+    },
+    "subjects": [
+        {
+            "id": "biochemistry-chemical-biology",
+            "name": "Biochemistry and Chemical Biology"
+        }
+    ],
+    "content": [
+        {
+            "type": "paragraph",
+            "text": "Small roundworms such as <i>Caenorhabditis elegans</i> release chemical signals called ascarosides in order to communicate with other worms of the same species. Using the ascarosides, the worm can tell its friends, for example, how crowded the neighborhood is and whether there is enough food. The ascarosides thus help the worms in the population decide whether the neighborhood is good — meaning they should hang around, eat, and make babies — or whether the neighborhood is bad. If so, the worms should develop into a larval stage specialized for dispersal that will allow them to find a better neighborhood."
+        },
+        {
+            "type": "image",
+            "image": {
+                "uri": "https://iiif.elifesciences.org/medium:1*UaX-QIG8sgCXp6BDzc617w.jpeg",
+                "alt": "",
+                "source": {
+                    "mediaType": "image/jpeg",
+                    "uri": "https://cdn-images-1.medium.com/1*UaX-QIG8sgCXp6BDzc617w.jpeg",
+                    "filename": "1 UaX-QIG8sgCXp6BDzc617w.jpeg"
+                },
+                "size": {
+                    "width": 1152,
+                    "height": 864
+                },
+                "focalPoint": {
+                    "x": 25,
+                    "y": 75
+                }
+            }
+        }
+    ],
+    "relatedContent": [
+        {
+            "type": "research-article",
+            "status": "vor",
+            "id": "33286",
+            "version": 1,
+            "doi": "10.7554/eLife.33286",
+            "authorLine": "Yue Zhou et al.",
+            "title": "Biosynthetic tailoring of existing ascaroside pheromones alters their biological function in <i>C. elegans</i>",
+            "stage": "published",
+            "published": "2018-06-04T00:00:00Z",
+            "statusDate": "2018-06-04T00:00:00Z",
+            "volume": 7,
+            "elocationId": "e33286"
+        }
+    ]
+}

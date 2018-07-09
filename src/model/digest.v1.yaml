@@ -1,0 +1,24 @@
+$schema: http://json-schema.org/draft-04/schema#
+title: Digest
+type: object
+allOf:
+  - $ref: ../snippets/digest.v1.yaml
+  - properties:
+        content:
+            description: Content
+            type: array
+            items:
+                $ref: ../misc/blocks-all.v1.yaml
+            minItems: 1
+        relatedContent:
+            title: Related content
+            type: array
+            items:
+                oneOf:
+                  - $ref: ../snippets/article-poa.v1.yaml
+                  - $ref: ../snippets/article-vor.v1.yaml
+            minItems: 1
+            uniqueItems: true
+    required:
+      - content
+      - relatedContent
