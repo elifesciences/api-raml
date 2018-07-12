@@ -1219,18 +1219,12 @@ traits:
           - paged: { resources: People }
           - subjected: { resources: People }
         queryParameters:
-            type:
+            type[]:
                 description: |
-                    Person type.
-                type: string
+                    Only include people with one of the specified types.
+                type: string[]
                 required: false
-                enum:
-                  - director
-                  - early-career
-                  - executive
-                  - leadership
-                  - reviewing-editor
-                  - senior-editor
+                example: [director]
         responses:
             200:
                 description: |
