@@ -695,6 +695,7 @@ traits:
                                     displayName: Complete
                                     value: !include samples/collection/v1/complete.json
                         application/vnd.elife.collection+json;version=2:
+                            (experimental):
                             schema: !include ../dist/model/collection.v2.json
                             examples:
                                 minimum:
@@ -790,6 +791,7 @@ traits:
                                 value: !include samples/cover-list/v1/first-page.json
 
 /digests:
+    (experimental):
     type: collection
     description: |
         Digests
@@ -961,6 +963,7 @@ traits:
                                     Demonstration of the list being empty (the first page will always return a valid result).
                                 value: !include samples/highlight-list/v1/empty.json
                     application/vnd.elife.highlight-list+json;version=2:
+                        (experimental):
                         schema: !include ../dist/model/highlight-list.v2.json
                         examples:
                             paginated:
@@ -1177,8 +1180,8 @@ traits:
                                     displayName: Complete
                                     value: !include samples/labs-post/v2/complete.json
 
-(deprecated):
 /medium-articles:
+    (deprecated):
     type: collection
     description: |
         Medium articles
@@ -1663,6 +1666,7 @@ traits:
                                     Demonstration of the list being empty (the first page will always return a valid result).
                                 value: !include samples/search/v1/empty.json
                     application/vnd.elife.search+json;version=2:
+                        (experimental):
                         schema: !include ../dist/model/search.v2.json
                         examples:
                             paginated:
