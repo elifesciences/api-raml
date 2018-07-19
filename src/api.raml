@@ -780,6 +780,64 @@ traits:
                             example:
                                 value: !include samples/cover-list/v1/first-page.json
 
+/digests:
+    (experimental):
+    type: collection
+    description: |
+        Digests
+    get:
+        description: |
+            Get a list of digests, sorted by start date.
+        is:
+          - paged: { resources: Digests }
+        responses:
+            200:
+                description: |
+                    List of digests, sorted by start date.
+                body:
+                    application/vnd.elife.digest-list+json;version=1:
+                        schema: !include ../dist/model/digest-list.v1.json
+                        examples:
+                            paginated:
+                                displayName: First page
+                                description: |
+                                    List is split over two pages.
+                                value: !include samples/digest-list/v1/first-page.json
+                            empty:
+                                displayName: Empty list
+                                description: |
+                                    Demonstration of the list being empty (the first page will always return a valid result).
+                                value: !include samples/digest-list/v1/empty.json
+
+    /{id}:
+        type:
+            item:
+                resource: Digest
+        description: |
+            Individual digest.
+        uriParameters:
+            id:
+                description: |
+                    Digest ID.
+                type: string
+        get:
+            description: |
+                Get a digest.
+            responses:
+                200:
+                    description: |
+                        Digest.
+                    body:
+                        application/vnd.elife.digest+json;version=1:
+                            schema: !include ../dist/model/digest.v1.json
+                            examples:
+                                minimum:
+                                    displayName: Minimum
+                                    value: !include samples/digest/v1/minimum.json
+                                complete:
+                                    displayName: Complete
+                                    value: !include samples/digest/v1/complete.json
+
 /events:
     type: collection
     description: |
@@ -1099,6 +1157,7 @@ traits:
                                     value: !include samples/labs-post/v2/complete.json
 
 /medium-articles:
+    (deprecated):
     type: collection
     description: |
         Medium articles
