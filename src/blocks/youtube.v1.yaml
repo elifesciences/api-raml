@@ -19,8 +19,8 @@ allOf:
             title: Height
             type: integer
             minimum: 1
-required:
-  - type
-  - id
-  - width
-  - height
+    required:
+      - type
+      - id
+      - width
+      - height
