@@ -1,9 +1,8 @@
 $schema: http://json-schema.org/draft-04/schema#
 title: YouTube video
 type: object
-properties:
+allOf:
   - $ref: ../misc/caption.v1.yaml
-  - $ref: ../misc/attribution.v1.yaml
   - properties:
         type:
             type: string
