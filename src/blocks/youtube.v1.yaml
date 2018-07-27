@@ -19,10 +19,6 @@ allOf:
             title: Height
             type: integer
             minimum: 1
-        title:
-            title: Title
-            type: string
-            minLength: 1
     required:
       - type
       - id
