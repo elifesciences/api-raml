@@ -37,5 +37,5 @@ properties:
 required:
   - id
   - title
-  - published
+  - stage
   - image
