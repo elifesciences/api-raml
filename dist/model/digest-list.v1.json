@@ -30,6 +30,13 @@
                         "description": "Description of the digest",
                         "type": "string"
                     },
+                    "stage": {
+                        "type": "string",
+                        "enum": [
+                            "preview",
+                            "published"
+                        ]
+                    },
                     "published": {
                         "title": "Publication date (UTC)",
                         "$schema": "http://json-schema.org/draft-04/schema#",
@@ -187,7 +194,7 @@
                 "required": [
                     "id",
                     "title",
-                    "published",
+                    "stage",
                     "image"
                 ]
             },

@@ -5,6 +5,7 @@
             "id": "2",
             "title": "Neighborhood watch",
             "impactStatement": "Roundworms modify the chemical signals they produce to tell others whether they’re in a good or bad environment.",
+            "stage": "published",
             "published": "2018-07-06T09:06:01Z",
             "updated": "2018-07-06T16:23:24Z",
             "image": {
@@ -36,6 +37,7 @@
         {
             "id": "1",
             "title": "A new platform for understanding health",
+            "stage": "published",
             "published": "2018-07-05T10:21:01Z",
             "image": {
                 "thumbnail": {
