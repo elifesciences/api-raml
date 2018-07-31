@@ -1,0 +1,56 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "Annual reports list",
+    "type": "object",
+    "properties": {
+        "total": {
+            "title": "Total number of annual reports",
+            "type": "integer",
+            "minimum": 0
+        },
+        "items": {
+            "title": "Annual reports",
+            "type": "array",
+            "items": {
+                "$schema": "http://json-schema.org/draft-04/schema#",
+                "title": "Annual report",
+                "type": "object",
+                "properties": {
+                    "year": {
+                        "description": "Year",
+                        "type": "integer",
+                        "minimum": 2012
+                    },
+                    "uri": {
+                        "description": "Annual report URI",
+                        "type": "string",
+                        "format": "uri"
+                    },
+                    "pdf": {
+                        "type": "string",
+                        "format": "uri"
+                    },
+                    "title": {
+                        "description": "Title",
+                        "type": "string",
+                        "minLength": 1
+                    },
+                    "impactStatement": {
+                        "description": "Description of the annual report",
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "year",
+                    "uri",
+                    "title"
+                ]
+            },
+            "uniqueItems": true
+        }
+    },
+    "required": [
+        "total",
+        "items"
+    ]
+}
