@@ -2,8 +2,6 @@ $schema: http://json-schema.org/draft-04/schema#
 title: Has caption
 type: object
 properties:
-    id:
-        $ref: html-id.v1.yaml
     title:
         title: Title
         type: string
