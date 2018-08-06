@@ -48,7 +48,14 @@
             "type": "youtube",
             "id": "-9JVFCL0fvk",
             "width": 960,
-            "height": 720
+            "height": 720,
+            "title": "A sneak peek at Manuscripts, a new writing tool that helps you write an insanely great paper.",
+            "caption": [
+                {
+                    "type": "paragraph",
+                    "text": "Read more about what makes Manuscripts special from here: <a href=\"https://support.manuscriptsapp.com/\">https://support.manuscriptsapp.com/</a>."
+                }
+            ]
         },
         {
             "type": "paragraph",

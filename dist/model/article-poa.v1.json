@@ -69,19 +69,19 @@
                         },
                         "published": {
                             "description": "Date and time this article was first published.\nNot present if 'stage' is 'preview' and version is '1'.\n",
-                            "$ref": "#/allOf/0/allOf/0/properties/versionDate"
+                            "$ref": "#/allOf/0/allOf/0/properties/statusDate"
                         },
                         "versionDate": {
                             "description": "Date and time this version of the article was published.\nOnly present if 'stage' is 'published'.\n",
+                            "$ref": "#/allOf/0/allOf/0/properties/statusDate"
+                        },
+                        "statusDate": {
+                            "description": "Date and time this article transitioned to current status.\nNot present if 'stage' is 'preview' and version is '1'.\n",
                             "$schema": "http://json-schema.org/draft-04/schema#",
                             "title": "Date-time ISO8601 with numeric UTC timezone",
                             "type": "string",
                             "format": "date-time",
                             "pattern": "^....-..-..T..:..:..Z$"
-                        },
-                        "statusDate": {
-                            "description": "Date and time this article transitioned to current status.\nNot present if 'stage' is 'preview' and version is '1'.\n",
-                            "$ref": "#/allOf/0/allOf/0/properties/versionDate"
                         },
                         "volume": {
                             "type": "integer",
@@ -571,10 +571,7 @@
                                         "type": "object",
                                         "properties": {
                                             "id": {
-                                                "$schema": "http://json-schema.org/draft-04/schema#",
-                                                "title": "HTML ID",
-                                                "type": "string",
-                                                "pattern": "^[^\\s]+$"
+                                                "$ref": "#/allOf/0/allOf/1/properties/additionalFiles/items/allOf/2/properties/id"
                                             },
                                             "date": {
                                                 "$schema": "http://json-schema.org/draft-04/schema#",
@@ -662,7 +659,7 @@
                                         "type": "object",
                                         "properties": {
                                             "id": {
-                                                "$ref": "#/allOf/0/allOf/1/properties/dataSets/properties/used/items/properties/id"
+                                                "$ref": "#/allOf/0/allOf/1/properties/additionalFiles/items/allOf/2/properties/id"
                                             },
                                             "source": {
                                                 "allOf": [
@@ -760,9 +757,6 @@
                                         "title": "Has caption",
                                         "type": "object",
                                         "properties": {
-                                            "id": {
-                                                "$ref": "#/allOf/0/allOf/1/properties/dataSets/properties/used/items/properties/id"
-                                            },
                                             "title": {
                                                 "title": "Title",
                                                 "type": "string",
@@ -785,7 +779,7 @@
                                                                     ]
                                                                 },
                                                                 "id": {
-                                                                    "$ref": "#/allOf/0/allOf/1/properties/dataSets/properties/used/items/properties/id"
+                                                                    "$ref": "#/allOf/0/allOf/1/properties/additionalFiles/items/allOf/2/properties/id"
                                                                 },
                                                                 "label": {
                                                                     "type": "string"
@@ -813,7 +807,7 @@
                                                                     ]
                                                                 },
                                                                 "id": {
-                                                                    "$ref": "#/allOf/0/allOf/1/properties/dataSets/properties/used/items/properties/id"
+                                                                    "$ref": "#/allOf/0/allOf/1/properties/additionalFiles/items/allOf/2/properties/id"
                                                                 },
                                                                 "tables": {
                                                                     "type": "array",
@@ -848,6 +842,12 @@
                                     },
                                     {
                                         "properties": {
+                                            "id": {
+                                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                                "title": "HTML ID",
+                                                "type": "string",
+                                                "pattern": "^[^\\s]+$"
+                                            },
                                             "doi": {
                                                 "$ref": "#/allOf/0/allOf/0/properties/doi"
                                             },
