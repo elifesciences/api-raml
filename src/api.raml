@@ -832,15 +832,6 @@ traits:
                                 description: |
                                     Demonstration of the list being empty (the first page will always return a valid result).
                                 value: !include samples/digest-list/v1/empty.json
-            403:
-                description: Not authorized to add a digest.
-                #body:
-                #    application/problem+json:
-                #        schema: !include ../dist/model/error.v1.json
-                #        example: |
-                #            {
-                #                "title": "not authorized"
-                #            }
     post:
         description: |
             Add a new digest.
@@ -870,6 +861,15 @@ traits:
         #                        complete:
         #                            displayName: Complete
         #                            value: !include samples/digest/v1/complete.json
+        #    403:
+        #        description: Not authorized to add a digest.
+        #        #body:
+        #        #    application/problem+json:
+        #        #        schema: !include ../dist/model/error.v1.json
+        #        #        example: |
+        #        #            {
+        #        #                "title": "not authorized"
+        #        #            }
 
     /{id}:
         type:
