@@ -845,21 +845,20 @@ traits:
                     complete:
                         displayName: Complete
                         value: !include samples/digest/v1/complete.json
-        #responses:
-        #    200:
-        #        description: |
-        #            Digest just created.
-        #        body:
-        #            application/vnd.elife.digest+json;version=1:
-        #                schema: !include ../dist/model/digest.v1.json
-        #                examples:
-        #                    examples:
-        #                        minimum:
-        #                            displayName: Minimum
-        #                            value: !include samples/digest/v1/minimum.json
-        #                        complete:
-        #                            displayName: Complete
-        #                            value: !include samples/digest/v1/complete.json
+        responses:
+            200:
+                description: |
+                    Digest just created.
+                body:
+                    application/vnd.elife.digest+json;version=1:
+                        schema: !include ../dist/model/digest.v1.json
+                        examples:
+                            minimum:
+                                displayName: Minimum
+                                value: !include samples/digest/v1/minimum.json
+                            complete:
+                                displayName: Complete
+                                value: !include samples/digest/v1/complete.json
         #    403:
         #        description: Not authorized to add a digest.
         #        #body:
