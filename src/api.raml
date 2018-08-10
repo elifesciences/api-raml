@@ -833,6 +833,25 @@ traits:
                                     Demonstration of the list being empty (the first page will always return a valid result).
                                 value: !include samples/digest-list/v1/empty.json
 
+    post:
+        description: |
+            Add a new digest.
+        responses:
+            200:
+                description: |
+                    Digest just created.
+                body:
+                    application/vnd.elife.digest+json;version=1:
+                        schema: !include ../dist/model/digest.v1.json
+                        examples:
+                            examples:
+                                minimum:
+                                    displayName: Minimum
+                                    value: !include samples/digest/v1/minimum.json
+                                complete:
+                                    displayName: Complete
+                                    value: !include samples/digest/v1/complete.json
+
     /{id}:
         type:
             item:
