@@ -859,6 +859,8 @@ traits:
                             complete:
                                 displayName: Complete
                                 value: !include samples/digest/v1/complete.json
+            400:
+                description: Missing or invalid fields for digest.
             403:
                 description: Not authorized to add a digest.
                 #body:
