@@ -859,15 +859,15 @@ traits:
                             complete:
                                 displayName: Complete
                                 value: !include samples/digest/v1/complete.json
-        #    403:
-        #        description: Not authorized to add a digest.
-        #        #body:
-        #        #    application/problem+json:
-        #        #        schema: !include ../dist/model/error.v1.json
-        #        #        example: |
-        #        #            {
-        #        #                "title": "not authorized"
-        #        #            }
+            403:
+                description: Not authorized to add a digest.
+                #body:
+                #    application/problem+json:
+                #        schema: !include ../dist/model/error.v1.json
+                #        example: |
+                #            {
+                #                "title": "not authorized"
+                #            }
 
     /{id}:
         type:
