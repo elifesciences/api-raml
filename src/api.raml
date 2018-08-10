@@ -836,6 +836,17 @@ traits:
     post:
         description: |
             Add a new digest.
+        body:
+            application/vnd.elife.digest+json;version=1:
+                schema:
+                    examples:
+                        examples:
+                            minimum:
+                                displayName: Minimum
+                                value: !include samples/digest/v1/minimum.json
+                            complete:
+                                displayName: Complete
+                                value: !include samples/digest/v1/complete.json
         responses:
             200:
                 description: |
