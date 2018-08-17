@@ -260,21 +260,7 @@ traits:
                 description: |
                     List of annual reports, sorted by year.
                 body:
-                    application/vnd.elife.annual-report-list+json;version=1:
-                        schema: !include model/annual-report-list.v1.json
-                        examples:
-                            populated:
-                                displayName: Populated list
-                                description: |
-                                    List is split over two pages.
-                                value: !include samples/annual-report-list/v1/populated.json
-                            empty:
-                                displayName: Empty list
-                                description: |
-                                    Demonstration of the list being empty (the first page will always return a valid result).
-                                value: !include samples/annual-report-list/v1/empty.json
                     application/vnd.elife.annual-report-list+json;version=2:
-                        (experimental):
                         schema: !include model/annual-report-list.v2.json
                         examples:
                             populated:
@@ -308,17 +294,7 @@ traits:
                     description: |
                         Annual report.
                     body:
-                        application/vnd.elife.annual-report+json;version=1:
-                            schema: !include model/annual-report.v1.json
-                            examples:
-                                minimum:
-                                    displayName: Minimum
-                                    value: !include samples/annual-report/v1/minimum.json
-                                complete:
-                                    displayName: Complete
-                                    value: !include samples/annual-report/v1/complete.json
                         application/vnd.elife.annual-report+json;version=2:
-                            (experimental):
                             schema: !include model/annual-report.v2.json
                             examples:
                                 minimum:
