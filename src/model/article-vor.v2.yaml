@@ -85,6 +85,8 @@ allOf:
         authorResponse:
             type: object
             properties:
+                id:
+                    $ref: ../misc/html-id.v1.yaml
                 doi:
                     $ref: ../misc/doi.v1.yaml
                 content:
