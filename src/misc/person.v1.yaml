@@ -26,12 +26,37 @@ properties:
                       - Schekman, Randy
                       - VijayRaghavan, Krishnaswamy
                       - Li Wenhui
+            first:
+                title: First name
+                description: |
+                    The first name of the person, used for exporting to MECA.
+
+                    For example:
+                      - Randy
+            last:
+                title: Last name
+                description: |
+                    The last name (surname) of the person, used for exporting to MECA.
+
+                    For example:
+                      - Schekman
         required:
           - preferred
           - index
+          - last
     orcid:
         title: ORCID
         type: string
         pattern: ^[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{3}[0-9X]$
+    contact:
+        title: Contact Information
+        type: object
+        properties:
+            primary_email:
+                title: Primary Email
+                description: This person's primary contact email.
+            required:
+                - primary_email
 required:
   - name
+  - contact
