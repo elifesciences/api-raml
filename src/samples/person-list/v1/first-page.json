@@ -10,11 +10,11 @@
             "name": {
                 "preferred": "Randy Schekman",
                 "index": "Schekman, Randy",
-                "first": "Randy",
-                "last": "Schekman"
+                "given_names": "Randy",
+                "surname": "Schekman"
             },
-            "contact": {
-                "primary_email": "r.schekman@elifesciences.org"
+            "correspondence": {
+                "email": "r.schekman@elifesciences.org"
             }
         },
         {
@@ -25,12 +25,12 @@
             },
             "name": {
                 "preferred": "John Smith III",
-                "index": "Smith, John, III";
-                "first": "John",
-                "last": "Smith III"
+                "index": "Smith, John, III",
+                "given_names": "John",
+                "surname": "Smith III"
             },
-            "contact": {
-                "primary_email": "j.smith@elifesciences.org"
+            "correspondence": {
+                "email": "j.smith@elifesciences.org"
             },
             "orcid": "0000-0002-1825-0097",
             "image": {

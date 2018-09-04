@@ -7,10 +7,10 @@
     "name": {
         "preferred": "Randy Schekman",
         "index": "Schekman, Randy",
-        "first": "Randy",
-        "last": "Schekman"
+        "given_names": "Randy",
+        "surname": "Schekman"
     },
-    "contact": {
-        "primary_email": "r.schekman@elifesciences.org"
+    "correspondence": {
+        "email": "r.schekman@elifesciences.org"
     }
 }
