@@ -10,12 +10,15 @@
             "name": {
                 "preferred": "Randy Schekman",
                 "index": "Schekman, Randy",
-                "given_names": "Randy",
+                "givenNames": "Randy",
                 "surname": "Schekman"
             },
-            "correspondence": {
-                "email": "r.schekman@elifesciences.org"
-            }
+            "emailAddresses": [
+                {
+                    "value": "r.schekman@elifesciences.org",
+                    "access": "public"
+                }
+            ]
         },
         {
             "id": "jsmith",
@@ -26,12 +29,15 @@
             "name": {
                 "preferred": "John Smith III",
                 "index": "Smith, John, III",
-                "given_names": "John",
+                "givenNames": "John",
                 "surname": "Smith III"
             },
-            "correspondence": {
-                "email": "j.smith@elifesciences.org"
-            },
+            "emailAddresses": [
+                {
+                    "value": "j.smith@elifesciences.org",
+                    "access": "public"
+                }
+            ],
             "orcid": "0000-0002-1825-0097",
             "image": {
                 "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif",

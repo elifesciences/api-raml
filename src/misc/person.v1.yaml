@@ -26,37 +26,12 @@ properties:
                       - Schekman, Randy
                       - VijayRaghavan, Krishnaswamy
                       - Li Wenhui
-            given_names:
-                title: Given names
-                description: |
-                    The given names of the person.
-
-                    For example:
-                      - Randy
-            surname:
-                title: Surname
-                description: |
-                    The surname of the person.
-
-                    For example:
-                      - Schekman
         required:
           - preferred
           - index
-          - last
     orcid:
         title: ORCID
         type: string
         pattern: ^[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{3}[0-9X]$
-    correspondence:
-        title: Correspondence Information
-        type: object
-        properties:
-            email:
-                title: Email address
-                description: This person's email for correspondence.
-            required:
-                - email
 required:
   - name
-  - correspondence
