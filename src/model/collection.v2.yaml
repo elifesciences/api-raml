@@ -53,6 +53,13 @@ allOf:
                                     type:
                                         type: string
                                         enum:
+                                          - event
+                              - $ref: ../snippets/event.v1.yaml
+                          - allOf:
+                              - properties:
+                                    type:
+                                        type: string
+                                        enum:
                                           - interview
                               - $ref: ../snippets/interview.v1.yaml
             minItems: 1
