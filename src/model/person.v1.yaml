@@ -4,10 +4,39 @@ type: object
 allOf:
   - $ref: ../snippets/person.v1.yaml
   - properties:
+        name:
+            properties:
+                givenNames:
+                    title: Given names
+                    description: |
+                        The given names of the person.
+
+                        For example:
+                            - Randy
+                surname:
+                    title: Surname
+                    description: |
+                        The surname of the person.
+
+                        For example:
+                            - Schekman
         affiliations:
             type: array
             items:
                 $ref: ../misc/place.v1.yaml
+        emailAddresses:
+            type: array
+            items:
+                type: object
+                properties:
+                    value:
+                        type: string
+                        format: email
+                    access:
+                        $ref: ../misc/access-level.v1.yaml
+                required:
+                  - value
+                  - access
         research:
             title: Research details
             type: object
