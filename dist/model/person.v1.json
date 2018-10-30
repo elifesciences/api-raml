@@ -195,6 +195,18 @@
         },
         {
             "properties": {
+                "name": {
+                    "properties": {
+                        "givenNames": {
+                            "title": "Given names",
+                            "description": "The given names of the person.\n\nFor example:\n    - Randy\n"
+                        },
+                        "surname": {
+                            "title": "Surname",
+                            "description": "The surname of the person.\n\nFor example:\n    - Schekman\n"
+                        }
+                    }
+                },
                 "affiliations": {
                     "type": "array",
                     "items": {
@@ -269,6 +281,31 @@
                         },
                         "required": [
                             "name"
+                        ]
+                    }
+                },
+                "emailAddresses": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "value": {
+                                "type": "string",
+                                "format": "email"
+                            },
+                            "access": {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "title": "Access level",
+                                "type": "string",
+                                "enum": [
+                                    "public",
+                                    "restricted"
+                                ]
+                            }
+                        },
+                        "required": [
+                            "value",
+                            "access"
                         ]
                     }
                 },

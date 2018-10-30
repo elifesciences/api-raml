@@ -9,8 +9,16 @@
             },
             "name": {
                 "preferred": "Randy Schekman",
-                "index": "Schekman, Randy"
-            }
+                "index": "Schekman, Randy",
+                "givenNames": "Randy",
+                "surname": "Schekman"
+            },
+            "emailAddresses": [
+                {
+                    "value": "r.schekman@elifesciences.org",
+                    "access": "public"
+                }
+            ]
         },
         {
             "id": "jsmith",
@@ -20,8 +28,16 @@
             },
             "name": {
                 "preferred": "John Smith III",
-                "index": "Smith, John, III"
+                "index": "Smith, John, III",
+                "givenNames": "John",
+                "surname": "Smith III"
             },
+            "emailAddresses": [
+                {
+                    "value": "j.smith@elifesciences.org",
+                    "access": "public"
+                }
+            ],
             "orcid": "0000-0002-1825-0097",
             "image": {
                 "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif",
