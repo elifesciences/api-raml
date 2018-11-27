@@ -506,29 +506,19 @@ traits:
                             Article version number.
                         type: integer
                         minimum: 1
-                get:
-                    description: |
-                        Get an article.
+                put:
+                    description: Ingest an article.
+                    uriParameters:
+                        force:
+                            description: Force the operation
+                            type: boolean
+                        dry-run:
+                            description: Revert operation
+                            type: boolean
                     responses:
                         200:
-                            description: |
-                                Article version.
+                            description: Article version.
                             body:
-                                application/vnd.elife.article-poa+json;version=1:
-                                    schema: !include ../dist/model/article-poa.v1.json
-                                    examples:
-                                        minimum:
-                                            displayName: Minimum
-                                            value: !include samples/article-poa/v1/minimum.json
-                                        complete:
-                                            displayName: Complete
-                                            value: !include samples/article-poa/v1/complete.json
-                                        unpublishedMinimum:
-                                            displayName: PreviewMinimum
-                                            value: !include samples/article-poa/v1/unpublished-minimum.json
-                                        unpublishedComplete:
-                                            displayName: PreviewComplete
-                                            value: !include samples/article-poa/v1/unpublished-complete.json
                                 application/vnd.elife.article-poa+json;version=2:
                                     (experimental):
                                     schema: !include ../dist/model/article-poa.v2.json
@@ -546,21 +536,94 @@ traits:
                                             displayName: PreviewComplete
                                             value: !include samples/article-poa/v2/unpublished-complete.json
 
-                                application/vnd.elife.article-vor+json;version=1:
-                                    schema: !include ../dist/model/article-vor.v1.json
+                                application/vnd.elife.article-vor+json;version=2:
+                                    (experimental):
+                                    schema: !include ../dist/model/article-vor.v2.json
                                     examples:
                                         minimum:
                                             displayName: Minimum
-                                            value: !include samples/article-vor/v1/minimum.json
+                                            value: !include samples/article-vor/v2/minimum.json
                                         complete:
                                             displayName: Complete
-                                            value: !include samples/article-vor/v1/complete.json
+                                            value: !include samples/article-vor/v2/complete.json
                                         unpublishedMinimum:
                                             displayName: PreviewMinimum
-                                            value: !include samples/article-vor/v1/unpublished-minimum.json
+                                            value: !include samples/article-vor/v2/unpublished-minimum.json
                                         unpublishedComplete:
                                             displayName: PreviewComplete
-                                            value: !include samples/article-vor/v1/unpublished-complete.json
+                                            value: !include samples/article-vor/v2/unpublished-complete.json
+                post:
+                    description: Publish an article.
+                    uriParameters:
+                        force:
+                            description: Force the operation
+                            type: boolean
+                        dry-run:
+                            description: Revert operation
+                            type: boolean
+                    responses:
+                        200:
+                            description: Article version.
+                            body:
+                                application/vnd.elife.article-poa+json;version=2:
+                                    (experimental):
+                                    schema: !include ../dist/model/article-poa.v2.json
+                                    examples:
+                                        minimum:
+                                            displayName: Minimum
+                                            value: !include samples/article-poa/v2/minimum.json
+                                        complete:
+                                            displayName: Complete
+                                            value: !include samples/article-poa/v2/complete.json
+                                        unpublishedMinimum:
+                                            displayName: PreviewMinimum
+                                            value: !include samples/article-poa/v2/unpublished-minimum.json
+                                        unpublishedComplete:
+                                            displayName: PreviewComplete
+                                            value: !include samples/article-poa/v2/unpublished-complete.json
+
+                                application/vnd.elife.article-vor+json;version=2:
+                                    (experimental):
+                                    schema: !include ../dist/model/article-vor.v2.json
+                                    examples:
+                                        minimum:
+                                            displayName: Minimum
+                                            value: !include samples/article-vor/v2/minimum.json
+                                        complete:
+                                            displayName: Complete
+                                            value: !include samples/article-vor/v2/complete.json
+                                        unpublishedMinimum:
+                                            displayName: PreviewMinimum
+                                            value: !include samples/article-vor/v2/unpublished-minimum.json
+                                        unpublishedComplete:
+                                            displayName: PreviewComplete
+                                            value: !include samples/article-vor/v2/unpublished-complete.json
+
+                get:
+                    description: |
+                        Get an article.
+                    responses:
+                        200:
+                            description: |
+                                Article version.
+                            body:
+                                application/vnd.elife.article-poa+json;version=2:
+                                    (experimental):
+                                    schema: !include ../dist/model/article-poa.v2.json
+                                    examples:
+                                        minimum:
+                                            displayName: Minimum
+                                            value: !include samples/article-poa/v2/minimum.json
+                                        complete:
+                                            displayName: Complete
+                                            value: !include samples/article-poa/v2/complete.json
+                                        unpublishedMinimum:
+                                            displayName: PreviewMinimum
+                                            value: !include samples/article-poa/v2/unpublished-minimum.json
+                                        unpublishedComplete:
+                                            displayName: PreviewComplete
+                                            value: !include samples/article-poa/v2/unpublished-complete.json
+
                                 application/vnd.elife.article-vor+json;version=2:
                                     (experimental):
                                     schema: !include ../dist/model/article-vor.v2.json
