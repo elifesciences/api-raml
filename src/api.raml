@@ -508,7 +508,7 @@ traits:
                         minimum: 1
                 put:
                     description: Ingest an article.
-                    uriParameters:
+                    queryParameters:
                         force:
                             description: Force the operation
                             type: boolean
@@ -554,7 +554,7 @@ traits:
                                             value: !include samples/article-vor/v2/unpublished-complete.json
                 post:
                     description: Publish an article.
-                    uriParameters:
+                    queryParameters:
                         force:
                             description: Force the operation
                             type: boolean
