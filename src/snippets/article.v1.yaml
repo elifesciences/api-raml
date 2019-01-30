@@ -89,10 +89,6 @@ properties:
                 minItems: 1
         required:
           - content
-    publicationHistory:
-        type: array
-        items:
-            $ref: ../misc/publicationHistoryEvent.v1.yaml
 required:
   - status
   - id
