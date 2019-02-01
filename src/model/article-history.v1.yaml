@@ -26,25 +26,17 @@ oneOf:
     required:
         - versions
 -
-    title: Event
+    title: Publication Event
     type: object
-    allOf:
-      - $ref: ../snippets/event.v1.yaml
-      - properties:
-            content:
-                description: Content
-                type: array
-                items:
-                    $ref: ../misc/blocks-all.v1.yaml
-                minItems: 1
-        oneOf:
-          - required:
-              - content
-            not:
-                required:
-                  - uri
-          - required:
-              - uri
-            not:
-                required:
-                  - content
+    properties:
+        type:
+            type: string
+            enum:
+                - preprint-publication
+        description:
+            type: string
+        externalLink:
+            type: string
+            format: uri
+        date:
+            $ref: ../misc/date-time.v1.yaml
