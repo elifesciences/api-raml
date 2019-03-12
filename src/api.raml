@@ -1007,9 +1007,7 @@ traits:
                                 displayName: Empty list
                                 description: |
                                     Demonstration of the list being empty (the first page will always return a valid result).
-                                value: !include samples/highlight-list/v1/empty.json
                     application/vnd.elife.highlight-list+json;version=2:
-                        (experimental):
                         schema: !include ../dist/model/highlight-list.v2.json
                         examples:
                             paginated:
@@ -1022,6 +1020,21 @@ traits:
                                 description: |
                                     Demonstration of the list being empty (the first page will always return a valid result).
                                 value: !include samples/highlight-list/v2/empty.json
+                                value: !include samples/highlight-list/v1/empty.json
+                    application/vnd.elife.highlight-list+json;version=3:
+                        (experimental):
+                        schema: !include ../dist/model/highlight-list.v3.json
+                        examples:
+                            paginated:
+                                displayName: First page
+                                description: |
+                                    List is split over two pages.
+                                value: !include samples/highlight-list/v3/first-page.json
+                            empty:
+                                displayName: Empty list
+                                description: |
+                                    Demonstration of the list being empty (the first page will always return a valid result).
+                                value: !include samples/highlight-list/v3/empty.json
 
 /interviews:
     type: collection
