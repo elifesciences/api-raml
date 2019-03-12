@@ -1007,6 +1007,7 @@ traits:
                                 displayName: Empty list
                                 description: |
                                     Demonstration of the list being empty (the first page will always return a valid result).
+                                value: !include samples/highlight-list/v1/empty.json
                     application/vnd.elife.highlight-list+json;version=2:
                         schema: !include ../dist/model/highlight-list.v2.json
                         examples:
@@ -1020,7 +1021,6 @@ traits:
                                 description: |
                                     Demonstration of the list being empty (the first page will always return a valid result).
                                 value: !include samples/highlight-list/v2/empty.json
-                                value: !include samples/highlight-list/v1/empty.json
                     application/vnd.elife.highlight-list+json;version=3:
                         (experimental):
                         schema: !include ../dist/model/highlight-list.v3.json
