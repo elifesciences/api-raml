@@ -705,7 +705,6 @@ traits:
                                     displayName: Complete
                                     value: !include samples/collection/v1/complete.json
                         application/vnd.elife.collection+json;version=2:
-                            (experimental):
                             schema: !include ../dist/model/collection.v2.json
                             examples:
                                 minimum:
@@ -714,6 +713,16 @@ traits:
                                 complete:
                                     displayName: Complete
                                     value: !include samples/collection/v2/complete.json
+                        application/vnd.elife.collection+json;version=3:
+                            (experimental):
+                            schema: !include ../dist/model/collection.v3.json
+                            examples:
+                                minimum:
+                                    displayName: Minimum
+                                    value: !include samples/collection/v3/minimum.json
+                                complete:
+                                    displayName: Complete
+                                    value: !include samples/collection/v3/complete.json
 
 /community:
     type: collection
