@@ -4,19 +4,15 @@ type: array
 items:
     type: object
     properties:
-        protocol_sequencing_number:
+        sequencing_number:
             description: "section ID, looks like 's4-1'"
             type: string
-        protocol_title:
+        title:
             description: "section title, looks like 'Isolation of LDs and treatments'"
             type: string
-        is_protocol:
-            type: boolean
-        protocol_status:
+        status:
             description: "numeric code corresponding to the current status of a protocol"
-            type: "integer"
-            minimum: 0
-            maximum: 1
+            type: "boolean"
         uri:
             description: "remote path to protocol data at BioProtocol"
             title: "URI"
