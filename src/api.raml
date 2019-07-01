@@ -715,6 +715,31 @@ traits:
                                     displayName: Complete
                                     value: !include samples/collection/v2/complete.json
 
+/bioprotocol:
+    (experimental):
+    /article/{id}:
+        type: collection
+        description: BioProtocol protocol data
+        uriParameters:
+            id:
+                description: Article ID.
+                type: string
+        get:
+            description: BioProtocol protocol data for a specific article
+            responses:
+                200:
+                    description: BioProtocol data
+                    body:
+                        application/vnd.elife.bioprotocol+json;version=1:
+                            schema: !include ../dist/model/bioprotocol.v1.json
+                            examples:
+                                complete:
+                                    displayName: Complete
+                                    value: !include samples/bioprotocol/v1/complete.json
+                                empty:
+                                    displayName: Empty
+                                    value: !include samples/bioprotocol/v1/empty.json
+
 /community:
     type: collection
     description: |
