@@ -12,8 +12,8 @@ properties:
         items:
             type: object
             properties:
-                sequencingNumber:
-                    description: "section ID, looks like 's4-1'"
+                sectionId:
+                    description: "reference to article's section ID. Looks like 's4-1'"
                     type: string
                 title:
                     description: "section title, looks like 'Isolation of LDs and treatments'"
@@ -28,7 +28,7 @@ properties:
                     format: "uri"
                     pattern: "^https://"
             required:
-                - sequencingNumber
+                - sectionId
                 - title
                 - status
                 - uri

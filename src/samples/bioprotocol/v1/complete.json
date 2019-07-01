@@ -2,85 +2,85 @@
     "total": 14,
     "items": [
         {
-            "sequencingNumber": "s4-1",
+            "sectionId": "s4-1",
             "title": "Isolation of LDs and treatments",
             "status": true,
             "uri": "https://en.bio-protocol.org/eLIFErap.aspx?eid=00003&item=s4-1"
         },
         {
-            "sequencingNumber": "s4-10",
+            "sectionId": "s4-10",
             "title": "Adult fly bacterial infections",
             "status": false,
             "uri": "https://en.bio-protocol.org/eLIFErap.aspx?eid=00003&item=s4-10"
         },
         {
-            "sequencingNumber": "s4-11",
+            "sectionId": "s4-11",
             "title": "Mice injection and hepatic lipid droplet treatment",
             "status": true,
             "uri": "https://en.bio-protocol.org/eLIFErap.aspx?eid=00003&item=s4-11"
         },
         {
-            "sequencingNumber": "s4-2",
+            "sectionId": "s4-2",
             "title": "Immunoblot analysis",
             "status": false,
             "uri": "https://en.bio-protocol.org/eLIFErap.aspx?eid=00003&item=s4-2"
         },
         {
-            "sequencingNumber": "s4-3",
+            "sectionId": "s4-3",
             "title": "Immunofluorescence",
             "status": true,
             "uri": "https://en.bio-protocol.org/eLIFErap.aspx?eid=00003&item=s4-3"
         },
         {
-            "sequencingNumber": "s4-4",
+            "sectionId": "s4-4",
             "title": "Antibacterial assays",
             "status": false,
             "uri": "https://en.bio-protocol.org/eLIFErap.aspx?eid=00003&item=s4-4"
         },
         {
-            "sequencingNumber": "s4-4-1",
+            "sectionId": "s4-4-1",
             "title": "The colony forming units (CFU) assay",
             "status": true,
             "uri": "https://en.bio-protocol.org/eLIFErap.aspx?eid=00003&item=s4-4-1"
         },
         {
-            "sequencingNumber": "s4-4-2",
+            "sectionId": "s4-4-2",
             "title": "Gel overlay assay",
             "status": false,
             "uri": "https://en.bio-protocol.org/eLIFErap.aspx?eid=00003&item=s4-4-2"
         },
         {
-            "sequencingNumber": "s4-4-3",
+            "sectionId": "s4-4-3",
             "title": "Disc diffusion assay",
             "status": true,
             "uri": "https://en.bio-protocol.org/eLIFErap.aspx?eid=00003&item=s4-4-3"
         },
         {
-            "sequencingNumber": "s4-5",
+            "sectionId": "s4-5",
             "title": "Protein extraction from acid-urea gels",
             "status": false,
             "uri": "https://en.bio-protocol.org/eLIFErap.aspx?eid=00003&item=s4-5"
         },
         {
-            "sequencingNumber": "s4-6",
+            "sectionId": "s4-6",
             "title": "In gel digestion",
             "status": true,
             "uri": "https://en.bio-protocol.org/eLIFErap.aspx?eid=00003&item=s4-6"
         },
         {
-            "sequencingNumber": "s4-7",
+            "sectionId": "s4-7",
             "title": "Mass spectrometry analysis by LC-MS/MS",
             "status": false,
             "uri": "https://en.bio-protocol.org/eLIFErap.aspx?eid=00003&item=s4-7"
         },
         {
-            "sequencingNumber": "s4-8",
+            "sectionId": "s4-8",
             "title": "Drosophila strains",
             "status": true,
             "uri": "https://en.bio-protocol.org/eLIFErap.aspx?eid=00003&item=s4-8"
         },
         {
-            "sequencingNumber": "s4-9",
+            "sectionId": "s4-9",
             "title": "Embryo bacterial injections",
             "status": false,
             "uri": "https://en.bio-protocol.org/eLIFErap.aspx?eid=00003&item=s4-9"
