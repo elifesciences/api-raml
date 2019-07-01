@@ -716,6 +716,7 @@ traits:
                                     value: !include samples/collection/v2/complete.json
 
 /bioprotocol:
+    (experimental):
     /article/{id}:
         type: collection
         description: BioProtocol protocol data
@@ -735,6 +736,9 @@ traits:
                                 complete:
                                     displayName: Complete
                                     value: !include samples/bioprotocol/v1/complete.json
+                                empty:
+                                    displayName: Empty
+                                    value: !include samples/bioprotocol/v1/empty.json
 
 /community:
     type: collection

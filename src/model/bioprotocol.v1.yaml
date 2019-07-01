@@ -1,21 +1,37 @@
 $schema: http://json-schema.org/draft-04/schema#
 title: BioProtocol
-type: array
-items:
-    type: object
-    properties:
-        sequencing_number:
-            description: "section ID, looks like 's4-1'"
-            type: string
-        title:
-            description: "section title, looks like 'Isolation of LDs and treatments'"
-            type: string
-        status:
-            description: "numeric code corresponding to the current status of a protocol"
-            type: "boolean"
-        uri:
-            description: "remote path to protocol data at BioProtocol"
-            title: "URI"
-            type: "string"
-            format: "uri"
-            pattern: "^https://"
+type: object
+properties:
+    total:
+        title: Total number of BioProtocol results
+        type: integer
+        minimum: 0
+    items:
+        title: BioProtocol result
+        type: array
+        items:
+            type: object
+            properties:
+                sequencingNumber:
+                    description: "section ID, looks like 's4-1'"
+                    type: string
+                title:
+                    description: "section title, looks like 'Isolation of LDs and treatments'"
+                    type: string
+                status:
+                    description: "true when remote BioProtocol data available"
+                    type: "boolean"
+                uri:
+                    title: "URI"
+                    description: "remote path to protocol data at BioProtocol"
+                    type: "string"
+                    format: "uri"
+                    pattern: "^https://"
+            required:
+                - sequencingNumber
+                - title
+                - status
+                - uri
+required:
+    - total
+    - items
