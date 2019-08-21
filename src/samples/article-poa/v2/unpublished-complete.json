@@ -86,7 +86,9 @@
             "competingInterests": "Senior editor, <i>eLife</i>",
             "contribution": "Designed Xenopus oocyte based single-molecule analysis of EGFR stoichiometry and interpreted the data, Designed mammalian cell-based EGFR activity assay and conducted the data analysis and interpretation, Designed and conducted docking and model building, Drafting or revising the article.",
             "orcid": "0000-0002-4414-5477",
-            "email": "kuriyan@berkeley.edu"
+            "emailAddresses": [
+                "kuriyan@berkeley.edu"
+            ]
         }
     ],
     "reviewers": [
