@@ -10,7 +10,7 @@ properties:
         title: Articles
         type: array
         items:
-          - oneOf:
+            oneOf:
               - $ref: ../snippets/article-poa.v1.yaml
               - $ref: ../snippets/article-vor.v1.yaml
         uniqueItems: true
