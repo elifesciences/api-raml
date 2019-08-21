@@ -503,7 +503,19 @@
                                     "uri": "https://static-movie-usa.glencoesoftware.com/ogv/10.7554/659/0f10378e095dde7aaf579af504c4bfdc6fb86550/elife-00569-media1.ogv"
                                 }
                             ],
-                            "image": "https://static-movie-usa.glencoesoftware.com/jpg/10.7554/659/0f10378e095dde7aaf579af504c4bfdc6fb86550/elife-00569-media1.jpg",
+                            "placeholder": {
+                                "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif",
+                                "alt": "",
+                                "source": {
+                                    "mediaType": "image/jpeg",
+                                    "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif/full/full/0/default.jpg",
+                                    "filename": "an-image.jpg"
+                                },
+                                "size": {
+                                    "width": 4194,
+                                    "height": 4714
+                                }
+                            },
                             "width": 640,
                             "height": 480,
                             "sourceData": [
