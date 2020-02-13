@@ -1,0 +1,50 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "BioProtocol",
+    "type": "object",
+    "properties": {
+        "total": {
+            "title": "Total number of BioProtocol results",
+            "type": "integer",
+            "minimum": 0
+        },
+        "items": {
+            "title": "BioProtocol result",
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "sectionId": {
+                        "description": "reference to article's section ID. Looks like 's4-1'",
+                        "type": "string"
+                    },
+                    "title": {
+                        "description": "section title, looks like 'Isolation of LDs and treatments'",
+                        "type": "string"
+                    },
+                    "status": {
+                        "description": "true when remote BioProtocol data available",
+                        "type": "boolean"
+                    },
+                    "uri": {
+                        "title": "URI",
+                        "description": "remote path to protocol data at BioProtocol",
+                        "type": "string",
+                        "format": "uri",
+                        "pattern": "^https://"
+                    }
+                },
+                "required": [
+                    "sectionId",
+                    "title",
+                    "status",
+                    "uri"
+                ]
+            }
+        }
+    },
+    "required": [
+        "total",
+        "items"
+    ]
+}

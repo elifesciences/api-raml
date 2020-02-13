@@ -114,6 +114,10 @@ properties:
                 description: Number of replication studies in the result set
                 type: integer
                 minimum: 0
+            review-article:
+                description: Number of review articles in the result set
+                type: integer
+                minimum: 0
             scientific-correspondence:
                 description: Number of scientific correspondence articles in the result set
                 type: integer
@@ -157,6 +161,7 @@ properties:
           - retraction
           - registered-report
           - replication-study
+          - review-article
           - scientific-correspondence
           - short-report
           - tools-resources

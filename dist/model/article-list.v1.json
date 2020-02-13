@@ -11,346 +11,345 @@
         "items": {
             "title": "Articles",
             "type": "array",
-            "items": [
-                {
-                    "oneOf": [
-                        {
-                            "$schema": "http://json-schema.org/draft-04/schema#",
-                            "title": "Article PoA snippet",
-                            "type": "object",
-                            "allOf": [
-                                {
-                                    "$ref": "#/properties/items/items/0/oneOf/1/allOf/0"
-                                },
-                                {
-                                    "properties": {
-                                        "status": {
-                                            "type": "string",
-                                            "enum": [
-                                                "poa"
-                                            ]
-                                        }
+            "items": {
+                "oneOf": [
+                    {
+                        "$schema": "http://json-schema.org/draft-04/schema#",
+                        "title": "Article PoA snippet",
+                        "type": "object",
+                        "allOf": [
+                            {
+                                "$ref": "#/properties/items/items/oneOf/1/allOf/0"
+                            },
+                            {
+                                "properties": {
+                                    "status": {
+                                        "type": "string",
+                                        "enum": [
+                                            "poa"
+                                        ]
                                     }
                                 }
-                            ]
-                        },
-                        {
-                            "$schema": "http://json-schema.org/draft-04/schema#",
-                            "title": "Article VoR snippet",
-                            "type": "object",
-                            "allOf": [
-                                {
-                                    "$schema": "http://json-schema.org/draft-04/schema#",
-                                    "title": "Article snippet",
-                                    "type": "object",
-                                    "properties": {
-                                        "id": {
+                            }
+                        ]
+                    },
+                    {
+                        "$schema": "http://json-schema.org/draft-04/schema#",
+                        "title": "Article VoR snippet",
+                        "type": "object",
+                        "allOf": [
+                            {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "title": "Article snippet",
+                                "type": "object",
+                                "properties": {
+                                    "id": {
+                                        "$schema": "http://json-schema.org/draft-04/schema#",
+                                        "title": "eLife ID",
+                                        "type": "string",
+                                        "pattern": "^[a-z0-9-]+$"
+                                    },
+                                    "version": {
+                                        "type": "integer",
+                                        "minimum": 1
+                                    },
+                                    "type": {
+                                        "type": "string",
+                                        "enum": [
+                                            "correction",
+                                            "editorial",
+                                            "feature",
+                                            "insight",
+                                            "research-advance",
+                                            "research-article",
+                                            "research-communication",
+                                            "retraction",
+                                            "registered-report",
+                                            "replication-study",
+                                            "review-article",
+                                            "scientific-correspondence",
+                                            "short-report",
+                                            "tools-resources"
+                                        ]
+                                    },
+                                    "doi": {
+                                        "$schema": "http://json-schema.org/draft-04/schema#",
+                                        "title": "DOI",
+                                        "type": "string",
+                                        "pattern": "^10[.][0-9]{4,}[^\\s\"/<>]*/[^\\s\"]+$"
+                                    },
+                                    "authorLine": {
+                                        "description": "For example:\n  - Ian T Baldwin\n  - Randy Schekman, Mark Patterson\n  - Lee R Berger et al.\n",
+                                        "type": "string",
+                                        "minLength": 1
+                                    },
+                                    "title": {
+                                        "type": "string",
+                                        "minLength": 1
+                                    },
+                                    "titlePrefix": {
+                                        "type": "string",
+                                        "minLength": 1
+                                    },
+                                    "stage": {
+                                        "type": "string",
+                                        "enum": [
+                                            "preview",
+                                            "published"
+                                        ]
+                                    },
+                                    "published": {
+                                        "description": "Date and time this article was first published.\nNot present if 'stage' is 'preview' and version is '1'.\n",
+                                        "$ref": "#/properties/items/items/oneOf/1/allOf/0/properties/statusDate"
+                                    },
+                                    "versionDate": {
+                                        "description": "Date and time this version of the article was published.\nOnly present if 'stage' is 'published'.\n",
+                                        "$ref": "#/properties/items/items/oneOf/1/allOf/0/properties/statusDate"
+                                    },
+                                    "statusDate": {
+                                        "description": "Date and time this article transitioned to current status.\nNot present if 'stage' is 'preview' and version is '1'.\n",
+                                        "$schema": "http://json-schema.org/draft-04/schema#",
+                                        "title": "Date-time ISO8601 with numeric UTC timezone",
+                                        "type": "string",
+                                        "format": "date-time",
+                                        "pattern": "^....-..-..T..:..:..Z$"
+                                    },
+                                    "volume": {
+                                        "type": "integer",
+                                        "minimum": 1
+                                    },
+                                    "elocationId": {
+                                        "type": "string",
+                                        "minLength": 1
+                                    },
+                                    "pdf": {
+                                        "type": "string",
+                                        "format": "uri"
+                                    },
+                                    "subjects": {
+                                        "type": "array",
+                                        "items": {
                                             "$schema": "http://json-schema.org/draft-04/schema#",
-                                            "title": "eLife ID",
-                                            "type": "string",
-                                            "pattern": "^[a-z0-9-]+$"
-                                        },
-                                        "version": {
-                                            "type": "integer",
-                                            "minimum": 1
-                                        },
-                                        "type": {
-                                            "type": "string",
-                                            "enum": [
-                                                "correction",
-                                                "editorial",
-                                                "feature",
-                                                "insight",
-                                                "research-advance",
-                                                "research-article",
-                                                "research-communication",
-                                                "retraction",
-                                                "registered-report",
-                                                "replication-study",
-                                                "scientific-correspondence",
-                                                "short-report",
-                                                "tools-resources"
-                                            ]
-                                        },
-                                        "doi": {
-                                            "$schema": "http://json-schema.org/draft-04/schema#",
-                                            "title": "DOI",
-                                            "type": "string",
-                                            "pattern": "^10[.][0-9]{4,}[^\\s\"/<>]*/[^\\s\"]+$"
-                                        },
-                                        "authorLine": {
-                                            "description": "For example:\n  - Ian T Baldwin\n  - Randy Schekman, Mark Patterson\n  - Lee R Berger et al.\n",
-                                            "type": "string",
-                                            "minLength": 1
-                                        },
-                                        "title": {
-                                            "type": "string",
-                                            "minLength": 1
-                                        },
-                                        "titlePrefix": {
-                                            "type": "string",
-                                            "minLength": 1
-                                        },
-                                        "stage": {
-                                            "type": "string",
-                                            "enum": [
-                                                "preview",
-                                                "published"
-                                            ]
-                                        },
-                                        "published": {
-                                            "description": "Date and time this article was first published.\nNot present if 'stage' is 'preview' and version is '1'.\n",
-                                            "$ref": "#/properties/items/items/0/oneOf/1/allOf/0/properties/statusDate"
-                                        },
-                                        "versionDate": {
-                                            "description": "Date and time this version of the article was published.\nOnly present if 'stage' is 'published'.\n",
-                                            "$ref": "#/properties/items/items/0/oneOf/1/allOf/0/properties/statusDate"
-                                        },
-                                        "statusDate": {
-                                            "description": "Date and time this article transitioned to current status.\nNot present if 'stage' is 'preview' and version is '1'.\n",
-                                            "$schema": "http://json-schema.org/draft-04/schema#",
-                                            "title": "Date-time ISO8601 with numeric UTC timezone",
-                                            "type": "string",
-                                            "format": "date-time",
-                                            "pattern": "^....-..-..T..:..:..Z$"
-                                        },
-                                        "volume": {
-                                            "type": "integer",
-                                            "minimum": 1
-                                        },
-                                        "elocationId": {
-                                            "type": "string",
-                                            "minLength": 1
-                                        },
-                                        "pdf": {
-                                            "type": "string",
-                                            "format": "uri"
-                                        },
-                                        "subjects": {
-                                            "type": "array",
-                                            "items": {
-                                                "$schema": "http://json-schema.org/draft-04/schema#",
-                                                "title": "Subject snippet",
-                                                "type": "object",
-                                                "properties": {
-                                                    "id": {
-                                                        "$ref": "#/properties/items/items/0/oneOf/1/allOf/0/properties/id"
-                                                    },
-                                                    "name": {
-                                                        "description": "Name",
-                                                        "type": "string",
-                                                        "minLength": 1
-                                                    }
-                                                },
-                                                "required": [
-                                                    "id",
-                                                    "name"
-                                                ]
-                                            },
-                                            "uniqueItems": true
-                                        },
-                                        "researchOrganisms": {
-                                            "type": "array",
-                                            "items": {
-                                                "type": "string",
-                                                "minLength": 1
-                                            },
-                                            "uniqueItems": true
-                                        },
-                                        "abstract": {
+                                            "title": "Subject snippet",
                                             "type": "object",
                                             "properties": {
-                                                "content": {
-                                                    "type": "array",
-                                                    "items": {
+                                                "id": {
+                                                    "$ref": "#/properties/items/items/oneOf/1/allOf/0/properties/id"
+                                                },
+                                                "name": {
+                                                    "description": "Name",
+                                                    "type": "string",
+                                                    "minLength": 1
+                                                }
+                                            },
+                                            "required": [
+                                                "id",
+                                                "name"
+                                            ]
+                                        },
+                                        "uniqueItems": true
+                                    },
+                                    "researchOrganisms": {
+                                        "type": "array",
+                                        "items": {
+                                            "type": "string",
+                                            "minLength": 1
+                                        },
+                                        "uniqueItems": true
+                                    },
+                                    "abstract": {
+                                        "type": "object",
+                                        "properties": {
+                                            "content": {
+                                                "type": "array",
+                                                "items": {
+                                                    "$schema": "http://json-schema.org/draft-04/schema#",
+                                                    "title": "Paragraph",
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "type": {
+                                                            "type": "string",
+                                                            "enum": [
+                                                                "paragraph"
+                                                            ]
+                                                        },
+                                                        "text": {
+                                                            "title": "Text",
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "type",
+                                                        "text"
+                                                    ]
+                                                },
+                                                "minItems": 1
+                                            }
+                                        },
+                                        "required": [
+                                            "content"
+                                        ]
+                                    }
+                                },
+                                "required": [
+                                    "status",
+                                    "id",
+                                    "version",
+                                    "type",
+                                    "doi",
+                                    "title",
+                                    "stage",
+                                    "volume",
+                                    "elocationId"
+                                ]
+                            },
+                            {
+                                "properties": {
+                                    "status": {
+                                        "type": "string",
+                                        "enum": [
+                                            "vor"
+                                        ]
+                                    },
+                                    "impactStatement": {
+                                        "type": "string",
+                                        "minLength": 1
+                                    },
+                                    "figuresPdf": {
+                                        "type": "string",
+                                        "format": "uri"
+                                    },
+                                    "abstract": {
+                                        "type": "object",
+                                        "properties": {
+                                            "doi": {
+                                                "$ref": "#/properties/items/items/oneOf/1/allOf/0/properties/doi"
+                                            }
+                                        }
+                                    },
+                                    "image": {
+                                        "type": "object",
+                                        "properties": {
+                                            "thumbnail": {
+                                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                                "title": "IIIF image",
+                                                "type": "object",
+                                                "allOf": [
+                                                    {
                                                         "$schema": "http://json-schema.org/draft-04/schema#",
-                                                        "title": "Paragraph",
+                                                        "title": "Has attribution",
                                                         "type": "object",
                                                         "properties": {
-                                                            "type": {
+                                                            "attribution": {
+                                                                "title": "Attribution",
+                                                                "type": "array",
+                                                                "items": {
+                                                                    "type": "string"
+                                                                }
+                                                            }
+                                                        }
+                                                    },
+                                                    {
+                                                        "properties": {
+                                                            "uri": {
+                                                                "title": "IIIF Image",
                                                                 "type": "string",
-                                                                "enum": [
-                                                                    "paragraph"
+                                                                "format": "uri",
+                                                                "pattern": "^https://[^/]+(?:/[^?#\\[\\]@]+)?/[^/?#\\[\\]@]+$"
+                                                            },
+                                                            "alt": {
+                                                                "title": "Alternative text",
+                                                                "type": "string"
+                                                            },
+                                                            "source": {
+                                                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                                                "title": "File",
+                                                                "type": "object",
+                                                                "properties": {
+                                                                    "mediaType": {
+                                                                        "$schema": "http://json-schema.org/draft-04/schema#",
+                                                                        "title": "Media type",
+                                                                        "type": "string",
+                                                                        "pattern": "^([a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+/[a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+)(; *[a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+=(([a-zA-Z0-9\\.\\-]+)|(\".+\")))*$"
+                                                                    },
+                                                                    "uri": {
+                                                                        "title": "Source data URI",
+                                                                        "type": "string",
+                                                                        "format": "uri"
+                                                                    },
+                                                                    "filename": {
+                                                                        "title": "Filename",
+                                                                        "type": "string",
+                                                                        "pattern": "^[A-Za-z0-9_. ()-]+\\.[a-z0-9]+$"
+                                                                    }
+                                                                },
+                                                                "required": [
+                                                                    "mediaType",
+                                                                    "uri",
+                                                                    "filename"
                                                                 ]
                                                             },
-                                                            "text": {
-                                                                "title": "Text",
-                                                                "type": "string"
+                                                            "size": {
+                                                                "type": "object",
+                                                                "properties": {
+                                                                    "width": {
+                                                                        "type": "integer",
+                                                                        "minimum": 1
+                                                                    },
+                                                                    "height": {
+                                                                        "type": "integer",
+                                                                        "minimum": 1
+                                                                    }
+                                                                },
+                                                                "required": [
+                                                                    "width",
+                                                                    "height"
+                                                                ]
+                                                            },
+                                                            "focalPoint": {
+                                                                "type": "object",
+                                                                "title": "Focal point",
+                                                                "description": "Point on the image that is considered to be the focal point of the image.\n\nIf not present, 50 can be used for both `x` and `y`.\n",
+                                                                "properties": {
+                                                                    "x": {
+                                                                        "description": "Percentage on the horizontal axis.\n",
+                                                                        "type": "integer",
+                                                                        "minimum": 0,
+                                                                        "maximum": 100
+                                                                    },
+                                                                    "y": {
+                                                                        "description": "Percentage on the vertical axis.\n",
+                                                                        "type": "integer",
+                                                                        "minimum": 0,
+                                                                        "maximum": 100
+                                                                    }
+                                                                },
+                                                                "required": [
+                                                                    "x",
+                                                                    "y"
+                                                                ]
                                                             }
                                                         },
                                                         "required": [
-                                                            "type",
-                                                            "text"
+                                                            "uri",
+                                                            "alt",
+                                                            "source",
+                                                            "size"
                                                         ]
-                                                    },
-                                                    "minItems": 1
-                                                }
-                                            },
-                                            "required": [
-                                                "content"
-                                            ]
-                                        }
-                                    },
-                                    "required": [
-                                        "status",
-                                        "id",
-                                        "version",
-                                        "type",
-                                        "doi",
-                                        "title",
-                                        "stage",
-                                        "volume",
-                                        "elocationId"
-                                    ]
-                                },
-                                {
-                                    "properties": {
-                                        "status": {
-                                            "type": "string",
-                                            "enum": [
-                                                "vor"
-                                            ]
-                                        },
-                                        "impactStatement": {
-                                            "type": "string",
-                                            "minLength": 1
-                                        },
-                                        "figuresPdf": {
-                                            "type": "string",
-                                            "format": "uri"
-                                        },
-                                        "abstract": {
-                                            "type": "object",
-                                            "properties": {
-                                                "doi": {
-                                                    "$ref": "#/properties/items/items/0/oneOf/1/allOf/0/properties/doi"
-                                                }
+                                                    }
+                                                ]
                                             }
                                         },
-                                        "image": {
-                                            "type": "object",
-                                            "properties": {
-                                                "thumbnail": {
-                                                    "$schema": "http://json-schema.org/draft-04/schema#",
-                                                    "title": "IIIF image",
-                                                    "type": "object",
-                                                    "allOf": [
-                                                        {
-                                                            "$schema": "http://json-schema.org/draft-04/schema#",
-                                                            "title": "Has attribution",
-                                                            "type": "object",
-                                                            "properties": {
-                                                                "attribution": {
-                                                                    "title": "Attribution",
-                                                                    "type": "array",
-                                                                    "items": {
-                                                                        "type": "string"
-                                                                    }
-                                                                }
-                                                            }
-                                                        },
-                                                        {
-                                                            "properties": {
-                                                                "uri": {
-                                                                    "title": "IIIF Image",
-                                                                    "type": "string",
-                                                                    "format": "uri",
-                                                                    "pattern": "^https://[^/]+(?:/[^?#\\[\\]@]+)?/[^/?#\\[\\]@]+$"
-                                                                },
-                                                                "alt": {
-                                                                    "title": "Alternative text",
-                                                                    "type": "string"
-                                                                },
-                                                                "source": {
-                                                                    "$schema": "http://json-schema.org/draft-04/schema#",
-                                                                    "title": "File",
-                                                                    "type": "object",
-                                                                    "properties": {
-                                                                        "mediaType": {
-                                                                            "$schema": "http://json-schema.org/draft-04/schema#",
-                                                                            "title": "Media type",
-                                                                            "type": "string",
-                                                                            "pattern": "^([a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+/[a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+)(; *[a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+=(([a-zA-Z0-9\\.\\-]+)|(\".+\")))*$"
-                                                                        },
-                                                                        "uri": {
-                                                                            "title": "Source data URI",
-                                                                            "type": "string",
-                                                                            "format": "uri"
-                                                                        },
-                                                                        "filename": {
-                                                                            "title": "Filename",
-                                                                            "type": "string",
-                                                                            "pattern": "^[A-Za-z0-9_. ()-]+\\.[a-z0-9]+$"
-                                                                        }
-                                                                    },
-                                                                    "required": [
-                                                                        "mediaType",
-                                                                        "uri",
-                                                                        "filename"
-                                                                    ]
-                                                                },
-                                                                "size": {
-                                                                    "type": "object",
-                                                                    "properties": {
-                                                                        "width": {
-                                                                            "type": "integer",
-                                                                            "minimum": 1
-                                                                        },
-                                                                        "height": {
-                                                                            "type": "integer",
-                                                                            "minimum": 1
-                                                                        }
-                                                                    },
-                                                                    "required": [
-                                                                        "width",
-                                                                        "height"
-                                                                    ]
-                                                                },
-                                                                "focalPoint": {
-                                                                    "type": "object",
-                                                                    "title": "Focal point",
-                                                                    "description": "Point on the image that is considered to be the focal point of the image.\n\nIf not present, 50 can be used for both `x` and `y`.\n",
-                                                                    "properties": {
-                                                                        "x": {
-                                                                            "description": "Percentage on the horizontal axis.\n",
-                                                                            "type": "integer",
-                                                                            "minimum": 0,
-                                                                            "maximum": 100
-                                                                        },
-                                                                        "y": {
-                                                                            "description": "Percentage on the vertical axis.\n",
-                                                                            "type": "integer",
-                                                                            "minimum": 0,
-                                                                            "maximum": 100
-                                                                        }
-                                                                    },
-                                                                    "required": [
-                                                                        "x",
-                                                                        "y"
-                                                                    ]
-                                                                }
-                                                            },
-                                                            "required": [
-                                                                "uri",
-                                                                "alt",
-                                                                "source",
-                                                                "size"
-                                                            ]
-                                                        }
-                                                    ]
-                                                }
-                                            },
-                                            "required": [
-                                                "thumbnail"
-                                            ]
-                                        }
+                                        "required": [
+                                            "thumbnail"
+                                        ]
                                     }
                                 }
-                            ]
-                        }
-                    ]
-                }
-            ],
+                            }
+                        ]
+                    }
+                ]
+            },
             "uniqueItems": true
         }
     },

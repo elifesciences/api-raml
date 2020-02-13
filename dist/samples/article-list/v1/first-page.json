@@ -37,23 +37,25 @@
             ],
             "impactStatement": "A new hominin species has been unearthed in the Dinaledi Chamber of the Rising Star cave system in the largest assemblage of a single species of hominins yet discovered in Africa.",
             "image": {
-                "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif",
-                "alt": "",
-                "attribution": [
-                    "By some person."
-                ],
-                "source": {
-                    "mediaType": "image/jpeg",
-                    "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif/full/full/0/default.jpg",
-                    "filename": "an-image.jpg"
-                },
-                "size": {
-                    "width": 4194,
-                    "height": 4714
-                },
-                "focalPoint": {
-                    "x": 25,
-                    "y": 75
+                "thumbnail": {
+                    "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif",
+                    "alt": "",
+                    "attribution": [
+                        "By some person."
+                    ],
+                    "source": {
+                        "mediaType": "image/jpeg",
+                        "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif/full/full/0/default.jpg",
+                        "filename": "an-image.jpg"
+                    },
+                    "size": {
+                        "width": 4194,
+                        "height": 4714
+                    },
+                    "focalPoint": {
+                        "x": 25,
+                        "y": 75
+                    }
                 }
             }
         }
