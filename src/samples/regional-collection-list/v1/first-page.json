@@ -1,0 +1,30 @@
+{
+    "total": 2,
+    "items": [
+        {
+            "id": "1",
+            "title": "Tropical disease",
+            "published": "2015-09-16T11:19:26Z",
+            "updated": "2015-09-16T11:19:26Z",
+            "image": {
+                "thumbnail": {
+                    "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif",
+                    "alt": "",
+                    "source": {
+                        "mediaType": "image/jpeg",
+                        "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif/full/full/0/default.jpg",
+                        "filename": "an-image.jpg"
+                    },
+                    "size": {
+                        "width": 4194,
+                        "height": 4714
+                    },
+                    "focalPoint": {
+                        "x": 25,
+                        "y": 75
+                    }
+                }
+            }
+        }
+    ]
+}

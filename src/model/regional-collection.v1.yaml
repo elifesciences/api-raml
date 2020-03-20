@@ -1,0 +1,81 @@
+$schema: http://json-schema.org/draft-04/schema#
+title: Collection
+type: object
+allOf:
+  - $ref: ../snippets/regional-collection.v1.yaml
+  - properties:
+        image:
+            type: object
+            properties:
+                banner:
+                    $ref: ../misc/image.v1.yaml
+            required:
+              - banner
+        editors:
+            description: List of editors, ordered by name
+            type: array
+            items:
+                $ref: ../snippets/person.v1.yaml
+            minItems: 1
+        summary:
+            title: Summary
+            type: array
+            items:
+                $ref: ../blocks/paragraph.v1.yaml
+        content:
+            title: Content
+            type: array
+            items:
+                oneOf:
+                  - $ref: ../snippets/article-poa.v1.yaml
+                  - $ref: ../snippets/article-vor.v1.yaml
+                  - allOf:
+                      - type: object
+                        required:
+                          - type
+                      - oneOf:
+                          - allOf:
+                              - properties:
+                                    type:
+                                        type: string
+                                        enum:
+                                          - blog-article
+                              - $ref: ../snippets/blog-article.v1.yaml
+                          - allOf:
+                              - properties:
+                                    type:
+                                        type: string
+                                        enum:
+                                          - digest
+                              - $ref: ../snippets/digest.v1.yaml
+                          - allOf:
+                              - properties:
+                                    type:
+                                        type: string
+                                        enum:
+                                          - event
+                              - $ref: ../snippets/event.v1.yaml
+                          - allOf:
+                              - properties:
+                                    type:
+                                        type: string
+                                        enum:
+                                          - interview
+                              - $ref: ../snippets/interview.v1.yaml
+            minItems: 1
+            uniqueItems: true
+        relatedContent:
+            title: Related content
+            type: array
+            items:
+                $ref: '#/allOf/1/properties/content/items'
+            uniqueItems: true
+        podcastEpisodes:
+            title: Related podcast episodes
+            type: array
+            items:
+                $ref: ../snippets/podcast-episode.v1.yaml
+            uniqueItems: true
+    required:
+      - editors
+      - content

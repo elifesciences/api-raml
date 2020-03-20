@@ -1711,6 +1711,66 @@ traits:
                                     Demonstration of the list being empty (the first page will always return a valid result).
                                 value: !include samples/recommendations/v1/empty.json
 
+/regional-collections:
+    type: collection
+    description: |
+        Regional collections
+    get:
+        description: |
+            Get a list of regional collections, sorted by date.
+        is:
+          - paged: { resources: Regional collections }
+          - subjected: { resources: Regional collections }
+          - container: { resources: Regional collections }
+        responses:
+            200:
+                description: |
+                    List of regional collections, sorted by date.
+                body:
+                    application/vnd.elife.regional-collection-list+json;version=1:
+                        schema: !include ../dist/model/regional-collection-list.v1.json
+                        examples:
+                            paginated:
+                                displayName: First page
+                                description: |
+                                    List is split over two pages.
+                                value: !include samples/collection-list/v1/first-page.json
+                            empty:
+                                displayName: Empty list
+                                description: |
+                                    Demonstration of the list being empty (the first page will always return a valid result).
+                                value: !include samples/regional-collection-list/v1/empty.json
+
+    /{id}:
+        type:
+            item:
+                resource: Regional collection
+        description: |
+            Individual regional collection.
+        uriParameters:
+            id:
+                description: |
+                    Regional collection ID.
+                type: string
+        get:
+            description: |
+                Get a regional collection.
+            responses:
+                200:
+                    description: |
+                        Regional collection.
+                    body:
+                        application/vnd.elife.regional-collection+json;version=1:
+                            (experimental):
+                            schema: !include ../dist/model/regional-collection.v1.json
+                            examples:
+                                minimum:
+                                    displayName: Minimum
+                                    value: !include samples/regional-collection/v1/minimum.json
+                                complete:
+                                    displayName: Complete
+                                    value: !include samples/regional-collection/v1/complete.json
+
 /search:
     type: collection
     description: |
