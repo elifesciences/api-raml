@@ -1,16 +1,16 @@
 $schema: http://json-schema.org/draft-04/schema#
-title: Collection list
+title: Regional collection list
 type: object
 properties:
     total:
-        title: Total number of collections
+        title: Total number of regional collections
         type: integer
         minimum: 0
     items:
-        title: Collections
+        title: Regional collections
         type: array
         items:
-            $ref: ../snippets/collection.v1.yaml
+            $ref: ../snippets/regional-collection.v1.yaml
         uniqueItems: true
 required:
   - total
