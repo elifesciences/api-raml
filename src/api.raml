@@ -1712,6 +1712,7 @@ traits:
                                 value: !include samples/recommendations/v1/empty.json
 
 /regional-collections:
+    (experimental):
     type: collection
     description: |
         Regional collections
@@ -1761,7 +1762,6 @@ traits:
                         Regional collection.
                     body:
                         application/vnd.elife.regional-collection+json;version=1:
-                            (experimental):
                             schema: !include ../dist/model/regional-collection.v1.json
                             examples:
                                 minimum:
