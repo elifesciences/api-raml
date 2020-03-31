@@ -1,5 +1,5 @@
 $schema: http://json-schema.org/draft-04/schema#
-title: Collection
+title: Regional collection
 type: object
 allOf:
   - $ref: ../snippets/regional-collection.v1.yaml
@@ -12,7 +12,7 @@ allOf:
             required:
               - banner
         editors:
-            description: List of editors, ordered by name
+            description: List of local editors, ordered by name
             type: array
             items:
                 $ref: ../snippets/person.v1.yaml
