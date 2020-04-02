@@ -1,8 +1,8 @@
 $schema: http://json-schema.org/draft-04/schema#
-title: Regional collection
+title: Promotional collection
 type: object
 allOf:
-  - $ref: ../snippets/regional-collection.v1.yaml
+  - $ref: ../snippets/promotional-collection.v1.yaml
   - properties:
         image:
             type: object
@@ -12,11 +12,10 @@ allOf:
             required:
               - banner
         editors:
-            description: List of local editors, ordered by name
+            description: List of editors, ordered by name
             type: array
             items:
                 $ref: ../snippets/person.v1.yaml
-            minItems: 1
         summary:
             title: Summary
             type: array
@@ -77,5 +76,4 @@ allOf:
                 $ref: ../snippets/podcast-episode.v1.yaml
             uniqueItems: true
     required:
-      - editors
       - content

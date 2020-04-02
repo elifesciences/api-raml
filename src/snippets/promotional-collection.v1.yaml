@@ -1,5 +1,5 @@
 $schema: http://json-schema.org/draft-04/schema#
-title: Collection snippet
+title: Promotional collection snippet
 type: object
 properties:
     id:
@@ -8,7 +8,7 @@ properties:
         description: Title
         type: string
     impactStatement:
-        description: Description of the collection
+        description: Description of the promotional collection
         type: string
     published:
         title: Publication date (UTC)
@@ -24,7 +24,7 @@ properties:
         required:
           - thumbnail
     subjects:
-        description: Collection subjects
+        description: Promotional collection subjects
         type: array
         items:
             $ref: ../snippets/subject.v1.yaml

@@ -1,16 +1,16 @@
 $schema: http://json-schema.org/draft-04/schema#
-title: Regional collection list
+title: Promotional collection list
 type: object
 properties:
     total:
-        title: Total number of regional collections
+        title: Total number of promotional collections
         type: integer
         minimum: 0
     items:
-        title: Regional collections
+        title: Promotional collections
         type: array
         items:
-            $ref: ../snippets/regional-collection.v1.yaml
+            $ref: ../snippets/promotional-collection.v1.yaml
         uniqueItems: true
 required:
   - total
