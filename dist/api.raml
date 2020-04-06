@@ -1674,6 +1674,66 @@ traits:
                                     displayName: Complete
                                     value: !include samples/profile/v1/complete.json
 
+/promotional-collections:
+    (experimental):
+    type: collection
+    description: |
+        Promotional collections
+    get:
+        description: |
+            Get a list of promotional collections, sorted by date.
+        is:
+          - paged: { resources: Promotional collections }
+          - subjected: { resources: Promotional collections }
+          - container: { resources: Promotional collections }
+        responses:
+            200:
+                description: |
+                    List of promotional collections, sorted by date.
+                body:
+                    application/vnd.elife.promotional-collection-list+json;version=1:
+                        schema: !include model/promotional-collection-list.v1.json
+                        examples:
+                            paginated:
+                                displayName: First page
+                                description: |
+                                    List is split over two pages.
+                                value: !include samples/promotional-collection-list/v1/first-page.json
+                            empty:
+                                displayName: Empty list
+                                description: |
+                                    Demonstration of the list being empty (the first page will always return a valid result).
+                                value: !include samples/promotional-collection-list/v1/empty.json
+
+    /{id}:
+        type:
+            item:
+                resource: Promotional collection
+        description: |
+            Individual promotional collection.
+        uriParameters:
+            id:
+                description: |
+                    Promotional collection ID.
+                type: string
+        get:
+            description: |
+                Get a promotional collection.
+            responses:
+                200:
+                    description: |
+                        Promotional collection.
+                    body:
+                        application/vnd.elife.promotional-collection+json;version=1:
+                            schema: !include model/promotional-collection.v1.json
+                            examples:
+                                minimum:
+                                    displayName: Minimum
+                                    value: !include samples/promotional-collection/v1/minimum.json
+                                complete:
+                                    displayName: Complete
+                                    value: !include samples/promotional-collection/v1/complete.json
+
 /recommendations/{type}/{id}:
     type: collection
     description: |
