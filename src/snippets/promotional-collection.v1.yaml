@@ -1,0 +1,35 @@
+$schema: http://json-schema.org/draft-04/schema#
+title: Promotional collection snippet
+type: object
+properties:
+    id:
+        $ref: ../misc/id.v1.yaml
+    title:
+        description: Title
+        type: string
+    impactStatement:
+        description: Description of the promotional collection
+        type: string
+    published:
+        title: Publication date (UTC)
+        $ref: ../misc/date-time.v1.yaml
+    updated:
+        title: Updated date (UTC)
+        $ref: ../misc/date-time.v1.yaml
+    image:
+        type: object
+        properties:
+            thumbnail:
+                $ref: ../misc/image.v1.yaml
+        required:
+          - thumbnail
+    subjects:
+        description: Promotional collection subjects
+        type: array
+        items:
+            $ref: ../snippets/subject.v1.yaml
+required:
+  - id
+  - title
+  - published
+  - image
