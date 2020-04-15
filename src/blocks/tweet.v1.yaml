@@ -11,9 +11,8 @@ allOf:
         id:
             title: Tweet ID
             type: string
-        created:
-            description: Created date (UTC)
-            $ref: ../misc/date-time.v1.yaml
+        date:
+            $ref: ../misc/partial-date.v1.yaml
         text:
             title: Text
             type: array
@@ -37,7 +36,7 @@ allOf:
     required:
       - type
       - id
-      - created
+      - date
       - text
       - accountId
       - accountLabel
