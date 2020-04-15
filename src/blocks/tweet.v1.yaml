@@ -1,0 +1,43 @@
+$schema: http://json-schema.org/draft-04/schema#
+title: Tweet
+type: object
+allOf:
+  - $ref: ../misc/caption.v1.yaml
+  - properties:
+        type:
+            type: string
+            enum:
+              - tweet
+        id:
+            title: Tweet ID
+            type: string
+        created:
+            description: Created date (UTC)
+            $ref: ../misc/date-time.v1.yaml
+        text:
+            title: Text
+            type: array
+            items:
+                $ref: paragraph.v1.yaml
+            minItems: 1
+        accountId:
+            title: Twitter account ID
+            type: string
+        accountLabel:
+            title: Twitter account label
+            type: string
+        conversation:
+            title: Whether to display the conversation.
+            type: boolean
+            default: false
+        mediaCard:
+            title: Whether to display the media card.
+            type: boolean
+            default: false
+    required:
+      - type
+      - id
+      - created
+      - text
+      - accountId
+      - accountLabel
