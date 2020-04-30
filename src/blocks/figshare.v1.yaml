@@ -19,9 +19,6 @@ allOf:
             title: Height
             type: integer
             minimum: 1
-        allowFullscreen:
-            type: boolean
-            default: true
     required:
       - type
       - id
