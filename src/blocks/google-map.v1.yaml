@@ -11,16 +11,6 @@ allOf:
         id:
             title: Google map ID
             type: string
-        width:
-            title: Width
-            type: integer
-            minimum: 1
-        height:
-            title: Height
-            type: integer
-            minimum: 1
     required:
       - type
       - id
-      - width
-      - height
