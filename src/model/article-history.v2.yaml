@@ -1,0 +1,25 @@
+$schema: http://json-schema.org/draft-04/schema#
+title: Article history
+type: object
+properties:
+    received:
+        type: string
+        format: date
+    accepted:
+        type: string
+        format: date
+    versions:
+        description: List of article versions, sorted by version in descending order
+        type: array
+        items:
+          - oneOf:
+              - $ref: ../snippets/article-poa.v2.yaml
+              - $ref: ../snippets/article-vor.v2.yaml
+        minItems: 1
+dependencies:
+    received:
+      - accepted
+    accepted:
+      - received
+required:
+    - versions

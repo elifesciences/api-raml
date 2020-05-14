@@ -1,0 +1,39 @@
+$schema: http://json-schema.org/draft-04/schema#
+title: Recommendations list
+type: object
+properties:
+    total:
+        title: Total number of recommendations
+        type: integer
+        minimum: 0
+    items:
+        title: Recommendations
+        type: array
+        items:
+            oneOf:
+              - $ref: ../snippets/article-poa.v2.yaml
+              - $ref: ../snippets/article-vor.v2.yaml
+              - allOf:
+                  - type: object
+                    required:
+                      - type
+                  - oneOf:
+                      - allOf:
+                          - properties:
+                                type:
+                                    type: string
+                                    enum:
+                                      - collection
+                          - $ref: ../snippets/collection.v1.yaml
+                      - allOf:
+                          - properties:
+                                type:
+                                    type: string
+                                    enum:
+                                      - external-article
+                          - $ref: ../misc/external-article.v1.yaml
+                      - $ref: ../misc/podcast-episode-chapter.v1.yaml
+        uniqueItems: true
+required:
+  - total
+  - items

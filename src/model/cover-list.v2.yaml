@@ -1,0 +1,73 @@
+$schema: http://json-schema.org/draft-04/schema#
+title: Cover list
+type: object
+properties:
+    total:
+        title: Total number of covers
+        type: integer
+        minimum: 0
+    items:
+        title: Covers
+        type: array
+        items:
+            type: object
+            properties:
+                title:
+                    description: Title
+                    type: string
+                    minLength: 1
+                image:
+                    $ref: ../misc/image.v1.yaml
+                item:
+                    description: Cover item
+                    oneOf:
+                      - $ref: ../snippets/article-poa.v2.yaml
+                      - $ref: ../snippets/article-vor.v2.yaml
+                      - allOf:
+                          - type: object
+                            required:
+                              - type
+                          - oneOf:
+                              - allOf:
+                                  - properties:
+                                        type:
+                                            type: string
+                                            enum:
+                                              - blog-article
+                                  - $ref: ../snippets/blog-article.v1.yaml
+                              - allOf:
+                                  - properties:
+                                        type:
+                                            type: string
+                                            enum:
+                                              - collection
+                                  - $ref: ../snippets/collection.v1.yaml
+                              - allOf:
+                                  - properties:
+                                        type:
+                                            type: string
+                                            enum:
+                                              - interview
+                                  - $ref: ../snippets/interview.v1.yaml
+                              - allOf:
+                                  - properties:
+                                        type:
+                                            type: string
+                                            enum:
+                                              - labs-post
+                                  - $ref: ../snippets/labs-post.v1.yaml
+                              - allOf:
+                                  - properties:
+                                        type:
+                                            type: string
+                                            enum:
+                                              - podcast-episode
+                                  - $ref: ../snippets/podcast-episode.v1.yaml
+            required:
+              - title
+              - image
+              - item
+        uniqueItems: true
+required:
+  - total
+  - items
