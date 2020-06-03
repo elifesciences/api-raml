@@ -11,5 +11,6 @@ oneOf:
   - $ref: ../blocks/question.v1.yaml
   - $ref: ../blocks/quote.v1.yaml
   - $ref: ../blocks/table.v1.yaml
+  - $ref: ../blocks/tweet.v1.yaml
   - $ref: ../blocks/video.v1.yaml
   - $ref: ../blocks/youtube.v1.yaml
