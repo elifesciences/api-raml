@@ -92,6 +92,8 @@ properties:
                               type: string
                               enum:
                                 - section
+                          id:
+                              $ref: ../misc/html-id.v1.yaml
                           title:
                               title: Text
                               type: string

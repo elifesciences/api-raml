@@ -328,6 +328,7 @@
             },
             {
                 "type": "section",
+                "id": "abstract-s-1",
                 "title": "Background",
                 "content": [
                     {
@@ -338,6 +339,7 @@
             },
             {
                 "type": "section",
+                "id": "abstract-s-2",
                 "title": "Methods",
                 "content": [
                     {
@@ -348,6 +350,7 @@
             },
             {
                 "type": "section",
+                "id": "abstract-s-3",
                 "title": "Results",
                 "content": [
                     {
@@ -358,6 +361,7 @@
             },
             {
                 "type": "section",
+                "id": "abstract-s-4",
                 "title": "Conclusions",
                 "content": [
                     {
@@ -368,6 +372,7 @@
             },
             {
                 "type": "section",
+                "id": "abstract-s-5",
                 "title": "Funding",
                 "content": [
                     {
@@ -378,6 +383,7 @@
             },
             {
                 "type": "section",
+                "id": "abstract-s-6",
                 "title": "Clinical trial number",
                 "content": [
                     {
