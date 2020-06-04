@@ -1,0 +1,17 @@
+$schema: http://json-schema.org/draft-04/schema#
+title: Promotional collection list
+type: object
+properties:
+    total:
+        title: Total number of promotional collections
+        type: integer
+        minimum: 0
+    items:
+        title: Promotional collections
+        type: array
+        items:
+            $ref: ../snippets/promotional-collection.v1.yaml
+        uniqueItems: true
+required:
+  - total
+  - items

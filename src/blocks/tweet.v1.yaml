@@ -1,0 +1,38 @@
+$schema: http://json-schema.org/draft-04/schema#
+title: Tweet
+type: object
+properties:
+    type:
+        type: string
+        enum:
+          - tweet
+    id:
+        title: Tweet ID
+        type: string
+    date:
+        $ref: ../misc/partial-date.v1.yaml
+    text:
+        title: Text
+        type: string
+        minLength: 1
+    accountId:
+        title: Twitter account ID
+        type: string
+    accountLabel:
+        title: Twitter account label
+        type: string
+    conversation:
+        title: Whether to display the conversation.
+        type: boolean
+        default: false
+    mediaCard:
+        title: Whether to display the media card.
+        type: boolean
+        default: false
+required:
+  - type
+  - id
+  - date
+  - text
+  - accountId
+  - accountLabel
