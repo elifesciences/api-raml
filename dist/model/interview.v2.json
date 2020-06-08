@@ -409,7 +409,7 @@
                                                                     "type": "object",
                                                                     "allOf": [
                                                                         {
-                                                                            "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/14/allOf/0"
+                                                                            "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/16/allOf/0"
                                                                         },
                                                                         {
                                                                             "$ref": "#/allOf/0/properties/image/properties/thumbnail/allOf/0"
@@ -499,6 +499,48 @@
                                             },
                                             {
                                                 "$schema": "http://json-schema.org/draft-04/schema#",
+                                                "title": "Figshare",
+                                                "type": "object",
+                                                "allOf": [
+                                                    {
+                                                        "properties": {
+                                                            "type": {
+                                                                "type": "string",
+                                                                "enum": [
+                                                                    "figshare"
+                                                                ]
+                                                            },
+                                                            "id": {
+                                                                "title": "Figshare ID",
+                                                                "type": "string"
+                                                            },
+                                                            "title": {
+                                                                "title": "Title",
+                                                                "type": "string"
+                                                            },
+                                                            "width": {
+                                                                "title": "Width",
+                                                                "type": "integer",
+                                                                "minimum": 1
+                                                            },
+                                                            "height": {
+                                                                "title": "Height",
+                                                                "type": "integer",
+                                                                "minimum": 1
+                                                            }
+                                                        },
+                                                        "required": [
+                                                            "type",
+                                                            "id",
+                                                            "title",
+                                                            "width",
+                                                            "height"
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "$schema": "http://json-schema.org/draft-04/schema#",
                                                 "title": "Figure",
                                                 "type": "object",
                                                 "properties": {
@@ -517,7 +559,7 @@
                                                                         {
                                                                             "allOf": [
                                                                                 {
-                                                                                    "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/4"
+                                                                                    "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/5"
                                                                                 },
                                                                                 {
                                                                                     "properties": {
@@ -534,7 +576,7 @@
                                                                             "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/2/properties/content/items/oneOf/4"
                                                                         },
                                                                         {
-                                                                            "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/13"
+                                                                            "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/15"
                                                                         }
                                                                     ]
                                                                 },
@@ -557,7 +599,7 @@
                                                                                 "type": "object",
                                                                                 "allOf": [
                                                                                     {
-                                                                                        "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/14/allOf/0"
+                                                                                        "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/16/allOf/0"
                                                                                     },
                                                                                     {
                                                                                         "$ref": "#/allOf/0/properties/image/properties/thumbnail/allOf/0"
@@ -609,7 +651,7 @@
                                                 "type": "object",
                                                 "allOf": [
                                                     {
-                                                        "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/14/allOf/0"
+                                                        "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/16/allOf/0"
                                                     },
                                                     {
                                                         "properties": {
@@ -632,6 +674,36 @@
                                                         "required": [
                                                             "type",
                                                             "image"
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                                "title": "Google map",
+                                                "type": "object",
+                                                "allOf": [
+                                                    {
+                                                        "properties": {
+                                                            "type": {
+                                                                "type": "string",
+                                                                "enum": [
+                                                                    "google-map"
+                                                                ]
+                                                            },
+                                                            "id": {
+                                                                "title": "Google map ID",
+                                                                "type": "string"
+                                                            },
+                                                            "title": {
+                                                                "title": "Title",
+                                                                "type": "string"
+                                                            }
+                                                        },
+                                                        "required": [
+                                                            "type",
+                                                            "id",
+                                                            "title"
                                                         ]
                                                     }
                                                 ]
@@ -797,7 +869,7 @@
                                                 "type": "object",
                                                 "allOf": [
                                                     {
-                                                        "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/14/allOf/0"
+                                                        "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/16/allOf/0"
                                                     },
                                                     {
                                                         "$ref": "#/allOf/0/properties/image/properties/thumbnail/allOf/0"

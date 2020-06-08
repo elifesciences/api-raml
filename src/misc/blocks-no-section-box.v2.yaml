@@ -2,8 +2,10 @@ oneOf:
   - $ref: ../blocks/button.v1.yaml
   - $ref: ../blocks/code.v1.yaml
   - $ref: ../blocks/excerpt.v2.yaml
+  - $ref: ../blocks/figshare.v1.yaml
   - $ref: ../blocks/figure.v2.yaml
   - $ref: ../blocks/image.v1.yaml
+  - $ref: ../blocks/google-map.v1.yaml
   - $ref: ../blocks/list.v2.yaml
   - $ref: ../blocks/mathml.v1.yaml
   - $ref: ../blocks/paragraph.v1.yaml
