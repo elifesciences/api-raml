@@ -1,0 +1,19 @@
+$schema: http://json-schema.org/draft-04/schema#
+title: Google map
+type: object
+allOf:
+  - properties:
+        type:
+            type: string
+            enum:
+              - google-map
+        id:
+            title: Google map ID
+            type: string
+        title:
+            title: Title
+            type: string
+    required:
+      - type
+      - id
+      - title
