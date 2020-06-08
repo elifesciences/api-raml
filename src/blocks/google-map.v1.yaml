@@ -2,7 +2,6 @@ $schema: http://json-schema.org/draft-04/schema#
 title: Google map
 type: object
 allOf:
-  - $ref: ../misc/caption.v1.yaml
   - properties:
         type:
             type: string
@@ -11,6 +10,10 @@ allOf:
         id:
             title: Google map ID
             type: string
+        title:
+            title: Title
+            type: string
     required:
       - type
       - id
+      - title

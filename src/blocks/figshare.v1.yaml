@@ -2,7 +2,6 @@ $schema: http://json-schema.org/draft-04/schema#
 title: Figshare
 type: object
 allOf:
-  - $ref: ../misc/caption.v1.yaml
   - properties:
         type:
             type: string
@@ -10,6 +9,9 @@ allOf:
               - figshare
         id:
             title: Figshare ID
+            type: string
+        title:
+            title: Title
             type: string
         width:
             title: Width
@@ -22,5 +24,6 @@ allOf:
     required:
       - type
       - id
+      - title
       - width
       - height
