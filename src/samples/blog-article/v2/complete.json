@@ -142,6 +142,11 @@
             "accountLabel": "eLife - the journal",
             "conversation": false,
             "mediaCard": true
+        },
+        {
+            "type": "google-map",
+            "id": "13cEQIsP3F9-iEVDDgradCs2Z9F-ODLyx",
+            "title": "eLife Community Ambassadors 2019"
         }
     ],
     "subjects": [
