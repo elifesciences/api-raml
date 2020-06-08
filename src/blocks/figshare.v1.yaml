@@ -1,0 +1,26 @@
+$schema: http://json-schema.org/draft-04/schema#
+title: Figshare
+type: object
+allOf:
+  - $ref: ../misc/caption.v1.yaml
+  - properties:
+        type:
+            type: string
+            enum:
+              - figshare
+        id:
+            title: Figshare ID
+            type: string
+        width:
+            title: Width
+            type: integer
+            minimum: 1
+        height:
+            title: Height
+            type: integer
+            minimum: 1
+    required:
+      - type
+      - id
+      - width
+      - height
