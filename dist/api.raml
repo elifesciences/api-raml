@@ -1302,35 +1302,6 @@ traits:
                                     displayName: Complete
                                     value: !include samples/labs-post/v2/complete.json
 
-/medium-articles:
-    (deprecated):
-    type: collection
-    description: |
-        Medium articles
-    get:
-        description: |
-            Get a list of Medium articles, sorted by publication date.
-        is:
-          - paged: { resources: Articles }
-        responses:
-            200:
-                description: |
-                    List of Medium articles, sorted by publication date.
-                body:
-                    application/vnd.elife.medium-article-list+json;version=1:
-                        schema: !include model/medium-article-list.v1.json
-                        examples:
-                            paginated:
-                                displayName: First page
-                                description: |
-                                    List is split over two pages.
-                                value: !include samples/medium-article-list/v1/first-page.json
-                            empty:
-                                displayName: Empty list
-                                description: |
-                                    Demonstration of the list being empty (the first page will always return a valid result).
-                                value: !include samples/medium-article-list/v1/empty.json
-
 /metrics/{type}/{id}/citations:
     type: collection
     description: |
