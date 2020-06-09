@@ -4,6 +4,8 @@ type: object
 allOf:
   - $ref: ../snippets/article.v1.yaml
   - properties:
+        abstract:
+            $ref: abstract.v1.yaml
         xml:
             type: string
             format: uri

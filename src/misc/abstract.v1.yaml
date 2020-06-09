@@ -1,0 +1,11 @@
+$schema: http://json-schema.org/draft-04/schema#
+title: Abstract
+type: object
+properties:
+    content:
+        type: array
+        items:
+            $ref: ../blocks/paragraph.v1.yaml
+        minItems: 1
+required:
+  - content
