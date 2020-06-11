@@ -239,7 +239,18 @@
                                                                             "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/12/allOf/0"
                                                                         },
                                                                         {
-                                                                            "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/11/allOf/1"
+                                                                            "$schema": "http://json-schema.org/draft-04/schema#",
+                                                                            "title": "Has attribution",
+                                                                            "type": "object",
+                                                                            "properties": {
+                                                                                "attribution": {
+                                                                                    "title": "Attribution",
+                                                                                    "type": "array",
+                                                                                    "items": {
+                                                                                        "type": "string"
+                                                                                    }
+                                                                                }
+                                                                            }
                                                                         },
                                                                         {
                                                                             "properties": {
@@ -368,7 +379,7 @@
                                                                 {
                                                                     "properties": {
                                                                         "doi": {
-                                                                            "$ref": "#/allOf/1/properties/relatedContent/items/oneOf/0/allOf/0/properties/doi"
+                                                                            "$ref": "#/allOf/1/properties/relatedContent/items/oneOf/1/allOf/0/properties/doi"
                                                                         },
                                                                         "label": {
                                                                             "title": "Label",
@@ -387,7 +398,7 @@
                                                                                         "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/12/allOf/0"
                                                                                     },
                                                                                     {
-                                                                                        "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/11/allOf/1"
+                                                                                        "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/2/properties/content/items/oneOf/4/allOf/1"
                                                                                     },
                                                                                     {
                                                                                         "properties": {
@@ -395,7 +406,7 @@
                                                                                                 "$ref": "#/allOf/1/properties/content/items/oneOf/1/properties/id"
                                                                                             },
                                                                                             "doi": {
-                                                                                                "$ref": "#/allOf/1/properties/relatedContent/items/oneOf/0/allOf/0/properties/doi"
+                                                                                                "$ref": "#/allOf/1/properties/relatedContent/items/oneOf/1/allOf/0/properties/doi"
                                                                                             },
                                                                                             "label": {
                                                                                                 "title": "Label",
@@ -566,18 +577,7 @@
                                                         "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/12/allOf/0"
                                                     },
                                                     {
-                                                        "$schema": "http://json-schema.org/draft-04/schema#",
-                                                        "title": "Has attribution",
-                                                        "type": "object",
-                                                        "properties": {
-                                                            "attribution": {
-                                                                "title": "Attribution",
-                                                                "type": "array",
-                                                                "items": {
-                                                                    "type": "string"
-                                                                }
-                                                            }
-                                                        }
+                                                        "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/2/properties/content/items/oneOf/4/allOf/1"
                                                     },
                                                     {
                                                         "properties": {
@@ -755,7 +755,7 @@
                                                 ]
                                             },
                                             "doi": {
-                                                "$ref": "#/allOf/1/properties/relatedContent/items/oneOf/0/allOf/0/properties/doi"
+                                                "$ref": "#/allOf/1/properties/relatedContent/items/oneOf/1/allOf/0/properties/doi"
                                             },
                                             "id": {
                                                 "$ref": "#/allOf/1/properties/content/items/oneOf/1/properties/id"
@@ -841,6 +841,26 @@
                             {
                                 "$schema": "http://json-schema.org/draft-04/schema#",
                                 "title": "Article PoA snippet",
+                                "type": "object",
+                                "allOf": [
+                                    {
+                                        "$ref": "#/allOf/1/properties/relatedContent/items/oneOf/1/allOf/0"
+                                    },
+                                    {
+                                        "properties": {
+                                            "status": {
+                                                "type": "string",
+                                                "enum": [
+                                                    "poa"
+                                                ]
+                                            }
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "title": "Article VoR snippet",
                                 "type": "object",
                                 "allOf": [
                                     {
@@ -938,21 +958,6 @@
                                                     "minLength": 1
                                                 },
                                                 "uniqueItems": true
-                                            },
-                                            "abstract": {
-                                                "type": "object",
-                                                "properties": {
-                                                    "content": {
-                                                        "type": "array",
-                                                        "items": {
-                                                            "$ref": "#/allOf/1/properties/about/items"
-                                                        },
-                                                        "minItems": 1
-                                                    }
-                                                },
-                                                "required": [
-                                                    "content"
-                                                ]
                                             }
                                         },
                                         "required": [
@@ -972,26 +977,6 @@
                                             "status": {
                                                 "type": "string",
                                                 "enum": [
-                                                    "poa"
-                                                ]
-                                            }
-                                        }
-                                    }
-                                ]
-                            },
-                            {
-                                "$schema": "http://json-schema.org/draft-04/schema#",
-                                "title": "Article VoR snippet",
-                                "type": "object",
-                                "allOf": [
-                                    {
-                                        "$ref": "#/allOf/1/properties/relatedContent/items/oneOf/0/allOf/0"
-                                    },
-                                    {
-                                        "properties": {
-                                            "status": {
-                                                "type": "string",
-                                                "enum": [
                                                     "vor"
                                                 ]
                                             },
@@ -1003,14 +988,6 @@
                                                 "type": "string",
                                                 "format": "uri"
                                             },
-                                            "abstract": {
-                                                "type": "object",
-                                                "properties": {
-                                                    "doi": {
-                                                        "$ref": "#/allOf/1/properties/relatedContent/items/oneOf/0/allOf/0/properties/doi"
-                                                    }
-                                                }
-                                            },
                                             "image": {
                                                 "type": "object",
                                                 "properties": {
@@ -1020,7 +997,7 @@
                                                         "type": "object",
                                                         "allOf": [
                                                             {
-                                                                "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/11/allOf/1"
+                                                                "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/2/properties/content/items/oneOf/4/allOf/1"
                                                             },
                                                             {
                                                                 "properties": {
