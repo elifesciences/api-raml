@@ -24,20 +24,64 @@
                 },
                 "published": {
                     "title": "Publication date (UTC)",
+                    "$ref": "#/allOf/0/properties/updated"
+                },
+                "updated": {
+                    "title": "Updated date (UTC)",
                     "$schema": "http://json-schema.org/draft-04/schema#",
                     "description": "eLife restriction over the ISO8601 standard\n\nFor example:\n    - 2016-09-16T12:34:56Z\n",
                     "type": "string",
                     "format": "date-time",
                     "pattern": "^....-..-..T..:..:..Z$"
                 },
-                "updated": {
-                    "title": "Updated date (UTC)",
-                    "$ref": "#/allOf/0/properties/published"
-                },
                 "image": {
                     "type": "object",
                     "properties": {
                         "thumbnail": {
+                            "$ref": "#/allOf/1/properties/image/properties/banner"
+                        }
+                    },
+                    "required": [
+                        "thumbnail"
+                    ]
+                },
+                "subjects": {
+                    "description": "Promotional collection subjects",
+                    "type": "array",
+                    "items": {
+                        "$schema": "http://json-schema.org/draft-04/schema#",
+                        "title": "Subject snippet",
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "$ref": "#/allOf/0/properties/id"
+                            },
+                            "name": {
+                                "description": "Name",
+                                "type": "string",
+                                "minLength": 1
+                            }
+                        },
+                        "required": [
+                            "id",
+                            "name"
+                        ]
+                    }
+                }
+            },
+            "required": [
+                "id",
+                "title",
+                "published",
+                "image"
+            ]
+        },
+        {
+            "properties": {
+                "image": {
+                    "type": "object",
+                    "properties": {
+                        "banner": {
                             "$schema": "http://json-schema.org/draft-04/schema#",
                             "title": "IIIF image",
                             "type": "object",
@@ -145,50 +189,6 @@
                         }
                     },
                     "required": [
-                        "thumbnail"
-                    ]
-                },
-                "subjects": {
-                    "description": "Promotional collection subjects",
-                    "type": "array",
-                    "items": {
-                        "$schema": "http://json-schema.org/draft-04/schema#",
-                        "title": "Subject snippet",
-                        "type": "object",
-                        "properties": {
-                            "id": {
-                                "$ref": "#/allOf/0/properties/id"
-                            },
-                            "name": {
-                                "description": "Name",
-                                "type": "string",
-                                "minLength": 1
-                            }
-                        },
-                        "required": [
-                            "id",
-                            "name"
-                        ]
-                    }
-                }
-            },
-            "required": [
-                "id",
-                "title",
-                "published",
-                "image"
-            ]
-        },
-        {
-            "properties": {
-                "image": {
-                    "type": "object",
-                    "properties": {
-                        "banner": {
-                            "$ref": "#/allOf/0/properties/image/properties/thumbnail"
-                        }
-                    },
-                    "required": [
                         "banner"
                     ]
                 },
@@ -266,7 +266,7 @@
                                         ]
                                     },
                                     "image": {
-                                        "$ref": "#/allOf/0/properties/image/properties/thumbnail"
+                                        "$ref": "#/allOf/1/properties/image/properties/banner"
                                     }
                                 },
                                 "required": [
@@ -391,15 +391,15 @@
                                             },
                                             "published": {
                                                 "description": "Date and time this article was first published.\nNot present if 'stage' is 'preview' and version is '1'.\n",
-                                                "$ref": "#/allOf/0/properties/published"
+                                                "$ref": "#/allOf/0/properties/updated"
                                             },
                                             "versionDate": {
                                                 "description": "Date and time this version of the article was published.\nOnly present if 'stage' is 'published'.\n",
-                                                "$ref": "#/allOf/0/properties/published"
+                                                "$ref": "#/allOf/0/properties/updated"
                                             },
                                             "statusDate": {
                                                 "description": "Date and time this article transitioned to current status.\nNot present if 'stage' is 'preview' and version is '1'.\n",
-                                                "$ref": "#/allOf/0/properties/published"
+                                                "$ref": "#/allOf/0/properties/updated"
                                             },
                                             "volume": {
                                                 "type": "integer",
@@ -427,21 +427,6 @@
                                                     "minLength": 1
                                                 },
                                                 "uniqueItems": true
-                                            },
-                                            "abstract": {
-                                                "type": "object",
-                                                "properties": {
-                                                    "content": {
-                                                        "type": "array",
-                                                        "items": {
-                                                            "$ref": "#/allOf/1/properties/summary/items"
-                                                        },
-                                                        "minItems": 1
-                                                    }
-                                                },
-                                                "required": [
-                                                    "content"
-                                                ]
                                             }
                                         },
                                         "required": [
@@ -472,19 +457,11 @@
                                                 "type": "string",
                                                 "format": "uri"
                                             },
-                                            "abstract": {
-                                                "type": "object",
-                                                "properties": {
-                                                    "doi": {
-                                                        "$ref": "#/allOf/1/properties/content/items/oneOf/1/allOf/0/properties/doi"
-                                                    }
-                                                }
-                                            },
                                             "image": {
                                                 "type": "object",
                                                 "properties": {
                                                     "thumbnail": {
-                                                        "$ref": "#/allOf/0/properties/image/properties/thumbnail"
+                                                        "$ref": "#/allOf/1/properties/image/properties/banner"
                                                     }
                                                 },
                                                 "required": [
@@ -535,11 +512,11 @@
                                                             },
                                                             "published": {
                                                                 "title": "Publication date (UTC)",
-                                                                "$ref": "#/allOf/0/properties/published"
+                                                                "$ref": "#/allOf/0/properties/updated"
                                                             },
                                                             "updated": {
                                                                 "title": "Updated date (UTC)",
-                                                                "$ref": "#/allOf/0/properties/published"
+                                                                "$ref": "#/allOf/0/properties/updated"
                                                             },
                                                             "subjects": {
                                                                 "description": "Article subjects",
@@ -595,17 +572,17 @@
                                                             },
                                                             "published": {
                                                                 "title": "Publication date (UTC)",
-                                                                "$ref": "#/allOf/0/properties/published"
+                                                                "$ref": "#/allOf/0/properties/updated"
                                                             },
                                                             "updated": {
                                                                 "title": "Updated date (UTC)",
-                                                                "$ref": "#/allOf/0/properties/published"
+                                                                "$ref": "#/allOf/0/properties/updated"
                                                             },
                                                             "image": {
                                                                 "type": "object",
                                                                 "properties": {
                                                                     "thumbnail": {
-                                                                        "$ref": "#/allOf/0/properties/image/properties/thumbnail"
+                                                                        "$ref": "#/allOf/1/properties/image/properties/banner"
                                                                     }
                                                                 },
                                                                 "required": [
@@ -660,19 +637,19 @@
                                                             },
                                                             "published": {
                                                                 "title": "Publication date (UTC)",
-                                                                "$ref": "#/allOf/0/properties/published"
+                                                                "$ref": "#/allOf/0/properties/updated"
                                                             },
                                                             "updated": {
                                                                 "title": "Updated date (UTC)",
-                                                                "$ref": "#/allOf/0/properties/published"
+                                                                "$ref": "#/allOf/0/properties/updated"
                                                             },
                                                             "starts": {
                                                                 "description": "Start date/time (UTC)",
-                                                                "$ref": "#/allOf/0/properties/published"
+                                                                "$ref": "#/allOf/0/properties/updated"
                                                             },
                                                             "ends": {
                                                                 "description": "Ends date/time (UTC)",
-                                                                "$ref": "#/allOf/0/properties/published"
+                                                                "$ref": "#/allOf/0/properties/updated"
                                                             },
                                                             "timezone": {
                                                                 "description": "Timezone (from the IANA time zone database) for non-online events",
@@ -730,17 +707,17 @@
                                                             },
                                                             "published": {
                                                                 "title": "Publication date (UTC)",
-                                                                "$ref": "#/allOf/0/properties/published"
+                                                                "$ref": "#/allOf/0/properties/updated"
                                                             },
                                                             "updated": {
                                                                 "title": "Updated date (UTC)",
-                                                                "$ref": "#/allOf/0/properties/published"
+                                                                "$ref": "#/allOf/0/properties/updated"
                                                             },
                                                             "image": {
                                                                 "type": "object",
                                                                 "properties": {
                                                                     "thumbnail": {
-                                                                        "$ref": "#/allOf/0/properties/image/properties/thumbnail"
+                                                                        "$ref": "#/allOf/1/properties/image/properties/banner"
                                                                     }
                                                                 },
                                                                 "required": [
@@ -797,17 +774,17 @@
                             },
                             "published": {
                                 "title": "Publication date (UTC)",
-                                "$ref": "#/allOf/0/properties/published"
+                                "$ref": "#/allOf/0/properties/updated"
                             },
                             "updated": {
                                 "title": "Updated date (UTC)",
-                                "$ref": "#/allOf/0/properties/published"
+                                "$ref": "#/allOf/0/properties/updated"
                             },
                             "image": {
                                 "type": "object",
                                 "properties": {
                                     "thumbnail": {
-                                        "$ref": "#/allOf/0/properties/image/properties/thumbnail"
+                                        "$ref": "#/allOf/1/properties/image/properties/banner"
                                     }
                                 },
                                 "required": [

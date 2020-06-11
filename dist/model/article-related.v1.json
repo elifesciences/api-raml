@@ -10,6 +10,26 @@
                 "type": "object",
                 "allOf": [
                     {
+                        "$ref": "#/items/oneOf/1/allOf/0"
+                    },
+                    {
+                        "properties": {
+                            "status": {
+                                "type": "string",
+                                "enum": [
+                                    "poa"
+                                ]
+                            }
+                        }
+                    }
+                ]
+            },
+            {
+                "$schema": "http://json-schema.org/draft-04/schema#",
+                "title": "Article VoR snippet",
+                "type": "object",
+                "allOf": [
+                    {
                         "$schema": "http://json-schema.org/draft-04/schema#",
                         "title": "Article snippet",
                         "type": "object",
@@ -79,11 +99,11 @@
                             },
                             "versionDate": {
                                 "description": "Date and time this version of the article was published.\nOnly present if 'stage' is 'published'.\n",
-                                "$ref": "#/items/oneOf/0/allOf/0/properties/published"
+                                "$ref": "#/items/oneOf/1/allOf/0/properties/published"
                             },
                             "statusDate": {
                                 "description": "Date and time this article transitioned to current status.\nNot present if 'stage' is 'preview' and version is '1'.\n",
-                                "$ref": "#/items/oneOf/0/allOf/0/properties/published"
+                                "$ref": "#/items/oneOf/1/allOf/0/properties/published"
                             },
                             "volume": {
                                 "type": "integer",
@@ -105,7 +125,7 @@
                                     "type": "object",
                                     "properties": {
                                         "id": {
-                                            "$ref": "#/items/oneOf/0/allOf/0/properties/id"
+                                            "$ref": "#/items/oneOf/1/allOf/0/properties/id"
                                         },
                                         "name": {
                                             "description": "Name",
@@ -127,39 +147,6 @@
                                     "minLength": 1
                                 },
                                 "uniqueItems": true
-                            },
-                            "abstract": {
-                                "type": "object",
-                                "properties": {
-                                    "content": {
-                                        "type": "array",
-                                        "items": {
-                                            "$schema": "http://json-schema.org/draft-04/schema#",
-                                            "title": "Paragraph",
-                                            "type": "object",
-                                            "properties": {
-                                                "type": {
-                                                    "type": "string",
-                                                    "enum": [
-                                                        "paragraph"
-                                                    ]
-                                                },
-                                                "text": {
-                                                    "title": "Text",
-                                                    "type": "string"
-                                                }
-                                            },
-                                            "required": [
-                                                "type",
-                                                "text"
-                                            ]
-                                        },
-                                        "minItems": 1
-                                    }
-                                },
-                                "required": [
-                                    "content"
-                                ]
                             }
                         },
                         "required": [
@@ -179,26 +166,6 @@
                             "status": {
                                 "type": "string",
                                 "enum": [
-                                    "poa"
-                                ]
-                            }
-                        }
-                    }
-                ]
-            },
-            {
-                "$schema": "http://json-schema.org/draft-04/schema#",
-                "title": "Article VoR snippet",
-                "type": "object",
-                "allOf": [
-                    {
-                        "$ref": "#/items/oneOf/0/allOf/0"
-                    },
-                    {
-                        "properties": {
-                            "status": {
-                                "type": "string",
-                                "enum": [
                                     "vor"
                                 ]
                             },
@@ -209,14 +176,6 @@
                             "figuresPdf": {
                                 "type": "string",
                                 "format": "uri"
-                            },
-                            "abstract": {
-                                "type": "object",
-                                "properties": {
-                                    "doi": {
-                                        "$ref": "#/items/oneOf/0/allOf/0/properties/doi"
-                                    }
-                                }
                             },
                             "image": {
                                 "type": "object",
