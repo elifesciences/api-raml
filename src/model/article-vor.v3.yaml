@@ -5,6 +5,11 @@ allOf:
   - $ref: ../snippets/article-vor.v1.yaml
   - $ref: ../misc/article.v2.yaml
   - properties:
+        abstract:
+            type: object
+            properties:
+                doi:
+                    $ref: ../misc/doi.v1.yaml
         keywords:
             type: array
             items:

@@ -80,16 +80,6 @@ properties:
             type: string
             minLength: 1
         uniqueItems: true
-    abstract:
-        type: object
-        properties:
-            content:
-                type: array
-                items:
-                    $ref: ../blocks/paragraph.v1.yaml
-                minItems: 1
-        required:
-          - content
 required:
   - status
   - id
