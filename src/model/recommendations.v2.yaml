@@ -11,8 +11,17 @@ properties:
         type: array
         items:
             oneOf:
-              - $ref: ../snippets/article-poa.v2.yaml
-              - $ref: ../snippets/article-vor.v2.yaml
+              - allOf:
+                  - properties:
+                      abstract:
+                          $ref: ../misc/abstract.v2.yaml
+                  - oneOf:
+                      - $ref: ../snippets/article-poa.v1.yaml
+                      - allOf:
+                          - properties:
+                              doi:
+                                  $ref: ../misc/doi.v1.yaml
+                          - $ref: ../snippets/article-vor.v1.yaml
               - allOf:
                   - type: object
                     required:

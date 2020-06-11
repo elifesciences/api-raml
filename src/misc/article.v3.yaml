@@ -2,8 +2,10 @@ $schema: http://json-schema.org/draft-04/schema#
 title: Article
 type: object
 allOf:
-  - $ref: ../snippets/article.v2.yaml
+  - $ref: ../snippets/article.v1.yaml
   - properties:
+        abstract:
+            $ref: abstract.v2.yaml
         xml:
             type: string
             format: uri

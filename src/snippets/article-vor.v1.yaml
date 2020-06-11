@@ -14,11 +14,6 @@ allOf:
         figuresPdf:
             type: string
             format: uri
-        abstract:
-            type: object
-            properties:
-                doi:
-                    $ref: ../misc/doi.v1.yaml
         image:
             type: object
             properties:
