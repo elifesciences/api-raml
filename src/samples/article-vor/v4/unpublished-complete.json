@@ -325,6 +325,67 @@
             {
                 "type": "paragraph",
                 "text": "<i>Homo naledi</i> is a previously-unknown species of extinct hominin discovered within the Dinaledi Chamber of the Rising Star cave system, Cradle of Humankind, South Africa. This species is characterized by body mass and stature similar to small-bodied human populations but a small endocranial volume similar to australopiths. Cranial morphology of <i>H. naledi</i> is unique, but most similar to early <i>Homo</i> species including <i>Homo erectus</i>, <i>Homo habilis</i> or <i>Homo rudolfensis</i>. While primitive, the dentition is generally small and simple in occlusal morphology. <i>H. naledi</i> has humanlike manipulatory adaptations of the hand and wrist. It also exhibits a humanlike foot and lower limb. These humanlike aspects are contrasted in the postcrania with a more primitive or australopith-like trunk, shoulder, pelvis and proximal femur. Representing at least 15 individuals with most skeletal elements repeated multiple times, this is the largest assemblage of a single species of hominins yet discovered in Africa."
+                "text": "This is an example of an article with a structured abstract."
+            },
+            {
+                "type": "section",
+                "title": "Background",
+                "content": [
+                    {
+                        "type": "paragraph",
+                        "text": "Previous works suggested that neutralizing intratumoral lactic acidosis combined with glucose deprivation may deliver an effective approach to control tumor. We did a pilot clinical investigation, including a nonrandomized (57 patients with large HCC) and a randomized controlled (20 patients with large HCC) study."
+                    }
+                ]
+            },
+            {
+                "type": "section",
+                "title": "Methods",
+                "content": [
+                    {
+                        "type": "paragraph",
+                        "text": "The patients were treated with transarterial chemoembolization (TACE) with or without bicarbonate local infusion into tumor."
+                    }
+                ]
+            },
+            {
+                "type": "section",
+                "title": "Results",
+                "content": [
+                    {
+                        "type": "paragraph",
+                        "text": "In the nonrandomized controlled study, geometric mean of viable tumor residues (VTR) in TACE with bicarbonate was 6.4-fold lower than that in TACE without bicarbonate (7.1% [95% CI: 4.6%–10.9%] vs 45.6% [28.9%–72.0%]; p<0.0001). This difference was recapitulated by a subsequent randomized controlled study. TACE combined with bicarbonate yielded a 100% objective response rate (ORR), whereas the ORR treated with TACE alone was 44.4% (nonrandomized) and 63.6% (randomized). The survival data suggested that bicarbonate may bring survival benefit."
+                    }
+                ]
+            },
+            {
+                "type": "section",
+                "title": "Conclusions",
+                "content": [
+                    {
+                        "type": "paragraph",
+                        "text": "Bicarbonate markedly enhances the anticancer activity of TACE."
+                    }
+                ]
+            },
+            {
+                "type": "section",
+                "title": "Funding",
+                "content": [
+                    {
+                        "type": "paragraph",
+                        "text": "Funded by National Natural Science Foundation of China."
+                    }
+                ]
+            },
+            {
+                "type": "section",
+                "title": "Clinical trial number",
+                "content": [
+                    {
+                        "type": "paragraph",
+                        "text": "<a href=\"http://www.chictr.org.cn/showprojen.aspx?proj=9639\" data-behaviour-initialised=\"true\">ChiCTR-IOR-14005319</a>."
+                    }
+                ]
             }
         ]
     },
