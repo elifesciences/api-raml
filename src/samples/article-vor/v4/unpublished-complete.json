@@ -455,6 +455,9 @@
                             "image": {
                                 "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif",
                                 "alt": "",
+                                "attribution": [
+                                    "By some person."
+                                ],
                                 "source": {
                                     "mediaType": "image/jpeg",
                                     "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif/full/full/0/default.jpg",
@@ -465,9 +468,6 @@
                                     "height": 4714
                                 }
                             },
-                            "attribution": [
-                                "By some person."
-                            ],
                             "sourceData": [
                                 {
                                     "doi": "10.7554/eLife.00011.005",
