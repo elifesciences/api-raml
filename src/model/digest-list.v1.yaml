@@ -1,0 +1,17 @@
+$schema: http://json-schema.org/draft-04/schema#
+title: Digest list
+type: object
+properties:
+    total:
+        title: Total number of digests
+        type: integer
+        minimum: 0
+    items:
+        title: Digests
+        type: array
+        items:
+            $ref: ../snippets/digest.v1.yaml
+        uniqueItems: true
+required:
+  - total
+  - items

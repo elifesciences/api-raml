@@ -4,11 +4,11 @@
         {
             "title": "Media coverage: Slime can see",
             "image": {
-                "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif",
+                "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif",
                 "alt": "",
                 "source": {
                     "mediaType": "image/jpeg",
-                    "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif/full/full/0/default.jpg",
+                    "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif/full/full/0/default.jpg",
                     "filename": "an-image.jpg"
                 },
                 "size": {
@@ -33,11 +33,11 @@
         {
             "title": "<i>Homo naledi</i>",
             "image": {
-                "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif",
+                "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif",
                 "alt": "",
                 "source": {
                     "mediaType": "image/jpeg",
-                    "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif/full/full/0/default.jpg",
+                    "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif/full/full/0/default.jpg",
                     "filename": "an-image.jpg"
                 },
                 "size": {
@@ -51,7 +51,7 @@
                 "version": 1,
                 "type": "research-article",
                 "doi": "10.7554/eLife.09560",
-                "authorLine": "Lee R Berger et al",
+                "authorLine": "Lee R Berger et al.",
                 "title": "<i>Homo naledi</i>, a new species of the genus <i>Homo</i> from the Dinaledi Chamber, South Africa",
                 "stage": "published",
                 "published": "2015-09-10T00:00:00Z",
@@ -68,11 +68,11 @@
                 "impactStatement": "A new hominin species has been unearthed in the Dinaledi Chamber of the Rising Star cave system in the largest assemblage of a single species of hominins yet discovered in Africa.",
                 "image": {
                     "thumbnail": {
-                        "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif",
+                        "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif",
                         "alt": "",
                         "source": {
                             "mediaType": "image/jpeg",
-                            "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif/full/full/0/default.jpg",
+                            "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif/full/full/0/default.jpg",
                             "filename": "an-image.jpg"
                         },
                         "size": {

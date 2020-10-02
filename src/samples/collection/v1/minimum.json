@@ -4,11 +4,14 @@
     "published": "2015-09-16T11:19:26Z",
     "image": {
         "banner": {
-            "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif",
+            "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif",
             "alt": "",
+            "attribution": [
+                "By some person."
+            ],
             "source": {
                 "mediaType": "image/jpeg",
-                "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif/full/full/0/default.jpg",
+                "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif/full/full/0/default.jpg",
                 "filename": "an-image.jpg"
             },
             "size": {
@@ -17,11 +20,11 @@
             }
         },
         "thumbnail": {
-            "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif",
+            "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif",
             "alt": "",
             "source": {
                 "mediaType": "image/jpeg",
-                "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif/full/full/0/default.jpg",
+                "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif/full/full/0/default.jpg",
                 "filename": "an-image.jpg"
             },
             "size": {
@@ -32,7 +35,10 @@
     },
     "selectedCurator": {
         "id": "pjha",
-        "type": "senior-editor",
+        "type": {
+            "id": "senior-editor",
+            "label": "Senior Editor"
+        },
         "name": {
             "preferred": "Prabhat Jha",
             "index": "Jha, Prabhat"
@@ -41,7 +47,10 @@
     "curators": [
         {
             "id": "pjha",
-            "type": "senior-editor",
+            "type": {
+                "id": "senior-editor",
+                "label": "Senior Editor"
+            },
             "name": {
                 "preferred": "Prabhat Jha",
                 "index": "Jha, Prabhat"
@@ -55,7 +64,7 @@
             "id": "14107",
             "version": 1,
             "doi": "10.7554/eLife.14107",
-            "authorLine": "Yongjian Huang et al",
+            "authorLine": "Yongjian Huang et al.",
             "title": "Molecular basis for multimerization in the activation of the epidermal growth factor",
             "stage": "published",
             "published": "2016-03-28T00:00:00Z",

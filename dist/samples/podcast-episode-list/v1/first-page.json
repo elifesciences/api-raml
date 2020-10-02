@@ -8,11 +8,11 @@
             "updated": "2016-05-28T13:19:42Z",
             "image": {
                 "thumbnail": {
-                    "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif",
+                    "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif",
                     "alt": "",
                     "source": {
                         "mediaType": "image/jpeg",
-                        "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif/full/full/0/default.jpg",
+                        "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif/full/full/0/default.jpg",
                         "filename": "an-image.jpg"
                     },
                     "size": {
@@ -38,11 +38,11 @@
             "published": "2016-07-01T08:30:15Z",
             "image": {
                 "thumbnail": {
-                    "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif",
+                    "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif",
                     "alt": "",
                     "source": {
                         "mediaType": "image/jpeg",
-                        "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif/full/full/0/default.jpg",
+                        "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif/full/full/0/default.jpg",
                         "filename": "an-image.jpg"
                     },
                     "size": {
@@ -55,16 +55,6 @@
                 {
                     "mediaType": "audio/mpeg",
                     "uri": "https://nakeddiscovery.com/scripts/mp3s/audio/eLife_Podcast_16.06.mp3"
-                }
-            ],
-            "subjects": [
-                {
-                    "id": "biochemistry",
-                    "name": "Biochemistry"
-                },
-                {
-                    "id": "ecology",
-                    "name": "Ecology"
                 }
             ]
         }

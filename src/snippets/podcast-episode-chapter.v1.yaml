@@ -9,6 +9,9 @@ properties:
     title:
         title: Chapter title
         type: string
+    longTitle:
+        title: Long chapter title
+        type: string
     time:
         title: Number of seconds into the episode that the chapter begins
         type: integer

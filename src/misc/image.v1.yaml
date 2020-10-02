@@ -1,54 +1,56 @@
 $schema: http://json-schema.org/draft-04/schema#
 title: IIIF image
 type: object
-properties:
-    uri:
-        title: IIIF Image
-        type: string
-        format: uri
-        pattern: ^https://
-    alt:
-        title: Alternative text
-        type: string
-    source:
-        $ref: file.v1.yaml
-    size:
-        type: object
-        properties:
-            width:
-                type: integer
-                minimum: 1
-            height:
-                type: integer
-                minimum: 1
-        required:
-          - width
-          - height
-    focalPoint:
-        type: object
-        title: Focal point
-        description: |
-            Point on the image that is considered to be the focal point of the image.
+allOf:
+  - $ref: attribution.v1.yaml
+  - properties:
+        uri:
+            title: IIIF Image
+            type: string
+            format: uri
+            pattern: ^https://[^/]+(?:/[^?#\[\]@]+)?/[^/?#\[\]@]+$ # http://iiif.io/api/image/2.1/#uri-encoding-and-decoding, with support for percent encoding
+        alt:
+            title: Alternative text
+            type: string
+        source:
+            $ref: file.v1.yaml
+        size:
+            type: object
+            properties:
+                width:
+                    type: integer
+                    minimum: 1
+                height:
+                    type: integer
+                    minimum: 1
+            required:
+              - width
+              - height
+        focalPoint:
+            type: object
+            title: Focal point
+            description: |
+                Point on the image that is considered to be the focal point of the image.
 
-            If not present, 50 can be used for both `x` and `y`.
-        properties:
-            x:
-                description: |
-                    Percentage on the horizontal axis.
-                type: integer
-                minimum: 0
-                maximum: 100
-            y:
-                description: |
-                    Percentage on the vertical axis.
-                type: integer
-                minimum: 0
-                maximum: 100
-        required:
-          - x
-          - y
-required:
-  - uri
-  - alt
-  - source
-  - size
+                If not present, 50 can be used for both `x` and `y`.
+            properties:
+                x:
+                    description: |
+                        Percentage on the horizontal axis.
+                    type: integer
+                    minimum: 0
+                    maximum: 100
+                y:
+                    description: |
+                        Percentage on the vertical axis.
+                    type: integer
+                    minimum: 0
+                    maximum: 100
+            required:
+              - x
+              - y
+    required:
+      - uri
+      - alt
+      - source
+      - size

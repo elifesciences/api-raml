@@ -1,0 +1,87 @@
+$schema: http://json-schema.org/draft-04/schema#
+title: Article
+type: object
+allOf:
+  - $ref: ../snippets/article.v1.yaml
+  - properties:
+        abstract:
+            $ref: abstract.v2.yaml
+        xml:
+            type: string
+            format: uri
+        issue:
+            type: integer
+            minimum: 1
+        copyright:
+            allOf:
+              - type: object
+                properties:
+                    statement:
+                        type: string
+                        minLength: 1
+                required:
+                  - statement
+              - oneOf:
+                  - properties:
+                        license:
+                            type: string
+                            enum:
+                              - CC0-1.0
+                    required:
+                      - license
+                  - properties:
+                        license:
+                            type: string
+                            enum:
+                              - CC-BY-1.0
+                              - CC-BY-2.0
+                              - CC-BY-2.5
+                              - CC-BY-3.0
+                              - CC-BY-4.0
+                        holder:
+                            type: string
+                            minLength: 1
+                    required:
+                      - license
+                      - holder
+        authors:
+            type: array
+            items:
+                $ref: author.v1.yaml
+            minItems: 1
+        reviewers:
+            type: array
+            items:
+                $ref: reviewer.v1.yaml
+        dataSets:
+            type: object
+            properties:
+                availability:
+                    type: array
+                    items:
+                        $ref: ../blocks/paragraph.v1.yaml
+                generated:
+                    type: array
+                    items:
+                        $ref: ../misc/data-set.v1.yaml
+                used:
+                    type: array
+                    items:
+                        $ref: ../misc/data-set.v1.yaml
+        ethics:
+            type: array
+            items:
+                $ref: ../blocks/paragraph.v1.yaml
+            minItems: 1
+        funding:
+            $ref: ../misc/funding.v1.yaml
+        additionalFiles:
+            title: Additional files
+            type: array
+            items:
+                $ref: ../misc/asset-file.v2.yaml
+    required:
+      - copyright
+    dependencies:
+        authorLine: [authors]
+        authors: [authorLine]

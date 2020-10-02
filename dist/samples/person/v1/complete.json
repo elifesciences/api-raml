@@ -1,11 +1,52 @@
 {
     "id": "jsmith",
-    "type": "senior-editor",
+    "type": {
+        "id": "senior-editor",
+        "label": "Senior Editor"
+    },
     "name": {
         "preferred": "John Smith III",
         "index": "Smith, John, III"
     },
     "orcid": "0000-0002-1825-0097",
+    "affiliations": [
+        {
+            "name": [
+                "Evolutionary Studies Institute and Centre of Excellence in PalaeoSciences",
+                "University of the Witwatersrand"
+            ],
+            "address": {
+                "formatted": [
+                    "Johannesburg",
+                    "South Africa"
+                ],
+                "components": {
+                    "locality": [
+                        "Johannesburg"
+                    ],
+                    "country": "South Africa"
+                }
+            }
+        },
+        {
+            "name": [
+                "School of Geosciences",
+                "University of the Witwatersrand"
+            ],
+            "address": {
+                "formatted": [
+                    "Johannesburg",
+                    "South Africa"
+                ],
+                "components": {
+                    "locality": [
+                        "Johannesburg"
+                    ],
+                    "country": "South Africa"
+                }
+            }
+        }
+    ],
     "research": {
         "expertises": [
             {
@@ -38,11 +79,11 @@
     ],
     "competingInterests": "Integer at tempor diam, <i>tincidunt viverra nisi</i>. Nullam vitae nulla varius ipsum pretium condimentum in vitae mauris. Praesent convallis egestas velit, non aliquet turpis aliquam sed. Nunc sed mi elementum, mollis nibh et, interdum tellus. Fusce ornare leo diam, nec consectetur ligula aliquam sed. Phasellus metus lacus, blandit eget facilisis sit amet, efficitur sit amet tortor. Nam bibendum nunc in nisl blandit, scelerisque tristique orci fringilla. Integer egestas et odio sit amet porttitor. Nullam laoreet, orci at laoreet sagittis, tortor odio scelerisque ante, sed tempor lorem ante nec ex. Maecenas commodo diam sit amet justo hendrerit, sit amet interdum est efficitur. Morbi tristique lacinia mi in facilisis.",
     "image": {
-        "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif",
+        "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif",
         "alt": "",
         "source": {
             "mediaType": "image/jpeg",
-            "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif/full/full/0/default.jpg",
+            "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif/full/full/0/default.jpg",
             "filename": "an-image.jpg"
         },
         "size": {

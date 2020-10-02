@@ -1,0 +1,76 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "Profile list",
+    "type": "object",
+    "properties": {
+        "total": {
+            "title": "Total number of profiles",
+            "type": "integer",
+            "minimum": 0
+        },
+        "items": {
+            "title": "Profiles",
+            "type": "array",
+            "items": {
+                "$schema": "http://json-schema.org/draft-04/schema#",
+                "title": "Profile snippet",
+                "type": "object",
+                "allOf": [
+                    {
+                        "$schema": "http://json-schema.org/draft-04/schema#",
+                        "title": "Person",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "title": "Name",
+                                "type": "object",
+                                "properties": {
+                                    "preferred": {
+                                        "title": "Preferred name",
+                                        "description": "This is generally the name that is used by the person for English-language publications.\n\nFor example:\n  - Randy Schekman\n  - K. VijayRaghavan\n  - Li Wenhui\n",
+                                        "type": "string",
+                                        "minLength": 1
+                                    },
+                                    "index": {
+                                        "title": "Index name",
+                                        "description": "This is the name that should be used for indexing people.\n\nFor example:\n  - Schekman, Randy\n  - VijayRaghavan, Krishnaswamy\n  - Li Wenhui\n"
+                                    }
+                                },
+                                "required": [
+                                    "preferred",
+                                    "index"
+                                ]
+                            },
+                            "orcid": {
+                                "title": "ORCID",
+                                "type": "string",
+                                "pattern": "^[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{3}[0-9X]$"
+                            }
+                        },
+                        "required": [
+                            "name"
+                        ]
+                    },
+                    {
+                        "properties": {
+                            "id": {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "title": "eLife ID",
+                                "type": "string",
+                                "pattern": "^[a-z0-9-]+$"
+                            }
+                        },
+                        "required": [
+                            "id"
+                        ]
+                    }
+                ]
+            },
+            "uniqueItems": true
+        }
+    },
+    "required": [
+        "total",
+        "items"
+    ]
+}

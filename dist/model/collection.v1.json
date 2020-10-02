@@ -38,95 +38,7 @@
                     "type": "object",
                     "properties": {
                         "thumbnail": {
-                            "$schema": "http://json-schema.org/draft-04/schema#",
-                            "title": "IIIF image",
-                            "type": "object",
-                            "properties": {
-                                "uri": {
-                                    "title": "IIIF Image",
-                                    "type": "string",
-                                    "format": "uri",
-                                    "pattern": "^https://"
-                                },
-                                "alt": {
-                                    "title": "Alternative text",
-                                    "type": "string"
-                                },
-                                "source": {
-                                    "$schema": "http://json-schema.org/draft-04/schema#",
-                                    "title": "File",
-                                    "type": "object",
-                                    "properties": {
-                                        "mediaType": {
-                                            "$schema": "http://json-schema.org/draft-04/schema#",
-                                            "title": "Media type",
-                                            "type": "string",
-                                            "pattern": "^([a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+/[a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+)(; *[a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+=(([a-zA-Z0-9\\.\\-]+)|(\".+\")))*$"
-                                        },
-                                        "uri": {
-                                            "title": "Source data URI",
-                                            "type": "string",
-                                            "format": "uri"
-                                        },
-                                        "filename": {
-                                            "title": "Filename",
-                                            "type": "string",
-                                            "pattern": "^[A-Za-z0-9_. ()-]+\\.[a-z0-9]+$"
-                                        }
-                                    },
-                                    "required": [
-                                        "mediaType",
-                                        "uri",
-                                        "filename"
-                                    ]
-                                },
-                                "size": {
-                                    "type": "object",
-                                    "properties": {
-                                        "width": {
-                                            "type": "integer",
-                                            "minimum": 1
-                                        },
-                                        "height": {
-                                            "type": "integer",
-                                            "minimum": 1
-                                        }
-                                    },
-                                    "required": [
-                                        "width",
-                                        "height"
-                                    ]
-                                },
-                                "focalPoint": {
-                                    "type": "object",
-                                    "title": "Focal point",
-                                    "description": "Point on the image that is considered to be the focal point of the image.\n\nIf not present, 50 can be used for both `x` and `y`.\n",
-                                    "properties": {
-                                        "x": {
-                                            "description": "Percentage on the horizontal axis.\n",
-                                            "type": "integer",
-                                            "minimum": 0,
-                                            "maximum": 100
-                                        },
-                                        "y": {
-                                            "description": "Percentage on the vertical axis.\n",
-                                            "type": "integer",
-                                            "minimum": 0,
-                                            "maximum": 100
-                                        }
-                                    },
-                                    "required": [
-                                        "x",
-                                        "y"
-                                    ]
-                                }
-                            },
-                            "required": [
-                                "uri",
-                                "alt",
-                                "source",
-                                "size"
-                            ]
+                            "$ref": "#/allOf/1/properties/image/properties/banner"
                         }
                     },
                     "required": [
@@ -187,16 +99,118 @@
                     "type": "object",
                     "properties": {
                         "banner": {
-                            "$ref": "#/allOf/0/properties/image/properties/thumbnail"
+                            "$schema": "http://json-schema.org/draft-04/schema#",
+                            "title": "IIIF image",
+                            "type": "object",
+                            "allOf": [
+                                {
+                                    "$schema": "http://json-schema.org/draft-04/schema#",
+                                    "title": "Has attribution",
+                                    "type": "object",
+                                    "properties": {
+                                        "attribution": {
+                                            "title": "Attribution",
+                                            "type": "array",
+                                            "items": {
+                                                "type": "string"
+                                            }
+                                        }
+                                    }
+                                },
+                                {
+                                    "properties": {
+                                        "uri": {
+                                            "title": "IIIF Image",
+                                            "type": "string",
+                                            "format": "uri",
+                                            "pattern": "^https://[^/]+(?:/[^?#\\[\\]@]+)?/[^/?#\\[\\]@]+$"
+                                        },
+                                        "alt": {
+                                            "title": "Alternative text",
+                                            "type": "string"
+                                        },
+                                        "source": {
+                                            "$schema": "http://json-schema.org/draft-04/schema#",
+                                            "title": "File",
+                                            "type": "object",
+                                            "properties": {
+                                                "mediaType": {
+                                                    "$schema": "http://json-schema.org/draft-04/schema#",
+                                                    "title": "Media type",
+                                                    "type": "string",
+                                                    "pattern": "^([a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+/[a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+)(; *[a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+=(([a-zA-Z0-9\\.\\-]+)|(\".+\")))*$"
+                                                },
+                                                "uri": {
+                                                    "title": "Source data URI",
+                                                    "type": "string",
+                                                    "format": "uri"
+                                                },
+                                                "filename": {
+                                                    "title": "Filename",
+                                                    "type": "string",
+                                                    "pattern": "^[A-Za-z0-9_. ()-]+\\.[a-z0-9]+$"
+                                                }
+                                            },
+                                            "required": [
+                                                "mediaType",
+                                                "uri",
+                                                "filename"
+                                            ]
+                                        },
+                                        "size": {
+                                            "type": "object",
+                                            "properties": {
+                                                "width": {
+                                                    "type": "integer",
+                                                    "minimum": 1
+                                                },
+                                                "height": {
+                                                    "type": "integer",
+                                                    "minimum": 1
+                                                }
+                                            },
+                                            "required": [
+                                                "width",
+                                                "height"
+                                            ]
+                                        },
+                                        "focalPoint": {
+                                            "type": "object",
+                                            "title": "Focal point",
+                                            "description": "Point on the image that is considered to be the focal point of the image.\n\nIf not present, 50 can be used for both `x` and `y`.\n",
+                                            "properties": {
+                                                "x": {
+                                                    "description": "Percentage on the horizontal axis.\n",
+                                                    "type": "integer",
+                                                    "minimum": 0,
+                                                    "maximum": 100
+                                                },
+                                                "y": {
+                                                    "description": "Percentage on the vertical axis.\n",
+                                                    "type": "integer",
+                                                    "minimum": 0,
+                                                    "maximum": 100
+                                                }
+                                            },
+                                            "required": [
+                                                "x",
+                                                "y"
+                                            ]
+                                        }
+                                    },
+                                    "required": [
+                                        "uri",
+                                        "alt",
+                                        "source",
+                                        "size"
+                                    ]
+                                }
+                            ]
                         }
                     },
                     "required": [
                         "banner"
                     ]
-                },
-                "subTitle": {
-                    "description": "Sub-title",
-                    "type": "string"
                 },
                 "curators": {
                     "description": "List of curators, ordered by name",
@@ -248,17 +262,31 @@
                                     },
                                     "type": {
                                         "title": "Type",
-                                        "type": "string",
-                                        "enum": [
-                                            "director",
-                                            "executive",
-                                            "leadership",
-                                            "reviewing-editor",
-                                            "senior-editor"
+                                        "type": "object",
+                                        "properties": {
+                                            "id": {
+                                                "type": "string",
+                                                "enum": [
+                                                    "director",
+                                                    "early-career",
+                                                    "executive",
+                                                    "leadership",
+                                                    "reviewing-editor",
+                                                    "senior-editor"
+                                                ]
+                                            },
+                                            "label": {
+                                                "type": "string",
+                                                "minLength": 1
+                                            }
+                                        },
+                                        "required": [
+                                            "id",
+                                            "label"
                                         ]
                                     },
                                     "image": {
-                                        "$ref": "#/allOf/0/properties/image/properties/thumbnail"
+                                        "$ref": "#/allOf/1/properties/image/properties/banner"
                                     }
                                 },
                                 "required": [
@@ -269,6 +297,31 @@
                         ]
                     },
                     "minItems": 1
+                },
+                "summary": {
+                    "title": "Summary",
+                    "type": "array",
+                    "items": {
+                        "$schema": "http://json-schema.org/draft-04/schema#",
+                        "title": "Paragraph",
+                        "type": "object",
+                        "properties": {
+                            "type": {
+                                "type": "string",
+                                "enum": [
+                                    "paragraph"
+                                ]
+                            },
+                            "text": {
+                                "title": "Text",
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "type",
+                            "text"
+                        ]
+                    }
                 },
                 "content": {
                     "title": "Content",
@@ -321,10 +374,12 @@
                                                     "insight",
                                                     "research-advance",
                                                     "research-article",
-                                                    "research-exchange",
+                                                    "research-communication",
                                                     "retraction",
                                                     "registered-report",
                                                     "replication-study",
+                                                    "review-article",
+                                                    "scientific-correspondence",
                                                     "short-report",
                                                     "tools-resources"
                                                 ]
@@ -336,7 +391,7 @@
                                                 "pattern": "^10[.][0-9]{4,}[^\\s\"/<>]*/[^\\s\"]+$"
                                             },
                                             "authorLine": {
-                                                "description": "For example:\n  - Ian T Baldwin\n  - Randy Schekman, Mark Patterson\n  - Lee R Berger et al\n",
+                                                "description": "For example:\n  - Ian T Baldwin\n  - Randy Schekman, Mark Patterson\n  - Lee R Berger et al.\n",
                                                 "type": "string",
                                                 "minLength": 1
                                             },
@@ -393,39 +448,6 @@
                                                     "minLength": 1
                                                 },
                                                 "uniqueItems": true
-                                            },
-                                            "abstract": {
-                                                "type": "object",
-                                                "properties": {
-                                                    "content": {
-                                                        "type": "array",
-                                                        "items": {
-                                                            "$schema": "http://json-schema.org/draft-04/schema#",
-                                                            "title": "Paragraph",
-                                                            "type": "object",
-                                                            "properties": {
-                                                                "type": {
-                                                                    "type": "string",
-                                                                    "enum": [
-                                                                        "paragraph"
-                                                                    ]
-                                                                },
-                                                                "text": {
-                                                                    "title": "Text",
-                                                                    "type": "string"
-                                                                }
-                                                            },
-                                                            "required": [
-                                                                "type",
-                                                                "text"
-                                                            ]
-                                                        },
-                                                        "minItems": 1
-                                                    }
-                                                },
-                                                "required": [
-                                                    "content"
-                                                ]
                                             }
                                         },
                                         "required": [
@@ -456,19 +478,11 @@
                                                 "type": "string",
                                                 "format": "uri"
                                             },
-                                            "abstract": {
-                                                "type": "object",
-                                                "properties": {
-                                                    "doi": {
-                                                        "$ref": "#/allOf/1/properties/content/items/oneOf/1/allOf/0/properties/doi"
-                                                    }
-                                                }
-                                            },
                                             "image": {
                                                 "type": "object",
                                                 "properties": {
                                                     "thumbnail": {
-                                                        "$ref": "#/allOf/0/properties/image/properties/thumbnail"
+                                                        "$ref": "#/allOf/1/properties/image/properties/banner"
                                                     }
                                                 },
                                                 "required": [
@@ -582,6 +596,17 @@
                                                             "updated": {
                                                                 "title": "Updated date (UTC)",
                                                                 "$ref": "#/allOf/0/properties/published"
+                                                            },
+                                                            "image": {
+                                                                "type": "object",
+                                                                "properties": {
+                                                                    "thumbnail": {
+                                                                        "$ref": "#/allOf/1/properties/image/properties/banner"
+                                                                    }
+                                                                },
+                                                                "required": [
+                                                                    "thumbnail"
+                                                                ]
                                                             }
                                                         },
                                                         "required": [
@@ -643,7 +668,7 @@
                                 "type": "object",
                                 "properties": {
                                     "thumbnail": {
-                                        "$ref": "#/allOf/0/properties/image/properties/thumbnail"
+                                        "$ref": "#/allOf/1/properties/image/properties/banner"
                                     }
                                 },
                                 "required": [
@@ -658,7 +683,7 @@
                                         "mediaType": {
                                             "allOf": [
                                                 {
-                                                    "$ref": "#/allOf/0/properties/image/properties/thumbnail/properties/source/properties/mediaType"
+                                                    "$ref": "#/allOf/1/properties/image/properties/banner/allOf/1/properties/source/properties/mediaType"
                                                 },
                                                 {
                                                     "pattern": "^audio/"
@@ -678,13 +703,6 @@
                                     ]
                                 },
                                 "minItems": 1
-                            },
-                            "subjects": {
-                                "description": "Episode subjects",
-                                "type": "array",
-                                "items": {
-                                    "$ref": "#/allOf/0/properties/subjects/items"
-                                }
                             }
                         },
                         "required": [

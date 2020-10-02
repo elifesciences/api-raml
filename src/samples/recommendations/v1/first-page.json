@@ -7,7 +7,7 @@
             "id": "14107",
             "version": 1,
             "doi": "10.7554/eLife.14107",
-            "authorLine": "Yongjian Huang et al",
+            "authorLine": "Yongjian Huang et al.",
             "title": "Molecular basis for multimerization in the activation of the epidermal growth factor",
             "stage": "published",
             "published": "2016-03-28T00:00:00Z",
@@ -21,7 +21,7 @@
             "id": "09560",
             "version": 1,
             "doi": "10.7554/eLife.09560",
-            "authorLine": "Lee R Berger et al",
+            "authorLine": "Lee R Berger et al.",
             "title": "<i>Homo naledi</i>, a new species of the genus <i>Homo</i> from the Dinaledi Chamber, South Africa",
             "stage": "published",
             "published": "2015-09-10T00:00:00Z",
@@ -38,11 +38,11 @@
             "impactStatement": "A new hominin species has been unearthed in the Dinaledi Chamber of the Rising Star cave system in the largest assemblage of a single species of hominins yet discovered in Africa.",
             "image": {
                 "thumbnail": {
-                    "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif",
+                    "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif",
                     "alt": "",
                     "source": {
                         "mediaType": "image/jpeg",
-                        "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif/full/full/0/default.jpg",
+                        "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif/full/full/0/default.jpg",
                         "filename": "an-image.jpg"
                     },
                     "size": {
@@ -60,7 +60,7 @@
             "type": "external-article",
             "articleTitle": "Transcriptional amplification in tumor cells with elevated c-Myc",
             "journal": "Cell",
-            "authorLine": "C. Y. Lin et al",
+            "authorLine": "C. Y. Lin et al.",
             "uri": "https://doi.org/10.1016/j.cell.2012.08.026"
         },
         {
@@ -71,11 +71,11 @@
                 "published": "2016-05-27T13:19:42Z",
                 "image": {
                     "thumbnail": {
-                        "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif",
+                        "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif",
                         "alt": "",
                         "source": {
                             "mediaType": "image/jpeg",
-                            "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif/full/full/0/default.jpg",
+                            "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif/full/full/0/default.jpg",
                             "filename": "an-image.jpg"
                         },
                         "size": {
@@ -94,6 +94,7 @@
             "chapter": {
                 "number": 2,
                 "title": "Lost generation",
+                "longTitle": "Alik Widge talks about the challenges facing early career researchers",
                 "time": 300,
                 "impactStatement": "Is science at risk of losing talented researchers to other professions?"
             }
@@ -106,11 +107,11 @@
             "updated": "2015-09-16T11:19:26Z",
             "image": {
                 "thumbnail": {
-                    "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif",
+                    "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif",
                     "alt": "",
                     "source": {
                         "mediaType": "image/jpeg",
-                        "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif/full/full/0/default.jpg",
+                        "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif/full/full/0/default.jpg",
                         "filename": "an-image.jpg"
                     },
                     "size": {
@@ -121,7 +122,10 @@
             },
             "selectedCurator": {
                 "id": "pjha",
-                "type": "senior-editor",
+                "type": {
+                    "id": "senior-editor",
+                    "label": "Senior Editor"
+                },
                 "name": {
                     "preferred": "Prabhat Jha",
                     "index": "Jha, Prabhat"

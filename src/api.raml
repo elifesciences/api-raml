@@ -15,11 +15,11 @@ documentation:
 
         ## Content versioning
 
-        Endpoints produce/consume dedicated content type, with the version as a parameter (eg `application/vnd.elife.labs-experiment-list+json;version=1`). These are primarily JSON-based (and described using [JSON Schema](http://json-schema.org/)), but alternative representations may be available.
+        Endpoints produce/consume dedicated content type, with the version as a parameter (eg `application/vnd.elife.labs-post-list+json;version=1`). These are primarily JSON-based (and described using [JSON Schema](http://json-schema.org/)), but alternative representations may be available.
 
         This verisoning follows [semantic versioning](http://semver.org/). Note we only use the major version as minor versions are backwards compatabile (so the API will return versions `1` and `2` rather than `1.0`, `1.1`, `2.0` etc).
 
-        You can request a specific version of a response using content negotation (eg `Accept: application/vnd.elife.labs-experiment-list+json;version=1`). The most recent version will always be preferred, so without a `version` parameter on the `Accept` header the latest version will be returned.
+        You can request a specific version of a response using content negotiation (eg `Accept: application/vnd.elife.labs-post-list+json;version=1`). The most recent version will always be preferred, so without a `version` parameter on the `Accept` header the latest version will be returned.
 
         ### On a request
 
@@ -65,6 +65,23 @@ documentation:
         - `small-caps`
         - `author-callout-style-a1` through to `author-callout-style-a3` (for text colours)
         - `author-callout-style-b1` through to `author-callout-style-b8` (for background colours)
+        - `sequence` (for sequences, e.g. peptide, gene)
+
+securitySchemes:
+    api-key:
+        type: Pass Through
+        describedBy:
+            headers:
+                Authorization:
+                    type: string
+
+securedBy: [null, api-key]
+
+annotationTypes:
+    deprecated:
+        type: nil | string
+    experimental:
+        type: nil | string
 
 resourceTypes:
     base:
@@ -144,7 +161,7 @@ traits:
                             }
     subjected:
         queryParameters:
-            subject:
+            subject[]:
                 description: |
                     Only include <<resources | !lowercase>> with one of the specified subjects.
                 type: string[]
@@ -175,6 +192,69 @@ traits:
                   - published
                 required: false
                 default: default
+    container:
+        queryParameters:
+          containing[]:
+              description: |
+                  Only return <<resources | !lowercase>> containing at least one of these items.
+              type: string[]
+              required: false
+              example: [article/1234, interview/5678]
+
+/annotations:
+    (experimental):
+    type: collection
+    description: |
+        Annotations
+    get:
+        description: |
+            Get a list of annotations, sorted by date.
+        is:
+          - paged: { resources: Annotations }
+        queryParameters:
+            by:
+                description: |
+                    Only return annotations by this author.
+                type: string
+                required: true
+                example: userid
+            use-date:
+                description: |
+                    Which date to use for ordering.
+
+                    `updated` refers to the updated date of the annotation, which may change over time. `created` refers to the original creation date, which does not change.
+                type: string
+                enum:
+                  - updated
+                  - created
+                required: false
+                default: updated
+            access:
+                description: |
+                    Return annotations if you have access.
+
+                    `restricted` will also return `public` annotations.
+                type: string
+                enum:
+                  - public
+                  - restricted
+                default: public
+        responses:
+            200:
+                body:
+                    application/vnd.elife.annotation-list+json;version=1:
+                        schema: !include ../dist/model/annotation-list.v1.json
+                        examples:
+                            paginated:
+                                displayName: First page
+                                description: |
+                                    List is split over two pages.
+                                value: !include samples/annotation-list/v1/first-page.json
+                            empty:
+                                displayName: Empty list
+                                description: |
+                                    Demonstration of the list being empty (the first page will always return a valid result).
+                                value: !include samples/annotation-list/v1/empty.json
 
 /annual-reports:
     type: collection
@@ -190,19 +270,19 @@ traits:
                 description: |
                     List of annual reports, sorted by year.
                 body:
-                    application/vnd.elife.annual-report-list+json;version=1:
-                        schema: !include ../dist/model/annual-report-list.v1.json
+                    application/vnd.elife.annual-report-list+json;version=2:
+                        schema: !include ../dist/model/annual-report-list.v2.json
                         examples:
                             populated:
                                 displayName: Populated list
                                 description: |
                                     List is split over two pages.
-                                value: !include samples/annual-report-list/v1/populated.json
+                                value: !include samples/annual-report-list/v2/populated.json
                             empty:
                                 displayName: Empty list
                                 description: |
                                     Demonstration of the list being empty (the first page will always return a valid result).
-                                value: !include samples/annual-report-list/v1/empty.json
+                                value: !include samples/annual-report-list/v2/empty.json
 
     /{year}:
         type:
@@ -224,15 +304,15 @@ traits:
                     description: |
                         Annual report.
                     body:
-                        application/vnd.elife.annual-report+json;version=1:
-                            schema: !include ../dist/model/annual-report.v1.json
+                        application/vnd.elife.annual-report+json;version=2:
+                            schema: !include ../dist/model/annual-report.v2.json
                             examples:
                                 minimum:
                                     displayName: Minimum
-                                    value: !include samples/annual-report/v1/minimum.json
+                                    value: !include samples/annual-report/v2/minimum.json
                                 complete:
                                     displayName: Complete
-                                    value: !include samples/annual-report/v1/complete.json
+                                    value: !include samples/annual-report/v2/complete.json
 
 /articles:
     type: collection
@@ -286,43 +366,83 @@ traits:
                     description: |
                         Article latest version.
                     body:
-                        application/vnd.elife.article-poa+json;version=1:
-                            schema: !include ../dist/model/article-poa.v1.json
+                        application/vnd.elife.article-poa+json;version=2:
+                            (deprecated):
+                            schema: !include ../dist/model/article-poa.v2.json
                             examples:
                                 minimum:
                                     displayName: Minimum
-                                    value: !include samples/article-poa/v1/minimum.json
+                                    value: !include samples/article-poa/v2/minimum.json
                                 complete:
                                     displayName: Complete
-                                    value: !include samples/article-poa/v1/complete.json
+                                    value: !include samples/article-poa/v2/complete.json
                                 unpublishedMinimum:
                                     displayName: PreviewMinimum
-                                    value: !include samples/article-poa/v1/unpublished-minimum.json
+                                    value: !include samples/article-poa/v2/unpublished-minimum.json
                                 unpublishedComplete:
                                     displayName: PreviewComplete
-                                    value: !include samples/article-poa/v1/unpublished-complete.json
-
-                        application/vnd.elife.article-vor+json;version=1:
-                            schema: !include model/article-vor.v1.json
+                                    value: !include samples/article-poa/v2/unpublished-complete.json
+                        application/vnd.elife.article-poa+json;version=3:
+                            schema: !include ../dist/model/article-poa.v3.json
                             examples:
                                 minimum:
                                     displayName: Minimum
-                                    value: !include samples/article-vor/v1/minimum.json
+                                    value: !include samples/article-poa/v3/minimum.json
                                 complete:
                                     displayName: Complete
-                                    value: !include samples/article-vor/v1/complete.json
+                                    value: !include samples/article-poa/v3/complete.json
                                 unpublishedMinimum:
                                     displayName: PreviewMinimum
-                                    value: !include samples/article-vor/v1/unpublished-minimum.json
+                                    value: !include samples/article-poa/v3/unpublished-minimum.json
                                 unpublishedComplete:
                                     displayName: PreviewComplete
-                                    value: !include samples/article-vor/v1/unpublished-complete.json
+                                    value: !include samples/article-poa/v3/unpublished-complete.json
+                        application/vnd.elife.article-vor+json;version=3:
+                            (deprecated):
+                            schema: !include model/article-vor.v3.json
+                            examples:
+                                minimum:
+                                    displayName: Minimum
+                                    value: !include samples/article-vor/v3/minimum.json
+                                complete:
+                                    displayName: Complete
+                                    value: !include samples/article-vor/v3/complete.json
+                                unpublishedMinimum:
+                                    displayName: PreviewMinimum
+                                    value: !include samples/article-vor/v3/unpublished-minimum.json
+                                unpublishedComplete:
+                                    displayName: PreviewComplete
+                                    value: !include samples/article-vor/v3/unpublished-complete.json
                                 00569:
                                     displayName: '00569'
-                                    value: !include samples/article-vor/v1/00569.json
+                                    value: !include samples/article-vor/v3/00569.json
                                 15278:
                                     displayName: '15278'
-                                    value: !include samples/article-vor/v1/15278.json
+                                    value: !include samples/article-vor/v3/15278.json
+                        application/vnd.elife.article-vor+json;version=4:
+                            schema: !include model/article-vor.v4.json
+                            examples:
+                                minimum:
+                                    displayName: Minimum
+                                    value: !include samples/article-vor/v4/minimum.json
+                                complete:
+                                    displayName: Complete
+                                    value: !include samples/article-vor/v4/complete.json
+                                unpublishedMinimum:
+                                    displayName: PreviewMinimum
+                                    value: !include samples/article-vor/v4/unpublished-minimum.json
+                                unpublishedComplete:
+                                    displayName: PreviewComplete
+                                    value: !include samples/article-vor/v4/unpublished-complete.json
+                                00569:
+                                    displayName: '00569'
+                                    value: !include samples/article-vor/v4/00569.json
+                                15278:
+                                    displayName: '15278'
+                                    value: !include samples/article-vor/v4/15278.json
+                                15691:
+                                    displayName: '15691'
+                                    value: !include samples/article-vor/v4/15691.json
 
         /related:
             type:
@@ -367,7 +487,7 @@ traits:
                                     multipleVersions:
                                         displayName: Multiple versions
                                         value: !include samples/article-history/v1/multiple-versions.json
-                                    unpublishedMinimum: 
+                                    unpublishedMinimum:
                                         displayName: PreviewMinimum
                                         value: !include samples/article-history/v1/unpublished-minimum.json
                                     unpublishedMultipleVersions:
@@ -396,37 +516,68 @@ traits:
                             description: |
                                 Article version.
                             body:
-                                application/vnd.elife.article-poa+json;version=1:
-                                    schema: !include ../dist/model/article-poa.v1.json
+                                application/vnd.elife.article-poa+json;version=2:
+                                    (deprecated):
+                                    schema: !include ../dist/model/article-poa.v2.json
                                     examples:
                                         minimum:
                                             displayName: Minimum
-                                            value: !include samples/article-poa/v1/minimum.json
+                                            value: !include samples/article-poa/v2/minimum.json
                                         complete:
                                             displayName: Complete
-                                            value: !include samples/article-poa/v1/complete.json
+                                            value: !include samples/article-poa/v2/complete.json
                                         unpublishedMinimum:
                                             displayName: PreviewMinimum
-                                            value: !include samples/article-poa/v1/unpublished-minimum.json
+                                            value: !include samples/article-poa/v2/unpublished-minimum.json
                                         unpublishedComplete:
                                             displayName: PreviewComplete
-                                            value: !include samples/article-poa/v1/unpublished-complete.json
-
-                                application/vnd.elife.article-vor+json;version=1:
-                                    schema: !include ../dist/model/article-vor.v1.json
+                                            value: !include samples/article-poa/v2/unpublished-complete.json
+                                application/vnd.elife.article-poa+json;version=3:
+                                    schema: !include ../dist/model/article-poa.v3.json
                                     examples:
                                         minimum:
                                             displayName: Minimum
-                                            value: !include samples/article-vor/v1/minimum.json
+                                            value: !include samples/article-poa/v3/minimum.json
                                         complete:
                                             displayName: Complete
-                                            value: !include samples/article-vor/v1/complete.json
+                                            value: !include samples/article-poa/v3/complete.json
                                         unpublishedMinimum:
                                             displayName: PreviewMinimum
-                                            value: !include samples/article-vor/v1/unpublished-minimum.json
+                                            value: !include samples/article-poa/v3/unpublished-minimum.json
                                         unpublishedComplete:
                                             displayName: PreviewComplete
-                                            value: !include samples/article-vor/v1/unpublished-complete.json
+                                            value: !include samples/article-poa/v3/unpublished-complete.json
+                                application/vnd.elife.article-vor+json;version=3:
+                                    (deprecated):
+                                    schema: !include ../dist/model/article-vor.v3.json
+                                    examples:
+                                        minimum:
+                                            displayName: Minimum
+                                            value: !include samples/article-vor/v3/minimum.json
+                                        complete:
+                                            displayName: Complete
+                                            value: !include samples/article-vor/v3/complete.json
+                                        unpublishedMinimum:
+                                            displayName: PreviewMinimum
+                                            value: !include samples/article-vor/v3/unpublished-minimum.json
+                                        unpublishedComplete:
+                                            displayName: PreviewComplete
+                                            value: !include samples/article-vor/v3/unpublished-complete.json
+                                application/vnd.elife.article-vor+json;version=4:
+                                    schema: !include ../dist/model/article-vor.v4.json
+                                    examples:
+                                        minimum:
+                                            displayName: Minimum
+                                            value: !include samples/article-vor/v4/minimum.json
+                                        complete:
+                                            displayName: Complete
+                                            value: !include samples/article-vor/v4/complete.json
+                                        unpublishedMinimum:
+                                            displayName: PreviewMinimum
+                                            value: !include samples/article-vor/v4/unpublished-minimum.json
+                                        unpublishedComplete:
+                                            displayName: PreviewComplete
+                                            value: !include samples/article-vor/v4/unpublished-complete.json
 
 /blog-articles:
     type: collection
@@ -485,6 +636,16 @@ traits:
                                 complete:
                                     displayName: Complete
                                     value: !include samples/blog-article/v1/complete.json
+                        application/vnd.elife.blog-article+json;version=2:
+                            (experimental):
+                            schema: !include ../dist/model/blog-article.v2.json
+                            examples:
+                                minimum:
+                                    displayName: Minimum
+                                    value: !include samples/blog-article/v2/minimum.json
+                                complete:
+                                    displayName: Complete
+                                    value: !include samples/blog-article/v2/complete.json
 
 /collections:
     type: collection
@@ -496,6 +657,7 @@ traits:
         is:
           - paged: { resources: Collections }
           - subjected: { resources: Collections }
+          - container: { resources: Collections }
         responses:
             200:
                 description: |
@@ -543,6 +705,41 @@ traits:
                                 complete:
                                     displayName: Complete
                                     value: !include samples/collection/v1/complete.json
+                        application/vnd.elife.collection+json;version=2:
+                            (experimental):
+                            schema: !include ../dist/model/collection.v2.json
+                            examples:
+                                minimum:
+                                    displayName: Minimum
+                                    value: !include samples/collection/v2/minimum.json
+                                complete:
+                                    displayName: Complete
+                                    value: !include samples/collection/v2/complete.json
+
+/bioprotocol:
+    (experimental):
+    /article/{id}:
+        type: collection
+        description: BioProtocol protocol data
+        uriParameters:
+            id:
+                description: Article ID.
+                type: string
+        get:
+            description: BioProtocol protocol data for a specific article
+            responses:
+                200:
+                    description: BioProtocol data
+                    body:
+                        application/vnd.elife.bioprotocol+json;version=1:
+                            schema: !include ../dist/model/bioprotocol.v1.json
+                            examples:
+                                complete:
+                                    displayName: Complete
+                                    value: !include samples/bioprotocol/v1/complete.json
+                                empty:
+                                    displayName: Empty
+                                    value: !include samples/bioprotocol/v1/empty.json
 
 /community:
     type: collection
@@ -629,6 +826,100 @@ traits:
                             example:
                                 value: !include samples/cover-list/v1/first-page.json
 
+/digests:
+    (experimental):
+    type: collection
+    description: |
+        Digests
+    get:
+        description: |
+            Get a list of digests, sorted by start date.
+        is:
+          - paged: { resources: Digests }
+        responses:
+            200:
+                description: |
+                    List of digests, sorted by start date.
+                body:
+                    application/vnd.elife.digest-list+json;version=1:
+                        schema: !include ../dist/model/digest-list.v1.json
+                        examples:
+                            paginated:
+                                displayName: First page
+                                description: |
+                                    List is split over two pages.
+                                value: !include samples/digest-list/v1/first-page.json
+                            empty:
+                                displayName: Empty list
+                                description: |
+                                    Demonstration of the list being empty (the first page will always return a valid result).
+                                value: !include samples/digest-list/v1/empty.json
+
+    /{id}:
+        type:
+            item:
+                resource: Digest
+        description: |
+            Individual digest.
+        uriParameters:
+            id:
+                description: |
+                    Digest ID.
+                type: string
+        get:
+            description: |
+                Get a digest.
+            responses:
+                200:
+                    description: |
+                        Digest.
+                    body:
+                        application/vnd.elife.digest+json;version=1:
+                            schema: !include ../dist/model/digest.v1.json
+                            examples:
+                                minimum:
+                                    displayName: Minimum
+                                    value: !include samples/digest/v1/minimum.json
+                                complete:
+                                    displayName: Complete
+                                    value: !include samples/digest/v1/complete.json
+        put:
+            description: |
+                Upsert a digest.
+            securedBy: [api-key]
+            body:
+                application/vnd.elife.digest+json;version=1:
+                    schema: !include ../dist/model/digest.v1.json
+                    examples:
+                        minimum:
+                            displayName: Minimum
+                            value: !include samples/digest/v1/minimum.json
+                        complete:
+                            displayName: Complete
+                            value: !include samples/digest/v1/complete.json
+            responses:
+                204:
+                    description: |
+                        Digest has been created or updated.
+                400:
+                    description: Missing or invalid fields for digest.
+                    body:
+                        application/problem+json:
+                            schema: !include ../dist/model/error.v1.json
+                            example: |
+                                {
+                                    "title": "Missing 'title'"
+                                }
+                403:
+                    description: Not authorized to add a digest.
+                    body:
+                        application/problem+json:
+                            schema: !include ../dist/model/error.v1.json
+                            example: |
+                                {
+                                    "title": "Forbidden"
+                                }
+
 /events:
     type: collection
     description: |
@@ -699,6 +990,19 @@ traits:
                                 complete-external:
                                     displayName: Complete external event
                                     value: !include samples/event/v1/complete-external.json
+                        application/vnd.elife.event+json;version=2:
+                            (experimental):
+                            schema: !include ../dist/model/event.v2.json
+                            examples:
+                                minimum:
+                                    displayName: Minimum
+                                    value: !include samples/event/v2/minimum.json
+                                complete:
+                                    displayName: Complete
+                                    value: !include samples/event/v2/complete.json
+                                complete-external:
+                                    displayName: Complete external event
+                                    value: !include samples/event/v2/complete-external.json
 
 /highlights/{list}:
     type: collection
@@ -712,13 +1016,51 @@ traits:
     get:
         description: |
             Get highlights list.
+        is:
+          - paged: { resources: Highlights }
         responses:
             200:
                 body:
-                    application/vnd.elife.highlights+json;version=1:
-                        schema: !include ../dist/model/highlights.v1.json
-                        example:
-                            value: !include samples/highlights/v1/complete.json
+                    application/vnd.elife.highlight-list+json;version=1:
+                        schema: !include ../dist/model/highlight-list.v1.json
+                        examples:
+                            paginated:
+                                displayName: First page
+                                description: |
+                                    List is split over two pages.
+                                value: !include samples/highlight-list/v1/first-page.json
+                            empty:
+                                displayName: Empty list
+                                description: |
+                                    Demonstration of the list being empty (the first page will always return a valid result).
+                                value: !include samples/highlight-list/v1/empty.json
+                    application/vnd.elife.highlight-list+json;version=2:
+                        schema: !include ../dist/model/highlight-list.v2.json
+                        examples:
+                            paginated:
+                                displayName: First page
+                                description: |
+                                    List is split over two pages.
+                                value: !include samples/highlight-list/v2/first-page.json
+                            empty:
+                                displayName: Empty list
+                                description: |
+                                    Demonstration of the list being empty (the first page will always return a valid result).
+                                value: !include samples/highlight-list/v2/empty.json
+                    application/vnd.elife.highlight-list+json;version=3:
+                        (experimental):
+                        schema: !include ../dist/model/highlight-list.v3.json
+                        examples:
+                            paginated:
+                                displayName: First page
+                                description: |
+                                    List is split over two pages.
+                                value: !include samples/highlight-list/v3/first-page.json
+                            empty:
+                                displayName: Empty list
+                                description: |
+                                    Demonstration of the list being empty (the first page will always return a valid result).
+                                value: !include samples/highlight-list/v3/empty.json
 
 /interviews:
     type: collection
@@ -776,92 +1118,152 @@ traits:
                                 complete:
                                     displayName: Complete
                                     value: !include samples/interview/v1/complete.json
-
-/labs-experiments:
-    type: collection
-    description: |
-        Labs experiments
-    get:
-        description: |
-            Get a list of experiments, sorted by number.
-        is:
-          - paged: { resources: Experiments }
-        responses:
-            200:
-                description: |
-                    List of experiments, sorted by number.
-                body:
-                    application/vnd.elife.labs-experiment-list+json;version=1:
-                        schema: !include ../dist/model/labs-experiment-list.v1.json
-                        examples:
-                            paginated:
-                                displayName: First page
-                                description: |
-                                    List is split over two pages.
-                                value: !include samples/labs-experiment-list/v1/first-page.json
-                            empty:
-                                displayName: Empty list
-                                description: |
-                                    Demonstration of the list being empty (the first page will always return a valid result).
-                                value: !include samples/labs-experiment-list/v1/empty.json
-
-    /{number}:
-        type:
-            item:
-                resource: Experiment
-        description: |
-            Individual Labs experiment.
-        uriParameters:
-            number:
-                description: |
-                    Experiment number.
-                type: integer
-                minimum: 1
-        get:
-            description: |
-                Get an experiment.
-            responses:
-                200:
-                    description: |
-                        Experiment.
-                    body:
-                        application/vnd.elife.labs-experiment+json;version=1:
-                            schema: !include ../dist/model/labs-experiment.v1.json
+                        application/vnd.elife.interview+json;version=2:
+                            (experimental):
+                            schema: !include ../dist/model/interview.v2.json
                             examples:
                                 minimum:
                                     displayName: Minimum
-                                    value: !include samples/labs-experiment/v1/minimum.json
+                                    value: !include samples/interview/v2/minimum.json
                                 complete:
                                     displayName: Complete
-                                    value: !include samples/labs-experiment/v1/complete.json
+                                    value: !include samples/interview/v2/complete.json
 
-/medium-articles:
+/job-adverts:
+    (experimental):
     type: collection
     description: |
-        Medium articles
+        Job adverts
     get:
         description: |
-            Get a list of Medium articles, sorted by publication date.
+            Get a list of job adverts, sorted by publication date.
         is:
-          - paged: { resources: Articles }
+          - paged: { resources: Job adverts }
+        queryParameters:
+            show:
+                description: |
+                    Type of job adverts to show.
+                type: string
+                required: false
+                default: all
+                enum:
+                  - all
+                  - closed
+                  - open
         responses:
             200:
                 description: |
-                    List of Medium articles, sorted by publication date.
+                    List of job adverts, sorted by publication date.
                 body:
-                    application/vnd.elife.medium-article-list+json;version=1:
-                        schema: !include ../dist/model/medium-article-list.v1.json
+                    application/vnd.elife.job-advert-list+json;version=1:
+                        schema: !include ../dist/model/job-advert-list.v1.json
                         examples:
                             paginated:
                                 displayName: First page
                                 description: |
                                     List is split over two pages.
-                                value: !include samples/medium-article-list/v1/first-page.json
+                                value: !include samples/job-advert-list/v1/first-page.json
                             empty:
                                 displayName: Empty list
                                 description: |
                                     Demonstration of the list being empty (the first page will always return a valid result).
-                                value: !include samples/medium-article-list/v1/empty.json
+                                value: !include samples/job-advert-list/v1/empty.json
+
+    /{id}:
+        type:
+            item:
+                resource: Job Advert
+        description: |
+            Individual job advert.
+        uriParameters:
+            id:
+                description: |
+                    Job advert ID.
+                type: string
+        get:
+            description: |
+                Get a job advert.
+            responses:
+                200:
+                    description: |
+                        Job advert.
+                    body:
+                        application/vnd.elife.job-advert+json;version=1:
+                            schema: !include ../dist/model/job-advert.v1.json
+                            examples:
+                                minimum:
+                                    displayName: Minimum
+                                    value: !include samples/job-advert/v1/minimum.json
+                                complete:
+                                    displayName: Complete
+                                    value: !include samples/job-advert/v1/complete.json
+
+/labs-posts:
+    type: collection
+    description: |
+        Labs posts
+    get:
+        description: |
+            Get a list of labs posts, sorted by publication date.
+        is:
+          - paged: { resources: Posts }
+        responses:
+            200:
+                description: |
+                    List of labs posts, sorted by publication date.
+                body:
+                    application/vnd.elife.labs-post-list+json;version=1:
+                        schema: !include ../dist/model/labs-post-list.v1.json
+                        examples:
+                            paginated:
+                                displayName: First page
+                                description: |
+                                    List is split over two pages.
+                                value: !include samples/labs-post-list/v1/first-page.json
+                            empty:
+                                displayName: Empty list
+                                description: |
+                                    Demonstration of the list being empty (the first page will always return a valid result).
+                                value: !include samples/labs-post-list/v1/empty.json
+
+    /{id}:
+        type:
+            item:
+                resource: Post
+        description: |
+            Individual Labs post.
+        uriParameters:
+            id:
+                description: |
+                    Post ID.
+                type: string
+        get:
+            description: |
+                Get an post.
+            responses:
+                200:
+                    description: |
+                        Post.
+                    body:
+                        application/vnd.elife.labs-post+json;version=1:
+                            schema: !include ../dist/model/labs-post.v1.json
+                            examples:
+                                minimum:
+                                    displayName: Minimum
+                                    value: !include samples/labs-post/v1/minimum.json
+                                complete:
+                                    displayName: Complete
+                                    value: !include samples/labs-post/v1/complete.json
+                        application/vnd.elife.labs-post+json;version=2:
+                            (experimental):
+                            schema: !include ../dist/model/labs-post.v2.json
+                            examples:
+                                minimum:
+                                    displayName: Minimum
+                                    value: !include samples/labs-post/v2/minimum.json
+                                complete:
+                                    displayName: Complete
+                                    value: !include samples/labs-post/v2/complete.json
 
 /metrics/{type}/{id}/citations:
     type: collection
@@ -900,6 +1302,13 @@ traits:
             type: string
             enum:
               - article
+              - blog-article
+              - collection
+              - digest
+              - event
+              - interview
+              - labs-post
+              - press-package
         id:
             description: |
                 Content ID.
@@ -950,17 +1359,12 @@ traits:
           - paged: { resources: People }
           - subjected: { resources: People }
         queryParameters:
-            type:
+            type[]:
                 description: |
-                    Person type.
-                type: string
+                    Only include people with one of the specified types.
+                type: string[]
                 required: false
-                enum:
-                  - director
-                  - executive
-                  - leadership
-                  - reviewing-editor
-                  - senior-editor
+                example: [director]
         responses:
             200:
                 description: |
@@ -1018,7 +1422,7 @@ traits:
             Get a list of episodes, sorted by number.
         is:
           - paged: { resources: Episodes }
-          - subjected: { resources: Episodes }
+          - container: { resources: Episodes }
         responses:
             200:
                 description: |
@@ -1117,6 +1521,7 @@ traits:
                         Press package.
                     body:
                         application/vnd.elife.press-package+json;version=1:
+                            (deprecated):
                             schema: !include ../dist/model/press-package.v1.json
                             examples:
                                 minimum:
@@ -1125,6 +1530,143 @@ traits:
                                 complete:
                                     displayName: Complete
                                     value: !include samples/press-package/v1/complete.json
+                        application/vnd.elife.press-package+json;version=2:
+                            schema: !include ../dist/model/press-package.v2.json
+                            examples:
+                                minimum:
+                                    displayName: Minimum
+                                    value: !include samples/press-package/v2/minimum.json
+                                complete:
+                                    displayName: Complete
+                                    value: !include samples/press-package/v2/complete.json
+                        application/vnd.elife.press-package+json;version=3:
+                            (experimental):
+                            schema: !include ../dist/model/press-package.v3.json
+                            examples:
+                                minimum:
+                                    displayName: Minimum
+                                    value: !include samples/press-package/v3/minimum.json
+                                complete:
+                                    displayName: Complete
+                                    value: !include samples/press-package/v3/complete.json
+
+/profiles:
+    (experimental):
+    type: collection
+    description: |
+        Profiles
+    get:
+        description: |
+            Get a list of profiles, sorted by surname then given name.
+        is:
+          - paged: { resources: Profiles }
+        responses:
+            200:
+                description: |
+                    List of profiles, sorted by surname then given name.
+                body:
+                    application/vnd.elife.profile-list+json;version=1:
+                        schema: !include ../dist/model/profile-list.v1.json
+                        examples:
+                            paginated:
+                                displayName: First page
+                                description: |
+                                    List is split over two pages.
+                                value: !include samples/profile-list/v1/first-page.json
+                            empty:
+                                displayName: Empty list
+                                description: |
+                                    Demonstration of the list being empty (the first page will always return a valid result).
+                                value: !include samples/profile-list/v1/empty.json
+
+    /{id}:
+        type:
+            item:
+                resource: Profile
+        description: |
+            Individual profile.
+        uriParameters:
+            id:
+                description: |
+                    Profile ID.
+                type: string
+        get:
+            description: |
+                Get a profile.
+            responses:
+                200:
+                    description: |
+                        Profile.
+                    body:
+                        application/vnd.elife.profile+json;version=1:
+                            schema: !include ../dist/model/profile.v1.json
+                            examples:
+                                minimum:
+                                    displayName: Minimum
+                                    value: !include samples/profile/v1/minimum.json
+                                complete:
+                                    displayName: Complete
+                                    value: !include samples/profile/v1/complete.json
+
+/promotional-collections:
+    (experimental):
+    type: collection
+    description: |
+        Promotional collections
+    get:
+        description: |
+            Get a list of promotional collections, sorted by date.
+        is:
+          - paged: { resources: Promotional collections }
+          - subjected: { resources: Promotional collections }
+          - container: { resources: Promotional collections }
+        responses:
+            200:
+                description: |
+                    List of promotional collections, sorted by date.
+                body:
+                    application/vnd.elife.promotional-collection-list+json;version=1:
+                        schema: !include ../dist/model/promotional-collection-list.v1.json
+                        examples:
+                            paginated:
+                                displayName: First page
+                                description: |
+                                    List is split over two pages.
+                                value: !include samples/promotional-collection-list/v1/first-page.json
+                            empty:
+                                displayName: Empty list
+                                description: |
+                                    Demonstration of the list being empty (the first page will always return a valid result).
+                                value: !include samples/promotional-collection-list/v1/empty.json
+
+    /{id}:
+        type:
+            item:
+                resource: Promotional collection
+        description: |
+            Individual promotional collection.
+        uriParameters:
+            id:
+                description: |
+                    Promotional collection ID.
+                type: string
+        get:
+            description: |
+                Get a promotional collection.
+            responses:
+                200:
+                    description: |
+                        Promotional collection.
+                    body:
+                        application/vnd.elife.promotional-collection+json;version=1:
+                            schema: !include ../dist/model/promotional-collection.v1.json
+                            examples:
+                                minimum:
+                                    displayName: Minimum
+                                    value: !include samples/promotional-collection/v1/minimum.json
+                                complete:
+                                    displayName: Complete
+                                    value: !include samples/promotional-collection/v1/complete.json
 
 /recommendations/{type}/{id}:
     type: collection
@@ -1162,6 +1704,20 @@ traits:
                                 description: |
                                     Demonstration of the list being empty (the first page will always return a valid result).
                                 value: !include samples/recommendations/v1/empty.json
+                    application/vnd.elife.recommendations+json;version=2:
+                        (experimental):
+                        schema: !include ../dist/model/recommendations.v2.json
+                        examples:
+                            paginated:
+                                displayName: First page
+                                description: |
+                                    List is split over two pages.
+                                value: !include samples/recommendations/v2/first-page.json
+                            empty:
+                                displayName: Empty list
+                                description: |
+                                    Demonstration of the list being empty (the first page will always return a valid result).
+                                value: !include samples/recommendations/v2/empty.json
 
 /search:
     type: collection
@@ -1203,16 +1759,18 @@ traits:
                       - insight
                       - research-advance
                       - research-article
-                      - research-exchange
+                      - research-communication
                       - retraction
                       - registered-report
                       - replication-study
+                      - review-article
+                      - scientific-correspondence
                       - short-report
                       - tools-resources
                       - blog-article
                       - collection
                       - interview
-                      - labs-experiment
+                      - labs-post
                       - podcast-episode
                 required: false
         responses:
@@ -1283,5 +1841,10 @@ traits:
                     body:
                         application/vnd.elife.subject+json;version=1:
                             schema: !include ../dist/model/subject.v1.json
-                            example:
-                                value: !include samples/subject/v1/complete.json
+                            examples:
+                                minimum:
+                                    displayName: Minimum
+                                    value: !include samples/subject/v1/minimum.json
+                                complete:
+                                    displayName: Complete
+                                    value: !include samples/subject/v1/complete.json

@@ -48,88 +48,106 @@
                                 "$schema": "http://json-schema.org/draft-04/schema#",
                                 "title": "IIIF image",
                                 "type": "object",
-                                "properties": {
-                                    "uri": {
-                                        "title": "IIIF Image",
-                                        "type": "string",
-                                        "format": "uri",
-                                        "pattern": "^https://"
-                                    },
-                                    "alt": {
-                                        "title": "Alternative text",
-                                        "type": "string"
-                                    },
-                                    "source": {
+                                "allOf": [
+                                    {
                                         "$schema": "http://json-schema.org/draft-04/schema#",
-                                        "title": "File",
+                                        "title": "Has attribution",
                                         "type": "object",
                                         "properties": {
-                                            "mediaType": {
-                                                "$ref": "#/properties/items/items/properties/sources/items/properties/mediaType/allOf/0"
-                                            },
+                                            "attribution": {
+                                                "title": "Attribution",
+                                                "type": "array",
+                                                "items": {
+                                                    "type": "string"
+                                                }
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "properties": {
                                             "uri": {
-                                                "title": "Source data URI",
+                                                "title": "IIIF Image",
                                                 "type": "string",
-                                                "format": "uri"
+                                                "format": "uri",
+                                                "pattern": "^https://[^/]+(?:/[^?#\\[\\]@]+)?/[^/?#\\[\\]@]+$"
                                             },
-                                            "filename": {
-                                                "title": "Filename",
-                                                "type": "string",
-                                                "pattern": "^[A-Za-z0-9_. ()-]+\\.[a-z0-9]+$"
+                                            "alt": {
+                                                "title": "Alternative text",
+                                                "type": "string"
+                                            },
+                                            "source": {
+                                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                                "title": "File",
+                                                "type": "object",
+                                                "properties": {
+                                                    "mediaType": {
+                                                        "$ref": "#/properties/items/items/properties/sources/items/properties/mediaType/allOf/0"
+                                                    },
+                                                    "uri": {
+                                                        "title": "Source data URI",
+                                                        "type": "string",
+                                                        "format": "uri"
+                                                    },
+                                                    "filename": {
+                                                        "title": "Filename",
+                                                        "type": "string",
+                                                        "pattern": "^[A-Za-z0-9_. ()-]+\\.[a-z0-9]+$"
+                                                    }
+                                                },
+                                                "required": [
+                                                    "mediaType",
+                                                    "uri",
+                                                    "filename"
+                                                ]
+                                            },
+                                            "size": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "width": {
+                                                        "type": "integer",
+                                                        "minimum": 1
+                                                    },
+                                                    "height": {
+                                                        "type": "integer",
+                                                        "minimum": 1
+                                                    }
+                                                },
+                                                "required": [
+                                                    "width",
+                                                    "height"
+                                                ]
+                                            },
+                                            "focalPoint": {
+                                                "type": "object",
+                                                "title": "Focal point",
+                                                "description": "Point on the image that is considered to be the focal point of the image.\n\nIf not present, 50 can be used for both `x` and `y`.\n",
+                                                "properties": {
+                                                    "x": {
+                                                        "description": "Percentage on the horizontal axis.\n",
+                                                        "type": "integer",
+                                                        "minimum": 0,
+                                                        "maximum": 100
+                                                    },
+                                                    "y": {
+                                                        "description": "Percentage on the vertical axis.\n",
+                                                        "type": "integer",
+                                                        "minimum": 0,
+                                                        "maximum": 100
+                                                    }
+                                                },
+                                                "required": [
+                                                    "x",
+                                                    "y"
+                                                ]
                                             }
                                         },
                                         "required": [
-                                            "mediaType",
                                             "uri",
-                                            "filename"
-                                        ]
-                                    },
-                                    "size": {
-                                        "type": "object",
-                                        "properties": {
-                                            "width": {
-                                                "type": "integer",
-                                                "minimum": 1
-                                            },
-                                            "height": {
-                                                "type": "integer",
-                                                "minimum": 1
-                                            }
-                                        },
-                                        "required": [
-                                            "width",
-                                            "height"
-                                        ]
-                                    },
-                                    "focalPoint": {
-                                        "type": "object",
-                                        "title": "Focal point",
-                                        "description": "Point on the image that is considered to be the focal point of the image.\n\nIf not present, 50 can be used for both `x` and `y`.\n",
-                                        "properties": {
-                                            "x": {
-                                                "description": "Percentage on the horizontal axis.\n",
-                                                "type": "integer",
-                                                "minimum": 0,
-                                                "maximum": 100
-                                            },
-                                            "y": {
-                                                "description": "Percentage on the vertical axis.\n",
-                                                "type": "integer",
-                                                "minimum": 0,
-                                                "maximum": 100
-                                            }
-                                        },
-                                        "required": [
-                                            "x",
-                                            "y"
+                                            "alt",
+                                            "source",
+                                            "size"
                                         ]
                                     }
-                                },
-                                "required": [
-                                    "uri",
-                                    "alt",
-                                    "source",
-                                    "size"
                                 ]
                             }
                         },
@@ -168,32 +186,6 @@
                             ]
                         },
                         "minItems": 1
-                    },
-                    "subjects": {
-                        "description": "Episode subjects",
-                        "type": "array",
-                        "items": {
-                            "$schema": "http://json-schema.org/draft-04/schema#",
-                            "title": "Subject snippet",
-                            "type": "object",
-                            "properties": {
-                                "id": {
-                                    "$schema": "http://json-schema.org/draft-04/schema#",
-                                    "title": "eLife ID",
-                                    "type": "string",
-                                    "pattern": "^[a-z0-9-]+$"
-                                },
-                                "name": {
-                                    "description": "Name",
-                                    "type": "string",
-                                    "minLength": 1
-                                }
-                            },
-                            "required": [
-                                "id",
-                                "name"
-                            ]
-                        }
                     }
                 },
                 "required": [

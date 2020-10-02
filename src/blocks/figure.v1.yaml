@@ -1,0 +1,40 @@
+$schema: http://json-schema.org/draft-04/schema#
+title: Figure
+type: object
+properties:
+    type:
+        type: string
+        enum:
+          - figure
+    assets:
+        type: array
+        items:
+            allOf:
+              - oneOf:
+                  - allOf:
+                      - $ref: image.v1.yaml
+                      - properties:
+                            inline:
+                                enum:
+                                  - false
+                  - $ref: table.v1.yaml
+                  - $ref: video.v1.yaml
+              - properties:
+                    doi:
+                        $ref: ../misc/doi.v1.yaml
+                    label:
+                        title: Label
+                        type: string
+                        minLength: 1
+                    sourceData:
+                        title: Source data
+                        type: array
+                        items:
+                            $ref: ../misc/asset-file.v1.yaml
+                required:
+                  - id
+                  - label
+        minItems: 1
+required:
+  - type
+  - assets

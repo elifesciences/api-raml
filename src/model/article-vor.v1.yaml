@@ -5,6 +5,11 @@ allOf:
   - $ref: ../snippets/article-vor.v1.yaml
   - $ref: ../misc/article.v1.yaml
   - properties:
+        abstract:
+            type: object
+            properties:
+                doi:
+                    $ref: ../misc/doi.v1.yaml
         keywords:
             type: array
             items:
@@ -61,14 +66,11 @@ allOf:
             items:
                 $ref: ../misc/blocks-all.v1.yaml
             minItems: 1
-        ethics:
-            type: array
-            items:
-                $ref: ../blocks/paragraph.v1.yaml
-            minItems: 1
         decisionLetter:
             type: object
             properties:
+                id:
+                    $ref: ../misc/html-id.v1.yaml
                 doi:
                     $ref: ../misc/doi.v1.yaml
                 description:
@@ -88,6 +90,8 @@ allOf:
         authorResponse:
             type: object
             properties:
+                id:
+                    $ref: ../misc/html-id.v1.yaml
                 doi:
                     $ref: ../misc/doi.v1.yaml
                 content:

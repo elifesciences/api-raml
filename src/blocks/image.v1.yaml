@@ -2,36 +2,18 @@ $schema: http://json-schema.org/draft-04/schema#
 title: Image
 type: object
 allOf:
-  - $ref: '#/definitions/image'
+  - $ref: ../misc/caption.v1.yaml
   - properties:
+        id:
+            $ref: ../misc/html-id.v1.yaml
         type:
             type: string
             enum:
               - image
-        supplements:
-            type: array
-            items:
-                $ref: '#/definitions/image'
+        image:
+            $ref: ../misc/image.v1.yaml
+        inline:
+            type: boolean
     required:
       - type
-
-definitions:
-    image:
-        type: object
-        allOf:
-          - $ref: ../misc/asset.v1.yaml
-          - properties:
-                image:
-                    $ref: ../misc/image.v1.yaml
-                attribution:
-                    title: Attribution
-                    type: array
-                    items:
-                        type: string
-                sourceData:
-                    title: Source data
-                    type: array
-                    items:
-                        $ref: ../misc/asset-file.v1.yaml
-            required:
-              - image
+      - image

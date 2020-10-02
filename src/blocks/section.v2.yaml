@@ -1,0 +1,24 @@
+$schema: http://json-schema.org/draft-04/schema#
+title: Section
+type: object
+properties:
+    type:
+        type: string
+        enum:
+          - section
+    id:
+        $ref: ../misc/html-id.v1.yaml
+    title:
+        title: Text
+        type: string
+        minLength: 1
+    content:
+        description: Content
+        type: array
+        items:
+            $ref: ../misc/blocks-all.v2.yaml
+        minItems: 1
+required:
+  - type
+  - title
+  - content

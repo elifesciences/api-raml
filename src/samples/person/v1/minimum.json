@@ -1,6 +1,9 @@
 {
     "id": "rschekman",
-    "type": "leadership",
+    "type": {
+        "id": "leadership",
+        "label": "Editor-in-Chief"
+    },
     "name": {
         "preferred": "Randy Schekman",
         "index": "Schekman, Randy"

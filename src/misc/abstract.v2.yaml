@@ -1,0 +1,29 @@
+$schema: http://json-schema.org/draft-04/schema#
+title: Abstract
+type: object
+properties:
+    content:
+        type: array
+        items:
+            oneOf:
+              - properties:
+                  type:
+                      type: string
+                      enum:
+                        - section
+                  id:
+                      $ref: ../misc/html-id.v1.yaml
+                  title:
+                      title: Text
+                      type: string
+                      minLength: 1
+                  content:
+                      description: Content
+                      type: array
+                      items:
+                          $ref: ../blocks/paragraph.v1.yaml
+                      minItems: 1
+              - $ref: ../blocks/paragraph.v1.yaml
+        minItems: 1
+required:
+  - content

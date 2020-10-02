@@ -1,0 +1,19 @@
+$schema: http://json-schema.org/draft-04/schema#
+title: Profile
+type: object
+properties:
+    type:
+        type: string
+        enum:
+          - profile
+    image:
+        $ref: ../misc/image.v1.yaml
+    content:
+        type: array
+        items:
+            $ref: ../blocks/paragraph.v1.yaml
+        minItems: 1
+required:
+  - type
+  - image
+  - content

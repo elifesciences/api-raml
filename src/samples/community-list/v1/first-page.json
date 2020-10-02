@@ -7,7 +7,7 @@
             "id": "14107",
             "version": 1,
             "doi": "10.7554/eLife.14107",
-            "authorLine": "Yongjian Huang et al",
+            "authorLine": "Yongjian Huang et al.",
             "title": "Molecular basis for multimerization in the activation of the epidermal growth factor",
             "stage": "published",
             "published": "2016-03-28T00:00:00Z",
@@ -21,7 +21,7 @@
             "id": "09560",
             "version": 1,
             "doi": "10.7554/eLife.09560",
-            "authorLine": "Lee R Berger et al",
+            "authorLine": "Lee R Berger et al.",
             "title": "<i>Homo naledi</i>, a new species of the genus <i>Homo</i> from the Dinaledi Chamber, South Africa",
             "stage": "published",
             "published": "2015-09-10T00:00:00Z",
@@ -38,11 +38,11 @@
             "impactStatement": "A new hominin species has been unearthed in the Dinaledi Chamber of the Rising Star cave system in the largest assemblage of a single species of hominins yet discovered in Africa.",
             "image": {
                 "thumbnail": {
-                    "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif",
+                    "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif",
                     "alt": "",
                     "source": {
                         "mediaType": "image/jpeg",
-                        "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif/full/full/0/default.jpg",
+                        "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif/full/full/0/default.jpg",
                         "filename": "an-image.jpg"
                     },
                     "size": {
@@ -70,17 +70,17 @@
             ]
         },
         {
-            "type": "labs-experiment",
-            "number": 1,
+            "type": "labs-post",
+            "id": "80000001",
             "title": "Experimental eLife Lens search page",
             "published": "2015-04-01T11:32:47Z",
             "image": {
                 "thumbnail": {
-                    "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif",
+                    "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif",
                     "alt": "",
                     "source": {
                         "mediaType": "image/jpeg",
-                        "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif/full/full/0/default.jpg",
+                        "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif/full/full/0/default.jpg",
                         "filename": "an-image.jpg"
                     },
                     "size": {
@@ -97,11 +97,11 @@
             "published": "2016-05-27T13:19:42Z",
             "image": {
                 "thumbnail": {
-                    "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif",
+                    "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif",
                     "alt": "",
                     "source": {
                         "mediaType": "image/jpeg",
-                        "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif/full/full/0/default.jpg",
+                        "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif/full/full/0/default.jpg",
                         "filename": "an-image.jpg"
                     },
                     "size": {
@@ -125,7 +125,7 @@
             "published": "2016-08-01T00:00:00Z",
             "starts": "2016-04-22T20:00:00Z",
             "ends": "2016-04-22T21:00:00Z",
-            "timezone": "America/Seattle"
+            "timezone": "America/Los_Angeles"
         },
         {
             "type": "collection",
@@ -134,11 +134,11 @@
             "published": "2015-09-16T11:19:26Z",
             "image": {
                 "thumbnail": {
-                    "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif",
+                    "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif",
                     "alt": "",
                     "source": {
                         "mediaType": "image/jpeg",
-                        "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif/full/full/0/default.jpg",
+                        "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif/full/full/0/default.jpg",
                         "filename": "an-image.jpg"
                     },
                     "size": {
@@ -149,7 +149,10 @@
             },
             "selectedCurator": {
                 "id": "pjha",
-                "type": "senior-editor",
+                "type": {
+                    "id": "senior-editor",
+                    "label": "Senior Editor"
+                },
                 "name": {
                     "preferred": "Prabhat Jha",
                     "index": "Jha, Prabhat"

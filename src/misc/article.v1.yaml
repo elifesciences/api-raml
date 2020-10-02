@@ -4,11 +4,8 @@ type: object
 allOf:
   - $ref: ../snippets/article.v1.yaml
   - properties:
-        image:
-            type: object
-            properties:
-                banner:
-                    $ref: ../misc/image.v1.yaml
+        abstract:
+            $ref: abstract.v1.yaml
         issue:
             type: integer
             minimum: 1
@@ -64,6 +61,11 @@ allOf:
                     type: array
                     items:
                         $ref: ../misc/data-set.v1.yaml
+        ethics:
+            type: array
+            items:
+                $ref: ../blocks/paragraph.v1.yaml
+            minItems: 1
         funding:
             $ref: ../misc/funding.v1.yaml
         additionalFiles:

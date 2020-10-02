@@ -133,188 +133,325 @@
                                             },
                                             {
                                                 "$schema": "http://json-schema.org/draft-04/schema#",
-                                                "title": "Image",
-                                                "type": "object",
-                                                "allOf": [
-                                                    {
-                                                        "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/2/definitions/image"
-                                                    },
-                                                    {
-                                                        "properties": {
-                                                            "type": {
-                                                                "type": "string",
-                                                                "enum": [
-                                                                    "image"
-                                                                ]
-                                                            },
-                                                            "supplements": {
-                                                                "type": "array",
-                                                                "items": {
-                                                                    "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/2/definitions/image"
-                                                                }
-                                                            }
-                                                        },
-                                                        "required": [
-                                                            "type"
-                                                        ]
-                                                    }
-                                                ],
-                                                "definitions": {
-                                                    "image": {
-                                                        "type": "object",
-                                                        "allOf": [
-                                                            {
-                                                                "$schema": "http://json-schema.org/draft-04/schema#",
-                                                                "title": "Asset",
-                                                                "type": "object",
-                                                                "properties": {
-                                                                    "doi": {
-                                                                        "$ref": "#/allOf/1/properties/relatedContent/items/oneOf/1/allOf/0/properties/doi"
-                                                                    },
-                                                                    "id": {
-                                                                        "$ref": "#/allOf/1/properties/content/items/oneOf/1/properties/id"
-                                                                    },
-                                                                    "label": {
-                                                                        "title": "Label",
-                                                                        "type": "string",
-                                                                        "minLength": 1
-                                                                    },
-                                                                    "title": {
-                                                                        "title": "Title",
-                                                                        "type": "string",
-                                                                        "minLength": 1
-                                                                    },
-                                                                    "caption": {
-                                                                        "title": "Caption",
-                                                                        "type": "array",
-                                                                        "items": {
-                                                                            "oneOf": [
-                                                                                {
-                                                                                    "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/4"
-                                                                                },
-                                                                                {
-                                                                                    "$ref": "#/allOf/1/properties/about/items"
-                                                                                },
-                                                                                {
-                                                                                    "properties": {
-                                                                                        "type": {
-                                                                                            "type": "string",
-                                                                                            "enum": [
-                                                                                                "table"
-                                                                                            ]
-                                                                                        },
-                                                                                        "id": {
-                                                                                            "$ref": "#/allOf/1/properties/content/items/oneOf/1/properties/id"
-                                                                                        },
-                                                                                        "tables": {
-                                                                                            "type": "array",
-                                                                                            "items": {
-                                                                                                "title": "HTML table",
-                                                                                                "type": "string",
-                                                                                                "pattern": "^<table>[\\s\\S]+</table>$"
-                                                                                            }
-                                                                                        }
-                                                                                    },
-                                                                                    "additionalProperties": false
-                                                                                }
-                                                                            ]
-                                                                        },
-                                                                        "minItems": 1
-                                                                    }
-                                                                },
-                                                                "dependencies": {
-                                                                    "doi": [
-                                                                        "id"
-                                                                    ],
-                                                                    "caption": [
-                                                                        "title"
-                                                                    ],
-                                                                    "label": [
-                                                                        "title"
-                                                                    ]
-                                                                }
-                                                            },
-                                                            {
-                                                                "properties": {
-                                                                    "image": {
-                                                                        "$ref": "#/allOf/1/properties/relatedContent/items/oneOf/1/allOf/1/properties/image/properties/thumbnail"
-                                                                    },
-                                                                    "attribution": {
-                                                                        "title": "Attribution",
-                                                                        "type": "array",
-                                                                        "items": {
-                                                                            "type": "string"
-                                                                        }
-                                                                    },
-                                                                    "sourceData": {
-                                                                        "title": "Source data",
-                                                                        "type": "array",
-                                                                        "items": {
-                                                                            "$schema": "http://json-schema.org/draft-04/schema#",
-                                                                            "title": "Asset file",
-                                                                            "type": "object",
-                                                                            "allOf": [
-                                                                                {
-                                                                                    "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/2/definitions/image/allOf/0"
-                                                                                },
-                                                                                {
-                                                                                    "required": [
-                                                                                        "id",
-                                                                                        "title"
-                                                                                    ]
-                                                                                },
-                                                                                {
-                                                                                    "$ref": "#/allOf/1/properties/relatedContent/items/oneOf/1/allOf/1/properties/image/properties/thumbnail/properties/source"
-                                                                                }
-                                                                            ]
-                                                                        }
-                                                                    }
-                                                                },
-                                                                "required": [
-                                                                    "image"
-                                                                ]
-                                                            }
-                                                        ]
-                                                    }
-                                                }
-                                            },
-                                            {
-                                                "$schema": "http://json-schema.org/draft-04/schema#",
-                                                "title": "List",
+                                                "title": "Excerpt",
                                                 "type": "object",
                                                 "properties": {
                                                     "type": {
                                                         "type": "string",
                                                         "enum": [
-                                                            "list"
+                                                            "excerpt"
                                                         ]
                                                     },
-                                                    "prefix": {
-                                                        "type": "string",
-                                                        "enum": [
-                                                            "alpha-lower",
-                                                            "alpha-upper",
-                                                            "bullet",
-                                                            "none",
-                                                            "number",
-                                                            "roman-lower",
-                                                            "roman-upper"
-                                                        ]
-                                                    },
-                                                    "items": {
-                                                        "description": "List items",
+                                                    "content": {
+                                                        "description": "Content",
                                                         "type": "array",
                                                         "items": {
                                                             "oneOf": [
                                                                 {
-                                                                    "type": "string"
+                                                                    "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/1"
                                                                 },
                                                                 {
-                                                                    "type": "array",
-                                                                    "items": {
-                                                                        "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0"
+                                                                    "$schema": "http://json-schema.org/draft-04/schema#",
+                                                                    "title": "List",
+                                                                    "type": "object",
+                                                                    "properties": {
+                                                                        "type": {
+                                                                            "type": "string",
+                                                                            "enum": [
+                                                                                "list"
+                                                                            ]
+                                                                        },
+                                                                        "prefix": {
+                                                                            "type": "string",
+                                                                            "enum": [
+                                                                                "alpha-lower",
+                                                                                "alpha-upper",
+                                                                                "bullet",
+                                                                                "none",
+                                                                                "number",
+                                                                                "roman-lower",
+                                                                                "roman-upper"
+                                                                            ]
+                                                                        },
+                                                                        "items": {
+                                                                            "description": "List items",
+                                                                            "type": "array",
+                                                                            "items": {
+                                                                                "oneOf": [
+                                                                                    {
+                                                                                        "type": "string"
+                                                                                    },
+                                                                                    {
+                                                                                        "type": "array",
+                                                                                        "items": {
+                                                                                            "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0"
+                                                                                        },
+                                                                                        "minItems": 1
+                                                                                    }
+                                                                                ]
+                                                                            },
+                                                                            "minItems": 1
+                                                                        }
                                                                     },
-                                                                    "minItems": 1
+                                                                    "required": [
+                                                                        "type",
+                                                                        "prefix",
+                                                                        "items"
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    "$schema": "http://json-schema.org/draft-04/schema#",
+                                                                    "title": "MathML",
+                                                                    "type": "object",
+                                                                    "properties": {
+                                                                        "type": {
+                                                                            "type": "string",
+                                                                            "enum": [
+                                                                                "mathml"
+                                                                            ]
+                                                                        },
+                                                                        "id": {
+                                                                            "$ref": "#/allOf/1/properties/content/items/oneOf/1/properties/id"
+                                                                        },
+                                                                        "label": {
+                                                                            "type": "string"
+                                                                        },
+                                                                        "mathml": {
+                                                                            "title": "MathML",
+                                                                            "type": "string",
+                                                                            "pattern": "^<math>[\\s\\S]+</math>$"
+                                                                        }
+                                                                    },
+                                                                    "required": [
+                                                                        "type",
+                                                                        "mathml"
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    "$ref": "#/allOf/1/properties/about/items"
+                                                                },
+                                                                {
+                                                                    "$schema": "http://json-schema.org/draft-04/schema#",
+                                                                    "title": "Table",
+                                                                    "type": "object",
+                                                                    "allOf": [
+                                                                        {
+                                                                            "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/12/allOf/0"
+                                                                        },
+                                                                        {
+                                                                            "$schema": "http://json-schema.org/draft-04/schema#",
+                                                                            "title": "Has attribution",
+                                                                            "type": "object",
+                                                                            "properties": {
+                                                                                "attribution": {
+                                                                                    "title": "Attribution",
+                                                                                    "type": "array",
+                                                                                    "items": {
+                                                                                        "type": "string"
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "properties": {
+                                                                                "id": {
+                                                                                    "$ref": "#/allOf/1/properties/content/items/oneOf/1/properties/id"
+                                                                                },
+                                                                                "type": {
+                                                                                    "type": "string",
+                                                                                    "enum": [
+                                                                                        "table"
+                                                                                    ]
+                                                                                },
+                                                                                "tables": {
+                                                                                    "type": "array",
+                                                                                    "items": {
+                                                                                        "title": "HTML table",
+                                                                                        "type": "string",
+                                                                                        "pattern": "^<table>[\\s\\S]+</table>$"
+                                                                                    }
+                                                                                },
+                                                                                "footnotes": {
+                                                                                    "type": "array",
+                                                                                    "items": {
+                                                                                        "$schema": "http://json-schema.org/draft-04/schema#",
+                                                                                        "title": "Footnote",
+                                                                                        "type": "object",
+                                                                                        "properties": {
+                                                                                            "id": {
+                                                                                                "$ref": "#/allOf/1/properties/content/items/oneOf/1/properties/id"
+                                                                                            },
+                                                                                            "label": {
+                                                                                                "type": "string",
+                                                                                                "minLength": 1
+                                                                                            },
+                                                                                            "text": {
+                                                                                                "type": "array",
+                                                                                                "items": {
+                                                                                                    "oneOf": [
+                                                                                                        {
+                                                                                                            "$ref": "#/allOf/1/properties/about/items"
+                                                                                                        },
+                                                                                                        {
+                                                                                                            "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/2/properties/content/items/oneOf/2"
+                                                                                                        }
+                                                                                                    ]
+                                                                                                },
+                                                                                                "minItems": 1
+                                                                                            }
+                                                                                        },
+                                                                                        "required": [
+                                                                                            "text"
+                                                                                        ],
+                                                                                        "dependencies": {
+                                                                                            "id": [
+                                                                                                "label"
+                                                                                            ],
+                                                                                            "label": [
+                                                                                                "id"
+                                                                                            ]
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            },
+                                                                            "required": [
+                                                                                "type",
+                                                                                "tables"
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        },
+                                                        "minItems": 1
+                                                    },
+                                                    "cite": {
+                                                        "title": "Citation",
+                                                        "type": "string"
+                                                    }
+                                                },
+                                                "required": [
+                                                    "type",
+                                                    "content"
+                                                ]
+                                            },
+                                            {
+                                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                                "title": "Figure",
+                                                "type": "object",
+                                                "properties": {
+                                                    "type": {
+                                                        "type": "string",
+                                                        "enum": [
+                                                            "figure"
+                                                        ]
+                                                    },
+                                                    "assets": {
+                                                        "type": "array",
+                                                        "items": {
+                                                            "allOf": [
+                                                                {
+                                                                    "oneOf": [
+                                                                        {
+                                                                            "allOf": [
+                                                                                {
+                                                                                    "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/4"
+                                                                                },
+                                                                                {
+                                                                                    "properties": {
+                                                                                        "inline": {
+                                                                                            "enum": [
+                                                                                                false
+                                                                                            ]
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            ]
+                                                                        },
+                                                                        {
+                                                                            "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/2/properties/content/items/oneOf/4"
+                                                                        },
+                                                                        {
+                                                                            "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/11"
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    "properties": {
+                                                                        "doi": {
+                                                                            "$ref": "#/allOf/1/properties/relatedContent/items/oneOf/1/allOf/0/properties/doi"
+                                                                        },
+                                                                        "label": {
+                                                                            "title": "Label",
+                                                                            "type": "string",
+                                                                            "minLength": 1
+                                                                        },
+                                                                        "sourceData": {
+                                                                            "title": "Source data",
+                                                                            "type": "array",
+                                                                            "items": {
+                                                                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                                                                "title": "Asset file",
+                                                                                "type": "object",
+                                                                                "allOf": [
+                                                                                    {
+                                                                                        "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/12/allOf/0"
+                                                                                    },
+                                                                                    {
+                                                                                        "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/2/properties/content/items/oneOf/4/allOf/1"
+                                                                                    },
+                                                                                    {
+                                                                                        "properties": {
+                                                                                            "id": {
+                                                                                                "$ref": "#/allOf/1/properties/content/items/oneOf/1/properties/id"
+                                                                                            },
+                                                                                            "doi": {
+                                                                                                "$ref": "#/allOf/1/properties/relatedContent/items/oneOf/1/allOf/0/properties/doi"
+                                                                                            },
+                                                                                            "label": {
+                                                                                                "title": "Label",
+                                                                                                "type": "string",
+                                                                                                "minLength": 1
+                                                                                            }
+                                                                                        },
+                                                                                        "required": [
+                                                                                            "id",
+                                                                                            "title"
+                                                                                        ]
+                                                                                    },
+                                                                                    {
+                                                                                        "$schema": "http://json-schema.org/draft-04/schema#",
+                                                                                        "title": "File",
+                                                                                        "type": "object",
+                                                                                        "properties": {
+                                                                                            "mediaType": {
+                                                                                                "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/11/allOf/2/properties/sources/items/properties/mediaType/allOf/0"
+                                                                                            },
+                                                                                            "uri": {
+                                                                                                "title": "Source data URI",
+                                                                                                "type": "string",
+                                                                                                "format": "uri"
+                                                                                            },
+                                                                                            "filename": {
+                                                                                                "title": "Filename",
+                                                                                                "type": "string",
+                                                                                                "pattern": "^[A-Za-z0-9_. ()-]+\\.[a-z0-9]+$"
+                                                                                            }
+                                                                                        },
+                                                                                        "required": [
+                                                                                            "mediaType",
+                                                                                            "uri",
+                                                                                            "filename"
+                                                                                        ]
+                                                                                    }
+                                                                                ]
+                                                                            }
+                                                                        }
+                                                                    },
+                                                                    "required": [
+                                                                        "id",
+                                                                        "label"
+                                                                    ]
                                                                 }
                                                             ]
                                                         },
@@ -323,37 +460,47 @@
                                                 },
                                                 "required": [
                                                     "type",
-                                                    "prefix",
-                                                    "items"
+                                                    "assets"
                                                 ]
                                             },
                                             {
                                                 "$schema": "http://json-schema.org/draft-04/schema#",
-                                                "title": "MathML",
+                                                "title": "Image",
                                                 "type": "object",
-                                                "properties": {
-                                                    "type": {
-                                                        "type": "string",
-                                                        "enum": [
-                                                            "mathml"
+                                                "allOf": [
+                                                    {
+                                                        "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/12/allOf/0"
+                                                    },
+                                                    {
+                                                        "properties": {
+                                                            "id": {
+                                                                "$ref": "#/allOf/1/properties/content/items/oneOf/1/properties/id"
+                                                            },
+                                                            "type": {
+                                                                "type": "string",
+                                                                "enum": [
+                                                                    "image"
+                                                                ]
+                                                            },
+                                                            "image": {
+                                                                "$ref": "#/allOf/1/properties/relatedContent/items/oneOf/1/allOf/1/properties/image/properties/thumbnail"
+                                                            },
+                                                            "inline": {
+                                                                "type": "boolean"
+                                                            }
+                                                        },
+                                                        "required": [
+                                                            "type",
+                                                            "image"
                                                         ]
-                                                    },
-                                                    "id": {
-                                                        "$ref": "#/allOf/1/properties/content/items/oneOf/1/properties/id"
-                                                    },
-                                                    "label": {
-                                                        "type": "string"
-                                                    },
-                                                    "mathml": {
-                                                        "title": "MathML",
-                                                        "type": "string",
-                                                        "pattern": "^<math>[\\s\\S]+</math>$"
                                                     }
-                                                },
-                                                "required": [
-                                                    "type",
-                                                    "mathml"
                                                 ]
+                                            },
+                                            {
+                                                "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/2/properties/content/items/oneOf/1"
+                                            },
+                                            {
+                                                "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/2/properties/content/items/oneOf/2"
                                             },
                                             {
                                                 "$ref": "#/allOf/1/properties/about/items"
@@ -419,85 +566,7 @@
                                                 ]
                                             },
                                             {
-                                                "$schema": "http://json-schema.org/draft-04/schema#",
-                                                "title": "Table",
-                                                "type": "object",
-                                                "allOf": [
-                                                    {
-                                                        "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/2/definitions/image/allOf/0"
-                                                    },
-                                                    {
-                                                        "properties": {
-                                                            "type": {
-                                                                "type": "string",
-                                                                "enum": [
-                                                                    "table"
-                                                                ]
-                                                            },
-                                                            "tables": {
-                                                                "type": "array",
-                                                                "items": {
-                                                                    "title": "HTML table",
-                                                                    "type": "string",
-                                                                    "pattern": "^<table>[\\s\\S]+</table>$"
-                                                                }
-                                                            },
-                                                            "footnotes": {
-                                                                "type": "array",
-                                                                "items": {
-                                                                    "$schema": "http://json-schema.org/draft-04/schema#",
-                                                                    "title": "Footnote",
-                                                                    "type": "object",
-                                                                    "properties": {
-                                                                        "id": {
-                                                                            "$ref": "#/allOf/1/properties/content/items/oneOf/1/properties/id"
-                                                                        },
-                                                                        "label": {
-                                                                            "type": "string",
-                                                                            "minLength": 1
-                                                                        },
-                                                                        "text": {
-                                                                            "type": "array",
-                                                                            "items": {
-                                                                                "oneOf": [
-                                                                                    {
-                                                                                        "$ref": "#/allOf/1/properties/about/items"
-                                                                                    },
-                                                                                    {
-                                                                                        "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/4"
-                                                                                    }
-                                                                                ]
-                                                                            },
-                                                                            "minItems": 1
-                                                                        }
-                                                                    },
-                                                                    "required": [
-                                                                        "text"
-                                                                    ],
-                                                                    "dependencies": {
-                                                                        "id": [
-                                                                            "label"
-                                                                        ],
-                                                                        "label": [
-                                                                            "id"
-                                                                        ]
-                                                                    }
-                                                                }
-                                                            },
-                                                            "sourceData": {
-                                                                "title": "Source data",
-                                                                "type": "array",
-                                                                "items": {
-                                                                    "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/2/definitions/image/allOf/1/properties/sourceData/items"
-                                                                }
-                                                            }
-                                                        },
-                                                        "required": [
-                                                            "type",
-                                                            "tables"
-                                                        ]
-                                                    }
-                                                ]
+                                                "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/2/properties/content/items/oneOf/4"
                                             },
                                             {
                                                 "$schema": "http://json-schema.org/draft-04/schema#",
@@ -505,10 +574,16 @@
                                                 "type": "object",
                                                 "allOf": [
                                                     {
-                                                        "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/2/definitions/image/allOf/0"
+                                                        "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/12/allOf/0"
+                                                    },
+                                                    {
+                                                        "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/2/properties/content/items/oneOf/4/allOf/1"
                                                     },
                                                     {
                                                         "properties": {
+                                                            "id": {
+                                                                "$ref": "#/allOf/1/properties/content/items/oneOf/1/properties/id"
+                                                            },
                                                             "type": {
                                                                 "type": "string",
                                                                 "enum": [
@@ -523,7 +598,10 @@
                                                                         "mediaType": {
                                                                             "allOf": [
                                                                                 {
-                                                                                    "$ref": "#/allOf/1/properties/relatedContent/items/oneOf/1/allOf/1/properties/image/properties/thumbnail/properties/source/properties/mediaType"
+                                                                                    "$schema": "http://json-schema.org/draft-04/schema#",
+                                                                                    "title": "Media type",
+                                                                                    "type": "string",
+                                                                                    "pattern": "^([a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+/[a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+)(; *[a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+=(([a-zA-Z0-9\\.\\-]+)|(\".+\")))*$"
                                                                                 },
                                                                                 {
                                                                                     "pattern": "^video/"
@@ -566,13 +644,6 @@
                                                                 "title": "Whether to loop the video.",
                                                                 "type": "boolean",
                                                                 "default": false
-                                                            },
-                                                            "sourceData": {
-                                                                "title": "Source data",
-                                                                "type": "array",
-                                                                "items": {
-                                                                    "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/2/definitions/image/allOf/1/properties/sourceData/items"
-                                                                }
                                                             }
                                                         },
                                                         "required": [
@@ -588,33 +659,86 @@
                                                 "$schema": "http://json-schema.org/draft-04/schema#",
                                                 "title": "YouTube video",
                                                 "type": "object",
-                                                "properties": {
-                                                    "type": {
-                                                        "type": "string",
-                                                        "enum": [
-                                                            "youtube"
+                                                "allOf": [
+                                                    {
+                                                        "$schema": "http://json-schema.org/draft-04/schema#",
+                                                        "title": "Has caption",
+                                                        "type": "object",
+                                                        "properties": {
+                                                            "title": {
+                                                                "title": "Title",
+                                                                "type": "string",
+                                                                "minLength": 1
+                                                            },
+                                                            "caption": {
+                                                                "title": "Caption",
+                                                                "type": "array",
+                                                                "items": {
+                                                                    "oneOf": [
+                                                                        {
+                                                                            "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/2/properties/content/items/oneOf/2"
+                                                                        },
+                                                                        {
+                                                                            "$ref": "#/allOf/1/properties/about/items"
+                                                                        },
+                                                                        {
+                                                                            "properties": {
+                                                                                "type": {
+                                                                                    "type": "string",
+                                                                                    "enum": [
+                                                                                        "table"
+                                                                                    ]
+                                                                                },
+                                                                                "id": {
+                                                                                    "$ref": "#/allOf/1/properties/content/items/oneOf/1/properties/id"
+                                                                                },
+                                                                                "tables": {
+                                                                                    "type": "array",
+                                                                                    "items": {
+                                                                                        "title": "HTML table",
+                                                                                        "type": "string",
+                                                                                        "pattern": "^<table>[\\s\\S]+</table>$"
+                                                                                    }
+                                                                                }
+                                                                            },
+                                                                            "additionalProperties": false
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                "minItems": 1
+                                                            }
+                                                        }
+                                                    },
+                                                    {
+                                                        "properties": {
+                                                            "type": {
+                                                                "type": "string",
+                                                                "enum": [
+                                                                    "youtube"
+                                                                ]
+                                                            },
+                                                            "id": {
+                                                                "title": "Video ID",
+                                                                "type": "string"
+                                                            },
+                                                            "width": {
+                                                                "title": "Width",
+                                                                "type": "integer",
+                                                                "minimum": 1
+                                                            },
+                                                            "height": {
+                                                                "title": "Height",
+                                                                "type": "integer",
+                                                                "minimum": 1
+                                                            }
+                                                        },
+                                                        "required": [
+                                                            "type",
+                                                            "id",
+                                                            "width",
+                                                            "height"
                                                         ]
-                                                    },
-                                                    "id": {
-                                                        "title": "Video ID",
-                                                        "type": "string"
-                                                    },
-                                                    "width": {
-                                                        "title": "Width",
-                                                        "type": "integer",
-                                                        "minimum": 1
-                                                    },
-                                                    "height": {
-                                                        "title": "Height",
-                                                        "type": "integer",
-                                                        "minimum": 1
                                                     }
-                                                },
-                                                "required": [
-                                                    "type",
-                                                    "id",
-                                                    "width",
-                                                    "height"
                                                 ]
                                             }
                                         ]
@@ -760,10 +884,12 @@
                                                     "insight",
                                                     "research-advance",
                                                     "research-article",
-                                                    "research-exchange",
+                                                    "research-communication",
                                                     "retraction",
                                                     "registered-report",
                                                     "replication-study",
+                                                    "review-article",
+                                                    "scientific-correspondence",
                                                     "short-report",
                                                     "tools-resources"
                                                 ]
@@ -775,7 +901,7 @@
                                                 "pattern": "^10[.][0-9]{4,}[^\\s\"/<>]*/[^\\s\"]+$"
                                             },
                                             "authorLine": {
-                                                "description": "For example:\n  - Ian T Baldwin\n  - Randy Schekman, Mark Patterson\n  - Lee R Berger et al\n",
+                                                "description": "For example:\n  - Ian T Baldwin\n  - Randy Schekman, Mark Patterson\n  - Lee R Berger et al.\n",
                                                 "type": "string",
                                                 "minLength": 1
                                             },
@@ -832,21 +958,6 @@
                                                     "minLength": 1
                                                 },
                                                 "uniqueItems": true
-                                            },
-                                            "abstract": {
-                                                "type": "object",
-                                                "properties": {
-                                                    "content": {
-                                                        "type": "array",
-                                                        "items": {
-                                                            "$ref": "#/allOf/1/properties/about/items"
-                                                        },
-                                                        "minItems": 1
-                                                    }
-                                                },
-                                                "required": [
-                                                    "content"
-                                                ]
                                             }
                                         },
                                         "required": [
@@ -877,14 +988,6 @@
                                                 "type": "string",
                                                 "format": "uri"
                                             },
-                                            "abstract": {
-                                                "type": "object",
-                                                "properties": {
-                                                    "doi": {
-                                                        "$ref": "#/allOf/1/properties/relatedContent/items/oneOf/1/allOf/0/properties/doi"
-                                                    }
-                                                }
-                                            },
                                             "image": {
                                                 "type": "object",
                                                 "properties": {
@@ -892,91 +995,73 @@
                                                         "$schema": "http://json-schema.org/draft-04/schema#",
                                                         "title": "IIIF image",
                                                         "type": "object",
-                                                        "properties": {
-                                                            "uri": {
-                                                                "title": "IIIF Image",
-                                                                "type": "string",
-                                                                "format": "uri",
-                                                                "pattern": "^https://"
+                                                        "allOf": [
+                                                            {
+                                                                "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/2/properties/content/items/oneOf/4/allOf/1"
                                                             },
-                                                            "alt": {
-                                                                "title": "Alternative text",
-                                                                "type": "string"
-                                                            },
-                                                            "source": {
-                                                                "$schema": "http://json-schema.org/draft-04/schema#",
-                                                                "title": "File",
-                                                                "type": "object",
+                                                            {
                                                                 "properties": {
-                                                                    "mediaType": {
-                                                                        "$schema": "http://json-schema.org/draft-04/schema#",
-                                                                        "title": "Media type",
-                                                                        "type": "string",
-                                                                        "pattern": "^([a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+/[a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+)(; *[a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+=(([a-zA-Z0-9\\.\\-]+)|(\".+\")))*$"
-                                                                    },
                                                                     "uri": {
-                                                                        "title": "Source data URI",
+                                                                        "title": "IIIF Image",
                                                                         "type": "string",
-                                                                        "format": "uri"
+                                                                        "format": "uri",
+                                                                        "pattern": "^https://[^/]+(?:/[^?#\\[\\]@]+)?/[^/?#\\[\\]@]+$"
                                                                     },
-                                                                    "filename": {
-                                                                        "title": "Filename",
-                                                                        "type": "string",
-                                                                        "pattern": "^[A-Za-z0-9_. ()-]+\\.[a-z0-9]+$"
+                                                                    "alt": {
+                                                                        "title": "Alternative text",
+                                                                        "type": "string"
+                                                                    },
+                                                                    "source": {
+                                                                        "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/3/properties/assets/items/allOf/1/properties/sourceData/items/allOf/3"
+                                                                    },
+                                                                    "size": {
+                                                                        "type": "object",
+                                                                        "properties": {
+                                                                            "width": {
+                                                                                "type": "integer",
+                                                                                "minimum": 1
+                                                                            },
+                                                                            "height": {
+                                                                                "type": "integer",
+                                                                                "minimum": 1
+                                                                            }
+                                                                        },
+                                                                        "required": [
+                                                                            "width",
+                                                                            "height"
+                                                                        ]
+                                                                    },
+                                                                    "focalPoint": {
+                                                                        "type": "object",
+                                                                        "title": "Focal point",
+                                                                        "description": "Point on the image that is considered to be the focal point of the image.\n\nIf not present, 50 can be used for both `x` and `y`.\n",
+                                                                        "properties": {
+                                                                            "x": {
+                                                                                "description": "Percentage on the horizontal axis.\n",
+                                                                                "type": "integer",
+                                                                                "minimum": 0,
+                                                                                "maximum": 100
+                                                                            },
+                                                                            "y": {
+                                                                                "description": "Percentage on the vertical axis.\n",
+                                                                                "type": "integer",
+                                                                                "minimum": 0,
+                                                                                "maximum": 100
+                                                                            }
+                                                                        },
+                                                                        "required": [
+                                                                            "x",
+                                                                            "y"
+                                                                        ]
                                                                     }
                                                                 },
                                                                 "required": [
-                                                                    "mediaType",
                                                                     "uri",
-                                                                    "filename"
-                                                                ]
-                                                            },
-                                                            "size": {
-                                                                "type": "object",
-                                                                "properties": {
-                                                                    "width": {
-                                                                        "type": "integer",
-                                                                        "minimum": 1
-                                                                    },
-                                                                    "height": {
-                                                                        "type": "integer",
-                                                                        "minimum": 1
-                                                                    }
-                                                                },
-                                                                "required": [
-                                                                    "width",
-                                                                    "height"
-                                                                ]
-                                                            },
-                                                            "focalPoint": {
-                                                                "type": "object",
-                                                                "title": "Focal point",
-                                                                "description": "Point on the image that is considered to be the focal point of the image.\n\nIf not present, 50 can be used for both `x` and `y`.\n",
-                                                                "properties": {
-                                                                    "x": {
-                                                                        "description": "Percentage on the horizontal axis.\n",
-                                                                        "type": "integer",
-                                                                        "minimum": 0,
-                                                                        "maximum": 100
-                                                                    },
-                                                                    "y": {
-                                                                        "description": "Percentage on the vertical axis.\n",
-                                                                        "type": "integer",
-                                                                        "minimum": 0,
-                                                                        "maximum": 100
-                                                                    }
-                                                                },
-                                                                "required": [
-                                                                    "x",
-                                                                    "y"
+                                                                    "alt",
+                                                                    "source",
+                                                                    "size"
                                                                 ]
                                                             }
-                                                        },
-                                                        "required": [
-                                                            "uri",
-                                                            "alt",
-                                                            "source",
-                                                            "size"
                                                         ]
                                                     }
                                                 },

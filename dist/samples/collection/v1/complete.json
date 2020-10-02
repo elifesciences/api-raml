@@ -1,17 +1,16 @@
 {
     "id": "1",
     "title": "Tropical disease",
-    "subTitle": "A selection of papers",
-    "impactStatement": "eLife has published papers on many tropical diseases, including malaria, Ebola, leishmaniases, Dengue and African sleeping sickness. The articles below have been selected by eLife editors to give a flavour of the breadth of research on tropical diseases published by the journal.",
+    "impactStatement": "eLife has published papers on many tropical diseases, including malaria, Ebola, leishmaniases, Dengue and African sleeping sickness.",
     "published": "2015-09-16T11:19:26Z",
     "updated": "2015-09-17T11:19:26Z",
     "image": {
         "banner": {
-            "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif",
+            "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif",
             "alt": "",
             "source": {
                 "mediaType": "image/jpeg",
-                "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif/full/full/0/default.jpg",
+                "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif/full/full/0/default.jpg",
                 "filename": "an-image.jpg"
             },
             "size": {
@@ -24,11 +23,11 @@
             }
         },
         "thumbnail": {
-            "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif",
+            "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif",
             "alt": "",
             "source": {
                 "mediaType": "image/jpeg",
-                "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif/full/full/0/default.jpg",
+                "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif/full/full/0/default.jpg",
                 "filename": "an-image.jpg"
             },
             "size": {
@@ -53,7 +52,10 @@
     ],
     "selectedCurator": {
         "id": "pjha",
-        "type": "senior-editor",
+        "type": {
+            "id": "senior-editor",
+            "label": "Senior Editor"
+        },
         "name": {
             "preferred": "Prabhat Jha",
             "index": "Jha, Prabhat"
@@ -63,7 +65,10 @@
     "curators": [
         {
             "id": "bcooper",
-            "type": "reviewing-editor",
+            "type": {
+                "id": "reviewing-editor",
+                "label": "Reviewing Editor"
+            },
             "name": {
                 "preferred": "Ben Cooper",
                 "index": "Cooper, Ben"
@@ -71,11 +76,20 @@
         },
         {
             "id": "pjha",
-            "type": "senior-editor",
+            "type": {
+                "id": "senior-editor",
+                "label": "Senior Editor"
+            },
             "name": {
                 "preferred": "Prabhat Jha",
                 "index": "Jha, Prabhat"
             }
+        }
+    ],
+    "summary": [
+        {
+            "type": "paragraph",
+            "text": "eLife has published papers on many tropical diseases, including malaria, Ebola, leishmaniases, Dengue and African sleeping sickness. The articles below have been selected by eLife editors to give a flavour of the breadth of research on tropical diseases published by the journal."
         }
     ],
     "content": [
@@ -85,7 +99,7 @@
             "id": "09560",
             "version": 1,
             "doi": "10.7554/eLife.09560",
-            "authorLine": "Lee R Berger et al",
+            "authorLine": "Lee R Berger et al.",
             "title": "<i>Homo naledi</i>, a new species of the genus <i>Homo</i> from the Dinaledi Chamber, South Africa",
             "stage": "published",
             "published": "2015-09-10T00:00:00Z",
@@ -102,11 +116,11 @@
             "impactStatement": "A new hominin species has been unearthed in the Dinaledi Chamber of the Rising Star cave system in the largest assemblage of a single species of hominins yet discovered in Africa.",
             "image": {
                 "thumbnail": {
-                    "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif",
+                    "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif",
                     "alt": "",
                     "source": {
                         "mediaType": "image/jpeg",
-                        "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif/full/full/0/default.jpg",
+                        "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif/full/full/0/default.jpg",
                         "filename": "an-image.jpg"
                     },
                     "size": {
@@ -150,7 +164,7 @@
             "id": "14107",
             "version": 1,
             "doi": "10.7554/eLife.14107",
-            "authorLine": "Yongjian Huang et al",
+            "authorLine": "Yongjian Huang et al.",
             "title": "Molecular basis for multimerization in the activation of the epidermal growth factor",
             "stage": "published",
             "published": "2016-03-28T00:00:00Z",
@@ -166,11 +180,11 @@
             "published": "2016-05-27T13:19:42Z",
             "image": {
                 "thumbnail": {
-                    "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif",
+                    "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif",
                     "alt": "",
                     "source": {
                         "mediaType": "image/jpeg",
-                        "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif/full/full/0/default.jpg",
+                        "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif/full/full/0/default.jpg",
                         "filename": "an-image.jpg"
                     },
                     "size": {

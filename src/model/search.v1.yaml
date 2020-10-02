@@ -44,8 +44,8 @@ properties:
                                 type:
                                     type: string
                                     enum:
-                                      - labs-experiment
-                          - $ref: ../snippets/labs-experiment.v1.yaml
+                                      - labs-post
+                          - $ref: ../snippets/labs-post.v1.yaml
                       - allOf:
                           - properties:
                                 type:
@@ -79,7 +79,7 @@ properties:
                 type: integer
                 minimum: 0
             editorial:
-                description: Number of editoral articles in the result set
+                description: Number of editorial articles in the result set
                 type: integer
                 minimum: 0
             feature:
@@ -98,8 +98,8 @@ properties:
                 description: Number of research articles in the result set
                 type: integer
                 minimum: 0
-            research-exchange:
-                description: Number of research exchanges in the result set
+            research-communication:
+                description: Number of research communication articles in the result set
                 type: integer
                 minimum: 0
             retraction:
@@ -112,6 +112,14 @@ properties:
                 minimum: 0
             replication-study:
                 description: Number of replication studies in the result set
+                type: integer
+                minimum: 0
+            review-article:
+                description: Number of review articles in the result set
+                type: integer
+                minimum: 0
+            scientific-correspondence:
+                description: Number of scientific correspondence articles in the result set
                 type: integer
                 minimum: 0
             short-report:
@@ -134,8 +142,8 @@ properties:
                 description: Number of interviews in the result set
                 type: integer
                 minimum: 0
-            labs-experiment:
-                description: Number of Labs experiments in the result set
+            labs-post:
+                description: Number of Labs posts in the result set
                 type: integer
                 minimum: 0
             podcast-episode:
@@ -149,16 +157,18 @@ properties:
           - insight
           - research-advance
           - research-article
-          - research-exchange
+          - research-communication
           - retraction
           - registered-report
           - replication-study
+          - review-article
+          - scientific-correspondence
           - short-report
           - tools-resources
           - blog-article
           - collection
           - interview
-          - labs-experiment
+          - labs-post
           - podcast-episode
 required:
   - total

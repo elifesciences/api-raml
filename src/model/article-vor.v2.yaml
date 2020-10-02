@@ -1,0 +1,108 @@
+$schema: http://json-schema.org/draft-04/schema#
+title: Article VoR
+type: object
+allOf:
+  - $ref: ../snippets/article-vor.v1.yaml
+  - $ref: ../misc/article.v2.yaml
+  - properties:
+        abstract:
+            type: object
+            properties:
+                doi:
+                    $ref: ../misc/doi.v1.yaml
+        keywords:
+            type: array
+            items:
+                type: string
+                minLength: 1
+        digest:
+            type: object
+            properties:
+                doi:
+                    $ref: ../misc/doi.v1.yaml
+                content:
+                    type: array
+                    items:
+                        $ref: ../blocks/paragraph.v1.yaml
+                    minItems: 1
+            required:
+              - doi
+              - content
+        body:
+            type: array
+            items:
+                allOf:
+                  - $ref: ../blocks/section.v2.yaml
+                  - required:
+                      - id
+            minItems: 1
+        references:
+            type: array
+            items:
+                $ref: ../misc/reference.v1.yaml
+        appendices:
+            type: array
+            items:
+                type: object
+                properties:
+                    id:
+                        $ref: ../misc/html-id.v1.yaml
+                    doi:
+                        $ref: ../misc/doi.v1.yaml
+                    title:
+                        type: string
+                        minLength: 1
+                    content:
+                        type: array
+                        items:
+                            $ref: ../misc/blocks-all.v2.yaml
+                        minItems: 1
+                required:
+                  - id
+                  - title
+                  - content
+        acknowledgements:
+            type: array
+            items:
+                $ref: ../misc/blocks-all.v2.yaml
+            minItems: 1
+        decisionLetter:
+            type: object
+            properties:
+                id:
+                    $ref: ../misc/html-id.v1.yaml
+                doi:
+                    $ref: ../misc/doi.v1.yaml
+                description:
+                    type: array
+                    items:
+                        $ref: ../blocks/paragraph.v1.yaml
+                    minItems: 1
+                content:
+                    type: array
+                    items:
+                        $ref: ../misc/blocks-all.v2.yaml
+                    minItems: 1
+            required:
+              - doi
+              - description
+              - content
+        authorResponse:
+            type: object
+            properties:
+                id:
+                    $ref: ../misc/html-id.v1.yaml
+                doi:
+                    $ref: ../misc/doi.v1.yaml
+                content:
+                    type: array
+                    items:
+                        $ref: ../misc/blocks-all.v2.yaml
+                    minItems: 1
+            required:
+              - doi
+              - content
+    required:
+      - body
+    dependencies:
+        authorResponse: [decisionLetter]

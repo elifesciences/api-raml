@@ -7,6 +7,7 @@ var recursive = require('recursive-readdir');
 var refParser = require('json-schema-ref-parser');
 
 fs.removeSync('./dist');
+
 fs.mkdirsSync('./dist/model');
 fs.mkdirsSync('./dist/samples');
 fs.mkdirsSync('./dist/styles');

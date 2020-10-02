@@ -2,8 +2,11 @@ $schema: http://json-schema.org/draft-04/schema#
 title: Video
 type: object
 allOf:
-  - $ref: ../misc/asset.v1.yaml
+  - $ref: ../misc/caption.v1.yaml
+  - $ref: ../misc/attribution.v1.yaml
   - properties:
+        id:
+            $ref: ../misc/html-id.v1.yaml
         type:
             type: string
             enum:
@@ -44,11 +47,6 @@ allOf:
             title: Whether to loop the video.
             type: boolean
             default: false
-        sourceData:
-            title: Source data
-            type: array
-            items:
-                $ref: ../misc/asset-file.v1.yaml
     required:
       - type
       - sources

@@ -32,10 +32,12 @@
                                 "insight",
                                 "research-advance",
                                 "research-article",
-                                "research-exchange",
+                                "research-communication",
                                 "retraction",
                                 "registered-report",
                                 "replication-study",
+                                "review-article",
+                                "scientific-correspondence",
                                 "short-report",
                                 "tools-resources"
                             ]
@@ -47,7 +49,7 @@
                             "pattern": "^10[.][0-9]{4,}[^\\s\"/<>]*/[^\\s\"]+$"
                         },
                         "authorLine": {
-                            "description": "For example:\n  - Ian T Baldwin\n  - Randy Schekman, Mark Patterson\n  - Lee R Berger et al\n",
+                            "description": "For example:\n  - Ian T Baldwin\n  - Randy Schekman, Mark Patterson\n  - Lee R Berger et al.\n",
                             "type": "string",
                             "minLength": 1
                         },
@@ -124,39 +126,6 @@
                                 "minLength": 1
                             },
                             "uniqueItems": true
-                        },
-                        "abstract": {
-                            "type": "object",
-                            "properties": {
-                                "content": {
-                                    "type": "array",
-                                    "items": {
-                                        "$schema": "http://json-schema.org/draft-04/schema#",
-                                        "title": "Paragraph",
-                                        "type": "object",
-                                        "properties": {
-                                            "type": {
-                                                "type": "string",
-                                                "enum": [
-                                                    "paragraph"
-                                                ]
-                                            },
-                                            "text": {
-                                                "title": "Text",
-                                                "type": "string"
-                                            }
-                                        },
-                                        "required": [
-                                            "type",
-                                            "text"
-                                        ]
-                                    },
-                                    "minItems": 1
-                                }
-                            },
-                            "required": [
-                                "content"
-                            ]
                         }
                     },
                     "required": [
@@ -173,76 +142,22 @@
                 },
                 {
                     "properties": {
-                        "image": {
+                        "abstract": {
+                            "$schema": "http://json-schema.org/draft-04/schema#",
+                            "title": "Abstract",
                             "type": "object",
                             "properties": {
-                                "banner": {
-                                    "$schema": "http://json-schema.org/draft-04/schema#",
-                                    "title": "IIIF image",
-                                    "type": "object",
-                                    "properties": {
-                                        "uri": {
-                                            "title": "IIIF Image",
-                                            "type": "string",
-                                            "format": "uri",
-                                            "pattern": "^https://"
-                                        },
-                                        "alt": {
-                                            "title": "Alternative text",
-                                            "type": "string"
-                                        },
-                                        "source": {
-                                            "$ref": "#/allOf/0/allOf/1/properties/additionalFiles/items/allOf/2"
-                                        },
-                                        "size": {
-                                            "type": "object",
-                                            "properties": {
-                                                "width": {
-                                                    "type": "integer",
-                                                    "minimum": 1
-                                                },
-                                                "height": {
-                                                    "type": "integer",
-                                                    "minimum": 1
-                                                }
-                                            },
-                                            "required": [
-                                                "width",
-                                                "height"
-                                            ]
-                                        },
-                                        "focalPoint": {
-                                            "type": "object",
-                                            "title": "Focal point",
-                                            "description": "Point on the image that is considered to be the focal point of the image.\n\nIf not present, 50 can be used for both `x` and `y`.\n",
-                                            "properties": {
-                                                "x": {
-                                                    "description": "Percentage on the horizontal axis.\n",
-                                                    "type": "integer",
-                                                    "minimum": 0,
-                                                    "maximum": 100
-                                                },
-                                                "y": {
-                                                    "description": "Percentage on the vertical axis.\n",
-                                                    "type": "integer",
-                                                    "minimum": 0,
-                                                    "maximum": 100
-                                                }
-                                            },
-                                            "required": [
-                                                "x",
-                                                "y"
-                                            ]
-                                        }
+                                "content": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/allOf/0/allOf/1/properties/ethics/items"
                                     },
-                                    "required": [
-                                        "uri",
-                                        "alt",
-                                        "source",
-                                        "size"
-                                    ]
+                                    "minItems": 1
                                 }
-                            }
+                            },
+                            "required": [
+                                "content"
+                            ]
                         },
                         "issue": {
                             "type": "integer",
@@ -462,7 +377,7 @@
                                                                     "biography": {
                                                                         "type": "array",
                                                                         "items": {
-                                                                            "$ref": "#/allOf/0/allOf/0/properties/abstract/properties/content/items"
+                                                                            "$ref": "#/allOf/0/allOf/1/properties/ethics/items"
                                                                         }
                                                                     },
                                                                     "deceased": {
@@ -648,18 +563,15 @@
                                 "generated": {
                                     "type": "array",
                                     "items": {
-                                        "$ref": "#/allOf/0/allOf/1/properties/dataSets/properties/used/items"
-                                    }
-                                },
-                                "used": {
-                                    "type": "array",
-                                    "items": {
                                         "$schema": "http://json-schema.org/draft-04/schema#",
                                         "title": "Data set",
                                         "type": "object",
                                         "properties": {
                                             "id": {
-                                                "$ref": "#/allOf/0/allOf/1/properties/funding/properties/awards/items/properties/id"
+                                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                                "title": "HTML ID",
+                                                "type": "string",
+                                                "pattern": "^[^\\s]+$"
                                             },
                                             "date": {
                                                 "$schema": "http://json-schema.org/draft-04/schema#",
@@ -708,8 +620,39 @@
                                             "title"
                                         ]
                                     }
+                                },
+                                "used": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/allOf/0/allOf/1/properties/dataSets/properties/generated/items"
+                                    }
                                 }
                             }
+                        },
+                        "ethics": {
+                            "type": "array",
+                            "items": {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "title": "Paragraph",
+                                "type": "object",
+                                "properties": {
+                                    "type": {
+                                        "type": "string",
+                                        "enum": [
+                                            "paragraph"
+                                        ]
+                                    },
+                                    "text": {
+                                        "title": "Text",
+                                        "type": "string"
+                                    }
+                                },
+                                "required": [
+                                    "type",
+                                    "text"
+                                ]
+                            },
+                            "minItems": 1
                         },
                         "funding": {
                             "$schema": "http://json-schema.org/draft-04/schema#",
@@ -722,10 +665,7 @@
                                         "type": "object",
                                         "properties": {
                                             "id": {
-                                                "$schema": "http://json-schema.org/draft-04/schema#",
-                                                "title": "HTML ID",
-                                                "type": "string",
-                                                "pattern": "^[^\\s]+$"
+                                                "$ref": "#/allOf/0/allOf/1/properties/dataSets/properties/generated/items/properties/id"
                                             },
                                             "source": {
                                                 "allOf": [
@@ -820,20 +760,9 @@
                                 "allOf": [
                                     {
                                         "$schema": "http://json-schema.org/draft-04/schema#",
-                                        "title": "Asset",
+                                        "title": "Has caption",
                                         "type": "object",
                                         "properties": {
-                                            "doi": {
-                                                "$ref": "#/allOf/0/allOf/0/properties/doi"
-                                            },
-                                            "id": {
-                                                "$ref": "#/allOf/0/allOf/1/properties/funding/properties/awards/items/properties/id"
-                                            },
-                                            "label": {
-                                                "title": "Label",
-                                                "type": "string",
-                                                "minLength": 1
-                                            },
                                             "title": {
                                                 "title": "Title",
                                                 "type": "string",
@@ -856,7 +785,7 @@
                                                                     ]
                                                                 },
                                                                 "id": {
-                                                                    "$ref": "#/allOf/0/allOf/1/properties/funding/properties/awards/items/properties/id"
+                                                                    "$ref": "#/allOf/0/allOf/1/properties/dataSets/properties/generated/items/properties/id"
                                                                 },
                                                                 "label": {
                                                                     "type": "string"
@@ -873,7 +802,7 @@
                                                             ]
                                                         },
                                                         {
-                                                            "$ref": "#/allOf/0/allOf/0/properties/abstract/properties/content/items"
+                                                            "$ref": "#/allOf/0/allOf/1/properties/ethics/items"
                                                         },
                                                         {
                                                             "properties": {
@@ -884,7 +813,7 @@
                                                                     ]
                                                                 },
                                                                 "id": {
-                                                                    "$ref": "#/allOf/0/allOf/1/properties/funding/properties/awards/items/properties/id"
+                                                                    "$ref": "#/allOf/0/allOf/1/properties/dataSets/properties/generated/items/properties/id"
                                                                 },
                                                                 "tables": {
                                                                     "type": "array",
@@ -901,20 +830,36 @@
                                                 },
                                                 "minItems": 1
                                             }
-                                        },
-                                        "dependencies": {
-                                            "doi": [
-                                                "id"
-                                            ],
-                                            "caption": [
-                                                "title"
-                                            ],
-                                            "label": [
-                                                "title"
-                                            ]
                                         }
                                     },
                                     {
+                                        "$schema": "http://json-schema.org/draft-04/schema#",
+                                        "title": "Has attribution",
+                                        "type": "object",
+                                        "properties": {
+                                            "attribution": {
+                                                "title": "Attribution",
+                                                "type": "array",
+                                                "items": {
+                                                    "type": "string"
+                                                }
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "properties": {
+                                            "id": {
+                                                "$ref": "#/allOf/0/allOf/1/properties/dataSets/properties/generated/items/properties/id"
+                                            },
+                                            "doi": {
+                                                "$ref": "#/allOf/0/allOf/0/properties/doi"
+                                            },
+                                            "label": {
+                                                "title": "Label",
+                                                "type": "string",
+                                                "minLength": 1
+                                            }
+                                        },
                                         "required": [
                                             "id",
                                             "title"

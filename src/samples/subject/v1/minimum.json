@@ -1,0 +1,41 @@
+{
+    "id": "biophysics-structural-biology",
+    "name": "Biophysics and Structural Biology",
+    "impactStatement": "eLife publishes research that uses techniques including X-ray crystallography, cryo-EM and single-molecule methods. Decisions are made by journal editors who are active researchers in the fields of biophysics and structural biology.",
+    "image": {
+        "banner": {
+            "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif",
+            "alt": "",
+            "source": {
+                "mediaType": "image/jpeg",
+                "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif/full/full/0/default.jpg",
+                "filename": "an-image.jpg"
+            },
+            "size": {
+                "width": 4194,
+                "height": 4714
+            },
+            "focalPoint": {
+                "x": 25,
+                "y": 75
+            }
+        },
+        "thumbnail": {
+            "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif",
+            "alt": "",
+            "source": {
+                "mediaType": "image/jpeg",
+                "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif/full/full/0/default.jpg",
+                "filename": "an-image.jpg"
+            },
+            "size": {
+                "width": 4194,
+                "height": 4714
+            },
+            "focalPoint": {
+                "x": 25,
+                "y": 75
+            }
+        }
+    }
+}

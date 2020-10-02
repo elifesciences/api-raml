@@ -16,7 +16,7 @@
             "updated": "2016-08-02T00:00:00Z",
             "starts": "2016-04-22T20:00:00Z",
             "ends": "2016-04-22T21:00:00Z",
-            "timezone": "America/Seattle"
+            "timezone": "America/Los_Angeles"
         },
         {
             "id": "3",
@@ -35,7 +35,7 @@
             "starts": "2016-04-22T20:00:00Z",
             "ends": "2016-04-22T21:00:00Z",
             "uri": "https://crm.elifesciences.org/crm/civicrm/event/info?reset=1&id=27",
-            "timezone": "America/Seattle"
+            "timezone": "America/Los_Angeles"
         }
     ]
 }

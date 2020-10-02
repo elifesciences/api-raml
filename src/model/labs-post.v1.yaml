@@ -1,0 +1,14 @@
+$schema: http://json-schema.org/draft-04/schema#
+title: Labs post
+type: object
+allOf:
+  - $ref: ../snippets/labs-post.v1.yaml
+  - properties:
+        content:
+            description: Content
+            type: array
+            items:
+                $ref: ../misc/blocks-all.v1.yaml
+            minItems: 1
+    required:
+      - content

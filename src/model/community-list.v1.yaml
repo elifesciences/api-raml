@@ -51,8 +51,8 @@ properties:
                                 type:
                                     type: string
                                     enum:
-                                      - labs-experiment
-                          - $ref: ../snippets/labs-experiment.v1.yaml
+                                      - labs-post
+                          - $ref: ../snippets/labs-post.v1.yaml
                       - allOf:
                           - properties:
                                 type:

@@ -7,7 +7,7 @@ elifeLibrary {
 
     elifePullRequestOnly {
         stage 'Checking dist/'
-        sh 'git fetch && git diff --exit-code origin/develop...HEAD dist/'
+        sh 'git fetch origin develop:refs/remotes/origin/develop && git diff --exit-code origin/develop...HEAD dist/'
     }
 
     stage 'Compiling'
@@ -32,7 +32,8 @@ elifeLibrary {
 
         stage 'Downstream'
         if (isThereANewCommit) {
-            build job: 'dependencies-bot-lax-adaptor-update-api-raml', wait: false
+            build job: '/dependencies/dependencies-bot-lax-adaptor-update-api-raml', wait: false
+            build job: '/dependencies/dependencies-api-validator-python-update-api-raml', wait: false
         } else {
             echo "Nothing to do, latest commit is old"
         }
