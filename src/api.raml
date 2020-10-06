@@ -826,6 +826,36 @@ traits:
                             example:
                                 value: !include samples/cover-list/v1/first-page.json
 
+/interesting-images/{type}/{id}
+    (experimental):
+    type:
+        item:
+            resource: Interesting images
+    description: |
+        Interesting images for individual content
+    uriParameters:
+        type:
+            description: |
+                Content type.
+            type: string
+            enum:
+              - article
+        id:
+            description: |
+                Content ID.
+            type: string
+    get:
+        description: |
+            Get interesting images for a piece of content
+        responses:
+            200:
+                body:
+                    application/vnd.elife.interesting-images-item+json;version=1:
+                        schema: !include ../dist/model/interesting-images-item.v1.json
+                        example:
+                            complete:
+                                value: !include samples/interesting-images/v1/complete.json
+
 /digests:
     (experimental):
     type: collection

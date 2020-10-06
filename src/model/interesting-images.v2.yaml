@@ -1,0 +1,8 @@
+$schema: http://json-schema.org/draft-04/schema#
+title: Interesting images
+type: object
+properties:
+    listing:
+        $ref: ../misc/image.v1.yaml
+    socialMedia:
+        $ref: ../misc/image.v1.yaml
