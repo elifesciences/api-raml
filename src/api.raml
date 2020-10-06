@@ -826,7 +826,7 @@ traits:
                             example:
                                 value: !include samples/cover-list/v1/first-page.json
 
-/interesting-images/{type}/{id}
+/interesting-images/{type}/{id}:
     (experimental):
     type:
         item:
@@ -850,7 +850,7 @@ traits:
         responses:
             200:
                 body:
-                    application/vnd.elife.interesting-images-item+json;version=1:
+                    application/vnd.elife.interesting-images+json;version=1:
                         schema: !include ../dist/model/interesting-images.v1.json
                         example:
                             complete:
