@@ -4,8 +4,6 @@ type: object
 allOf:
   - $ref: ../snippets/article.v1.yaml
   - properties:
-        socialImage:
-            $ref: image.v1.yaml
         abstract:
             $ref: abstract.v2.yaml
         xml:
