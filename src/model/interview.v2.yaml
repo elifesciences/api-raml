@@ -4,6 +4,16 @@ type: object
 allOf:
   - $ref: ../snippets/interview.v1.yaml
   - properties:
+        image:
+            type: object
+            properties:
+                social:
+                    $ref: ../misc/image.v1.yaml
+            anyOf:
+              - required:
+                 - thumbnail
+              - required:
+                 - social
         interviewee:
             properties:
                 cv:
