@@ -5,6 +5,15 @@ allOf:
   - $ref: ../snippets/article-vor.v1.yaml
   - $ref: ../misc/article.v3.yaml
   - properties:
+        image:
+            properties:
+                social:
+                    $ref: ../misc/image.v1.yaml
+            anyOf:
+              - required:
+                 - thumbnail
+              - required:
+                 - social
         abstract:
             type: object
             properties:

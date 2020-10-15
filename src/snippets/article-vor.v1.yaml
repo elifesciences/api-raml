@@ -19,5 +19,8 @@ allOf:
             properties:
                 thumbnail:
                     $ref: ../misc/image.v1.yaml
-            required:
-              - thumbnail
+            anyOf:
+              - required:
+                 - thumbnail
+              - required:
+                 - social
