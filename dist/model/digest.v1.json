@@ -1102,8 +1102,17 @@
                                                         "$ref": "#/allOf/0/properties/image/properties/thumbnail"
                                                     }
                                                 },
-                                                "required": [
-                                                    "thumbnail"
+                                                "anyOf": [
+                                                    {
+                                                        "required": [
+                                                            "thumbnail"
+                                                        ]
+                                                    },
+                                                    {
+                                                        "required": [
+                                                            "social"
+                                                        ]
+                                                    }
                                                 ]
                                             }
                                         }

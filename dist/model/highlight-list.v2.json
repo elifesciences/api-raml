@@ -309,8 +309,17 @@
                                                         "$ref": "#/properties/items/items/properties/image"
                                                     }
                                                 },
-                                                "required": [
-                                                    "thumbnail"
+                                                "anyOf": [
+                                                    {
+                                                        "required": [
+                                                            "thumbnail"
+                                                        ]
+                                                    },
+                                                    {
+                                                        "required": [
+                                                            "social"
+                                                        ]
+                                                    }
                                                 ]
                                             }
                                         }

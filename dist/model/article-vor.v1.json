@@ -104,8 +104,17 @@
                                     ]
                                 }
                             },
-                            "required": [
-                                "thumbnail"
+                            "anyOf": [
+                                {
+                                    "required": [
+                                        "thumbnail"
+                                    ]
+                                },
+                                {
+                                    "required": [
+                                        "social"
+                                    ]
+                                }
                             ]
                         }
                     }

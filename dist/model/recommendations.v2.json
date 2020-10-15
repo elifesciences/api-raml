@@ -271,8 +271,17 @@
                                                                         "$ref": "#/properties/items/items/oneOf/1/allOf/1/oneOf/2/properties/episode/properties/image/properties/thumbnail"
                                                                     }
                                                                 },
-                                                                "required": [
-                                                                    "thumbnail"
+                                                                "anyOf": [
+                                                                    {
+                                                                        "required": [
+                                                                            "thumbnail"
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "required": [
+                                                                            "social"
+                                                                        ]
+                                                                    }
                                                                 ]
                                                             }
                                                         }

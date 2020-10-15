@@ -421,8 +421,17 @@
                                                                             "$ref": "#/allOf/1/properties/image/properties/banner"
                                                                         }
                                                                     },
-                                                                    "required": [
-                                                                        "thumbnail"
+                                                                    "anyOf": [
+                                                                        {
+                                                                            "required": [
+                                                                                "thumbnail"
+                                                                            ]
+                                                                        },
+                                                                        {
+                                                                            "required": [
+                                                                                "social"
+                                                                            ]
+                                                                        }
                                                                     ]
                                                                 }
                                                             }
