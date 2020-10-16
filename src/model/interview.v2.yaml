@@ -2,7 +2,7 @@ $schema: http://json-schema.org/draft-04/schema#
 title: Interview
 type: object
 allOf:
-  - $ref: ../snippets/interview.v1.yaml
+  - $ref: ../snippets/interview-basic.v1.yaml
   - properties:
         image:
             type: object
@@ -11,9 +11,9 @@ allOf:
                     $ref: ../misc/image.v1.yaml
             anyOf:
               - required:
-                 - thumbnail
+                  - thumbnail
               - required:
-                 - social
+                  - social
         interviewee:
             properties:
                 cv:

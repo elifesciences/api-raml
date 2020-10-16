@@ -1,34 +1,9 @@
 $schema: http://json-schema.org/draft-04/schema#
 title: Interview snippet
 type: object
-properties:
-    id:
-        $ref: ../misc/id.v1.yaml
-    interviewee:
-        $ref: ../misc/person.v1.yaml
-    title:
-        title: Title of the interview
-        type: string
-        minLength: 1
-    impactStatement:
-        title: Description of the interview
-        type: string
-        minLength: 1
-    published:
-        title: Publication date (UTC)
-        $ref: ../misc/date-time.v1.yaml
-    updated:
-        title: Updated date (UTC)
-        $ref: ../misc/date-time.v1.yaml
-    image:
-        type: object
-        properties:
-            thumbnail:
-                $ref: ../misc/image.v1.yaml
-        required:
-          - thumbnail
-required:
-  - id
-  - interviewee
-  - title
-  - published
+allOf:
+  - $ref: interview-basic.v1.yaml
+  - properties:
+        image:
+            required:
+              - thumbnail
