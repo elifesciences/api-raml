@@ -1,8 +1,8 @@
 $schema: http://json-schema.org/draft-04/schema#
-title: Article VoR snippet (basic)
+title: Article VoR common properties
 type: object
 allOf:
-  - $ref: article.v1.yaml
+  - $ref: ../snippets/article.v1.yaml
   - properties:
         status:
             type: string

@@ -2,7 +2,7 @@ $schema: http://json-schema.org/draft-04/schema#
 title: Article VoR snippet
 type: object
 allOf:
-  - $ref: article-vor-basic.v1.yaml
+  - $ref: ../common/article-vor.v1.yaml
   - properties:
         image:
             required:
