@@ -1,0 +1,16 @@
+$schema: http://json-schema.org/draft-04/schema#
+title: Article VoR Common
+type: object
+allOf:
+  - $ref: ../snippets/article.v1.yaml
+  - properties:
+        status:
+            type: string
+            enum:
+              - vor
+        impactStatement:
+            type: string
+            minLength: 1
+        figuresPdf:
+            type: string
+            format: uri
