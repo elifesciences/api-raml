@@ -2,7 +2,7 @@ $schema: http://json-schema.org/draft-04/schema#
 title: Interview
 type: object
 allOf:
-  - $ref: ../snippets/interview-basic.v1.yaml
+  - $ref: ../common/interview.v1.yaml
   - properties:
         image:
             type: object
