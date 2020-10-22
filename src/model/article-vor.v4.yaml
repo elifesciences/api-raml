@@ -2,7 +2,7 @@ $schema: http://json-schema.org/draft-04/schema#
 title: Article VoR
 type: object
 allOf:
-  - $ref: ../snippets/article-vor.v1.yaml
+  - $ref: ../common/article-vor.v1.yaml
   - $ref: ../misc/article.v3.yaml
   - properties:
         image:
@@ -11,9 +11,9 @@ allOf:
                     $ref: ../misc/image.v1.yaml
             anyOf:
               - required:
-                 - thumbnail
+                  - thumbnail
               - required:
-                 - social
+                  - social
         abstract:
             type: object
             properties:

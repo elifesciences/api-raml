@@ -2,25 +2,8 @@ $schema: http://json-schema.org/draft-04/schema#
 title: Article VoR snippet
 type: object
 allOf:
-  - $ref: article.v1.yaml
+  - $ref: ../common/article-vor.v1.yaml
   - properties:
-        status:
-            type: string
-            enum:
-              - vor
-        impactStatement:
-            type: string
-            minLength: 1
-        figuresPdf:
-            type: string
-            format: uri
         image:
-            type: object
-            properties:
-                thumbnail:
-                    $ref: ../misc/image.v1.yaml
-            anyOf:
-              - required:
-                 - thumbnail
-              - required:
-                 - social
+            required:
+              - thumbnail
