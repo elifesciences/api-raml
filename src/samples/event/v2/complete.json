@@ -7,6 +7,25 @@
     "starts": "2016-04-22T20:00:00Z",
     "ends": "2016-04-22T21:00:00Z",
     "timezone": "America/Los_Angeles",
+    "image": {
+        "social": {
+            "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif",
+            "alt": "",
+            "source": {
+                "mediaType": "image/jpeg",
+                "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif/full/full/0/default.jpg",
+                "filename": "an-image.jpg"
+            },
+            "size": {
+                "width": 4194,
+                "height": 4714
+            },
+            "focalPoint": {
+                "x": 25,
+                "y": 75
+            }
+        }
+    },
     "content": [
         {
             "type": "paragraph",

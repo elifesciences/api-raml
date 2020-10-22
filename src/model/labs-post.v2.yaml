@@ -4,6 +4,11 @@ type: object
 allOf:
   - $ref: ../snippets/labs-post.v1.yaml
   - properties:
+        image:
+            type: object
+            properties:
+                social:
+                    $ref: ../misc/image.v1.yaml
         content:
             description: Content
             type: array
