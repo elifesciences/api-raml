@@ -37,6 +37,63 @@
                     "type": "object",
                     "properties": {
                         "thumbnail": {
+                            "$ref": "#/allOf/1/properties/image/properties/social"
+                        }
+                    },
+                    "required": [
+                        "thumbnail"
+                    ]
+                },
+                "sources": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "mediaType": {
+                                "allOf": [
+                                    {
+                                        "$schema": "http://json-schema.org/draft-04/schema#",
+                                        "title": "Media type",
+                                        "type": "string",
+                                        "pattern": "^([a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+/[a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+)(; *[a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+=(([a-zA-Z0-9\\.\\-]+)|(\".+\")))*$"
+                                    },
+                                    {
+                                        "pattern": "^audio/"
+                                    }
+                                ]
+                            },
+                            "uri": {
+                                "title": "URI",
+                                "type": "string",
+                                "format": "uri",
+                                "pattern": "^https://"
+                            }
+                        },
+                        "required": [
+                            "mediaType",
+                            "uri"
+                        ]
+                    },
+                    "minItems": 1
+                }
+            },
+            "required": [
+                "number",
+                "title",
+                "published",
+                "image",
+                "sources"
+            ]
+        },
+        {
+            "properties": {
+                "image": {
+                    "type": "object",
+                    "properties": {
+                        "banner": {
+                            "$ref": "#/allOf/1/properties/image/properties/social"
+                        },
+                        "social": {
                             "$schema": "http://json-schema.org/draft-04/schema#",
                             "title": "IIIF image",
                             "type": "object",
@@ -141,60 +198,6 @@
                                     ]
                                 }
                             ]
-                        }
-                    },
-                    "required": [
-                        "thumbnail"
-                    ]
-                },
-                "sources": {
-                    "type": "array",
-                    "items": {
-                        "type": "object",
-                        "properties": {
-                            "mediaType": {
-                                "allOf": [
-                                    {
-                                        "$schema": "http://json-schema.org/draft-04/schema#",
-                                        "title": "Media type",
-                                        "type": "string",
-                                        "pattern": "^([a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+/[a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+)(; *[a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+=(([a-zA-Z0-9\\.\\-]+)|(\".+\")))*$"
-                                    },
-                                    {
-                                        "pattern": "^audio/"
-                                    }
-                                ]
-                            },
-                            "uri": {
-                                "title": "URI",
-                                "type": "string",
-                                "format": "uri",
-                                "pattern": "^https://"
-                            }
-                        },
-                        "required": [
-                            "mediaType",
-                            "uri"
-                        ]
-                    },
-                    "minItems": 1
-                }
-            },
-            "required": [
-                "number",
-                "title",
-                "published",
-                "image",
-                "sources"
-            ]
-        },
-        {
-            "properties": {
-                "image": {
-                    "type": "object",
-                    "properties": {
-                        "banner": {
-                            "$ref": "#/allOf/0/properties/image/properties/thumbnail"
                         }
                     },
                     "required": [
@@ -423,7 +426,7 @@
                                                                             "type": "object",
                                                                             "properties": {
                                                                                 "thumbnail": {
-                                                                                    "$ref": "#/allOf/0/properties/image/properties/thumbnail"
+                                                                                    "$ref": "#/allOf/1/properties/image/properties/social"
                                                                                 }
                                                                             }
                                                                         }
@@ -492,7 +495,7 @@
                                                                                     "type": "object",
                                                                                     "properties": {
                                                                                         "thumbnail": {
-                                                                                            "$ref": "#/allOf/0/properties/image/properties/thumbnail"
+                                                                                            "$ref": "#/allOf/1/properties/image/properties/social"
                                                                                         }
                                                                                     },
                                                                                     "required": [
@@ -579,7 +582,7 @@
                                                                                                             ]
                                                                                                         },
                                                                                                         "image": {
-                                                                                                            "$ref": "#/allOf/0/properties/image/properties/thumbnail"
+                                                                                                            "$ref": "#/allOf/1/properties/image/properties/social"
                                                                                                         }
                                                                                                     },
                                                                                                     "required": [

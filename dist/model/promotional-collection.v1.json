@@ -38,7 +38,7 @@
                     "type": "object",
                     "properties": {
                         "thumbnail": {
-                            "$ref": "#/allOf/1/properties/image/properties/banner"
+                            "$ref": "#/allOf/1/properties/image/properties/social"
                         }
                     },
                     "required": [
@@ -82,6 +82,9 @@
                     "type": "object",
                     "properties": {
                         "banner": {
+                            "$ref": "#/allOf/1/properties/image/properties/social"
+                        },
+                        "social": {
                             "$schema": "http://json-schema.org/draft-04/schema#",
                             "title": "IIIF image",
                             "type": "object",
@@ -266,7 +269,7 @@
                                         ]
                                     },
                                     "image": {
-                                        "$ref": "#/allOf/1/properties/image/properties/banner"
+                                        "$ref": "#/allOf/1/properties/image/properties/social"
                                     }
                                 },
                                 "required": [
@@ -466,7 +469,7 @@
                                                         "type": "object",
                                                         "properties": {
                                                             "thumbnail": {
-                                                                "$ref": "#/allOf/1/properties/image/properties/banner"
+                                                                "$ref": "#/allOf/1/properties/image/properties/social"
                                                             }
                                                         }
                                                     }
@@ -595,7 +598,7 @@
                                                                 "type": "object",
                                                                 "properties": {
                                                                     "thumbnail": {
-                                                                        "$ref": "#/allOf/1/properties/image/properties/banner"
+                                                                        "$ref": "#/allOf/1/properties/image/properties/social"
                                                                     }
                                                                 },
                                                                 "required": [
@@ -701,48 +704,61 @@
                                                         "$schema": "http://json-schema.org/draft-04/schema#",
                                                         "title": "Interview snippet",
                                                         "type": "object",
-                                                        "properties": {
-                                                            "id": {
-                                                                "$ref": "#/allOf/0/properties/id"
-                                                            },
-                                                            "interviewee": {
-                                                                "$ref": "#/allOf/1/properties/editors/items/allOf/0"
-                                                            },
-                                                            "title": {
-                                                                "title": "Title of the interview",
-                                                                "type": "string",
-                                                                "minLength": 1
-                                                            },
-                                                            "impactStatement": {
-                                                                "title": "Description of the interview",
-                                                                "type": "string",
-                                                                "minLength": 1
-                                                            },
-                                                            "published": {
-                                                                "title": "Publication date (UTC)",
-                                                                "$ref": "#/allOf/0/properties/published"
-                                                            },
-                                                            "updated": {
-                                                                "title": "Updated date (UTC)",
-                                                                "$ref": "#/allOf/0/properties/published"
-                                                            },
-                                                            "image": {
+                                                        "allOf": [
+                                                            {
+                                                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                                                "title": "Interview snippet common properties",
                                                                 "type": "object",
                                                                 "properties": {
-                                                                    "thumbnail": {
-                                                                        "$ref": "#/allOf/1/properties/image/properties/banner"
+                                                                    "id": {
+                                                                        "$ref": "#/allOf/0/properties/id"
+                                                                    },
+                                                                    "interviewee": {
+                                                                        "$ref": "#/allOf/1/properties/editors/items/allOf/0"
+                                                                    },
+                                                                    "title": {
+                                                                        "title": "Title of the interview",
+                                                                        "type": "string",
+                                                                        "minLength": 1
+                                                                    },
+                                                                    "impactStatement": {
+                                                                        "title": "Description of the interview",
+                                                                        "type": "string",
+                                                                        "minLength": 1
+                                                                    },
+                                                                    "published": {
+                                                                        "title": "Publication date (UTC)",
+                                                                        "$ref": "#/allOf/0/properties/published"
+                                                                    },
+                                                                    "updated": {
+                                                                        "title": "Updated date (UTC)",
+                                                                        "$ref": "#/allOf/0/properties/published"
+                                                                    },
+                                                                    "image": {
+                                                                        "type": "object",
+                                                                        "properties": {
+                                                                            "thumbnail": {
+                                                                                "$ref": "#/allOf/1/properties/image/properties/social"
+                                                                            }
+                                                                        }
                                                                     }
                                                                 },
                                                                 "required": [
-                                                                    "thumbnail"
+                                                                    "id",
+                                                                    "interviewee",
+                                                                    "title",
+                                                                    "published"
                                                                 ]
+                                                            },
+                                                            {
+                                                                "properties": {
+                                                                    "image": {
+                                                                        "required": [
+                                                                            "thumbnail"
+                                                                        ]
+                                                                    }
+                                                                }
                                                             }
-                                                        },
-                                                        "required": [
-                                                            "id",
-                                                            "interviewee",
-                                                            "title",
-                                                            "published"
                                                         ]
                                                     }
                                                 ]
@@ -797,7 +813,7 @@
                                 "type": "object",
                                 "properties": {
                                     "thumbnail": {
-                                        "$ref": "#/allOf/1/properties/image/properties/banner"
+                                        "$ref": "#/allOf/1/properties/image/properties/social"
                                     }
                                 },
                                 "required": [

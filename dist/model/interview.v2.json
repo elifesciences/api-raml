@@ -5,7 +5,7 @@
     "allOf": [
         {
             "$schema": "http://json-schema.org/draft-04/schema#",
-            "title": "Interview snippet",
+            "title": "Interview snippet common properties",
             "type": "object",
             "properties": {
                 "id": {
@@ -183,10 +183,7 @@
                                 }
                             ]
                         }
-                    },
-                    "required": [
-                        "thumbnail"
-                    ]
+                    }
                 }
             },
             "required": [
@@ -198,6 +195,26 @@
         },
         {
             "properties": {
+                "image": {
+                    "type": "object",
+                    "properties": {
+                        "social": {
+                            "$ref": "#/allOf/0/properties/image/properties/thumbnail"
+                        }
+                    },
+                    "anyOf": [
+                        {
+                            "required": [
+                                "thumbnail"
+                            ]
+                        },
+                        {
+                            "required": [
+                                "social"
+                            ]
+                        }
+                    ]
+                },
                 "interviewee": {
                     "properties": {
                         "cv": {
