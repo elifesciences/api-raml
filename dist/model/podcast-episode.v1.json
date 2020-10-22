@@ -37,60 +37,6 @@
                     "type": "object",
                     "properties": {
                         "thumbnail": {
-                            "$ref": "#/allOf/1/properties/image/properties/banner"
-                        }
-                    },
-                    "required": [
-                        "thumbnail"
-                    ]
-                },
-                "sources": {
-                    "type": "array",
-                    "items": {
-                        "type": "object",
-                        "properties": {
-                            "mediaType": {
-                                "allOf": [
-                                    {
-                                        "$schema": "http://json-schema.org/draft-04/schema#",
-                                        "title": "Media type",
-                                        "type": "string",
-                                        "pattern": "^([a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+/[a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+)(; *[a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+=(([a-zA-Z0-9\\.\\-]+)|(\".+\")))*$"
-                                    },
-                                    {
-                                        "pattern": "^audio/"
-                                    }
-                                ]
-                            },
-                            "uri": {
-                                "title": "URI",
-                                "type": "string",
-                                "format": "uri",
-                                "pattern": "^https://"
-                            }
-                        },
-                        "required": [
-                            "mediaType",
-                            "uri"
-                        ]
-                    },
-                    "minItems": 1
-                }
-            },
-            "required": [
-                "number",
-                "title",
-                "published",
-                "image",
-                "sources"
-            ]
-        },
-        {
-            "properties": {
-                "image": {
-                    "type": "object",
-                    "properties": {
-                        "banner": {
                             "$schema": "http://json-schema.org/draft-04/schema#",
                             "title": "IIIF image",
                             "type": "object",
@@ -195,6 +141,60 @@
                                     ]
                                 }
                             ]
+                        }
+                    },
+                    "required": [
+                        "thumbnail"
+                    ]
+                },
+                "sources": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "mediaType": {
+                                "allOf": [
+                                    {
+                                        "$schema": "http://json-schema.org/draft-04/schema#",
+                                        "title": "Media type",
+                                        "type": "string",
+                                        "pattern": "^([a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+/[a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+)(; *[a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+=(([a-zA-Z0-9\\.\\-]+)|(\".+\")))*$"
+                                    },
+                                    {
+                                        "pattern": "^audio/"
+                                    }
+                                ]
+                            },
+                            "uri": {
+                                "title": "URI",
+                                "type": "string",
+                                "format": "uri",
+                                "pattern": "^https://"
+                            }
+                        },
+                        "required": [
+                            "mediaType",
+                            "uri"
+                        ]
+                    },
+                    "minItems": 1
+                }
+            },
+            "required": [
+                "number",
+                "title",
+                "published",
+                "image",
+                "sources"
+            ]
+        },
+        {
+            "properties": {
+                "image": {
+                    "type": "object",
+                    "properties": {
+                        "banner": {
+                            "$ref": "#/allOf/0/properties/image/properties/thumbnail"
                         }
                     },
                     "required": [
@@ -396,42 +396,46 @@
                                                     "type": "object",
                                                     "allOf": [
                                                         {
-                                                            "$ref": "#/allOf/1/properties/chapters/items/allOf/1/properties/content/items/oneOf/0/allOf/0"
+                                                            "$schema": "http://json-schema.org/draft-04/schema#",
+                                                            "title": "Article VoR common properties",
+                                                            "type": "object",
+                                                            "allOf": [
+                                                                {
+                                                                    "$ref": "#/allOf/1/properties/chapters/items/allOf/1/properties/content/items/oneOf/0/allOf/0"
+                                                                },
+                                                                {
+                                                                    "properties": {
+                                                                        "status": {
+                                                                            "type": "string",
+                                                                            "enum": [
+                                                                                "vor"
+                                                                            ]
+                                                                        },
+                                                                        "impactStatement": {
+                                                                            "type": "string",
+                                                                            "minLength": 1
+                                                                        },
+                                                                        "figuresPdf": {
+                                                                            "type": "string",
+                                                                            "format": "uri"
+                                                                        },
+                                                                        "image": {
+                                                                            "type": "object",
+                                                                            "properties": {
+                                                                                "thumbnail": {
+                                                                                    "$ref": "#/allOf/0/properties/image/properties/thumbnail"
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            ]
                                                         },
                                                         {
                                                             "properties": {
-                                                                "status": {
-                                                                    "type": "string",
-                                                                    "enum": [
-                                                                        "vor"
-                                                                    ]
-                                                                },
-                                                                "impactStatement": {
-                                                                    "type": "string",
-                                                                    "minLength": 1
-                                                                },
-                                                                "figuresPdf": {
-                                                                    "type": "string",
-                                                                    "format": "uri"
-                                                                },
                                                                 "image": {
-                                                                    "type": "object",
-                                                                    "properties": {
-                                                                        "thumbnail": {
-                                                                            "$ref": "#/allOf/1/properties/image/properties/banner"
-                                                                        }
-                                                                    },
-                                                                    "anyOf": [
-                                                                        {
-                                                                            "required": [
-                                                                                "thumbnail"
-                                                                            ]
-                                                                        },
-                                                                        {
-                                                                            "required": [
-                                                                                "social"
-                                                                            ]
-                                                                        }
+                                                                    "required": [
+                                                                        "thumbnail"
                                                                     ]
                                                                 }
                                                             }
@@ -488,7 +492,7 @@
                                                                                     "type": "object",
                                                                                     "properties": {
                                                                                         "thumbnail": {
-                                                                                            "$ref": "#/allOf/1/properties/image/properties/banner"
+                                                                                            "$ref": "#/allOf/0/properties/image/properties/thumbnail"
                                                                                         }
                                                                                     },
                                                                                     "required": [
@@ -575,7 +579,7 @@
                                                                                                             ]
                                                                                                         },
                                                                                                         "image": {
-                                                                                                            "$ref": "#/allOf/1/properties/image/properties/banner"
+                                                                                                            "$ref": "#/allOf/0/properties/image/properties/thumbnail"
                                                                                                         }
                                                                                                     },
                                                                                                     "required": [
