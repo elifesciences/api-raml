@@ -168,148 +168,149 @@
                         "type": "object",
                         "allOf": [
                             {
-                                "$ref": "#/properties/items/items/oneOf/0/allOf/0"
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "title": "Article VoR common properties",
+                                "type": "object",
+                                "allOf": [
+                                    {
+                                        "$ref": "#/properties/items/items/oneOf/0/allOf/0"
+                                    },
+                                    {
+                                        "properties": {
+                                            "status": {
+                                                "type": "string",
+                                                "enum": [
+                                                    "vor"
+                                                ]
+                                            },
+                                            "impactStatement": {
+                                                "type": "string",
+                                                "minLength": 1
+                                            },
+                                            "figuresPdf": {
+                                                "type": "string",
+                                                "format": "uri"
+                                            },
+                                            "image": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "thumbnail": {
+                                                        "$schema": "http://json-schema.org/draft-04/schema#",
+                                                        "title": "IIIF image",
+                                                        "type": "object",
+                                                        "allOf": [
+                                                            {
+                                                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                                                "title": "Has attribution",
+                                                                "type": "object",
+                                                                "properties": {
+                                                                    "attribution": {
+                                                                        "title": "Attribution",
+                                                                        "type": "array",
+                                                                        "items": {
+                                                                            "type": "string"
+                                                                        }
+                                                                    }
+                                                                }
+                                                            },
+                                                            {
+                                                                "properties": {
+                                                                    "uri": {
+                                                                        "title": "IIIF Image",
+                                                                        "type": "string",
+                                                                        "format": "uri",
+                                                                        "pattern": "^https://[^/]+(?:/[^?#\\[\\]@]+)?/[^/?#\\[\\]@]+$"
+                                                                    },
+                                                                    "alt": {
+                                                                        "title": "Alternative text",
+                                                                        "type": "string"
+                                                                    },
+                                                                    "source": {
+                                                                        "$schema": "http://json-schema.org/draft-04/schema#",
+                                                                        "title": "File",
+                                                                        "type": "object",
+                                                                        "properties": {
+                                                                            "mediaType": {
+                                                                                "$ref": "#/properties/items/items/oneOf/2/allOf/1/oneOf/5/allOf/1/properties/sources/items/properties/mediaType/allOf/0"
+                                                                            },
+                                                                            "uri": {
+                                                                                "title": "Source data URI",
+                                                                                "type": "string",
+                                                                                "format": "uri"
+                                                                            },
+                                                                            "filename": {
+                                                                                "title": "Filename",
+                                                                                "type": "string",
+                                                                                "pattern": "^[A-Za-z0-9_. ()-]+\\.[a-z0-9]+$"
+                                                                            }
+                                                                        },
+                                                                        "required": [
+                                                                            "mediaType",
+                                                                            "uri",
+                                                                            "filename"
+                                                                        ]
+                                                                    },
+                                                                    "size": {
+                                                                        "type": "object",
+                                                                        "properties": {
+                                                                            "width": {
+                                                                                "type": "integer",
+                                                                                "minimum": 1
+                                                                            },
+                                                                            "height": {
+                                                                                "type": "integer",
+                                                                                "minimum": 1
+                                                                            }
+                                                                        },
+                                                                        "required": [
+                                                                            "width",
+                                                                            "height"
+                                                                        ]
+                                                                    },
+                                                                    "focalPoint": {
+                                                                        "type": "object",
+                                                                        "title": "Focal point",
+                                                                        "description": "Point on the image that is considered to be the focal point of the image.\n\nIf not present, 50 can be used for both `x` and `y`.\n",
+                                                                        "properties": {
+                                                                            "x": {
+                                                                                "description": "Percentage on the horizontal axis.\n",
+                                                                                "type": "integer",
+                                                                                "minimum": 0,
+                                                                                "maximum": 100
+                                                                            },
+                                                                            "y": {
+                                                                                "description": "Percentage on the vertical axis.\n",
+                                                                                "type": "integer",
+                                                                                "minimum": 0,
+                                                                                "maximum": 100
+                                                                            }
+                                                                        },
+                                                                        "required": [
+                                                                            "x",
+                                                                            "y"
+                                                                        ]
+                                                                    }
+                                                                },
+                                                                "required": [
+                                                                    "uri",
+                                                                    "alt",
+                                                                    "source",
+                                                                    "size"
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                ]
                             },
                             {
                                 "properties": {
-                                    "status": {
-                                        "type": "string",
-                                        "enum": [
-                                            "vor"
-                                        ]
-                                    },
-                                    "impactStatement": {
-                                        "type": "string",
-                                        "minLength": 1
-                                    },
-                                    "figuresPdf": {
-                                        "type": "string",
-                                        "format": "uri"
-                                    },
                                     "image": {
-                                        "type": "object",
-                                        "properties": {
-                                            "thumbnail": {
-                                                "$schema": "http://json-schema.org/draft-04/schema#",
-                                                "title": "IIIF image",
-                                                "type": "object",
-                                                "allOf": [
-                                                    {
-                                                        "$schema": "http://json-schema.org/draft-04/schema#",
-                                                        "title": "Has attribution",
-                                                        "type": "object",
-                                                        "properties": {
-                                                            "attribution": {
-                                                                "title": "Attribution",
-                                                                "type": "array",
-                                                                "items": {
-                                                                    "type": "string"
-                                                                }
-                                                            }
-                                                        }
-                                                    },
-                                                    {
-                                                        "properties": {
-                                                            "uri": {
-                                                                "title": "IIIF Image",
-                                                                "type": "string",
-                                                                "format": "uri",
-                                                                "pattern": "^https://[^/]+(?:/[^?#\\[\\]@]+)?/[^/?#\\[\\]@]+$"
-                                                            },
-                                                            "alt": {
-                                                                "title": "Alternative text",
-                                                                "type": "string"
-                                                            },
-                                                            "source": {
-                                                                "$schema": "http://json-schema.org/draft-04/schema#",
-                                                                "title": "File",
-                                                                "type": "object",
-                                                                "properties": {
-                                                                    "mediaType": {
-                                                                        "$schema": "http://json-schema.org/draft-04/schema#",
-                                                                        "title": "Media type",
-                                                                        "type": "string",
-                                                                        "pattern": "^([a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+/[a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+)(; *[a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+=(([a-zA-Z0-9\\.\\-]+)|(\".+\")))*$"
-                                                                    },
-                                                                    "uri": {
-                                                                        "title": "Source data URI",
-                                                                        "type": "string",
-                                                                        "format": "uri"
-                                                                    },
-                                                                    "filename": {
-                                                                        "title": "Filename",
-                                                                        "type": "string",
-                                                                        "pattern": "^[A-Za-z0-9_. ()-]+\\.[a-z0-9]+$"
-                                                                    }
-                                                                },
-                                                                "required": [
-                                                                    "mediaType",
-                                                                    "uri",
-                                                                    "filename"
-                                                                ]
-                                                            },
-                                                            "size": {
-                                                                "type": "object",
-                                                                "properties": {
-                                                                    "width": {
-                                                                        "type": "integer",
-                                                                        "minimum": 1
-                                                                    },
-                                                                    "height": {
-                                                                        "type": "integer",
-                                                                        "minimum": 1
-                                                                    }
-                                                                },
-                                                                "required": [
-                                                                    "width",
-                                                                    "height"
-                                                                ]
-                                                            },
-                                                            "focalPoint": {
-                                                                "type": "object",
-                                                                "title": "Focal point",
-                                                                "description": "Point on the image that is considered to be the focal point of the image.\n\nIf not present, 50 can be used for both `x` and `y`.\n",
-                                                                "properties": {
-                                                                    "x": {
-                                                                        "description": "Percentage on the horizontal axis.\n",
-                                                                        "type": "integer",
-                                                                        "minimum": 0,
-                                                                        "maximum": 100
-                                                                    },
-                                                                    "y": {
-                                                                        "description": "Percentage on the vertical axis.\n",
-                                                                        "type": "integer",
-                                                                        "minimum": 0,
-                                                                        "maximum": 100
-                                                                    }
-                                                                },
-                                                                "required": [
-                                                                    "x",
-                                                                    "y"
-                                                                ]
-                                                            }
-                                                        },
-                                                        "required": [
-                                                            "uri",
-                                                            "alt",
-                                                            "source",
-                                                            "size"
-                                                        ]
-                                                    }
-                                                ]
-                                            }
-                                        },
-                                        "anyOf": [
-                                            {
-                                                "required": [
-                                                    "thumbnail"
-                                                ]
-                                            },
-                                            {
-                                                "required": [
-                                                    "social"
-                                                ]
-                                            }
+                                        "required": [
+                                            "thumbnail"
                                         ]
                                     }
                                 }
@@ -419,7 +420,7 @@
                                                         "type": "object",
                                                         "properties": {
                                                             "thumbnail": {
-                                                                "$ref": "#/properties/items/items/oneOf/1/allOf/1/properties/image/properties/thumbnail"
+                                                                "$ref": "#/properties/items/items/oneOf/1/allOf/0/allOf/1/properties/image/properties/thumbnail"
                                                             }
                                                         },
                                                         "required": [
@@ -474,7 +475,7 @@
                                                                                 ]
                                                                             },
                                                                             "image": {
-                                                                                "$ref": "#/properties/items/items/oneOf/1/allOf/1/properties/image/properties/thumbnail"
+                                                                                "$ref": "#/properties/items/items/oneOf/1/allOf/0/allOf/1/properties/image/properties/thumbnail"
                                                                             }
                                                                         },
                                                                         "required": [
@@ -648,7 +649,7 @@
                                                         "type": "object",
                                                         "properties": {
                                                             "thumbnail": {
-                                                                "$ref": "#/properties/items/items/oneOf/1/allOf/1/properties/image/properties/thumbnail"
+                                                                "$ref": "#/properties/items/items/oneOf/1/allOf/0/allOf/1/properties/image/properties/thumbnail"
                                                             }
                                                         },
                                                         "required": [
@@ -705,7 +706,7 @@
                                                         "type": "object",
                                                         "properties": {
                                                             "thumbnail": {
-                                                                "$ref": "#/properties/items/items/oneOf/1/allOf/1/properties/image/properties/thumbnail"
+                                                                "$ref": "#/properties/items/items/oneOf/1/allOf/0/allOf/1/properties/image/properties/thumbnail"
                                                             }
                                                         },
                                                         "required": [
@@ -764,7 +765,7 @@
                                                         "type": "object",
                                                         "properties": {
                                                             "thumbnail": {
-                                                                "$ref": "#/properties/items/items/oneOf/1/allOf/1/properties/image/properties/thumbnail"
+                                                                "$ref": "#/properties/items/items/oneOf/1/allOf/0/allOf/1/properties/image/properties/thumbnail"
                                                             }
                                                         },
                                                         "required": [
@@ -779,7 +780,10 @@
                                                                 "mediaType": {
                                                                     "allOf": [
                                                                         {
-                                                                            "$ref": "#/properties/items/items/oneOf/1/allOf/1/properties/image/properties/thumbnail/allOf/1/properties/source/properties/mediaType"
+                                                                            "$schema": "http://json-schema.org/draft-04/schema#",
+                                                                            "title": "Media type",
+                                                                            "type": "string",
+                                                                            "pattern": "^([a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+/[a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+)(; *[a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+=(([a-zA-Z0-9\\.\\-]+)|(\".+\")))*$"
                                                                         },
                                                                         {
                                                                             "pattern": "^audio/"
