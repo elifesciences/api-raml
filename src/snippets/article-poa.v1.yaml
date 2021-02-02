@@ -14,4 +14,4 @@ allOf:
                 social:
                     $ref: ../misc/image.v1.yaml
             required:
-                - social
+              - social
