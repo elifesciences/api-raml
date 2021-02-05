@@ -4,10 +4,3 @@ type: object
 allOf:
   - $ref: ../misc/article.v3.yaml
   - $ref: ../snippets/article-poa.v1.yaml
-  - properties:
-        image:
-            properties:
-                social:
-                    $ref: ../misc/image.v1.yaml
-            required:
-              - social
