@@ -24,15 +24,15 @@
                 },
                 "published": {
                     "title": "Publication date (UTC)",
-                    "$ref": "#/allOf/0/properties/updated"
-                },
-                "updated": {
-                    "title": "Updated date (UTC)",
                     "$schema": "http://json-schema.org/draft-04/schema#",
                     "description": "eLife restriction over the ISO8601 standard\n\nFor example:\n    - 2016-09-16T12:34:56Z\n",
                     "type": "string",
                     "format": "date-time",
                     "pattern": "^....-..-..T..:..:..Z$"
+                },
+                "updated": {
+                    "title": "Updated date (UTC)",
+                    "$ref": "#/allOf/0/properties/published"
                 },
                 "subjects": {
                     "description": "Press package subjects",
@@ -527,7 +527,7 @@
                                                                 {
                                                                     "properties": {
                                                                         "doi": {
-                                                                            "$ref": "#/allOf/1/properties/relatedContent/items/oneOf/0/allOf/0/properties/doi"
+                                                                            "$ref": "#/allOf/1/properties/relatedContent/items/oneOf/1/allOf/0/properties/doi"
                                                                         },
                                                                         "label": {
                                                                             "title": "Label",
@@ -554,7 +554,7 @@
                                                                                                 "$ref": "#/allOf/1/properties/content/items/oneOf/1/properties/id"
                                                                                             },
                                                                                             "doi": {
-                                                                                                "$ref": "#/allOf/1/properties/relatedContent/items/oneOf/0/allOf/0/properties/doi"
+                                                                                                "$ref": "#/allOf/1/properties/relatedContent/items/oneOf/1/allOf/0/properties/doi"
                                                                                             },
                                                                                             "label": {
                                                                                                 "title": "Label",
@@ -991,7 +991,7 @@
                                                 ]
                                             },
                                             "doi": {
-                                                "$ref": "#/allOf/1/properties/relatedContent/items/oneOf/0/allOf/0/properties/doi"
+                                                "$ref": "#/allOf/1/properties/relatedContent/items/oneOf/1/allOf/0/properties/doi"
                                             },
                                             "id": {
                                                 "$ref": "#/allOf/1/properties/content/items/oneOf/1/properties/id"
@@ -1080,6 +1080,37 @@
                                 "type": "object",
                                 "allOf": [
                                     {
+                                        "$ref": "#/allOf/1/properties/relatedContent/items/oneOf/1/allOf/0"
+                                    },
+                                    {
+                                        "properties": {
+                                            "status": {
+                                                "type": "string",
+                                                "enum": [
+                                                    "poa"
+                                                ]
+                                            },
+                                            "image": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "social": {
+                                                        "$ref": "#/allOf/1/properties/image/properties/social"
+                                                    }
+                                                },
+                                                "required": [
+                                                    "social"
+                                                ]
+                                            }
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "title": "Article VoR snippet",
+                                "type": "object",
+                                "allOf": [
+                                    {
                                         "$schema": "http://json-schema.org/draft-04/schema#",
                                         "title": "Article snippet",
                                         "type": "object",
@@ -1138,15 +1169,15 @@
                                             },
                                             "published": {
                                                 "description": "Date and time this article was first published.\nNot present if 'stage' is 'preview' and version is '1'.\n",
-                                                "$ref": "#/allOf/0/properties/updated"
+                                                "$ref": "#/allOf/0/properties/published"
                                             },
                                             "versionDate": {
                                                 "description": "Date and time this version of the article was published.\nOnly present if 'stage' is 'published'.\n",
-                                                "$ref": "#/allOf/0/properties/updated"
+                                                "$ref": "#/allOf/0/properties/published"
                                             },
                                             "statusDate": {
                                                 "description": "Date and time this article transitioned to current status.\nNot present if 'stage' is 'preview' and version is '1'.\n",
-                                                "$ref": "#/allOf/0/properties/updated"
+                                                "$ref": "#/allOf/0/properties/published"
                                             },
                                             "volume": {
                                                 "type": "integer",
@@ -1193,59 +1224,38 @@
                                             "status": {
                                                 "type": "string",
                                                 "enum": [
-                                                    "poa"
+                                                    "vor"
                                                 ]
-                                            }
-                                        }
-                                    }
-                                ]
-                            },
-                            {
-                                "$schema": "http://json-schema.org/draft-04/schema#",
-                                "title": "Article VoR snippet",
-                                "type": "object",
-                                "allOf": [
-                                    {
-                                        "$schema": "http://json-schema.org/draft-04/schema#",
-                                        "title": "Article VoR common properties",
-                                        "type": "object",
-                                        "allOf": [
-                                            {
-                                                "$ref": "#/allOf/1/properties/relatedContent/items/oneOf/0/allOf/0"
                                             },
-                                            {
+                                            "impactStatement": {
+                                                "type": "string",
+                                                "minLength": 1
+                                            },
+                                            "figuresPdf": {
+                                                "type": "string",
+                                                "format": "uri"
+                                            },
+                                            "image": {
+                                                "type": "object",
                                                 "properties": {
-                                                    "status": {
-                                                        "type": "string",
-                                                        "enum": [
-                                                            "vor"
+                                                    "thumbnail": {
+                                                        "$ref": "#/allOf/1/properties/image/properties/social"
+                                                    },
+                                                    "social": {
+                                                        "$ref": "#/allOf/1/properties/image/properties/social"
+                                                    }
+                                                },
+                                                "anyOf": [
+                                                    {
+                                                        "required": [
+                                                            "thumbnail"
                                                         ]
                                                     },
-                                                    "impactStatement": {
-                                                        "type": "string",
-                                                        "minLength": 1
-                                                    },
-                                                    "figuresPdf": {
-                                                        "type": "string",
-                                                        "format": "uri"
-                                                    },
-                                                    "image": {
-                                                        "type": "object",
-                                                        "properties": {
-                                                            "thumbnail": {
-                                                                "$ref": "#/allOf/1/properties/image/properties/social"
-                                                            }
-                                                        }
+                                                    {
+                                                        "required": [
+                                                            "social"
+                                                        ]
                                                     }
-                                                }
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        "properties": {
-                                            "image": {
-                                                "required": [
-                                                    "thumbnail"
                                                 ]
                                             }
                                         }

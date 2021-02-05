@@ -379,7 +379,7 @@
                                                                 {
                                                                     "properties": {
                                                                         "doi": {
-                                                                            "$ref": "#/allOf/1/properties/relatedContent/items/oneOf/0/allOf/0/properties/doi"
+                                                                            "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/1/properties/doi"
                                                                         },
                                                                         "label": {
                                                                             "title": "Label",
@@ -406,7 +406,7 @@
                                                                                                 "$ref": "#/allOf/1/properties/content/items/oneOf/1/properties/id"
                                                                                             },
                                                                                             "doi": {
-                                                                                                "$ref": "#/allOf/1/properties/relatedContent/items/oneOf/0/allOf/0/properties/doi"
+                                                                                                "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/1/properties/doi"
                                                                                             },
                                                                                             "label": {
                                                                                                 "title": "Label",
@@ -483,7 +483,7 @@
                                                                 ]
                                                             },
                                                             "image": {
-                                                                "$ref": "#/allOf/1/properties/relatedContent/items/oneOf/1/allOf/0/allOf/1/properties/image/properties/thumbnail"
+                                                                "$ref": "#/allOf/1/properties/relatedContent/items/oneOf/1/allOf/1/properties/image/properties/social"
                                                             },
                                                             "inline": {
                                                                 "type": "boolean"
@@ -623,7 +623,7 @@
                                                                 "minItems": 1
                                                             },
                                                             "placeholder": {
-                                                                "$ref": "#/allOf/1/properties/relatedContent/items/oneOf/1/allOf/0/allOf/1/properties/image/properties/thumbnail"
+                                                                "$ref": "#/allOf/1/properties/relatedContent/items/oneOf/1/allOf/1/properties/image/properties/social"
                                                             },
                                                             "width": {
                                                                 "title": "Width",
@@ -755,7 +755,10 @@
                                                 ]
                                             },
                                             "doi": {
-                                                "$ref": "#/allOf/1/properties/relatedContent/items/oneOf/0/allOf/0/properties/doi"
+                                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                                "title": "DOI",
+                                                "type": "string",
+                                                "pattern": "^10[.][0-9]{4,}[^\\s\"/<>]*/[^\\s\"]+$"
                                             },
                                             "id": {
                                                 "$ref": "#/allOf/1/properties/content/items/oneOf/1/properties/id"
@@ -844,6 +847,37 @@
                                 "type": "object",
                                 "allOf": [
                                     {
+                                        "$ref": "#/allOf/1/properties/relatedContent/items/oneOf/1/allOf/0"
+                                    },
+                                    {
+                                        "properties": {
+                                            "status": {
+                                                "type": "string",
+                                                "enum": [
+                                                    "poa"
+                                                ]
+                                            },
+                                            "image": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "social": {
+                                                        "$ref": "#/allOf/1/properties/relatedContent/items/oneOf/1/allOf/1/properties/image/properties/social"
+                                                    }
+                                                },
+                                                "required": [
+                                                    "social"
+                                                ]
+                                            }
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "title": "Article VoR snippet",
+                                "type": "object",
+                                "allOf": [
+                                    {
                                         "$schema": "http://json-schema.org/draft-04/schema#",
                                         "title": "Article snippet",
                                         "type": "object",
@@ -875,10 +909,7 @@
                                                 ]
                                             },
                                             "doi": {
-                                                "$schema": "http://json-schema.org/draft-04/schema#",
-                                                "title": "DOI",
-                                                "type": "string",
-                                                "pattern": "^10[.][0-9]{4,}[^\\s\"/<>]*/[^\\s\"]+$"
+                                                "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/1/properties/doi"
                                             },
                                             "authorLine": {
                                                 "description": "For example:\n  - Ian T Baldwin\n  - Randy Schekman, Mark Patterson\n  - Lee R Berger et al.\n",
@@ -957,129 +988,108 @@
                                             "status": {
                                                 "type": "string",
                                                 "enum": [
-                                                    "poa"
+                                                    "vor"
                                                 ]
-                                            }
-                                        }
-                                    }
-                                ]
-                            },
-                            {
-                                "$schema": "http://json-schema.org/draft-04/schema#",
-                                "title": "Article VoR snippet",
-                                "type": "object",
-                                "allOf": [
-                                    {
-                                        "$schema": "http://json-schema.org/draft-04/schema#",
-                                        "title": "Article VoR common properties",
-                                        "type": "object",
-                                        "allOf": [
-                                            {
-                                                "$ref": "#/allOf/1/properties/relatedContent/items/oneOf/0/allOf/0"
                                             },
-                                            {
+                                            "impactStatement": {
+                                                "type": "string",
+                                                "minLength": 1
+                                            },
+                                            "figuresPdf": {
+                                                "type": "string",
+                                                "format": "uri"
+                                            },
+                                            "image": {
+                                                "type": "object",
                                                 "properties": {
-                                                    "status": {
-                                                        "type": "string",
-                                                        "enum": [
-                                                            "vor"
-                                                        ]
+                                                    "thumbnail": {
+                                                        "$ref": "#/allOf/1/properties/relatedContent/items/oneOf/1/allOf/1/properties/image/properties/social"
                                                     },
-                                                    "impactStatement": {
-                                                        "type": "string",
-                                                        "minLength": 1
-                                                    },
-                                                    "figuresPdf": {
-                                                        "type": "string",
-                                                        "format": "uri"
-                                                    },
-                                                    "image": {
+                                                    "social": {
+                                                        "$schema": "http://json-schema.org/draft-04/schema#",
+                                                        "title": "IIIF image",
                                                         "type": "object",
-                                                        "properties": {
-                                                            "thumbnail": {
-                                                                "$schema": "http://json-schema.org/draft-04/schema#",
-                                                                "title": "IIIF image",
-                                                                "type": "object",
-                                                                "allOf": [
-                                                                    {
-                                                                        "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/2/properties/content/items/oneOf/4/allOf/1"
+                                                        "allOf": [
+                                                            {
+                                                                "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/2/properties/content/items/oneOf/4/allOf/1"
+                                                            },
+                                                            {
+                                                                "properties": {
+                                                                    "uri": {
+                                                                        "title": "IIIF Image",
+                                                                        "type": "string",
+                                                                        "format": "uri",
+                                                                        "pattern": "^https://[^/]+(?:/[^?#\\[\\]@]+)?/[^/?#\\[\\]@]+$"
                                                                     },
-                                                                    {
+                                                                    "alt": {
+                                                                        "title": "Alternative text",
+                                                                        "type": "string"
+                                                                    },
+                                                                    "source": {
+                                                                        "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/3/properties/assets/items/allOf/1/properties/sourceData/items/allOf/3"
+                                                                    },
+                                                                    "size": {
+                                                                        "type": "object",
                                                                         "properties": {
-                                                                            "uri": {
-                                                                                "title": "IIIF Image",
-                                                                                "type": "string",
-                                                                                "format": "uri",
-                                                                                "pattern": "^https://[^/]+(?:/[^?#\\[\\]@]+)?/[^/?#\\[\\]@]+$"
+                                                                            "width": {
+                                                                                "type": "integer",
+                                                                                "minimum": 1
                                                                             },
-                                                                            "alt": {
-                                                                                "title": "Alternative text",
-                                                                                "type": "string"
-                                                                            },
-                                                                            "source": {
-                                                                                "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/3/properties/assets/items/allOf/1/properties/sourceData/items/allOf/3"
-                                                                            },
-                                                                            "size": {
-                                                                                "type": "object",
-                                                                                "properties": {
-                                                                                    "width": {
-                                                                                        "type": "integer",
-                                                                                        "minimum": 1
-                                                                                    },
-                                                                                    "height": {
-                                                                                        "type": "integer",
-                                                                                        "minimum": 1
-                                                                                    }
-                                                                                },
-                                                                                "required": [
-                                                                                    "width",
-                                                                                    "height"
-                                                                                ]
-                                                                            },
-                                                                            "focalPoint": {
-                                                                                "type": "object",
-                                                                                "title": "Focal point",
-                                                                                "description": "Point on the image that is considered to be the focal point of the image.\n\nIf not present, 50 can be used for both `x` and `y`.\n",
-                                                                                "properties": {
-                                                                                    "x": {
-                                                                                        "description": "Percentage on the horizontal axis.\n",
-                                                                                        "type": "integer",
-                                                                                        "minimum": 0,
-                                                                                        "maximum": 100
-                                                                                    },
-                                                                                    "y": {
-                                                                                        "description": "Percentage on the vertical axis.\n",
-                                                                                        "type": "integer",
-                                                                                        "minimum": 0,
-                                                                                        "maximum": 100
-                                                                                    }
-                                                                                },
-                                                                                "required": [
-                                                                                    "x",
-                                                                                    "y"
-                                                                                ]
+                                                                            "height": {
+                                                                                "type": "integer",
+                                                                                "minimum": 1
                                                                             }
                                                                         },
                                                                         "required": [
-                                                                            "uri",
-                                                                            "alt",
-                                                                            "source",
-                                                                            "size"
+                                                                            "width",
+                                                                            "height"
+                                                                        ]
+                                                                    },
+                                                                    "focalPoint": {
+                                                                        "type": "object",
+                                                                        "title": "Focal point",
+                                                                        "description": "Point on the image that is considered to be the focal point of the image.\n\nIf not present, 50 can be used for both `x` and `y`.\n",
+                                                                        "properties": {
+                                                                            "x": {
+                                                                                "description": "Percentage on the horizontal axis.\n",
+                                                                                "type": "integer",
+                                                                                "minimum": 0,
+                                                                                "maximum": 100
+                                                                            },
+                                                                            "y": {
+                                                                                "description": "Percentage on the vertical axis.\n",
+                                                                                "type": "integer",
+                                                                                "minimum": 0,
+                                                                                "maximum": 100
+                                                                            }
+                                                                        },
+                                                                        "required": [
+                                                                            "x",
+                                                                            "y"
                                                                         ]
                                                                     }
+                                                                },
+                                                                "required": [
+                                                                    "uri",
+                                                                    "alt",
+                                                                    "source",
+                                                                    "size"
                                                                 ]
                                                             }
-                                                        }
+                                                        ]
                                                     }
-                                                }
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        "properties": {
-                                            "image": {
-                                                "required": [
-                                                    "thumbnail"
+                                                },
+                                                "anyOf": [
+                                                    {
+                                                        "required": [
+                                                            "thumbnail"
+                                                        ]
+                                                    },
+                                                    {
+                                                        "required": [
+                                                            "social"
+                                                        ]
+                                                    }
                                                 ]
                                             }
                                         }
