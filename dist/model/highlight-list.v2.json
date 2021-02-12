@@ -578,6 +578,9 @@
                                                                 "properties": {
                                                                     "thumbnail": {
                                                                         "$ref": "#/properties/items/items/properties/image"
+                                                                    },
+                                                                    "social": {
+                                                                        "$ref": "#/properties/items/items/properties/image"
                                                                     }
                                                                 },
                                                                 "required": [

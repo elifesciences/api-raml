@@ -10,37 +10,6 @@
                 "type": "object",
                 "allOf": [
                     {
-                        "$ref": "#/items/oneOf/1/allOf/0"
-                    },
-                    {
-                        "properties": {
-                            "status": {
-                                "type": "string",
-                                "enum": [
-                                    "poa"
-                                ]
-                            },
-                            "image": {
-                                "type": "object",
-                                "properties": {
-                                    "social": {
-                                        "$ref": "#/items/oneOf/1/allOf/1/properties/image/properties/thumbnail"
-                                    }
-                                },
-                                "required": [
-                                    "social"
-                                ]
-                            }
-                        }
-                    }
-                ]
-            },
-            {
-                "$schema": "http://json-schema.org/draft-04/schema#",
-                "title": "Article VoR snippet",
-                "type": "object",
-                "allOf": [
-                    {
                         "$schema": "http://json-schema.org/draft-04/schema#",
                         "title": "Article snippet",
                         "type": "object",
@@ -110,11 +79,11 @@
                             },
                             "versionDate": {
                                 "description": "Date and time this version of the article was published.\nOnly present if 'stage' is 'published'.\n",
-                                "$ref": "#/items/oneOf/1/allOf/0/properties/published"
+                                "$ref": "#/items/oneOf/0/allOf/0/properties/published"
                             },
                             "statusDate": {
                                 "description": "Date and time this article transitioned to current status.\nNot present if 'stage' is 'preview' and version is '1'.\n",
-                                "$ref": "#/items/oneOf/1/allOf/0/properties/published"
+                                "$ref": "#/items/oneOf/0/allOf/0/properties/published"
                             },
                             "volume": {
                                 "type": "integer",
@@ -136,7 +105,7 @@
                                     "type": "object",
                                     "properties": {
                                         "id": {
-                                            "$ref": "#/items/oneOf/1/allOf/0/properties/id"
+                                            "$ref": "#/items/oneOf/0/allOf/0/properties/id"
                                         },
                                         "name": {
                                             "description": "Name",
@@ -177,21 +146,13 @@
                             "status": {
                                 "type": "string",
                                 "enum": [
-                                    "vor"
+                                    "poa"
                                 ]
-                            },
-                            "impactStatement": {
-                                "type": "string",
-                                "minLength": 1
-                            },
-                            "figuresPdf": {
-                                "type": "string",
-                                "format": "uri"
                             },
                             "image": {
                                 "type": "object",
                                 "properties": {
-                                    "thumbnail": {
+                                    "social": {
                                         "$schema": "http://json-schema.org/draft-04/schema#",
                                         "title": "IIIF image",
                                         "type": "object",
@@ -299,9 +260,48 @@
                                                 ]
                                             }
                                         ]
+                                    }
+                                },
+                                "required": [
+                                    "social"
+                                ]
+                            }
+                        }
+                    }
+                ]
+            },
+            {
+                "$schema": "http://json-schema.org/draft-04/schema#",
+                "title": "Article VoR snippet",
+                "type": "object",
+                "allOf": [
+                    {
+                        "$ref": "#/items/oneOf/0/allOf/0"
+                    },
+                    {
+                        "properties": {
+                            "status": {
+                                "type": "string",
+                                "enum": [
+                                    "vor"
+                                ]
+                            },
+                            "impactStatement": {
+                                "type": "string",
+                                "minLength": 1
+                            },
+                            "figuresPdf": {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            "image": {
+                                "type": "object",
+                                "properties": {
+                                    "thumbnail": {
+                                        "$ref": "#/items/oneOf/0/allOf/1/properties/image/properties/social"
                                     },
                                     "social": {
-                                        "$ref": "#/items/oneOf/1/allOf/1/properties/image/properties/thumbnail"
+                                        "$ref": "#/items/oneOf/0/allOf/1/properties/image/properties/social"
                                     }
                                 },
                                 "anyOf": [

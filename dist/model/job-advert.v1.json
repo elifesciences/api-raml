@@ -25,19 +25,19 @@
                 },
                 "closingDate": {
                     "title": "Updated date (UTC)",
-                    "$ref": "#/allOf/0/properties/published"
-                },
-                "published": {
-                    "title": "Publication date (UTC)",
                     "$schema": "http://json-schema.org/draft-04/schema#",
                     "description": "eLife restriction over the ISO8601 standard\n\nFor example:\n    - 2016-09-16T12:34:56Z\n",
                     "type": "string",
                     "format": "date-time",
                     "pattern": "^....-..-..T..:..:..Z$"
                 },
+                "published": {
+                    "title": "Publication date (UTC)",
+                    "$ref": "#/allOf/0/properties/closingDate"
+                },
                 "updated": {
                     "title": "Updated date (UTC)",
-                    "$ref": "#/allOf/0/properties/published"
+                    "$ref": "#/allOf/0/properties/closingDate"
                 }
             },
             "required": [
@@ -238,7 +238,18 @@
                                                                             "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/16/allOf/0"
                                                                         },
                                                                         {
-                                                                            "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/15/allOf/1"
+                                                                            "$schema": "http://json-schema.org/draft-04/schema#",
+                                                                            "title": "Has attribution",
+                                                                            "type": "object",
+                                                                            "properties": {
+                                                                                "attribution": {
+                                                                                    "title": "Attribution",
+                                                                                    "type": "array",
+                                                                                    "items": {
+                                                                                        "type": "string"
+                                                                                    }
+                                                                                }
+                                                                            }
                                                                         },
                                                                         {
                                                                             "properties": {
@@ -428,7 +439,7 @@
                                                                                         "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/16/allOf/0"
                                                                                     },
                                                                                     {
-                                                                                        "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/15/allOf/1"
+                                                                                        "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/2/properties/content/items/oneOf/4/allOf/1"
                                                                                     },
                                                                                     {
                                                                                         "properties": {
@@ -582,7 +593,7 @@
                                                         "type": "object",
                                                         "allOf": [
                                                             {
-                                                                "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/15/allOf/1"
+                                                                "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/2/properties/content/items/oneOf/4/allOf/1"
                                                             },
                                                             {
                                                                 "properties": {
@@ -790,18 +801,7 @@
                                                         "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/16/allOf/0"
                                                     },
                                                     {
-                                                        "$schema": "http://json-schema.org/draft-04/schema#",
-                                                        "title": "Has attribution",
-                                                        "type": "object",
-                                                        "properties": {
-                                                            "attribution": {
-                                                                "title": "Attribution",
-                                                                "type": "array",
-                                                                "items": {
-                                                                    "type": "string"
-                                                                }
-                                                            }
-                                                        }
+                                                        "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/2/properties/content/items/oneOf/4/allOf/1"
                                                     },
                                                     {
                                                         "properties": {
