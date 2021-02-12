@@ -26,6 +26,8 @@ properties:
         properties:
             thumbnail:
                 $ref: ../misc/image.v1.yaml
+            social:
+                $ref: ../misc/image.v1.yaml
         required:
           - thumbnail
     subjects:
