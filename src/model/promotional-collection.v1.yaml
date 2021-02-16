@@ -9,6 +9,8 @@ allOf:
             properties:
                 banner:
                     $ref: ../misc/image.v1.yaml
+                social:
+                    $ref: ../misc/image.v1.yaml
             required:
               - banner
         editors:

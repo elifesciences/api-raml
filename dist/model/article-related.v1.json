@@ -19,6 +19,17 @@
                                 "enum": [
                                     "poa"
                                 ]
+                            },
+                            "image": {
+                                "type": "object",
+                                "properties": {
+                                    "social": {
+                                        "$ref": "#/items/oneOf/1/allOf/1/properties/image/properties/thumbnail"
+                                    }
+                                },
+                                "required": [
+                                    "social"
+                                ]
                             }
                         }
                     }
@@ -288,10 +299,22 @@
                                                 ]
                                             }
                                         ]
+                                    },
+                                    "social": {
+                                        "$ref": "#/items/oneOf/1/allOf/1/properties/image/properties/thumbnail"
                                     }
                                 },
-                                "required": [
-                                    "thumbnail"
+                                "anyOf": [
+                                    {
+                                        "required": [
+                                            "thumbnail"
+                                        ]
+                                    },
+                                    {
+                                        "required": [
+                                            "social"
+                                        ]
+                                    }
                                 ]
                             }
                         }

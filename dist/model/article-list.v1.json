@@ -19,26 +19,6 @@
                         "type": "object",
                         "allOf": [
                             {
-                                "$ref": "#/properties/items/items/oneOf/1/allOf/0"
-                            },
-                            {
-                                "properties": {
-                                    "status": {
-                                        "type": "string",
-                                        "enum": [
-                                            "poa"
-                                        ]
-                                    }
-                                }
-                            }
-                        ]
-                    },
-                    {
-                        "$schema": "http://json-schema.org/draft-04/schema#",
-                        "title": "Article VoR snippet",
-                        "type": "object",
-                        "allOf": [
-                            {
                                 "$schema": "http://json-schema.org/draft-04/schema#",
                                 "title": "Article snippet",
                                 "type": "object",
@@ -108,11 +88,11 @@
                                     },
                                     "versionDate": {
                                         "description": "Date and time this version of the article was published.\nOnly present if 'stage' is 'published'.\n",
-                                        "$ref": "#/properties/items/items/oneOf/1/allOf/0/properties/published"
+                                        "$ref": "#/properties/items/items/oneOf/0/allOf/0/properties/published"
                                     },
                                     "statusDate": {
                                         "description": "Date and time this article transitioned to current status.\nNot present if 'stage' is 'preview' and version is '1'.\n",
-                                        "$ref": "#/properties/items/items/oneOf/1/allOf/0/properties/published"
+                                        "$ref": "#/properties/items/items/oneOf/0/allOf/0/properties/published"
                                     },
                                     "volume": {
                                         "type": "integer",
@@ -134,7 +114,7 @@
                                             "type": "object",
                                             "properties": {
                                                 "id": {
-                                                    "$ref": "#/properties/items/items/oneOf/1/allOf/0/properties/id"
+                                                    "$ref": "#/properties/items/items/oneOf/0/allOf/0/properties/id"
                                                 },
                                                 "name": {
                                                     "description": "Name",
@@ -175,6 +155,37 @@
                                     "status": {
                                         "type": "string",
                                         "enum": [
+                                            "poa"
+                                        ]
+                                    },
+                                    "image": {
+                                        "type": "object",
+                                        "properties": {
+                                            "social": {
+                                                "$ref": "#/properties/items/items/oneOf/1/allOf/1/properties/image/properties/social"
+                                            }
+                                        },
+                                        "required": [
+                                            "social"
+                                        ]
+                                    }
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "$schema": "http://json-schema.org/draft-04/schema#",
+                        "title": "Article VoR snippet",
+                        "type": "object",
+                        "allOf": [
+                            {
+                                "$ref": "#/properties/items/items/oneOf/0/allOf/0"
+                            },
+                            {
+                                "properties": {
+                                    "status": {
+                                        "type": "string",
+                                        "enum": [
                                             "vor"
                                         ]
                                     },
@@ -190,6 +201,9 @@
                                         "type": "object",
                                         "properties": {
                                             "thumbnail": {
+                                                "$ref": "#/properties/items/items/oneOf/1/allOf/1/properties/image/properties/social"
+                                            },
+                                            "social": {
                                                 "$schema": "http://json-schema.org/draft-04/schema#",
                                                 "title": "IIIF image",
                                                 "type": "object",
@@ -299,8 +313,17 @@
                                                 ]
                                             }
                                         },
-                                        "required": [
-                                            "thumbnail"
+                                        "anyOf": [
+                                            {
+                                                "required": [
+                                                    "thumbnail"
+                                                ]
+                                            },
+                                            {
+                                                "required": [
+                                                    "social"
+                                                ]
+                                            }
                                         ]
                                     }
                                 }

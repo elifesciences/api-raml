@@ -7,193 +7,206 @@
             "$schema": "http://json-schema.org/draft-04/schema#",
             "title": "Interview snippet",
             "type": "object",
-            "properties": {
-                "id": {
+            "allOf": [
+                {
                     "$schema": "http://json-schema.org/draft-04/schema#",
-                    "title": "eLife ID",
-                    "type": "string",
-                    "pattern": "^[a-z0-9-]+$"
-                },
-                "interviewee": {
-                    "$schema": "http://json-schema.org/draft-04/schema#",
-                    "title": "Person",
+                    "title": "Interview snippet common properties",
                     "type": "object",
                     "properties": {
-                        "name": {
-                            "title": "Name",
+                        "id": {
+                            "$schema": "http://json-schema.org/draft-04/schema#",
+                            "title": "eLife ID",
+                            "type": "string",
+                            "pattern": "^[a-z0-9-]+$"
+                        },
+                        "interviewee": {
+                            "$schema": "http://json-schema.org/draft-04/schema#",
+                            "title": "Person",
                             "type": "object",
                             "properties": {
-                                "preferred": {
-                                    "title": "Preferred name",
-                                    "description": "This is generally the name that is used by the person for English-language publications.\n\nFor example:\n  - Randy Schekman\n  - K. VijayRaghavan\n  - Li Wenhui\n",
-                                    "type": "string",
-                                    "minLength": 1
-                                },
-                                "index": {
-                                    "title": "Index name",
-                                    "description": "This is the name that should be used for indexing people.\n\nFor example:\n  - Schekman, Randy\n  - VijayRaghavan, Krishnaswamy\n  - Li Wenhui\n"
-                                }
-                            },
-                            "required": [
-                                "preferred",
-                                "index"
-                            ]
-                        },
-                        "orcid": {
-                            "title": "ORCID",
-                            "type": "string",
-                            "pattern": "^[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{3}[0-9X]$"
-                        }
-                    },
-                    "required": [
-                        "name"
-                    ]
-                },
-                "title": {
-                    "title": "Title of the interview",
-                    "type": "string",
-                    "minLength": 1
-                },
-                "impactStatement": {
-                    "title": "Description of the interview",
-                    "type": "string",
-                    "minLength": 1
-                },
-                "published": {
-                    "title": "Publication date (UTC)",
-                    "$ref": "#/allOf/0/properties/updated"
-                },
-                "updated": {
-                    "title": "Updated date (UTC)",
-                    "$schema": "http://json-schema.org/draft-04/schema#",
-                    "description": "eLife restriction over the ISO8601 standard\n\nFor example:\n    - 2016-09-16T12:34:56Z\n",
-                    "type": "string",
-                    "format": "date-time",
-                    "pattern": "^....-..-..T..:..:..Z$"
-                },
-                "image": {
-                    "type": "object",
-                    "properties": {
-                        "thumbnail": {
-                            "$schema": "http://json-schema.org/draft-04/schema#",
-                            "title": "IIIF image",
-                            "type": "object",
-                            "allOf": [
-                                {
-                                    "$schema": "http://json-schema.org/draft-04/schema#",
-                                    "title": "Has attribution",
+                                "name": {
+                                    "title": "Name",
                                     "type": "object",
                                     "properties": {
-                                        "attribution": {
-                                            "title": "Attribution",
-                                            "type": "array",
-                                            "items": {
-                                                "type": "string"
-                                            }
-                                        }
-                                    }
-                                },
-                                {
-                                    "properties": {
-                                        "uri": {
-                                            "title": "IIIF Image",
+                                        "preferred": {
+                                            "title": "Preferred name",
+                                            "description": "This is generally the name that is used by the person for English-language publications.\n\nFor example:\n  - Randy Schekman\n  - K. VijayRaghavan\n  - Li Wenhui\n",
                                             "type": "string",
-                                            "format": "uri",
-                                            "pattern": "^https://[^/]+(?:/[^?#\\[\\]@]+)?/[^/?#\\[\\]@]+$"
+                                            "minLength": 1
                                         },
-                                        "alt": {
-                                            "title": "Alternative text",
-                                            "type": "string"
-                                        },
-                                        "source": {
-                                            "$schema": "http://json-schema.org/draft-04/schema#",
-                                            "title": "File",
-                                            "type": "object",
-                                            "properties": {
-                                                "mediaType": {
-                                                    "$schema": "http://json-schema.org/draft-04/schema#",
-                                                    "title": "Media type",
-                                                    "type": "string",
-                                                    "pattern": "^([a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+/[a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+)(; *[a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+=(([a-zA-Z0-9\\.\\-]+)|(\".+\")))*$"
-                                                },
-                                                "uri": {
-                                                    "title": "Source data URI",
-                                                    "type": "string",
-                                                    "format": "uri"
-                                                },
-                                                "filename": {
-                                                    "title": "Filename",
-                                                    "type": "string",
-                                                    "pattern": "^[A-Za-z0-9_. ()-]+\\.[a-z0-9]+$"
-                                                }
-                                            },
-                                            "required": [
-                                                "mediaType",
-                                                "uri",
-                                                "filename"
-                                            ]
-                                        },
-                                        "size": {
-                                            "type": "object",
-                                            "properties": {
-                                                "width": {
-                                                    "type": "integer",
-                                                    "minimum": 1
-                                                },
-                                                "height": {
-                                                    "type": "integer",
-                                                    "minimum": 1
-                                                }
-                                            },
-                                            "required": [
-                                                "width",
-                                                "height"
-                                            ]
-                                        },
-                                        "focalPoint": {
-                                            "type": "object",
-                                            "title": "Focal point",
-                                            "description": "Point on the image that is considered to be the focal point of the image.\n\nIf not present, 50 can be used for both `x` and `y`.\n",
-                                            "properties": {
-                                                "x": {
-                                                    "description": "Percentage on the horizontal axis.\n",
-                                                    "type": "integer",
-                                                    "minimum": 0,
-                                                    "maximum": 100
-                                                },
-                                                "y": {
-                                                    "description": "Percentage on the vertical axis.\n",
-                                                    "type": "integer",
-                                                    "minimum": 0,
-                                                    "maximum": 100
-                                                }
-                                            },
-                                            "required": [
-                                                "x",
-                                                "y"
-                                            ]
+                                        "index": {
+                                            "title": "Index name",
+                                            "description": "This is the name that should be used for indexing people.\n\nFor example:\n  - Schekman, Randy\n  - VijayRaghavan, Krishnaswamy\n  - Li Wenhui\n"
                                         }
                                     },
                                     "required": [
-                                        "uri",
-                                        "alt",
-                                        "source",
-                                        "size"
+                                        "preferred",
+                                        "index"
+                                    ]
+                                },
+                                "orcid": {
+                                    "title": "ORCID",
+                                    "type": "string",
+                                    "pattern": "^[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{3}[0-9X]$"
+                                }
+                            },
+                            "required": [
+                                "name"
+                            ]
+                        },
+                        "title": {
+                            "title": "Title of the interview",
+                            "type": "string",
+                            "minLength": 1
+                        },
+                        "impactStatement": {
+                            "title": "Description of the interview",
+                            "type": "string",
+                            "minLength": 1
+                        },
+                        "published": {
+                            "title": "Publication date (UTC)",
+                            "$schema": "http://json-schema.org/draft-04/schema#",
+                            "description": "eLife restriction over the ISO8601 standard\n\nFor example:\n    - 2016-09-16T12:34:56Z\n",
+                            "type": "string",
+                            "format": "date-time",
+                            "pattern": "^....-..-..T..:..:..Z$"
+                        },
+                        "updated": {
+                            "title": "Updated date (UTC)",
+                            "$ref": "#/allOf/0/allOf/0/properties/published"
+                        },
+                        "image": {
+                            "type": "object",
+                            "properties": {
+                                "thumbnail": {
+                                    "$schema": "http://json-schema.org/draft-04/schema#",
+                                    "title": "IIIF image",
+                                    "type": "object",
+                                    "allOf": [
+                                        {
+                                            "$schema": "http://json-schema.org/draft-04/schema#",
+                                            "title": "Has attribution",
+                                            "type": "object",
+                                            "properties": {
+                                                "attribution": {
+                                                    "title": "Attribution",
+                                                    "type": "array",
+                                                    "items": {
+                                                        "type": "string"
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "properties": {
+                                                "uri": {
+                                                    "title": "IIIF Image",
+                                                    "type": "string",
+                                                    "format": "uri",
+                                                    "pattern": "^https://[^/]+(?:/[^?#\\[\\]@]+)?/[^/?#\\[\\]@]+$"
+                                                },
+                                                "alt": {
+                                                    "title": "Alternative text",
+                                                    "type": "string"
+                                                },
+                                                "source": {
+                                                    "$schema": "http://json-schema.org/draft-04/schema#",
+                                                    "title": "File",
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "mediaType": {
+                                                            "$schema": "http://json-schema.org/draft-04/schema#",
+                                                            "title": "Media type",
+                                                            "type": "string",
+                                                            "pattern": "^([a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+/[a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+)(; *[a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+=(([a-zA-Z0-9\\.\\-]+)|(\".+\")))*$"
+                                                        },
+                                                        "uri": {
+                                                            "title": "Source data URI",
+                                                            "type": "string",
+                                                            "format": "uri"
+                                                        },
+                                                        "filename": {
+                                                            "title": "Filename",
+                                                            "type": "string",
+                                                            "pattern": "^[A-Za-z0-9_. ()-]+\\.[a-z0-9]+$"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "mediaType",
+                                                        "uri",
+                                                        "filename"
+                                                    ]
+                                                },
+                                                "size": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "width": {
+                                                            "type": "integer",
+                                                            "minimum": 1
+                                                        },
+                                                        "height": {
+                                                            "type": "integer",
+                                                            "minimum": 1
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "width",
+                                                        "height"
+                                                    ]
+                                                },
+                                                "focalPoint": {
+                                                    "type": "object",
+                                                    "title": "Focal point",
+                                                    "description": "Point on the image that is considered to be the focal point of the image.\n\nIf not present, 50 can be used for both `x` and `y`.\n",
+                                                    "properties": {
+                                                        "x": {
+                                                            "description": "Percentage on the horizontal axis.\n",
+                                                            "type": "integer",
+                                                            "minimum": 0,
+                                                            "maximum": 100
+                                                        },
+                                                        "y": {
+                                                            "description": "Percentage on the vertical axis.\n",
+                                                            "type": "integer",
+                                                            "minimum": 0,
+                                                            "maximum": 100
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "x",
+                                                        "y"
+                                                    ]
+                                                }
+                                            },
+                                            "required": [
+                                                "uri",
+                                                "alt",
+                                                "source",
+                                                "size"
+                                            ]
+                                        }
                                     ]
                                 }
-                            ]
+                            }
                         }
                     },
                     "required": [
-                        "thumbnail"
+                        "id",
+                        "interviewee",
+                        "title",
+                        "published"
                     ]
+                },
+                {
+                    "properties": {
+                        "image": {
+                            "required": [
+                                "thumbnail"
+                            ]
+                        }
+                    }
                 }
-            },
-            "required": [
-                "id",
-                "interviewee",
-                "title",
-                "published"
             ]
         },
         {
@@ -412,7 +425,7 @@
                                                                             "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/12/allOf/0"
                                                                         },
                                                                         {
-                                                                            "$ref": "#/allOf/0/properties/image/properties/thumbnail/allOf/0"
+                                                                            "$ref": "#/allOf/0/allOf/0/properties/image/properties/thumbnail/allOf/0"
                                                                         },
                                                                         {
                                                                             "properties": {
@@ -560,7 +573,7 @@
                                                                                         "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/12/allOf/0"
                                                                                     },
                                                                                     {
-                                                                                        "$ref": "#/allOf/0/properties/image/properties/thumbnail/allOf/0"
+                                                                                        "$ref": "#/allOf/0/allOf/0/properties/image/properties/thumbnail/allOf/0"
                                                                                     },
                                                                                     {
                                                                                         "properties": {
@@ -582,7 +595,7 @@
                                                                                         ]
                                                                                     },
                                                                                     {
-                                                                                        "$ref": "#/allOf/0/properties/image/properties/thumbnail/allOf/1/properties/source"
+                                                                                        "$ref": "#/allOf/0/allOf/0/properties/image/properties/thumbnail/allOf/1/properties/source"
                                                                                     }
                                                                                 ]
                                                                             }
@@ -623,7 +636,7 @@
                                                                 ]
                                                             },
                                                             "image": {
-                                                                "$ref": "#/allOf/0/properties/image/properties/thumbnail"
+                                                                "$ref": "#/allOf/0/allOf/0/properties/image/properties/thumbnail"
                                                             },
                                                             "inline": {
                                                                 "type": "boolean"
@@ -717,7 +730,7 @@
                                                         "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/12/allOf/0"
                                                     },
                                                     {
-                                                        "$ref": "#/allOf/0/properties/image/properties/thumbnail/allOf/0"
+                                                        "$ref": "#/allOf/0/allOf/0/properties/image/properties/thumbnail/allOf/0"
                                                     },
                                                     {
                                                         "properties": {
@@ -738,7 +751,7 @@
                                                                         "mediaType": {
                                                                             "allOf": [
                                                                                 {
-                                                                                    "$ref": "#/allOf/0/properties/image/properties/thumbnail/allOf/1/properties/source/properties/mediaType"
+                                                                                    "$ref": "#/allOf/0/allOf/0/properties/image/properties/thumbnail/allOf/1/properties/source/properties/mediaType"
                                                                                 },
                                                                                 {
                                                                                     "pattern": "^video/"
@@ -760,7 +773,7 @@
                                                                 "minItems": 1
                                                             },
                                                             "placeholder": {
-                                                                "$ref": "#/allOf/0/properties/image/properties/thumbnail"
+                                                                "$ref": "#/allOf/0/allOf/0/properties/image/properties/thumbnail"
                                                             },
                                                             "width": {
                                                                 "title": "Width",

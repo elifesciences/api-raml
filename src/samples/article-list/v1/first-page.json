@@ -12,7 +12,29 @@
             "published": "2016-03-28T00:00:00Z",
             "statusDate": "2016-03-28T00:00:00Z",
             "volume": 5,
-            "elocationId": "e14107"
+            "elocationId": "e14107",
+            "image": {
+                "social": {
+                    "uri": "https://iiif.elifesciences.org/lax/14107%2Felife-14107-fig1-v1.tif",
+                    "alt": "",
+                    "attribution": [
+                        "By some person."
+                    ],
+                    "source": {
+                        "mediaType": "image/jpeg",
+                        "uri": "https://iiif.elifesciences.org/lax/14107%2Felife-14107-fig1-v1.tif/full/full/0/default.jpg",
+                        "filename": "an-image.jpg"
+                    },
+                    "size": {
+                        "width": 4194,
+                        "height": 4714
+                    },
+                    "focalPoint": {
+                        "x": 25,
+                        "y": 75
+                    }
+                }
+            }
         },
         {
             "status": "vor",
@@ -46,6 +68,71 @@
                     "source": {
                         "mediaType": "image/jpeg",
                         "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif/full/full/0/default.jpg",
+                        "filename": "an-image.jpg"
+                    },
+                    "size": {
+                        "width": 4194,
+                        "height": 4714
+                    },
+                    "focalPoint": {
+                        "x": 25,
+                        "y": 75
+                    }
+                },
+                "social": {
+                    "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif",
+                    "alt": "",
+                    "attribution": [
+                        "By some person."
+                    ],
+                    "source": {
+                        "mediaType": "image/jpeg",
+                        "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif/full/full/0/default.jpg",
+                        "filename": "an-image.jpg"
+                    },
+                    "size": {
+                        "width": 4194,
+                        "height": 4714
+                    },
+                    "focalPoint": {
+                        "x": 25,
+                        "y": 75
+                    }
+                }
+            }
+        },
+        {
+            "status": "vor",
+            "id": "15691",
+            "version": 4,
+            "type": "research-article",
+            "doi": "10.7554/eLife.15691",
+            "authorLine": "Ming Chao et al.",
+            "title": "A nonrandomized cohort and a randomized study of local control of large hepatocarcinoma by targeting intratumoral lactic acidosis",
+            "published": "2016-08-02T00:00:00Z",
+            "volume": 5,
+            "elocationId": "e15691",
+            "pdf": "https://cdn.elifesciences.org/articles/15691/elife-15691-v3.pdf",
+            "subjects": [
+                {
+                    "id": "cancer-biology",
+                    "name": "Cancer Biology"
+                }
+            ],
+            "impactStatement": "Local infusion of bicarbonate into hepatocellular carcinoma markedly enhances local tumor control by transarterial chemoembolization.",
+            "stage": "published",
+            "statusDate": "2016-08-02T00:00:00Z",
+            "versionDate": "2020-05-14T15:04:33Z",
+            "image": {
+                "social": {
+                    "uri": "https://iiif.elifesciences.org/lax/15691%2Felife-15691-fig1-v1.tif",
+                    "alt": "",
+                    "attribution": [
+                        "By some person."
+                    ],
+                    "source": {
+                        "mediaType": "image/jpeg",
+                        "uri": "https://iiif.elifesciences.org/lax/15691%2Felife-15691-fig1-v1.tif/full/full/0/default.jpg",
                         "filename": "an-image.jpg"
                     },
                     "size": {

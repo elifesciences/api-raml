@@ -195,6 +195,9 @@
                                     ]
                                 }
                             ]
+                        },
+                        "social": {
+                            "$ref": "#/allOf/1/properties/image/properties/banner"
                         }
                     },
                     "required": [
@@ -248,6 +251,37 @@
                                                 {
                                                     "$schema": "http://json-schema.org/draft-04/schema#",
                                                     "title": "Article PoA snippet",
+                                                    "type": "object",
+                                                    "allOf": [
+                                                        {
+                                                            "$ref": "#/allOf/1/properties/chapters/items/allOf/1/properties/content/items/oneOf/1/allOf/0"
+                                                        },
+                                                        {
+                                                            "properties": {
+                                                                "status": {
+                                                                    "type": "string",
+                                                                    "enum": [
+                                                                        "poa"
+                                                                    ]
+                                                                },
+                                                                "image": {
+                                                                    "type": "object",
+                                                                    "properties": {
+                                                                        "social": {
+                                                                            "$ref": "#/allOf/1/properties/image/properties/banner"
+                                                                        }
+                                                                    },
+                                                                    "required": [
+                                                                        "social"
+                                                                    ]
+                                                                }
+                                                            }
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "$schema": "http://json-schema.org/draft-04/schema#",
+                                                    "title": "Article VoR snippet",
                                                     "type": "object",
                                                     "allOf": [
                                                         {
@@ -342,7 +376,7 @@
                                                                         "type": "object",
                                                                         "properties": {
                                                                             "id": {
-                                                                                "$ref": "#/allOf/1/properties/chapters/items/allOf/1/properties/content/items/oneOf/0/allOf/0/properties/id"
+                                                                                "$ref": "#/allOf/1/properties/chapters/items/allOf/1/properties/content/items/oneOf/1/allOf/0/properties/id"
                                                                             },
                                                                             "name": {
                                                                                 "description": "Name",
@@ -383,26 +417,6 @@
                                                                 "status": {
                                                                     "type": "string",
                                                                     "enum": [
-                                                                        "poa"
-                                                                    ]
-                                                                }
-                                                            }
-                                                        }
-                                                    ]
-                                                },
-                                                {
-                                                    "$schema": "http://json-schema.org/draft-04/schema#",
-                                                    "title": "Article VoR snippet",
-                                                    "type": "object",
-                                                    "allOf": [
-                                                        {
-                                                            "$ref": "#/allOf/1/properties/chapters/items/allOf/1/properties/content/items/oneOf/0/allOf/0"
-                                                        },
-                                                        {
-                                                            "properties": {
-                                                                "status": {
-                                                                    "type": "string",
-                                                                    "enum": [
                                                                         "vor"
                                                                     ]
                                                                 },
@@ -419,10 +433,22 @@
                                                                     "properties": {
                                                                         "thumbnail": {
                                                                             "$ref": "#/allOf/1/properties/image/properties/banner"
+                                                                        },
+                                                                        "social": {
+                                                                            "$ref": "#/allOf/1/properties/image/properties/banner"
                                                                         }
                                                                     },
-                                                                    "required": [
-                                                                        "thumbnail"
+                                                                    "anyOf": [
+                                                                        {
+                                                                            "required": [
+                                                                                "thumbnail"
+                                                                            ]
+                                                                        },
+                                                                        {
+                                                                            "required": [
+                                                                                "social"
+                                                                            ]
+                                                                        }
                                                                     ]
                                                                 }
                                                             }
@@ -457,7 +483,7 @@
                                                                             "type": "object",
                                                                             "properties": {
                                                                                 "id": {
-                                                                                    "$ref": "#/allOf/1/properties/chapters/items/allOf/1/properties/content/items/oneOf/0/allOf/0/properties/id"
+                                                                                    "$ref": "#/allOf/1/properties/chapters/items/allOf/1/properties/content/items/oneOf/1/allOf/0/properties/id"
                                                                                 },
                                                                                 "title": {
                                                                                     "description": "Title",
@@ -490,7 +516,7 @@
                                                                                     "description": "Collection subjects",
                                                                                     "type": "array",
                                                                                     "items": {
-                                                                                        "$ref": "#/allOf/1/properties/chapters/items/allOf/1/properties/content/items/oneOf/0/allOf/0/properties/subjects/items"
+                                                                                        "$ref": "#/allOf/1/properties/chapters/items/allOf/1/properties/content/items/oneOf/1/allOf/0/properties/subjects/items"
                                                                                     }
                                                                                 },
                                                                                 "selectedCurator": {
@@ -538,7 +564,7 @@
                                                                                                 {
                                                                                                     "properties": {
                                                                                                         "id": {
-                                                                                                            "$ref": "#/allOf/1/properties/chapters/items/allOf/1/properties/content/items/oneOf/0/allOf/0/properties/id"
+                                                                                                            "$ref": "#/allOf/1/properties/chapters/items/allOf/1/properties/content/items/oneOf/1/allOf/0/properties/id"
                                                                                                         },
                                                                                                         "type": {
                                                                                                             "title": "Type",

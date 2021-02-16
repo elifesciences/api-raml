@@ -4,6 +4,13 @@ type: object
 allOf:
   - $ref: ../snippets/blog-article.v1.yaml
   - properties:
+        image:
+            type: object
+            properties:
+                social:
+                    $ref: ../misc/image.v1.yaml
+            required:
+              - social
         content:
             description: Content
             type: array
