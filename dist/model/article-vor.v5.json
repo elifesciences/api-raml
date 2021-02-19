@@ -271,7 +271,37 @@
                                 "content": {
                                     "type": "array",
                                     "items": {
-                                        "$ref": "#/allOf/1/allOf/1/properties/ethics/items"
+                                        "oneOf": [
+                                            {
+                                                "properties": {
+                                                    "type": {
+                                                        "type": "string",
+                                                        "enum": [
+                                                            "section"
+                                                        ]
+                                                    },
+                                                    "id": {
+                                                        "$ref": "#/allOf/2/properties/decisionLetter/properties/id"
+                                                    },
+                                                    "title": {
+                                                        "title": "Text",
+                                                        "type": "string",
+                                                        "minLength": 1
+                                                    },
+                                                    "content": {
+                                                        "description": "Content",
+                                                        "type": "array",
+                                                        "items": {
+                                                            "$ref": "#/allOf/1/allOf/1/properties/ethics/items"
+                                                        },
+                                                        "minItems": 1
+                                                    }
+                                                }
+                                            },
+                                            {
+                                                "$ref": "#/allOf/1/allOf/1/properties/ethics/items"
+                                            }
+                                        ]
                                     },
                                     "minItems": 1
                                 }
@@ -279,6 +309,10 @@
                             "required": [
                                 "content"
                             ]
+                        },
+                        "xml": {
+                            "type": "string",
+                            "format": "uri"
                         },
                         "issue": {
                             "type": "integer",
@@ -663,6 +697,12 @@
                         "dataSets": {
                             "type": "object",
                             "properties": {
+                                "availability": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/allOf/1/allOf/1/properties/ethics/items"
+                                    }
+                                },
                                 "generated": {
                                     "type": "array",
                                     "items": {
@@ -958,7 +998,7 @@
                                         },
                                         "required": [
                                             "id",
-                                            "title"
+                                            "label"
                                         ]
                                     },
                                     {
@@ -1039,7 +1079,6 @@
                         }
                     },
                     "required": [
-                        "doi",
                         "content"
                     ]
                 },
@@ -1437,8 +1476,7 @@
                                         "required": [
                                             "authors",
                                             "articleTitle",
-                                            "journal",
-                                            "pages"
+                                            "journal"
                                         ]
                                     },
                                     {
@@ -2205,6 +2243,48 @@
                                             },
                                             {
                                                 "$schema": "http://json-schema.org/draft-04/schema#",
+                                                "title": "Figshare",
+                                                "type": "object",
+                                                "allOf": [
+                                                    {
+                                                        "properties": {
+                                                            "type": {
+                                                                "type": "string",
+                                                                "enum": [
+                                                                    "figshare"
+                                                                ]
+                                                            },
+                                                            "id": {
+                                                                "title": "Figshare ID",
+                                                                "type": "string"
+                                                            },
+                                                            "title": {
+                                                                "title": "Title",
+                                                                "type": "string"
+                                                            },
+                                                            "width": {
+                                                                "title": "Width",
+                                                                "type": "integer",
+                                                                "minimum": 1
+                                                            },
+                                                            "height": {
+                                                                "title": "Height",
+                                                                "type": "integer",
+                                                                "minimum": 1
+                                                            }
+                                                        },
+                                                        "required": [
+                                                            "type",
+                                                            "id",
+                                                            "title",
+                                                            "width",
+                                                            "height"
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "$schema": "http://json-schema.org/draft-04/schema#",
                                                 "title": "Figure",
                                                 "type": "object",
                                                 "properties": {
@@ -2223,7 +2303,7 @@
                                                                         {
                                                                             "allOf": [
                                                                                 {
-                                                                                    "$ref": "#/allOf/2/properties/acknowledgements/items/oneOf/0/oneOf/0/oneOf/4"
+                                                                                    "$ref": "#/allOf/2/properties/acknowledgements/items/oneOf/0/oneOf/0/oneOf/5"
                                                                                 },
                                                                                 {
                                                                                     "properties": {
@@ -2240,7 +2320,7 @@
                                                                             "$ref": "#/allOf/2/properties/acknowledgements/items/oneOf/0/oneOf/0/oneOf/2/properties/content/items/oneOf/4"
                                                                         },
                                                                         {
-                                                                            "$ref": "#/allOf/2/properties/acknowledgements/items/oneOf/0/oneOf/0/oneOf/11"
+                                                                            "$ref": "#/allOf/2/properties/acknowledgements/items/oneOf/0/oneOf/0/oneOf/15"
                                                                         }
                                                                     ]
                                                                 },
@@ -2311,6 +2391,36 @@
                                                 ]
                                             },
                                             {
+                                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                                "title": "Google map",
+                                                "type": "object",
+                                                "allOf": [
+                                                    {
+                                                        "properties": {
+                                                            "type": {
+                                                                "type": "string",
+                                                                "enum": [
+                                                                    "google-map"
+                                                                ]
+                                                            },
+                                                            "id": {
+                                                                "title": "Google map ID",
+                                                                "type": "string"
+                                                            },
+                                                            "title": {
+                                                                "title": "Title",
+                                                                "type": "string"
+                                                            }
+                                                        },
+                                                        "required": [
+                                                            "type",
+                                                            "id",
+                                                            "title"
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
                                                 "$ref": "#/allOf/2/properties/acknowledgements/items/oneOf/0/oneOf/0/oneOf/2/properties/content/items/oneOf/1"
                                             },
                                             {
@@ -2318,6 +2428,34 @@
                                             },
                                             {
                                                 "$ref": "#/allOf/1/allOf/1/properties/ethics/items"
+                                            },
+                                            {
+                                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                                "title": "Profile",
+                                                "type": "object",
+                                                "properties": {
+                                                    "type": {
+                                                        "type": "string",
+                                                        "enum": [
+                                                            "profile"
+                                                        ]
+                                                    },
+                                                    "image": {
+                                                        "$ref": "#/allOf/0/allOf/1/properties/image/properties/thumbnail"
+                                                    },
+                                                    "content": {
+                                                        "type": "array",
+                                                        "items": {
+                                                            "$ref": "#/allOf/1/allOf/1/properties/ethics/items"
+                                                        },
+                                                        "minItems": 1
+                                                    }
+                                                },
+                                                "required": [
+                                                    "type",
+                                                    "image",
+                                                    "content"
+                                                ]
                                             },
                                             {
                                                 "$schema": "http://json-schema.org/draft-04/schema#",
@@ -2381,6 +2519,57 @@
                                             },
                                             {
                                                 "$ref": "#/allOf/2/properties/acknowledgements/items/oneOf/0/oneOf/0/oneOf/2/properties/content/items/oneOf/4"
+                                            },
+                                            {
+                                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                                "title": "Tweet",
+                                                "type": "object",
+                                                "properties": {
+                                                    "type": {
+                                                        "type": "string",
+                                                        "enum": [
+                                                            "tweet"
+                                                        ]
+                                                    },
+                                                    "id": {
+                                                        "title": "Tweet ID",
+                                                        "type": "string"
+                                                    },
+                                                    "date": {
+                                                        "$ref": "#/allOf/2/properties/references/items/allOf/0/properties/date"
+                                                    },
+                                                    "text": {
+                                                        "title": "Text",
+                                                        "type": "string",
+                                                        "minLength": 1
+                                                    },
+                                                    "accountId": {
+                                                        "title": "Twitter account ID",
+                                                        "type": "string"
+                                                    },
+                                                    "accountLabel": {
+                                                        "title": "Twitter account label",
+                                                        "type": "string"
+                                                    },
+                                                    "conversation": {
+                                                        "title": "Whether to display the conversation.",
+                                                        "type": "boolean",
+                                                        "default": false
+                                                    },
+                                                    "mediaCard": {
+                                                        "title": "Whether to display the media card.",
+                                                        "type": "boolean",
+                                                        "default": false
+                                                    }
+                                                },
+                                                "required": [
+                                                    "type",
+                                                    "id",
+                                                    "date",
+                                                    "text",
+                                                    "accountId",
+                                                    "accountLabel"
+                                                ]
                                             },
                                             {
                                                 "$schema": "http://json-schema.org/draft-04/schema#",
@@ -2592,7 +2781,6 @@
                         }
                     },
                     "required": [
-                        "doi",
                         "description",
                         "content"
                     ]
@@ -2615,7 +2803,6 @@
                         }
                     },
                     "required": [
-                        "doi",
                         "content"
                     ]
                 }

@@ -24,41 +24,20 @@
                 },
                 "published": {
                     "title": "Publication date (UTC)",
-                    "$ref": "#/allOf/0/properties/updated"
-                },
-                "updated": {
-                    "title": "Updated date (UTC)",
                     "$schema": "http://json-schema.org/draft-04/schema#",
                     "description": "eLife restriction over the ISO8601 standard\n\nFor example:\n    - 2016-09-16T12:34:56Z\n",
                     "type": "string",
                     "format": "date-time",
                     "pattern": "^....-..-..T..:..:..Z$"
                 },
+                "updated": {
+                    "title": "Updated date (UTC)",
+                    "$ref": "#/allOf/0/properties/published"
+                },
                 "image": {
                     "type": "object",
                     "properties": {
                         "thumbnail": {
-                            "$ref": "#/allOf/1/properties/image/properties/social"
-                        }
-                    },
-                    "required": [
-                        "thumbnail"
-                    ]
-                }
-            },
-            "required": [
-                "id",
-                "title",
-                "published",
-                "image"
-            ]
-        },
-        {
-            "properties": {
-                "image": {
-                    "type": "object",
-                    "properties": {
-                        "social": {
                             "$schema": "http://json-schema.org/draft-04/schema#",
                             "title": "IIIF image",
                             "type": "object",
@@ -166,6 +145,27 @@
                                     ]
                                 }
                             ]
+                        }
+                    },
+                    "required": [
+                        "thumbnail"
+                    ]
+                }
+            },
+            "required": [
+                "id",
+                "title",
+                "published",
+                "image"
+            ]
+        },
+        {
+            "properties": {
+                "image": {
+                    "type": "object",
+                    "properties": {
+                        "social": {
+                            "$ref": "#/allOf/0/properties/image/properties/thumbnail"
                         }
                     }
                 },
@@ -359,7 +359,7 @@
                                                                             "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/16/allOf/0"
                                                                         },
                                                                         {
-                                                                            "$ref": "#/allOf/1/properties/image/properties/social/allOf/0"
+                                                                            "$ref": "#/allOf/0/properties/image/properties/thumbnail/allOf/0"
                                                                         },
                                                                         {
                                                                             "properties": {
@@ -549,7 +549,7 @@
                                                                                         "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/16/allOf/0"
                                                                                     },
                                                                                     {
-                                                                                        "$ref": "#/allOf/1/properties/image/properties/social/allOf/0"
+                                                                                        "$ref": "#/allOf/0/properties/image/properties/thumbnail/allOf/0"
                                                                                     },
                                                                                     {
                                                                                         "properties": {
@@ -571,7 +571,7 @@
                                                                                         ]
                                                                                     },
                                                                                     {
-                                                                                        "$ref": "#/allOf/1/properties/image/properties/social/allOf/1/properties/source"
+                                                                                        "$ref": "#/allOf/0/properties/image/properties/thumbnail/allOf/1/properties/source"
                                                                                     }
                                                                                 ]
                                                                             }
@@ -612,7 +612,7 @@
                                                                 ]
                                                             },
                                                             "image": {
-                                                                "$ref": "#/allOf/1/properties/image/properties/social"
+                                                                "$ref": "#/allOf/0/properties/image/properties/thumbnail"
                                                             },
                                                             "inline": {
                                                                 "type": "boolean"
@@ -676,7 +676,7 @@
                                                         ]
                                                     },
                                                     "image": {
-                                                        "$ref": "#/allOf/1/properties/image/properties/social"
+                                                        "$ref": "#/allOf/0/properties/image/properties/thumbnail"
                                                     },
                                                     "content": {
                                                         "type": "array",
@@ -819,7 +819,7 @@
                                                         "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/16/allOf/0"
                                                     },
                                                     {
-                                                        "$ref": "#/allOf/1/properties/image/properties/social/allOf/0"
+                                                        "$ref": "#/allOf/0/properties/image/properties/thumbnail/allOf/0"
                                                     },
                                                     {
                                                         "properties": {
@@ -840,7 +840,7 @@
                                                                         "mediaType": {
                                                                             "allOf": [
                                                                                 {
-                                                                                    "$ref": "#/allOf/1/properties/image/properties/social/allOf/1/properties/source/properties/mediaType"
+                                                                                    "$ref": "#/allOf/0/properties/image/properties/thumbnail/allOf/1/properties/source/properties/mediaType"
                                                                                 },
                                                                                 {
                                                                                     "pattern": "^video/"
@@ -862,7 +862,7 @@
                                                                 "minItems": 1
                                                             },
                                                             "placeholder": {
-                                                                "$ref": "#/allOf/1/properties/image/properties/social"
+                                                                "$ref": "#/allOf/0/properties/image/properties/thumbnail"
                                                             },
                                                             "width": {
                                                                 "title": "Width",

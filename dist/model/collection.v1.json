@@ -74,7 +74,10 @@
                                             "type": "object",
                                             "properties": {
                                                 "mediaType": {
-                                                    "$ref": "#/allOf/1/properties/podcastEpisodes/items/properties/sources/items/properties/mediaType/allOf/0"
+                                                    "$schema": "http://json-schema.org/draft-04/schema#",
+                                                    "title": "Media type",
+                                                    "type": "string",
+                                                    "pattern": "^([a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+/[a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+)(; *[a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+=(([a-zA-Z0-9\\.\\-]+)|(\".+\")))*$"
                                                 },
                                                 "uri": {
                                                     "title": "Source data URI",
@@ -331,37 +334,6 @@
                                 "type": "object",
                                 "allOf": [
                                     {
-                                        "$ref": "#/allOf/1/properties/content/items/oneOf/1/allOf/0"
-                                    },
-                                    {
-                                        "properties": {
-                                            "status": {
-                                                "type": "string",
-                                                "enum": [
-                                                    "poa"
-                                                ]
-                                            },
-                                            "image": {
-                                                "type": "object",
-                                                "properties": {
-                                                    "social": {
-                                                        "$ref": "#/allOf/0/properties/image/properties/thumbnail"
-                                                    }
-                                                },
-                                                "required": [
-                                                    "social"
-                                                ]
-                                            }
-                                        }
-                                    }
-                                ]
-                            },
-                            {
-                                "$schema": "http://json-schema.org/draft-04/schema#",
-                                "title": "Article VoR snippet",
-                                "type": "object",
-                                "allOf": [
-                                    {
                                         "$schema": "http://json-schema.org/draft-04/schema#",
                                         "title": "Article snippet",
                                         "type": "object",
@@ -469,6 +441,37 @@
                                             "volume",
                                             "elocationId"
                                         ]
+                                    },
+                                    {
+                                        "properties": {
+                                            "status": {
+                                                "type": "string",
+                                                "enum": [
+                                                    "poa"
+                                                ]
+                                            },
+                                            "image": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "social": {
+                                                        "$ref": "#/allOf/0/properties/image/properties/thumbnail"
+                                                    }
+                                                },
+                                                "required": [
+                                                    "social"
+                                                ]
+                                            }
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "title": "Article VoR snippet",
+                                "type": "object",
+                                "allOf": [
+                                    {
+                                        "$ref": "#/allOf/1/properties/content/items/oneOf/0/allOf/0"
                                     },
                                     {
                                         "properties": {
@@ -716,10 +719,7 @@
                                         "mediaType": {
                                             "allOf": [
                                                 {
-                                                    "$schema": "http://json-schema.org/draft-04/schema#",
-                                                    "title": "Media type",
-                                                    "type": "string",
-                                                    "pattern": "^([a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+/[a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+)(; *[a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+=(([a-zA-Z0-9\\.\\-]+)|(\".+\")))*$"
+                                                    "$ref": "#/allOf/0/properties/image/properties/thumbnail/allOf/1/properties/source/properties/mediaType"
                                                 },
                                                 {
                                                     "pattern": "^audio/"
