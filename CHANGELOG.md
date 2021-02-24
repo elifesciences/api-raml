@@ -1,5 +1,5 @@
 # Changelog
-## 0.1.0
+## 1.1.0
 ### Added
 
 * a reference-v2, dropping the 'required' constraint on the 'page' property
