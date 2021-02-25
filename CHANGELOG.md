@@ -4,6 +4,7 @@
 
 * a reference-v2, dropping the 'required' constraint on the 'page' property
 * a article-vor-v5, that uses reference-v2 type references
+* adjusted the samples/v5/complete.json example of a minimal reference of type 'journal'
 * this changelog!
 
 ### Changed
