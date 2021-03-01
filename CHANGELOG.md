@@ -1,4 +1,24 @@
 # Changelog
+## 1.2.0
+### Added
+
+*no additions*
+
+### Changed
+
+*no changes*
+
+### Fixed
+
+* removed support for article-vor-v3
+* removed schema model/article-poa.v1.yaml
+* removed schemas model/article-vor.v1.yaml, model/article-vor.v2.yaml and model/article-vor.v3.yaml
+* a couple of typos in api.raml
+
+### Removed
+
+*no removals*
+
 ## 1.1.0
 ### Added
 
