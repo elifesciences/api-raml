@@ -8,10 +8,3 @@ allOf:
             type: string
             enum:
               - poa
-        image:
-            type: object
-            properties:
-                social:
-                    $ref: ../misc/image.v1.yaml
-            required:
-              - social
