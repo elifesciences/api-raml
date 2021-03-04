@@ -252,6 +252,29 @@
                                                     "minLength": 1
                                                 },
                                                 "uniqueItems": true
+                                            },
+                                            "image": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "thumbnail": {
+                                                        "$ref": "#/properties/items/items/properties/image"
+                                                    },
+                                                    "social": {
+                                                        "$ref": "#/properties/items/items/properties/image"
+                                                    }
+                                                },
+                                                "anyOf": [
+                                                    {
+                                                        "required": [
+                                                            "thumbnail"
+                                                        ]
+                                                    },
+                                                    {
+                                                        "required": [
+                                                            "social"
+                                                        ]
+                                                    }
+                                                ]
                                             }
                                         },
                                         "required": [
@@ -272,17 +295,6 @@
                                                 "type": "string",
                                                 "enum": [
                                                     "poa"
-                                                ]
-                                            },
-                                            "image": {
-                                                "type": "object",
-                                                "properties": {
-                                                    "social": {
-                                                        "$ref": "#/properties/items/items/properties/image"
-                                                    }
-                                                },
-                                                "required": [
-                                                    "social"
                                                 ]
                                             }
                                         }
@@ -312,29 +324,6 @@
                                             "figuresPdf": {
                                                 "type": "string",
                                                 "format": "uri"
-                                            },
-                                            "image": {
-                                                "type": "object",
-                                                "properties": {
-                                                    "thumbnail": {
-                                                        "$ref": "#/properties/items/items/properties/image"
-                                                    },
-                                                    "social": {
-                                                        "$ref": "#/properties/items/items/properties/image"
-                                                    }
-                                                },
-                                                "anyOf": [
-                                                    {
-                                                        "required": [
-                                                            "thumbnail"
-                                                        ]
-                                                    },
-                                                    {
-                                                        "required": [
-                                                            "social"
-                                                        ]
-                                                    }
-                                                ]
                                             }
                                         }
                                     }

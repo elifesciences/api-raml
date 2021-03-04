@@ -126,41 +126,12 @@
                                 "minLength": 1
                             },
                             "uniqueItems": true
-                        }
-                    },
-                    "required": [
-                        "status",
-                        "id",
-                        "version",
-                        "type",
-                        "doi",
-                        "title",
-                        "stage",
-                        "volume",
-                        "elocationId"
-                    ]
-                },
-                {
-                    "properties": {
-                        "status": {
-                            "type": "string",
-                            "enum": [
-                                "vor"
-                            ]
-                        },
-                        "impactStatement": {
-                            "type": "string",
-                            "minLength": 1
-                        },
-                        "figuresPdf": {
-                            "type": "string",
-                            "format": "uri"
                         },
                         "image": {
                             "type": "object",
                             "properties": {
                                 "thumbnail": {
-                                    "$ref": "#/allOf/0/allOf/1/properties/image/properties/social"
+                                    "$ref": "#/allOf/0/allOf/0/properties/image/properties/social"
                                 },
                                 "social": {
                                     "$schema": "http://json-schema.org/draft-04/schema#",
@@ -248,6 +219,35 @@
                                     ]
                                 }
                             ]
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "id",
+                        "version",
+                        "type",
+                        "doi",
+                        "title",
+                        "stage",
+                        "volume",
+                        "elocationId"
+                    ]
+                },
+                {
+                    "properties": {
+                        "status": {
+                            "type": "string",
+                            "enum": [
+                                "vor"
+                            ]
+                        },
+                        "impactStatement": {
+                            "type": "string",
+                            "minLength": 1
+                        },
+                        "figuresPdf": {
+                            "type": "string",
+                            "format": "uri"
                         }
                     }
                 }
@@ -2330,7 +2330,7 @@
                                                                 ]
                                                             },
                                                             "image": {
-                                                                "$ref": "#/allOf/0/allOf/1/properties/image/properties/social"
+                                                                "$ref": "#/allOf/0/allOf/0/properties/image/properties/social"
                                                             },
                                                             "inline": {
                                                                 "type": "boolean"
@@ -2394,7 +2394,7 @@
                                                         ]
                                                     },
                                                     "image": {
-                                                        "$ref": "#/allOf/0/allOf/1/properties/image/properties/social"
+                                                        "$ref": "#/allOf/0/allOf/0/properties/image/properties/social"
                                                     },
                                                     "content": {
                                                         "type": "array",
@@ -2576,7 +2576,7 @@
                                                                 "minItems": 1
                                                             },
                                                             "placeholder": {
-                                                                "$ref": "#/allOf/0/allOf/1/properties/image/properties/social"
+                                                                "$ref": "#/allOf/0/allOf/0/properties/image/properties/social"
                                                             },
                                                             "width": {
                                                                 "title": "Width",
