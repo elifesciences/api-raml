@@ -1,4 +1,23 @@
 # Changelog
+
+## 1.2.0
+### Added
+
+* adjusted the samples/article-list/v1/first-page.json to include an example of a poa with only a thumbnail image
+* added support for an optional image thumbnail in article poa snippet and full
+
+### Changed
+
+*no changes*
+
+### Fixed
+
+*no fixes*
+
+### Removed
+
+*no removals*
+
 ## 1.1.0
 ### Added
 
