@@ -1048,6 +1048,29 @@
                                                     "minLength": 1
                                                 },
                                                 "uniqueItems": true
+                                            },
+                                            "image": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "thumbnail": {
+                                                        "$ref": "#/allOf/0/properties/image/properties/social"
+                                                    },
+                                                    "social": {
+                                                        "$ref": "#/allOf/0/properties/image/properties/social"
+                                                    }
+                                                },
+                                                "anyOf": [
+                                                    {
+                                                        "required": [
+                                                            "thumbnail"
+                                                        ]
+                                                    },
+                                                    {
+                                                        "required": [
+                                                            "social"
+                                                        ]
+                                                    }
+                                                ]
                                             }
                                         },
                                         "required": [
@@ -1068,17 +1091,6 @@
                                                 "type": "string",
                                                 "enum": [
                                                     "poa"
-                                                ]
-                                            },
-                                            "image": {
-                                                "type": "object",
-                                                "properties": {
-                                                    "social": {
-                                                        "$ref": "#/allOf/0/properties/image/properties/social"
-                                                    }
-                                                },
-                                                "required": [
-                                                    "social"
                                                 ]
                                             }
                                         }
@@ -1108,29 +1120,6 @@
                                             "figuresPdf": {
                                                 "type": "string",
                                                 "format": "uri"
-                                            },
-                                            "image": {
-                                                "type": "object",
-                                                "properties": {
-                                                    "thumbnail": {
-                                                        "$ref": "#/allOf/0/properties/image/properties/social"
-                                                    },
-                                                    "social": {
-                                                        "$ref": "#/allOf/0/properties/image/properties/social"
-                                                    }
-                                                },
-                                                "anyOf": [
-                                                    {
-                                                        "required": [
-                                                            "thumbnail"
-                                                        ]
-                                                    },
-                                                    {
-                                                        "required": [
-                                                            "social"
-                                                        ]
-                                                    }
-                                                ]
                                             }
                                         }
                                     }

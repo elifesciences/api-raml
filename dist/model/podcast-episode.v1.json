@@ -263,17 +263,6 @@
                                                                     "enum": [
                                                                         "poa"
                                                                     ]
-                                                                },
-                                                                "image": {
-                                                                    "type": "object",
-                                                                    "properties": {
-                                                                        "social": {
-                                                                            "$ref": "#/allOf/1/properties/image/properties/banner"
-                                                                        }
-                                                                    },
-                                                                    "required": [
-                                                                        "social"
-                                                                    ]
                                                                 }
                                                             }
                                                         }
@@ -398,6 +387,29 @@
                                                                         "minLength": 1
                                                                     },
                                                                     "uniqueItems": true
+                                                                },
+                                                                "image": {
+                                                                    "type": "object",
+                                                                    "properties": {
+                                                                        "thumbnail": {
+                                                                            "$ref": "#/allOf/1/properties/image/properties/banner"
+                                                                        },
+                                                                        "social": {
+                                                                            "$ref": "#/allOf/1/properties/image/properties/banner"
+                                                                        }
+                                                                    },
+                                                                    "anyOf": [
+                                                                        {
+                                                                            "required": [
+                                                                                "thumbnail"
+                                                                            ]
+                                                                        },
+                                                                        {
+                                                                            "required": [
+                                                                                "social"
+                                                                            ]
+                                                                        }
+                                                                    ]
                                                                 }
                                                             },
                                                             "required": [
@@ -427,29 +439,6 @@
                                                                 "figuresPdf": {
                                                                     "type": "string",
                                                                     "format": "uri"
-                                                                },
-                                                                "image": {
-                                                                    "type": "object",
-                                                                    "properties": {
-                                                                        "thumbnail": {
-                                                                            "$ref": "#/allOf/1/properties/image/properties/banner"
-                                                                        },
-                                                                        "social": {
-                                                                            "$ref": "#/allOf/1/properties/image/properties/banner"
-                                                                        }
-                                                                    },
-                                                                    "anyOf": [
-                                                                        {
-                                                                            "required": [
-                                                                                "thumbnail"
-                                                                            ]
-                                                                        },
-                                                                        {
-                                                                            "required": [
-                                                                                "social"
-                                                                            ]
-                                                                        }
-                                                                    ]
                                                                 }
                                                             }
                                                         }

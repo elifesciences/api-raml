@@ -123,35 +123,6 @@
                                 "minLength": 1
                             },
                             "uniqueItems": true
-                        }
-                    },
-                    "required": [
-                        "status",
-                        "id",
-                        "version",
-                        "type",
-                        "doi",
-                        "title",
-                        "stage",
-                        "volume",
-                        "elocationId"
-                    ]
-                },
-                {
-                    "properties": {
-                        "status": {
-                            "type": "string",
-                            "enum": [
-                                "vor"
-                            ]
-                        },
-                        "impactStatement": {
-                            "type": "string",
-                            "minLength": 1
-                        },
-                        "figuresPdf": {
-                            "type": "string",
-                            "format": "uri"
                         },
                         "image": {
                             "type": "object",
@@ -230,7 +201,7 @@
                                     ]
                                 },
                                 "social": {
-                                    "$ref": "#/allOf/0/allOf/1/properties/image/properties/thumbnail"
+                                    "$ref": "#/allOf/0/allOf/0/properties/image/properties/thumbnail"
                                 }
                             },
                             "anyOf": [
@@ -245,6 +216,35 @@
                                     ]
                                 }
                             ]
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "id",
+                        "version",
+                        "type",
+                        "doi",
+                        "title",
+                        "stage",
+                        "volume",
+                        "elocationId"
+                    ]
+                },
+                {
+                    "properties": {
+                        "status": {
+                            "type": "string",
+                            "enum": [
+                                "vor"
+                            ]
+                        },
+                        "impactStatement": {
+                            "type": "string",
+                            "minLength": 1
+                        },
+                        "figuresPdf": {
+                            "type": "string",
+                            "format": "uri"
                         }
                     }
                 }
@@ -2294,7 +2294,7 @@
                                                                 ]
                                                             },
                                                             "image": {
-                                                                "$ref": "#/allOf/0/allOf/1/properties/image/properties/thumbnail"
+                                                                "$ref": "#/allOf/0/allOf/0/properties/image/properties/thumbnail"
                                                             },
                                                             "inline": {
                                                                 "type": "boolean"
@@ -2431,7 +2431,7 @@
                                                                 "minItems": 1
                                                             },
                                                             "placeholder": {
-                                                                "$ref": "#/allOf/0/allOf/1/properties/image/properties/thumbnail"
+                                                                "$ref": "#/allOf/0/allOf/0/properties/image/properties/thumbnail"
                                                             },
                                                             "width": {
                                                                 "title": "Width",
