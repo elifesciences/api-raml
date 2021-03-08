@@ -160,12 +160,16 @@
                     {
                         "type": "person",
                         "name": {
-                            "preferred": "Person One",
-                            "index": "One, Person"
+                            "preferred": "One Person
                         }
                     },
                     {
-                        "type": "group",
+                        ",
+                            "index": "One, Person
+                        }
+                    },
+                    {
+                        type": "group",
                         "name": "Group One"
                     }
                 ],
@@ -183,8 +187,8 @@
                     {
                         "type": "person",
                         "name": {
-                            "preferred": "Person One",
-                            "index": "One, Person"
+                            "preferred": "One Person",
+                            "index": "One, Person
                         }
                     }
                 ],
@@ -199,8 +203,8 @@
                     {
                         "type": "person",
                         "name": {
-                            "preferred": "Person One",
-                            "index": "One, Person"
+                            "preferred": "One Person",
+                            "index": "One, Person
                         }
                     },
                     {
@@ -222,8 +226,8 @@
                     {
                         "type": "person",
                         "name": {
-                            "preferred": "Person One",
-                            "index": "One, Person"
+                            "preferred": "One Person",
+                            "index": "One, Person
                         }
                     }
                 ],
