@@ -160,51 +160,8 @@
                     {
                         "type": "person",
                         "name": {
-                            "preferred": "One Person
-                        }
-                    },
-                    {
-                        ",
-                            "index": "One, Person
-                        }
-                    },
-                    {
-                        type": "group",
-                        "name": "Group One"
-                    }
-                ],
-                "authorsEtAl": true,
-                "title": "Complete dataset",
-                "dataId": "123456ABC",
-                "details": "Some details.",
-                "doi": "10.2210/pdb4qen/pdb",
-                "uri": "https://doi.org/10.2210/pdb4qen/pdb"
-            },
-            {
-                "id": "dataset2",
-                "date": "2016",
-                "authors": [
-                    {
-                        "type": "person",
-                        "name": {
-                            "preferred": "One Person",
-                            "index": "One, Person
-                        }
-                    }
-                ],
-                "title": "Minimum dataset"
-            }
-        ],
-        "used": [
-            {
-                "id": "dataset1",
-                "date": "2016-11-16",
-                "authors": [
-                    {
-                        "type": "person",
-                        "name": {
-                            "preferred": "One Person",
-                            "index": "One, Person
+                            "preferred": "Person One",
+                            "index": "One, Person"
                         }
                     },
                     {
@@ -226,8 +183,47 @@
                     {
                         "type": "person",
                         "name": {
-                            "preferred": "One Person",
-                            "index": "One, Person
+                            "preferred": "Person One",
+                            "index": "One, Person"
+                        }
+                    }
+                ],
+                "title": "Minimum dataset"
+            }
+        ],
+        "used": [
+            {
+                "id": "dataset1",
+                "date": "2016-11-16",
+                "authors": [
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "Person One",
+                            "index": "One, Person"
+                        }
+                    },
+                    {
+                        "type": "group",
+                        "name": "Group One"
+                    }
+                ],
+                "authorsEtAl": true,
+                "title": "Complete dataset",
+                "dataId": "123456ABC",
+                "details": "Some details.",
+                "doi": "10.2210/pdb4qen/pdb",
+                "uri": "https://doi.org/10.2210/pdb4qen/pdb"
+            },
+            {
+                "id": "dataset2",
+                "date": "2016",
+                "authors": [
+                    {
+                        "type": "person",
+                        "name": {
+                            "preferred": "Person One",
+                            "index": "One, Person"
                         }
                     }
                 ],
