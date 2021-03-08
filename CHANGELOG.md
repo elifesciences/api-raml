@@ -1,4 +1,21 @@
 # Changelog
+## 2.0.1
+### Added
+
+*no additions*
+
+### Changed
+
+* altered the sample values for author preferred names in references and datasets
+
+### Fixed
+
+*no fixes*
+
+### Removed
+
+*no removals*
+
 ## 2.0.0
 ### Added
 
