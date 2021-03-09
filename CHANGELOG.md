@@ -1,4 +1,23 @@
 # Changelog
+## 2.0.1
+### Added
+
+*no additions*
+
+### Changed
+
+* swapped email addresses in maintainers.txt for github profile names
+
+### Fixed
+
+* a couple of typos in api.raml
+
+### Removed
+
+* removed support for article-vor-v3
+* removed schema model/article-poa.v1.yaml
+* removed schemas model/article-vor.v1.yaml, model/article-vor.v2.yaml and model/article-vor.v3.yaml
+
 ## 2.0.0
 ### Added
 
@@ -10,13 +29,11 @@
 
 ### Fixed
 
-* a couple of typos in api.raml
+*no fixes*
 
 ### Removed
 
-* removed support for article-vor-v3
-* removed schema model/article-poa.v1.yaml
-* removed schemas model/article-vor.v1.yaml, model/article-vor.v2.yaml and model/article-vor.v3.yaml
+*no removals*
 
 
 ## 1.2.0
