@@ -3,7 +3,7 @@ title: Article VoR
 type: object
 allOf:
   - $ref: ../snippets/article-vor.v1.yaml
-  - $ref: ../misc/article.v2.yaml
+  - $ref: ../misc/article.v3.yaml
   - properties:
         abstract:
             type: object
@@ -26,7 +26,6 @@ allOf:
                         $ref: ../blocks/paragraph.v1.yaml
                     minItems: 1
             required:
-              - doi
               - content
         body:
             type: array
@@ -39,7 +38,7 @@ allOf:
         references:
             type: array
             items:
-                $ref: ../misc/reference.v1.yaml
+                $ref: ../misc/reference.v2.yaml
         appendices:
             type: array
             items:
@@ -84,7 +83,6 @@ allOf:
                         $ref: ../misc/blocks-all.v2.yaml
                     minItems: 1
             required:
-              - doi
               - description
               - content
         authorResponse:
@@ -100,7 +98,6 @@ allOf:
                         $ref: ../misc/blocks-all.v2.yaml
                     minItems: 1
             required:
-              - doi
               - content
     required:
       - body

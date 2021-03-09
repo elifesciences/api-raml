@@ -22,6 +22,23 @@
                 "x": 25,
                 "y": 75
             }
+        },
+        "social": {
+            "uri": "https://iiif.elifesciences.org/medium:1*UaX-QIG8sgCXp6BDzc617w.jpeg",
+            "alt": "",
+            "source": {
+                "mediaType": "image/jpeg",
+                "uri": "https://cdn-images-1.medium.com/1*UaX-QIG8sgCXp6BDzc617w.jpeg",
+                "filename": "1 UaX-QIG8sgCXp6BDzc617w.jpeg"
+            },
+            "size": {
+                "width": 1152,
+                "height": 864
+            },
+            "focalPoint": {
+                "x": 25,
+                "y": 75
+            }
         }
     },
     "subjects": [

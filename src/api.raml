@@ -17,7 +17,7 @@ documentation:
 
         Endpoints produce/consume dedicated content type, with the version as a parameter (eg `application/vnd.elife.labs-post-list+json;version=1`). These are primarily JSON-based (and described using [JSON Schema](http://json-schema.org/)), but alternative representations may be available.
 
-        This verisoning follows [semantic versioning](http://semver.org/). Note we only use the major version as minor versions are backwards compatabile (so the API will return versions `1` and `2` rather than `1.0`, `1.1`, `2.0` etc).
+        This versioning follows [semantic versioning](http://semver.org/). Note we only use the major version as minor versions are backwards compatible (so the API will return versions `1` and `2` rather than `1.0`, `1.1`, `2.0` etc).
 
         You can request a specific version of a response using content negotiation (eg `Accept: application/vnd.elife.labs-post-list+json;version=1`). The most recent version will always be preferred, so without a `version` parameter on the `Accept` header the latest version will be returned.
 
@@ -397,29 +397,8 @@ traits:
                                 unpublishedComplete:
                                     displayName: PreviewComplete
                                     value: !include samples/article-poa/v3/unpublished-complete.json
-                        application/vnd.elife.article-vor+json;version=3:
-                            (deprecated):
-                            schema: !include model/article-vor.v3.json
-                            examples:
-                                minimum:
-                                    displayName: Minimum
-                                    value: !include samples/article-vor/v3/minimum.json
-                                complete:
-                                    displayName: Complete
-                                    value: !include samples/article-vor/v3/complete.json
-                                unpublishedMinimum:
-                                    displayName: PreviewMinimum
-                                    value: !include samples/article-vor/v3/unpublished-minimum.json
-                                unpublishedComplete:
-                                    displayName: PreviewComplete
-                                    value: !include samples/article-vor/v3/unpublished-complete.json
-                                00569:
-                                    displayName: '00569'
-                                    value: !include samples/article-vor/v3/00569.json
-                                15278:
-                                    displayName: '15278'
-                                    value: !include samples/article-vor/v3/15278.json
                         application/vnd.elife.article-vor+json;version=4:
+                            (deprecated):
                             schema: !include model/article-vor.v4.json
                             examples:
                                 minimum:
@@ -449,6 +428,36 @@ traits:
                                 15691:
                                     displayName: '15691'
                                     value: !include samples/article-vor/v4/15691.json
+                        application/vnd.elife.article-vor+json;version=5:
+                            schema: !include model/article-vor.v5.json
+                            examples:
+                                minimum:
+                                    displayName: Minimum
+                                    value: !include samples/article-vor/v5/minimum.json
+                                complete:
+                                    displayName: Complete
+                                    value: !include samples/article-vor/v5/complete.json
+                                unpublishedMinimum:
+                                    displayName: PreviewMinimum
+                                    value: !include samples/article-vor/v5/unpublished-minimum.json
+                                unpublishedComplete:
+                                    displayName: PreviewComplete
+                                    value: !include samples/article-vor/v5/unpublished-complete.json
+                                imageSocialOnly:
+                                    displayName: Image with social only
+                                    value: !include samples/article-vor/v5/image-social-only.json
+                                imageThumbnailOnly:
+                                    displayName: Image with thumbnail only
+                                    value: !include samples/article-vor/v5/image-thumbnail-only.json
+                                00569:
+                                    displayName: '00569'
+                                    value: !include samples/article-vor/v5/00569.json
+                                15278:
+                                    displayName: '15278'
+                                    value: !include samples/article-vor/v5/15278.json
+                                15691:
+                                    displayName: '15691'
+                                    value: !include samples/article-vor/v5/15691.json
 
         /related:
             type:
@@ -553,23 +562,8 @@ traits:
                                         unpublishedComplete:
                                             displayName: PreviewComplete
                                             value: !include samples/article-poa/v3/unpublished-complete.json
-                                application/vnd.elife.article-vor+json;version=3:
-                                    (deprecated):
-                                    schema: !include ../dist/model/article-vor.v3.json
-                                    examples:
-                                        minimum:
-                                            displayName: Minimum
-                                            value: !include samples/article-vor/v3/minimum.json
-                                        complete:
-                                            displayName: Complete
-                                            value: !include samples/article-vor/v3/complete.json
-                                        unpublishedMinimum:
-                                            displayName: PreviewMinimum
-                                            value: !include samples/article-vor/v3/unpublished-minimum.json
-                                        unpublishedComplete:
-                                            displayName: PreviewComplete
-                                            value: !include samples/article-vor/v3/unpublished-complete.json
                                 application/vnd.elife.article-vor+json;version=4:
+                                    (deprecated):
                                     schema: !include ../dist/model/article-vor.v4.json
                                     examples:
                                         minimum:
@@ -584,6 +578,21 @@ traits:
                                         unpublishedComplete:
                                             displayName: PreviewComplete
                                             value: !include samples/article-vor/v4/unpublished-complete.json
+                                application/vnd.elife.article-vor+json;version=5:
+                                    schema: !include ../dist/model/article-vor.v5.json
+                                    examples:
+                                        minimum:
+                                            displayName: Minimum
+                                            value: !include samples/article-vor/v5/minimum.json
+                                        complete:
+                                            displayName: Complete
+                                            value: !include samples/article-vor/v5/complete.json
+                                        unpublishedMinimum:
+                                            displayName: PreviewMinimum
+                                            value: !include samples/article-vor/v5/unpublished-minimum.json
+                                        unpublishedComplete:
+                                            displayName: PreviewComplete
+                                            value: !include samples/article-vor/v5/unpublished-complete.json
 
 /blog-articles:
     type: collection

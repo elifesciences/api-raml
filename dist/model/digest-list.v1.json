@@ -160,6 +160,9 @@
                                         ]
                                     }
                                 ]
+                            },
+                            "social": {
+                                "$ref": "#/properties/items/items/properties/image/properties/thumbnail"
                             }
                         },
                         "required": [

@@ -31,20 +31,23 @@
                 },
                 "published": {
                     "title": "Publication date (UTC)",
-                    "$ref": "#/allOf/0/properties/updated"
-                },
-                "updated": {
-                    "title": "Updated date (UTC)",
                     "$schema": "http://json-schema.org/draft-04/schema#",
                     "description": "eLife restriction over the ISO8601 standard\n\nFor example:\n    - 2016-09-16T12:34:56Z\n",
                     "type": "string",
                     "format": "date-time",
                     "pattern": "^....-..-..T..:..:..Z$"
                 },
+                "updated": {
+                    "title": "Updated date (UTC)",
+                    "$ref": "#/allOf/0/properties/published"
+                },
                 "image": {
                     "type": "object",
                     "properties": {
                         "thumbnail": {
+                            "$ref": "#/allOf/0/properties/image/properties/social"
+                        },
+                        "social": {
                             "$schema": "http://json-schema.org/draft-04/schema#",
                             "title": "IIIF image",
                             "type": "object",
@@ -382,7 +385,7 @@
                                                                             "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/12/allOf/0"
                                                                         },
                                                                         {
-                                                                            "$ref": "#/allOf/0/properties/image/properties/thumbnail/allOf/0"
+                                                                            "$ref": "#/allOf/0/properties/image/properties/social/allOf/0"
                                                                         },
                                                                         {
                                                                             "properties": {
@@ -511,7 +514,7 @@
                                                                 {
                                                                     "properties": {
                                                                         "doi": {
-                                                                            "$ref": "#/allOf/1/properties/relatedContent/items/oneOf/0/allOf/0/properties/doi"
+                                                                            "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/1/properties/doi"
                                                                         },
                                                                         "label": {
                                                                             "title": "Label",
@@ -530,7 +533,7 @@
                                                                                         "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/12/allOf/0"
                                                                                     },
                                                                                     {
-                                                                                        "$ref": "#/allOf/0/properties/image/properties/thumbnail/allOf/0"
+                                                                                        "$ref": "#/allOf/0/properties/image/properties/social/allOf/0"
                                                                                     },
                                                                                     {
                                                                                         "properties": {
@@ -538,7 +541,7 @@
                                                                                                 "$ref": "#/allOf/1/properties/content/items/oneOf/1/properties/id"
                                                                                             },
                                                                                             "doi": {
-                                                                                                "$ref": "#/allOf/1/properties/relatedContent/items/oneOf/0/allOf/0/properties/doi"
+                                                                                                "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/1/properties/doi"
                                                                                             },
                                                                                             "label": {
                                                                                                 "title": "Label",
@@ -552,7 +555,7 @@
                                                                                         ]
                                                                                     },
                                                                                     {
-                                                                                        "$ref": "#/allOf/0/properties/image/properties/thumbnail/allOf/1/properties/source"
+                                                                                        "$ref": "#/allOf/0/properties/image/properties/social/allOf/1/properties/source"
                                                                                     }
                                                                                 ]
                                                                             }
@@ -593,7 +596,7 @@
                                                                 ]
                                                             },
                                                             "image": {
-                                                                "$ref": "#/allOf/0/properties/image/properties/thumbnail"
+                                                                "$ref": "#/allOf/0/properties/image/properties/social"
                                                             },
                                                             "inline": {
                                                                 "type": "boolean"
@@ -687,7 +690,7 @@
                                                         "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/12/allOf/0"
                                                     },
                                                     {
-                                                        "$ref": "#/allOf/0/properties/image/properties/thumbnail/allOf/0"
+                                                        "$ref": "#/allOf/0/properties/image/properties/social/allOf/0"
                                                     },
                                                     {
                                                         "properties": {
@@ -708,7 +711,7 @@
                                                                         "mediaType": {
                                                                             "allOf": [
                                                                                 {
-                                                                                    "$ref": "#/allOf/0/properties/image/properties/thumbnail/allOf/1/properties/source/properties/mediaType"
+                                                                                    "$ref": "#/allOf/0/properties/image/properties/social/allOf/1/properties/source/properties/mediaType"
                                                                                 },
                                                                                 {
                                                                                     "pattern": "^video/"
@@ -730,7 +733,7 @@
                                                                 "minItems": 1
                                                             },
                                                             "placeholder": {
-                                                                "$ref": "#/allOf/0/properties/image/properties/thumbnail"
+                                                                "$ref": "#/allOf/0/properties/image/properties/social"
                                                             },
                                                             "width": {
                                                                 "title": "Width",
@@ -862,7 +865,10 @@
                                                 ]
                                             },
                                             "doi": {
-                                                "$ref": "#/allOf/1/properties/relatedContent/items/oneOf/0/allOf/0/properties/doi"
+                                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                                "title": "DOI",
+                                                "type": "string",
+                                                "pattern": "^10[.][0-9]{4,}[^\\s\"/<>]*/[^\\s\"]+$"
                                             },
                                             "id": {
                                                 "$ref": "#/allOf/1/properties/content/items/oneOf/1/properties/id"
@@ -982,10 +988,7 @@
                                                 ]
                                             },
                                             "doi": {
-                                                "$schema": "http://json-schema.org/draft-04/schema#",
-                                                "title": "DOI",
-                                                "type": "string",
-                                                "pattern": "^10[.][0-9]{4,}[^\\s\"/<>]*/[^\\s\"]+$"
+                                                "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/1/properties/doi"
                                             },
                                             "authorLine": {
                                                 "description": "For example:\n  - Ian T Baldwin\n  - Randy Schekman, Mark Patterson\n  - Lee R Berger et al.\n",
@@ -1009,15 +1012,15 @@
                                             },
                                             "published": {
                                                 "description": "Date and time this article was first published.\nNot present if 'stage' is 'preview' and version is '1'.\n",
-                                                "$ref": "#/allOf/0/properties/updated"
+                                                "$ref": "#/allOf/0/properties/published"
                                             },
                                             "versionDate": {
                                                 "description": "Date and time this version of the article was published.\nOnly present if 'stage' is 'published'.\n",
-                                                "$ref": "#/allOf/0/properties/updated"
+                                                "$ref": "#/allOf/0/properties/published"
                                             },
                                             "statusDate": {
                                                 "description": "Date and time this article transitioned to current status.\nNot present if 'stage' is 'preview' and version is '1'.\n",
-                                                "$ref": "#/allOf/0/properties/updated"
+                                                "$ref": "#/allOf/0/properties/published"
                                             },
                                             "volume": {
                                                 "type": "integer",
@@ -1045,6 +1048,29 @@
                                                     "minLength": 1
                                                 },
                                                 "uniqueItems": true
+                                            },
+                                            "image": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "thumbnail": {
+                                                        "$ref": "#/allOf/0/properties/image/properties/social"
+                                                    },
+                                                    "social": {
+                                                        "$ref": "#/allOf/0/properties/image/properties/social"
+                                                    }
+                                                },
+                                                "anyOf": [
+                                                    {
+                                                        "required": [
+                                                            "thumbnail"
+                                                        ]
+                                                    },
+                                                    {
+                                                        "required": [
+                                                            "social"
+                                                        ]
+                                                    }
+                                                ]
                                             }
                                         },
                                         "required": [
@@ -1065,17 +1091,6 @@
                                                 "type": "string",
                                                 "enum": [
                                                     "poa"
-                                                ]
-                                            },
-                                            "image": {
-                                                "type": "object",
-                                                "properties": {
-                                                    "social": {
-                                                        "$ref": "#/allOf/0/properties/image/properties/thumbnail"
-                                                    }
-                                                },
-                                                "required": [
-                                                    "social"
                                                 ]
                                             }
                                         }
@@ -1105,29 +1120,6 @@
                                             "figuresPdf": {
                                                 "type": "string",
                                                 "format": "uri"
-                                            },
-                                            "image": {
-                                                "type": "object",
-                                                "properties": {
-                                                    "thumbnail": {
-                                                        "$ref": "#/allOf/0/properties/image/properties/thumbnail"
-                                                    },
-                                                    "social": {
-                                                        "$ref": "#/allOf/0/properties/image/properties/thumbnail"
-                                                    }
-                                                },
-                                                "anyOf": [
-                                                    {
-                                                        "required": [
-                                                            "thumbnail"
-                                                        ]
-                                                    },
-                                                    {
-                                                        "required": [
-                                                            "social"
-                                                        ]
-                                                    }
-                                                ]
                                             }
                                         }
                                     }

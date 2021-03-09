@@ -135,7 +135,10 @@
                                             "type": "object",
                                             "properties": {
                                                 "mediaType": {
-                                                    "$ref": "#/allOf/1/properties/podcastEpisodes/items/properties/sources/items/properties/mediaType/allOf/0"
+                                                    "$schema": "http://json-schema.org/draft-04/schema#",
+                                                    "title": "Media type",
+                                                    "type": "string",
+                                                    "pattern": "^([a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+/[a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+)(; *[a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+=(([a-zA-Z0-9\\.\\-]+)|(\".+\")))*$"
                                                 },
                                                 "uri": {
                                                     "title": "Source data URI",
@@ -343,17 +346,6 @@
                                                 "enum": [
                                                     "poa"
                                                 ]
-                                            },
-                                            "image": {
-                                                "type": "object",
-                                                "properties": {
-                                                    "social": {
-                                                        "$ref": "#/allOf/1/properties/image/properties/banner"
-                                                    }
-                                                },
-                                                "required": [
-                                                    "social"
-                                                ]
                                             }
                                         }
                                     }
@@ -459,6 +451,29 @@
                                                     "minLength": 1
                                                 },
                                                 "uniqueItems": true
+                                            },
+                                            "image": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "thumbnail": {
+                                                        "$ref": "#/allOf/1/properties/image/properties/banner"
+                                                    },
+                                                    "social": {
+                                                        "$ref": "#/allOf/1/properties/image/properties/banner"
+                                                    }
+                                                },
+                                                "anyOf": [
+                                                    {
+                                                        "required": [
+                                                            "thumbnail"
+                                                        ]
+                                                    },
+                                                    {
+                                                        "required": [
+                                                            "social"
+                                                        ]
+                                                    }
+                                                ]
                                             }
                                         },
                                         "required": [
@@ -488,29 +503,6 @@
                                             "figuresPdf": {
                                                 "type": "string",
                                                 "format": "uri"
-                                            },
-                                            "image": {
-                                                "type": "object",
-                                                "properties": {
-                                                    "thumbnail": {
-                                                        "$ref": "#/allOf/1/properties/image/properties/banner"
-                                                    },
-                                                    "social": {
-                                                        "$ref": "#/allOf/1/properties/image/properties/banner"
-                                                    }
-                                                },
-                                                "anyOf": [
-                                                    {
-                                                        "required": [
-                                                            "thumbnail"
-                                                        ]
-                                                    },
-                                                    {
-                                                        "required": [
-                                                            "social"
-                                                        ]
-                                                    }
-                                                ]
                                             }
                                         }
                                     }
@@ -626,6 +618,9 @@
                                                                 "type": "object",
                                                                 "properties": {
                                                                     "thumbnail": {
+                                                                        "$ref": "#/allOf/1/properties/image/properties/banner"
+                                                                    },
+                                                                    "social": {
                                                                         "$ref": "#/allOf/1/properties/image/properties/banner"
                                                                     }
                                                                 },
@@ -856,10 +851,7 @@
                                         "mediaType": {
                                             "allOf": [
                                                 {
-                                                    "$schema": "http://json-schema.org/draft-04/schema#",
-                                                    "title": "Media type",
-                                                    "type": "string",
-                                                    "pattern": "^([a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+/[a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+)(; *[a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+=(([a-zA-Z0-9\\.\\-]+)|(\".+\")))*$"
+                                                    "$ref": "#/allOf/1/properties/image/properties/banner/allOf/1/properties/source/properties/mediaType"
                                                 },
                                                 {
                                                     "pattern": "^audio/"
