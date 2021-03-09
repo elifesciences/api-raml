@@ -1,12 +1,12 @@
 # Changelog
-## 2.0.1
+## 2.1.0
 ### Added
 
 *no additions*
 
 ### Changed
 
-* altered the sample values for author preferred names in references and datasets
+* author preferred field changed from "firstname surname suffix" to "surname firstname suffix" in references and datasets
 
 ### Fixed
 
