@@ -1,4 +1,21 @@
 # Changelog
+## 2.1.0
+### Added
+
+*no additions*
+
+### Changed
+
+* author preferred field changed from "firstname surname suffix" to "surname firstname suffix" in references and datasets
+
+### Fixed
+
+*no fixes*
+
+### Removed
+
+*no removals*
+
 ## 2.0.0
 ### Added
 
