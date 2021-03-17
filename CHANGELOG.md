@@ -1,21 +1,4 @@
 # Changelog
-## 2.1.0
-### Added
-
-*no additions*
-
-### Changed
-
-* Added an example of an image without a caption
-
-### Fixed
-
-*no fixes*
-
-### Removed
-
-*no removals*
-
 ## 2.0.0
 ### Added
 
