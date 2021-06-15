@@ -1,0 +1,27 @@
+{
+    "received": "2016-01-02",
+    "accepted": "2016-02-28",
+    "versions": [
+        {
+            "status": "vor",
+            "id": "14107",
+            "version": 1,
+            "type": "research-article",
+            "doi": "10.7554/eLife.14107",
+            "authorLine": "Yongjian Huang et al.",
+            "title": "Molecular basis for multimerization in the activation of the epidermal growth factor",
+            "stage": "published",
+            "published": "2016-03-28T00:00:00Z",
+            "versionDate": "2016-03-28T00:00:00Z",
+            "statusDate": "2016-03-28T00:00:00Z",
+            "volume": 5,
+            "elocationId": "e14107"
+        },
+        {
+            "type": "preprint",
+            "description": "This manuscript was published as a preprint at bioRxiv.",
+            "uri": "https://www.biorxiv.org/content/10.1101/2019.08.22.6666666v1",
+            "date": "2010-01-01T00:00:00Z"
+        }
+    ]
+}

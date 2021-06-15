@@ -510,7 +510,16 @@ traits:
                                         description: |
                                             Multiple versions including a version being previewed.
                                         value: !include samples/article-history/v1/unpublished-multiple-versions.json
-
+                                    preprintOnly:
+                                        displayName: Pre-print only
+                                        description: |
+                                            Article history involving just a pre-print. Valid, but unlikely to ever exist.
+                                        value: !include samples/article-history/v1/preprint-only.json
+                                    oneVersionWithPreprint:
+                                        displayName: One version and a pre-print
+                                        description: |
+                                            Article history involving a published article and a pre-print.
+                                        value: !include samples/article-history/v1/one-version-with-preprint.json
             /{version}:
                 type:
                     item:

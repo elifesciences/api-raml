@@ -13,6 +13,7 @@ properties:
         type: array
         items:
           - oneOf:
+              - $ref: ../snippets/article-preprint.v1.yaml
               - $ref: ../snippets/article-poa.v1.yaml
               - $ref: ../snippets/article-vor.v1.yaml
         minItems: 1
