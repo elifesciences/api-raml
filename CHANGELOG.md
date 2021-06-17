@@ -1,4 +1,17 @@
 # Changelog
+
+## 2.2.0
+
+### Added
+
+* `preprint` events to the `article-history` content type.
+    - these are versions of the article that were published on pre-print servers before being accepted by eLife
+
+### Changed
+
+* bumps `application/vnd.elife.article-history+json` from `version=1` to `version=2` in the API
+    - version 2 article-history responses may contain pre-print events
+
 ## 2.1.0
 ### Added
 

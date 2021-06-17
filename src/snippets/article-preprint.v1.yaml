@@ -2,7 +2,7 @@ $schema: http://json-schema.org/draft-04/schema#
 title: Article pre-print version snippet
 type: object
 properties:
-    type:
+    status:
         type: string
         enum:
             - preprint
@@ -15,7 +15,7 @@ properties:
         title: pre-print publication date (UTC)
         $ref: ../misc/date-time.v1.yaml
 required:
-    - type
+    - status
     - description
     - uri
     - date
