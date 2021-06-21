@@ -125,6 +125,9 @@
                                         "type": "object",
                                         "properties": {
                                             "thumbnail": {
+                                                "$ref": "#/properties/items/items/oneOf/0/allOf/0/properties/image/properties/social"
+                                            },
+                                            "social": {
                                                 "$schema": "http://json-schema.org/draft-04/schema#",
                                                 "title": "IIIF image",
                                                 "type": "object",
@@ -232,9 +235,6 @@
                                                         ]
                                                     }
                                                 ]
-                                            },
-                                            "social": {
-                                                "$ref": "#/properties/items/items/oneOf/0/allOf/0/properties/image/properties/thumbnail"
                                             }
                                         },
                                         "anyOf": [
@@ -406,7 +406,7 @@
                                                         "type": "object",
                                                         "properties": {
                                                             "thumbnail": {
-                                                                "$ref": "#/properties/items/items/oneOf/0/allOf/0/properties/image/properties/thumbnail"
+                                                                "$ref": "#/properties/items/items/oneOf/0/allOf/0/properties/image/properties/social"
                                                             }
                                                         },
                                                         "required": [
@@ -461,7 +461,7 @@
                                                                                 ]
                                                                             },
                                                                             "image": {
-                                                                                "$ref": "#/properties/items/items/oneOf/0/allOf/0/properties/image/properties/thumbnail"
+                                                                                "$ref": "#/properties/items/items/oneOf/0/allOf/0/properties/image/properties/social"
                                                                             }
                                                                         },
                                                                         "required": [
@@ -575,7 +575,7 @@
                                                                 "type": "object",
                                                                 "properties": {
                                                                     "thumbnail": {
-                                                                        "$ref": "#/properties/items/items/oneOf/0/allOf/0/properties/image/properties/thumbnail"
+                                                                        "$ref": "#/properties/items/items/oneOf/0/allOf/0/properties/image/properties/social"
                                                                     }
                                                                 }
                                                             }
@@ -640,7 +640,7 @@
                                                         "type": "object",
                                                         "properties": {
                                                             "thumbnail": {
-                                                                "$ref": "#/properties/items/items/oneOf/0/allOf/0/properties/image/properties/thumbnail"
+                                                                "$ref": "#/properties/items/items/oneOf/0/allOf/0/properties/image/properties/social"
                                                             }
                                                         },
                                                         "required": [
@@ -699,7 +699,7 @@
                                                         "type": "object",
                                                         "properties": {
                                                             "thumbnail": {
-                                                                "$ref": "#/properties/items/items/oneOf/0/allOf/0/properties/image/properties/thumbnail"
+                                                                "$ref": "#/properties/items/items/oneOf/0/allOf/0/properties/image/properties/social"
                                                             }
                                                         },
                                                         "required": [
@@ -714,7 +714,7 @@
                                                                 "mediaType": {
                                                                     "allOf": [
                                                                         {
-                                                                            "$ref": "#/properties/items/items/oneOf/0/allOf/0/properties/image/properties/thumbnail/allOf/1/properties/source/properties/mediaType"
+                                                                            "$ref": "#/properties/items/items/oneOf/0/allOf/0/properties/image/properties/social/allOf/1/properties/source/properties/mediaType"
                                                                         },
                                                                         {
                                                                             "pattern": "^audio/"

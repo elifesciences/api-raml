@@ -2,7 +2,7 @@
 ---
 title: eLife Sciences API
 baseUri: https://api.elifesciences.org/
-version: 2.2.0
+version: 1.0.0
 documentation:
   - title: Welcome
     content: |
@@ -510,19 +510,7 @@ traits:
                                         description: |
                                             Multiple versions including a version being previewed.
                                         value: !include samples/article-history/v1/unpublished-multiple-versions.json
-                            application/vnd.elife.article-history+json;version=2:
-                                schema: !include model/article-history.v2.json
-                                examples:
-                                    preprintOnly:
-                                        displayName: Pre-print only
-                                        description: |
-                                            Article history involving just a pre-print. Valid, but unlikely to ever exist.
-                                        value: !include samples/article-history/v2/preprint-only.json
-                                    oneVersionWithPreprint:
-                                        displayName: One version and a pre-print
-                                        description: |
-                                            Article history involving a published article and a pre-print.
-                                        value: !include samples/article-history/v2/one-version-with-preprint.json
+
             /{version}:
                 type:
                     item:

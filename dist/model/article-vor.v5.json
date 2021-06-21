@@ -9,6 +9,34 @@
             "type": "object",
             "allOf": [
                 {
+                    "$ref": "#/allOf/1/allOf/0"
+                },
+                {
+                    "properties": {
+                        "status": {
+                            "type": "string",
+                            "enum": [
+                                "vor"
+                            ]
+                        },
+                        "impactStatement": {
+                            "type": "string",
+                            "minLength": 1
+                        },
+                        "figuresPdf": {
+                            "type": "string",
+                            "format": "uri"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "$schema": "http://json-schema.org/draft-04/schema#",
+            "title": "Article",
+            "type": "object",
+            "allOf": [
+                {
                     "$schema": "http://json-schema.org/draft-04/schema#",
                     "title": "Article snippet",
                     "type": "object",
@@ -70,19 +98,19 @@
                         },
                         "published": {
                             "description": "Date and time this article was first published.\nNot present if 'stage' is 'preview' and version is '1'.\n",
+                            "$ref": "#/allOf/1/allOf/0/properties/versionDate"
+                        },
+                        "versionDate": {
+                            "description": "Date and time this version of the article was published.\nOnly present if 'stage' is 'published'.\n",
                             "$schema": "http://json-schema.org/draft-04/schema#",
                             "title": "Date-time ISO8601 with numeric UTC timezone",
                             "type": "string",
                             "format": "date-time",
                             "pattern": "^....-..-..T..:..:..Z$"
                         },
-                        "versionDate": {
-                            "description": "Date and time this version of the article was published.\nOnly present if 'stage' is 'published'.\n",
-                            "$ref": "#/allOf/0/allOf/0/properties/published"
-                        },
                         "statusDate": {
                             "description": "Date and time this article transitioned to current status.\nNot present if 'stage' is 'preview' and version is '1'.\n",
-                            "$ref": "#/allOf/0/allOf/0/properties/published"
+                            "$ref": "#/allOf/1/allOf/0/properties/versionDate"
                         },
                         "volume": {
                             "type": "integer",
@@ -104,7 +132,7 @@
                                 "type": "object",
                                 "properties": {
                                     "id": {
-                                        "$ref": "#/allOf/0/allOf/0/properties/id"
+                                        "$ref": "#/allOf/1/allOf/0/properties/id"
                                     },
                                     "name": {
                                         "description": "Name",
@@ -204,7 +232,7 @@
                                     ]
                                 },
                                 "social": {
-                                    "$ref": "#/allOf/0/allOf/0/properties/image/properties/thumbnail"
+                                    "$ref": "#/allOf/1/allOf/0/properties/image/properties/thumbnail"
                                 }
                             },
                             "anyOf": [
@@ -232,34 +260,6 @@
                         "volume",
                         "elocationId"
                     ]
-                },
-                {
-                    "properties": {
-                        "status": {
-                            "type": "string",
-                            "enum": [
-                                "vor"
-                            ]
-                        },
-                        "impactStatement": {
-                            "type": "string",
-                            "minLength": 1
-                        },
-                        "figuresPdf": {
-                            "type": "string",
-                            "format": "uri"
-                        }
-                    }
-                }
-            ]
-        },
-        {
-            "$schema": "http://json-schema.org/draft-04/schema#",
-            "title": "Article",
-            "type": "object",
-            "allOf": [
-                {
-                    "$ref": "#/allOf/0/allOf/0"
                 },
                 {
                     "properties": {
@@ -292,14 +292,14 @@
                                                         "description": "Content",
                                                         "type": "array",
                                                         "items": {
-                                                            "$ref": "#/allOf/1/allOf/1/properties/ethics/items"
+                                                            "$ref": "#/allOf/2/properties/digest/properties/content/items"
                                                         },
                                                         "minItems": 1
                                                     }
                                                 }
                                             },
                                             {
-                                                "$ref": "#/allOf/1/allOf/1/properties/ethics/items"
+                                                "$ref": "#/allOf/2/properties/digest/properties/content/items"
                                             }
                                         ]
                                     },
@@ -532,7 +532,7 @@
                                                                     "biography": {
                                                                         "type": "array",
                                                                         "items": {
-                                                                            "$ref": "#/allOf/1/allOf/1/properties/ethics/items"
+                                                                            "$ref": "#/allOf/2/properties/digest/properties/content/items"
                                                                         }
                                                                     },
                                                                     "deceased": {
@@ -700,7 +700,7 @@
                                 "availability": {
                                     "type": "array",
                                     "items": {
-                                        "$ref": "#/allOf/1/allOf/1/properties/ethics/items"
+                                        "$ref": "#/allOf/2/properties/digest/properties/content/items"
                                     }
                                 },
                                 "generated": {
@@ -742,7 +742,7 @@
                                                 "minLength": 1
                                             },
                                             "doi": {
-                                                "$ref": "#/allOf/0/allOf/0/properties/doi"
+                                                "$ref": "#/allOf/1/allOf/0/properties/doi"
                                             },
                                             "uri": {
                                                 "type": "string",
@@ -768,25 +768,7 @@
                         "ethics": {
                             "type": "array",
                             "items": {
-                                "$schema": "http://json-schema.org/draft-04/schema#",
-                                "title": "Paragraph",
-                                "type": "object",
-                                "properties": {
-                                    "type": {
-                                        "type": "string",
-                                        "enum": [
-                                            "paragraph"
-                                        ]
-                                    },
-                                    "text": {
-                                        "title": "Text",
-                                        "type": "string"
-                                    }
-                                },
-                                "required": [
-                                    "type",
-                                    "text"
-                                ]
+                                "$ref": "#/allOf/2/properties/digest/properties/content/items"
                             },
                             "minItems": 1
                         },
@@ -811,7 +793,7 @@
                                                     {
                                                         "properties": {
                                                             "funderId": {
-                                                                "$ref": "#/allOf/0/allOf/0/properties/doi"
+                                                                "$ref": "#/allOf/1/allOf/0/properties/doi"
                                                             }
                                                         }
                                                     }
@@ -938,7 +920,7 @@
                                                             ]
                                                         },
                                                         {
-                                                            "$ref": "#/allOf/1/allOf/1/properties/ethics/items"
+                                                            "$ref": "#/allOf/2/properties/digest/properties/content/items"
                                                         },
                                                         {
                                                             "properties": {
@@ -988,7 +970,7 @@
                                                 "$ref": "#/allOf/2/properties/decisionLetter/properties/id"
                                             },
                                             "doi": {
-                                                "$ref": "#/allOf/0/allOf/0/properties/doi"
+                                                "$ref": "#/allOf/1/allOf/0/properties/doi"
                                             },
                                             "label": {
                                                 "title": "Label",
@@ -1053,7 +1035,7 @@
                     "type": "object",
                     "properties": {
                         "doi": {
-                            "$ref": "#/allOf/0/allOf/0/properties/doi"
+                            "$ref": "#/allOf/1/allOf/0/properties/doi"
                         }
                     }
                 },
@@ -1068,12 +1050,30 @@
                     "type": "object",
                     "properties": {
                         "doi": {
-                            "$ref": "#/allOf/0/allOf/0/properties/doi"
+                            "$ref": "#/allOf/1/allOf/0/properties/doi"
                         },
                         "content": {
                             "type": "array",
                             "items": {
-                                "$ref": "#/allOf/1/allOf/1/properties/ethics/items"
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "title": "Paragraph",
+                                "type": "object",
+                                "properties": {
+                                    "type": {
+                                        "type": "string",
+                                        "enum": [
+                                            "paragraph"
+                                        ]
+                                    },
+                                    "text": {
+                                        "title": "Text",
+                                        "type": "string"
+                                    }
+                                },
+                                "required": [
+                                    "type",
+                                    "text"
+                                ]
                             },
                             "minItems": 1
                         }
@@ -1300,7 +1300,7 @@
                                                 "$ref": "#/allOf/2/properties/references/items/definitions/pages"
                                             },
                                             "doi": {
-                                                "$ref": "#/allOf/0/allOf/0/properties/doi"
+                                                "$ref": "#/allOf/1/allOf/0/properties/doi"
                                             },
                                             "uri": {
                                                 "type": "string",
@@ -1412,7 +1412,7 @@
                                                         "$ref": "#/allOf/2/properties/references/items/definitions/book/properties/publisher"
                                                     },
                                                     "doi": {
-                                                        "$ref": "#/allOf/0/allOf/0/properties/doi"
+                                                        "$ref": "#/allOf/1/allOf/0/properties/doi"
                                                     },
                                                     "uri": {
                                                         "type": "string",
@@ -1467,7 +1467,7 @@
                                                 "$ref": "#/allOf/2/properties/references/items/definitions/pages"
                                             },
                                             "doi": {
-                                                "$ref": "#/allOf/0/allOf/0/properties/doi"
+                                                "$ref": "#/allOf/1/allOf/0/properties/doi"
                                             },
                                             "pmid": {
                                                 "$ref": "#/allOf/2/properties/references/items/definitions/book/properties/pmid"
@@ -1621,7 +1621,7 @@
                                                 "minLength": 1
                                             },
                                             "doi": {
-                                                "$ref": "#/allOf/0/allOf/0/properties/doi"
+                                                "$ref": "#/allOf/1/allOf/0/properties/doi"
                                             },
                                             "uri": {
                                                 "type": "string",
@@ -1669,7 +1669,7 @@
                                                 "$ref": "#/allOf/2/properties/references/items/definitions/book/properties/publisher"
                                             },
                                             "doi": {
-                                                "$ref": "#/allOf/0/allOf/0/properties/doi"
+                                                "$ref": "#/allOf/1/allOf/0/properties/doi"
                                             },
                                             "pmid": {
                                                 "$ref": "#/allOf/2/properties/references/items/definitions/book/properties/pmid"
@@ -1755,7 +1755,7 @@
                                                 "$ref": "#/allOf/2/properties/references/items/definitions/book/properties/publisher"
                                             },
                                             "doi": {
-                                                "$ref": "#/allOf/0/allOf/0/properties/doi"
+                                                "$ref": "#/allOf/1/allOf/0/properties/doi"
                                             },
                                             "uri": {
                                                 "type": "string",
@@ -1919,7 +1919,7 @@
                                         "minLength": 1
                                     },
                                     "doi": {
-                                        "$ref": "#/allOf/0/allOf/0/properties/doi"
+                                        "$ref": "#/allOf/1/allOf/0/properties/doi"
                                     },
                                     "pmid": {
                                         "$schema": "http://json-schema.org/draft-04/schema#",
@@ -1989,7 +1989,7 @@
                                 "$ref": "#/allOf/2/properties/decisionLetter/properties/id"
                             },
                             "doi": {
-                                "$ref": "#/allOf/0/allOf/0/properties/doi"
+                                "$ref": "#/allOf/1/allOf/0/properties/doi"
                             },
                             "title": {
                                 "type": "string",
@@ -2145,7 +2145,7 @@
                                                                     "$ref": "#/allOf/1/allOf/1/properties/additionalFiles/items/allOf/0/properties/caption/items/oneOf/0"
                                                                 },
                                                                 {
-                                                                    "$ref": "#/allOf/1/allOf/1/properties/ethics/items"
+                                                                    "$ref": "#/allOf/2/properties/digest/properties/content/items"
                                                                 },
                                                                 {
                                                                     "$schema": "http://json-schema.org/draft-04/schema#",
@@ -2196,7 +2196,7 @@
                                                                                                 "items": {
                                                                                                     "oneOf": [
                                                                                                         {
-                                                                                                            "$ref": "#/allOf/1/allOf/1/properties/ethics/items"
+                                                                                                            "$ref": "#/allOf/2/properties/digest/properties/content/items"
                                                                                                         },
                                                                                                         {
                                                                                                             "$ref": "#/allOf/1/allOf/1/properties/additionalFiles/items/allOf/0/properties/caption/items/oneOf/0"
@@ -2327,7 +2327,7 @@
                                                                 {
                                                                     "properties": {
                                                                         "doi": {
-                                                                            "$ref": "#/allOf/0/allOf/0/properties/doi"
+                                                                            "$ref": "#/allOf/1/allOf/0/properties/doi"
                                                                         },
                                                                         "label": {
                                                                             "title": "Label",
@@ -2377,7 +2377,7 @@
                                                                 ]
                                                             },
                                                             "image": {
-                                                                "$ref": "#/allOf/0/allOf/0/properties/image/properties/thumbnail"
+                                                                "$ref": "#/allOf/1/allOf/0/properties/image/properties/thumbnail"
                                                             },
                                                             "inline": {
                                                                 "type": "boolean"
@@ -2427,7 +2427,7 @@
                                                 "$ref": "#/allOf/1/allOf/1/properties/additionalFiles/items/allOf/0/properties/caption/items/oneOf/0"
                                             },
                                             {
-                                                "$ref": "#/allOf/1/allOf/1/properties/ethics/items"
+                                                "$ref": "#/allOf/2/properties/digest/properties/content/items"
                                             },
                                             {
                                                 "$schema": "http://json-schema.org/draft-04/schema#",
@@ -2441,12 +2441,12 @@
                                                         ]
                                                     },
                                                     "image": {
-                                                        "$ref": "#/allOf/0/allOf/0/properties/image/properties/thumbnail"
+                                                        "$ref": "#/allOf/1/allOf/0/properties/image/properties/thumbnail"
                                                     },
                                                     "content": {
                                                         "type": "array",
                                                         "items": {
-                                                            "$ref": "#/allOf/1/allOf/1/properties/ethics/items"
+                                                            "$ref": "#/allOf/2/properties/digest/properties/content/items"
                                                         },
                                                         "minItems": 1
                                                     }
@@ -2477,7 +2477,7 @@
                                                         "title": "Answer",
                                                         "type": "array",
                                                         "items": {
-                                                            "$ref": "#/allOf/1/allOf/1/properties/ethics/items"
+                                                            "$ref": "#/allOf/2/properties/digest/properties/content/items"
                                                         },
                                                         "minItems": 1
                                                     }
@@ -2503,7 +2503,7 @@
                                                         "title": "Text",
                                                         "type": "array",
                                                         "items": {
-                                                            "$ref": "#/allOf/1/allOf/1/properties/ethics/items"
+                                                            "$ref": "#/allOf/2/properties/digest/properties/content/items"
                                                         },
                                                         "minItems": 1
                                                     },
@@ -2623,7 +2623,7 @@
                                                                 "minItems": 1
                                                             },
                                                             "placeholder": {
-                                                                "$ref": "#/allOf/0/allOf/0/properties/image/properties/thumbnail"
+                                                                "$ref": "#/allOf/1/allOf/0/properties/image/properties/thumbnail"
                                                             },
                                                             "width": {
                                                                 "title": "Width",
@@ -2709,7 +2709,7 @@
                                                 ]
                                             },
                                             "doi": {
-                                                "$ref": "#/allOf/0/allOf/0/properties/doi"
+                                                "$ref": "#/allOf/1/allOf/0/properties/doi"
                                             },
                                             "id": {
                                                 "$ref": "#/allOf/2/properties/decisionLetter/properties/id"
@@ -2763,12 +2763,12 @@
                             "pattern": "^[^\\s]+$"
                         },
                         "doi": {
-                            "$ref": "#/allOf/0/allOf/0/properties/doi"
+                            "$ref": "#/allOf/1/allOf/0/properties/doi"
                         },
                         "description": {
                             "type": "array",
                             "items": {
-                                "$ref": "#/allOf/1/allOf/1/properties/ethics/items"
+                                "$ref": "#/allOf/2/properties/digest/properties/content/items"
                             },
                             "minItems": 1
                         },
@@ -2792,7 +2792,7 @@
                             "$ref": "#/allOf/2/properties/decisionLetter/properties/id"
                         },
                         "doi": {
-                            "$ref": "#/allOf/0/allOf/0/properties/doi"
+                            "$ref": "#/allOf/1/allOf/0/properties/doi"
                         },
                         "content": {
                             "type": "array",
