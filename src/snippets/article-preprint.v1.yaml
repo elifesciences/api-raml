@@ -1,0 +1,21 @@
+$schema: http://json-schema.org/draft-04/schema#
+title: Article pre-print version snippet
+type: object
+properties:
+    status:
+        type: string
+        enum:
+            - preprint
+    description:
+        type: string
+    uri:
+        type: string
+        format: uri
+    date:
+        title: pre-print publication date (UTC)
+        $ref: ../misc/date-time.v1.yaml
+required:
+    - status
+    - description
+    - uri
+    - date
