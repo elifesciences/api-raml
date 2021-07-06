@@ -2,7 +2,7 @@
 ---
 title: eLife Sciences API
 baseUri: https://api.elifesciences.org/
-version: 2.2.0
+version: 2.2.1
 documentation:
   - title: Welcome
     content: |
@@ -491,6 +491,7 @@ traits:
                             Article history.
                         body:
                             application/vnd.elife.article-history+json;version=1:
+                                (deprecated):
                                 schema: !include ../dist/model/article-history.v1.json
                                 examples:
                                     minimum:
@@ -513,6 +514,23 @@ traits:
                             application/vnd.elife.article-history+json;version=2:
                                 schema: !include ../dist/model/article-history.v2.json
                                 examples:
+                                    minimum:
+                                        displayName: Minimum
+                                        value: !include samples/article-history/v1/minimum.json
+                                    oneVersion:
+                                        displayName: One version
+                                        value: !include samples/article-history/v1/one-version.json
+                                    multipleVersions:
+                                        displayName: Multiple versions
+                                        value: !include samples/article-history/v1/multiple-versions.json
+                                    unpublishedMinimum:
+                                        displayName: PreviewMinimum
+                                        value: !include samples/article-history/v1/unpublished-minimum.json
+                                    unpublishedMultipleVersions:
+                                        displayName: Multiple Versions With Preview
+                                        description: |
+                                            Multiple versions including a version being previewed.
+                                        value: !include samples/article-history/v1/unpublished-multiple-versions.json
                                     preprintOnly:
                                         displayName: Pre-print only
                                         description: |

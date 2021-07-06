@@ -1,5 +1,12 @@
 # Changelog
 
+## 2.2.1
+
+### Changed
+
+* duplicate `application/vnd.elife.article-history+json; version=1` examples in `version=2`
+* mark `application/vnd.elife.article-history+json; version 1` as deprecated
+
 ## 2.2.0
 
 ### Added
