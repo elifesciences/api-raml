@@ -119,3 +119,8 @@ allOf:
               - content
     required:
       - body
+    anyOf:
+      - dependencies:
+            authorResponse: [decisionLetter]
+      - dependencies:
+            authorResponse: [editorEvaluation]
