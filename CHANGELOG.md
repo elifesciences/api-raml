@@ -1,5 +1,20 @@
 # Changelog
 
+## 2.3.0
+
+### Added
+
+* `editorEvaluation` to the `article-vor` content type.
+
+### Changed
+
+* dependencies for including an `authorReponse`, it can be accompanied with either a `decisionLetter`, an `editorEvaluation`, or both
+* mark `application/vnd.elife.article-vor+json;version=5` as deprecated
+
+### Removed
+
+* removed support for `application/vnd.elife.article-vor+json;version=4`
+
 ## 2.2.1
 
 ### Changed
