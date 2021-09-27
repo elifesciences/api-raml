@@ -1,5 +1,21 @@
 # Changelog
 
+## 2.4.0
+
+### Added
+
+* added `application/vnd.elife.article-vor+json;version=7` to contain the altered `scietyUri` field name
+
+### Changed
+
+* changed `editorEvaluation` attribute `uri` to be named `scietyUri`
+* mark `application/vnd.elife.article-vor+json;version=6` as deprecated
+
+### Removed
+
+* removed support for `application/vnd.elife.article-vor+json;version=5`
+
+
 ## 2.3.0
 
 ### Added
