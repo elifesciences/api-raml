@@ -15,6 +15,7 @@ allOf:
                     enum:
                       - director
                       - early-career
+                      - ethics-committee
                       - executive
                       - leadership
                       - reviewing-editor

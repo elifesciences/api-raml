@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.4.0
+
+### Changed
+
+* extend person type to include ethics-committee option
+
 ## 2.3.0
 
 ### Added
