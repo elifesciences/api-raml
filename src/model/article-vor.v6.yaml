@@ -77,7 +77,7 @@ allOf:
                     items:
                         $ref: ../misc/blocks-all.v2.yaml
                     minItems: 1
-                uri:
+                scietyUri:
                     title: Related material URI
                     type: string
                     format: uri

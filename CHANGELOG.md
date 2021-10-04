@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.5.0
+
+### Changed
+
+* rename `uri` property to `scietyUri` in an `editorEvaluation`
+
 ## 2.4.0
 
 ### Changed
