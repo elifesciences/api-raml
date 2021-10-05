@@ -2751,7 +2751,7 @@
                             },
                             "minItems": 1
                         },
-                        "uri": {
+                        "scietyUri": {
                             "title": "Related material URI",
                             "type": "string",
                             "format": "uri"
