@@ -1,5 +1,5 @@
 $schema: http://json-schema.org/draft-04/schema#
-title: Article snippet
+title: Reviewed preprint snippet
 type: object
 properties:
     id:

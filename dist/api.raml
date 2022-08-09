@@ -623,6 +623,62 @@ traits:
                                         unpublishedComplete:
                                             displayName: PreviewComplete
                                             value: !include samples/article-vor/v6/unpublished-complete.json
+/reviewed-preprint:
+    type: collection
+    description: |
+        Reviewed Preprint
+    get:
+        description: |
+            Get a list of Reviewed Preprints, sorted by date.
+        is:
+          - paged: { resources: ReviewedPreprints }
+        responses:
+            200:
+                description: |
+                    Get a list of Reviewed Preprints, sorted by date.
+                body:
+                    application/vnd.elife.reviewed-preprint-list+json;version=1:
+                        schema: !include model/reviewed-preprint-list.v1.json
+                        examples:
+                            paginated:
+                                displayName: First page
+                                description: |
+                                    List is split over two pages.
+                                value: !include samples/reviewed-preprint-list/v1/first-page.json
+                            empty:
+                                displayName: Empty list
+                                description: |
+                                    Demonstration of the list being empty (the first page will always return a valid result).
+                                value: !include samples/reviewed-preprint-list/v1/empty.json
+
+    /{id}:
+        type:
+            item:
+                resource: ReviewedPreprints
+        description: |
+            Latest version of an individual reviewed preprint.
+        uriParameters:
+            id:
+                description: |
+                    reviewed preprint ID.
+                type: string
+        get:
+            description: |
+                Get a reviewed preprint.
+            responses:
+                200:
+                    description: |
+                        Reviewed preprint latest version.
+                    body:
+                        application/vnd.elife.reviewed-preprint+json;version=1:
+                            schema: !include model/reviewed-preprint.v1.json
+                            examples:
+                                minimum:
+                                    displayName: Minimum
+                                    value: !include samples/reviewed-preprint/v1/minimum.json
+                                complete:
+                                    displayName: Complete
+                                    value: !include samples/reviewed-preprint/v1/complete.json
 
 /blog-articles:
     type: collection
@@ -1823,6 +1879,7 @@ traits:
                       - interview
                       - labs-post
                       - podcast-episode
+                      - reviewed-preprint
                 required: false
         responses:
             200:
@@ -1842,6 +1899,20 @@ traits:
                                 description: |
                                     Demonstration of the list being empty (the first page will always return a valid result).
                                 value: !include samples/search/v1/empty.json
+                    application/vnd.elife.search+json;version=2:
+                        (experimental):
+                        schema: !include model/search.v2.json
+                        examples:
+                            paginated:
+                                displayName: First page
+                                description: |
+                                    List is split over two pages.
+                                value: !include samples/search/v2/first-page.json
+                            empty:
+                                displayName: Empty list
+                                description: |
+                                    Demonstration of the list being empty (the first page will always return a valid result).
+                                value: !include samples/search/v2/empty.json
 
 /subjects:
     type: collection
