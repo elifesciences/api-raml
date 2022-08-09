@@ -1,0 +1,97 @@
+
+$schema: http://json-schema.org/draft-04/schema#
+title: Reviewed preprint snippet
+type: object
+properties:
+  id:
+    $ref: ../misc/id.v1.yaml
+  status:
+    type: string
+    enum:
+      - reviewed
+      - final
+  version:
+    type: integer
+    minimum: 1
+  type:
+    type: string
+    enum:
+      - reviewed-preprint
+  doi:
+    $ref: ../misc/doi.v1.yaml
+  authorLine:
+    description: |
+      For example:
+        - Ian T Baldwin
+        - Randy Schekman, Mark Patterson
+        - Lee R Berger et al.
+    type: string
+    minLength: 1
+  title:
+    type: string
+    minLength: 1
+  titlePrefix:
+    type: string
+    minLength: 1
+  stage:
+    type: string
+    enum:
+      - preview
+      - published
+  published:
+    description: |
+      Date and time this article was first published.
+      Not present if 'stage' is 'preview' and version is '1'.
+    $ref: ../misc/date-time.v1.yaml
+  versionDate:
+    description: |
+      Date and time this version of the article was published.
+      Only present if 'stage' is 'published'.
+    $ref: ../misc/date-time.v1.yaml
+  statusDate:
+    description: |
+      Date and time this article transitioned to current status.
+      Not present if 'stage' is 'preview' and version is '1'.
+    $ref: ../misc/date-time.v1.yaml
+  volume:
+    type: integer
+    minimum: 1
+  elocationId:
+    type: string
+    minLength: 1
+  pdf:
+    type: string
+    format: uri
+  subjects:
+    type: array
+    items:
+      $ref: ../snippets/subject.v1.yaml
+    uniqueItems: true
+  curationLabels:
+    type: array
+    items:
+      type: string
+      minLength: 1
+    uniqueItems: true
+  image:
+    type: object
+    properties:
+      thumbnail:
+        $ref: ../misc/image.v1.yaml
+      social:
+        $ref: ../misc/image.v1.yaml
+    anyOf:
+      - required:
+          - thumbnail
+      - required:
+          - social
+required:
+  - status
+  - id
+  - version
+  - type
+  - doi
+  - title
+  - stage
+  - volume
+  - elocationId
