@@ -638,6 +638,7 @@ traits:
                     Get a list of Reviewed Preprints, sorted by date.
                 body:
                     application/vnd.elife.reviewed-preprint-list+json;version=1:
+                        (experimental):
                         schema: !include model/reviewed-preprint-list.v1.json
                         examples:
                             paginated:
@@ -671,6 +672,7 @@ traits:
                         Reviewed preprint latest version.
                     body:
                         application/vnd.elife.reviewed-preprint+json;version=1:
+                            (experimental):
                             schema: !include model/reviewed-preprint.v1.json
                             examples:
                                 minimum:
