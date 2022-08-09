@@ -1,0 +1,185 @@
+
+$schema: http://json-schema.org/draft-04/schema#
+title: Search results
+type: object
+properties:
+  total:
+    title: Total number of results
+    type: integer
+    minimum: 0
+  items:
+    title: Search results
+    type: array
+    items:
+      oneOf:
+        - $ref: ../snippets/article-poa.v1.yaml
+        - $ref: ../snippets/article-vor.v1.yaml
+        - allOf:
+            - type: object
+              required:
+                - type
+            - oneOf:
+                - allOf:
+                    - properties:
+                        type:
+                          type: string
+                          enum:
+                            - reviewed-preprint
+                    - $ref: ../snippets/reviewed-preprint.v1.yaml
+                - allOf:
+                    - properties:
+                        type:
+                          type: string
+                          enum:
+                            - blog-article
+                    - $ref: ../snippets/blog-article.v1.yaml
+                - allOf:
+                    - properties:
+                        type:
+                          type: string
+                          enum:
+                            - collection
+                    - $ref: ../snippets/collection.v1.yaml
+                - allOf:
+                    - properties:
+                        type:
+                          type: string
+                          enum:
+                            - interview
+                    - $ref: ../snippets/interview.v1.yaml
+                - allOf:
+                    - properties:
+                        type:
+                          type: string
+                          enum:
+                            - labs-post
+                    - $ref: ../snippets/labs-post.v1.yaml
+                - allOf:
+                    - properties:
+                        type:
+                          type: string
+                          enum:
+                            - podcast-episode
+                    - $ref: ../snippets/podcast-episode.v1.yaml
+    uniqueItems: true
+  subjects:
+    title: Subjects
+    type: array
+    items:
+      title: Number of results with each subject
+      type: object
+      allOf:
+        - $ref: ../snippets/subject.v1.yaml
+        - properties:
+            results:
+              description: Results
+              type: integer
+              minimum: 0
+          required:
+            - results
+    uniqueItems: true
+  types:
+    title: Content types
+    type: object
+    properties:
+      correction:
+        description: Number of correction articles in the result set
+        type: integer
+        minimum: 0
+      editorial:
+        description: Number of editorial articles in the result set
+        type: integer
+        minimum: 0
+      feature:
+        description: Number of feature articles in the result set
+        type: integer
+        minimum: 0
+      insight:
+        description: Number of insight articles in the result set
+        type: integer
+        minimum: 0
+      research-advance:
+        description: Number of research advances in the result set
+        type: integer
+        minimum: 0
+      research-article:
+        description: Number of research articles in the result set
+        type: integer
+        minimum: 0
+      research-communication:
+        description: Number of research communication articles in the result set
+        type: integer
+        minimum: 0
+      retraction:
+        description: Number of retraction articles in the result set
+        type: integer
+        minimum: 0
+      registered-report:
+        description: Number of registered reports in the result set
+        type: integer
+        minimum: 0
+      replication-study:
+        description: Number of replication studies in the result set
+        type: integer
+        minimum: 0
+      review-article:
+        description: Number of review articles in the result set
+        type: integer
+        minimum: 0
+      scientific-correspondence:
+        description: Number of scientific correspondence articles in the result set
+        type: integer
+        minimum: 0
+      short-report:
+        description: Number of short reports in the result set
+        type: integer
+        minimum: 0
+      tools-resources:
+        description: Number of tools and resources articles in the result set
+        type: integer
+        minimum: 0
+      blog-article:
+        description: Number of blog articles in the result set
+        type: integer
+        minimum: 0
+      collection:
+        description: Number of collections in the result set
+        type: integer
+        minimum: 0
+      interview:
+        description: Number of interviews in the result set
+        type: integer
+        minimum: 0
+      labs-post:
+        description: Number of Labs posts in the result set
+        type: integer
+        minimum: 0
+      podcast-episode:
+        description: Number of podcast episodes in the result set
+        type: integer
+        minimum: 0
+    required:
+      - correction
+      - editorial
+      - feature
+      - insight
+      - research-advance
+      - research-article
+      - research-communication
+      - retraction
+      - registered-report
+      - replication-study
+      - review-article
+      - scientific-correspondence
+      - short-report
+      - tools-resources
+      - blog-article
+      - collection
+      - interview
+      - labs-post
+      - podcast-episode
+required:
+  - total
+  - items
+  - subjects
+  - types
