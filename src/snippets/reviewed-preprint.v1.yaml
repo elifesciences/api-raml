@@ -1,0 +1,24 @@
+$schema: http://json-schema.org/draft-04/schema#
+title: Reviewed preprint snippet
+type: object
+allOf:
+  - oneOf:
+      - allOf:
+          - $ref: article-vor.v1.yaml
+          - properties:
+                reviewedStatus:
+                    type: string
+                    enum:
+                        - final
+      - allOf:
+          - $ref: article-basics.v1.yaml
+          - properties:
+                reviewedStatus:
+                    type: string
+                    enum:
+                        - reviewed
+  - properties:
+        reviewedDate:
+            description: |
+                Date and time this preprint was reviewed.
+            $ref: ../misc/date-time.v1.yaml

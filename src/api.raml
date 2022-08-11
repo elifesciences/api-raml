@@ -965,6 +965,70 @@ traits:
                                     "title": "Forbidden"
                                 }
 
+/reviewed-preprint:
+    (experimental):
+    type: collection
+    description: |
+        Reviewed preprints
+    get:
+        description: |
+            Get a list of reviewed preprints, sorted by status date.
+        is:
+          - paged: { resources: Reviewed preprints }
+        responses:
+            200:
+                description: |
+                    List of reviewed preprints, sorted by status date.
+                body:
+                    application/vnd.elife.reviewed-preprint-list+json;version=1:
+                        schema: !include ../dist/model/reviewed-preprint-list.v1.json
+                        examples:
+                            paginated:
+                                displayName: First page
+                                description: |
+                                    List is split over two pages.
+                                value: !include samples/reviewed-preprint-list/v1/first-page.json
+                            empty:
+                                displayName: Empty list
+                                description: |
+                                    Demonstration of the list being empty (the first page will always return a valid result).
+                                value: !include samples/reviewed-preprint-list/v1/empty.json
+
+    /{id}:
+        type:
+            item:
+                resource: Reviewed preprint
+        description: |
+            Individual reviewed preprint.
+        uriParameters:
+            id:
+                description: |
+                    Reviewed preprint ID.
+                type: string
+        get:
+            description: |
+                Get a reviewed preprint.
+            responses:
+                200:
+                    description: |
+                        Digest.
+                    body:
+                        application/vnd.elife.reviewed-preprint+json;version=1:
+                            schema: !include ../dist/model/reviewed-preprint.v1.json
+                            examples:
+                                minimum:
+                                    displayName: Minimum reviewed print
+                                    value: !include samples/reviewed-preprint/v1/minimum.json
+                                complete:
+                                    displayName: Complete reviewed preprint
+                                    value: !include samples/reviewed-preprint/v1/complete.json
+                                minimum:
+                                    displayName: Minimum reviewed print (final)
+                                    value: !include samples/reviewed-preprint/v1/minimum-final.json
+                                complete:
+                                    displayName: Complete reviewed preprint (final)
+                                    value: !include samples/reviewed-preprint/v1/complete-final.json
+
 /events:
     type: collection
     description: |

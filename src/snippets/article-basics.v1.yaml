@@ -1,0 +1,44 @@
+$schema: http://json-schema.org/draft-04/schema#
+title: Article snippet
+type: object
+properties:
+    id:
+        $ref: ../misc/id.v1.yaml
+    doi:
+        $ref: ../misc/doi.v1.yaml
+    authorLine:
+        description: |
+            For example:
+              - Ian T Baldwin
+              - Randy Schekman, Mark Patterson
+              - Lee R Berger et al.
+        type: string
+        minLength: 1
+    title:
+        type: string
+        minLength: 1
+    statusDate:
+        description: |
+            Date and time this article transitioned to current status.
+            Not present if 'stage' is 'preview' and version is '1'.
+        $ref: ../misc/date-time.v1.yaml
+    subjects:
+        type: array
+        items:
+            $ref: ../snippets/subject.v1.yaml
+        uniqueItems: true
+    image:
+        type: object
+        properties:
+            thumbnail:
+                $ref: ../misc/image.v1.yaml
+            social:
+                $ref: ../misc/image.v1.yaml
+        anyOf:
+            - required:
+                - thumbnail
+            - required:
+                - social
+required:
+  - id
+  - title

@@ -1,0 +1,10 @@
+$schema: http://json-schema.org/draft-04/schema#
+title: Reviewed preprint
+type: object
+allOf:
+  - $ref: ../snippets/reviewed-preprint.v1.yaml
+  - properties:
+        indexContent:
+            description: Indexed content
+            type: string
+            minLength: 1
