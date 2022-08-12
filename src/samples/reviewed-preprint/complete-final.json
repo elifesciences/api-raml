@@ -64,5 +64,9 @@
             }
         }
     },
+    "curationLabels": [
+        "Curation label 1",
+        "Curation label 2"
+    ],
     "indexContent": "<i>Homo naledi</i>, a new species of the genus <i>Homo</i> from the Dinaledi Chamber, South Africa"
 }

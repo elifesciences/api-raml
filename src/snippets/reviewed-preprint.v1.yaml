@@ -22,3 +22,8 @@ allOf:
             description: |
                 Date and time this preprint was reviewed.
             $ref: ../misc/date-time.v1.yaml
+        curationLabels:
+            type: array
+            items:
+                title: Curation labels
+                type: string

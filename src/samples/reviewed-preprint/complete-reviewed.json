@@ -27,5 +27,9 @@
             }
         }
     },
+    "curationLabels": [
+        "Curation label 1",
+        "Curation label 2"
+    ],
     "indexContent": "Molecular basis for multimerization in the activation of the epidermal growth factor"
 }
