@@ -29,16 +29,6 @@
                             "final"
                         ]
                     },
-                    "version": {
-                        "type": "integer",
-                        "minimum": 1
-                    },
-                    "type": {
-                        "type": "string",
-                        "enum": [
-                            "reviewed-preprint"
-                        ]
-                    },
                     "doi": {
                         "$schema": "http://json-schema.org/draft-04/schema#",
                         "title": "DOI",
@@ -73,12 +63,12 @@
                         "format": "date-time",
                         "pattern": "^....-..-..T..:..:..Z$"
                     },
-                    "versionDate": {
-                        "description": "Date and time this version of the article was published.\nOnly present if 'stage' is 'published'.\n",
+                    "reviewedDate": {
+                        "description": "date of review\n",
                         "$ref": "#/properties/items/items/properties/published"
                     },
                     "statusDate": {
-                        "description": "Date and time this article transitioned to current status.\nNot present if 'stage' is 'preview' and version is '1'.\n",
+                        "description": "Date and time this version of the article was published.\nOnly present if 'stage' is 'published'.\n",
                         "$ref": "#/properties/items/items/properties/published"
                     },
                     "volume": {
@@ -252,23 +242,13 @@
                                 ]
                             }
                         ]
-                    },
-                    "indexContent": {
-                        "description": "Content to be indexed",
-                        "type": "string",
-                        "minLength": 1
                     }
                 },
                 "required": [
                     "status",
                     "id",
-                    "version",
-                    "type",
-                    "doi",
                     "title",
-                    "stage",
-                    "volume",
-                    "elocationId"
+                    "stage"
                 ]
             },
             "uniqueItems": true

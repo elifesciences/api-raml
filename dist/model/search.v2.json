@@ -298,6 +298,18 @@
                                     "figuresPdf": {
                                         "type": "string",
                                         "format": "uri"
+                                    },
+                                    "reviewedDate": {
+                                        "description": "date of review\n",
+                                        "$ref": "#/properties/items/items/oneOf/1/allOf/0/properties/published"
+                                    },
+                                    "curationLabels": {
+                                        "type": "array",
+                                        "items": {
+                                            "type": "string",
+                                            "minLength": 1
+                                        },
+                                        "uniqueItems": true
                                     }
                                 }
                             }
@@ -340,16 +352,6 @@
                                                             "final"
                                                         ]
                                                     },
-                                                    "version": {
-                                                        "type": "integer",
-                                                        "minimum": 1
-                                                    },
-                                                    "type": {
-                                                        "type": "string",
-                                                        "enum": [
-                                                            "reviewed-preprint"
-                                                        ]
-                                                    },
                                                     "doi": {
                                                         "$ref": "#/properties/items/items/oneOf/1/allOf/0/properties/doi"
                                                     },
@@ -377,12 +379,12 @@
                                                         "description": "Date and time this article was first published.\nNot present if 'stage' is 'preview' and version is '1'.\n",
                                                         "$ref": "#/properties/items/items/oneOf/1/allOf/0/properties/published"
                                                     },
-                                                    "versionDate": {
-                                                        "description": "Date and time this version of the article was published.\nOnly present if 'stage' is 'published'.\n",
+                                                    "reviewedDate": {
+                                                        "description": "date of review\n",
                                                         "$ref": "#/properties/items/items/oneOf/1/allOf/0/properties/published"
                                                     },
                                                     "statusDate": {
-                                                        "description": "Date and time this article transitioned to current status.\nNot present if 'stage' is 'preview' and version is '1'.\n",
+                                                        "description": "Date and time this version of the article was published.\nOnly present if 'stage' is 'published'.\n",
                                                         "$ref": "#/properties/items/items/oneOf/1/allOf/0/properties/published"
                                                     },
                                                     "volume": {
@@ -434,23 +436,13 @@
                                                                 ]
                                                             }
                                                         ]
-                                                    },
-                                                    "indexContent": {
-                                                        "description": "Content to be indexed",
-                                                        "type": "string",
-                                                        "minLength": 1
                                                     }
                                                 },
                                                 "required": [
                                                     "status",
                                                     "id",
-                                                    "version",
-                                                    "type",
-                                                    "doi",
                                                     "title",
-                                                    "stage",
-                                                    "volume",
-                                                    "elocationId"
+                                                    "stage"
                                                 ]
                                             }
                                         ]
