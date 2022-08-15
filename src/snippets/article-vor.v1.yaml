@@ -4,13 +4,24 @@ type: object
 allOf:
   - $ref: article.v1.yaml
   - properties:
-        status:
-            type: string
-            enum:
-                - vor
-        impactStatement:
-            type: string
-            minLength: 1
-        figuresPdf:
-            type: string
-            format: uri
+      status:
+        type: string
+        enum:
+          - vor
+      impactStatement:
+        type: string
+        minLength: 1
+      figuresPdf:
+        type: string
+        format: uri
+      reviewedDate:
+        description: |
+          date of review
+        $ref: ../misc/date-time.v1.yaml
+      curationLabels:
+        type: array
+        items:
+          type: string
+          minLength: 1
+        uniqueItems: true
+

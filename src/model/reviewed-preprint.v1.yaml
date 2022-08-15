@@ -4,7 +4,7 @@ type: object
 allOf:
   - $ref: ../snippets/reviewed-preprint.v1.yaml
   - properties:
-        indexContent:
-            description: Content to be indexed
-            type: string
-            minLength: 1
+      indexContent:
+        description: Content to be indexed
+        type: string
+        minLength: 1

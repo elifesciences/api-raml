@@ -1,4 +1,3 @@
-
 $schema: http://json-schema.org/draft-04/schema#
 title: Reviewed preprint snippet
 type: object
@@ -10,13 +9,6 @@ properties:
     enum:
       - reviewed
       - final
-  version:
-    type: integer
-    minimum: 1
-  type:
-    type: string
-    enum:
-      - reviewed-preprint
   doi:
     $ref: ../misc/doi.v1.yaml
   authorLine:
@@ -43,15 +35,14 @@ properties:
       Date and time this article was first published.
       Not present if 'stage' is 'preview' and version is '1'.
     $ref: ../misc/date-time.v1.yaml
-  versionDate:
+  reviewedDate:
     description: |
-      Date and time this version of the article was published.
-      Only present if 'stage' is 'published'.
+      date of review
     $ref: ../misc/date-time.v1.yaml
   statusDate:
     description: |
-      Date and time this article transitioned to current status.
-      Not present if 'stage' is 'preview' and version is '1'.
+      Date and time this version of the article was published.
+      Only present if 'stage' is 'published'.
     $ref: ../misc/date-time.v1.yaml
   volume:
     type: integer
@@ -88,10 +79,5 @@ properties:
 required:
   - status
   - id
-  - version
-  - type
-  - doi
   - title
   - stage
-  - volume
-  - elocationId

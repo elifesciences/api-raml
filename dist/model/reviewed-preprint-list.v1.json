@@ -252,6 +252,11 @@
                                 ]
                             }
                         ]
+                    },
+                    "indexContent": {
+                        "description": "Content to be indexed",
+                        "type": "string",
+                        "minLength": 1
                     }
                 },
                 "required": [
