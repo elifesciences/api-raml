@@ -14,3 +14,13 @@ allOf:
         figuresPdf:
             type: string
             format: uri
+        reviewedDate:
+          description: |
+            date of review
+          $ref: ../misc/date-time.v1.yaml
+        curationLabels:
+          type: array
+          items:
+            type: string
+            minLength: 1
+          uniqueItems: true
