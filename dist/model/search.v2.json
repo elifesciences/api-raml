@@ -332,6 +332,128 @@
                                                     "type": {
                                                         "type": "string",
                                                         "enum": [
+                                                            "reviewed-preprint"
+                                                        ]
+                                                    }
+                                                }
+                                            },
+                                            {
+                                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                                "title": "Reviewed preprint snippet",
+                                                "type": "object",
+                                                "properties": {
+                                                    "id": {
+                                                        "$ref": "#/properties/items/items/oneOf/0/allOf/0/properties/id"
+                                                    },
+                                                    "status": {
+                                                        "type": "string",
+                                                        "enum": [
+                                                            "reviewed",
+                                                            "final"
+                                                        ]
+                                                    },
+                                                    "doi": {
+                                                        "$ref": "#/properties/items/items/oneOf/0/allOf/0/properties/doi"
+                                                    },
+                                                    "authorLine": {
+                                                        "description": "For example:\n  - Ian T Baldwin\n  - Randy Schekman, Mark Patterson\n  - Lee R Berger, John Hawks ... Scott A Williams\n",
+                                                        "type": "string",
+                                                        "minLength": 1
+                                                    },
+                                                    "title": {
+                                                        "type": "string",
+                                                        "minLength": 1
+                                                    },
+                                                    "titlePrefix": {
+                                                        "type": "string",
+                                                        "minLength": 1
+                                                    },
+                                                    "stage": {
+                                                        "type": "string",
+                                                        "enum": [
+                                                            "preview",
+                                                            "published"
+                                                        ]
+                                                    },
+                                                    "published": {
+                                                        "description": "Date and time this article was first published.\nNot present if 'stage' is 'preview' and version is '1'.\n",
+                                                        "$ref": "#/properties/items/items/oneOf/0/allOf/0/properties/published"
+                                                    },
+                                                    "reviewedDate": {
+                                                        "description": "date of review\n",
+                                                        "$ref": "#/properties/items/items/oneOf/0/allOf/0/properties/published"
+                                                    },
+                                                    "statusDate": {
+                                                        "description": "Date and time this version of the article was published.\nOnly present if 'stage' is 'published'.\n",
+                                                        "$ref": "#/properties/items/items/oneOf/0/allOf/0/properties/published"
+                                                    },
+                                                    "volume": {
+                                                        "type": "integer",
+                                                        "minimum": 1
+                                                    },
+                                                    "elocationId": {
+                                                        "type": "string",
+                                                        "minLength": 1
+                                                    },
+                                                    "pdf": {
+                                                        "type": "string",
+                                                        "format": "uri"
+                                                    },
+                                                    "subjects": {
+                                                        "type": "array",
+                                                        "items": {
+                                                            "$ref": "#/properties/subjects/items/allOf/0"
+                                                        },
+                                                        "uniqueItems": true
+                                                    },
+                                                    "curationLabels": {
+                                                        "type": "array",
+                                                        "items": {
+                                                            "type": "string",
+                                                            "minLength": 1
+                                                        },
+                                                        "uniqueItems": true
+                                                    },
+                                                    "image": {
+                                                        "type": "object",
+                                                        "properties": {
+                                                            "thumbnail": {
+                                                                "$ref": "#/properties/items/items/oneOf/0/allOf/0/properties/image/properties/thumbnail"
+                                                            },
+                                                            "social": {
+                                                                "$ref": "#/properties/items/items/oneOf/0/allOf/0/properties/image/properties/thumbnail"
+                                                            }
+                                                        },
+                                                        "anyOf": [
+                                                            {
+                                                                "required": [
+                                                                    "thumbnail"
+                                                                ]
+                                                            },
+                                                            {
+                                                                "required": [
+                                                                    "social"
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                },
+                                                "required": [
+                                                    "status",
+                                                    "id",
+                                                    "title",
+                                                    "stage"
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "allOf": [
+                                            {
+                                                "properties": {
+                                                    "type": {
+                                                        "type": "string",
+                                                        "enum": [
                                                             "blog-article"
                                                         ]
                                                     }
@@ -440,7 +562,7 @@
                                                                 "type": "object",
                                                                 "allOf": [
                                                                     {
-                                                                        "$ref": "#/properties/items/items/oneOf/2/allOf/1/oneOf/2/allOf/1/allOf/0/properties/interviewee"
+                                                                        "$ref": "#/properties/items/items/oneOf/2/allOf/1/oneOf/3/allOf/1/allOf/0/properties/interviewee"
                                                                     },
                                                                     {
                                                                         "properties": {
@@ -907,6 +1029,11 @@
                     "description": "Number of podcast episodes in the result set",
                     "type": "integer",
                     "minimum": 0
+                },
+                "reviewed-preprint": {
+                    "description": "Number of reviewed-preprints in the result set",
+                    "type": "integer",
+                    "minimum": 0
                 }
             },
             "required": [
@@ -928,7 +1055,8 @@
                 "collection",
                 "interview",
                 "labs-post",
-                "podcast-episode"
+                "podcast-episode",
+                "reviewed-preprint"
             ]
         }
     },

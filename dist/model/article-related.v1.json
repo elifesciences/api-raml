@@ -305,6 +305,18 @@
                             "figuresPdf": {
                                 "type": "string",
                                 "format": "uri"
+                            },
+                            "reviewedDate": {
+                                "description": "date of review\n",
+                                "$ref": "#/items/oneOf/0/allOf/0/properties/published"
+                            },
+                            "curationLabels": {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "minLength": 1
+                                },
+                                "uniqueItems": true
                             }
                         }
                     }

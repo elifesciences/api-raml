@@ -24,67 +24,20 @@
                 },
                 "published": {
                     "title": "Publication date (UTC)",
-                    "$ref": "#/allOf/0/properties/updated"
-                },
-                "updated": {
-                    "title": "Updated date (UTC)",
                     "$schema": "http://json-schema.org/draft-04/schema#",
                     "description": "eLife restriction over the ISO8601 standard\n\nFor example:\n    - 2016-09-16T12:34:56Z\n",
                     "type": "string",
                     "format": "date-time",
                     "pattern": "^....-..-..T..:..:..Z$"
                 },
+                "updated": {
+                    "title": "Updated date (UTC)",
+                    "$ref": "#/allOf/0/properties/published"
+                },
                 "image": {
                     "type": "object",
                     "properties": {
                         "thumbnail": {
-                            "$ref": "#/allOf/1/properties/image/properties/social"
-                        }
-                    },
-                    "required": [
-                        "thumbnail"
-                    ]
-                },
-                "subjects": {
-                    "description": "Promotional collection subjects",
-                    "type": "array",
-                    "items": {
-                        "$schema": "http://json-schema.org/draft-04/schema#",
-                        "title": "Subject snippet",
-                        "type": "object",
-                        "properties": {
-                            "id": {
-                                "$ref": "#/allOf/0/properties/id"
-                            },
-                            "name": {
-                                "description": "Name",
-                                "type": "string",
-                                "minLength": 1
-                            }
-                        },
-                        "required": [
-                            "id",
-                            "name"
-                        ]
-                    }
-                }
-            },
-            "required": [
-                "id",
-                "title",
-                "published",
-                "image"
-            ]
-        },
-        {
-            "properties": {
-                "image": {
-                    "type": "object",
-                    "properties": {
-                        "banner": {
-                            "$ref": "#/allOf/1/properties/image/properties/social"
-                        },
-                        "social": {
                             "$schema": "http://json-schema.org/draft-04/schema#",
                             "title": "IIIF image",
                             "type": "object",
@@ -121,7 +74,10 @@
                                             "type": "object",
                                             "properties": {
                                                 "mediaType": {
-                                                    "$ref": "#/allOf/1/properties/podcastEpisodes/items/properties/sources/items/properties/mediaType/allOf/0"
+                                                    "$schema": "http://json-schema.org/draft-04/schema#",
+                                                    "title": "Media type",
+                                                    "type": "string",
+                                                    "pattern": "^([a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+/[a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+)(; *[a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+=(([a-zA-Z0-9\\.\\-]+)|(\".+\")))*$"
                                                 },
                                                 "uri": {
                                                     "title": "Source data URI",
@@ -189,6 +145,53 @@
                                     ]
                                 }
                             ]
+                        }
+                    },
+                    "required": [
+                        "thumbnail"
+                    ]
+                },
+                "subjects": {
+                    "description": "Promotional collection subjects",
+                    "type": "array",
+                    "items": {
+                        "$schema": "http://json-schema.org/draft-04/schema#",
+                        "title": "Subject snippet",
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "$ref": "#/allOf/0/properties/id"
+                            },
+                            "name": {
+                                "description": "Name",
+                                "type": "string",
+                                "minLength": 1
+                            }
+                        },
+                        "required": [
+                            "id",
+                            "name"
+                        ]
+                    }
+                }
+            },
+            "required": [
+                "id",
+                "title",
+                "published",
+                "image"
+            ]
+        },
+        {
+            "properties": {
+                "image": {
+                    "type": "object",
+                    "properties": {
+                        "banner": {
+                            "$ref": "#/allOf/0/properties/image/properties/thumbnail"
+                        },
+                        "social": {
+                            "$ref": "#/allOf/0/properties/image/properties/thumbnail"
                         }
                     },
                     "required": [
@@ -270,7 +273,7 @@
                                         ]
                                     },
                                     "image": {
-                                        "$ref": "#/allOf/1/properties/image/properties/social"
+                                        "$ref": "#/allOf/0/properties/image/properties/thumbnail"
                                     }
                                 },
                                 "required": [
@@ -314,26 +317,6 @@
                             {
                                 "$schema": "http://json-schema.org/draft-04/schema#",
                                 "title": "Article PoA snippet",
-                                "type": "object",
-                                "allOf": [
-                                    {
-                                        "$ref": "#/allOf/1/properties/content/items/oneOf/1/allOf/0"
-                                    },
-                                    {
-                                        "properties": {
-                                            "status": {
-                                                "type": "string",
-                                                "enum": [
-                                                    "poa"
-                                                ]
-                                            }
-                                        }
-                                    }
-                                ]
-                            },
-                            {
-                                "$schema": "http://json-schema.org/draft-04/schema#",
-                                "title": "Article VoR snippet",
                                 "type": "object",
                                 "allOf": [
                                     {
@@ -395,15 +378,15 @@
                                             },
                                             "published": {
                                                 "description": "Date and time this article was first published.\nNot present if 'stage' is 'preview' and version is '1'.\n",
-                                                "$ref": "#/allOf/0/properties/updated"
+                                                "$ref": "#/allOf/0/properties/published"
                                             },
                                             "versionDate": {
                                                 "description": "Date and time this version of the article was published.\nOnly present if 'stage' is 'published'.\n",
-                                                "$ref": "#/allOf/0/properties/updated"
+                                                "$ref": "#/allOf/0/properties/published"
                                             },
                                             "statusDate": {
                                                 "description": "Date and time this article transitioned to current status.\nNot present if 'stage' is 'preview' and version is '1'.\n",
-                                                "$ref": "#/allOf/0/properties/updated"
+                                                "$ref": "#/allOf/0/properties/published"
                                             },
                                             "volume": {
                                                 "type": "integer",
@@ -436,10 +419,10 @@
                                                 "type": "object",
                                                 "properties": {
                                                     "thumbnail": {
-                                                        "$ref": "#/allOf/1/properties/image/properties/social"
+                                                        "$ref": "#/allOf/0/properties/image/properties/thumbnail"
                                                     },
                                                     "social": {
-                                                        "$ref": "#/allOf/1/properties/image/properties/social"
+                                                        "$ref": "#/allOf/0/properties/image/properties/thumbnail"
                                                     }
                                                 },
                                                 "anyOf": [
@@ -473,6 +456,26 @@
                                             "status": {
                                                 "type": "string",
                                                 "enum": [
+                                                    "poa"
+                                                ]
+                                            }
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "title": "Article VoR snippet",
+                                "type": "object",
+                                "allOf": [
+                                    {
+                                        "$ref": "#/allOf/1/properties/content/items/oneOf/0/allOf/0"
+                                    },
+                                    {
+                                        "properties": {
+                                            "status": {
+                                                "type": "string",
+                                                "enum": [
                                                     "vor"
                                                 ]
                                             },
@@ -483,6 +486,18 @@
                                             "figuresPdf": {
                                                 "type": "string",
                                                 "format": "uri"
+                                            },
+                                            "reviewedDate": {
+                                                "description": "date of review\n",
+                                                "$ref": "#/allOf/0/properties/published"
+                                            },
+                                            "curationLabels": {
+                                                "type": "array",
+                                                "items": {
+                                                    "type": "string",
+                                                    "minLength": 1
+                                                },
+                                                "uniqueItems": true
                                             }
                                         }
                                     }
@@ -528,11 +543,11 @@
                                                             },
                                                             "published": {
                                                                 "title": "Publication date (UTC)",
-                                                                "$ref": "#/allOf/0/properties/updated"
+                                                                "$ref": "#/allOf/0/properties/published"
                                                             },
                                                             "updated": {
                                                                 "title": "Updated date (UTC)",
-                                                                "$ref": "#/allOf/0/properties/updated"
+                                                                "$ref": "#/allOf/0/properties/published"
                                                             },
                                                             "subjects": {
                                                                 "description": "Article subjects",
@@ -588,20 +603,20 @@
                                                             },
                                                             "published": {
                                                                 "title": "Publication date (UTC)",
-                                                                "$ref": "#/allOf/0/properties/updated"
+                                                                "$ref": "#/allOf/0/properties/published"
                                                             },
                                                             "updated": {
                                                                 "title": "Updated date (UTC)",
-                                                                "$ref": "#/allOf/0/properties/updated"
+                                                                "$ref": "#/allOf/0/properties/published"
                                                             },
                                                             "image": {
                                                                 "type": "object",
                                                                 "properties": {
                                                                     "thumbnail": {
-                                                                        "$ref": "#/allOf/1/properties/image/properties/social"
+                                                                        "$ref": "#/allOf/0/properties/image/properties/thumbnail"
                                                                     },
                                                                     "social": {
-                                                                        "$ref": "#/allOf/1/properties/image/properties/social"
+                                                                        "$ref": "#/allOf/0/properties/image/properties/thumbnail"
                                                                     }
                                                                 },
                                                                 "required": [
@@ -656,19 +671,19 @@
                                                             },
                                                             "published": {
                                                                 "title": "Publication date (UTC)",
-                                                                "$ref": "#/allOf/0/properties/updated"
+                                                                "$ref": "#/allOf/0/properties/published"
                                                             },
                                                             "updated": {
                                                                 "title": "Updated date (UTC)",
-                                                                "$ref": "#/allOf/0/properties/updated"
+                                                                "$ref": "#/allOf/0/properties/published"
                                                             },
                                                             "starts": {
                                                                 "description": "Start date/time (UTC)",
-                                                                "$ref": "#/allOf/0/properties/updated"
+                                                                "$ref": "#/allOf/0/properties/published"
                                                             },
                                                             "ends": {
                                                                 "description": "Ends date/time (UTC)",
-                                                                "$ref": "#/allOf/0/properties/updated"
+                                                                "$ref": "#/allOf/0/properties/published"
                                                             },
                                                             "timezone": {
                                                                 "description": "Timezone (from the IANA time zone database) for non-online events",
@@ -731,17 +746,17 @@
                                                                     },
                                                                     "published": {
                                                                         "title": "Publication date (UTC)",
-                                                                        "$ref": "#/allOf/0/properties/updated"
+                                                                        "$ref": "#/allOf/0/properties/published"
                                                                     },
                                                                     "updated": {
                                                                         "title": "Updated date (UTC)",
-                                                                        "$ref": "#/allOf/0/properties/updated"
+                                                                        "$ref": "#/allOf/0/properties/published"
                                                                     },
                                                                     "image": {
                                                                         "type": "object",
                                                                         "properties": {
                                                                             "thumbnail": {
-                                                                                "$ref": "#/allOf/1/properties/image/properties/social"
+                                                                                "$ref": "#/allOf/0/properties/image/properties/thumbnail"
                                                                             }
                                                                         }
                                                                     }
@@ -806,17 +821,17 @@
                             },
                             "published": {
                                 "title": "Publication date (UTC)",
-                                "$ref": "#/allOf/0/properties/updated"
+                                "$ref": "#/allOf/0/properties/published"
                             },
                             "updated": {
                                 "title": "Updated date (UTC)",
-                                "$ref": "#/allOf/0/properties/updated"
+                                "$ref": "#/allOf/0/properties/published"
                             },
                             "image": {
                                 "type": "object",
                                 "properties": {
                                     "thumbnail": {
-                                        "$ref": "#/allOf/1/properties/image/properties/social"
+                                        "$ref": "#/allOf/0/properties/image/properties/thumbnail"
                                     }
                                 },
                                 "required": [
@@ -831,10 +846,7 @@
                                         "mediaType": {
                                             "allOf": [
                                                 {
-                                                    "$schema": "http://json-schema.org/draft-04/schema#",
-                                                    "title": "Media type",
-                                                    "type": "string",
-                                                    "pattern": "^([a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+/[a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+)(; *[a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+=(([a-zA-Z0-9\\.\\-]+)|(\".+\")))*$"
+                                                    "$ref": "#/allOf/0/properties/image/properties/thumbnail/allOf/1/properties/source/properties/mediaType"
                                                 },
                                                 {
                                                     "pattern": "^audio/"

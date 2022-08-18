@@ -38,67 +38,6 @@
                     "type": "object",
                     "properties": {
                         "thumbnail": {
-                            "$ref": "#/allOf/1/properties/image/properties/banner"
-                        }
-                    },
-                    "required": [
-                        "thumbnail"
-                    ]
-                },
-                "subjects": {
-                    "description": "Collection subjects",
-                    "type": "array",
-                    "items": {
-                        "$schema": "http://json-schema.org/draft-04/schema#",
-                        "title": "Subject snippet",
-                        "type": "object",
-                        "properties": {
-                            "id": {
-                                "$ref": "#/allOf/0/properties/id"
-                            },
-                            "name": {
-                                "description": "Name",
-                                "type": "string",
-                                "minLength": 1
-                            }
-                        },
-                        "required": [
-                            "id",
-                            "name"
-                        ]
-                    }
-                },
-                "selectedCurator": {
-                    "allOf": [
-                        {
-                            "$ref": "#/allOf/1/properties/curators/items"
-                        },
-                        {
-                            "properties": {
-                                "etAl": {
-                                    "description": "If there are more curators.",
-                                    "type": "boolean",
-                                    "default": false
-                                }
-                            }
-                        }
-                    ]
-                }
-            },
-            "required": [
-                "id",
-                "title",
-                "published",
-                "image",
-                "selectedCurator"
-            ]
-        },
-        {
-            "properties": {
-                "image": {
-                    "type": "object",
-                    "properties": {
-                        "banner": {
                             "$schema": "http://json-schema.org/draft-04/schema#",
                             "title": "IIIF image",
                             "type": "object",
@@ -206,9 +145,70 @@
                                     ]
                                 }
                             ]
+                        }
+                    },
+                    "required": [
+                        "thumbnail"
+                    ]
+                },
+                "subjects": {
+                    "description": "Collection subjects",
+                    "type": "array",
+                    "items": {
+                        "$schema": "http://json-schema.org/draft-04/schema#",
+                        "title": "Subject snippet",
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "$ref": "#/allOf/0/properties/id"
+                            },
+                            "name": {
+                                "description": "Name",
+                                "type": "string",
+                                "minLength": 1
+                            }
+                        },
+                        "required": [
+                            "id",
+                            "name"
+                        ]
+                    }
+                },
+                "selectedCurator": {
+                    "allOf": [
+                        {
+                            "$ref": "#/allOf/1/properties/curators/items"
+                        },
+                        {
+                            "properties": {
+                                "etAl": {
+                                    "description": "If there are more curators.",
+                                    "type": "boolean",
+                                    "default": false
+                                }
+                            }
+                        }
+                    ]
+                }
+            },
+            "required": [
+                "id",
+                "title",
+                "published",
+                "image",
+                "selectedCurator"
+            ]
+        },
+        {
+            "properties": {
+                "image": {
+                    "type": "object",
+                    "properties": {
+                        "banner": {
+                            "$ref": "#/allOf/0/properties/image/properties/thumbnail"
                         },
                         "social": {
-                            "$ref": "#/allOf/1/properties/image/properties/banner"
+                            "$ref": "#/allOf/0/properties/image/properties/thumbnail"
                         }
                     },
                     "required": [
@@ -290,7 +290,7 @@
                                         ]
                                     },
                                     "image": {
-                                        "$ref": "#/allOf/1/properties/image/properties/banner"
+                                        "$ref": "#/allOf/0/properties/image/properties/thumbnail"
                                     }
                                 },
                                 "required": [
@@ -335,26 +335,6 @@
                             {
                                 "$schema": "http://json-schema.org/draft-04/schema#",
                                 "title": "Article PoA snippet",
-                                "type": "object",
-                                "allOf": [
-                                    {
-                                        "$ref": "#/allOf/1/properties/content/items/oneOf/1/allOf/0"
-                                    },
-                                    {
-                                        "properties": {
-                                            "status": {
-                                                "type": "string",
-                                                "enum": [
-                                                    "poa"
-                                                ]
-                                            }
-                                        }
-                                    }
-                                ]
-                            },
-                            {
-                                "$schema": "http://json-schema.org/draft-04/schema#",
-                                "title": "Article VoR snippet",
                                 "type": "object",
                                 "allOf": [
                                     {
@@ -457,10 +437,10 @@
                                                 "type": "object",
                                                 "properties": {
                                                     "thumbnail": {
-                                                        "$ref": "#/allOf/1/properties/image/properties/banner"
+                                                        "$ref": "#/allOf/0/properties/image/properties/thumbnail"
                                                     },
                                                     "social": {
-                                                        "$ref": "#/allOf/1/properties/image/properties/banner"
+                                                        "$ref": "#/allOf/0/properties/image/properties/thumbnail"
                                                     }
                                                 },
                                                 "anyOf": [
@@ -494,6 +474,26 @@
                                             "status": {
                                                 "type": "string",
                                                 "enum": [
+                                                    "poa"
+                                                ]
+                                            }
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "title": "Article VoR snippet",
+                                "type": "object",
+                                "allOf": [
+                                    {
+                                        "$ref": "#/allOf/1/properties/content/items/oneOf/0/allOf/0"
+                                    },
+                                    {
+                                        "properties": {
+                                            "status": {
+                                                "type": "string",
+                                                "enum": [
                                                     "vor"
                                                 ]
                                             },
@@ -504,6 +504,18 @@
                                             "figuresPdf": {
                                                 "type": "string",
                                                 "format": "uri"
+                                            },
+                                            "reviewedDate": {
+                                                "description": "date of review\n",
+                                                "$ref": "#/allOf/0/properties/published"
+                                            },
+                                            "curationLabels": {
+                                                "type": "array",
+                                                "items": {
+                                                    "type": "string",
+                                                    "minLength": 1
+                                                },
+                                                "uniqueItems": true
                                             }
                                         }
                                     }
@@ -619,10 +631,10 @@
                                                                 "type": "object",
                                                                 "properties": {
                                                                     "thumbnail": {
-                                                                        "$ref": "#/allOf/1/properties/image/properties/banner"
+                                                                        "$ref": "#/allOf/0/properties/image/properties/thumbnail"
                                                                     },
                                                                     "social": {
-                                                                        "$ref": "#/allOf/1/properties/image/properties/banner"
+                                                                        "$ref": "#/allOf/0/properties/image/properties/thumbnail"
                                                                     }
                                                                 },
                                                                 "required": [
@@ -762,7 +774,7 @@
                                                                         "type": "object",
                                                                         "properties": {
                                                                             "thumbnail": {
-                                                                                "$ref": "#/allOf/1/properties/image/properties/banner"
+                                                                                "$ref": "#/allOf/0/properties/image/properties/thumbnail"
                                                                             }
                                                                         }
                                                                     }
@@ -837,7 +849,7 @@
                                 "type": "object",
                                 "properties": {
                                     "thumbnail": {
-                                        "$ref": "#/allOf/1/properties/image/properties/banner"
+                                        "$ref": "#/allOf/0/properties/image/properties/thumbnail"
                                     }
                                 },
                                 "required": [
@@ -852,7 +864,7 @@
                                         "mediaType": {
                                             "allOf": [
                                                 {
-                                                    "$ref": "#/allOf/1/properties/image/properties/banner/allOf/1/properties/source/properties/mediaType"
+                                                    "$ref": "#/allOf/0/properties/image/properties/thumbnail/allOf/1/properties/source/properties/mediaType"
                                                 },
                                                 {
                                                     "pattern": "^audio/"

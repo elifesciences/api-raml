@@ -84,19 +84,19 @@
                                         },
                                         "published": {
                                             "description": "Date and time this article was first published.\nNot present if 'stage' is 'preview' and version is '1'.\n",
-                                            "$ref": "#/properties/versions/items/0/oneOf/0/allOf/0/properties/statusDate"
-                                        },
-                                        "versionDate": {
-                                            "description": "Date and time this version of the article was published.\nOnly present if 'stage' is 'published'.\n",
-                                            "$ref": "#/properties/versions/items/0/oneOf/0/allOf/0/properties/statusDate"
-                                        },
-                                        "statusDate": {
-                                            "description": "Date and time this article transitioned to current status.\nNot present if 'stage' is 'preview' and version is '1'.\n",
                                             "$schema": "http://json-schema.org/draft-04/schema#",
                                             "title": "Date-time ISO8601 with numeric UTC timezone",
                                             "type": "string",
                                             "format": "date-time",
                                             "pattern": "^....-..-..T..:..:..Z$"
+                                        },
+                                        "versionDate": {
+                                            "description": "Date and time this version of the article was published.\nOnly present if 'stage' is 'published'.\n",
+                                            "$ref": "#/properties/versions/items/0/oneOf/0/allOf/0/properties/published"
+                                        },
+                                        "statusDate": {
+                                            "description": "Date and time this article transitioned to current status.\nNot present if 'stage' is 'preview' and version is '1'.\n",
+                                            "$ref": "#/properties/versions/items/0/oneOf/0/allOf/0/properties/published"
                                         },
                                         "volume": {
                                             "type": "integer",
@@ -145,9 +145,6 @@
                                             "type": "object",
                                             "properties": {
                                                 "thumbnail": {
-                                                    "$ref": "#/properties/versions/items/0/oneOf/0/allOf/0/properties/image/properties/social"
-                                                },
-                                                "social": {
                                                     "$schema": "http://json-schema.org/draft-04/schema#",
                                                     "title": "IIIF image",
                                                     "type": "object",
@@ -255,6 +252,9 @@
                                                             ]
                                                         }
                                                     ]
+                                                },
+                                                "social": {
+                                                    "$ref": "#/properties/versions/items/0/oneOf/0/allOf/0/properties/image/properties/thumbnail"
                                                 }
                                             },
                                             "anyOf": [
@@ -318,6 +318,18 @@
                                         "figuresPdf": {
                                             "type": "string",
                                             "format": "uri"
+                                        },
+                                        "reviewedDate": {
+                                            "description": "date of review\n",
+                                            "$ref": "#/properties/versions/items/0/oneOf/0/allOf/0/properties/published"
+                                        },
+                                        "curationLabels": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "string",
+                                                "minLength": 1
+                                            },
+                                            "uniqueItems": true
                                         }
                                     }
                                 }

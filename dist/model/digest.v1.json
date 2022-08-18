@@ -45,9 +45,6 @@
                     "type": "object",
                     "properties": {
                         "thumbnail": {
-                            "$ref": "#/allOf/0/properties/image/properties/social"
-                        },
-                        "social": {
                             "$schema": "http://json-schema.org/draft-04/schema#",
                             "title": "IIIF image",
                             "type": "object",
@@ -155,6 +152,9 @@
                                     ]
                                 }
                             ]
+                        },
+                        "social": {
+                            "$ref": "#/allOf/0/properties/image/properties/thumbnail"
                         }
                     },
                     "required": [
@@ -385,7 +385,7 @@
                                                                             "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/12/allOf/0"
                                                                         },
                                                                         {
-                                                                            "$ref": "#/allOf/0/properties/image/properties/social/allOf/0"
+                                                                            "$ref": "#/allOf/0/properties/image/properties/thumbnail/allOf/0"
                                                                         },
                                                                         {
                                                                             "properties": {
@@ -533,7 +533,7 @@
                                                                                         "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/12/allOf/0"
                                                                                     },
                                                                                     {
-                                                                                        "$ref": "#/allOf/0/properties/image/properties/social/allOf/0"
+                                                                                        "$ref": "#/allOf/0/properties/image/properties/thumbnail/allOf/0"
                                                                                     },
                                                                                     {
                                                                                         "properties": {
@@ -555,7 +555,7 @@
                                                                                         ]
                                                                                     },
                                                                                     {
-                                                                                        "$ref": "#/allOf/0/properties/image/properties/social/allOf/1/properties/source"
+                                                                                        "$ref": "#/allOf/0/properties/image/properties/thumbnail/allOf/1/properties/source"
                                                                                     }
                                                                                 ]
                                                                             }
@@ -596,7 +596,7 @@
                                                                 ]
                                                             },
                                                             "image": {
-                                                                "$ref": "#/allOf/0/properties/image/properties/social"
+                                                                "$ref": "#/allOf/0/properties/image/properties/thumbnail"
                                                             },
                                                             "inline": {
                                                                 "type": "boolean"
@@ -690,7 +690,7 @@
                                                         "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/0/oneOf/12/allOf/0"
                                                     },
                                                     {
-                                                        "$ref": "#/allOf/0/properties/image/properties/social/allOf/0"
+                                                        "$ref": "#/allOf/0/properties/image/properties/thumbnail/allOf/0"
                                                     },
                                                     {
                                                         "properties": {
@@ -711,7 +711,7 @@
                                                                         "mediaType": {
                                                                             "allOf": [
                                                                                 {
-                                                                                    "$ref": "#/allOf/0/properties/image/properties/social/allOf/1/properties/source/properties/mediaType"
+                                                                                    "$ref": "#/allOf/0/properties/image/properties/thumbnail/allOf/1/properties/source/properties/mediaType"
                                                                                 },
                                                                                 {
                                                                                     "pattern": "^video/"
@@ -733,7 +733,7 @@
                                                                 "minItems": 1
                                                             },
                                                             "placeholder": {
-                                                                "$ref": "#/allOf/0/properties/image/properties/social"
+                                                                "$ref": "#/allOf/0/properties/image/properties/thumbnail"
                                                             },
                                                             "width": {
                                                                 "title": "Width",
@@ -1053,10 +1053,10 @@
                                                 "type": "object",
                                                 "properties": {
                                                     "thumbnail": {
-                                                        "$ref": "#/allOf/0/properties/image/properties/social"
+                                                        "$ref": "#/allOf/0/properties/image/properties/thumbnail"
                                                     },
                                                     "social": {
-                                                        "$ref": "#/allOf/0/properties/image/properties/social"
+                                                        "$ref": "#/allOf/0/properties/image/properties/thumbnail"
                                                     }
                                                 },
                                                 "anyOf": [
@@ -1120,6 +1120,18 @@
                                             "figuresPdf": {
                                                 "type": "string",
                                                 "format": "uri"
+                                            },
+                                            "reviewedDate": {
+                                                "description": "date of review\n",
+                                                "$ref": "#/allOf/0/properties/published"
+                                            },
+                                            "curationLabels": {
+                                                "type": "array",
+                                                "items": {
+                                                    "type": "string",
+                                                    "minLength": 1
+                                                },
+                                                "uniqueItems": true
                                             }
                                         }
                                     }

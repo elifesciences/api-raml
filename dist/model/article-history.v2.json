@@ -175,9 +175,6 @@
                                             "type": "object",
                                             "properties": {
                                                 "thumbnail": {
-                                                    "$ref": "#/properties/versions/items/0/oneOf/1/allOf/0/properties/image/properties/social"
-                                                },
-                                                "social": {
                                                     "$schema": "http://json-schema.org/draft-04/schema#",
                                                     "title": "IIIF image",
                                                     "type": "object",
@@ -285,6 +282,9 @@
                                                             ]
                                                         }
                                                     ]
+                                                },
+                                                "social": {
+                                                    "$ref": "#/properties/versions/items/0/oneOf/1/allOf/0/properties/image/properties/thumbnail"
                                                 }
                                             },
                                             "anyOf": [
@@ -348,6 +348,18 @@
                                         "figuresPdf": {
                                             "type": "string",
                                             "format": "uri"
+                                        },
+                                        "reviewedDate": {
+                                            "description": "date of review\n",
+                                            "$ref": "#/properties/versions/items/0/oneOf/0/properties/date"
+                                        },
+                                        "curationLabels": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "string",
+                                                "minLength": 1
+                                            },
+                                            "uniqueItems": true
                                         }
                                     }
                                 }

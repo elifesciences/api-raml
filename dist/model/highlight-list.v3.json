@@ -324,6 +324,18 @@
                                             "figuresPdf": {
                                                 "type": "string",
                                                 "format": "uri"
+                                            },
+                                            "reviewedDate": {
+                                                "description": "date of review\n",
+                                                "$ref": "#/properties/items/items/properties/item/oneOf/0/allOf/0/properties/published"
+                                            },
+                                            "curationLabels": {
+                                                "type": "array",
+                                                "items": {
+                                                    "type": "string",
+                                                    "minLength": 1
+                                                },
+                                                "uniqueItems": true
                                             }
                                         }
                                     }
@@ -837,22 +849,6 @@
                                                         }
                                                     },
                                                     {
-                                                        "$ref": "#/properties/items/items/properties/item/oneOf/2/allOf/1/oneOf/7/properties/episode"
-                                                    }
-                                                ]
-                                            },
-                                            {
-                                                "$schema": "http://json-schema.org/draft-04/schema#",
-                                                "title": "Podcast episode chapter",
-                                                "type": "object",
-                                                "properties": {
-                                                    "type": {
-                                                        "type": "string",
-                                                        "enum": [
-                                                            "podcast-episode-chapter"
-                                                        ]
-                                                    },
-                                                    "episode": {
                                                         "$schema": "http://json-schema.org/draft-04/schema#",
                                                         "title": "Podcast episode snippet",
                                                         "type": "object",
@@ -926,6 +922,22 @@
                                                             "image",
                                                             "sources"
                                                         ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                                "title": "Podcast episode chapter",
+                                                "type": "object",
+                                                "properties": {
+                                                    "type": {
+                                                        "type": "string",
+                                                        "enum": [
+                                                            "podcast-episode-chapter"
+                                                        ]
+                                                    },
+                                                    "episode": {
+                                                        "$ref": "#/properties/items/items/properties/item/oneOf/2/allOf/1/oneOf/6/allOf/1"
                                                     },
                                                     "chapter": {
                                                         "$schema": "http://json-schema.org/draft-04/schema#",

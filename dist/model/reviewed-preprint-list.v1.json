@@ -1,0 +1,261 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "Reviewed preprint list",
+    "type": "object",
+    "properties": {
+        "total": {
+            "title": "Total number of Reviewed preprints",
+            "type": "integer",
+            "minimum": 0
+        },
+        "items": {
+            "title": "Reviewed preprint article",
+            "type": "array",
+            "items": {
+                "$schema": "http://json-schema.org/draft-04/schema#",
+                "title": "Reviewed preprint snippet",
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "$schema": "http://json-schema.org/draft-04/schema#",
+                        "title": "eLife ID",
+                        "type": "string",
+                        "pattern": "^[a-z0-9-]+$"
+                    },
+                    "status": {
+                        "type": "string",
+                        "enum": [
+                            "reviewed",
+                            "final"
+                        ]
+                    },
+                    "doi": {
+                        "$schema": "http://json-schema.org/draft-04/schema#",
+                        "title": "DOI",
+                        "type": "string",
+                        "pattern": "^10[.][0-9]{4,}[^\\s\"/<>]*/[^\\s\"]+$"
+                    },
+                    "authorLine": {
+                        "description": "For example:\n  - Ian T Baldwin\n  - Randy Schekman, Mark Patterson\n  - Lee R Berger, John Hawks ... Scott A Williams\n",
+                        "type": "string",
+                        "minLength": 1
+                    },
+                    "title": {
+                        "type": "string",
+                        "minLength": 1
+                    },
+                    "titlePrefix": {
+                        "type": "string",
+                        "minLength": 1
+                    },
+                    "stage": {
+                        "type": "string",
+                        "enum": [
+                            "preview",
+                            "published"
+                        ]
+                    },
+                    "published": {
+                        "description": "Date and time this article was first published.\nNot present if 'stage' is 'preview' and version is '1'.\n",
+                        "$schema": "http://json-schema.org/draft-04/schema#",
+                        "title": "Date-time ISO8601 with numeric UTC timezone",
+                        "type": "string",
+                        "format": "date-time",
+                        "pattern": "^....-..-..T..:..:..Z$"
+                    },
+                    "reviewedDate": {
+                        "description": "date of review\n",
+                        "$ref": "#/properties/items/items/properties/published"
+                    },
+                    "statusDate": {
+                        "description": "Date and time this version of the article was published.\nOnly present if 'stage' is 'published'.\n",
+                        "$ref": "#/properties/items/items/properties/published"
+                    },
+                    "volume": {
+                        "type": "integer",
+                        "minimum": 1
+                    },
+                    "elocationId": {
+                        "type": "string",
+                        "minLength": 1
+                    },
+                    "pdf": {
+                        "type": "string",
+                        "format": "uri"
+                    },
+                    "subjects": {
+                        "type": "array",
+                        "items": {
+                            "$schema": "http://json-schema.org/draft-04/schema#",
+                            "title": "Subject snippet",
+                            "type": "object",
+                            "properties": {
+                                "id": {
+                                    "$ref": "#/properties/items/items/properties/id"
+                                },
+                                "name": {
+                                    "description": "Name",
+                                    "type": "string",
+                                    "minLength": 1
+                                }
+                            },
+                            "required": [
+                                "id",
+                                "name"
+                            ]
+                        },
+                        "uniqueItems": true
+                    },
+                    "curationLabels": {
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "minLength": 1
+                        },
+                        "uniqueItems": true
+                    },
+                    "image": {
+                        "type": "object",
+                        "properties": {
+                            "thumbnail": {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "title": "IIIF image",
+                                "type": "object",
+                                "allOf": [
+                                    {
+                                        "$schema": "http://json-schema.org/draft-04/schema#",
+                                        "title": "Has attribution",
+                                        "type": "object",
+                                        "properties": {
+                                            "attribution": {
+                                                "title": "Attribution",
+                                                "type": "array",
+                                                "items": {
+                                                    "type": "string"
+                                                }
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "properties": {
+                                            "uri": {
+                                                "title": "IIIF Image",
+                                                "type": "string",
+                                                "format": "uri",
+                                                "pattern": "^https://[^/]+(?:/[^?#\\[\\]@]+)?/[^/?#\\[\\]@]+$"
+                                            },
+                                            "alt": {
+                                                "title": "Alternative text",
+                                                "type": "string"
+                                            },
+                                            "source": {
+                                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                                "title": "File",
+                                                "type": "object",
+                                                "properties": {
+                                                    "mediaType": {
+                                                        "$schema": "http://json-schema.org/draft-04/schema#",
+                                                        "title": "Media type",
+                                                        "type": "string",
+                                                        "pattern": "^([a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+/[a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+)(; *[a-zA-Z0-9!#$%^&\\*_\\-\\+{}\\|'.`~]+=(([a-zA-Z0-9\\.\\-]+)|(\".+\")))*$"
+                                                    },
+                                                    "uri": {
+                                                        "title": "Source data URI",
+                                                        "type": "string",
+                                                        "format": "uri"
+                                                    },
+                                                    "filename": {
+                                                        "title": "Filename",
+                                                        "type": "string",
+                                                        "pattern": "^[A-Za-z0-9_. ()-]+\\.[a-z0-9]+$"
+                                                    }
+                                                },
+                                                "required": [
+                                                    "mediaType",
+                                                    "uri",
+                                                    "filename"
+                                                ]
+                                            },
+                                            "size": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "width": {
+                                                        "type": "integer",
+                                                        "minimum": 1
+                                                    },
+                                                    "height": {
+                                                        "type": "integer",
+                                                        "minimum": 1
+                                                    }
+                                                },
+                                                "required": [
+                                                    "width",
+                                                    "height"
+                                                ]
+                                            },
+                                            "focalPoint": {
+                                                "type": "object",
+                                                "title": "Focal point",
+                                                "description": "Point on the image that is considered to be the focal point of the image.\n\nIf not present, 50 can be used for both `x` and `y`.\n",
+                                                "properties": {
+                                                    "x": {
+                                                        "description": "Percentage on the horizontal axis.\n",
+                                                        "type": "integer",
+                                                        "minimum": 0,
+                                                        "maximum": 100
+                                                    },
+                                                    "y": {
+                                                        "description": "Percentage on the vertical axis.\n",
+                                                        "type": "integer",
+                                                        "minimum": 0,
+                                                        "maximum": 100
+                                                    }
+                                                },
+                                                "required": [
+                                                    "x",
+                                                    "y"
+                                                ]
+                                            }
+                                        },
+                                        "required": [
+                                            "uri",
+                                            "alt",
+                                            "source",
+                                            "size"
+                                        ]
+                                    }
+                                ]
+                            },
+                            "social": {
+                                "$ref": "#/properties/items/items/properties/image/properties/thumbnail"
+                            }
+                        },
+                        "anyOf": [
+                            {
+                                "required": [
+                                    "thumbnail"
+                                ]
+                            },
+                            {
+                                "required": [
+                                    "social"
+                                ]
+                            }
+                        ]
+                    }
+                },
+                "required": [
+                    "status",
+                    "id",
+                    "title",
+                    "stage"
+                ]
+            },
+            "uniqueItems": true
+        }
+    },
+    "required": [
+        "total",
+        "items"
+    ]
+}
