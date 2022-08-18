@@ -1769,19 +1769,21 @@ traits:
                                 description: |
                                     Demonstration of the list being empty (the first page will always return a valid result).
                                 value: !include samples/recommendations/v2/empty.json
-/reviewed-preprint:
+
+/reviewed-preprints:
+    (experimental):
     type: collection
     description: |
-        Reviewed Preprint
+        Reviewed preprints
     get:
         description: |
-            Get a list of Reviewed Preprints, sorted by date.
+            Get a list of Reviewed preprints, sorted by date.
         is:
-          - paged: { resources: ReviewedPreprints }
+          - paged: { resources: Reviewed preprints }
         responses:
             200:
                 description: |
-                    Get a list of Reviewed Preprints, sorted by date.
+                    Get a list of Reviewed preprints, sorted by date.
                 body:
                     application/vnd.elife.reviewed-preprint-list+json;version=1:
                         schema: !include model/reviewed-preprint-list.v1.json
@@ -1800,13 +1802,13 @@ traits:
     /{id}:
         type:
             item:
-                resource: ReviewedPreprints
+                resource: Reviewed preprint
         description: |
-            Latest version of an individual reviewed preprint.
+            Latest version of an individual Reviewed preprint.
         uriParameters:
             id:
                 description: |
-                    reviewed preprint ID.
+                    Reviewed preprint ID.
                 type: string
         get:
             description: |
