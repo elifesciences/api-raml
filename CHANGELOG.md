@@ -1,5 +1,21 @@
 # Changelog
 
+## 2.7.0
+
+### Changed
+
+* remove indexContent from reviewed preprint list samples
+
+## 2.6.0
+
+### Added
+
+* New reviewed preprints endpoint defined
+
+### Changed
+
+* support reviewed preprints in search results
+
 ## 2.5.0
 
 ### Changed
