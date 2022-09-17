@@ -10,7 +10,7 @@
 
 ### Added
 
-* New reviewed preprints endpoint defined
+* new reviewed preprints endpoint defined
 
 ### Changed
 
