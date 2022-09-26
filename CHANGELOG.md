@@ -1,5 +1,17 @@
 # Changelog
 
+## 2.9.0
+
+### Added
+
+* reinstate samples that include new properties for VOR that were PRC
+
+## 2.8.0
+
+### Changed
+
+* temporarily remove samples that include new properties, to aid transition
+
 ## 2.7.0
 
 ### Changed
