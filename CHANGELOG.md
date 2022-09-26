@@ -1,12 +1,3 @@
-
-# Changelog
-
-## 2.9.0
-
-# Changelog
-
-## 2.8.0
-
 # Changelog
 
 ## 2.7.0
