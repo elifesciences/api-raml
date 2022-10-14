@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.10.0
+
+### Added
+
+* introduce optional versionDate for reviewed preprints
+
 ## 2.9.0
 
 ### Added
