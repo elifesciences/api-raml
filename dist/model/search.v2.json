@@ -356,7 +356,7 @@
                                                         "$ref": "#/properties/items/items/oneOf/0/allOf/0/properties/doi"
                                                     },
                                                     "authorLine": {
-                                                        "description": "For example:\n  - Ian T Baldwin\n  - Randy Schekman, Mark Patterson\n  - Lee R Berger, John Hawks ... Scott A Williams\n",
+                                                        "description": "For example:\n    - Ian T Baldwin\n    - Randy Schekman, Mark Patterson\n    - Lee R Berger, John Hawks ... Scott A Williams\n",
                                                         "type": "string",
                                                         "minLength": 1
                                                     },
@@ -376,15 +376,20 @@
                                                         ]
                                                     },
                                                     "published": {
-                                                        "description": "Date and time this article was first published.\nNot present if 'stage' is 'preview' and version is '1'.\n",
+                                                        "title": "Publication date (UTC)",
+                                                        "description": "Date and time this reviewed-preprint was first published.\nNot present if 'stage' is 'preview'.\n",
                                                         "$ref": "#/properties/items/items/oneOf/0/allOf/0/properties/published"
                                                     },
                                                     "reviewedDate": {
-                                                        "description": "date of review\n",
+                                                        "description": "Date of review\n",
+                                                        "$ref": "#/properties/items/items/oneOf/0/allOf/0/properties/published"
+                                                    },
+                                                    "versionDate": {
+                                                        "description": "Date and time this version of the article was published.\n",
                                                         "$ref": "#/properties/items/items/oneOf/0/allOf/0/properties/published"
                                                     },
                                                     "statusDate": {
-                                                        "description": "Date and time this version of the article was published.\nOnly present if 'stage' is 'published'.\n",
+                                                        "description": "Date and time this article transitioned to current status.\n",
                                                         "$ref": "#/properties/items/items/oneOf/0/allOf/0/properties/published"
                                                     },
                                                     "volume": {
