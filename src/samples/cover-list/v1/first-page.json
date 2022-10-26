@@ -3,6 +3,7 @@
     "items": [
         {
             "title": "Media coverage: Slime can see",
+            "impactStatement": "Impact statement for media coverage: Slime can see",
             "image": {
                 "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif",
                 "alt": "",
@@ -32,6 +33,7 @@
         },
         {
             "title": "<i>Homo naledi</i>",
+            "impactStatement": "<i>Impact statement for Homo naledi</i>",
             "image": {
                 "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif",
                 "alt": "",

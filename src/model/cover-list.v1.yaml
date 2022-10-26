@@ -16,6 +16,9 @@ properties:
                     description: Title
                     type: string
                     minLength: 1
+                impactStatement:
+                    description: Impact statement
+                    type: string
                 image:
                     $ref: ../misc/image.v1.yaml
                 item:
