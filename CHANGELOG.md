@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.11.0
+
+### Added
+
+* introduce optional impactStatement for covers
+
 ## 2.10.0
 
 ### Added
