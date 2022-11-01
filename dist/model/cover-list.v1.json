@@ -19,6 +19,10 @@
                         "type": "string",
                         "minLength": 1
                     },
+                    "impactStatement": {
+                        "description": "Description of the cover",
+                        "type": "string"
+                    },
                     "image": {
                         "$schema": "http://json-schema.org/draft-04/schema#",
                         "title": "IIIF image",
