@@ -88,6 +88,275 @@
                     }
                 }
             }
+        },
+        {
+            "title": "<i>Homo naledi</i>",
+            "impactStatement": "A new hominin species has been unearthed in the Dinaledi Chamber of the Rising Star cave system in the largest assemblage of a single species of hominins yet discovered in Africa.",
+            "image": {
+                "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif",
+                "alt": "",
+                "source": {
+                    "mediaType": "image/jpeg",
+                    "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif/full/full/0/default.jpg",
+                    "filename": "an-image.jpg"
+                },
+                "size": {
+                    "width": 4194,
+                    "height": 4714
+                }
+            },
+            "item": {
+                "status": "poa",
+                "id": "09560",
+                "version": 1,
+                "type": "research-article",
+                "doi": "10.7554/eLife.09560",
+                "authorLine": "Lee R Berger et al.",
+                "title": "<i>Homo naledi</i>, a new species of the genus <i>Homo</i> from the Dinaledi Chamber, South Africa",
+                "stage": "published",
+                "published": "2015-09-10T00:00:00Z",
+                "statusDate": "2015-09-10T00:00:00Z",
+                "volume": 4,
+                "elocationId": "e09560",
+                "pdf": "https://elifesciences.org/content/4/e09560.pdf",
+                "subjects": [
+                    {
+                        "id": "genomics-evolutionary-biology",
+                        "name": "Genomics and Evolutionary Biology"
+                    }
+                ],
+                "image": {
+                    "thumbnail": {
+                        "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif",
+                        "alt": "",
+                        "source": {
+                            "mediaType": "image/jpeg",
+                            "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif/full/full/0/default.jpg",
+                            "filename": "an-image.jpg"
+                        },
+                        "size": {
+                            "width": 4194,
+                            "height": 4714
+                        },
+                        "focalPoint": {
+                            "x": 25,
+                            "y": 75
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "title": "<i>Infection, statistics and public health</i>",
+            "impactStatement": "What attracted you to studying epidemiology?",
+            "image": {
+                "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif",
+                "alt": "",
+                "source": {
+                    "mediaType": "image/jpeg",
+                    "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif/full/full/0/default.jpg",
+                    "filename": "an-image.jpg"
+                },
+                "size": {
+                    "width": 4194,
+                    "height": 4714
+                }
+            },
+            "item": {
+                "id": "2",
+                "interviewee": {
+                    "name": {
+                        "preferred": "Alicia Rosello",
+                        "index": "Rosello, Alicia"
+                    }
+                },
+                "title": "Infection, statistics and public health",
+                "published": "2015-11-03T11:00:53Z",
+                "content": [
+                    {
+                        "type": "question",
+                        "question": "What attracted you to studying epidemiology?",
+                        "answer": [
+                            {
+                                "type": "paragraph",
+                                "text": "During a placement year in my undergraduate degree I worked in multiple sclerosis research, obtaining patient blood samples at outpatient clinics and analysing their immune cells in the laboratory. The time I spent at the hospital and with medical researchers made me realise that I wanted to work in human biology, so I decided to study the virulence of <i>Staphylococcus aureus</i> during my final year undergraduate project. I found learning about infection fascinating but working in a laboratory was a bit lonely. I then studied a Masters in Public Health, which introduced me to many aspects of public health, including epidemiology. I was particularly interested in using statistical and mathematical techniques to help answer public health questions relating to infectious diseases and I chose to pursue this interest in my PhD."
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "title": "<i>Green drug factories</i>",
+            "impactStatement": "Podcast - Green drug factories ",
+            "image": {
+                "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif",
+                "alt": "",
+                "source": {
+                    "mediaType": "image/jpeg",
+                    "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif/full/full/0/default.jpg",
+                    "filename": "an-image.jpg"
+                },
+                "size": {
+                    "width": 4194,
+                    "height": 4714
+                }
+            },
+            "item": {
+                "number": 30,
+                "title": "June 2016",
+                "published": "2016-07-01T08:30:15Z",
+                "image": {
+                    "banner": {
+                        "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif",
+                        "alt": "",
+                        "source": {
+                            "mediaType": "image/jpeg",
+                            "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif/full/full/0/default.jpg",
+                            "filename": "an-image.jpg"
+                        },
+                        "size": {
+                            "width": 4194,
+                            "height": 4714
+                        }
+                    },
+                    "thumbnail": {
+                        "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif",
+                        "alt": "",
+                        "source": {
+                            "mediaType": "image/jpeg",
+                            "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif/full/full/0/default.jpg",
+                            "filename": "an-image.jpg"
+                        },
+                        "size": {
+                            "width": 4194,
+                            "height": 4714
+                        }
+                    }
+                },
+                "sources": [
+                    {
+                        "mediaType": "audio/mpeg",
+                        "uri": "https://nakeddiscovery.com/scripts/mp3s/audio/eLife_Podcast_16.06.mp3"
+                    }
+                ],
+                "chapters": [
+                    {
+                        "number": 1,
+                        "title": "Green drug factories",
+                        "time": 0,
+                        "content": [
+                            {
+                                "type": "research-article",
+                                "status": "vor",
+                                "id": "13664",
+                                "version": 1,
+                                "doi": "10.7554/eLife.13664",
+                                "authorLine": "Paulina Fuentes et al.",
+                                "title": "A new synthetic biology approach allows transfer of an entire metabolic pathway from a medicinal plant to a biomass crop",
+                                "stage": "published",
+                                "published": "2016-06-14T07:00:15Z",
+                                "statusDate": "2016-06-14T07:00:15Z",
+                                "volume": 5,
+                                "elocationId": "e13664"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "title": "<i>Tropical disease</i>",
+            "impactStatement": "Tropical disease",
+            "image": {
+                "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif",
+                "alt": "",
+                "source": {
+                    "mediaType": "image/jpeg",
+                    "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif/full/full/0/default.jpg",
+                    "filename": "an-image.jpg"
+                },
+                "size": {
+                    "width": 4194,
+                    "height": 4714
+                }
+            },
+            "item": {
+                "id": "1",
+                "title": "Tropical disease",
+                "published": "2015-09-16T11:19:26Z",
+                "image": {
+                    "banner": {
+                        "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif",
+                        "alt": "",
+                        "attribution": [
+                            "By some person."
+                        ],
+                        "source": {
+                            "mediaType": "image/jpeg",
+                            "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif/full/full/0/default.jpg",
+                            "filename": "an-image.jpg"
+                        },
+                        "size": {
+                            "width": 4194,
+                            "height": 4714
+                        }
+                    },
+                    "thumbnail": {
+                        "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif",
+                        "alt": "",
+                        "source": {
+                            "mediaType": "image/jpeg",
+                            "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif/full/full/0/default.jpg",
+                            "filename": "an-image.jpg"
+                        },
+                        "size": {
+                            "width": 4194,
+                            "height": 4714
+                        }
+                    }
+                },
+                "selectedCurator": {
+                    "id": "pjha",
+                    "type": {
+                        "id": "senior-editor",
+                        "label": "Senior Editor"
+                    },
+                    "name": {
+                        "preferred": "Prabhat Jha",
+                        "index": "Jha, Prabhat"
+                    }
+                },
+                "curators": [
+                    {
+                        "id": "pjha",
+                        "type": {
+                            "id": "senior-editor",
+                            "label": "Senior Editor"
+                        },
+                        "name": {
+                            "preferred": "Prabhat Jha",
+                            "index": "Jha, Prabhat"
+                        }
+                    }
+                ],
+                "content": [
+                    {
+                        "type": "research-article",
+                        "status": "poa",
+                        "id": "14107",
+                        "version": 1,
+                        "doi": "10.7554/eLife.14107",
+                        "authorLine": "Yongjian Huang et al.",
+                        "title": "Molecular basis for multimerization in the activation of the epidermal growth factor",
+                        "stage": "published",
+                        "published": "2016-03-28T00:00:00Z",
+                        "statusDate": "2016-03-28T00:00:00Z",
+                        "volume": 5,
+                        "elocationId": "e14107"
+                    }
+                ]
+            }
         }
     ]
 }
