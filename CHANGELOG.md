@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.12.0
+
+### Changed
+
+* include more examples of sample content in cover list
+
 ## 2.11.0
 
 ### Added

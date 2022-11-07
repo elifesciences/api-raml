@@ -90,14 +90,14 @@
             }
         },
         {
-            "title": "<i>Homo naledi</i>",
-            "impactStatement": "A new hominin species has been unearthed in the Dinaledi Chamber of the Rising Star cave system in the largest assemblage of a single species of hominins yet discovered in Africa.",
+            "title": "Ready to defend",
+            "impactStatement": "Roundworms can anticipate and prepare for the presence of dangerous peroxides in their environment using temperature as an indicator.",
             "image": {
-                "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif",
+                "uri": "https://iiif.elifesciences.org/digests/78941%2Fdigest-78941.jpg",
                 "alt": "",
                 "source": {
                     "mediaType": "image/jpeg",
-                    "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif/full/full/0/default.jpg",
+                    "uri": "https://iiif.elifesciences.org/digests/78941%2Fdigest-78941.jpg/full/full/0/default.jpg",
                     "filename": "an-image.jpg"
                 },
                 "size": {
@@ -107,47 +107,42 @@
             },
             "item": {
                 "status": "poa",
-                "id": "09560",
+                "id": "78941",
                 "version": 1,
                 "type": "research-article",
-                "doi": "10.7554/eLife.09560",
-                "authorLine": "Lee R Berger et al.",
-                "title": "<i>Homo naledi</i>, a new species of the genus <i>Homo</i> from the Dinaledi Chamber, South Africa",
-                "stage": "published",
-                "published": "2015-09-10T00:00:00Z",
-                "statusDate": "2015-09-10T00:00:00Z",
-                "volume": 4,
-                "elocationId": "e09560",
-                "pdf": "https://elifesciences.org/content/4/e09560.pdf",
+                "doi": "10.7554/eLife.78941",
+                "authorLine": "Francesco A Servello, Rute Fernandes ... Javier Apfeld",
+                "title": "Neuronal temperature perception induces specific defenses that enable C. elegans to cope with the enhanced reactivity of hydrogen peroxide at high temperature",
+                "published": "2022-10-13T00:00:00Z",
+                "versionDate": "2022-10-13T00:00:00Z",
+                "volume": 11,
+                "elocationId": "e78941",
+                "pdf": "https://cdn.elifesciences.org/articles/78941/elife-78941-v1.pdf",
                 "subjects": [
                     {
-                        "id": "genomics-evolutionary-biology",
-                        "name": "Genomics and Evolutionary Biology"
+                        "id": "developmental-biology",
+                        "name": "Developmental Biology"
+                    },
+                    {
+                        "id": "neuroscience",
+                        "name": "Neuroscience"
                     }
                 ],
-                "image": {
-                    "thumbnail": {
-                        "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif",
-                        "alt": "",
-                        "source": {
-                            "mediaType": "image/jpeg",
-                            "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif/full/full/0/default.jpg",
-                            "filename": "an-image.jpg"
-                        },
-                        "size": {
-                            "width": 4194,
-                            "height": 4714
-                        },
-                        "focalPoint": {
-                            "x": 25,
-                            "y": 75
-                        }
-                    }
-                }
+                "researchOrganisms": [
+                    "<i>C. elegans</i>",
+                    "<i>E. coli</i>"
+                ],
+                "copyright": {
+                    "license": "CC-BY-4.0",
+                    "holder": "Servello et al.",
+                    "statement": "This article is distributed under the terms of the <a href=\"http://creativecommons.org/licenses/by/4.0/\">Creative Commons Attribution License</a> permitting unrestricted use and redistribution provided that the original author and source are credited."
+                },
+                "stage": "published",
+                "statusDate": "2022-10-13T00:00:00Z"
             }
         },
         {
-            "title": "<i>Infection, statistics and public health</i>",
+            "title": "Infection, statistics and public health",
             "impactStatement": "What attracted you to studying epidemiology?",
             "image": {
                 "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif",
@@ -177,8 +172,8 @@
             }
         },
         {
-            "title": "<i>Green drug factories</i>",
-            "impactStatement": "Podcast - Green drug factories ",
+            "title": "Green drug factories",
+            "impactStatement": "Podcast - Green drug factories",
             "image": {
                 "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif",
                 "alt": "",
@@ -230,29 +225,6 @@
                         "mediaType": "audio/mpeg",
                         "uri": "https://nakeddiscovery.com/scripts/mp3s/audio/eLife_Podcast_16.06.mp3"
                     }
-                ],
-                "chapters": [
-                    {
-                        "number": 1,
-                        "title": "Green drug factories",
-                        "time": 0,
-                        "content": [
-                            {
-                                "type": "research-article",
-                                "status": "vor",
-                                "id": "13664",
-                                "version": 1,
-                                "doi": "10.7554/eLife.13664",
-                                "authorLine": "Paulina Fuentes et al.",
-                                "title": "A new synthetic biology approach allows transfer of an entire metabolic pathway from a medicinal plant to a biomass crop",
-                                "stage": "published",
-                                "published": "2016-06-14T07:00:15Z",
-                                "statusDate": "2016-06-14T07:00:15Z",
-                                "volume": 5,
-                                "elocationId": "e13664"
-                            }
-                        ]
-                    }
                 ]
             }
         },
@@ -277,23 +249,8 @@
                 "id": "1",
                 "title": "Tropical disease",
                 "published": "2015-09-16T11:19:26Z",
+                "updated": "2015-09-16T11:19:26Z",
                 "image": {
-                    "banner": {
-                        "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif",
-                        "alt": "",
-                        "attribution": [
-                            "By some person."
-                        ],
-                        "source": {
-                            "mediaType": "image/jpeg",
-                            "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif/full/full/0/default.jpg",
-                            "filename": "an-image.jpg"
-                        },
-                        "size": {
-                            "width": 4194,
-                            "height": 4714
-                        }
-                    },
                     "thumbnail": {
                         "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif",
                         "alt": "",
@@ -305,6 +262,10 @@
                         "size": {
                             "width": 4194,
                             "height": 4714
+                        },
+                        "focalPoint": {
+                            "x": 25,
+                            "y": 75
                         }
                     }
                 },
@@ -317,37 +278,9 @@
                     "name": {
                         "preferred": "Prabhat Jha",
                         "index": "Jha, Prabhat"
-                    }
-                },
-                "curators": [
-                    {
-                        "id": "pjha",
-                        "type": {
-                            "id": "senior-editor",
-                            "label": "Senior Editor"
-                        },
-                        "name": {
-                            "preferred": "Prabhat Jha",
-                            "index": "Jha, Prabhat"
-                        }
-                    }
-                ],
-                "content": [
-                    {
-                        "type": "research-article",
-                        "status": "poa",
-                        "id": "14107",
-                        "version": 1,
-                        "doi": "10.7554/eLife.14107",
-                        "authorLine": "Yongjian Huang et al.",
-                        "title": "Molecular basis for multimerization in the activation of the epidermal growth factor",
-                        "stage": "published",
-                        "published": "2016-03-28T00:00:00Z",
-                        "statusDate": "2016-03-28T00:00:00Z",
-                        "volume": 5,
-                        "elocationId": "e14107"
-                    }
-                ]
+                    },
+                    "etAl": true
+                }
             }
         }
     ]
