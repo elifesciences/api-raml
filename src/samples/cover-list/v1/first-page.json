@@ -1,5 +1,5 @@
 {
-    "total": 4,
+    "total": 6,
     "items": [
         {
             "title": "Media coverage: Slime can see",
@@ -163,6 +163,7 @@
                 }
             },
             "item": {
+                "type": "interview",
                 "id": "2",
                 "interviewee": {
                     "name": {
@@ -203,6 +204,7 @@
                 }
             },
             "item": {
+                "type": "podcast-episode",
                 "number": 30,
                 "title": "June 2016",
                 "published": "2016-07-01T08:30:15Z",
@@ -282,6 +284,7 @@
                 }
             },
             "item": {
+                "type": "collection",
                 "id": "1",
                 "title": "Tropical disease",
                 "published": "2015-09-16T11:19:26Z",
