@@ -1,5 +1,5 @@
 {
-    "total": 4,
+    "total": 6,
     "items": [
         {
             "title": "Media coverage: Slime can see",
@@ -86,6 +86,200 @@
                             "y": 75
                         }
                     }
+                }
+            }
+        },
+        {
+            "title": "Ready to defend",
+            "impactStatement": "Roundworms can anticipate and prepare for the presence of dangerous peroxides in their environment using temperature as an indicator.",
+            "image": {
+                "uri": "https://iiif.elifesciences.org/digests/78941%2Fdigest-78941.jpg",
+                "alt": "",
+                "source": {
+                    "mediaType": "image/jpeg",
+                    "uri": "https://iiif.elifesciences.org/digests/78941%2Fdigest-78941.jpg/full/full/0/default.jpg",
+                    "filename": "an-image.jpg"
+                },
+                "size": {
+                    "width": 4194,
+                    "height": 4714
+                }
+            },
+            "item": {
+                "status": "poa",
+                "id": "78941",
+                "version": 1,
+                "type": "research-article",
+                "doi": "10.7554/eLife.78941",
+                "authorLine": "Francesco A Servello, Rute Fernandes ... Javier Apfeld",
+                "title": "Neuronal temperature perception induces specific defenses that enable C. elegans to cope with the enhanced reactivity of hydrogen peroxide at high temperature",
+                "published": "2022-10-13T00:00:00Z",
+                "versionDate": "2022-10-13T00:00:00Z",
+                "volume": 11,
+                "elocationId": "e78941",
+                "pdf": "https://cdn.elifesciences.org/articles/78941/elife-78941-v1.pdf",
+                "subjects": [
+                    {
+                        "id": "developmental-biology",
+                        "name": "Developmental Biology"
+                    },
+                    {
+                        "id": "neuroscience",
+                        "name": "Neuroscience"
+                    }
+                ],
+                "researchOrganisms": [
+                    "<i>C. elegans</i>",
+                    "<i>E. coli</i>"
+                ],
+                "copyright": {
+                    "license": "CC-BY-4.0",
+                    "holder": "Servello et al.",
+                    "statement": "This article is distributed under the terms of the <a href=\"http://creativecommons.org/licenses/by/4.0/\">Creative Commons Attribution License</a> permitting unrestricted use and redistribution provided that the original author and source are credited."
+                },
+                "stage": "published",
+                "statusDate": "2022-10-13T00:00:00Z"
+            }
+        },
+        {
+            "title": "Infection, statistics and public health",
+            "impactStatement": "What attracted you to studying epidemiology?",
+            "image": {
+                "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif",
+                "alt": "",
+                "source": {
+                    "mediaType": "image/jpeg",
+                    "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif/full/full/0/default.jpg",
+                    "filename": "an-image.jpg"
+                },
+                "size": {
+                    "width": 4194,
+                    "height": 4714
+                }
+            },
+            "item": {
+                "type": "interview",
+                "id": "2",
+                "interviewee": {
+                    "name": {
+                        "preferred": "Alicia Rosello",
+                        "index": "Rosello, Alicia"
+                    }
+                },
+                "title": "Infection, statistics and public health",
+                "impactStatement": "Infection, statistics and public health",
+                "published": "2015-11-03T11:00:53Z"
+            }
+        },
+        {
+            "title": "Green drug factories",
+            "impactStatement": "Podcast - Green drug factories",
+            "image": {
+                "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif",
+                "alt": "",
+                "source": {
+                    "mediaType": "image/jpeg",
+                    "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif/full/full/0/default.jpg",
+                    "filename": "an-image.jpg"
+                },
+                "size": {
+                    "width": 4194,
+                    "height": 4714
+                }
+            },
+            "item": {
+                "type": "podcast-episode",
+                "number": 30,
+                "title": "June 2016",
+                "published": "2016-07-01T08:30:15Z",
+                "image": {
+                    "banner": {
+                        "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif",
+                        "alt": "",
+                        "source": {
+                            "mediaType": "image/jpeg",
+                            "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif/full/full/0/default.jpg",
+                            "filename": "an-image.jpg"
+                        },
+                        "size": {
+                            "width": 4194,
+                            "height": 4714
+                        }
+                    },
+                    "thumbnail": {
+                        "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif",
+                        "alt": "",
+                        "source": {
+                            "mediaType": "image/jpeg",
+                            "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif/full/full/0/default.jpg",
+                            "filename": "an-image.jpg"
+                        },
+                        "size": {
+                            "width": 4194,
+                            "height": 4714
+                        }
+                    }
+                },
+                "sources": [
+                    {
+                        "mediaType": "audio/mpeg",
+                        "uri": "https://nakeddiscovery.com/scripts/mp3s/audio/eLife_Podcast_16.06.mp3"
+                    }
+                ]
+            }
+        },
+        {
+            "title": "<i>Tropical disease</i>",
+            "impactStatement": "Tropical disease",
+            "image": {
+                "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif",
+                "alt": "",
+                "source": {
+                    "mediaType": "image/jpeg",
+                    "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif/full/full/0/default.jpg",
+                    "filename": "an-image.jpg"
+                },
+                "size": {
+                    "width": 4194,
+                    "height": 4714
+                }
+            },
+            "item": {
+                "type": "collection",
+                "id": "1",
+                "title": "Tropical disease",
+                "published": "2015-09-16T11:19:26Z",
+                "updated": "2015-09-16T11:19:26Z",
+                "image": {
+                    "thumbnail": {
+                        "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif",
+                        "alt": "",
+                        "source": {
+                            "mediaType": "image/jpeg",
+                            "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif/full/full/0/default.jpg",
+                            "filename": "an-image.jpg"
+                        },
+                        "size": {
+                            "width": 4194,
+                            "height": 4714
+                        },
+                        "focalPoint": {
+                            "x": 25,
+                            "y": 75
+                        }
+                    }
+                },
+                "selectedCurator": {
+                    "id": "pjha",
+                    "type": {
+                        "id": "senior-editor",
+                        "label": "Senior Editor"
+                    },
+                    "name": {
+                        "preferred": "Prabhat Jha",
+                        "index": "Jha, Prabhat"
+                    },
+                    "etAl": true
                 }
             }
         }
