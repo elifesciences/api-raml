@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.13.0
+
+### Changed
+
+* Remove unnecessary fields from covers-list samples
+
 ## 2.12.0
 
 ### Changed
