@@ -132,11 +132,6 @@
                     "<i>C. elegans</i>",
                     "<i>E. coli</i>"
                 ],
-                "copyright": {
-                    "license": "CC-BY-4.0",
-                    "holder": "Servello et al.",
-                    "statement": "This article is distributed under the terms of the <a href=\"http://creativecommons.org/licenses/by/4.0/\">Creative Commons Attribution License</a> permitting unrestricted use and redistribution provided that the original author and source are credited."
-                },
                 "stage": "published",
                 "statusDate": "2022-10-13T00:00:00Z"
             }
@@ -193,19 +188,6 @@
                 "title": "June 2016",
                 "published": "2016-07-01T08:30:15Z",
                 "image": {
-                    "banner": {
-                        "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif",
-                        "alt": "",
-                        "source": {
-                            "mediaType": "image/jpeg",
-                            "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif/full/full/0/default.jpg",
-                            "filename": "an-image.jpg"
-                        },
-                        "size": {
-                            "width": 4194,
-                            "height": 4714
-                        }
-                    },
                     "thumbnail": {
                         "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif",
                         "alt": "",
