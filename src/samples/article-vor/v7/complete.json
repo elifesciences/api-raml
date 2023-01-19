@@ -1732,9 +1732,123 @@
             "filename": "elife-00569-supp1-v1.xlsx"
         }
     ],
+    "editorEvaluation": {
+        "id": "sa0",
+        "doi": "10.7554/eLife.09560.sa0",
+        "content": [
+            {
+                "type": "paragraph",
+                "text": "Collagen is a major component of extracellular matrix. The authors have identified a high-affinity inhibitory collagen receptor LAIR-1 and a soluble decoy receptor LAIR-2 (with even higher binding affinity to collagen), which can be therapeutically targeted to block tumor progression. Dr Meyaard and colleagues have also generated a dimeric LAIR-2 human IgG1 Fc fusion protein NC410 for therapeutic use. With humanized mouse models engrafted with functional human immune systems (PBMC), they have explored the anti-cancer efficacy of NC410 and revealed its impact on modulating immune responses. Furthermore, they extended this study to identify biomarkers of predictive value for NC410-based anti-cancer therapy."
+            }
+        ],
+        "scietyUri": "https://sciety.org/articles/activity/10.1101/2020.11.21.391326"
+    },
+    "elifeAssessment": {
+        "id": "sa0",
+        "doi": "10.7554/eLife.09560.sa00",
+        "content": [
+            {
+                "type": "paragraph",
+                "text": "Collagen is a major component of extracellular matrix. The authors have identified a high-affinity inhibitory collagen receptor LAIR-1 and a soluble decoy receptor LAIR-2 (with even higher binding affinity to collagen), which can be therapeutically targeted to block tumor progression. Dr Meyaard and colleagues have also generated a dimeric LAIR-2 human IgG1 Fc fusion protein NC410 for therapeutic use. With humanized mouse models engrafted with functional human immune systems (PBMC), they have explored the anti-cancer efficacy of NC410 and revealed its impact on modulating immune responses. Furthermore, they extended this study to identify biomarkers of predictive value for NC410-based anti-cancer therapy."
+            }
+        ],
+        "scietyUri": "https://sciety.org/articles/activity/10.1101/2020.11.21.391326"
+    },
     "decisionLetter": {
         "id": "SA1",
         "doi": "10.7554/eLife.09560.030",
+        "description": [
+            {
+                "type": "paragraph",
+                "text": "eLife posts the editorial decision letter and author response on a selection of the published articles (subject to the approval of the authors). An edited version of the letter sent to the authors after peer review is shown, indicating the substantive concerns or comments; minor concerns are not usually shown. Reviewers have the opportunity to discuss the decision before the letter is sent. Similarly, the author response typically shows only responses to the major concerns raised by the reviewers."
+            }
+        ],
+        "content": [
+            {
+                "type": "paragraph",
+                "text": "Thank you for submitting your work entitled “A new species of the genus <i>Homo</i> from the Dinaledi Chamber, South Africa” for peer review at <i>eLife</i>."
+            },
+            {
+                "type": "box",
+                "title": "Box 2",
+                "content": [
+                    {
+                        "type": "paragraph",
+                        "text": "Your submission has been favorably evaluated by Ian Baldwin (Senior editor), two guest Reviewing editors (Johannes Krause and Nicholas Conard), and two peer reviewers. One of the two peer reviewers, Chris Stringer, has agreed to share his identity, and Johannes Krause has drafted this decision to help you prepare a revised submission."
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "text": "The authors describe a large collection of recently discovered hominin fossils from the Dinaledi Chamber in the Rising Star cave system in South Africa. Based on their initial assessment they argue that the fossil remains derive from a single homogenous hominin group and present a new taxon that they call <i>Homo naledi</i>."
+            }
+        ]
+    },
+    "publicReviews": [
+        {
+            "id": "SA21",
+            "doi": "10.7554/eLife.09560.230",
+            "description": [
+                {
+                    "type": "paragraph",
+                    "text": "eLife posts the editorial decision letter and author response on a selection of the published articles (subject to the approval of the authors). An edited version of the letter sent to the authors after peer review is shown, indicating the substantive concerns or comments; minor concerns are not usually shown. Reviewers have the opportunity to discuss the decision before the letter is sent. Similarly, the author response typically shows only responses to the major concerns raised by the reviewers."
+                }
+            ],
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Thank you for submitting your work entitled “A new species of the genus <i>Homo</i> from the Dinaledi Chamber, South Africa” for peer review at <i>eLife</i>."
+                },
+                {
+                    "type": "box",
+                    "title": "Box 2",
+                    "content": [
+                        {
+                            "type": "paragraph",
+                            "text": "Your submission has been favorably evaluated by Ian Baldwin (Senior editor), two guest Reviewing editors (Johannes Krause and Nicholas Conard), and two peer reviewers. One of the two peer reviewers, Chris Stringer, has agreed to share his identity, and Johannes Krause has drafted this decision to help you prepare a revised submission."
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The authors describe a large collection of recently discovered hominin fossils from the Dinaledi Chamber in the Rising Star cave system in South Africa. Based on their initial assessment they argue that the fossil remains derive from a single homogenous hominin group and present a new taxon that they call <i>Homo naledi</i>."
+                }
+            ]
+        },
+        {
+            "id": "SA22",
+            "doi": "10.7554/eLife.09560.330",
+            "description": [
+                {
+                    "type": "paragraph",
+                    "text": "eLife posts the editorial decision letter and author response on a selection of the published articles (subject to the approval of the authors). An edited version of the letter sent to the authors after peer review is shown, indicating the substantive concerns or comments; minor concerns are not usually shown. Reviewers have the opportunity to discuss the decision before the letter is sent. Similarly, the author response typically shows only responses to the major concerns raised by the reviewers."
+                }
+            ],
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Thank you for submitting your work entitled “A new species of the genus <i>Homo</i> from the Dinaledi Chamber, South Africa” for peer review at <i>eLife</i>."
+                },
+                {
+                    "type": "box",
+                    "title": "Box 2",
+                    "content": [
+                        {
+                            "type": "paragraph",
+                            "text": "Your submission has been favorably evaluated by Ian Baldwin (Senior editor), two guest Reviewing editors (Johannes Krause and Nicholas Conard), and two peer reviewers. One of the two peer reviewers, Chris Stringer, has agreed to share his identity, and Johannes Krause has drafted this decision to help you prepare a revised submission."
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The authors describe a large collection of recently discovered hominin fossils from the Dinaledi Chamber in the Rising Star cave system in South Africa. Based on their initial assessment they argue that the fossil remains derive from a single homogenous hominin group and present a new taxon that they call <i>Homo naledi</i>."
+                }
+            ]
+        }
+    ],
+    "recommendationForTheAuthors": {
+        "id": "SA11",
+        "doi": "10.7554/eLife.09560.130",
         "description": [
             {
                 "type": "paragraph",

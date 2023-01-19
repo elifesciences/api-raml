@@ -1,5 +1,16 @@
 # Changelog
 
+## 2.14.0
+
+### Changed
+
+* bumps `application/vnd.elife.article-vor+json` from `version=6` to `version=7` in the API
+    - version 7 article-vor responses may contain elifeAssessment, recommendationsForTheAuthors and publicReviews
+
+### Removed
+
+* removed support for article-vor-v7
+
 ## 2.13.0
 
 ### Changed
