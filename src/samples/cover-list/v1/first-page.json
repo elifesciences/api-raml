@@ -1,5 +1,5 @@
 {
-    "total": 7,
+    "total": 8,
     "items": [
         {
             "title": "Aging-related iron deposit",
@@ -34,6 +34,37 @@
                     {
                         "id": "cell-biology",
                         "name": "Cell Biology"
+                    }
+                ]
+            }
+        },
+        {
+            "title": "Females react differently than males to social isolation",
+            "impactStatement": "While male and female mice have similar responses to physical stress, research from the Hotchkiss Brain Institute at the University of Calgary, Canada, suggests females, not males, feel stressed when alone.",
+            "image": {
+                "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif",
+                "alt": "",
+                "source": {
+                    "mediaType": "image/jpeg",
+                    "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif/full/full/0/default.jpg",
+                    "filename": "an-image.jpg"
+                },
+                "size": {
+                    "width": 4194,
+                    "height": 4714
+                }
+            },
+            "item": {
+                "type": "press-package",
+                "id": "1",
+                "title": "Females react differently than males to social isolation",
+                "impactStatement": "While male and female mice have similar responses to physical stress, research from the Hotchkiss Brain Institute at the University of Calgary, Canada, suggests females, not males, feel stressed when alone.",
+                "published": "2016-10-11T17:00:00Z",
+                "updated": "2016-10-11T17:00:00Z",
+                "subjects": [
+                    {
+                        "id": "neuroscience",
+                        "name": "Neuroscience"
                     }
                 ]
             }

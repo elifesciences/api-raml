@@ -73,6 +73,13 @@ properties:
                                             enum:
                                               - reviewed-preprint
                                   - $ref: ../snippets/reviewed-preprint.v1.yaml
+                              - allOf:
+                                  - properties:
+                                        type:
+                                            type: string
+                                            enum:
+                                              - press-package
+                                  - $ref: ../snippets/press-package.v1.yaml
             required:
               - title
               - image
