@@ -4,7 +4,7 @@
 
 ### Added
 
-* added support for reviewed preprints, press packages and events in covers
+* add support for reviewed preprints, press packages and events in covers
 
 ## 2.13.0
 
