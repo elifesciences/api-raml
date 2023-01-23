@@ -1744,6 +1744,7 @@
         "scietyUri": "https://sciety.org/articles/activity/10.1101/2020.11.21.391326"
     },
     "elifeAssessment": {
+        "title": "eLife assessment",
         "id": "sa0",
         "doi": "10.7554/eLife.09560.sa00",
         "content": [
@@ -1786,14 +1787,9 @@
     },
     "publicReviews": [
         {
+            "title": "Reviewer #1 (public review)",
             "id": "SA21",
             "doi": "10.7554/eLife.09560.230",
-            "description": [
-                {
-                    "type": "paragraph",
-                    "text": "eLife posts the editorial decision letter and author response on a selection of the published articles (subject to the approval of the authors). An edited version of the letter sent to the authors after peer review is shown, indicating the substantive concerns or comments; minor concerns are not usually shown. Reviewers have the opportunity to discuss the decision before the letter is sent. Similarly, the author response typically shows only responses to the major concerns raised by the reviewers."
-                }
-            ],
             "content": [
                 {
                     "type": "paragraph",
@@ -1816,14 +1812,9 @@
             ]
         },
         {
+            "title": "Reviewer #2 (public review)",
             "id": "SA22",
             "doi": "10.7554/eLife.09560.330",
-            "description": [
-                {
-                    "type": "paragraph",
-                    "text": "eLife posts the editorial decision letter and author response on a selection of the published articles (subject to the approval of the authors). An edited version of the letter sent to the authors after peer review is shown, indicating the substantive concerns or comments; minor concerns are not usually shown. Reviewers have the opportunity to discuss the decision before the letter is sent. Similarly, the author response typically shows only responses to the major concerns raised by the reviewers."
-                }
-            ],
             "content": [
                 {
                     "type": "paragraph",
@@ -1846,15 +1837,10 @@
             ]
         }
     ],
-    "recommendationForTheAuthors": {
+    "recommendationForAuthors": {
+        "title": "Recommendations for authors",
         "id": "SA11",
         "doi": "10.7554/eLife.09560.130",
-        "description": [
-            {
-                "type": "paragraph",
-                "text": "eLife posts the editorial decision letter and author response on a selection of the published articles (subject to the approval of the authors). An edited version of the letter sent to the authors after peer review is shown, indicating the substantive concerns or comments; minor concerns are not usually shown. Reviewers have the opportunity to discuss the decision before the letter is sent. Similarly, the author response typically shows only responses to the major concerns raised by the reviewers."
-            }
-        ],
         "content": [
             {
                 "type": "paragraph",

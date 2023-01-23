@@ -5,11 +5,11 @@
 ### Changed
 
 * bumps `application/vnd.elife.article-vor+json` from `version=6` to `version=7` in the API
-    - version 7 article-vor responses may contain elifeAssessment, recommendationsForTheAuthors and publicReviews
+    - version 7 article-vor responses may contain elifeAssessment, recommendationsForAuthors and publicReviews
 
 ### Removed
 
-* removed support for article-vor-v7
+* removed support for deprecated `application/vnd.elife.article-vor+json;version=5`
 
 ## 2.13.0
 

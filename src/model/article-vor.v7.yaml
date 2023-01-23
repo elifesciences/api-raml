@@ -86,6 +86,10 @@ allOf:
         elifeAssessment:
             type: object
             properties:
+                title:
+                    title: Text
+                    type: string
+                    minLength: 1
                 id:
                     $ref: ../misc/html-id.v1.yaml
                 doi:
@@ -100,6 +104,7 @@ allOf:
                     type: string
                     format: uri
             required:
+              - title    
               - content
         decisionLetter:
             type: object
@@ -121,25 +126,24 @@ allOf:
             required:
               - description
               - content
-        recommendationForTheAuthors:
+        recommendationForAuthors:
             type: object
             properties:
+                title:
+                    title: Text
+                    type: string
+                    minLength: 1
                 id:
                     $ref: ../misc/html-id.v1.yaml
                 doi:
                     $ref: ../misc/doi.v1.yaml
-                description:
-                    type: array
-                    items:
-                        $ref: ../blocks/paragraph.v1.yaml
-                    minItems: 1
                 content:
                     type: array
                     items:
                         $ref: ../misc/blocks-all.v2.yaml
                     minItems: 1
             required:
-              - description
+              - title
               - content
         authorResponse:
             type: object
@@ -160,22 +164,21 @@ allOf:
             items:
                 type: object
                 properties:
+                    title:
+                        title: Text
+                        type: string
+                        minLength: 1
                     id:
                         $ref: ../misc/html-id.v1.yaml
                     doi:
                         $ref: ../misc/doi.v1.yaml
-                    description:
-                        type: array
-                        items:
-                            $ref: ../blocks/paragraph.v1.yaml
-                        minItems: 1
                     content:
                         type: array
                         items:
                             $ref: ../misc/blocks-all.v2.yaml
                         minItems: 1
                 required:
-                  - description
+                  - title
                   - content
                 minItems: 1
     required:
