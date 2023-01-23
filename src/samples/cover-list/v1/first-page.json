@@ -39,6 +39,35 @@
             }
         },
         {
+            "title": "Changing peer review in cancer research: a seminar at Fred Hutch",
+            "impactStatement": "How eLife is influencing the culture of peer review",
+            "image": {
+                "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif",
+                "alt": "",
+                "source": {
+                    "mediaType": "image/jpeg",
+                    "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif/full/full/0/default.jpg",
+                    "filename": "an-image.jpg"
+                },
+                "size": {
+                    "width": 4194,
+                    "height": 4714
+                }
+            },
+            "item": {
+                "type": "event",
+                "id": "4",
+                "title": "Changing peer review in cancer research: a seminar at Fred Hutch",
+                "impactStatement": "How eLife is influencing the culture of peer review",
+                "published": "2016-08-01T00:00:00Z",
+                "updated": "2016-08-02T00:00:00Z",
+                "starts": "2016-04-22T20:00:00Z",
+                "ends": "2016-04-22T21:00:00Z",
+                "uri": "https://crm.elifesciences.org/crm/civicrm/event/info?reset=1&id=27",
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
             "title": "Females react differently than males to social isolation",
             "impactStatement": "While male and female mice have similar responses to physical stress, research from the Hotchkiss Brain Institute at the University of Calgary, Canada, suggests females, not males, feel stressed when alone.",
             "image": {

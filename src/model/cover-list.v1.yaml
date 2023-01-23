@@ -80,6 +80,13 @@ properties:
                                             enum:
                                               - press-package
                                   - $ref: ../snippets/press-package.v1.yaml
+                              - allOf:
+                                  - properties:
+                                        type:
+                                            type: string
+                                            enum:
+                                              - event
+                                  - $ref: ../snippets/event.v1.yaml
             required:
               - title
               - image
