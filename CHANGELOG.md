@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.14.0
+
+### Added
+
+* added support for reviewed preprints, press packages and events in covers
+
 ## 2.13.0
 
 ### Changed
