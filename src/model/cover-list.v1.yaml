@@ -66,6 +66,13 @@ properties:
                                             enum:
                                               - podcast-episode
                                   - $ref: ../snippets/podcast-episode.v1.yaml
+                              - allOf:
+                                  - properties:
+                                        type:
+                                            type: string
+                                            enum:
+                                              - reviewed-preprint
+                                  - $ref: ../snippets/reviewed-preprint.v1.yaml
             required:
               - title
               - image

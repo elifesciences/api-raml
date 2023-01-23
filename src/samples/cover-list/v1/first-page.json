@@ -1,6 +1,43 @@
 {
-    "total": 6,
+    "total": 7,
     "items": [
+        {
+            "title": "Aging-related iron deposit",
+            "impactStatement": "Aging-related iron deposit prevents the benefits of HRT from late postmenopausal atherosclerosis",
+            "image": {
+                "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif",
+                "alt": "",
+                "source": {
+                    "mediaType": "image/jpeg",
+                    "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif/full/full/0/default.jpg",
+                    "filename": "an-image.jpg"
+                },
+                "size": {
+                    "width": 4194,
+                    "height": 4714
+                }
+            },
+            "item": {
+                "type": "reviewed-preprint",
+                "id": "80494",
+                "doi": "10.1101/2022.06.24.497502",
+                "pdf": "https://www.biorxiv.org/content/10.1101/2022.06.24.497502v1.full.pdf",
+                "status": "reviewed",
+                "authorLine": "Tianze Xu, Jing Cai ... Kuanyu Li",
+                "title": "Aging-related iron deposit prevents the benefits of HRT from late postmenopausal atherosclerosis",
+                "stage": "published",
+                "published": "2022-10-20T03:00:00Z",
+                "reviewedDate": "2022-10-20T03:00:00Z",
+                "versionDate": "2022-10-20T03:00:00Z",
+                "statusDate": "2022-10-20T03:00:00Z",
+                "subjects": [
+                    {
+                        "id": "cell-biology",
+                        "name": "Cell Biology"
+                    }
+                ]
+            }
+        },
         {
             "title": "Media coverage: Slime can see",
             "impactStatement": "In their research paper – Cyanobacteria use micro-optics to sense light direction",
