@@ -293,7 +293,7 @@
                                                         ]
                                                     },
                                                     "id": {
-                                                        "$ref": "#/allOf/2/properties/decisionLetter/properties/id"
+                                                        "$ref": "#/allOf/2/properties/editorEvaluation/properties/id"
                                                     },
                                                     "title": {
                                                         "title": "Text",
@@ -723,7 +723,7 @@
                                         "type": "object",
                                         "properties": {
                                             "id": {
-                                                "$ref": "#/allOf/2/properties/decisionLetter/properties/id"
+                                                "$ref": "#/allOf/2/properties/editorEvaluation/properties/id"
                                             },
                                             "date": {
                                                 "$ref": "#/allOf/2/properties/references/items/allOf/0/properties/date"
@@ -813,7 +813,7 @@
                                         "type": "object",
                                         "properties": {
                                             "id": {
-                                                "$ref": "#/allOf/2/properties/decisionLetter/properties/id"
+                                                "$ref": "#/allOf/2/properties/editorEvaluation/properties/id"
                                             },
                                             "source": {
                                                 "allOf": [
@@ -933,7 +933,7 @@
                                                                     ]
                                                                 },
                                                                 "id": {
-                                                                    "$ref": "#/allOf/2/properties/decisionLetter/properties/id"
+                                                                    "$ref": "#/allOf/2/properties/editorEvaluation/properties/id"
                                                                 },
                                                                 "label": {
                                                                     "type": "string"
@@ -961,7 +961,7 @@
                                                                     ]
                                                                 },
                                                                 "id": {
-                                                                    "$ref": "#/allOf/2/properties/decisionLetter/properties/id"
+                                                                    "$ref": "#/allOf/2/properties/editorEvaluation/properties/id"
                                                                 },
                                                                 "tables": {
                                                                     "type": "array",
@@ -997,7 +997,7 @@
                                     {
                                         "properties": {
                                             "id": {
-                                                "$ref": "#/allOf/2/properties/decisionLetter/properties/id"
+                                                "$ref": "#/allOf/2/properties/editorEvaluation/properties/id"
                                             },
                                             "doi": {
                                                 "$ref": "#/allOf/0/allOf/0/properties/doi"
@@ -1110,7 +1110,7 @@
                                         ]
                                     },
                                     "id": {
-                                        "$ref": "#/allOf/2/properties/decisionLetter/properties/id"
+                                        "$ref": "#/allOf/2/properties/editorEvaluation/properties/id"
                                     },
                                     "title": {
                                         "title": "Text",
@@ -1151,7 +1151,7 @@
                                 "type": "object",
                                 "properties": {
                                     "id": {
-                                        "$ref": "#/allOf/2/properties/decisionLetter/properties/id"
+                                        "$ref": "#/allOf/2/properties/editorEvaluation/properties/id"
                                     },
                                     "type": {
                                         "type": "string"
@@ -1998,7 +1998,7 @@
                         "type": "object",
                         "properties": {
                             "id": {
-                                "$ref": "#/allOf/2/properties/decisionLetter/properties/id"
+                                "$ref": "#/allOf/2/properties/editorEvaluation/properties/id"
                             },
                             "doi": {
                                 "$ref": "#/allOf/0/allOf/0/properties/doi"
@@ -2173,7 +2173,7 @@
                                                                         {
                                                                             "properties": {
                                                                                 "id": {
-                                                                                    "$ref": "#/allOf/2/properties/decisionLetter/properties/id"
+                                                                                    "$ref": "#/allOf/2/properties/editorEvaluation/properties/id"
                                                                                 },
                                                                                 "type": {
                                                                                     "type": "string",
@@ -2197,7 +2197,7 @@
                                                                                         "type": "object",
                                                                                         "properties": {
                                                                                             "id": {
-                                                                                                "$ref": "#/allOf/2/properties/decisionLetter/properties/id"
+                                                                                                "$ref": "#/allOf/2/properties/editorEvaluation/properties/id"
                                                                                             },
                                                                                             "label": {
                                                                                                 "type": "string",
@@ -2380,7 +2380,7 @@
                                                     {
                                                         "properties": {
                                                             "id": {
-                                                                "$ref": "#/allOf/2/properties/decisionLetter/properties/id"
+                                                                "$ref": "#/allOf/2/properties/editorEvaluation/properties/id"
                                                             },
                                                             "type": {
                                                                 "type": "string",
@@ -2597,7 +2597,7 @@
                                                     {
                                                         "properties": {
                                                             "id": {
-                                                                "$ref": "#/allOf/2/properties/decisionLetter/properties/id"
+                                                                "$ref": "#/allOf/2/properties/editorEvaluation/properties/id"
                                                             },
                                                             "type": {
                                                                 "type": "string",
@@ -2724,7 +2724,7 @@
                                                 "$ref": "#/allOf/0/allOf/0/properties/doi"
                                             },
                                             "id": {
-                                                "$ref": "#/allOf/2/properties/decisionLetter/properties/id"
+                                                "$ref": "#/allOf/2/properties/editorEvaluation/properties/id"
                                             },
                                             "label": {
                                                 "title": "Label",
@@ -2765,7 +2765,7 @@
                     },
                     "minItems": 1
                 },
-                "decisionLetter": {
+                "editorEvaluation": {
                     "type": "object",
                     "properties": {
                         "id": {
@@ -2773,6 +2773,64 @@
                             "title": "HTML ID",
                             "type": "string",
                             "pattern": "^[^\\s]+$"
+                        },
+                        "doi": {
+                            "$ref": "#/allOf/0/allOf/0/properties/doi"
+                        },
+                        "content": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/allOf/2/properties/acknowledgements/items"
+                            },
+                            "minItems": 1
+                        },
+                        "scietyUri": {
+                            "title": "Related material URI",
+                            "type": "string",
+                            "format": "uri"
+                        }
+                    },
+                    "required": [
+                        "content"
+                    ]
+                },
+                "elifeAssessment": {
+                    "type": "object",
+                    "properties": {
+                        "title": {
+                            "title": "Text",
+                            "type": "string",
+                            "minLength": 1
+                        },
+                        "id": {
+                            "$ref": "#/allOf/2/properties/editorEvaluation/properties/id"
+                        },
+                        "doi": {
+                            "$ref": "#/allOf/0/allOf/0/properties/doi"
+                        },
+                        "content": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/allOf/2/properties/acknowledgements/items"
+                            },
+                            "minItems": 1
+                        },
+                        "scietyUri": {
+                            "title": "Related material URI",
+                            "type": "string",
+                            "format": "uri"
+                        }
+                    },
+                    "required": [
+                        "title",
+                        "content"
+                    ]
+                },
+                "decisionLetter": {
+                    "type": "object",
+                    "properties": {
+                        "id": {
+                            "$ref": "#/allOf/2/properties/editorEvaluation/properties/id"
                         },
                         "doi": {
                             "$ref": "#/allOf/0/allOf/0/properties/doi"
@@ -2797,11 +2855,38 @@
                         "content"
                     ]
                 },
+                "recommendationForAuthors": {
+                    "type": "object",
+                    "properties": {
+                        "title": {
+                            "title": "Text",
+                            "type": "string",
+                            "minLength": 1
+                        },
+                        "id": {
+                            "$ref": "#/allOf/2/properties/editorEvaluation/properties/id"
+                        },
+                        "doi": {
+                            "$ref": "#/allOf/0/allOf/0/properties/doi"
+                        },
+                        "content": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/allOf/2/properties/acknowledgements/items"
+                            },
+                            "minItems": 1
+                        }
+                    },
+                    "required": [
+                        "title",
+                        "content"
+                    ]
+                },
                 "authorResponse": {
                     "type": "object",
                     "properties": {
                         "id": {
-                            "$ref": "#/allOf/2/properties/decisionLetter/properties/id"
+                            "$ref": "#/allOf/2/properties/editorEvaluation/properties/id"
                         },
                         "doi": {
                             "$ref": "#/allOf/0/allOf/0/properties/doi"
@@ -2817,16 +2902,42 @@
                     "required": [
                         "content"
                     ]
+                },
+                "publicReviews": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "title": {
+                                "title": "Text",
+                                "type": "string",
+                                "minLength": 1
+                            },
+                            "id": {
+                                "$ref": "#/allOf/2/properties/editorEvaluation/properties/id"
+                            },
+                            "doi": {
+                                "$ref": "#/allOf/0/allOf/0/properties/doi"
+                            },
+                            "content": {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/allOf/2/properties/acknowledgements/items"
+                                },
+                                "minItems": 1
+                            }
+                        },
+                        "required": [
+                            "title",
+                            "content"
+                        ],
+                        "minItems": 1
+                    }
                 }
             },
             "required": [
                 "body"
-            ],
-            "dependencies": {
-                "authorResponse": [
-                    "decisionLetter"
-                ]
-            }
+            ]
         }
     ]
 }
