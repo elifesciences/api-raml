@@ -183,3 +183,14 @@ allOf:
                 minItems: 1
     required:
       - body
+    anyOf:
+      - dependencies:
+            authorResponse: [decisionLetter]
+      - dependencies:
+            authorResponse: [editorEvaluation]
+      - dependencies:
+            authorResponse: [elifeAssessment]
+      - dependencies:
+            authorResponse: [publicReviews]
+      - dependencies:
+            authorResponse: [recommendationsForAuthors]
