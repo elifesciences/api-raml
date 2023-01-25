@@ -126,7 +126,7 @@ allOf:
             required:
               - description
               - content
-        recommendationForAuthors:
+        recommendationsForAuthors:
             type: object
             properties:
                 title:
