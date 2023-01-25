@@ -180,7 +180,7 @@ allOf:
                 required:
                   - title
                   - content
-                minItems: 1
+            minItems: 1
     required:
       - body
     anyOf:
