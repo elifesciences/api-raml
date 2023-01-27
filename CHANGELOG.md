@@ -1,5 +1,22 @@
 # Changelog
 
+## 2.14.0
+
+### Added
+
+* introduce a new version to article-vor `application/vnd.elife.article-vor+json;version=7`
+    - version 7 article-vor responses may contain elifeAssessment, recommendationsForAuthors and publicReviews
+    - expanded the dependencies to expect any of the following if authorResponse is present:
+        - decisionLetter
+        - editorEvaluation
+        - elifeAssessment
+        - recommendationsForAuthors
+        - publicReviews
+
+### Removed
+
+* removed support for deprecated `application/vnd.elife.article-vor+json;version=5`
+
 ## 2.13.0
 
 ### Changed
