@@ -1,5 +1,12 @@
 # Changelog
 
+## 2.16.0
+
+### Changed
+
+* remove experimental flag from `application/vnd.elife.article-vor+json;version=7`
+* add deprecated flag to `application/vnd.elife.article-vor+json;version=6`
+
 ## 2.15.0
 
 ### Added
