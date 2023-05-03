@@ -8,6 +8,9 @@ properties:
     accepted:
         type: string
         format: date
+    sentForPeerReview:
+        type: string
+        format: date
     versions:
         description: List of article versions, sorted by version in descending order
         type: array
