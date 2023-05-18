@@ -8,7 +8,7 @@ properties:
     accepted:
         type: string
         format: date
-    sentForPeerReview:
+    sentForReview:
         type: string
         format: date
     versions:
