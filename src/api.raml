@@ -1601,27 +1601,7 @@ traits:
                     description: |
                         Press package.
                     body:
-                        application/vnd.elife.press-package+json;version=1:
-                            (deprecated):
-                            schema: !include ../dist/model/press-package.v1.json
-                            examples:
-                                minimum:
-                                    displayName: Minimum
-                                    value: !include samples/press-package/v1/minimum.json
-                                complete:
-                                    displayName: Complete
-                                    value: !include samples/press-package/v1/complete.json
-                        application/vnd.elife.press-package+json;version=2:
-                            schema: !include ../dist/model/press-package.v2.json
-                            examples:
-                                minimum:
-                                    displayName: Minimum
-                                    value: !include samples/press-package/v2/minimum.json
-                                complete:
-                                    displayName: Complete
-                                    value: !include samples/press-package/v2/complete.json
                         application/vnd.elife.press-package+json;version=3:
-                            (experimental):
                             schema: !include ../dist/model/press-package.v3.json
                             examples:
                                 minimum:
@@ -1630,6 +1610,16 @@ traits:
                                 complete:
                                     displayName: Complete
                                     value: !include samples/press-package/v3/complete.json
+                        application/vnd.elife.press-package+json;version=4:
+                            (experimental):
+                            schema: !include ../dist/model/press-package.v4.json
+                            examples:
+                                minimum:
+                                    displayName: Minimum
+                                    value: !include samples/press-package/v4/minimum.json
+                                complete:
+                                    displayName: Complete
+                                    value: !include samples/press-package/v4/complete.json
 
 /profiles:
     (experimental):
