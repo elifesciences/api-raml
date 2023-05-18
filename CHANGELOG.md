@@ -1,5 +1,20 @@
 # Changelog
 
+## 2.17.0
+
+### Added
+
+* add experimental support for reviewed preprints in press packages in `application/vnd.elife.press-package+json;version=4`
+
+### Changed
+
+* removed experimental flag from `application/vnd.elife.press-package+json;version=3`
+
+### Removed
+
+* removed support for `application/vnd.elife.press-package+json;version=1`
+* removed support for `application/vnd.elife.press-package+json;version=2`
+
 ## 2.16.0
 
 ### Changed
