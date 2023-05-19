@@ -1,6 +1,6 @@
 # Changelog
 
-## 2.17.0
+## 2.18.0
 
 ### Added
 
@@ -14,6 +14,12 @@
 
 * removed support for `application/vnd.elife.press-package+json;version=1`
 * removed experimental flag from `application/vnd.elife.press-package+json;version=3`
+
+## 2.17.0
+
+### Added
+
+* introduce optional `sentForReview` date to article history
 
 ## 2.16.0
 
