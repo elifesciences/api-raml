@@ -4,11 +4,18 @@ type: object
 allOf:
   - $ref: ../snippets/press-package.v1.yaml
   - properties:
+        image:
+            type: object
+            properties:
+                social:
+                    $ref: ../misc/image.v1.yaml
+            required:
+              - social
         content:
             description: Content
             type: array
             items:
-                $ref: ../misc/blocks-all.v1.yaml
+                $ref: ../misc/blocks-all.v2.yaml
             minItems: 1
         relatedContent:
             title: Related content
@@ -17,7 +24,18 @@ allOf:
                 oneOf:
                   - $ref: ../snippets/article-poa.v1.yaml
                   - $ref: ../snippets/article-vor.v1.yaml
-            minItems: 1
+                  - allOf:
+                      - type: object
+                        required:
+                          - type
+                      - oneOf:
+                          - allOf:
+                              - properties:
+                                  type:
+                                    type: string
+                                    enum:
+                                      - reviewed-preprint
+                              - $ref: ../snippets/reviewed-preprint.v1.yaml
             uniqueItems: true
         mediaContacts:
             title: Media contacts
@@ -47,4 +65,3 @@ allOf:
             minItems: 1
     required:
       - content
-      - relatedContent
