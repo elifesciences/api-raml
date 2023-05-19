@@ -11,6 +11,10 @@
             "type": "string",
             "format": "date"
         },
+        "sentForReview": {
+            "type": "string",
+            "format": "date"
+        },
         "versions": {
             "description": "List of article versions, sorted by version in descending order",
             "type": "array",
