@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.19.0
+
+### Removed
+
+* remove indexContent from snippet of reviewed preprint on press pack related content sample
+
 ## 2.18.0
 
 ### Added
