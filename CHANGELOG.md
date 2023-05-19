@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.20.0
+
+### Removed
+
+* remove copyright from article snippet in article history sample
+
 ## 2.19.0
 
 ### Removed
