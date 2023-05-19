@@ -8,12 +8,12 @@
 
 ### Changed
 
-* removed experimental flag from `application/vnd.elife.press-package+json;version=3`
+* introduce deprecated flag to `application/vnd.elife.press-package+json;version=2`
 
 ### Removed
 
 * removed support for `application/vnd.elife.press-package+json;version=1`
-* removed support for `application/vnd.elife.press-package+json;version=2`
+* removed experimental flag from `application/vnd.elife.press-package+json;version=3`
 
 ## 2.16.0
 
