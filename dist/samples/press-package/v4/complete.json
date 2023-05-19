@@ -4,6 +4,25 @@
     "impactStatement": "While male and female mice have similar responses to physical stress, research from the Hotchkiss Brain Institute at the University of Calgary, Canada, suggests females, not males, feel stressed when alone.",
     "published": "2016-10-11T17:00:00Z",
     "updated": "2016-10-12T17:00:00Z",
+    "image": {
+        "social": {
+            "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif",
+            "alt": "",
+            "source": {
+                "mediaType": "image/jpeg",
+                "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif/full/full/0/default.jpg",
+                "filename": "an-image.jpg"
+            },
+            "size": {
+                "width": 4194,
+                "height": 4714
+            },
+            "focalPoint": {
+                "x": 25,
+                "y": 75
+            }
+        }
+    },
     "content": [
         {
             "type": "paragraph",
@@ -36,6 +55,53 @@
             "statusDate": "2016-10-11T00:00:00Z",
             "volume": 5,
             "elocationId": "e18726"
+        },
+        {
+            "id": "19560",
+            "type": "reviewed-preprint",
+            "doi": "10.7554/eLife.19560",
+            "status": "reviewed",
+            "authorLine": "Lee R Berger et al.",
+            "title": "<i>Homo naledi</i>, a new species of the genus <i>Homo</i> from the Dinaledi Chamber, South Africa",
+            "indexContent": "<i>Homo naledi</i>, a new species of the genus <i>Homo</i> from the Dinaledi Chamber, South Africa",
+            "titlePrefix": "Title prefix",
+            "stage": "published",
+            "published": "2022-08-01T00:00:00Z",
+            "versionDate": "2022-08-01T00:00:00Z",
+            "reviewedDate": "2022-08-01T00:00:00Z",
+            "statusDate": "2022-08-01T00:00:00Z",
+            "volume": 4,
+            "elocationId": "e19560",
+            "pdf": "https://elifesciences.org/content/4/e19560.pdf",
+            "subjects": [
+                {
+                    "id": "genomics-evolutionary-biology",
+                    "name": "Genomics and Evolutionary Biology"
+                }
+            ],
+            "curationLabels": [
+                "Ground-breaking",
+                "Convincing"
+            ],
+            "image": {
+                "thumbnail": {
+                    "uri": "https://iiif.elifesciences.org/lax/19560%2Felife-19560-fig1-v1.tif",
+                    "alt": "",
+                    "source": {
+                        "mediaType": "image/jpeg",
+                        "uri": "https://iiif.elifesciences.org/lax/19560%2Felife-19560-fig1-v1.tif/full/full/0/default.jpg",
+                        "filename": "an-image.jpg"
+                    },
+                    "size": {
+                        "width": 4194,
+                        "height": 4714
+                    },
+                    "focalPoint": {
+                        "x": 25,
+                        "y": 75
+                    }
+                }
+            }
         }
     ],
     "mediaContacts": [
