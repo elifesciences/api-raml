@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.17.0
+
+### Added
+
+* introduce optional `sentForReview` date to article history
+
 ## 2.16.0
 
 ### Changed
