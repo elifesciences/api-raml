@@ -1,5 +1,16 @@
 # Changelog
 
+## 2.21.0
+
+### Changed
+
+* introduce deprecated flag to `application/vnd.elife.press-package+json;version=3`
+
+### Removed
+
+* removed support for `application/vnd.elife.press-package+json;version=2`
+* removed experimental flag from `application/vnd.elife.press-package+json;version=4`
+
 ## 2.20.0
 
 ### Removed
