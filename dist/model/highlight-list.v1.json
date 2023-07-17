@@ -311,6 +311,9 @@
                                     },
                                     {
                                         "properties": {
+                                            "versionDoi": {
+                                                "$ref": "#/properties/items/items/properties/item/oneOf/0/allOf/0/properties/doi"
+                                            },
                                             "status": {
                                                 "type": "string",
                                                 "enum": [
