@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.22.0
+
+### Added
+
+* added optional versionDoi to article-vor
+
 ## 2.21.0
 
 ### Changed
