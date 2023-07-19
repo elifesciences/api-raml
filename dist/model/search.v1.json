@@ -53,10 +53,7 @@
                                         ]
                                     },
                                     "doi": {
-                                        "$schema": "http://json-schema.org/draft-04/schema#",
-                                        "title": "DOI",
-                                        "type": "string",
-                                        "pattern": "^10[.][0-9]{4,}[^\\s\"/<>]*/[^\\s\"]+$"
+                                        "$ref": "#/properties/items/items/oneOf/1/allOf/1/properties/doiVersion"
                                     },
                                     "authorLine": {
                                         "description": "For example:\n  - Ian T Baldwin\n  - Randy Schekman, Mark Patterson\n  - Lee R Berger et al.\n",
@@ -285,8 +282,11 @@
                             },
                             {
                                 "properties": {
-                                    "versionDoi": {
-                                        "$ref": "#/properties/items/items/oneOf/0/allOf/0/properties/doi"
+                                    "doiVersion": {
+                                        "$schema": "http://json-schema.org/draft-04/schema#",
+                                        "title": "DOI",
+                                        "type": "string",
+                                        "pattern": "^10[.][0-9]{4,}[^\\s\"/<>]*/[^\\s\"]+$"
                                     },
                                     "status": {
                                         "type": "string",

@@ -38,6 +38,67 @@
                     "type": "object",
                     "properties": {
                         "thumbnail": {
+                            "$ref": "#/allOf/1/properties/image/properties/banner"
+                        }
+                    },
+                    "required": [
+                        "thumbnail"
+                    ]
+                },
+                "subjects": {
+                    "description": "Collection subjects",
+                    "type": "array",
+                    "items": {
+                        "$schema": "http://json-schema.org/draft-04/schema#",
+                        "title": "Subject snippet",
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "$ref": "#/allOf/0/properties/id"
+                            },
+                            "name": {
+                                "description": "Name",
+                                "type": "string",
+                                "minLength": 1
+                            }
+                        },
+                        "required": [
+                            "id",
+                            "name"
+                        ]
+                    }
+                },
+                "selectedCurator": {
+                    "allOf": [
+                        {
+                            "$ref": "#/allOf/1/properties/curators/items"
+                        },
+                        {
+                            "properties": {
+                                "etAl": {
+                                    "description": "If there are more curators.",
+                                    "type": "boolean",
+                                    "default": false
+                                }
+                            }
+                        }
+                    ]
+                }
+            },
+            "required": [
+                "id",
+                "title",
+                "published",
+                "image",
+                "selectedCurator"
+            ]
+        },
+        {
+            "properties": {
+                "image": {
+                    "type": "object",
+                    "properties": {
+                        "banner": {
                             "$schema": "http://json-schema.org/draft-04/schema#",
                             "title": "IIIF image",
                             "type": "object",
@@ -148,67 +209,6 @@
                         }
                     },
                     "required": [
-                        "thumbnail"
-                    ]
-                },
-                "subjects": {
-                    "description": "Collection subjects",
-                    "type": "array",
-                    "items": {
-                        "$schema": "http://json-schema.org/draft-04/schema#",
-                        "title": "Subject snippet",
-                        "type": "object",
-                        "properties": {
-                            "id": {
-                                "$ref": "#/allOf/0/properties/id"
-                            },
-                            "name": {
-                                "description": "Name",
-                                "type": "string",
-                                "minLength": 1
-                            }
-                        },
-                        "required": [
-                            "id",
-                            "name"
-                        ]
-                    }
-                },
-                "selectedCurator": {
-                    "allOf": [
-                        {
-                            "$ref": "#/allOf/1/properties/curators/items"
-                        },
-                        {
-                            "properties": {
-                                "etAl": {
-                                    "description": "If there are more curators.",
-                                    "type": "boolean",
-                                    "default": false
-                                }
-                            }
-                        }
-                    ]
-                }
-            },
-            "required": [
-                "id",
-                "title",
-                "published",
-                "image",
-                "selectedCurator"
-            ]
-        },
-        {
-            "properties": {
-                "image": {
-                    "type": "object",
-                    "properties": {
-                        "banner": {
-                            "$ref": "#/allOf/0/properties/image/properties/thumbnail"
-                        }
-                    },
-                    "required": [
                         "banner"
                     ]
                 },
@@ -287,7 +287,7 @@
                                         ]
                                     },
                                     "image": {
-                                        "$ref": "#/allOf/0/properties/image/properties/thumbnail"
+                                        "$ref": "#/allOf/1/properties/image/properties/banner"
                                     }
                                 },
                                 "required": [
@@ -335,6 +335,26 @@
                                 "type": "object",
                                 "allOf": [
                                     {
+                                        "$ref": "#/allOf/1/properties/content/items/oneOf/1/allOf/0"
+                                    },
+                                    {
+                                        "properties": {
+                                            "status": {
+                                                "type": "string",
+                                                "enum": [
+                                                    "poa"
+                                                ]
+                                            }
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "title": "Article VoR snippet",
+                                "type": "object",
+                                "allOf": [
+                                    {
                                         "$schema": "http://json-schema.org/draft-04/schema#",
                                         "title": "Article snippet",
                                         "type": "object",
@@ -366,10 +386,7 @@
                                                 ]
                                             },
                                             "doi": {
-                                                "$schema": "http://json-schema.org/draft-04/schema#",
-                                                "title": "DOI",
-                                                "type": "string",
-                                                "pattern": "^10[.][0-9]{4,}[^\\s\"/<>]*/[^\\s\"]+$"
+                                                "$ref": "#/allOf/1/properties/content/items/oneOf/1/allOf/1/properties/doiVersion"
                                             },
                                             "authorLine": {
                                                 "description": "For example:\n  - Ian T Baldwin\n  - Randy Schekman, Mark Patterson\n  - Lee R Berger et al.\n",
@@ -434,10 +451,10 @@
                                                 "type": "object",
                                                 "properties": {
                                                     "thumbnail": {
-                                                        "$ref": "#/allOf/0/properties/image/properties/thumbnail"
+                                                        "$ref": "#/allOf/1/properties/image/properties/banner"
                                                     },
                                                     "social": {
-                                                        "$ref": "#/allOf/0/properties/image/properties/thumbnail"
+                                                        "$ref": "#/allOf/1/properties/image/properties/banner"
                                                     }
                                                 },
                                                 "anyOf": [
@@ -468,28 +485,11 @@
                                     },
                                     {
                                         "properties": {
-                                            "status": {
+                                            "doiVersion": {
+                                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                                "title": "DOI",
                                                 "type": "string",
-                                                "enum": [
-                                                    "poa"
-                                                ]
-                                            }
-                                        }
-                                    }
-                                ]
-                            },
-                            {
-                                "$schema": "http://json-schema.org/draft-04/schema#",
-                                "title": "Article VoR snippet",
-                                "type": "object",
-                                "allOf": [
-                                    {
-                                        "$ref": "#/allOf/1/properties/content/items/oneOf/0/allOf/0"
-                                    },
-                                    {
-                                        "properties": {
-                                            "versionDoi": {
-                                                "$ref": "#/allOf/1/properties/content/items/oneOf/0/allOf/0/properties/doi"
+                                                "pattern": "^10[.][0-9]{4,}[^\\s\"/<>]*/[^\\s\"]+$"
                                             },
                                             "status": {
                                                 "type": "string",
@@ -634,7 +634,7 @@
                                                                         "type": "object",
                                                                         "properties": {
                                                                             "thumbnail": {
-                                                                                "$ref": "#/allOf/0/properties/image/properties/thumbnail"
+                                                                                "$ref": "#/allOf/1/properties/image/properties/banner"
                                                                             }
                                                                         }
                                                                     }
@@ -709,7 +709,7 @@
                                 "type": "object",
                                 "properties": {
                                     "thumbnail": {
-                                        "$ref": "#/allOf/0/properties/image/properties/thumbnail"
+                                        "$ref": "#/allOf/1/properties/image/properties/banner"
                                     }
                                 },
                                 "required": [
@@ -724,7 +724,7 @@
                                         "mediaType": {
                                             "allOf": [
                                                 {
-                                                    "$ref": "#/allOf/0/properties/image/properties/thumbnail/allOf/1/properties/source/properties/mediaType"
+                                                    "$ref": "#/allOf/1/properties/image/properties/banner/allOf/1/properties/source/properties/mediaType"
                                                 },
                                                 {
                                                     "pattern": "^audio/"

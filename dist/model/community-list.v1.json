@@ -301,7 +301,7 @@
                             },
                             {
                                 "properties": {
-                                    "versionDoi": {
+                                    "doiVersion": {
                                         "$ref": "#/properties/items/items/oneOf/0/allOf/0/properties/doi"
                                     },
                                     "status": {

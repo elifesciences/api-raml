@@ -122,6 +122,9 @@
                         "type": "object",
                         "properties": {
                             "thumbnail": {
+                                "$ref": "#/properties/items/items/properties/image/properties/social"
+                            },
+                            "social": {
                                 "$schema": "http://json-schema.org/draft-04/schema#",
                                 "title": "IIIF image",
                                 "type": "object",
@@ -229,9 +232,6 @@
                                         ]
                                     }
                                 ]
-                            },
-                            "social": {
-                                "$ref": "#/properties/items/items/properties/image/properties/thumbnail"
                             }
                         },
                         "anyOf": [

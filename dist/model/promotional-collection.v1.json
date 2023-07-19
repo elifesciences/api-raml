@@ -38,6 +38,53 @@
                     "type": "object",
                     "properties": {
                         "thumbnail": {
+                            "$ref": "#/allOf/1/properties/image/properties/social"
+                        }
+                    },
+                    "required": [
+                        "thumbnail"
+                    ]
+                },
+                "subjects": {
+                    "description": "Promotional collection subjects",
+                    "type": "array",
+                    "items": {
+                        "$schema": "http://json-schema.org/draft-04/schema#",
+                        "title": "Subject snippet",
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "$ref": "#/allOf/0/properties/id"
+                            },
+                            "name": {
+                                "description": "Name",
+                                "type": "string",
+                                "minLength": 1
+                            }
+                        },
+                        "required": [
+                            "id",
+                            "name"
+                        ]
+                    }
+                }
+            },
+            "required": [
+                "id",
+                "title",
+                "published",
+                "image"
+            ]
+        },
+        {
+            "properties": {
+                "image": {
+                    "type": "object",
+                    "properties": {
+                        "banner": {
+                            "$ref": "#/allOf/1/properties/image/properties/social"
+                        },
+                        "social": {
                             "$schema": "http://json-schema.org/draft-04/schema#",
                             "title": "IIIF image",
                             "type": "object",
@@ -148,53 +195,6 @@
                         }
                     },
                     "required": [
-                        "thumbnail"
-                    ]
-                },
-                "subjects": {
-                    "description": "Promotional collection subjects",
-                    "type": "array",
-                    "items": {
-                        "$schema": "http://json-schema.org/draft-04/schema#",
-                        "title": "Subject snippet",
-                        "type": "object",
-                        "properties": {
-                            "id": {
-                                "$ref": "#/allOf/0/properties/id"
-                            },
-                            "name": {
-                                "description": "Name",
-                                "type": "string",
-                                "minLength": 1
-                            }
-                        },
-                        "required": [
-                            "id",
-                            "name"
-                        ]
-                    }
-                }
-            },
-            "required": [
-                "id",
-                "title",
-                "published",
-                "image"
-            ]
-        },
-        {
-            "properties": {
-                "image": {
-                    "type": "object",
-                    "properties": {
-                        "banner": {
-                            "$ref": "#/allOf/0/properties/image/properties/thumbnail"
-                        },
-                        "social": {
-                            "$ref": "#/allOf/0/properties/image/properties/thumbnail"
-                        }
-                    },
-                    "required": [
                         "banner"
                     ]
                 },
@@ -273,7 +273,7 @@
                                         ]
                                     },
                                     "image": {
-                                        "$ref": "#/allOf/0/properties/image/properties/thumbnail"
+                                        "$ref": "#/allOf/1/properties/image/properties/social"
                                     }
                                 },
                                 "required": [
@@ -317,6 +317,26 @@
                             {
                                 "$schema": "http://json-schema.org/draft-04/schema#",
                                 "title": "Article PoA snippet",
+                                "type": "object",
+                                "allOf": [
+                                    {
+                                        "$ref": "#/allOf/1/properties/content/items/oneOf/1/allOf/0"
+                                    },
+                                    {
+                                        "properties": {
+                                            "status": {
+                                                "type": "string",
+                                                "enum": [
+                                                    "poa"
+                                                ]
+                                            }
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "title": "Article VoR snippet",
                                 "type": "object",
                                 "allOf": [
                                     {
@@ -419,10 +439,10 @@
                                                 "type": "object",
                                                 "properties": {
                                                     "thumbnail": {
-                                                        "$ref": "#/allOf/0/properties/image/properties/thumbnail"
+                                                        "$ref": "#/allOf/1/properties/image/properties/social"
                                                     },
                                                     "social": {
-                                                        "$ref": "#/allOf/0/properties/image/properties/thumbnail"
+                                                        "$ref": "#/allOf/1/properties/image/properties/social"
                                                     }
                                                 },
                                                 "anyOf": [
@@ -453,28 +473,8 @@
                                     },
                                     {
                                         "properties": {
-                                            "status": {
-                                                "type": "string",
-                                                "enum": [
-                                                    "poa"
-                                                ]
-                                            }
-                                        }
-                                    }
-                                ]
-                            },
-                            {
-                                "$schema": "http://json-schema.org/draft-04/schema#",
-                                "title": "Article VoR snippet",
-                                "type": "object",
-                                "allOf": [
-                                    {
-                                        "$ref": "#/allOf/1/properties/content/items/oneOf/0/allOf/0"
-                                    },
-                                    {
-                                        "properties": {
-                                            "versionDoi": {
-                                                "$ref": "#/allOf/1/properties/content/items/oneOf/0/allOf/0/properties/doi"
+                                            "doiVersion": {
+                                                "$ref": "#/allOf/1/properties/content/items/oneOf/1/allOf/0/properties/doi"
                                             },
                                             "status": {
                                                 "type": "string",
@@ -616,10 +616,10 @@
                                                                 "type": "object",
                                                                 "properties": {
                                                                     "thumbnail": {
-                                                                        "$ref": "#/allOf/0/properties/image/properties/thumbnail"
+                                                                        "$ref": "#/allOf/1/properties/image/properties/social"
                                                                     },
                                                                     "social": {
-                                                                        "$ref": "#/allOf/0/properties/image/properties/thumbnail"
+                                                                        "$ref": "#/allOf/1/properties/image/properties/social"
                                                                     }
                                                                 },
                                                                 "required": [
@@ -759,7 +759,7 @@
                                                                         "type": "object",
                                                                         "properties": {
                                                                             "thumbnail": {
-                                                                                "$ref": "#/allOf/0/properties/image/properties/thumbnail"
+                                                                                "$ref": "#/allOf/1/properties/image/properties/social"
                                                                             }
                                                                         }
                                                                     }
@@ -834,7 +834,7 @@
                                 "type": "object",
                                 "properties": {
                                     "thumbnail": {
-                                        "$ref": "#/allOf/0/properties/image/properties/thumbnail"
+                                        "$ref": "#/allOf/1/properties/image/properties/social"
                                     }
                                 },
                                 "required": [
@@ -849,7 +849,7 @@
                                         "mediaType": {
                                             "allOf": [
                                                 {
-                                                    "$ref": "#/allOf/0/properties/image/properties/thumbnail/allOf/1/properties/source/properties/mediaType"
+                                                    "$ref": "#/allOf/1/properties/image/properties/social/allOf/1/properties/source/properties/mediaType"
                                                 },
                                                 {
                                                     "pattern": "^audio/"
