@@ -4,7 +4,7 @@ type: object
 allOf:
   - $ref: article.v1.yaml
   - properties:
-        versionDoi:
+        doiVersion:
           $ref: ../misc/doi.v1.yaml
         status:
             type: string

@@ -4,7 +4,7 @@
 
 ### Added
 
-* added optional versionDoi to article-vor
+* added optional doiVersion to article-vor
 * add .nvmrc for development
 
 ## 2.21.0
