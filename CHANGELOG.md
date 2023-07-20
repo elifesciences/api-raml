@@ -1,5 +1,12 @@
 # Changelog
 
+## 2.22.0
+
+### Added
+
+* added optional doiVersion to article-vor
+* add .nvmrc for development
+
 ## 2.21.0
 
 ### Changed
