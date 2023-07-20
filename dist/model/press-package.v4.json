@@ -1233,6 +1233,9 @@
                                     },
                                     {
                                         "properties": {
+                                            "doiVersion": {
+                                                "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/1/properties/doi"
+                                            },
                                             "status": {
                                                 "type": "string",
                                                 "enum": [
