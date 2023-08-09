@@ -491,6 +491,9 @@
                                     },
                                     {
                                         "properties": {
+                                            "doiVersion": {
+                                                "$ref": "#/allOf/1/properties/content/items/oneOf/0/allOf/0/properties/doi"
+                                            },
                                             "status": {
                                                 "type": "string",
                                                 "enum": [
