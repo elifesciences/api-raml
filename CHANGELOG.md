@@ -10,8 +10,9 @@
 
 ### Fixed
 
-### Removed
+* fixed typo from 'minLenght' to 'minLength' in `misc/author.v1.yaml`
 
+### Removed
 
 ## 2.22.0
 
