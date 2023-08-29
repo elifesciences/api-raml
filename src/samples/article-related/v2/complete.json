@@ -1,0 +1,106 @@
+[
+    {
+        "type": "external-article",
+        "articleTitle": "Transcriptional amplification in tumor cells with elevated c-Myc",
+        "journal": "Cell",
+        "authorLine": "C. Y. Lin et al.",
+        "uri": "https://doi.org/10.1016/j.cell.2012.08.026"
+    },
+    {
+        "type": "research-article",
+        "status": "vor",
+        "id": "09561",
+        "version": 1,
+        "doi": "10.7554/eLife.09561",
+        "authorLine": "Paul HGM Dirks et al.",
+        "title": "Geological and taphonomic context for the new hominin species <i>Homo naledi</i> from the Dinaledi Chamber, South Africa",
+        "stage": "published",
+        "published": "2015-09-10T00:00:00Z",
+        "statusDate": "2015-09-10T00:00:00Z",
+        "volume": 4,
+        "elocationId": "e09561",
+        "pdf": "https://elifesciences.org/content/4/e09561.pdf",
+        "subjects": [
+            {
+                "id": "genomics-evolutionary-biology",
+                "name": "Genomics and Evolutionary Biology"
+            }
+        ],
+        "impactStatement": "A new hominin species found in a South African cave is part of one of the most unusual hominin fossil assemblages on record.",
+        "image": {
+            "thumbnail": {
+                "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif",
+                "alt": "",
+                "attribution": [
+                    "By some person."
+                ],
+                "source": {
+                    "mediaType": "image/jpeg",
+                    "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif/full/full/0/default.jpg",
+                    "filename": "an-image.jpg"
+                },
+                "size": {
+                    "width": 4194,
+                    "height": 4714
+                }
+            }
+        }
+    },
+    {
+        "type": "insight",
+        "status": "vor",
+        "id": "10627",
+        "version": 1,
+        "doi": "10.7554/eLife.10627",
+        "authorLine": "Chris Stringer",
+        "title": "Human Evolution: The many mysteries of <i>Homo naledi</i>",
+        "stage": "published",
+        "published": "2015-09-10T00:00:00Z",
+        "statusDate": "2015-09-10T00:00:00Z",
+        "volume": 4,
+        "elocationId": "e10627",
+        "pdf": "https://elifesciences.org/content/4/e10627.pdf",
+        "subjects": [
+            {
+                "id": "genomics-evolutionary-biology",
+                "name": "Genomics and Evolutionary Biology"
+            }
+        ],
+        "impactStatement": "More than 1500 fossils from the Rising Star cave system in South Africa have been assigned to a new human species, <i>Homo naledi</i>, which displays a unique combination of primitive and derived traits throughout the skeleton.",
+        "image": {
+            "thumbnail": {
+                "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif",
+                "alt": "",
+                "source": {
+                    "mediaType": "image/jpeg",
+                    "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif/full/full/0/default.jpg",
+                    "filename": "an-image.jpg"
+                },
+                "size": {
+                    "width": 4194,
+                    "height": 4714
+                }
+            }
+        }
+    },
+    {
+        "id": "80494",
+        "doi": "10.1101/2022.06.24.497502",
+        "pdf": "https://www.biorxiv.org/content/10.1101/2022.06.24.497502v1.full.pdf",
+        "status": "reviewed",
+        "authorLine": "Tianze Xu, Jing Cai ... Kuanyu Li",
+        "title": "Aging-related iron deposit prevents the benefits of HRT from late postmenopausal atherosclerosis",
+        "stage": "published",
+        "type": "reviewed-preprint",
+        "published": "2022-10-20T03:00:00Z",
+        "reviewedDate": "2022-10-20T03:00:00Z",
+        "versionDate": "2022-10-20T03:00:00Z",
+        "statusDate": "2022-10-20T03:00:00Z",
+        "subjects": [
+            {
+                "id": "cell-biology",
+                "name": "Cell Biology"
+            }
+        ]
+    }
+]

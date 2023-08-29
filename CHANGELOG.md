@@ -1,5 +1,18 @@
 # Changelog
 
+## [Unreleased]
+
+### Added
+
+### Changed
+
+* reviewed-preprint snippets may now be returned as part of the `/articles/{id}/related` endpoint.
+
+### Fixed
+
+### Removed
+
+
 ## 2.22.0
 
 ### Added
@@ -253,3 +266,14 @@
 ### Removed
 
 *no removals*
+
+## [Unreleased]
+
+### Added
+
+### Changed
+
+### Fixed
+
+### Removed
+
