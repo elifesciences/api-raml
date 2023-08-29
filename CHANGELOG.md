@@ -10,6 +10,8 @@
 
 ### Fixed
 
+* fixes typo in `/search` query parameter where `type` is actually `type[]`.
+
 ### Removed
 
 
