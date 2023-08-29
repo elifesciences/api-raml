@@ -475,6 +475,11 @@ traits:
                                 schema: !include model/article-related.v1.json
                                 example:
                                     value: !include samples/article-related/v1/complete.json
+                            application/vnd.elife.article-related+json;version=2:
+                                (experimental):
+                                schema: !include model/article-related.v2.json
+                                example:
+                                    value: !include samples/article-related/v2/complete.json
 
         /versions:
             type:
