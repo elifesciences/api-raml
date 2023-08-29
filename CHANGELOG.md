@@ -10,6 +10,8 @@
 
 ### Fixed
 
+* fixes typo in `/highlights` URI parameters from `type` to `list`.
+
 ### Removed
 
 
