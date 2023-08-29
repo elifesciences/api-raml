@@ -7,6 +7,8 @@
 ### Changed
 
 * reviewed-preprint snippets may now be returned as part of the `/articles/{id}/related` endpoint.
+* `id` URI parameter in `/articles/{id}` changed from `string` to `integer`.
+    - zero padded integers are still integers and are fine.
 
 ### Fixed
 
