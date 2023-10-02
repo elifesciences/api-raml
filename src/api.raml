@@ -795,6 +795,15 @@ traits:
                                 complete:
                                     displayName: Complete
                                     value: !include samples/collection/v2/complete.json
+                        application/vnd.elife.collection+json;version=3:
+                            schema: !include ../dist/model/collection.v3.json
+                            examples:
+                                minimum:
+                                    displayName: Minimum
+                                    value: !include samples/collection/v3/minimum.json
+                                complete:
+                                    displayName: Complete
+                                    value: !include samples/collection/v3/complete.json
 
 /bioprotocol:
     (experimental):
