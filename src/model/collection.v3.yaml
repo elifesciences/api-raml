@@ -9,6 +9,8 @@ allOf:
             properties:
                 banner:
                     $ref: ../misc/image.v1.yaml
+                social:
+                    $ref: ../misc/image.v1.yaml
             required:
               - banner
         curators:
@@ -46,8 +48,29 @@ allOf:
                                     type:
                                         type: string
                                         enum:
+                                          - digest
+                              - $ref: ../snippets/digest.v1.yaml
+                          - allOf:
+                              - properties:
+                                    type:
+                                        type: string
+                                        enum:
+                                          - event
+                              - $ref: ../snippets/event.v1.yaml
+                          - allOf:
+                              - properties:
+                                    type:
+                                        type: string
+                                        enum:
                                           - interview
                               - $ref: ../snippets/interview.v1.yaml
+                          - allOf:
+                              - properties:
+                                    type:
+                                        type: string
+                                        enum:
+                                          - reviewed-preprint
+                              - $ref: ../snippets/reviewed-preprint.v1.yaml
             minItems: 1
             uniqueItems: true
         relatedContent:

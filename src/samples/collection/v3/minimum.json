@@ -1,6 +1,6 @@
 {
     "id": "1",
-    "title": "Tropical disease",
+    "title": "Reviewed-preprint within collection",
     "published": "2015-09-16T11:19:26Z",
     "image": {
         "banner": {
@@ -71,6 +71,13 @@
             "statusDate": "2016-03-28T00:00:00Z",
             "volume": 5,
             "elocationId": "e14107"
+        },
+        {
+            "type": "reviewed-preprint",
+            "status": "reviewed",
+            "id": "19560",
+            "stage": "published",
+            "title": "<i>Homo naledi</i>, a new species of the genus <i>Homo</i> from the Dinaledi Chamber, South Africa"
         }
     ]
 }
