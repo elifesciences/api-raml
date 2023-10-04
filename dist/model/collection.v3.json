@@ -206,6 +206,9 @@
                     "properties": {
                         "banner": {
                             "$ref": "#/allOf/0/properties/image/properties/thumbnail"
+                        },
+                        "social": {
+                            "$ref": "#/allOf/0/properties/image/properties/thumbnail"
                         }
                     },
                     "required": [
@@ -591,6 +594,146 @@
                                                             "type": {
                                                                 "type": "string",
                                                                 "enum": [
+                                                                    "digest"
+                                                                ]
+                                                            }
+                                                        }
+                                                    },
+                                                    {
+                                                        "$schema": "http://json-schema.org/draft-04/schema#",
+                                                        "title": "Digest snippet",
+                                                        "type": "object",
+                                                        "properties": {
+                                                            "id": {
+                                                                "$ref": "#/allOf/0/properties/id"
+                                                            },
+                                                            "title": {
+                                                                "description": "Title",
+                                                                "type": "string"
+                                                            },
+                                                            "impactStatement": {
+                                                                "description": "Description of the digest",
+                                                                "type": "string"
+                                                            },
+                                                            "stage": {
+                                                                "type": "string",
+                                                                "enum": [
+                                                                    "preview",
+                                                                    "published"
+                                                                ]
+                                                            },
+                                                            "published": {
+                                                                "title": "Publication date (UTC)",
+                                                                "$ref": "#/allOf/0/properties/published"
+                                                            },
+                                                            "updated": {
+                                                                "title": "Updated date (UTC)",
+                                                                "$ref": "#/allOf/0/properties/published"
+                                                            },
+                                                            "image": {
+                                                                "type": "object",
+                                                                "properties": {
+                                                                    "thumbnail": {
+                                                                        "$ref": "#/allOf/0/properties/image/properties/thumbnail"
+                                                                    },
+                                                                    "social": {
+                                                                        "$ref": "#/allOf/0/properties/image/properties/thumbnail"
+                                                                    }
+                                                                },
+                                                                "required": [
+                                                                    "thumbnail"
+                                                                ]
+                                                            },
+                                                            "subjects": {
+                                                                "description": "Digest subjects",
+                                                                "type": "array",
+                                                                "items": {
+                                                                    "$ref": "#/allOf/0/properties/subjects/items"
+                                                                },
+                                                                "uniqueItems": true
+                                                            }
+                                                        },
+                                                        "required": [
+                                                            "id",
+                                                            "title",
+                                                            "stage",
+                                                            "image"
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "allOf": [
+                                                    {
+                                                        "properties": {
+                                                            "type": {
+                                                                "type": "string",
+                                                                "enum": [
+                                                                    "event"
+                                                                ]
+                                                            }
+                                                        }
+                                                    },
+                                                    {
+                                                        "$schema": "http://json-schema.org/draft-04/schema#",
+                                                        "title": "Event snippet",
+                                                        "type": "object",
+                                                        "properties": {
+                                                            "id": {
+                                                                "$ref": "#/allOf/0/properties/id"
+                                                            },
+                                                            "title": {
+                                                                "description": "Title",
+                                                                "type": "string"
+                                                            },
+                                                            "impactStatement": {
+                                                                "description": "Description of the article",
+                                                                "type": "string"
+                                                            },
+                                                            "published": {
+                                                                "title": "Publication date (UTC)",
+                                                                "$ref": "#/allOf/0/properties/published"
+                                                            },
+                                                            "updated": {
+                                                                "title": "Updated date (UTC)",
+                                                                "$ref": "#/allOf/0/properties/published"
+                                                            },
+                                                            "starts": {
+                                                                "description": "Start date/time (UTC)",
+                                                                "$ref": "#/allOf/0/properties/published"
+                                                            },
+                                                            "ends": {
+                                                                "description": "Ends date/time (UTC)",
+                                                                "$ref": "#/allOf/0/properties/published"
+                                                            },
+                                                            "timezone": {
+                                                                "description": "Timezone (from the IANA time zone database) for non-online events",
+                                                                "type": "string",
+                                                                "pattern": "^[A-Za-z]+(/[A-Za-z_-]+)+$"
+                                                            },
+                                                            "uri": {
+                                                                "description": "URI if the event details are held elsewhere",
+                                                                "type": "string",
+                                                                "format": "uri"
+                                                            }
+                                                        },
+                                                        "required": [
+                                                            "id",
+                                                            "title",
+                                                            "published",
+                                                            "starts",
+                                                            "ends"
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "allOf": [
+                                                    {
+                                                        "properties": {
+                                                            "type": {
+                                                                "type": "string",
+                                                                "enum": [
                                                                     "interview"
                                                                 ]
                                                             }
@@ -655,6 +798,133 @@
                                                                     }
                                                                 }
                                                             }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "allOf": [
+                                                    {
+                                                        "properties": {
+                                                            "type": {
+                                                                "type": "string",
+                                                                "enum": [
+                                                                    "reviewed-preprint"
+                                                                ]
+                                                            }
+                                                        }
+                                                    },
+                                                    {
+                                                        "$schema": "http://json-schema.org/draft-04/schema#",
+                                                        "title": "Reviewed preprint snippet",
+                                                        "type": "object",
+                                                        "properties": {
+                                                            "id": {
+                                                                "$ref": "#/allOf/0/properties/id"
+                                                            },
+                                                            "status": {
+                                                                "type": "string",
+                                                                "enum": [
+                                                                    "reviewed",
+                                                                    "final"
+                                                                ]
+                                                            },
+                                                            "doi": {
+                                                                "$ref": "#/allOf/1/properties/content/items/oneOf/0/allOf/0/properties/doi"
+                                                            },
+                                                            "authorLine": {
+                                                                "description": "For example:\n    - Ian T Baldwin\n    - Randy Schekman, Mark Patterson\n    - Lee R Berger, John Hawks ... Scott A Williams\n",
+                                                                "type": "string",
+                                                                "minLength": 1
+                                                            },
+                                                            "title": {
+                                                                "type": "string",
+                                                                "minLength": 1
+                                                            },
+                                                            "titlePrefix": {
+                                                                "type": "string",
+                                                                "minLength": 1
+                                                            },
+                                                            "stage": {
+                                                                "type": "string",
+                                                                "enum": [
+                                                                    "preview",
+                                                                    "published"
+                                                                ]
+                                                            },
+                                                            "published": {
+                                                                "title": "Publication date (UTC)",
+                                                                "description": "Date and time this reviewed-preprint was first published.\nNot present if 'stage' is 'preview'.\n",
+                                                                "$ref": "#/allOf/0/properties/published"
+                                                            },
+                                                            "reviewedDate": {
+                                                                "description": "Date of review\n",
+                                                                "$ref": "#/allOf/0/properties/published"
+                                                            },
+                                                            "versionDate": {
+                                                                "description": "Date and time this version of the article was published.\n",
+                                                                "$ref": "#/allOf/0/properties/published"
+                                                            },
+                                                            "statusDate": {
+                                                                "description": "Date and time this article transitioned to current status.\n",
+                                                                "$ref": "#/allOf/0/properties/published"
+                                                            },
+                                                            "volume": {
+                                                                "type": "integer",
+                                                                "minimum": 1
+                                                            },
+                                                            "elocationId": {
+                                                                "type": "string",
+                                                                "minLength": 1
+                                                            },
+                                                            "pdf": {
+                                                                "type": "string",
+                                                                "format": "uri"
+                                                            },
+                                                            "subjects": {
+                                                                "type": "array",
+                                                                "items": {
+                                                                    "$ref": "#/allOf/0/properties/subjects/items"
+                                                                },
+                                                                "uniqueItems": true
+                                                            },
+                                                            "curationLabels": {
+                                                                "type": "array",
+                                                                "items": {
+                                                                    "type": "string",
+                                                                    "minLength": 1
+                                                                },
+                                                                "uniqueItems": true
+                                                            },
+                                                            "image": {
+                                                                "type": "object",
+                                                                "properties": {
+                                                                    "thumbnail": {
+                                                                        "$ref": "#/allOf/0/properties/image/properties/thumbnail"
+                                                                    },
+                                                                    "social": {
+                                                                        "$ref": "#/allOf/0/properties/image/properties/thumbnail"
+                                                                    }
+                                                                },
+                                                                "anyOf": [
+                                                                    {
+                                                                        "required": [
+                                                                            "thumbnail"
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "required": [
+                                                                            "social"
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            }
+                                                        },
+                                                        "required": [
+                                                            "status",
+                                                            "id",
+                                                            "title",
+                                                            "stage"
                                                         ]
                                                     }
                                                 ]
