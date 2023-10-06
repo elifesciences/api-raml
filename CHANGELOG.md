@@ -1,17 +1,18 @@
 # Changelog
 
-## [Unreleased]
+## 2.23.0
 
 ### Added
 
-### Changed
+* added experimental support for reviewed preprints in `application/vnd.elife.collection+json;version=3`
 
-* reviewed-preprint snippets may now be returned as part of the `/articles/{id}/related` endpoint.
-
-### Fixed
+* added experimental support for reviewed preprints in `application/vnd.elife.article-related+json;version=2`
 
 ### Removed
 
+* removed support for `application/vnd.elife.collection+json;version=1`
+
+* removed experimental flag from `application/vnd.elife.collection+json;version=2`
 
 ## 2.22.0
 
@@ -266,14 +267,3 @@
 ### Removed
 
 *no removals*
-
-## [Unreleased]
-
-### Added
-
-### Changed
-
-### Fixed
-
-### Removed
-
