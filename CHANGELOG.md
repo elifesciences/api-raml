@@ -6,9 +6,7 @@
 
 * added experimental support for reviewed preprints in `application/vnd.elife.collection+json;version=3`
 
-### Changed
-
-* reviewed-preprint snippets may now be returned as part of the `/articles/{id}/related` endpoint.
+* added experimental support for reviewed preprints in `application/vnd.elife.article-related+json;version=2`
 
 ### Removed
 
