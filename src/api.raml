@@ -1743,6 +1743,15 @@ traits:
                                 complete:
                                     displayName: Complete
                                     value: !include samples/promotional-collection/v1/complete.json
+                        application/vnd.elife.promotional-collection+json;version=2:
+                            schema: !include ../dist/model/promotional-collection.v2.json
+                            examples:
+                                minimum:
+                                    displayName: Minimum
+                                    value: !include samples/promotional-collection/v2/minimum.json
+                                complete:
+                                    displayName: Complete
+                                    value: !include samples/promotional-collection/v2/complete.json
 
 /recommendations/{type}/{id}:
     type: collection
