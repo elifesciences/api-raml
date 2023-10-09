@@ -1,17 +1,21 @@
 # Changelog
 
+## 2.24.0
+
+### Added
+
+* added experimental support for reviewed preprints in `application/vnd.elife.promotional-collection+json;version=2`
+
 ## 2.23.0
 
 ### Added
 
 * added experimental support for reviewed preprints in `application/vnd.elife.collection+json;version=3`
-
 * added experimental support for reviewed preprints in `application/vnd.elife.article-related+json;version=2`
 
 ### Removed
 
 * removed support for `application/vnd.elife.collection+json;version=1`
-
 * removed experimental flag from `application/vnd.elife.collection+json;version=2`
 
 ## 2.22.0
