@@ -1,5 +1,35 @@
 # Changelog
 
+## 2.25.0
+
+### Changed
+
+* changed status to deprecated for `application/vnd.elife.blog-article+json;version=1`
+* changed status to deprecated for `application/vnd.elife.collection+json;version=2`
+* changed status to deprecated for `application/vnd.elife.event+json;version=1`
+* changed status to deprecated for `application/vnd.elife.highlight-list+json;version=2`
+* changed status to deprecated for `application/vnd.elife.interview+json;version=1`
+* changed status to deprecated for `application/vnd.elife.labs-post+json;version=1`
+* changed status to deprecated for `application/vnd.elife.promotional-collection+json;version=1`
+* changed status to deprecated for `application/vnd.elife.recommendations+json;version=1`
+* changed status to deprecated for `application/vnd.elife.search+json;version=1`
+
+### Removed
+
+* removed support for `application/vnd.elife.highlight-list+json;version=1`
+* removed experimental flag from `/annotations`
+* removed experimental flag from `application/vnd.elife.blog-article+json;version=2`
+* removed experimental flag from `application/vnd.elife.event+json;version=2`
+* removed experimental flag from `application/vnd.elife.highlight-list+json;version=3`
+* removed experimental flag from `application/vnd.elife.interview+json;version=2`
+* removed experimental flag from `/job-adverts`
+* removed experimental flag from `application/vnd.elife.labs-post+json;version=2`
+* removed experimental flag from `/profiles`
+* removed experimental flag from `/promotional-collections`
+* removed experimental flag from `application/vnd.elife.recommendations+json;version=2`
+* removed experimental flag from `/reviewed-preprints`
+* removed experimental flag from `application/vnd.elife.search+json;version=2`
+
 ## 2.24.0
 
 ### Added
