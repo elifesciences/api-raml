@@ -202,7 +202,6 @@ traits:
               example: [article/1234, interview/5678]
 
 /annotations:
-    (experimental):
     type: collection
     description: |
         Annotations
@@ -708,6 +707,7 @@ traits:
                         Article.
                     body:
                         application/vnd.elife.blog-article+json;version=1:
+                            (deprecated):
                             schema: !include ../dist/model/blog-article.v1.json
                             examples:
                                 minimum:
@@ -717,7 +717,6 @@ traits:
                                     displayName: Complete
                                     value: !include samples/blog-article/v1/complete.json
                         application/vnd.elife.blog-article+json;version=2:
-                            (experimental):
                             schema: !include ../dist/model/blog-article.v2.json
                             examples:
                                 minimum:
@@ -777,6 +776,7 @@ traits:
                         Collection.
                     body:
                         application/vnd.elife.collection+json;version=2:
+                            (deprecated):
                             schema: !include ../dist/model/collection.v2.json
                             examples:
                                 minimum:
@@ -1059,6 +1059,7 @@ traits:
                         Event.
                     body:
                         application/vnd.elife.event+json;version=1:
+                            (deprecated):
                             schema: !include ../dist/model/event.v1.json
                             examples:
                                 minimum:
@@ -1071,7 +1072,6 @@ traits:
                                     displayName: Complete external event
                                     value: !include samples/event/v1/complete-external.json
                         application/vnd.elife.event+json;version=2:
-                            (experimental):
                             schema: !include ../dist/model/event.v2.json
                             examples:
                                 minimum:
@@ -1101,20 +1101,8 @@ traits:
         responses:
             200:
                 body:
-                    application/vnd.elife.highlight-list+json;version=1:
-                        schema: !include ../dist/model/highlight-list.v1.json
-                        examples:
-                            paginated:
-                                displayName: First page
-                                description: |
-                                    List is split over two pages.
-                                value: !include samples/highlight-list/v1/first-page.json
-                            empty:
-                                displayName: Empty list
-                                description: |
-                                    Demonstration of the list being empty (the first page will always return a valid result).
-                                value: !include samples/highlight-list/v1/empty.json
                     application/vnd.elife.highlight-list+json;version=2:
+                        (deprecated):
                         schema: !include ../dist/model/highlight-list.v2.json
                         examples:
                             paginated:
@@ -1128,7 +1116,6 @@ traits:
                                     Demonstration of the list being empty (the first page will always return a valid result).
                                 value: !include samples/highlight-list/v2/empty.json
                     application/vnd.elife.highlight-list+json;version=3:
-                        (experimental):
                         schema: !include ../dist/model/highlight-list.v3.json
                         examples:
                             paginated:
@@ -1190,6 +1177,7 @@ traits:
                         Interview.
                     body:
                         application/vnd.elife.interview+json;version=1:
+                            (deprecated):
                             schema: !include ../dist/model/interview.v1.json
                             examples:
                                 minimum:
@@ -1199,7 +1187,6 @@ traits:
                                     displayName: Complete
                                     value: !include samples/interview/v1/complete.json
                         application/vnd.elife.interview+json;version=2:
-                            (experimental):
                             schema: !include ../dist/model/interview.v2.json
                             examples:
                                 minimum:
@@ -1216,7 +1203,6 @@ traits:
                                     value: !include samples/interview/v2/image-thumbnail-only.json
 
 /job-adverts:
-    (experimental):
     type: collection
     description: |
         Job adverts
@@ -1332,6 +1318,7 @@ traits:
                         Post.
                     body:
                         application/vnd.elife.labs-post+json;version=1:
+                            (deprecated):
                             schema: !include ../dist/model/labs-post.v1.json
                             examples:
                                 minimum:
@@ -1341,7 +1328,6 @@ traits:
                                     displayName: Complete
                                     value: !include samples/labs-post/v1/complete.json
                         application/vnd.elife.labs-post+json;version=2:
-                            (experimental):
                             schema: !include ../dist/model/labs-post.v2.json
                             examples:
                                 minimum:
@@ -1627,7 +1613,6 @@ traits:
                                     value: !include samples/press-package/v4/complete.json
 
 /profiles:
-    (experimental):
     type: collection
     description: |
         Profiles
@@ -1685,7 +1670,6 @@ traits:
                                     value: !include samples/profile/v1/complete.json
 
 /promotional-collections:
-    (experimental):
     type: collection
     description: |
         Promotional collections
@@ -1735,6 +1719,7 @@ traits:
                         Promotional collection.
                     body:
                         application/vnd.elife.promotional-collection+json;version=1:
+                            (deprecated):
                             schema: !include ../dist/model/promotional-collection.v1.json
                             examples:
                                 minimum:
@@ -1777,6 +1762,7 @@ traits:
             200:
                 body:
                     application/vnd.elife.recommendations+json;version=1:
+                        (deprecated):
                         schema: !include ../dist/model/recommendations.v1.json
                         examples:
                             paginated:
@@ -1790,7 +1776,6 @@ traits:
                                     Demonstration of the list being empty (the first page will always return a valid result).
                                 value: !include samples/recommendations/v1/empty.json
                     application/vnd.elife.recommendations+json;version=2:
-                        (experimental):
                         schema: !include ../dist/model/recommendations.v2.json
                         examples:
                             paginated:
@@ -1805,7 +1790,6 @@ traits:
                                 value: !include samples/recommendations/v2/empty.json
 
 /reviewed-preprints:
-    (experimental):
     type: collection
     description: |
         Reviewed preprints
@@ -1926,6 +1910,7 @@ traits:
                     List of results.
                 body:
                     application/vnd.elife.search+json;version=1:
+                        (deprecated):
                         schema: !include ../dist/model/search.v1.json
                         examples:
                             paginated:
@@ -1939,7 +1924,6 @@ traits:
                                     Demonstration of the list being empty (the first page will always return a valid result).
                                 value: !include samples/search/v1/empty.json
                     application/vnd.elife.search+json;version=2:
-                        (experimental):
                         schema: !include ../dist/model/search.v2.json
                         examples:
                             paginated:
