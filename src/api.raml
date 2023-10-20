@@ -1789,6 +1789,20 @@ traits:
                                     Demonstration of the list being empty (the first page will always return a valid result).
                                 value: !include samples/recommendations/v2/empty.json
 
+                    application/vnd.elife.recommendations+json;version=3:
+                        schema: !include ../dist/model/recommendations.v3.json
+                        examples:
+                            paginated:
+                                displayName: First page
+                                description: |
+                                    List is split over two pages.
+                                value: !include samples/recommendations/v3/first-page.json
+                            empty:
+                                displayName: Empty list
+                                description: |
+                                    Demonstration of the list being empty (the first page will always return a valid result).
+                                value: !include samples/recommendations/v3/empty.json
+
 /reviewed-preprints:
     type: collection
     description: |
