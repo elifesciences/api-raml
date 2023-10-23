@@ -1,5 +1,14 @@
 # Changelog
 
+## 2.26.0
+
+### Added
+* added experimental support for reviewed preprints in `application/vnd.elife.recommendations+json;version=3`
+
+### Removed
+
+* removed support for `application/vnd.elife.recommendations+json;version=1`
+
 ## 2.25.0
 
 ### Changed
