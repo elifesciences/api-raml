@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.27.0
+
+### Added
+* added support for `dateRanged` in `application/vnd.elife.reviewed-preprint-list+json;version=1`
+
 ## 2.26.0
 
 ### Added
