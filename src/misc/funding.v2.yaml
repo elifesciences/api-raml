@@ -1,0 +1,57 @@
+$schema: http://json-schema.org/draft-04/schema#
+title: Funding
+type: object
+properties:
+    awards:
+        type: array
+        items:
+            type: object
+            properties:
+                id:
+                    $ref: ../misc/html-id.v1.yaml
+                source:
+                    allOf:
+                      - $ref: ../misc/place.v1.yaml
+                      - properties:
+                            funderId:
+                                $ref: ../misc/doi.v1.yaml
+                awardId:
+                    type: string
+                    minLength: 1
+                awardDoi:
+                    $ref: ../misc/doi.v1.yaml
+                recipients:
+                    type: array
+                    items:
+                        oneOf:
+                          - allOf:
+                              - type: object
+                                properties:
+                                    type:
+                                        type: string
+                                        enum:
+                                          - person
+                                required:
+                                  - type
+                              - $ref: ../misc/person.v1.yaml
+                          - type: object
+                            properties:
+                                type:
+                                    type: string
+                                    enum:
+                                      - group
+                                name:
+                                    type: string
+                                    minLength: 1
+                            required:
+                              - type
+                              - name
+                    minItems: 1
+            required:
+              - id
+              - source
+    statement:
+        type: string
+        minLength: 1
+required:
+  - statement

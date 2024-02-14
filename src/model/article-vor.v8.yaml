@@ -1,0 +1,196 @@
+$schema: http://json-schema.org/draft-04/schema#
+title: Article VoR
+type: object
+allOf:
+  - $ref: ../snippets/article-vor.v1.yaml
+  - $ref: ../misc/article.v4.yaml
+  - properties:
+        abstract:
+            type: object
+            properties:
+                doi:
+                    $ref: ../misc/doi.v1.yaml
+        keywords:
+            type: array
+            items:
+                type: string
+                minLength: 1
+        digest:
+            type: object
+            properties:
+                doi:
+                    $ref: ../misc/doi.v1.yaml
+                content:
+                    type: array
+                    items:
+                        $ref: ../blocks/paragraph.v1.yaml
+                    minItems: 1
+            required:
+              - content
+        body:
+            type: array
+            items:
+                allOf:
+                  - $ref: ../blocks/section.v2.yaml
+                  - required:
+                      - id
+            minItems: 1
+        references:
+            type: array
+            items:
+                $ref: ../misc/reference.v2.yaml
+        appendices:
+            type: array
+            items:
+                type: object
+                properties:
+                    id:
+                        $ref: ../misc/html-id.v1.yaml
+                    doi:
+                        $ref: ../misc/doi.v1.yaml
+                    title:
+                        type: string
+                        minLength: 1
+                    content:
+                        type: array
+                        items:
+                            $ref: ../misc/blocks-all.v2.yaml
+                        minItems: 1
+                required:
+                  - id
+                  - title
+                  - content
+        acknowledgements:
+            type: array
+            items:
+                $ref: ../misc/blocks-all.v2.yaml
+            minItems: 1
+        editorEvaluation:
+            type: object
+            properties:
+                id:
+                    $ref: ../misc/html-id.v1.yaml
+                doi:
+                    $ref: ../misc/doi.v1.yaml
+                content:
+                    type: array
+                    items:
+                        $ref: ../misc/blocks-all.v2.yaml
+                    minItems: 1
+                scietyUri:
+                    title: Related material URI
+                    type: string
+                    format: uri
+            required:
+              - content
+        elifeAssessment:
+            type: object
+            properties:
+                title:
+                    title: Text
+                    type: string
+                    minLength: 1
+                id:
+                    $ref: ../misc/html-id.v1.yaml
+                doi:
+                    $ref: ../misc/doi.v1.yaml
+                content:
+                    type: array
+                    items:
+                        $ref: ../misc/blocks-all.v2.yaml
+                    minItems: 1
+                scietyUri:
+                    title: Related material URI
+                    type: string
+                    format: uri
+            required:
+              - title    
+              - content
+        decisionLetter:
+            type: object
+            properties:
+                id:
+                    $ref: ../misc/html-id.v1.yaml
+                doi:
+                    $ref: ../misc/doi.v1.yaml
+                description:
+                    type: array
+                    items:
+                        $ref: ../blocks/paragraph.v1.yaml
+                    minItems: 1
+                content:
+                    type: array
+                    items:
+                        $ref: ../misc/blocks-all.v2.yaml
+                    minItems: 1
+            required:
+              - description
+              - content
+        recommendationsForAuthors:
+            type: object
+            properties:
+                title:
+                    title: Text
+                    type: string
+                    minLength: 1
+                id:
+                    $ref: ../misc/html-id.v1.yaml
+                doi:
+                    $ref: ../misc/doi.v1.yaml
+                content:
+                    type: array
+                    items:
+                        $ref: ../misc/blocks-all.v2.yaml
+                    minItems: 1
+            required:
+              - title
+              - content
+        authorResponse:
+            type: object
+            properties:
+                id:
+                    $ref: ../misc/html-id.v1.yaml
+                doi:
+                    $ref: ../misc/doi.v1.yaml
+                content:
+                    type: array
+                    items:
+                        $ref: ../misc/blocks-all.v2.yaml
+                    minItems: 1
+            required:
+              - content
+        publicReviews:
+            type: array
+            items:
+                type: object
+                properties:
+                    title:
+                        title: Text
+                        type: string
+                        minLength: 1
+                    id:
+                        $ref: ../misc/html-id.v1.yaml
+                    doi:
+                        $ref: ../misc/doi.v1.yaml
+                    content:
+                        type: array
+                        items:
+                            $ref: ../misc/blocks-all.v2.yaml
+                        minItems: 1
+                required:
+                  - title
+                  - content
+            minItems: 1
+    required:
+      - body
+    anyOf:
+      - dependencies:
+            authorResponse: [decisionLetter]
+      - dependencies:
+            authorResponse: [editorEvaluation]
+      - dependencies:
+            authorResponse: [elifeAssessment]
+      - dependencies:
+            authorResponse: [publicReviews]
+      - dependencies:
+            authorResponse: [recommendationsForAuthors]
