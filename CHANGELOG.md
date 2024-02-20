@@ -4,7 +4,7 @@
 
 ### Added
 
-* added `awardDoi` to new file `misc/funding.v2.yaml`, compared to `misc/funding.v1.yaml`
+* added `awardDoi` to new file `misc/funding.v2.yaml`, a copy of `awardID` when `awardID` is a DOI.
 * added `misc/article.v4.yaml` which uses `misc/funding.v2.yaml`
 * added `model/article-poa.v4.yaml` which uses `misc/article.v4.yaml`
 * added `model/article-vor.v8.yaml` which uses `misc/article.v4.yaml`
