@@ -2,5 +2,5 @@ $schema: http://json-schema.org/draft-04/schema#
 title: Article PoA
 type: object
 allOf:
-  - $ref: ../misc/article.v2.yaml
+  - $ref: ../misc/article.v4.yaml
   - $ref: ../snippets/article-poa.v1.yaml

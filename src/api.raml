@@ -365,23 +365,8 @@ traits:
                     description: |
                         Article latest version.
                     body:
-                        application/vnd.elife.article-poa+json;version=2:
-                            (deprecated):
-                            schema: !include ../dist/model/article-poa.v2.json
-                            examples:
-                                minimum:
-                                    displayName: Minimum
-                                    value: !include samples/article-poa/v2/minimum.json
-                                complete:
-                                    displayName: Complete
-                                    value: !include samples/article-poa/v2/complete.json
-                                unpublishedMinimum:
-                                    displayName: PreviewMinimum
-                                    value: !include samples/article-poa/v2/unpublished-minimum.json
-                                unpublishedComplete:
-                                    displayName: PreviewComplete
-                                    value: !include samples/article-poa/v2/unpublished-complete.json
                         application/vnd.elife.article-poa+json;version=3:
+                            (deprecated):
                             schema: !include ../dist/model/article-poa.v3.json
                             examples:
                                 minimum:
@@ -396,38 +381,23 @@ traits:
                                 unpublishedComplete:
                                     displayName: PreviewComplete
                                     value: !include samples/article-poa/v3/unpublished-complete.json
-                        application/vnd.elife.article-vor+json;version=6:
-                            (deprecated):
-                            schema: !include model/article-vor.v6.json
+                        application/vnd.elife.article-poa+json;version=4:
+                            schema: !include ../dist/model/article-poa.v4.json
                             examples:
                                 minimum:
                                     displayName: Minimum
-                                    value: !include samples/article-vor/v6/minimum.json
+                                    value: !include samples/article-poa/v4/minimum.json
                                 complete:
                                     displayName: Complete
-                                    value: !include samples/article-vor/v6/complete.json
+                                    value: !include samples/article-poa/v4/complete.json
                                 unpublishedMinimum:
                                     displayName: PreviewMinimum
-                                    value: !include samples/article-vor/v6/unpublished-minimum.json
+                                    value: !include samples/article-poa/v4/unpublished-minimum.json
                                 unpublishedComplete:
                                     displayName: PreviewComplete
-                                    value: !include samples/article-vor/v6/unpublished-complete.json
-                                imageSocialOnly:
-                                    displayName: Image with social only
-                                    value: !include samples/article-vor/v6/image-social-only.json
-                                imageThumbnailOnly:
-                                    displayName: Image with thumbnail only
-                                    value: !include samples/article-vor/v6/image-thumbnail-only.json
-                                00569:
-                                    displayName: '00569'
-                                    value: !include samples/article-vor/v6/00569.json
-                                15278:
-                                    displayName: '15278'
-                                    value: !include samples/article-vor/v6/15278.json
-                                15691:
-                                    displayName: '15691'
-                                    value: !include samples/article-vor/v6/15691.json
+                                    value: !include samples/article-poa/v4/unpublished-complete.json
                         application/vnd.elife.article-vor+json;version=7:
+                            (deprecated):
                             schema: !include model/article-vor.v7.json
                             examples:
                                 minimum:
@@ -457,6 +427,36 @@ traits:
                                 15691:
                                     displayName: '15691'
                                     value: !include samples/article-vor/v7/15691.json
+                        application/vnd.elife.article-vor+json;version=8:
+                            schema: !include model/article-vor.v8.json
+                            examples:
+                                minimum:
+                                    displayName: Minimum
+                                    value: !include samples/article-vor/v8/minimum.json
+                                complete:
+                                    displayName: Complete
+                                    value: !include samples/article-vor/v8/complete.json
+                                unpublishedMinimum:
+                                    displayName: PreviewMinimum
+                                    value: !include samples/article-vor/v8/unpublished-minimum.json
+                                unpublishedComplete:
+                                    displayName: PreviewComplete
+                                    value: !include samples/article-vor/v8/unpublished-complete.json
+                                imageSocialOnly:
+                                    displayName: Image with social only
+                                    value: !include samples/article-vor/v8/image-social-only.json
+                                imageThumbnailOnly:
+                                    displayName: Image with thumbnail only
+                                    value: !include samples/article-vor/v8/image-thumbnail-only.json
+                                00569:
+                                    displayName: '00569'
+                                    value: !include samples/article-vor/v8/00569.json
+                                15278:
+                                    displayName: '15278'
+                                    value: !include samples/article-vor/v8/15278.json
+                                15691:
+                                    displayName: '15691'
+                                    value: !include samples/article-vor/v8/15691.json
 
         /related:
             type:
@@ -565,23 +565,8 @@ traits:
                             description: |
                                 Article version.
                             body:
-                                application/vnd.elife.article-poa+json;version=2:
-                                    (deprecated):
-                                    schema: !include ../dist/model/article-poa.v2.json
-                                    examples:
-                                        minimum:
-                                            displayName: Minimum
-                                            value: !include samples/article-poa/v2/minimum.json
-                                        complete:
-                                            displayName: Complete
-                                            value: !include samples/article-poa/v2/complete.json
-                                        unpublishedMinimum:
-                                            displayName: PreviewMinimum
-                                            value: !include samples/article-poa/v2/unpublished-minimum.json
-                                        unpublishedComplete:
-                                            displayName: PreviewComplete
-                                            value: !include samples/article-poa/v2/unpublished-complete.json
                                 application/vnd.elife.article-poa+json;version=3:
+                                    (deprecated):
                                     schema: !include ../dist/model/article-poa.v3.json
                                     examples:
                                         minimum:
@@ -596,38 +581,23 @@ traits:
                                         unpublishedComplete:
                                             displayName: PreviewComplete
                                             value: !include samples/article-poa/v3/unpublished-complete.json
-                                application/vnd.elife.article-vor+json;version=6:
-                                    (deprecated):
-                                    schema: !include ../dist/model/article-vor.v6.json
+                                application/vnd.elife.article-poa+json;version=4:
+                                    schema: !include ../dist/model/article-poa.v4.json
                                     examples:
                                         minimum:
                                             displayName: Minimum
-                                            value: !include samples/article-vor/v6/minimum.json
+                                            value: !include samples/article-poa/v4/minimum.json
                                         complete:
                                             displayName: Complete
-                                            value: !include samples/article-vor/v6/complete.json
+                                            value: !include samples/article-poa/v4/complete.json
                                         unpublishedMinimum:
                                             displayName: PreviewMinimum
-                                            value: !include samples/article-vor/v6/unpublished-minimum.json
+                                            value: !include samples/article-poa/v4/unpublished-minimum.json
                                         unpublishedComplete:
                                             displayName: PreviewComplete
-                                            value: !include samples/article-vor/v6/unpublished-complete.json
-                                        imageSocialOnly:
-                                            displayName: Image with social only
-                                            value: !include samples/article-vor/v6/image-social-only.json
-                                        imageThumbnailOnly:
-                                            displayName: Image with thumbnail only
-                                            value: !include samples/article-vor/v6/image-thumbnail-only.json
-                                        00569:
-                                            displayName: '00569'
-                                            value: !include samples/article-vor/v6/00569.json
-                                        15278:
-                                            displayName: '15278'
-                                            value: !include samples/article-vor/v6/15278.json
-                                        15691:
-                                            displayName: '15691'
-                                            value: !include samples/article-vor/v6/15691.json
+                                            value: !include samples/article-poa/v4/unpublished-complete.json
                                 application/vnd.elife.article-vor+json;version=7:
+                                    (deprecated):
                                     schema: !include ../dist/model/article-vor.v7.json
                                     examples:
                                         minimum:
@@ -657,6 +627,36 @@ traits:
                                         15691:
                                             displayName: '15691'
                                             value: !include samples/article-vor/v7/15691.json
+                                application/vnd.elife.article-vor+json;version=8:
+                                    schema: !include ../dist/model/article-vor.v8.json
+                                    examples:
+                                        minimum:
+                                            displayName: Minimum
+                                            value: !include samples/article-vor/v8/minimum.json
+                                        complete:
+                                            displayName: Complete
+                                            value: !include samples/article-vor/v8/complete.json
+                                        unpublishedMinimum:
+                                            displayName: PreviewMinimum
+                                            value: !include samples/article-vor/v8/unpublished-minimum.json
+                                        unpublishedComplete:
+                                            displayName: PreviewComplete
+                                            value: !include samples/article-vor/v8/unpublished-complete.json
+                                        imageSocialOnly:
+                                            displayName: Image with social only
+                                            value: !include samples/article-vor/v8/image-social-only.json
+                                        imageThumbnailOnly:
+                                            displayName: Image with thumbnail only
+                                            value: !include samples/article-vor/v8/image-thumbnail-only.json
+                                        00569:
+                                            displayName: '00569'
+                                            value: !include samples/article-vor/v8/00569.json
+                                        15278:
+                                            displayName: '15278'
+                                            value: !include samples/article-vor/v8/15278.json
+                                        15691:
+                                            displayName: '15691'
+                                            value: !include samples/article-vor/v8/15691.json
 
 /blog-articles:
     type: collection

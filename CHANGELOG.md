@@ -1,5 +1,29 @@
 # Changelog
 
+## 2.28.0
+
+### Added
+
+* added `awardDoi` to new file `misc/funding.v2.yaml`, a copy of `awardID` when `awardID` is a DOI.
+* added `misc/article.v4.yaml` which uses `misc/funding.v2.yaml`
+* added `model/article-poa.v4.yaml` which uses `misc/article.v4.yaml`
+* added `model/article-vor.v8.yaml` which uses `misc/article.v4.yaml`
+* added support for `application/vnd.elife.article-vor+json;version=8`
+* added support for `application/vnd.elife.article-poa+json;version=4`
+
+### Changed
+
+* `recipients` no longer a required field in new file `misc/funding.v2.yaml`, compared to `misc/funding.v1.yaml`
+* changed status to deprecated for `application/vnd.elife.article-vor+json;version=7`
+* changed status to deprecated for `application/vnd.elife.article-poa+json;version=3`
+
+### Removed
+
+* removed `model/article-poa.v2.yaml`
+* removed `model/article-vor.v6.yaml`
+* removed support for `application/vnd.elife.article-poa+json;version=2`
+* removed support for `application/vnd.elife.article-poa+json;version=6`
+
 ## 2.27.0
 
 ### Added
