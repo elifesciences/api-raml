@@ -1,22 +1,23 @@
 $schema: http://json-schema.org/draft-04/schema#
-title: Collection
+title: Promotional collection
 type: object
 allOf:
-  - $ref: ../snippets/collection.v1.yaml
+  - $ref: ../snippets/promotional-collection.v1.yaml
   - properties:
         image:
             type: object
             properties:
                 banner:
                     $ref: ../misc/image.v1.yaml
+                social:
+                    $ref: ../misc/image.v1.yaml
             required:
               - banner
-        curators:
-            description: List of curators, ordered by name
+        editors:
+            description: List of editors, ordered by name
             type: array
             items:
                 $ref: ../snippets/person.v1.yaml
-            minItems: 1
         summary:
             title: Summary
             type: array
@@ -46,8 +47,29 @@ allOf:
                                     type:
                                         type: string
                                         enum:
+                                          - digest
+                              - $ref: ../snippets/digest.v1.yaml
+                          - allOf:
+                              - properties:
+                                    type:
+                                        type: string
+                                        enum:
+                                          - event
+                              - $ref: ../snippets/event.v1.yaml
+                          - allOf:
+                              - properties:
+                                    type:
+                                        type: string
+                                        enum:
                                           - interview
                               - $ref: ../snippets/interview.v1.yaml
+                          - allOf:
+                              - properties:
+                                  type:
+                                    type: string
+                                    enum:
+                                      - reviewed-preprint
+                              - $ref: ../snippets/reviewed-preprint.v1.yaml
             minItems: 1
             uniqueItems: true
         relatedContent:
@@ -63,5 +85,4 @@ allOf:
                 $ref: ../snippets/podcast-episode.v1.yaml
             uniqueItems: true
     required:
-      - curators
       - content
