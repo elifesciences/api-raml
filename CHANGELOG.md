@@ -2,6 +2,11 @@
 
 ## [Unreleased]
 
+### Changed
+
+* changed `id` URI parameter in `/articles/{id}` from `string` to `integer`.
+    - zero padded integers are still integers and are fine.
+
 ### Fixed
 
 * fixed typo in `misc/author.v1.yaml` from 'minLenght' to 'minLength'.
