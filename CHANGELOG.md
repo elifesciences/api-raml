@@ -1,5 +1,11 @@
 # Changelog
 
+## [Unreleased]
+
+### Fixed
+
+* fixed typo in `misc/author.v1.yaml` from 'minLenght' to 'minLength'
+
 ## 2.28.0
 
 ### Added
@@ -27,11 +33,13 @@
 ## 2.27.0
 
 ### Added
+
 * added support for `dateRanged` in `application/vnd.elife.reviewed-preprint-list+json;version=1`
 
 ## 2.26.0
 
 ### Added
+
 * added experimental support for reviewed preprints in `application/vnd.elife.recommendations+json;version=3`
 
 ### Removed
