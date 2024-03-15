@@ -2,13 +2,16 @@
 
 ## [Unreleased]
 
+### Changed
+
+* changed `id` URI parameter in `/articles/{id}` from `string` to `integer`.
+    - zero padded integers are still integers and are fine.
+
 ### Fixed
 
 * fixed typo in `misc/author.v1.yaml` from 'minLenght' to 'minLength'.
 * fixed typo in `/highlights` URI parameters from `type` to `list`.
 * fixes typo in `/search` query parameter where `type` is actually `type[]`.
-* `id` URI parameter in `/articles/{id}` changed from `string` to `integer`.
-    - zero padded integers are still integers and are fine.
 
 ## 2.28.0
 
