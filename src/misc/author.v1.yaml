@@ -11,7 +11,7 @@ oneOf:
               - on-behalf-of
             onBehalfOf:
                 type: string
-                minLenght: 1
+                minLength: 1
     required:
       - onBehalfOf
   - allOf:
