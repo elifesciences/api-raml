@@ -6,6 +6,7 @@
 
 * fixed typo in `misc/author.v1.yaml` from 'minLenght' to 'minLength'.
 * fixed typo in `/highlights` URI parameters from `type` to `list`.
+* fixes typo in `/search` query parameter where `type` is actually `type[]`.
 
 ## 2.28.0
 
