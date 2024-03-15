@@ -243,7 +243,37 @@
                                 "content": {
                                     "type": "array",
                                     "items": {
-                                        "$ref": "#/allOf/0/allOf/1/properties/ethics/items"
+                                        "oneOf": [
+                                            {
+                                                "properties": {
+                                                    "type": {
+                                                        "type": "string",
+                                                        "enum": [
+                                                            "section"
+                                                        ]
+                                                    },
+                                                    "id": {
+                                                        "$ref": "#/allOf/0/allOf/1/properties/dataSets/properties/generated/items/properties/id"
+                                                    },
+                                                    "title": {
+                                                        "title": "Text",
+                                                        "type": "string",
+                                                        "minLength": 1
+                                                    },
+                                                    "content": {
+                                                        "description": "Content",
+                                                        "type": "array",
+                                                        "items": {
+                                                            "$ref": "#/allOf/0/allOf/1/properties/ethics/items"
+                                                        },
+                                                        "minItems": 1
+                                                    }
+                                                }
+                                            },
+                                            {
+                                                "$ref": "#/allOf/0/allOf/1/properties/ethics/items"
+                                            }
+                                        ]
                                     },
                                     "minItems": 1
                                 }
@@ -334,7 +364,7 @@
                                                 ],
                                                 "onBehalfOf": {
                                                     "type": "string",
-                                                    "minLenght": 1
+                                                    "minLength": 1
                                                 }
                                             }
                                         },
@@ -788,6 +818,9 @@
                                                 "type": "string",
                                                 "minLength": 1
                                             },
+                                            "awardDoi": {
+                                                "$ref": "#/allOf/0/allOf/0/properties/doi"
+                                            },
                                             "recipients": {
                                                 "type": "array",
                                                 "items": {
@@ -839,8 +872,7 @@
                                         },
                                         "required": [
                                             "id",
-                                            "source",
-                                            "recipients"
+                                            "source"
                                         ]
                                     }
                                 },
