@@ -4,7 +4,8 @@
 
 ### Fixed
 
-* fixed typo in `misc/author.v1.yaml` from 'minLenght' to 'minLength'
+* fixed typo in `misc/author.v1.yaml` from 'minLenght' to 'minLength'.
+* fixed typo in `/highlights` URI parameters from `type` to `list`.
 
 ## 2.28.0
 
