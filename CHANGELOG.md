@@ -6,6 +6,7 @@
 
 * fixed typo in `misc/author.v1.yaml` from 'minLenght' to 'minLength'.
 * fixed typo in `/highlights` URI parameters from `type` to `list`.
+* fixes typo in `/search` query parameter where `type` is actually `type[]`.
 
 ## 2.28.0
 
@@ -23,8 +24,6 @@
 * `recipients` no longer a required field in new file `misc/funding.v2.yaml`, compared to `misc/funding.v1.yaml`
 * changed status to deprecated for `application/vnd.elife.article-vor+json;version=7`
 * changed status to deprecated for `application/vnd.elife.article-poa+json;version=3`
-
-* fixes typo in `/search` query parameter where `type` is actually `type[]`.
 
 ### Removed
 
