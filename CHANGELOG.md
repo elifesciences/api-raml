@@ -2,17 +2,95 @@
 
 ## [Unreleased]
 
+### Fixed
+
+* fixed typo in `misc/author.v1.yaml` from 'minLenght' to 'minLength'
+
+## 2.28.0
+
 ### Added
+
+* added `awardDoi` to new file `misc/funding.v2.yaml`, a copy of `awardID` when `awardID` is a DOI.
+* added `misc/article.v4.yaml` which uses `misc/funding.v2.yaml`
+* added `model/article-poa.v4.yaml` which uses `misc/article.v4.yaml`
+* added `model/article-vor.v8.yaml` which uses `misc/article.v4.yaml`
+* added support for `application/vnd.elife.article-vor+json;version=8`
+* added support for `application/vnd.elife.article-poa+json;version=4`
 
 ### Changed
 
-* reviewed-preprint snippets may now be returned as part of the `/articles/{id}/related` endpoint.
+* `recipients` no longer a required field in new file `misc/funding.v2.yaml`, compared to `misc/funding.v1.yaml`
+* changed status to deprecated for `application/vnd.elife.article-vor+json;version=7`
+* changed status to deprecated for `application/vnd.elife.article-poa+json;version=3`
 
-### Fixed
+### Removed
+
+* removed `model/article-poa.v2.yaml`
+* removed `model/article-vor.v6.yaml`
+* removed support for `application/vnd.elife.article-poa+json;version=2`
+* removed support for `application/vnd.elife.article-poa+json;version=6`
+
+## 2.27.0
+
+### Added
+* added support for `dateRanged` in `application/vnd.elife.reviewed-preprint-list+json;version=1`
+
+## 2.26.0
+
+### Added
+* added experimental support for reviewed preprints in `application/vnd.elife.recommendations+json;version=3`
 
 * fixed typo from 'minLenght' to 'minLength' in `misc/author.v1.yaml`
 
+* removed support for `application/vnd.elife.recommendations+json;version=1`
+
+## 2.25.0
+
+### Changed
+
+* changed status to deprecated for `application/vnd.elife.blog-article+json;version=1`
+* changed status to deprecated for `application/vnd.elife.collection+json;version=2`
+* changed status to deprecated for `application/vnd.elife.event+json;version=1`
+* changed status to deprecated for `application/vnd.elife.highlight-list+json;version=2`
+* changed status to deprecated for `application/vnd.elife.interview+json;version=1`
+* changed status to deprecated for `application/vnd.elife.labs-post+json;version=1`
+* changed status to deprecated for `application/vnd.elife.promotional-collection+json;version=1`
+* changed status to deprecated for `application/vnd.elife.recommendations+json;version=1`
+* changed status to deprecated for `application/vnd.elife.search+json;version=1`
+
 ### Removed
+
+* removed support for `application/vnd.elife.highlight-list+json;version=1`
+* removed experimental flag from `/annotations`
+* removed experimental flag from `application/vnd.elife.blog-article+json;version=2`
+* removed experimental flag from `application/vnd.elife.event+json;version=2`
+* removed experimental flag from `application/vnd.elife.highlight-list+json;version=3`
+* removed experimental flag from `application/vnd.elife.interview+json;version=2`
+* removed experimental flag from `/job-adverts`
+* removed experimental flag from `application/vnd.elife.labs-post+json;version=2`
+* removed experimental flag from `/profiles`
+* removed experimental flag from `/promotional-collections`
+* removed experimental flag from `application/vnd.elife.recommendations+json;version=2`
+* removed experimental flag from `/reviewed-preprints`
+* removed experimental flag from `application/vnd.elife.search+json;version=2`
+
+## 2.24.0
+
+### Added
+
+* added experimental support for reviewed preprints in `application/vnd.elife.promotional-collection+json;version=2`
+
+## 2.23.0
+
+### Added
+
+* added experimental support for reviewed preprints in `application/vnd.elife.collection+json;version=3`
+* added experimental support for reviewed preprints in `application/vnd.elife.article-related+json;version=2`
+
+### Removed
+
+* removed support for `application/vnd.elife.collection+json;version=1`
+* removed experimental flag from `application/vnd.elife.collection+json;version=2`
 
 ## 2.22.0
 
@@ -267,14 +345,3 @@
 ### Removed
 
 *no removals*
-
-## [Unreleased]
-
-### Added
-
-### Changed
-
-### Fixed
-
-### Removed
-
