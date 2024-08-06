@@ -12,6 +12,7 @@ properties:
         enum:
           - correction
           - editorial
+          - expression-concern
           - feature
           - insight
           - research-advance

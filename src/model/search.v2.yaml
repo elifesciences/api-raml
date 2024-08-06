@@ -89,6 +89,10 @@ properties:
         description: Number of editorial articles in the result set
         type: integer
         minimum: 0
+      expression-concern:
+        description: Number of expression of concern articles in the result set
+        type: integer
+        minimum: 0
       feature:
         description: Number of feature articles in the result set
         type: integer
@@ -164,6 +168,7 @@ properties:
     required:
       - correction
       - editorial
+      - expression-concern
       - feature
       - insight
       - research-advance
