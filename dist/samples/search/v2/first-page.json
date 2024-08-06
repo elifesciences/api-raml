@@ -278,6 +278,7 @@
     "types": {
         "correction": 0,
         "editorial": 1,
+        "expression-concern": 0,
         "feature": 0,
         "insight": 0,
         "research-advance": 1,
