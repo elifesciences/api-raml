@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.30.0
+
+### Added
+
+* added optional version to reviewed-preprint
+
 ## 2.29.0
 
 ### Added
