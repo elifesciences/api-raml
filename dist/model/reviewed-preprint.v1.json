@@ -71,10 +71,6 @@
                     "type": "integer",
                     "minimum": 1
                 },
-                "version": {
-                    "type": "integer",
-                    "minimum": 1
-                },
                 "elocationId": {
                     "type": "string",
                     "minLength": 1
