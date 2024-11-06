@@ -83,6 +83,12 @@ properties:
                 - thumbnail
             - required:
                 - social
+    elifeAssessment:
+        type: object
+        $ref: ../misc/elife-assessment-terms.v1.yaml
+        required:
+            - significance
+            - strength
 required:
     - status
     - id

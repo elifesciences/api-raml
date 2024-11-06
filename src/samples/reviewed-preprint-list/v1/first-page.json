@@ -44,6 +44,15 @@
                         "y": 75
                     }
                 }
+            },
+            "elifeAssessment": {
+                "significance": [
+                    "fundamental",
+                    "important"
+                ],
+                "strength": [
+                    "exceptional"
+                ]
             }
         },
         {
@@ -89,6 +98,12 @@
                         "y": 75
                     }
                 }
+            },
+            "elifeAssessment": {
+                "significance": [],
+                "strength": [
+                    "convincing"
+                ]
             }
         },
         {
