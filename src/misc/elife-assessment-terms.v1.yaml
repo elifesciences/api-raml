@@ -1,0 +1,26 @@
+$schema: http://json-schema.org/draft-04/schema#
+title: Has elifeAssessment terms
+type: object
+properties:
+    significance:
+      type: array
+      items:
+        type: string
+        enum:
+          - landmark
+          - fundamental
+          - important
+          - valuable
+          - useful
+    strength:
+      type: array
+      minItems: 1
+      items:
+        type: string
+        enum:
+          - exceptional
+          - compelling
+          - convincing
+          - solid
+          - incomplete
+          - inadequate
