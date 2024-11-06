@@ -24,6 +24,28 @@ allOf:
               title: Related material URI
               type: string
               format: uri
+            significance:
+              type: array
+              items:
+                type: string
+                enum:
+                  - landmark
+                  - fundamental
+                  - important
+                  - valuable
+                  - useful
+            strength:
+              type: array
+              items:
+                type: string
+                minLength: 1
+                enum:
+                  - exceptional
+                  - compelling
+                  - convincing
+                  - solid
+                  - incomplete
+                  - inadequate
           required:
             - title    
             - content
