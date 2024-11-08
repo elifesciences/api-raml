@@ -6,16 +6,16 @@
 
 * added `specificUse` to references of type `data` in `misc/reference.v2.yaml`
 
-### Changed
-
-* changed `id` URI parameter in `/articles/{id}` from `string` to `integer`.
-    - zero padded integers are still integers and are fine.
-
 ## 2.30.0
 
 ### Added
 
 * added optional version to reviewed-preprint
+
+### Changed
+
+* changed `id` URI parameter in `/articles/{id}` from `string` to `integer`.
+    - zero padded integers are still integers and are fine.
 
 ## 2.29.0
 
