@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.31.0
+
+### Added
+
+* added `specificUse` to references of type `data` in `misc/reference.v2.yaml`
+
 ## 2.30.0
 
 ### Added
