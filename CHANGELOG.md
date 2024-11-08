@@ -12,11 +12,6 @@
 
 * added optional version to reviewed-preprint
 
-### Changed
-
-* changed `id` URI parameter in `/articles/{id}` from `string` to `integer`.
-    - zero padded integers are still integers and are fine.
-
 ## 2.29.0
 
 ### Added
@@ -24,6 +19,11 @@
 * for `Expression of Concern` article type, added `expression-concern` to list of allowed `type` values in `snippets/article.v1.yaml`
 * `expression-concern` to list of `types` in `model/search.v2.yaml`
 * added `expression-concern` to `api.raml`
+
+### Changed
+
+* changed `id` URI parameter in `/articles/{id}` from `string` to `integer`.
+    - zero padded integers are still integers and are fine.
 
 ### Fixed
 
