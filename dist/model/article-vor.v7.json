@@ -1427,6 +1427,13 @@
                                                     "assigningAuthority": {
                                                         "$ref": "#/allOf/2/properties/references/items/definitions/book/properties/publisher"
                                                     },
+                                                    "specificUse": {
+                                                        "type": "string",
+                                                        "enum": [
+                                                            "analyzed",
+                                                            "generated"
+                                                        ]
+                                                    },
                                                     "doi": {
                                                         "$ref": "#/allOf/0/allOf/0/properties/doi"
                                                     },
