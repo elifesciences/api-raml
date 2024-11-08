@@ -160,6 +160,7 @@
                                                 "enum": [
                                                     "correction",
                                                     "editorial",
+                                                    "expression-concern",
                                                     "feature",
                                                     "insight",
                                                     "research-advance",
@@ -862,6 +863,10 @@
                                                                 "$ref": "#/properties/items/items/properties/item/oneOf/0/allOf/0/properties/published"
                                                             },
                                                             "volume": {
+                                                                "type": "integer",
+                                                                "minimum": 1
+                                                            },
+                                                            "version": {
                                                                 "type": "integer",
                                                                 "minimum": 1
                                                             },

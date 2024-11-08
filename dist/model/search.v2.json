@@ -38,6 +38,7 @@
                                         "enum": [
                                             "correction",
                                             "editorial",
+                                            "expression-concern",
                                             "feature",
                                             "insight",
                                             "research-advance",
@@ -396,6 +397,10 @@
                                                         "$ref": "#/properties/items/items/oneOf/0/allOf/0/properties/published"
                                                     },
                                                     "volume": {
+                                                        "type": "integer",
+                                                        "minimum": 1
+                                                    },
+                                                    "version": {
                                                         "type": "integer",
                                                         "minimum": 1
                                                     },
@@ -953,6 +958,11 @@
                     "type": "integer",
                     "minimum": 0
                 },
+                "expression-concern": {
+                    "description": "Number of expression of concern articles in the result set",
+                    "type": "integer",
+                    "minimum": 0
+                },
                 "feature": {
                     "description": "Number of feature articles in the result set",
                     "type": "integer",
@@ -1047,6 +1057,7 @@
             "required": [
                 "correction",
                 "editorial",
+                "expression-concern",
                 "feature",
                 "insight",
                 "research-advance",
