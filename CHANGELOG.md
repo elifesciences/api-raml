@@ -1,6 +1,6 @@
 # Changelog
 
-## 2.31.0
+## 2.32.0
 
 ### Added
 
@@ -9,7 +9,13 @@
 
 ### Changed
 
-* introduce elifeAssessment to article-vor snippet
+* move optional elifeAssessment to article-vor snippet
+
+## 2.31.0
+
+### Added
+
+* added `specificUse` to references of type `data` in `misc/reference.v2.yaml`
 
 ## 2.30.0
 
