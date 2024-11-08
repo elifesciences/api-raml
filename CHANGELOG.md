@@ -1,5 +1,16 @@
 # Changelog
 
+## 2.32.0
+
+### Added
+
+* add optional strength and significance terms to elifeAssessment
+* add optional elifeAssessment to reviewed preprints snippet
+
+### Changed
+
+* move optional elifeAssessment to article-vor snippet
+
 ## 2.31.0
 
 ### Added
