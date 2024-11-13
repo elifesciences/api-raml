@@ -1233,6 +1233,73 @@
                                         "$ref": "#/allOf/1/properties/relatedContent/items/oneOf/0/allOf/0"
                                     },
                                     {
+                                        "$schema": "http://json-schema.org/draft-04/schema#",
+                                        "title": "Has elifeAssessment",
+                                        "type": "object",
+                                        "properties": {
+                                            "elifeAssessment": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "title": {
+                                                        "title": "Text",
+                                                        "type": "string",
+                                                        "minLength": 1
+                                                    },
+                                                    "id": {
+                                                        "$ref": "#/allOf/1/properties/content/items/oneOf/1/properties/id"
+                                                    },
+                                                    "doi": {
+                                                        "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/1/properties/doi"
+                                                    },
+                                                    "content": {
+                                                        "type": "array",
+                                                        "items": {
+                                                            "$ref": "#/allOf/1/properties/content/items"
+                                                        },
+                                                        "minItems": 1
+                                                    },
+                                                    "scietyUri": {
+                                                        "title": "Related material URI",
+                                                        "type": "string",
+                                                        "format": "uri"
+                                                    },
+                                                    "significance": {
+                                                        "type": "array",
+                                                        "items": {
+                                                            "type": "string",
+                                                            "enum": [
+                                                                "landmark",
+                                                                "fundamental",
+                                                                "important",
+                                                                "valuable",
+                                                                "useful"
+                                                            ]
+                                                        }
+                                                    },
+                                                    "strength": {
+                                                        "type": "array",
+                                                        "minItems": 1,
+                                                        "items": {
+                                                            "type": "string",
+                                                            "enum": [
+                                                                "exceptional",
+                                                                "compelling",
+                                                                "convincing",
+                                                                "solid",
+                                                                "incomplete",
+                                                                "inadequate"
+                                                            ]
+                                                        }
+                                                    }
+                                                },
+                                                "required": [
+                                                    "title",
+                                                    "content"
+                                                ]
+                                            }
+                                        }
+                                    },
+                                    {
                                         "properties": {
                                             "doiVersion": {
                                                 "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/1/properties/doi"
@@ -1293,112 +1360,119 @@
                                                         "$schema": "http://json-schema.org/draft-04/schema#",
                                                         "title": "Reviewed preprint snippet",
                                                         "type": "object",
-                                                        "properties": {
-                                                            "id": {
-                                                                "$ref": "#/allOf/0/properties/id"
+                                                        "allOf": [
+                                                            {
+                                                                "$ref": "#/allOf/1/properties/relatedContent/items/oneOf/1/allOf/1"
                                                             },
-                                                            "status": {
-                                                                "type": "string",
-                                                                "enum": [
-                                                                    "reviewed",
-                                                                    "final"
-                                                                ]
-                                                            },
-                                                            "doi": {
-                                                                "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/1/properties/doi"
-                                                            },
-                                                            "authorLine": {
-                                                                "description": "For example:\n    - Ian T Baldwin\n    - Randy Schekman, Mark Patterson\n    - Lee R Berger, John Hawks ... Scott A Williams\n",
-                                                                "type": "string",
-                                                                "minLength": 1
-                                                            },
-                                                            "title": {
-                                                                "type": "string",
-                                                                "minLength": 1
-                                                            },
-                                                            "titlePrefix": {
-                                                                "type": "string",
-                                                                "minLength": 1
-                                                            },
-                                                            "stage": {
-                                                                "type": "string",
-                                                                "enum": [
-                                                                    "preview",
-                                                                    "published"
-                                                                ]
-                                                            },
-                                                            "published": {
-                                                                "title": "Publication date (UTC)",
-                                                                "description": "Date and time this reviewed-preprint was first published.\nNot present if 'stage' is 'preview'.\n",
-                                                                "$ref": "#/allOf/0/properties/published"
-                                                            },
-                                                            "reviewedDate": {
-                                                                "description": "Date of review\n",
-                                                                "$ref": "#/allOf/0/properties/published"
-                                                            },
-                                                            "versionDate": {
-                                                                "description": "Date and time this version of the article was published.\n",
-                                                                "$ref": "#/allOf/0/properties/published"
-                                                            },
-                                                            "statusDate": {
-                                                                "description": "Date and time this article transitioned to current status.\n",
-                                                                "$ref": "#/allOf/0/properties/published"
-                                                            },
-                                                            "volume": {
-                                                                "type": "integer",
-                                                                "minimum": 1
-                                                            },
-                                                            "version": {
-                                                                "type": "integer",
-                                                                "minimum": 1
-                                                            },
-                                                            "elocationId": {
-                                                                "type": "string",
-                                                                "minLength": 1
-                                                            },
-                                                            "pdf": {
-                                                                "type": "string",
-                                                                "format": "uri"
-                                                            },
-                                                            "subjects": {
-                                                                "type": "array",
-                                                                "items": {
-                                                                    "$ref": "#/allOf/0/properties/subjects/items"
-                                                                },
-                                                                "uniqueItems": true
-                                                            },
-                                                            "curationLabels": {
-                                                                "type": "array",
-                                                                "items": {
-                                                                    "type": "string",
-                                                                    "minLength": 1
-                                                                },
-                                                                "uniqueItems": true
-                                                            },
-                                                            "image": {
-                                                                "type": "object",
+                                                            {
                                                                 "properties": {
-                                                                    "thumbnail": {
-                                                                        "$ref": "#/allOf/1/properties/image/properties/social"
+                                                                    "id": {
+                                                                        "$ref": "#/allOf/0/properties/id"
                                                                     },
-                                                                    "social": {
-                                                                        "$ref": "#/allOf/1/properties/image/properties/social"
-                                                                    }
-                                                                },
-                                                                "anyOf": [
-                                                                    {
-                                                                        "required": [
-                                                                            "thumbnail"
+                                                                    "status": {
+                                                                        "type": "string",
+                                                                        "enum": [
+                                                                            "reviewed",
+                                                                            "final"
                                                                         ]
                                                                     },
-                                                                    {
-                                                                        "required": [
-                                                                            "social"
+                                                                    "doi": {
+                                                                        "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/1/properties/doi"
+                                                                    },
+                                                                    "authorLine": {
+                                                                        "description": "For example:\n    - Ian T Baldwin\n    - Randy Schekman, Mark Patterson\n    - Lee R Berger, John Hawks ... Scott A Williams\n",
+                                                                        "type": "string",
+                                                                        "minLength": 1
+                                                                    },
+                                                                    "title": {
+                                                                        "type": "string",
+                                                                        "minLength": 1
+                                                                    },
+                                                                    "titlePrefix": {
+                                                                        "type": "string",
+                                                                        "minLength": 1
+                                                                    },
+                                                                    "stage": {
+                                                                        "type": "string",
+                                                                        "enum": [
+                                                                            "preview",
+                                                                            "published"
+                                                                        ]
+                                                                    },
+                                                                    "published": {
+                                                                        "title": "Publication date (UTC)",
+                                                                        "description": "Date and time this reviewed-preprint was first published.\nNot present if 'stage' is 'preview'.\n",
+                                                                        "$ref": "#/allOf/0/properties/published"
+                                                                    },
+                                                                    "reviewedDate": {
+                                                                        "description": "Date of review\n",
+                                                                        "$ref": "#/allOf/0/properties/published"
+                                                                    },
+                                                                    "versionDate": {
+                                                                        "description": "Date and time this version of the article was published.\n",
+                                                                        "$ref": "#/allOf/0/properties/published"
+                                                                    },
+                                                                    "statusDate": {
+                                                                        "description": "Date and time this article transitioned to current status.\n",
+                                                                        "$ref": "#/allOf/0/properties/published"
+                                                                    },
+                                                                    "volume": {
+                                                                        "type": "integer",
+                                                                        "minimum": 1
+                                                                    },
+                                                                    "version": {
+                                                                        "type": "integer",
+                                                                        "minimum": 1
+                                                                    },
+                                                                    "elocationId": {
+                                                                        "type": "string",
+                                                                        "minLength": 1
+                                                                    },
+                                                                    "pdf": {
+                                                                        "type": "string",
+                                                                        "format": "uri"
+                                                                    },
+                                                                    "subjects": {
+                                                                        "type": "array",
+                                                                        "items": {
+                                                                            "$ref": "#/allOf/0/properties/subjects/items"
+                                                                        },
+                                                                        "uniqueItems": true
+                                                                    },
+                                                                    "curationLabels": {
+                                                                        "type": "array",
+                                                                        "items": {
+                                                                            "type": "string",
+                                                                            "minLength": 1
+                                                                        },
+                                                                        "uniqueItems": true
+                                                                    },
+                                                                    "image": {
+                                                                        "type": "object",
+                                                                        "properties": {
+                                                                            "thumbnail": {
+                                                                                "$ref": "#/allOf/1/properties/image/properties/social"
+                                                                            },
+                                                                            "social": {
+                                                                                "$ref": "#/allOf/1/properties/image/properties/social"
+                                                                            }
+                                                                        },
+                                                                        "anyOf": [
+                                                                            {
+                                                                                "required": [
+                                                                                    "thumbnail"
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                "required": [
+                                                                                    "social"
+                                                                                ]
+                                                                            }
                                                                         ]
                                                                     }
-                                                                ]
+                                                                }
                                                             }
-                                                        },
+                                                        ],
                                                         "required": [
                                                             "status",
                                                             "id",

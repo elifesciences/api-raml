@@ -1233,6 +1233,73 @@
                                         "$ref": "#/allOf/1/properties/relatedContent/items/oneOf/0/allOf/0"
                                     },
                                     {
+                                        "$schema": "http://json-schema.org/draft-04/schema#",
+                                        "title": "Has elifeAssessment",
+                                        "type": "object",
+                                        "properties": {
+                                            "elifeAssessment": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "title": {
+                                                        "title": "Text",
+                                                        "type": "string",
+                                                        "minLength": 1
+                                                    },
+                                                    "id": {
+                                                        "$ref": "#/allOf/1/properties/content/items/oneOf/1/properties/id"
+                                                    },
+                                                    "doi": {
+                                                        "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/1/properties/doi"
+                                                    },
+                                                    "content": {
+                                                        "type": "array",
+                                                        "items": {
+                                                            "$ref": "#/allOf/1/properties/content/items"
+                                                        },
+                                                        "minItems": 1
+                                                    },
+                                                    "scietyUri": {
+                                                        "title": "Related material URI",
+                                                        "type": "string",
+                                                        "format": "uri"
+                                                    },
+                                                    "significance": {
+                                                        "type": "array",
+                                                        "items": {
+                                                            "type": "string",
+                                                            "enum": [
+                                                                "landmark",
+                                                                "fundamental",
+                                                                "important",
+                                                                "valuable",
+                                                                "useful"
+                                                            ]
+                                                        }
+                                                    },
+                                                    "strength": {
+                                                        "type": "array",
+                                                        "minItems": 1,
+                                                        "items": {
+                                                            "type": "string",
+                                                            "enum": [
+                                                                "exceptional",
+                                                                "compelling",
+                                                                "convincing",
+                                                                "solid",
+                                                                "incomplete",
+                                                                "inadequate"
+                                                            ]
+                                                        }
+                                                    }
+                                                },
+                                                "required": [
+                                                    "title",
+                                                    "content"
+                                                ]
+                                            }
+                                        }
+                                    },
+                                    {
                                         "properties": {
                                             "doiVersion": {
                                                 "$ref": "#/allOf/1/properties/content/items/oneOf/0/oneOf/1/properties/doi"
