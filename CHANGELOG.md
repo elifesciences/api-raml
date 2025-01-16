@@ -1,21 +1,16 @@
 # Changelog
 
-## 2.32.0
+## 2.31.0
 
 ### Added
 
+* added `specificUse` to references of type `data` in `misc/reference.v2.yaml`
 * add optional strength and significance terms to elifeAssessment
 * add optional elifeAssessment to reviewed preprints snippet
 
 ### Changed
 
 * move optional elifeAssessment to article-vor snippet
-
-## 2.31.0
-
-### Added
-
-* added `specificUse` to references of type `data` in `misc/reference.v2.yaml`
 
 ## 2.30.0
 
