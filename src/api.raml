@@ -1907,6 +1907,34 @@ traits:
                       - podcast-episode
                       - reviewed-preprint
                 required: false
+            strength:
+                description: |
+                    Strength of evidence
+                type: string
+                required: false
+                enum:
+                  - inadequate
+                  - incomplete
+                  - solid
+                  - convincing
+                  - compelling
+                  - exceptional
+            significance:
+                description: |
+                    Significance
+                type: string
+                required: false
+                enum:
+                  - landmark
+                  - fundamental
+                  - important
+                  - valuable
+                  - useful
+            prc:
+                description: |
+                    PRC only
+                type: string
+                required: false
         responses:
             200:
                 description: |
