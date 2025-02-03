@@ -1907,6 +1907,15 @@ traits:
                       - podcast-episode
                       - reviewed-preprint
                 required: false
+            elifeAssessmentSignificance[]:
+                description: |
+                    Only include results...
+                type: array
+                items:
+                    type: string
+                    enum:
+                      - landmark
+                required: false
         responses:
             200:
                 description: |
