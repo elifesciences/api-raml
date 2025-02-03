@@ -1907,6 +1907,41 @@ traits:
                       - podcast-episode
                       - reviewed-preprint
                 required: false
+            elifeAssessmentSignificance[]:
+                description: |
+                    Only include results of the specified significance terms (see below for exceptions to this rule).
+                    'not-applicable' means the article does not have an elifeAssessment
+                    'not-assigned' means the article has an elifeAssessment but no significance term has been assigned
+                type: array
+                items:
+                    type: string
+                    enum:
+                      - landmark
+                      - fundamental
+                      - important
+                      - valuable
+                      - useful
+                      - not-applicable
+                      - not-assigned
+                required: false
+            elifeAssessmentStrength[]:
+                description: |
+                    Only include results of the strength terms (see below for exceptions to this rule).
+                    'not-applicable' means the article does not have an elifeAssessment
+                    'not-assigned' means the article has an elifeAssessment but no strength term has been assigned
+                type: array
+                items:
+                    type: string
+                    enum:
+                      - exceptional
+                      - compelling
+                      - convincing
+                      - solid
+                      - incomplete
+                      - inadequate
+                      - not-applicable
+                      - not-assigned
+                required: false
         responses:
             200:
                 description: |
