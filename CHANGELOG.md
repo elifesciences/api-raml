@@ -1,5 +1,12 @@
 # Changelog
 
+## 2.32.0
+
+### Added
+
+* add optional `elifeAssessmentSignificance[]` query parameter for `/search`
+* add optional `elifeAssessmentStrength[]` query parameter for `/search`
+
 ## 2.31.0
 
 ### Added
