@@ -1362,6 +1362,26 @@ traits:
                         schema: !include ../dist/model/metric-citations.v1.json
                         example:
                             value: !include samples/metric-citations/v1/complete.json
+    /version/{version}:
+        type: collection
+        description: |
+            Version citation metrics
+        uriParameters:
+            version:
+                description: |
+                    Article version number.
+                type: integer
+                minimum: 1
+        get:
+            description: |
+                Get citation metrics for an article version
+            responses:
+                200:
+                    body:
+                        application/vnd.elife.metric-citations+json;version=1:
+                            schema: !include ../dist/model/metric-citations.v1.json
+                            example:
+                                value: !include samples/metric-citations/v1/complete.json
 
 /metrics/{type}/{id}/{metric}:
     type: collection
