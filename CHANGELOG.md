@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.33.0
+
+### Added
+
+* added endpoint for citation metrics by verison DOI to `api.raml` (`metrics/{type}/{id}/citations/version/{version}`)
+
 ## 2.32.0
 
 ### Added
