@@ -3,6 +3,7 @@ name: Build Docs Image
 on:
   release:
     types: [published]
+  pull_request:
 
 jobs:
   generate-version:
