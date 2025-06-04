@@ -21,7 +21,8 @@ jobs:
     runs-on: ubuntu-latest
     env:
       IMAGE_REPO: ghcr.io/elifesciences/api-raml-docs
-      IMAGE_TAG: ${{ github.ref == 'refs/heads/master' && needs.generate-version.outputs.trunkver || format('{0}-{1}', github.head_ref || github.ref_name, needs.generate-version.outputs.trunkver) }}
+      # image is either a release name, or a trunkver prefixed by the branch
+      IMAGE_TAG: ${{ github.event.release.name || format('{0}-{1}', github.head_ref || github.ref_name, needs.generate-version.outputs.trunkver) }}
     steps:
       - uses: actions/checkout@v4
       - name: Set up QEMU
@@ -45,5 +46,4 @@ jobs:
           load: false
           platforms: linux/amd64,linux/arm64
           tags: |
-            ${{ env.IMAGE_REPO }}:${{ github.sha }}
             ${{ env.IMAGE_REPO }}:${{ env.IMAGE_TAG }}
