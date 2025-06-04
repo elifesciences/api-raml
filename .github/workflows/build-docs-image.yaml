@@ -38,7 +38,7 @@ jobs:
         run: npm install
       - name: compile the dist/
         run: node compile.js
-      - name: Build and push client image
+      - name: Build and push image
         uses: docker/build-push-action@v6
         with:
           push: true
