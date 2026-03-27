@@ -3,6 +3,7 @@
     "items": [
         {
             "title": "Epidermal growth factor",
+            "highlightImpactStatement": "Shining a new light on the epidermal growth factor and its multimerization.",
             "item": {
                 "status": "poa",
                 "id": "14107",
@@ -19,6 +20,7 @@
         },
         {
             "title": "<i>Homo naledi</i>",
+            "highlightImpactStatement": "Homo naledi impact statement.",
             "image": {
                 "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif",
                 "alt": "",
@@ -77,6 +79,7 @@
         },
         {
             "title": "Understanding health",
+            "highlightImpactStatement": "",
             "item": {
                 "type": "digest",
                 "id": "1",
@@ -102,6 +105,7 @@
         },
         {
             "title": "We welcome Michael Eisen as our new Editor-in-Chief",
+            "highlightImpactStatement": "",
             "item": {
                 "type": "press-package",
                 "id": "1",

@@ -17,6 +17,9 @@ properties:
                     type: string
                 image:
                     $ref: ../misc/image.v1.yaml
+                highlightImpactStatement:
+                    description: The Impact Statement of the highlight item.
+                    type: string
                 item:
                     oneOf:
                       - $ref: ../snippets/article-poa.v1.yaml
