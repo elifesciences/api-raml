@@ -127,9 +127,10 @@
                             }
                         ]
                     },
-                    "highlightImpactStatement": {
+                    "impactStatement": {
                         "description": "The Impact Statement of the highlight item.",
-                        "type": "string"
+                        "type": "string",
+                        "minLength": 1
                     },
                     "item": {
                         "oneOf": [
