@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.34.0
+
+### Added
+
+* added optional `impactStatement` to highlight items in `application/vnd.elife.highlight-list+json;version=3`
+
 ## 2.33.0
 
 ### Added
