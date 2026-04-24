@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.35.0
+
+### Added
+
+* added the new /highlights/{list}/current endpoint 
+
 ## 2.34.0
 
 ### Added
