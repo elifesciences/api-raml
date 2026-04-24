@@ -1129,6 +1129,21 @@ traits:
                                     Demonstration of the list being empty (the first page will always return a valid result).
                                 value: !include samples/highlight-list/v3/empty.json
 
+    /current:
+        description: |
+            Get current highlights.
+        get:
+            description: |
+                Get a list of current highlights.
+            responses:
+                200:
+                    description: |
+                        List of current highlights.
+                    body:
+                        application/vnd.elife.highlight-list+json;version=3:
+                            schema: !include ../dist/model/highlight-list.v3.json
+                            example:
+                                value: !include samples/highlight-list/v3/first-page.json
 /interviews:
     type: collection
     description: |
